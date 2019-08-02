@@ -1,0 +1,3 @@
+C:\Users\William Carcamo\Desktop\EXPO60\EXPO60\bin\Debug\EXPO60.exe.config
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\EXPO60\bin\Debug\EXPO60.exe.config
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.exe.config
