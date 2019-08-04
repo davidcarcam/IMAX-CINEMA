@@ -139,6 +139,7 @@ namespace EXPO60.Vista
             this.btbAcceder.TabIndex = 5;
             this.btbAcceder.Text = "Acceder";
             this.btbAcceder.UseVisualStyleBackColor = true;
+            this.btbAcceder.Click += new System.EventHandler(this.btbAcceder_Click);
             // 
             // txtContraseña
             // 

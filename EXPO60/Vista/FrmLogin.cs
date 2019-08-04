@@ -16,5 +16,11 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
+
+        private void btbAcceder_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal f = new FrmPrincipal();
+            f.ShowDialog();
+        }
     }
 }
