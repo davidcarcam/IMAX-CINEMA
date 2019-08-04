@@ -21,5 +21,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

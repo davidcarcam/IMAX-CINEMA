@@ -13,9 +13,9 @@ using System.Runtime.InteropServices;
 
 namespace EXPO60
 {
-    public partial class Form1 : Form
+    public partial class FrmPrincipal : Form
     {
-        public Form1()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }
@@ -68,17 +68,17 @@ namespace EXPO60
 
         private void bunifuFlatButton22_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmUsuario>();
+            //AbrirFormulario<FrmUsuario>();
         }
 
         private void bunifuFlatButton16_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmPelicula>();
+            //AbrirFormulario<FrmPelicula>();
         }
 
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Frmpersonajes>();
+            //AbrirFormulario<Frmpersonajes>();
         }
     }
 }
