@@ -1,3 +1,31 @@
 C:\Users\William Carcamo\Desktop\EXPO60\EXPO60\bin\Debug\EXPO60.exe.config
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\EXPO60\bin\Debug\EXPO60.exe.config
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.exe.config
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csprojAssemblyReference.cache
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Properties.Resources.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmactores.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmalimentos.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmAsientos.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmClasificacion.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmEmpresas.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmfacturalocal.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmFormato.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmFunciones.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmIdioma.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmLogin.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmPelicula.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmpersonajes.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmProveedores.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmSala.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmTicket.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmUsuario.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.GenerateResource.cache
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CoreCompileInputs.cache
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.exe.config
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.exe
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.pdb
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.FrmPrincipal.resources
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CopyComplete
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.exe
+C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.pdb
