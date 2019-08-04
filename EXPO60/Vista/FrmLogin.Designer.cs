@@ -1,4 +1,8 @@
-﻿namespace EXPO60.Vista
+﻿using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+
+namespace EXPO60.Vista
 {
     partial class FrmLogin
     {
@@ -74,12 +78,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EXPO60.Properties.Resources.Logo_David;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 55);
+            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 175);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 185);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
             // linkLabel1
