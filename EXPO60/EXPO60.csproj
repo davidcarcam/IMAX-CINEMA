@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\Conexion.cs" />
+    <Compile Include="Controlador\Constructor_Personajes.cs" />
+    <Compile Include="Controlador\Constructor_Productos.cs" />
     <Compile Include="Controlador\ContructorLogin.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -58,6 +60,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Funciones_Productos.cs" />
+    <Compile Include="Modelo\FuncionPersonajes.cs" />
     <Compile Include="Modelo\ValidarLogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,17 +137,23 @@
     <Compile Include="Vista\FrmPelicula.Designer.cs">
       <DependentUpon>FrmPelicula.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Frmpersonajes.cs">
+    <Compile Include="Vista\FrmPersonajes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Frmpersonajes.Designer.cs">
-      <DependentUpon>Frmpersonajes.cs</DependentUpon>
+    <Compile Include="Vista\FrmPersonajes.Designer.cs">
+      <DependentUpon>FrmPersonajes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmProducto.Designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmProveedores.cs">
       <SubType>Form</SubType>
@@ -215,11 +225,14 @@
     <EmbeddedResource Include="Vista\FrmPelicula.resx">
       <DependentUpon>FrmPelicula.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Frmpersonajes.resx">
-      <DependentUpon>Frmpersonajes.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\FrmPersonajes.resx">
+      <DependentUpon>FrmPersonajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
