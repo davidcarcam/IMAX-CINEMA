@@ -29,6 +29,9 @@ namespace EXPO60.Vista
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
+            agregarEmpresa();
+            mostrarEmpresas();
+            vaciarampos();
 
         }
 
@@ -39,6 +42,11 @@ namespace EXPO60.Vista
         public void mostrarEmpresas()
         {
             dgvactores.DataSource = funcionesEmpresa.mostrarEmpresas();
+        }
+        public void vaciarampos()
+        {
+            txtNumero.Clear();
+            textBox1.Clear();
         }
 
         private void FrmEmpresas_Load(object sender, EventArgs e)
