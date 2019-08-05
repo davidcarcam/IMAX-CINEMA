@@ -31,5 +31,24 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+        public void mostrarEmpresas()
+        {
+            dgvactores.DataSource = funcionesEmpresa.mostrarEmpresas();
+        }
+
+        private void FrmEmpresas_Load(object sender, EventArgs e)
+        {
+            mostrarEmpresas();
+        }
+
+        private void btnmostrar_Click(object sender, EventArgs e)
+        {
+            mostrarEmpresas();
+        }
     }
 }

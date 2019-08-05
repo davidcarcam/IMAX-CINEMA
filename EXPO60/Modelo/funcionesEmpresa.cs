@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using EXPO60.Controlador;
 using System.Windows.Forms;
+using System.Data;
 
 namespace EXPO60.Modelo
 {
@@ -35,6 +36,29 @@ namespace EXPO60.Modelo
                 return retorno;
             }
 
+        }
+        public static DataTable mostrarEmpresas()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM empresas";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ops a ocurrido un problema con la obteccion de datos consulte con el administrador","error critico",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return data = new DataTable();
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
         }
 
     }
