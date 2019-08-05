@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\Conexion.cs" />
+    <Compile Include="Controlador\constructorEmpresa.cs" />
     <Compile Include="Controlador\Constructor_Personajes.cs" />
     <Compile Include="Controlador\Constructor_Productos.cs" />
     <Compile Include="Controlador\ContructorLogin.cs" />
