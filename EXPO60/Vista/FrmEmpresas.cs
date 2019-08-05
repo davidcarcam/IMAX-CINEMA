@@ -22,8 +22,8 @@ namespace EXPO60.Vista
         constructorEmpresa agregar = new constructorEmpresa();
         public void agregarEmpresa()
         {
-            agregar.nombreEmpresa = txtNombreEmpresa.Text;
-            agregar.direccionEmpresa = txtDirrecionEmpresa.Text;
+            agregar.nombreEmpresa = txtNumero.Text;
+            agregar.direccionEmpresa = textBox1.Text;
             int datos = funcionesEmpresa.insertarLocal(agregar);
         }
 
