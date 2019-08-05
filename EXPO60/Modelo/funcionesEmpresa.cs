@@ -60,6 +60,30 @@ namespace EXPO60.Modelo
                 Conexion.ObtenerConexion().Close();
             }
         }
+        public static bool actualizarEmpresa(constructorEmpresa upd)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET NOMBRE_EMPR ='{0}' , DIRECCION_EMPR = '{1}'",upd.nombreEmpresa,upd.direccionEmpresa ),Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
+                if ( retorno == true)
+                {
+                    MessageBox.Show("Datos actualizados correctamente","actualizacion completada", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Datos no se pudieron actualizados correctamente", "actualizacion denegada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Datos no actualizados correctamente , consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return retorno;
+            }
+        }
 
     }
 }

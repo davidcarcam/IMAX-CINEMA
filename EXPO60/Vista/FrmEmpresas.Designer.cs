@@ -35,14 +35,14 @@
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvactores = new System.Windows.Forms.DataGridView();
+            this.dgvempresas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvempresas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -52,7 +52,7 @@
             this.groupBox1.Controls.Add(this.txtid);
             this.groupBox1.Controls.Add(this.txtNumero);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dgvactores);
+            this.groupBox1.Controls.Add(this.dgvempresas);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnactualizar);
             this.groupBox1.Controls.Add(this.btnmostrar);
@@ -107,14 +107,15 @@
             this.label1.TabIndex = 56;
             this.label1.Text = "Nombre de Empresa";
             // 
-            // dgvactores
+            // dgvempresas
             // 
-            this.dgvactores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvactores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvactores.Location = new System.Drawing.Point(61, 281);
-            this.dgvactores.Name = "dgvactores";
-            this.dgvactores.Size = new System.Drawing.Size(1011, 265);
-            this.dgvactores.TabIndex = 51;
+            this.dgvempresas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvempresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvempresas.Location = new System.Drawing.Point(61, 281);
+            this.dgvempresas.Name = "dgvempresas";
+            this.dgvempresas.Size = new System.Drawing.Size(1011, 265);
+            this.dgvempresas.TabIndex = 51;
+            this.dgvempresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvactores_CellContentClick);
             // 
             // btneliminar
             // 
@@ -185,6 +186,7 @@
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnmostrar
             // 
@@ -273,7 +275,7 @@
             this.Load += new System.EventHandler(this.FrmEmpresas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvempresas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +288,7 @@
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvactores;
+        private System.Windows.Forms.DataGridView dgvempresas;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
