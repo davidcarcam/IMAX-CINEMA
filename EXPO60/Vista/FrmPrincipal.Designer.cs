@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.MenuVertical = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.picimg = new System.Windows.Forms.PictureBox();
             this.picimgL = new System.Windows.Forms.PictureBox();
@@ -142,6 +142,7 @@
             this.bunifuFlatButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton12.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton12.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton12.Click += new System.EventHandler(this.bunifuFlatButton12_Click);
             // 
             // bunifuFlatButton13
             // 
@@ -599,7 +600,7 @@
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(1038, 586);
             this.bunifuGradientPanel2.TabIndex = 3;
             // 
-            // Form1
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -609,7 +610,7 @@
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FrmPrincipal";
             this.Text = "Form1";
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).EndInit();
