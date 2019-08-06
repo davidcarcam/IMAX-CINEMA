@@ -15,15 +15,15 @@ namespace EXPO60.Controlador
         {
             MySqlConnection connect;
             string server = "127.0.0.1";
-            string database = "Expo6O";
+            string database = "Expo60";
             string user = "root";
             string pass = "";
             try
             {
                 connect = new MySqlConnection("server = " + server +
-                                                ";database = " + database +
-                                                ";Uid = " + user +
-                                                ";pwd = " + pass);
+                                                "; database = " + database +
+                                                "; Uid = " + user +
+                                                "; pwd = " + pass);
                 connect.Open();
                 return connect;
             }
