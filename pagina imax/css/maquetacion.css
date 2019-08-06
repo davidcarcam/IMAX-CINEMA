@@ -1,0 +1,21 @@
+.banner, .pie{
+	background-color: #000000;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+}
+
+.menu, .publicidad{
+	background-color: #888888;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+}
+
+.section{
+	background-color: #CCCCCC;
+	border: 1px solid white;
+	color: black;
+	border-radius: 5px;
+
+}
