@@ -112,3 +112,6 @@ C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vist
 C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmProducto.resources
 C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.recuperarUsuario.resources
 C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\MySql.Data.xml
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.exe.config
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.exe
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.pdb
