@@ -22,6 +22,7 @@ namespace EXPO60.Vista
         private void button1_Click(object sender, EventArgs e)
         {
             validarRecuperar.resetClave(txtusuarioRecuperar.Text);
+            
         }
     }
 }

@@ -35,6 +35,7 @@ namespace EXPO60.Modelo
                     {
                         MessageBox.Show("Usuario recuperado");
                         
+                        
                     }
                     else
                     {
@@ -51,21 +52,21 @@ namespace EXPO60.Modelo
             }
 
         }
-        private void EnviarCorreoContrasena(int contrasenaNueva, string correo)
+        public static void EnviarCorreoContrasena(int contrasenaNueva, string correo)
         {
-            string contraseña = this.Contrasena;
+            string contraseña = "";
             string mensaje = string.Empty;
             //Creando el correo electronico
             string destinatario = correo;
-            string remitente = "Tu correo";
-            string asunto = "Nueva contraseña Apps Easy";
+            string remitente = "Rafael000716@hotmail.com";
+            string asunto = "Nueva contraseña para IMAX";
             string cuerpoDelMesaje = "Su nueva contraseña es" + " " + Convert.ToString(contrasenaNueva);
             MailMessage ms = new MailMessage(remitente, destinatario, asunto, cuerpoDelMesaje);
 
 
             SmtpClient smtp = new SmtpClient("smtp.live.com", 587);
             smtp.EnableSsl = true;
-            smtp.Credentials = new NetworkCredential("Tu correo", contraseña);
+            smtp.Credentials = new NetworkCredential("Rafael000716@hotmail.com", contraseña);
 
             try
             {
