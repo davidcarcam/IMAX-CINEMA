@@ -22,7 +22,7 @@ namespace EXPO60.Modelo
         {
             bool retorno = false;
             //Verificar la existencia del usuario en la base de dato
-            string query = "SELECT *FROM usuarios WHERE usuario = ?user ";
+            string query = "SELECT *FROM usuarios WHERE USUARIO = ?user ";
             //try
             //{
             MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
@@ -34,7 +34,7 @@ namespace EXPO60.Modelo
             {
                 //verificar los datos
                 int estado = 1;
-                string query2 = "SELECT * FROM usuarios WHERE usuario = ?user AND clave = ?pass AND ID_ESTADO_USUARIO = ?state";
+                string query2 = "SELECT * FROM usuarios WHERE USUARIO = ?user AND CLAVE = ?pass AND ID_ESTADO_USUARIO = ?state";
                 MySqlCommand cmdseletc2 = new MySqlCommand(query2, Conexion.ObtenerConexion());
                 cmdseletc2.Parameters.Add(new MySqlParameter("user", ContructorLogin.usuario));
                 cmdseletc2.Parameters.Add(new MySqlParameter("pass", log.clave));
@@ -45,13 +45,13 @@ namespace EXPO60.Modelo
                 {
                     //actualizar el campo
                     int intentos = 0;
-                    MySqlCommand cmdreset = new MySqlCommand(string.Format("UPDATE usuarios SET intentos = '{0}' WHERE usuario = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                    MySqlCommand cmdreset = new MySqlCommand(string.Format("UPDATE usuarios SET INTENTOS = '{0}' WHERE USUARIO = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
                     int reset = Convert.ToInt16(cmdreset.ExecuteNonQuery());
                     MySqlDataReader _reader = cmdselect.ExecuteReader();
                     while (_reader.Read())
                     {
-                        ContructorLogin.nombre = _reader.GetString(1) + "" + _reader.GetString(2);
-                        ContructorLogin.nivel = _reader.GetInt16(9);
+                        ContructorLogin.nombre = _reader.GetString(9) + "" + _reader.GetString(10);
+                        ContructorLogin.nivel = _reader.GetInt16(11);
                         if (reset >= 1)
                         {
                             MessageBox.Show("Bienvenido.", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -66,11 +66,11 @@ namespace EXPO60.Modelo
                     while (reader.Read())
                     {
                         int intentos = 0;
-                        intentos = reader.GetInt16(12) + 1;
+                        intentos = reader.GetInt16(8) + 1;
                         if (intentos > 5)
                         {
                             int bloqueo = 3;
-                            MySqlCommand cmdlock = new MySqlCommand(string.Format("UPDATE usuarios SET estado = '{0}' WHERE usuario = '{1}'", bloqueo, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                            MySqlCommand cmdlock = new MySqlCommand(string.Format("UPDATE usuarios SET ID_ESTADO_USUARIO = '{0}' WHERE USUARIO = '{1}'", bloqueo, ContructorLogin.usuario), Conexion.ObtenerConexion());
                             int verificacion = Convert.ToInt32(cmdlock.ExecuteNonQuery());
                             if (verificacion >= 1)
                             {
@@ -79,7 +79,7 @@ namespace EXPO60.Modelo
                         }
                         else
                         {
-                            MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuarios SET intentos = ´{0}´ WHERE usuario = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                            MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuarios SET INTENTOS = ´{0}´ WHERE USUARIO = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
                             int verificacion = Convert.ToInt32(cmdupdate.ExecuteNonQuery());
                             if (verificacion >= 1)
                             {

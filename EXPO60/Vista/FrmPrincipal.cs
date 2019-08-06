@@ -80,5 +80,10 @@ namespace EXPO60
         {
             //AbrirFormulario<Frmpersonajes>();
         }
+
+        private void bunifuFlatButton12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

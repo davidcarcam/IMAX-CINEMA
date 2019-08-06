@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using MySql.Data.MySqlClient;
+using EXPO60.Controlador;
+using EXPO60.Modelo;
 
 namespace EXPO60.Vista
 {
@@ -16,11 +20,53 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-
+        public string Hash(byte[] val)
+        {
+            using (SHA1Managed sha1 = new SHA1Managed())
+            {
+                var hash = sha1.ComputeHash(val);
+                return Convert.ToBase64String(hash);
+            }
+        }
         private void btbAcceder_Click(object sender, EventArgs e)
         {
-            FrmPrincipal f = new FrmPrincipal();
-            f.ShowDialog();
+            Validar();
+        }
+        void Validar()
+        {
+            if (txtUsuario.Text.Trim() == "" || txtContra.Text.Trim() == "")
+            {
+                MessageBox.Show("Complete todos los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                ContructorLogin log = new ContructorLogin(txtUsuario.Text, txtContra.Text);
+                ContructorLogin.usuario = txtUsuario.Text;
+                log.clave = txtCifrado.Text;
+                //Recuperando el valor de retorno
+                bool datos = ValidarLogin.Acceso(log);
+                //
+                if (datos == true)
+                {
+                    FrmPrincipal principal = new FrmPrincipal();
+                    principal.Show();
+                    this.Hide();
+                }
+            }
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
+            txtCifrado.Text = Hash(pass);
+        }
+
+        private void linkPrimerUso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmPrimerUso principal = new FrmPrimerUso();
+            principal.Show();
+            this.Hide();
         }
     }
 }
