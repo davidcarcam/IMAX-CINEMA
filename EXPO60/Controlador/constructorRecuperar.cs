@@ -8,5 +8,8 @@ namespace EXPO60.Controlador
 {
     class constructorRecuperar
     {
+        public string USUARIO_RE { get; set; }
+        public string CORREO_USU { get; set; }
+        public constructorRecuperar() { }
     }
 }

@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Controlador\Conexion.cs" />
     <Compile Include="Controlador\constructorEmpresa.cs" />
+    <Compile Include="Controlador\constructorRecuperar.cs" />
     <Compile Include="Controlador\Constructor_Personajes.cs" />
     <Compile Include="Controlador\Constructor_primerUso.cs" />
     <Compile Include="Controlador\Constructor_Productos.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Modelo\Funciones_Productos.cs" />
     <Compile Include="Modelo\FuncionPersonajes.cs" />
     <Compile Include="Modelo\ValidarLogin.cs" />
+    <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vista\Frmactores.cs">
@@ -171,6 +173,12 @@
     <Compile Include="Vista\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\recuperarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\recuperarUsuario.Designer.cs">
+      <DependentUpon>recuperarUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -231,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\recuperarUsuario.resx">
+      <DependentUpon>recuperarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
