@@ -58,5 +58,10 @@ namespace EXPO60.Vista
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void bunifuFlatButton22_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
