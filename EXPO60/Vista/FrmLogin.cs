@@ -68,5 +68,12 @@ namespace EXPO60.Vista
             principal.Show();
             this.Hide();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            recuperarUsuario recu = new recuperarUsuario();
+            recu.Show();
+            this.Hide();
+        }
     }
 }
