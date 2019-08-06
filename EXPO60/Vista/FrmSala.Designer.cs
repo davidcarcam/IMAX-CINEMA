@@ -60,9 +60,10 @@
             this.grpRegistro_Sala.Controls.Add(this.btnActualizar_Sala);
             this.grpRegistro_Sala.Controls.Add(this.btnMostrar_Salas);
             this.grpRegistro_Sala.Controls.Add(this.btnAgregar_Sala);
-            this.grpRegistro_Sala.Location = new System.Drawing.Point(0, -1);
+            this.grpRegistro_Sala.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpRegistro_Sala.Location = new System.Drawing.Point(0, 0);
             this.grpRegistro_Sala.Name = "grpRegistro_Sala";
-            this.grpRegistro_Sala.Size = new System.Drawing.Size(1251, 535);
+            this.grpRegistro_Sala.Size = new System.Drawing.Size(1219, 568);
             this.grpRegistro_Sala.TabIndex = 2;
             this.grpRegistro_Sala.TabStop = false;
             this.grpRegistro_Sala.Text = "Registro de sala";
@@ -131,7 +132,7 @@
             // 
             this.dgvSalas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalas.Location = new System.Drawing.Point(119, 282);
+            this.dgvSalas.Location = new System.Drawing.Point(103, 298);
             this.dgvSalas.Name = "dgvSalas";
             this.dgvSalas.Size = new System.Drawing.Size(1011, 265);
             this.dgvSalas.TabIndex = 0;
@@ -159,7 +160,7 @@
             this.btnEliminar_Sala.IconVisible = true;
             this.btnEliminar_Sala.IconZoom = 80D;
             this.btnEliminar_Sala.IsTab = false;
-            this.btnEliminar_Sala.Location = new System.Drawing.Point(905, 169);
+            this.btnEliminar_Sala.Location = new System.Drawing.Point(889, 185);
             this.btnEliminar_Sala.Name = "btnEliminar_Sala";
             this.btnEliminar_Sala.Normalcolor = System.Drawing.Color.Maroon;
             this.btnEliminar_Sala.OnHovercolor = System.Drawing.Color.Brown;
@@ -195,7 +196,7 @@
             this.btnActualizar_Sala.IconVisible = true;
             this.btnActualizar_Sala.IconZoom = 80D;
             this.btnActualizar_Sala.IsTab = false;
-            this.btnActualizar_Sala.Location = new System.Drawing.Point(638, 169);
+            this.btnActualizar_Sala.Location = new System.Drawing.Point(622, 185);
             this.btnActualizar_Sala.Name = "btnActualizar_Sala";
             this.btnActualizar_Sala.Normalcolor = System.Drawing.Color.Maroon;
             this.btnActualizar_Sala.OnHovercolor = System.Drawing.Color.Brown;
@@ -231,7 +232,7 @@
             this.btnMostrar_Salas.IconVisible = true;
             this.btnMostrar_Salas.IconZoom = 80D;
             this.btnMostrar_Salas.IsTab = false;
-            this.btnMostrar_Salas.Location = new System.Drawing.Point(371, 169);
+            this.btnMostrar_Salas.Location = new System.Drawing.Point(355, 185);
             this.btnMostrar_Salas.Name = "btnMostrar_Salas";
             this.btnMostrar_Salas.Normalcolor = System.Drawing.Color.Maroon;
             this.btnMostrar_Salas.OnHovercolor = System.Drawing.Color.Brown;
@@ -267,7 +268,7 @@
             this.btnAgregar_Sala.IconVisible = true;
             this.btnAgregar_Sala.IconZoom = 80D;
             this.btnAgregar_Sala.IsTab = false;
-            this.btnAgregar_Sala.Location = new System.Drawing.Point(104, 169);
+            this.btnAgregar_Sala.Location = new System.Drawing.Point(88, 185);
             this.btnAgregar_Sala.Name = "btnAgregar_Sala";
             this.btnAgregar_Sala.Normalcolor = System.Drawing.Color.Maroon;
             this.btnAgregar_Sala.OnHovercolor = System.Drawing.Color.Brown;

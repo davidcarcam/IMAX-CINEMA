@@ -53,6 +53,8 @@
     <Compile Include="Controlador\Conexion.cs" />
     <Compile Include="Controlador\constructorEmpresa.cs" />
     <Compile Include="Controlador\constructorRecuperar.cs" />
+    <Compile Include="Controlador\Constructor_Actores.cs" />
+    <Compile Include="Controlador\Constructor_Asientos.cs" />
     <Compile Include="Controlador\Constructor_Personajes.cs" />
     <Compile Include="Controlador\Constructor_primerUso.cs" />
     <Compile Include="Controlador\Constructor_Productos.cs" />
@@ -65,6 +67,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\funcionesEmpresa.cs" />
+    <Compile Include="Modelo\Funciones_Actores.cs" />
+    <Compile Include="Modelo\Funciones_Asientos.cs" />
     <Compile Include="Modelo\Funciones_primerUso.cs" />
     <Compile Include="Modelo\Funciones_Productos.cs" />
     <Compile Include="Modelo\Funciones_Salas.cs" />

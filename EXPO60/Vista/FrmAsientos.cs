@@ -16,5 +16,35 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
+
+        private void FrmAsientos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregar_Asiento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnMostrar_Asientos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnActualizar_Asiento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEliminar_Asiento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DgvAsientos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
