@@ -84,6 +84,30 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
+        public static bool eliminarEmpresa( int id)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM empresas WHERE id_empresa = '{0}'", id), Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
+                if (retorno == true)
+                {
+                    MessageBox.Show("Datos eliminados correctamente", "eliminacion completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no se han podido eliminar correctamente", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("oops erro de coneccion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
+        }
 
     }
 }

@@ -8,6 +8,7 @@ namespace EXPO60.Controlador
 {
     class constructorEmpresa
     {
+        public int id_empresa { get; set; }
         public string nombreEmpresa { get; set; }
         public string direccionEmpresa { get; set; }
         public constructorEmpresa() { }
