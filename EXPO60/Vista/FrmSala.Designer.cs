@@ -29,283 +29,289 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSala));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvactores = new System.Windows.Forms.DataGridView();
-            this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).BeginInit();
+            this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
+            this.cmbEstado_Sala = new System.Windows.Forms.ComboBox();
+            this.lblEstado_Sala = new System.Windows.Forms.Label();
+            this.txtCapacidad_Sala = new System.Windows.Forms.TextBox();
+            this.lblCapacidad_Sala = new System.Windows.Forms.Label();
+            this.txtID_Sala = new System.Windows.Forms.TextBox();
+            this.txtNumero_Sala = new System.Windows.Forms.TextBox();
+            this.lblNumero_Sala = new System.Windows.Forms.Label();
+            this.dgvSalas = new System.Windows.Forms.DataGridView();
+            this.btnEliminar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnActualizar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.grpRegistro_Sala.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpRegistro_Sala
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtid);
-            this.groupBox1.Controls.Add(this.txtNumero);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dgvactores);
-            this.groupBox1.Controls.Add(this.btneliminar);
-            this.groupBox1.Controls.Add(this.btnactualizar);
-            this.groupBox1.Controls.Add(this.btnmostrar);
-            this.groupBox1.Controls.Add(this.btnagregar);
-            this.groupBox1.Location = new System.Drawing.Point(0, 1);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1251, 533);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registro de sala";
+            this.grpRegistro_Sala.Controls.Add(this.cmbEstado_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.lblEstado_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.txtCapacidad_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.lblCapacidad_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.txtID_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.txtNumero_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.lblNumero_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.dgvSalas);
+            this.grpRegistro_Sala.Controls.Add(this.btnEliminar_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.btnActualizar_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.btnMostrar_Salas);
+            this.grpRegistro_Sala.Controls.Add(this.btnAgregar_Sala);
+            this.grpRegistro_Sala.Location = new System.Drawing.Point(0, -1);
+            this.grpRegistro_Sala.Name = "grpRegistro_Sala";
+            this.grpRegistro_Sala.Size = new System.Drawing.Size(1251, 535);
+            this.grpRegistro_Sala.TabIndex = 2;
+            this.grpRegistro_Sala.TabStop = false;
+            this.grpRegistro_Sala.Text = "Registro de sala";
             // 
-            // label3
+            // cmbEstado_Sala
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(746, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
-            this.label3.TabIndex = 62;
-            this.label3.Text = "Estado sala";
+            this.cmbEstado_Sala.FormattingEnabled = true;
+            this.cmbEstado_Sala.Location = new System.Drawing.Point(951, 102);
+            this.cmbEstado_Sala.Name = "cmbEstado_Sala";
+            this.cmbEstado_Sala.Size = new System.Drawing.Size(153, 21);
+            this.cmbEstado_Sala.TabIndex = 3;
             // 
-            // textBox1
+            // lblEstado_Sala
             // 
-            this.textBox1.Location = new System.Drawing.Point(572, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 60;
+            this.lblEstado_Sala.AutoSize = true;
+            this.lblEstado_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado_Sala.Location = new System.Drawing.Point(799, 102);
+            this.lblEstado_Sala.Name = "lblEstado_Sala";
+            this.lblEstado_Sala.Size = new System.Drawing.Size(135, 20);
+            this.lblEstado_Sala.TabIndex = 62;
+            this.lblEstado_Sala.Text = "Estado de la sala:";
             // 
-            // label2
+            // txtCapacidad_Sala
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(460, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 20);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Capacida";
+            this.txtCapacidad_Sala.Location = new System.Drawing.Point(629, 102);
+            this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
+            this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
+            this.txtCapacidad_Sala.TabIndex = 2;
             // 
-            // txtid
+            // lblCapacidad_Sala
             // 
-            this.txtid.Location = new System.Drawing.Point(328, 46);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(35, 20);
-            this.txtid.TabIndex = 57;
-            this.txtid.Visible = false;
+            this.lblCapacidad_Sala.AutoSize = true;
+            this.lblCapacidad_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacidad_Sala.Location = new System.Drawing.Point(452, 102);
+            this.lblCapacidad_Sala.Name = "lblCapacidad_Sala";
+            this.lblCapacidad_Sala.Size = new System.Drawing.Size(160, 20);
+            this.lblCapacidad_Sala.TabIndex = 59;
+            this.lblCapacidad_Sala.Text = "Capacidad de la sala:";
             // 
-            // txtNumero
+            // txtID_Sala
             // 
-            this.txtNumero.Location = new System.Drawing.Point(273, 93);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(153, 20);
-            this.txtNumero.TabIndex = 58;
+            this.txtID_Sala.Location = new System.Drawing.Point(629, 41);
+            this.txtID_Sala.Name = "txtID_Sala";
+            this.txtID_Sala.Size = new System.Drawing.Size(35, 20);
+            this.txtID_Sala.TabIndex = 0;
+            this.txtID_Sala.Visible = false;
             // 
-            // label1
+            // txtNumero_Sala
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Numero de sala";
+            this.txtNumero_Sala.Location = new System.Drawing.Point(282, 102);
+            this.txtNumero_Sala.Name = "txtNumero_Sala";
+            this.txtNumero_Sala.Size = new System.Drawing.Size(153, 20);
+            this.txtNumero_Sala.TabIndex = 1;
             // 
-            // dgvactores
+            // lblNumero_Sala
             // 
-            this.dgvactores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvactores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvactores.Location = new System.Drawing.Point(119, 281);
-            this.dgvactores.Name = "dgvactores";
-            this.dgvactores.Size = new System.Drawing.Size(1011, 265);
-            this.dgvactores.TabIndex = 51;
+            this.lblNumero_Sala.AutoSize = true;
+            this.lblNumero_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero_Sala.Location = new System.Drawing.Point(125, 102);
+            this.lblNumero_Sala.Name = "lblNumero_Sala";
+            this.lblNumero_Sala.Size = new System.Drawing.Size(140, 20);
+            this.lblNumero_Sala.TabIndex = 56;
+            this.lblNumero_Sala.Text = "Numero de la sala:";
             // 
-            // btneliminar
+            // dgvSalas
             // 
-            this.btneliminar.Activecolor = System.Drawing.Color.Maroon;
-            this.btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btneliminar.BackColor = System.Drawing.Color.Maroon;
-            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "      Eliminar";
-            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
-            this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btneliminar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btneliminar.Iconimage")));
-            this.btneliminar.Iconimage_right = null;
-            this.btneliminar.Iconimage_right_Selected = null;
-            this.btneliminar.Iconimage_Selected = null;
-            this.btneliminar.IconMarginLeft = 0;
-            this.btneliminar.IconMarginRight = 0;
-            this.btneliminar.IconRightVisible = true;
-            this.btneliminar.IconRightZoom = 0D;
-            this.btneliminar.IconVisible = true;
-            this.btneliminar.IconZoom = 90D;
-            this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(905, 168);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btneliminar.selected = false;
-            this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 50;
-            this.btneliminar.Text = "      Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btneliminar.Textcolor = System.Drawing.Color.White;
-            this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSalas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalas.Location = new System.Drawing.Point(119, 282);
+            this.dgvSalas.Name = "dgvSalas";
+            this.dgvSalas.Size = new System.Drawing.Size(1011, 265);
+            this.dgvSalas.TabIndex = 0;
+            this.dgvSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSalas_CellClick);
             // 
-            // btnactualizar
+            // btnEliminar_Sala
             // 
-            this.btnactualizar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnactualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
-            this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "      Actualizar";
-            this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnactualizar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Iconimage")));
-            this.btnactualizar.Iconimage_right = null;
-            this.btnactualizar.Iconimage_right_Selected = null;
-            this.btnactualizar.Iconimage_Selected = null;
-            this.btnactualizar.IconMarginLeft = 0;
-            this.btnactualizar.IconMarginRight = 0;
-            this.btnactualizar.IconRightVisible = true;
-            this.btnactualizar.IconRightZoom = 0D;
-            this.btnactualizar.IconVisible = true;
-            this.btnactualizar.IconZoom = 90D;
-            this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(638, 168);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnactualizar.selected = false;
-            this.btnactualizar.Size = new System.Drawing.Size(241, 48);
-            this.btnactualizar.TabIndex = 49;
-            this.btnactualizar.Text = "      Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnactualizar.Textcolor = System.Drawing.Color.White;
-            this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar_Sala.Activecolor = System.Drawing.Color.Maroon;
+            this.btnEliminar_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar_Sala.BackColor = System.Drawing.Color.Maroon;
+            this.btnEliminar_Sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar_Sala.BorderRadius = 0;
+            this.btnEliminar_Sala.ButtonText = "Eliminar Sala";
+            this.btnEliminar_Sala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar_Sala.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEliminar_Sala.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEliminar_Sala.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEliminar_Sala.Iconimage")));
+            this.btnEliminar_Sala.Iconimage_right = null;
+            this.btnEliminar_Sala.Iconimage_right_Selected = null;
+            this.btnEliminar_Sala.Iconimage_Selected = null;
+            this.btnEliminar_Sala.IconMarginLeft = 0;
+            this.btnEliminar_Sala.IconMarginRight = 0;
+            this.btnEliminar_Sala.IconRightVisible = true;
+            this.btnEliminar_Sala.IconRightZoom = 0D;
+            this.btnEliminar_Sala.IconVisible = true;
+            this.btnEliminar_Sala.IconZoom = 80D;
+            this.btnEliminar_Sala.IsTab = false;
+            this.btnEliminar_Sala.Location = new System.Drawing.Point(905, 169);
+            this.btnEliminar_Sala.Name = "btnEliminar_Sala";
+            this.btnEliminar_Sala.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnEliminar_Sala.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnEliminar_Sala.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEliminar_Sala.selected = false;
+            this.btnEliminar_Sala.Size = new System.Drawing.Size(241, 48);
+            this.btnEliminar_Sala.TabIndex = 7;
+            this.btnEliminar_Sala.Text = "Eliminar Sala";
+            this.btnEliminar_Sala.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEliminar_Sala.Textcolor = System.Drawing.Color.White;
+            this.btnEliminar_Sala.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar_Sala.Click += new System.EventHandler(this.BtnEliminar_Salas_Click);
             // 
-            // btnmostrar
+            // btnActualizar_Sala
             // 
-            this.btnmostrar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnmostrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
-            this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "      Mostrar";
-            this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnmostrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnmostrar.Iconimage")));
-            this.btnmostrar.Iconimage_right = null;
-            this.btnmostrar.Iconimage_right_Selected = null;
-            this.btnmostrar.Iconimage_Selected = null;
-            this.btnmostrar.IconMarginLeft = 0;
-            this.btnmostrar.IconMarginRight = 0;
-            this.btnmostrar.IconRightVisible = true;
-            this.btnmostrar.IconRightZoom = 0D;
-            this.btnmostrar.IconVisible = true;
-            this.btnmostrar.IconZoom = 90D;
-            this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(371, 168);
-            this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnmostrar.selected = false;
-            this.btnmostrar.Size = new System.Drawing.Size(241, 48);
-            this.btnmostrar.TabIndex = 48;
-            this.btnmostrar.Text = "      Mostrar";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmostrar.Textcolor = System.Drawing.Color.White;
-            this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar_Sala.Activecolor = System.Drawing.Color.Maroon;
+            this.btnActualizar_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnActualizar_Sala.BackColor = System.Drawing.Color.Maroon;
+            this.btnActualizar_Sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar_Sala.BorderRadius = 0;
+            this.btnActualizar_Sala.ButtonText = "Actualizar Sala";
+            this.btnActualizar_Sala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar_Sala.DisabledColor = System.Drawing.Color.Gray;
+            this.btnActualizar_Sala.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnActualizar_Sala.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnActualizar_Sala.Iconimage")));
+            this.btnActualizar_Sala.Iconimage_right = null;
+            this.btnActualizar_Sala.Iconimage_right_Selected = null;
+            this.btnActualizar_Sala.Iconimage_Selected = null;
+            this.btnActualizar_Sala.IconMarginLeft = 0;
+            this.btnActualizar_Sala.IconMarginRight = 0;
+            this.btnActualizar_Sala.IconRightVisible = true;
+            this.btnActualizar_Sala.IconRightZoom = 0D;
+            this.btnActualizar_Sala.IconVisible = true;
+            this.btnActualizar_Sala.IconZoom = 80D;
+            this.btnActualizar_Sala.IsTab = false;
+            this.btnActualizar_Sala.Location = new System.Drawing.Point(638, 169);
+            this.btnActualizar_Sala.Name = "btnActualizar_Sala";
+            this.btnActualizar_Sala.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnActualizar_Sala.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnActualizar_Sala.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnActualizar_Sala.selected = false;
+            this.btnActualizar_Sala.Size = new System.Drawing.Size(241, 48);
+            this.btnActualizar_Sala.TabIndex = 6;
+            this.btnActualizar_Sala.Text = "Actualizar Sala";
+            this.btnActualizar_Sala.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnActualizar_Sala.Textcolor = System.Drawing.Color.White;
+            this.btnActualizar_Sala.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar_Sala.Click += new System.EventHandler(this.BtnActualizar_Salas_Click);
             // 
-            // btnagregar
+            // btnMostrar_Salas
             // 
-            this.btnagregar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnagregar.BackColor = System.Drawing.Color.Maroon;
-            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
-            this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnagregar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnagregar.Iconimage")));
-            this.btnagregar.Iconimage_right = null;
-            this.btnagregar.Iconimage_right_Selected = null;
-            this.btnagregar.Iconimage_Selected = null;
-            this.btnagregar.IconMarginLeft = 0;
-            this.btnagregar.IconMarginRight = 0;
-            this.btnagregar.IconRightVisible = true;
-            this.btnagregar.IconRightZoom = 0D;
-            this.btnagregar.IconVisible = true;
-            this.btnagregar.IconZoom = 90D;
-            this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(104, 168);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnagregar.selected = false;
-            this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 47;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnagregar.Textcolor = System.Drawing.Color.White;
-            this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar_Salas.Activecolor = System.Drawing.Color.Maroon;
+            this.btnMostrar_Salas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMostrar_Salas.BackColor = System.Drawing.Color.Maroon;
+            this.btnMostrar_Salas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMostrar_Salas.BorderRadius = 0;
+            this.btnMostrar_Salas.ButtonText = "Mostrar Salas";
+            this.btnMostrar_Salas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrar_Salas.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMostrar_Salas.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMostrar_Salas.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnMostrar_Salas.Iconimage")));
+            this.btnMostrar_Salas.Iconimage_right = null;
+            this.btnMostrar_Salas.Iconimage_right_Selected = null;
+            this.btnMostrar_Salas.Iconimage_Selected = null;
+            this.btnMostrar_Salas.IconMarginLeft = 0;
+            this.btnMostrar_Salas.IconMarginRight = 0;
+            this.btnMostrar_Salas.IconRightVisible = true;
+            this.btnMostrar_Salas.IconRightZoom = 0D;
+            this.btnMostrar_Salas.IconVisible = true;
+            this.btnMostrar_Salas.IconZoom = 80D;
+            this.btnMostrar_Salas.IsTab = false;
+            this.btnMostrar_Salas.Location = new System.Drawing.Point(371, 169);
+            this.btnMostrar_Salas.Name = "btnMostrar_Salas";
+            this.btnMostrar_Salas.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnMostrar_Salas.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnMostrar_Salas.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMostrar_Salas.selected = false;
+            this.btnMostrar_Salas.Size = new System.Drawing.Size(241, 48);
+            this.btnMostrar_Salas.TabIndex = 5;
+            this.btnMostrar_Salas.Text = "Mostrar Salas";
+            this.btnMostrar_Salas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMostrar_Salas.Textcolor = System.Drawing.Color.White;
+            this.btnMostrar_Salas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar_Salas.Click += new System.EventHandler(this.BtnMostrar_Salas_Click);
             // 
-            // comboBox1
+            // btnAgregar_Sala
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(863, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 21);
-            this.comboBox1.TabIndex = 64;
+            this.btnAgregar_Sala.Activecolor = System.Drawing.Color.Maroon;
+            this.btnAgregar_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregar_Sala.BackColor = System.Drawing.Color.Maroon;
+            this.btnAgregar_Sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar_Sala.BorderRadius = 0;
+            this.btnAgregar_Sala.ButtonText = "Agregar Sala";
+            this.btnAgregar_Sala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar_Sala.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAgregar_Sala.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAgregar_Sala.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAgregar_Sala.Iconimage")));
+            this.btnAgregar_Sala.Iconimage_right = null;
+            this.btnAgregar_Sala.Iconimage_right_Selected = null;
+            this.btnAgregar_Sala.Iconimage_Selected = null;
+            this.btnAgregar_Sala.IconMarginLeft = 0;
+            this.btnAgregar_Sala.IconMarginRight = 0;
+            this.btnAgregar_Sala.IconRightVisible = true;
+            this.btnAgregar_Sala.IconRightZoom = 0D;
+            this.btnAgregar_Sala.IconVisible = true;
+            this.btnAgregar_Sala.IconZoom = 80D;
+            this.btnAgregar_Sala.IsTab = false;
+            this.btnAgregar_Sala.Location = new System.Drawing.Point(104, 169);
+            this.btnAgregar_Sala.Name = "btnAgregar_Sala";
+            this.btnAgregar_Sala.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnAgregar_Sala.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnAgregar_Sala.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAgregar_Sala.selected = false;
+            this.btnAgregar_Sala.Size = new System.Drawing.Size(241, 48);
+            this.btnAgregar_Sala.TabIndex = 4;
+            this.btnAgregar_Sala.Text = "Agregar Sala";
+            this.btnAgregar_Sala.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregar_Sala.Textcolor = System.Drawing.Color.White;
+            this.btnAgregar_Sala.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar_Sala.Click += new System.EventHandler(this.BtnAgregar_Sala_Click);
             // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 568);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpRegistro_Sala);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSala";
             this.Text = "Frmdistribuidoras";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).EndInit();
+            this.Load += new System.EventHandler(this.FrmSala_Load);
+            this.grpRegistro_Sala.ResumeLayout(false);
+            this.grpRegistro_Sala.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvactores;
-        private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnagregar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox grpRegistro_Sala;
+        private System.Windows.Forms.DataGridView dgvSalas;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEliminar_Sala;
+        private Bunifu.Framework.UI.BunifuFlatButton btnActualizar_Sala;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMostrar_Salas;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAgregar_Sala;
+        private System.Windows.Forms.Label lblEstado_Sala;
+        private System.Windows.Forms.TextBox txtCapacidad_Sala;
+        private System.Windows.Forms.Label lblCapacidad_Sala;
+        private System.Windows.Forms.TextBox txtID_Sala;
+        private System.Windows.Forms.TextBox txtNumero_Sala;
+        private System.Windows.Forms.Label lblNumero_Sala;
+        private System.Windows.Forms.ComboBox cmbEstado_Sala;
     }
 }
