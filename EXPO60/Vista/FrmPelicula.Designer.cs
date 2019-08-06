@@ -36,7 +36,7 @@
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.idPelicula = new System.Windows.Forms.TextBox();
             this.txtestado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txttitulo = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@
             this.groupBox1.Controls.Add(this.btnactualizar);
             this.groupBox1.Controls.Add(this.btnmostrar);
             this.groupBox1.Controls.Add(this.btnagregar);
-            this.groupBox1.Controls.Add(this.txtid);
+            this.groupBox1.Controls.Add(this.idPelicula);
             this.groupBox1.Controls.Add(this.txtestado);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txttitulo);
@@ -230,7 +230,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(111, 189);
+            this.btnagregar.Location = new System.Drawing.Point(102, 189);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -243,13 +243,13 @@
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // txtid
+            // idPelicula
             // 
-            this.txtid.Location = new System.Drawing.Point(555, 62);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(28, 20);
-            this.txtid.TabIndex = 28;
-            this.txtid.Visible = false;
+            this.idPelicula.Location = new System.Drawing.Point(555, 62);
+            this.idPelicula.Name = "idPelicula";
+            this.idPelicula.Size = new System.Drawing.Size(28, 20);
+            this.idPelicula.TabIndex = 28;
+            this.idPelicula.Visible = false;
             // 
             // txtestado
             // 
@@ -389,7 +389,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnagregar;
-        private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.TextBox idPelicula;
         private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txttitulo;

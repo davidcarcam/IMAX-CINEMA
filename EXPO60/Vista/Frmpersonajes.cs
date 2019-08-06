@@ -60,7 +60,7 @@ namespace EXPO60.Vista
         {
             if (MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Funciones_Actores.EliminarActor(Convert.ToInt32(txtid.Text));
+                FuncionPersonajes.EliminarPersonaje(Convert.ToInt32(txtid.Text));
             }
         }
         private void btnagregar_Click(object sender, EventArgs e)

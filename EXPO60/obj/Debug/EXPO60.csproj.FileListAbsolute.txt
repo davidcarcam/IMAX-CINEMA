@@ -79,3 +79,9 @@ C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista
 C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmTicket.resources
 C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmUsuario.resources
 C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.exe
+C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\EXPO60.pdb
+C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\MySql.Data.dll
+C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\MySql.Data.xml
+C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmPrimerUso.resources
