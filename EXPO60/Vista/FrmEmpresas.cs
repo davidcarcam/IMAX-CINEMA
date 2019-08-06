@@ -81,6 +81,14 @@ namespace EXPO60.Vista
             actualizar.direccionEmpresa = textBox1.Text;
             funcionesEmpresa.actualizarEmpresa(actualizar);
         }
+        public void eliminarRegistro()
+        {
+            if (MessageBox.Show("Esta seguro de realizar esta operacion?", "confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+            {
+                funcionesEmpresa.eliminarEmpresa(Convert.ToInt32(txtid.Text));
+            }
+            
+        }
 
         private void btnactualizar_Click(object sender, EventArgs e)
         {
@@ -91,6 +99,16 @@ namespace EXPO60.Vista
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
             mostrarEmpresas();
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            eliminarRegistro();
+            vaciarampos();
+            mostrarEmpresas();
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnagregar.Enabled = true;
         }
     }
 }
