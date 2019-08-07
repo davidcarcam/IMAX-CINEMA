@@ -14,7 +14,7 @@ namespace EXPO60.Modelo
     class ValidarLogin
     {
 
-        private static string ex;
+        //private static string ex;
 
         public static object C { get; private set; }
 
