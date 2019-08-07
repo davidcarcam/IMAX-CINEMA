@@ -49,7 +49,7 @@ namespace EXPO60.Vista
                 //
                 if (datos == true)
                 {
-                    FrmPrincipal principal = new FrmPrincipal();
+                    FrmNuevo principal = new FrmNuevo();
                     principal.Show();
                     this.Hide();
                 }
@@ -74,6 +74,11 @@ namespace EXPO60.Vista
             recuperarUsuario recu = new recuperarUsuario();
             recu.Show();
             this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

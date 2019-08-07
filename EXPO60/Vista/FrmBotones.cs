@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace EXPO60.Vista
 {
-    public partial class FrmNuevo : Form
+    public partial class FrmBotones : Form
     {
-        public FrmNuevo()
+        public FrmBotones()
         {
             InitializeComponent();
         }
+
         Form currentForm;
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
-           
+
             Form formulario;
             formulario = PanelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
             if (formulario == null)
@@ -47,66 +48,19 @@ namespace EXPO60.Vista
             }
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-
-            if (MenuVertical.Width == 250)
-            {
-                MenuVertical.Width = 70;
-                picimg.Visible = true;
-                picimgL.Visible = false;
-            }
-            else
-            {
-                MenuVertical.Width = 250;
-                picimg.Visible = false;
-                picimgL.Visible = true;
-            }
-        }
-
-        private void toolStripButton6_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
-            btnmaximizar.Visible = false;
-            btnnormal.Visible = true;
-            WindowState = FormWindowState.Maximized;
-        }
-
-        private void btnnormal_Click(object sender, EventArgs e)
-        {
-
-            btnmaximizar.Visible = true;
-            btnnormal.Visible = false;
-            WindowState = FormWindowState.Normal;
-        }
-
-        private void btnminimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void bunifuFlatButton22_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmUsuario>();
         }
 
-        private void FrmNuevo_Load(object sender, EventArgs e)
+        private void bunifuFlatButton20_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<FrmTicket>();
         }
 
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPersonajes>();
-        }
-
-        private void bunifuFlatButton20_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmTicket>();
         }
 
         private void bunifuFlatButton19_Click(object sender, EventArgs e)
@@ -139,19 +93,9 @@ namespace EXPO60.Vista
             AbrirFormulario<FrmProducto>();
         }
 
-        private void bunifuFlatButton13_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Frmalimentos>();
-        }
-
         private void bunifuFlatButton12_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Frmfacturalocal>();
-        }
-
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmBotones>();
+            
         }
     }
 }
