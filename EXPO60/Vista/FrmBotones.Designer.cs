@@ -45,12 +45,14 @@
             this.bunifuFlatButton16 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton14 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton21 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PanelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.Maroon;
+            this.PanelContenedor.Controls.Add(this.bunifuFlatButton4);
             this.PanelContenedor.Controls.Add(this.label1);
             this.PanelContenedor.Controls.Add(this.bunifuFlatButton3);
             this.PanelContenedor.Controls.Add(this.bunifuFlatButton2);
@@ -610,6 +612,44 @@
             this.bunifuFlatButton21.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton21.Click += new System.EventHandler(this.bunifuFlatButton21_Click);
             // 
+            // bunifuFlatButton4
+            // 
+            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton4.BackColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton4.BorderRadius = 0;
+            this.bunifuFlatButton4.ButtonText = "         Regresar ";
+            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.ForeColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
+            this.bunifuFlatButton4.Iconimage_right = null;
+            this.bunifuFlatButton4.Iconimage_right_Selected = null;
+            this.bunifuFlatButton4.Iconimage_Selected = null;
+            this.bunifuFlatButton4.IconMarginLeft = 0;
+            this.bunifuFlatButton4.IconMarginRight = 0;
+            this.bunifuFlatButton4.IconRightVisible = true;
+            this.bunifuFlatButton4.IconRightZoom = 0D;
+            this.bunifuFlatButton4.IconVisible = true;
+            this.bunifuFlatButton4.IconZoom = 90D;
+            this.bunifuFlatButton4.IsTab = false;
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(627, 304);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
+            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Maroon;
+            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton4.selected = false;
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(237, 27);
+            this.bunifuFlatButton4.TabIndex = 76;
+            this.bunifuFlatButton4.Text = "         Regresar ";
+            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
+            // 
             // FrmBotones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,5 +683,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton14;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton21;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
     }
 }
