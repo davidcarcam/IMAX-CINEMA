@@ -19,6 +19,10 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
+        public void validar()
+        {
+
+        }
         Constructor_Personajes Agregar = new Constructor_Personajes();
         Constructor_Personajes Actualizar = new Constructor_Personajes();
      
