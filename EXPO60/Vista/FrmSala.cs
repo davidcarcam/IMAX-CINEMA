@@ -107,9 +107,9 @@ namespace EXPO60.Vista
         }
         private void BtnEliminar_Salas_Click(object sender, EventArgs e)
         {
+            Eliminar_Sala();
             Limpiar_Datos();
             Mostrar_Salas();
-            Eliminar_Sala();
             btnActualizar_Sala.Enabled = false;
             btnAgregar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = false;

@@ -40,8 +40,8 @@ namespace EXPO60.Modelo
             DataTable salas;
             try
             {
-                string query = "SELECT * FROM salas";
-                MySqlCommand cmdread1 = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
+                string query1 = "SELECT * FROM salas";
+                MySqlCommand cmdread1 = new MySqlCommand(string.Format(query1), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter1 = new MySqlDataAdapter(cmdread1);
                 salas = new DataTable();
                 adapter1.Fill(salas);
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE salas SET NUM_SALA = '{1}', CAPACIDAD = '{2}', ID_ESTADO_SALA = '{3}' WHERE ID_SALA = '{0}'", upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala, upd.IDSala), Conexion.ObtenerConexion());
+                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE salas SET NUM_SALA = '{1}', CAPACIDAD = '{2}', ID_ESTADO_SALA = '{3}' WHERE ID_SALA = '{0}'", upd.IDSala, upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupdate1.ExecuteNonQuery());
                 if (retorno == true)
                 {

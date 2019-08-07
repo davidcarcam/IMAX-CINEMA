@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate2 = new MySqlCommand(string.Format("UPDATE actores SET ACTOR = '{1}' WHERE ID_ACTOR = '{0}'", upd.Nombre_Actor, upd.ID_Actor), Conexion.ObtenerConexion());
+                MySqlCommand cmdupdate2 = new MySqlCommand(string.Format("UPDATE actores SET ACTOR = '{1}' WHERE ID_ACTOR = '{0}'", upd.ID_Actor, upd.Nombre_Actor), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupdate2.ExecuteNonQuery());
                 if (retorno == true)
                 {

@@ -34,7 +34,7 @@
             this.cmbSala = new System.Windows.Forms.ComboBox();
             this.lblEstado_Asiento = new System.Windows.Forms.Label();
             this.lblSala = new System.Windows.Forms.Label();
-            this.txtID_Asientos = new System.Windows.Forms.TextBox();
+            this.txtID_Asiento = new System.Windows.Forms.TextBox();
             this.txtNumero_Asiento = new System.Windows.Forms.TextBox();
             this.lblAsiento = new System.Windows.Forms.Label();
             this.dgvAsientos = new System.Windows.Forms.DataGridView();
@@ -52,7 +52,7 @@
             this.grpAsientos.Controls.Add(this.cmbSala);
             this.grpAsientos.Controls.Add(this.lblEstado_Asiento);
             this.grpAsientos.Controls.Add(this.lblSala);
-            this.grpAsientos.Controls.Add(this.txtID_Asientos);
+            this.grpAsientos.Controls.Add(this.txtID_Asiento);
             this.grpAsientos.Controls.Add(this.txtNumero_Asiento);
             this.grpAsientos.Controls.Add(this.lblAsiento);
             this.grpAsientos.Controls.Add(this.dgvAsientos);
@@ -104,13 +104,13 @@
             this.lblSala.TabIndex = 59;
             this.lblSala.Text = "Sala:";
             // 
-            // txtID_Asientos
+            // txtID_Asiento
             // 
-            this.txtID_Asientos.Location = new System.Drawing.Point(563, 19);
-            this.txtID_Asientos.Name = "txtID_Asientos";
-            this.txtID_Asientos.Size = new System.Drawing.Size(89, 20);
-            this.txtID_Asientos.TabIndex = 57;
-            this.txtID_Asientos.Visible = false;
+            this.txtID_Asiento.Location = new System.Drawing.Point(563, 19);
+            this.txtID_Asiento.Name = "txtID_Asiento";
+            this.txtID_Asiento.Size = new System.Drawing.Size(89, 20);
+            this.txtID_Asiento.TabIndex = 57;
+            this.txtID_Asiento.Visible = false;
             // 
             // txtNumero_Asiento
             // 
@@ -305,7 +305,7 @@
         private System.Windows.Forms.GroupBox grpAsientos;
         private System.Windows.Forms.Label lblEstado_Asiento;
         private System.Windows.Forms.Label lblSala;
-        private System.Windows.Forms.TextBox txtID_Asientos;
+        private System.Windows.Forms.TextBox txtID_Asiento;
         private System.Windows.Forms.TextBox txtNumero_Asiento;
         private System.Windows.Forms.Label lblAsiento;
         private System.Windows.Forms.DataGridView dgvAsientos;
