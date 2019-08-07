@@ -66,7 +66,8 @@ namespace EXPO60.Modelo
                     while (reader.Read())
                     {
                         int intentos = 0;
-                        intentos = reader.GetInt16(9) + 1;
+                        intentos = reader.GetInt16(8) + 1;
+                       
                         if (intentos > 5)
                         {
                             int bloqueo = 3;
@@ -79,7 +80,7 @@ namespace EXPO60.Modelo
                         }
                         else
                         {
-                            MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuarios SET INTENTOS = ´{0}´ WHERE USUARIO = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                            MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuarios SET INTENTOS = '{0}' WHERE USUARIO = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
                             int verificacion = Convert.ToInt32(cmdupdate.ExecuteNonQuery());
                             if (verificacion >= 1)
                             {
