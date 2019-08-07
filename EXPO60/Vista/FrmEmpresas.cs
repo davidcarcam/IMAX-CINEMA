@@ -115,5 +115,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
