@@ -66,6 +66,7 @@
             this.grpRegistro_Sala.TabIndex = 2;
             this.grpRegistro_Sala.TabStop = false;
             this.grpRegistro_Sala.Text = "Registro de sala";
+            this.grpRegistro_Sala.Enter += new System.EventHandler(this.grpRegistro_Sala_Enter);
             // 
             // cmbEstado_Sala
             // 
