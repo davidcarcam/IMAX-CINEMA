@@ -607,6 +607,7 @@
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.MenuVertical);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNuevo";
             this.Text = "FrmNuevo";
             this.Load += new System.EventHandler(this.FrmNuevo_Load);

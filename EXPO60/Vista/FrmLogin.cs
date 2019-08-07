@@ -60,6 +60,8 @@ namespace EXPO60.Vista
         {
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
             txtCifrado.Text = Hash(pass);
+            txtContra.UseSystemPasswordChar = true;
+
         }
 
         private void linkPrimerUso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -74,6 +76,16 @@ namespace EXPO60.Vista
             recuperarUsuario recu = new recuperarUsuario();
             recu.Show();
             this.Hide();
+        }
+
+        private void txtCifrado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

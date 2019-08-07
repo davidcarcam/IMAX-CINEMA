@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using EXPO60.Modelo;
 using System.Windows.Forms;
 using EXPO60.Controlador;
+using System.Security.Cryptography;
 
 namespace EXPO60.Vista
 {
@@ -19,16 +20,25 @@ namespace EXPO60.Vista
             InitializeComponent();
         }
         Constructor_primerUso agr = new Constructor_primerUso();
-        public void mostrarET()
+
+        public string Hash(byte[] val)
+        {
+            using (SHA1Managed sha1 = new SHA1Managed())
+            {
+                var hash = sha1.ComputeHash(val);
+                return Convert.ToBase64String(hash);
+            }
+        }
+        public void mostrarCombo()
         {
 
             cmbTip.DataSource = Funciones_primerUso.ObtenerTipoUsuario();
-            cmbTip.DisplayMember = "tipo_usuario";
-            cmbTip.ValueMember = "id_tipo_usuario";
+            cmbTip.DisplayMember = "NOMBRE_TIPO";
+            cmbTip.ValueMember = "ID_TIPO_USUARIO";
 
             cmbEst.DataSource = Funciones_primerUso.ObtenerEstado();
-            cmbEst.DisplayMember = "estado";
-            cmbEst.ValueMember = "id_estado";
+            cmbEst.DisplayMember = "NOMBRE_ESTADO";
+            cmbEst.ValueMember = "ID_ESTADO_USUARIO";
 
         }
         public void AgregarUsu()
@@ -44,7 +54,7 @@ namespace EXPO60.Vista
                 agr.nombre = txtNom.Text;
                 agr.direccion = txtDir.Text;
                 agr.apellido = txtApe.Text;
-                agr.clave = txtCla.Text;
+                agr.clave = txtCifrado.Text;
                 agr.correo = txtCor.Text;
                 agr.dui = txtDui.Text;
                 agr.fecha = txtNac.Text;
@@ -67,7 +77,32 @@ namespace EXPO60.Vista
 
         private void txtCla_TextChanged(object sender, EventArgs e)
         {
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtCla.Text.ToString());
+            txtCifrado.Text = Hash(pass);
             txtCla.UseSystemPasswordChar = true;
+            
+        }
+
+        private void txtApe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmPrimerUso_Load(object sender, EventArgs e)
+        {
+            mostrarCombo();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            FrmLogin principal = new FrmLogin();
+            principal.Show();
+            this.Hide();
+        }
+
+        private void txtCifrado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

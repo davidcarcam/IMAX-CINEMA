@@ -30,15 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrimerUso));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNac = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtApe = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTel = new System.Windows.Forms.MaskedTextBox();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.idPrimerUsu = new System.Windows.Forms.TextBox();
+            this.cmbTip = new System.Windows.Forms.ComboBox();
+            this.cmbEst = new System.Windows.Forms.ComboBox();
+            this.btnIngUsuario = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCla = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtUsu = new System.Windows.Forms.TextBox();
@@ -51,15 +46,27 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtDui = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cmbEst = new System.Windows.Forms.ComboBox();
-            this.cmbTip = new System.Windows.Forms.ComboBox();
-            this.btnIngUsuario = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.idPrimerUsu = new System.Windows.Forms.TextBox();
+            this.txtNac = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtApe = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTel = new System.Windows.Forms.MaskedTextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCifrado = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Controls.Add(this.txtCifrado);
             this.groupBox1.Controls.Add(this.idPrimerUsu);
             this.groupBox1.Controls.Add(this.cmbTip);
             this.groupBox1.Controls.Add(this.cmbEst);
@@ -93,94 +100,70 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Primer uso de usuario";
             // 
-            // label1
+            // idPrimerUsu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poor Richard", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(233, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Primer Uso de Usuario";
+            this.idPrimerUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.idPrimerUsu.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.idPrimerUsu.Location = new System.Drawing.Point(427, 44);
+            this.idPrimerUsu.Name = "idPrimerUsu";
+            this.idPrimerUsu.Size = new System.Drawing.Size(39, 20);
+            this.idPrimerUsu.TabIndex = 62;
+            this.idPrimerUsu.Visible = false;
             // 
-            // txtNac
+            // cmbTip
             // 
-            this.txtNac.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNac.Location = new System.Drawing.Point(169, 180);
-            this.txtNac.Mask = "00/00/0000";
-            this.txtNac.Name = "txtNac";
-            this.txtNac.Size = new System.Drawing.Size(153, 20);
-            this.txtNac.TabIndex = 26;
-            this.txtNac.ValidatingType = typeof(System.DateTime);
+            this.cmbTip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTip.FormattingEnabled = true;
+            this.cmbTip.Location = new System.Drawing.Point(169, 304);
+            this.cmbTip.Name = "cmbTip";
+            this.cmbTip.Size = new System.Drawing.Size(146, 21);
+            this.cmbTip.TabIndex = 61;
             // 
-            // label4
+            // cmbEst
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Telefono";
+            this.cmbEst.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEst.FormattingEnabled = true;
+            this.cmbEst.Location = new System.Drawing.Point(194, 265);
+            this.cmbEst.Name = "cmbEst";
+            this.cmbEst.Size = new System.Drawing.Size(121, 21);
+            this.cmbEst.TabIndex = 60;
             // 
-            // label3
+            // btnIngUsuario
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 20);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Fecha nacimiento";
-            // 
-            // txtApe
-            // 
-            this.txtApe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtApe.Location = new System.Drawing.Point(169, 140);
-            this.txtApe.Name = "txtApe";
-            this.txtApe.Size = new System.Drawing.Size(153, 20);
-            this.txtApe.TabIndex = 25;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(98, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Apellido";
-            // 
-            // txtTel
-            // 
-            this.txtTel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTel.Location = new System.Drawing.Point(169, 220);
-            this.txtTel.Mask = "0000-0000";
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(153, 20);
-            this.txtTel.TabIndex = 27;
-            // 
-            // txtNom
-            // 
-            this.txtNom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNom.Location = new System.Drawing.Point(169, 100);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(153, 20);
-            this.txtNom.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(98, 100);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Nombre";
+            this.btnIngUsuario.Activecolor = System.Drawing.Color.DarkRed;
+            this.btnIngUsuario.BackColor = System.Drawing.Color.Brown;
+            this.btnIngUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIngUsuario.BorderRadius = 0;
+            this.btnIngUsuario.ButtonText = "Ingresar Usuario";
+            this.btnIngUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIngUsuario.DisabledColor = System.Drawing.Color.Gray;
+            this.btnIngUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngUsuario.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnIngUsuario.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnIngUsuario.Iconimage")));
+            this.btnIngUsuario.Iconimage_right = null;
+            this.btnIngUsuario.Iconimage_right_Selected = null;
+            this.btnIngUsuario.Iconimage_Selected = null;
+            this.btnIngUsuario.IconMarginLeft = 0;
+            this.btnIngUsuario.IconMarginRight = 0;
+            this.btnIngUsuario.IconRightVisible = true;
+            this.btnIngUsuario.IconRightZoom = 0D;
+            this.btnIngUsuario.IconVisible = true;
+            this.btnIngUsuario.IconZoom = 90D;
+            this.btnIngUsuario.IsTab = false;
+            this.btnIngUsuario.Location = new System.Drawing.Point(409, 304);
+            this.btnIngUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnIngUsuario.Name = "btnIngUsuario";
+            this.btnIngUsuario.Normalcolor = System.Drawing.Color.Brown;
+            this.btnIngUsuario.OnHovercolor = System.Drawing.Color.OrangeRed;
+            this.btnIngUsuario.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnIngUsuario.selected = false;
+            this.btnIngUsuario.Size = new System.Drawing.Size(205, 76);
+            this.btnIngUsuario.TabIndex = 59;
+            this.btnIngUsuario.Text = "Ingresar Usuario";
+            this.btnIngUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIngUsuario.Textcolor = System.Drawing.Color.White;
+            this.btnIngUsuario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngUsuario.Click += new System.EventHandler(this.btnIngUsuario_Click);
             // 
             // txtCla
             // 
@@ -303,68 +286,135 @@
             this.label12.TabIndex = 52;
             this.label12.Text = "DUI";
             // 
-            // cmbEst
+            // txtNac
             // 
-            this.cmbEst.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEst.FormattingEnabled = true;
-            this.cmbEst.Location = new System.Drawing.Point(194, 265);
-            this.cmbEst.Name = "cmbEst";
-            this.cmbEst.Size = new System.Drawing.Size(121, 21);
-            this.cmbEst.TabIndex = 60;
+            this.txtNac.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNac.Location = new System.Drawing.Point(169, 180);
+            this.txtNac.Mask = "00/00/0000";
+            this.txtNac.Name = "txtNac";
+            this.txtNac.Size = new System.Drawing.Size(153, 20);
+            this.txtNac.TabIndex = 26;
+            this.txtNac.ValidatingType = typeof(System.DateTime);
             // 
-            // cmbTip
+            // label4
             // 
-            this.cmbTip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTip.FormattingEnabled = true;
-            this.cmbTip.Location = new System.Drawing.Point(169, 304);
-            this.cmbTip.Name = "cmbTip";
-            this.cmbTip.Size = new System.Drawing.Size(146, 21);
-            this.cmbTip.TabIndex = 61;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(92, 220);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Telefono";
             // 
-            // btnIngUsuario
+            // label3
             // 
-            this.btnIngUsuario.Activecolor = System.Drawing.Color.DarkRed;
-            this.btnIngUsuario.BackColor = System.Drawing.Color.Brown;
-            this.btnIngUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIngUsuario.BorderRadius = 0;
-            this.btnIngUsuario.ButtonText = "Ingresar Usuario";
-            this.btnIngUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIngUsuario.DisabledColor = System.Drawing.Color.Gray;
-            this.btnIngUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngUsuario.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnIngUsuario.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnIngUsuario.Iconimage")));
-            this.btnIngUsuario.Iconimage_right = null;
-            this.btnIngUsuario.Iconimage_right_Selected = null;
-            this.btnIngUsuario.Iconimage_Selected = null;
-            this.btnIngUsuario.IconMarginLeft = 0;
-            this.btnIngUsuario.IconMarginRight = 0;
-            this.btnIngUsuario.IconRightVisible = true;
-            this.btnIngUsuario.IconRightZoom = 0D;
-            this.btnIngUsuario.IconVisible = true;
-            this.btnIngUsuario.IconZoom = 90D;
-            this.btnIngUsuario.IsTab = false;
-            this.btnIngUsuario.Location = new System.Drawing.Point(375, 319);
-            this.btnIngUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnIngUsuario.Name = "btnIngUsuario";
-            this.btnIngUsuario.Normalcolor = System.Drawing.Color.Brown;
-            this.btnIngUsuario.OnHovercolor = System.Drawing.Color.OrangeRed;
-            this.btnIngUsuario.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnIngUsuario.selected = false;
-            this.btnIngUsuario.Size = new System.Drawing.Size(281, 78);
-            this.btnIngUsuario.TabIndex = 59;
-            this.btnIngUsuario.Text = "Ingresar Usuario";
-            this.btnIngUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngUsuario.Textcolor = System.Drawing.Color.White;
-            this.btnIngUsuario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngUsuario.Click += new System.EventHandler(this.btnIngUsuario_Click);
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 20);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Fecha nacimiento";
             // 
-            // idPrimerUsu
+            // txtApe
             // 
-            this.idPrimerUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.idPrimerUsu.Location = new System.Drawing.Point(436, 29);
-            this.idPrimerUsu.Name = "idPrimerUsu";
-            this.idPrimerUsu.Size = new System.Drawing.Size(39, 20);
-            this.idPrimerUsu.TabIndex = 62;
+            this.txtApe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtApe.Location = new System.Drawing.Point(169, 140);
+            this.txtApe.Name = "txtApe";
+            this.txtApe.Size = new System.Drawing.Size(153, 20);
+            this.txtApe.TabIndex = 25;
+            this.txtApe.TextChanged += new System.EventHandler(this.txtApe_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(98, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Apellido";
+            // 
+            // txtTel
+            // 
+            this.txtTel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTel.Location = new System.Drawing.Point(169, 220);
+            this.txtTel.Mask = "0000-0000";
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(153, 20);
+            this.txtTel.TabIndex = 27;
+            // 
+            // txtNom
+            // 
+            this.txtNom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNom.Location = new System.Drawing.Point(169, 100);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(153, 20);
+            this.txtNom.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(98, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poor Richard", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(216, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Primer Uso de Usuario";
+            // 
+            // txtCifrado
+            // 
+            this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCifrado.Location = new System.Drawing.Point(495, 44);
+            this.txtCifrado.Name = "txtCifrado";
+            this.txtCifrado.Size = new System.Drawing.Size(39, 20);
+            this.txtCifrado.TabIndex = 63;
+            this.txtCifrado.Visible = false;
+            this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnRegresar,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
+            this.toolStrip1.TabIndex = 64;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnRegresar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
+            this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(23, 22);
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(94, 22);
+            this.toolStripLabel1.Text = "Regresar al login";
             // 
             // FrmPrimerUso
             // 
@@ -375,8 +425,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPrimerUso";
             this.Text = "FrmPrimerUso";
+            this.Load += new System.EventHandler(this.FrmPrimerUso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -409,5 +462,9 @@
         private System.Windows.Forms.MaskedTextBox txtDui;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox idPrimerUsu;
+        private System.Windows.Forms.TextBox txtCifrado;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnRegresar;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

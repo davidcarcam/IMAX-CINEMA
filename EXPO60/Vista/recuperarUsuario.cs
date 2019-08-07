@@ -24,5 +24,12 @@ namespace EXPO60.Vista
             validarRecuperar.resetClave(txtusuarioRecuperar.Text);
             
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            FrmLogin principal = new FrmLogin();
+            principal.Show();
+            this.Hide();
+        }
     }
 }
