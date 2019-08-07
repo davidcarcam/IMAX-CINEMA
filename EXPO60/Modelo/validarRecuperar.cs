@@ -34,9 +34,10 @@ namespace EXPO60.Modelo
                     if (retorno >= 1)
                     {
                         MessageBox.Show("Usuario recuperado");
-                        
-                        
+
                     }
+
+                
                     else
                     {
                         MessageBox.Show("Usuario no recuperado");
@@ -52,21 +53,22 @@ namespace EXPO60.Modelo
             }
 
         }
-        public static void EnviarCorreoContrasena(int contrasenaNueva, string correo)
+        
+        public  void EnviarCorreoContrasena(int contrasenaNueva, string correo)
         {
-            string contraseña = "";
+            string contraseña = "Ricaldone2019";
             string mensaje = string.Empty;
             //Creando el correo electronico
             string destinatario = correo;
-            string remitente = "Rafael000716@hotmail.com";
+            string remitente = "ayuda.imax@gmail.com";
             string asunto = "Nueva contraseña para IMAX";
             string cuerpoDelMesaje = "Su nueva contraseña es" + " " + Convert.ToString(contrasenaNueva);
             MailMessage ms = new MailMessage(remitente, destinatario, asunto, cuerpoDelMesaje);
 
 
-            SmtpClient smtp = new SmtpClient("smtp.live.com", 587);
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com. ", 465);
             smtp.EnableSsl = true;
-            smtp.Credentials = new NetworkCredential("Rafael000716@hotmail.com", contraseña);
+            smtp.Credentials = new NetworkCredential("ayuda.imax@gmail.com", contraseña);
 
             try
             {
@@ -86,10 +88,6 @@ namespace EXPO60.Modelo
                 MessageBox.Show("Error al enviar correo electronico: " + ex.Message);
             }
         }
-        public string Contrasena
-        {
-            get
-            { return "tu contraseña"; }
-        }
+        
     }
 }

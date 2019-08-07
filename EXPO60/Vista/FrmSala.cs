@@ -115,5 +115,9 @@ namespace EXPO60.Vista
             btnEliminar_Sala.Enabled = false;
         }
 
+        private void grpRegistro_Sala_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

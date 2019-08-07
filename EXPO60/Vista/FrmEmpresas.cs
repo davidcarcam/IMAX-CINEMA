@@ -110,5 +110,15 @@ namespace EXPO60.Vista
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
