@@ -35,8 +35,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txttipo = new System.Windows.Forms.TextBox();
-            this.txtestado = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -59,6 +57,8 @@
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvusuarios)).BeginInit();
@@ -82,12 +82,12 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.txtcontraseña);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtusuario);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txttipo);
-            this.groupBox2.Controls.Add(this.txtestado);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtdireccion);
@@ -122,7 +122,7 @@
             this.txtcontraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtcontraseña.Location = new System.Drawing.Point(884, 148);
             this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.Size = new System.Drawing.Size(153, 20);
+            this.txtcontraseña.Size = new System.Drawing.Size(171, 20);
             this.txtcontraseña.TabIndex = 11;
             // 
             // label11
@@ -141,7 +141,7 @@
             this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtusuario.Location = new System.Drawing.Point(856, 112);
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(153, 20);
+            this.txtusuario.Size = new System.Drawing.Size(199, 20);
             this.txtusuario.TabIndex = 10;
             // 
             // label10
@@ -154,22 +154,6 @@
             this.label10.Size = new System.Drawing.Size(64, 20);
             this.label10.TabIndex = 42;
             this.label10.Text = "Usuario";
-            // 
-            // txttipo
-            // 
-            this.txttipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttipo.Location = new System.Drawing.Point(909, 76);
-            this.txttipo.Name = "txttipo";
-            this.txttipo.Size = new System.Drawing.Size(153, 20);
-            this.txttipo.TabIndex = 9;
-            // 
-            // txtestado
-            // 
-            this.txtestado.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtestado.Location = new System.Drawing.Point(933, 37);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(153, 20);
-            this.txtestado.TabIndex = 8;
             // 
             // label9
             // 
@@ -489,6 +473,22 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Nombre";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(934, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 45;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(909, 75);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(146, 21);
+            this.comboBox2.TabIndex = 46;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,8 +516,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txttipo;
-        private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtdireccion;
@@ -540,5 +538,7 @@
         private System.Windows.Forms.MaskedTextBox txttelefono;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

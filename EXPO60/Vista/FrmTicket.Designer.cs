@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTicket));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
+            this.dgvTickets = new System.Windows.Forms.DataGridView();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.idTicket = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtFecha = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -49,31 +50,41 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtFecha);
+            this.groupBox2.Controls.Add(this.cmbUsuario);
+            this.groupBox2.Controls.Add(this.dgvTickets);
             this.groupBox2.Controls.Add(this.bunifuFlatButton1);
             this.groupBox2.Controls.Add(this.bunifuFlatButton2);
             this.groupBox2.Controls.Add(this.bunifuFlatButton3);
             this.groupBox2.Controls.Add(this.bunifuFlatButton4);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.idTicket);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Location = new System.Drawing.Point(1, 1);
+            this.groupBox2.Location = new System.Drawing.Point(1, -1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1237, 570);
+            this.groupBox2.Size = new System.Drawing.Size(1237, 572);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Registro de factura local";
+            this.groupBox2.Text = "Registro Tickets";
             // 
-            // dataGridView1
+            // cmbUsuario
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(99, 299);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1011, 265);
-            this.dataGridView1.TabIndex = 43;
+            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(721, 87);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(153, 21);
+            this.cmbUsuario.TabIndex = 65;
+            // 
+            // dgvTickets
+            // 
+            this.dgvTickets.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTickets.Location = new System.Drawing.Point(130, 254);
+            this.dgvTickets.Name = "dgvTickets";
+            this.dgvTickets.Size = new System.Drawing.Size(1011, 265);
+            this.dgvTickets.TabIndex = 43;
             // 
             // bunifuFlatButton1
             // 
@@ -97,7 +108,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(900, 190);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(900, 191);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Brown;
@@ -132,7 +143,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(633, 190);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(633, 191);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Brown;
@@ -167,7 +178,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(366, 190);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(366, 191);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Brown;
@@ -202,7 +213,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(99, 190);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(99, 191);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Brown;
@@ -215,13 +226,14 @@
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // textBox1
+            // idTicket
             // 
-            this.textBox1.Location = new System.Drawing.Point(551, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(31, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Visible = false;
+            this.idTicket.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.idTicket.Location = new System.Drawing.Point(551, 110);
+            this.idTicket.Name = "idTicket";
+            this.idTicket.Size = new System.Drawing.Size(31, 20);
+            this.idTicket.TabIndex = 10;
+            this.idTicket.Visible = false;
             // 
             // label7
             // 
@@ -233,13 +245,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Usuario";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(352, 86);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 20);
-            this.textBox4.TabIndex = 1;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -250,13 +255,22 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Fecha Ticket";
             // 
-            // comboBox1
+            // txtFecha
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(721, 87);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 21);
-            this.comboBox1.TabIndex = 65;
+            this.txtFecha.Location = new System.Drawing.Point(352, 90);
+            this.txtFecha.Mask = "00-00-0000";
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(143, 20);
+            this.txtFecha.TabIndex = 66;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(349, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Día-Mes-Año";
             // 
             // FrmTicket
             // 
@@ -267,9 +281,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTicket";
             this.Text = "FrmTicket";
+            this.Load += new System.EventHandler(this.FrmTicket_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,15 +292,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTickets;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox idTicket;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbUsuario;
+        private System.Windows.Forms.MaskedTextBox txtFecha;
+        private System.Windows.Forms.Label label1;
     }
 }
