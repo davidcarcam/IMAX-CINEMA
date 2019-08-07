@@ -47,22 +47,22 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtFech = new System.Windows.Forms.MaskedTextBox();
+            this.txtMon = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.cmbUsu = new System.Windows.Forms.ComboBox();
+            this.txtPAgo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfacturaloc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -347,21 +347,21 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.maskedTextBox1);
-            this.groupBox2.Controls.Add(this.maskedTextBox2);
+            this.groupBox2.Controls.Add(this.txtPAgo);
+            this.groupBox2.Controls.Add(this.cmbUsu);
+            this.groupBox2.Controls.Add(this.txtFech);
+            this.groupBox2.Controls.Add(this.txtMon);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.bunifuFlatButton1);
             this.groupBox2.Controls.Add(this.bunifuFlatButton2);
             this.groupBox2.Controls.Add(this.bunifuFlatButton3);
             this.groupBox2.Controls.Add(this.bunifuFlatButton4);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txtNom);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(3, 2);
             this.groupBox2.Name = "groupBox2";
@@ -370,22 +370,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de factura local";
             // 
-            // maskedTextBox1
+            // txtFech
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(324, 133);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(153, 20);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.txtFech.Location = new System.Drawing.Point(324, 133);
+            this.txtFech.Mask = "00/00/0000";
+            this.txtFech.Name = "txtFech";
+            this.txtFech.Size = new System.Drawing.Size(153, 20);
+            this.txtFech.TabIndex = 3;
+            this.txtFech.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox2
+            // txtMon
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(324, 85);
-            this.maskedTextBox2.Mask = "$00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(153, 20);
-            this.maskedTextBox2.TabIndex = 2;
+            this.txtMon.Location = new System.Drawing.Point(324, 85);
+            this.txtMon.Mask = "$00000";
+            this.txtMon.Name = "txtMon";
+            this.txtMon.Size = new System.Drawing.Size(153, 20);
+            this.txtMon.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -544,13 +544,6 @@
             this.textBox1.TabIndex = 10;
             this.textBox1.Visible = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(675, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 5;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -560,13 +553,6 @@
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Usuario";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(713, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 20);
-            this.textBox3.TabIndex = 4;
             // 
             // label7
             // 
@@ -598,12 +584,14 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Monto";
             // 
-            // textBox4
+            // txtNom
             // 
-            this.textBox4.Location = new System.Drawing.Point(324, 42);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 20);
-            this.textBox4.TabIndex = 1;
+            this.txtNom.Location = new System.Drawing.Point(324, 42);
+            this.txtNom.MaxLength = 50;
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(153, 20);
+            this.txtNom.TabIndex = 1;
+            this.txtNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNom_KeyPress);
             // 
             // label10
             // 
@@ -614,6 +602,23 @@
             this.label10.Size = new System.Drawing.Size(65, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Nombre";
+            // 
+            // cmbUsu
+            // 
+            this.cmbUsu.FormattingEnabled = true;
+            this.cmbUsu.Location = new System.Drawing.Point(676, 84);
+            this.cmbUsu.Name = "cmbUsu";
+            this.cmbUsu.Size = new System.Drawing.Size(190, 21);
+            this.cmbUsu.TabIndex = 44;
+            // 
+            // txtPAgo
+            // 
+            this.txtPAgo.Location = new System.Drawing.Point(713, 43);
+            this.txtPAgo.MaxLength = 15;
+            this.txtPAgo.Name = "txtPAgo";
+            this.txtPAgo.Size = new System.Drawing.Size(153, 20);
+            this.txtPAgo.TabIndex = 45;
+            this.txtPAgo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPAgo_KeyPress);
             // 
             // Frmfacturalocal
             // 
@@ -655,21 +660,21 @@
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox txtFech;
+        private System.Windows.Forms.MaskedTextBox txtMon;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtPAgo;
+        private System.Windows.Forms.ComboBox cmbUsu;
     }
 }

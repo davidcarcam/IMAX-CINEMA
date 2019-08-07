@@ -67,10 +67,12 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(758, 76);
+            this.textBox1.MaxLength = 200;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(153, 48);
             this.textBox1.TabIndex = 60;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label2
             // 
@@ -93,9 +95,11 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(400, 87);
+            this.txtNumero.MaxLength = 50;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(153, 20);
             this.txtNumero.TabIndex = 58;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // label1
             // 

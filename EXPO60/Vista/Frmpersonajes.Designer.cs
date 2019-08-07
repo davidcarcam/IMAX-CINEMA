@@ -32,16 +32,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.dgvpersonajes = new System.Windows.Forms.DataGridView();
-            this.txtactor = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtpelicula = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbpeliculas = new System.Windows.Forms.ComboBox();
+            this.cmbActor = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpersonajes)).BeginInit();
             this.SuspendLayout();
@@ -51,15 +51,15 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cmbActor);
+            this.groupBox1.Controls.Add(this.cmbpeliculas);
             this.groupBox1.Controls.Add(this.txtid);
             this.groupBox1.Controls.Add(this.dgvpersonajes);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnactualizar);
             this.groupBox1.Controls.Add(this.btnmostrar);
             this.groupBox1.Controls.Add(this.btnagregar);
-            this.groupBox1.Controls.Add(this.txtactor);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtpelicula);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.label1);
@@ -87,57 +87,6 @@
             this.dgvpersonajes.Name = "dgvpersonajes";
             this.dgvpersonajes.Size = new System.Drawing.Size(1011, 265);
             this.dgvpersonajes.TabIndex = 55;
-            // 
-            // txtactor
-            // 
-            this.txtactor.Location = new System.Drawing.Point(832, 64);
-            this.txtactor.Name = "txtactor";
-            this.txtactor.Size = new System.Drawing.Size(153, 20);
-            this.txtactor.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(759, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Actor";
-            // 
-            // txtpelicula
-            // 
-            this.txtpelicula.Location = new System.Drawing.Point(580, 64);
-            this.txtpelicula.Name = "txtpelicula";
-            this.txtpelicula.Size = new System.Drawing.Size(153, 20);
-            this.txtpelicula.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(491, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Pelicula";
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Location = new System.Drawing.Point(312, 62);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(153, 20);
-            this.txtnombre.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Nombre del personaje";
             // 
             // btneliminar
             // 
@@ -279,6 +228,62 @@
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(759, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Actor";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(491, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Pelicula";
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(312, 62);
+            this.txtnombre.MaxLength = 30;
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(153, 20);
+            this.txtnombre.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(122, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Nombre del personaje";
+            // 
+            // cmbpeliculas
+            // 
+            this.cmbpeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbpeliculas.FormattingEnabled = true;
+            this.cmbpeliculas.Location = new System.Drawing.Point(561, 64);
+            this.cmbpeliculas.Name = "cmbpeliculas";
+            this.cmbpeliculas.Size = new System.Drawing.Size(140, 21);
+            this.cmbpeliculas.TabIndex = 57;
+            // 
+            // cmbActor
+            // 
+            this.cmbActor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbActor.FormattingEnabled = true;
+            this.cmbActor.Location = new System.Drawing.Point(812, 66);
+            this.cmbActor.Name = "cmbActor";
+            this.cmbActor.Size = new System.Drawing.Size(140, 21);
+            this.cmbActor.TabIndex = 58;
+            // 
             // FrmPersonajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,11 +309,11 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnagregar;
-        private System.Windows.Forms.TextBox txtactor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtpelicula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbActor;
+        private System.Windows.Forms.ComboBox cmbpeliculas;
     }
 }

@@ -45,14 +45,12 @@ namespace EXPO60.Vista
         {
             txtid.Clear();
             txtnombre.Clear();
-            txtpelicula.Clear();
-            txtactor.Clear();
         }
         public void ModificarPersonaje()
         {
             Actualizar.idpersonaje = Convert.ToInt32(txtid.Text);
             Actualizar.nombre = txtnombre.Text;
-            Actualizar.pelicula = txtpelicula.Text;
+            Actualizar.pelicula = Convert.ToInt16(cmbpeliculas.SelectedValue);
             Actualizar.actor = txtactor.Text;
             FuncionPersonajes.ActualizarPersonaje(Actualizar);
         }
@@ -104,8 +102,8 @@ namespace EXPO60.Vista
             posicion = this.dgvpersonajes.CurrentRow.Index;
             txtid.Text = this.dgvpersonajes[0, posicion].Value.ToString();
             txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
-            txtactor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
-            txtpelicula.Text = this.dgvpersonajes[3, posicion].Value.ToString();
+            cmbActor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
+            cmbpeliculas.Text = this.dgvpersonajes[3, posicion].Value.ToString();
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
@@ -115,6 +113,44 @@ namespace EXPO60.Vista
         {
 
         }
+        public void ValidacionesNombre(KeyPressEventArgs e)
+        {
+            if (char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
 
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            else if (char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            else if (e.KeyChar.ToString().Equals("."))
+            {
+                e.Handled = true;
+            }
+
+            else if (e.KeyChar.ToString().Equals("'"))
+            {
+                e.Handled = true;
+            }
+            else if (e.KeyChar.ToString().Equals(","))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

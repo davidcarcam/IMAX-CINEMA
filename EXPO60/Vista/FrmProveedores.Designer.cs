@@ -34,7 +34,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtdui = new System.Windows.Forms.MaskedTextBox();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.txtempresa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtestado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
@@ -61,11 +61,11 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txttelefono);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtdui);
             this.groupBox1.Controls.Add(this.txtid);
-            this.groupBox1.Controls.Add(this.txtempresa);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtestado);
             this.groupBox1.Controls.Add(this.label6);
@@ -124,13 +124,6 @@
             this.txtid.Size = new System.Drawing.Size(31, 20);
             this.txtid.TabIndex = 44;
             this.txtid.Visible = false;
-            // 
-            // txtempresa
-            // 
-            this.txtempresa.Location = new System.Drawing.Point(767, 91);
-            this.txtempresa.Name = "txtempresa";
-            this.txtempresa.Size = new System.Drawing.Size(153, 20);
-            this.txtempresa.TabIndex = 7;
             // 
             // label7
             // 
@@ -387,6 +380,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(768, 88);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(152, 21);
+            this.comboBox1.TabIndex = 46;
+            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,7 +411,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox txtdui;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txtempresa;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.Label label6;
@@ -428,5 +428,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
