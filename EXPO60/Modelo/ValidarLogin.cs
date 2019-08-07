@@ -66,7 +66,7 @@ namespace EXPO60.Modelo
                     while (reader.Read())
                     {
                         int intentos = 0;
-                        intentos = reader.GetInt16(8) + 1;
+                        intentos = reader.GetInt16(9) + 1;
                         if (intentos > 5)
                         {
                             int bloqueo = 3;

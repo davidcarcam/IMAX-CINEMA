@@ -99,7 +99,6 @@ C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmNuev
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmPelicula.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmPersonajes.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmPrimerUso.resources
-C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.FrmPrincipal.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmProducto.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmProveedores.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmSala.resources
@@ -141,3 +140,4 @@ C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmUsuario.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.recuperarUsuario.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.GenerateResource.Cache
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmBotones.resources
