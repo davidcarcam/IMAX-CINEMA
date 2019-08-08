@@ -73,6 +73,7 @@
             // 
             // cmbEstado_Asiento
             // 
+            this.cmbEstado_Asiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado_Asiento.FormattingEnabled = true;
             this.cmbEstado_Asiento.Location = new System.Drawing.Point(943, 84);
             this.cmbEstado_Asiento.Name = "cmbEstado_Asiento";
@@ -81,6 +82,7 @@
             // 
             // cmbSala
             // 
+            this.cmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSala.FormattingEnabled = true;
             this.cmbSala.Location = new System.Drawing.Point(487, 84);
             this.cmbSala.Name = "cmbSala";

@@ -27,7 +27,7 @@ namespace EXPO60.Vista
         }
         public void Limpiar_Datos()
         {
-            txtNombre_Actor.Clear();
+            txtactor.Clear();
         }
         public void Eliminar_Actor()
         {
@@ -42,19 +42,19 @@ namespace EXPO60.Vista
         }
         public void Agregar_Actor()
         {
-            if (txtNombre_Actor.Text.Trim() == "")
+            if (txtactor.Text.Trim() == "")
             {
                 MessageBox.Show("El campo se encuentra vacio, Completelo", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                agregar.Nombre_Actor = txtNombre_Actor.Text;
+                agregar.Nombre_Actor = txtactor.Text;
             }
         }
         public void Modificar_Actor()
         {
             Actualizar.ID_Actor = Convert.ToInt32(txtID_Actor);
-            Actualizar.Nombre_Actor = txtNombre_Actor.Text;
+            Actualizar.Nombre_Actor = txtactor.Text;
             Funciones_Actores.Actualizar_Actor(Actualizar);
         }
         private void BtnAgregar_Actor_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace EXPO60.Vista
             int posicion;
             posicion = this.dgvActores.CurrentRow.Index;
             txtID_Actor.Text = this.dgvActores[0, posicion].Value.ToString();
-            txtNombre_Actor.Text = this.dgvActores[1, posicion].Value.ToString();
+            txtactor.Text = this.dgvActores[1, posicion].Value.ToString();
             btnActualizar_Actor.Enabled = true;
             btnEliminar_Actor.Enabled = true;
             btnAgregar_Actor.Enabled = false;
@@ -104,10 +104,10 @@ namespace EXPO60.Vista
         }
         private void TxtNombre_Actor_Validated(object sender, EventArgs e)
         {
-            if (txtNombre_Actor.Text.Trim() == "")
+            if (txtactor.Text.Trim() == "")
             {
-                epError3.SetError(txtNombre_Actor, "Introduce la capacidad de la sala.");
-                txtNombre_Actor.Focus();
+                epError3.SetError(txtactor, "Introduce la capacidad de la sala.");
+                txtactor.Focus();
             }
             else
             {
@@ -116,6 +116,22 @@ namespace EXPO60.Vista
         }
         private void TxtNombre_Actor_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
             // codigo para solo ingresar letras(vocales y mayusculas, sin simbolos) usando codigo ASCII
             if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {

@@ -37,7 +37,7 @@
             this.btnActualizar_Actor = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMostrar_Actores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Actor = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtNombre_Actor = new System.Windows.Forms.TextBox();
+            this.txtactor = new System.Windows.Forms.TextBox();
             this.lblNombre_Actor = new System.Windows.Forms.Label();
             this.epError3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -57,7 +57,7 @@
             this.grpActores.Controls.Add(this.btnActualizar_Actor);
             this.grpActores.Controls.Add(this.btnMostrar_Actores);
             this.grpActores.Controls.Add(this.btnAgregar_Actor);
-            this.grpActores.Controls.Add(this.txtNombre_Actor);
+            this.grpActores.Controls.Add(this.txtactor);
             this.grpActores.Controls.Add(this.lblNombre_Actor);
             this.grpActores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpActores.Location = new System.Drawing.Point(0, 0);
@@ -230,15 +230,15 @@
             this.btnAgregar_Actor.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar_Actor.Click += new System.EventHandler(this.BtnAgregar_Actor_Click);
             // 
-            // txtNombre_Actor
+            // txtactor
             // 
-            this.txtNombre_Actor.Location = new System.Drawing.Point(429, 97);
-            this.txtNombre_Actor.MaxLength = 100;
-            this.txtNombre_Actor.Name = "txtNombre_Actor";
-            this.txtNombre_Actor.Size = new System.Drawing.Size(500, 20);
-            this.txtNombre_Actor.TabIndex = 1;
-            this.txtNombre_Actor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_Actor_KeyPress);
-            this.txtNombre_Actor.Validated += new System.EventHandler(this.TxtNombre_Actor_Validated);
+            this.txtactor.Location = new System.Drawing.Point(429, 97);
+            this.txtactor.MaxLength = 100;
+            this.txtactor.Name = "txtactor";
+            this.txtactor.Size = new System.Drawing.Size(500, 20);
+            this.txtactor.TabIndex = 1;
+            this.txtactor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_Actor_KeyPress);
+            this.txtactor.Validated += new System.EventHandler(this.TxtNombre_Actor_Validated);
             // 
             // lblNombre_Actor
             // 
@@ -304,7 +304,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnActualizar_Actor;
         private Bunifu.Framework.UI.BunifuFlatButton btnMostrar_Actores;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar_Actor;
-        private System.Windows.Forms.TextBox txtNombre_Actor;
+        private System.Windows.Forms.TextBox txtactor;
         private System.Windows.Forms.Label lblNombre_Actor;
         private System.Windows.Forms.ErrorProvider epError3;
         private System.Windows.Forms.ToolStrip toolStrip1;

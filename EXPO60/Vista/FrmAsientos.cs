@@ -130,6 +130,22 @@ namespace EXPO60.Vista
         }
         private void TxtNumero_Asiento_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
             // codigo para solo ingresar numeros usando codigo ASCII
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {

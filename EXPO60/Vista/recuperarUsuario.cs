@@ -32,6 +32,7 @@ namespace EXPO60.Vista
             {
                 error1.SetError(txtusuarioRecuperar, " Ingrese un Email Válido");
                 txtusuarioRecuperar.Focus();
+                
                 vaciarampos();
                 return;
             }
