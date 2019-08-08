@@ -20,7 +20,7 @@ namespace EXPO60.Modelo
             List<constructorRecuperar> recu = new List<constructorRecuperar>();
             try
             {
-                string query = "SELECT * FROM usuarios WHERE correo = '" + user + "'";
+                string query = "SELECT * FROM usuario WHERE correo = '" + user + "'";
                 MySqlCommand cmd = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataReader _reader = cmd.ExecuteReader();
                 while (_reader.Read())
@@ -28,7 +28,7 @@ namespace EXPO60.Modelo
                     constructorRecuperar leer = new constructorRecuperar();
                     leer.USUARIO_RE = _reader.GetString(0);
                     leer.CORREO_USU = _reader.GetString(1);
-                    string query2 = "UPDATE usuarios SET clave = '" + resetclave + "' WHERE id_usuario = '" + _reader.GetInt32(0) + "'";
+                    string query2 = "UPDATE usuario SET clave = '" + resetclave + "' WHERE id_usuario = '" + _reader.GetInt32(0) + "'";
                     MySqlCommand cmd2 = new MySqlCommand(string.Format(query2), Conexion.ObtenerConexion());
                     int retorno = Convert.ToInt32(cmd2.ExecuteNonQuery());
                     if (retorno >= 1)

@@ -100,7 +100,7 @@ namespace EXPO60.Vista
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmNuevo>();
+          
         }
     }
 }
