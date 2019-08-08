@@ -31,5 +31,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
