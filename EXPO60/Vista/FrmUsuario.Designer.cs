@@ -44,7 +44,7 @@
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnagregar_Click = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -99,7 +99,7 @@
             this.groupBox2.Controls.Add(this.btneliminar);
             this.groupBox2.Controls.Add(this.btnactualizar);
             this.groupBox2.Controls.Add(this.btnmostrar);
-            this.groupBox2.Controls.Add(this.btnagregar);
+            this.groupBox2.Controls.Add(this.btnagregar_Click);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtcorreo);
             this.groupBox2.Controls.Add(this.label6);
@@ -317,39 +317,39 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnagregar.BackColor = System.Drawing.Color.Maroon;
-            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
-            this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnagregar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnagregar.Iconimage")));
-            this.btnagregar.Iconimage_right = null;
-            this.btnagregar.Iconimage_right_Selected = null;
-            this.btnagregar.Iconimage_Selected = null;
-            this.btnagregar.IconMarginLeft = 0;
-            this.btnagregar.IconMarginRight = 0;
-            this.btnagregar.IconRightVisible = true;
-            this.btnagregar.IconRightZoom = 0D;
-            this.btnagregar.IconVisible = true;
-            this.btnagregar.IconZoom = 90D;
-            this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(120, 220);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnagregar.selected = false;
-            this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 31;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnagregar.Textcolor = System.Drawing.Color.White;
-            this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            this.btnagregar_Click.Activecolor = System.Drawing.Color.Maroon;
+            this.btnagregar_Click.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnagregar_Click.BackColor = System.Drawing.Color.Maroon;
+            this.btnagregar_Click.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnagregar_Click.BorderRadius = 0;
+            this.btnagregar_Click.ButtonText = "      Agregar";
+            this.btnagregar_Click.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnagregar_Click.DisabledColor = System.Drawing.Color.Gray;
+            this.btnagregar_Click.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnagregar_Click.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnagregar.Iconimage")));
+            this.btnagregar_Click.Iconimage_right = null;
+            this.btnagregar_Click.Iconimage_right_Selected = null;
+            this.btnagregar_Click.Iconimage_Selected = null;
+            this.btnagregar_Click.IconMarginLeft = 0;
+            this.btnagregar_Click.IconMarginRight = 0;
+            this.btnagregar_Click.IconRightVisible = true;
+            this.btnagregar_Click.IconRightZoom = 0D;
+            this.btnagregar_Click.IconVisible = true;
+            this.btnagregar_Click.IconZoom = 90D;
+            this.btnagregar_Click.IsTab = false;
+            this.btnagregar_Click.Location = new System.Drawing.Point(120, 220);
+            this.btnagregar_Click.Name = "btnagregar";
+            this.btnagregar_Click.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnagregar_Click.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnagregar_Click.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnagregar_Click.selected = false;
+            this.btnagregar_Click.Size = new System.Drawing.Size(241, 48);
+            this.btnagregar_Click.TabIndex = 31;
+            this.btnagregar_Click.Text = "      Agregar";
+            this.btnagregar_Click.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregar_Click.Textcolor = System.Drawing.Color.White;
+            this.btnagregar_Click.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnagregar_Click.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // label7
             // 
@@ -540,7 +540,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnagregar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnagregar_Click;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.Label label6;
