@@ -96,7 +96,7 @@ namespace EXPO60.Vista
 
         private void FrmNuevo_Load(object sender, EventArgs e)
         {
-
+            btnnormal.Visible = false;
         }
 
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
@@ -161,8 +161,8 @@ namespace EXPO60.Vista
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmNuevo>();
-
+            Form frm = new FrmUsuario();
+            this.Close();   
         }
 
         private void MenuVertical_Paint(object sender, PaintEventArgs e)

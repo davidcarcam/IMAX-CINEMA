@@ -44,6 +44,7 @@ namespace EXPO60.Vista
                 ContructorLogin log = new ContructorLogin(txtUsuario.Text, txtContra.Text);
                 ContructorLogin.usuario = txtUsuario.Text;
                 log.clave = txtCifrado.Text;
+                MessageBox.Show(log.clave);
                 //Recuperando el valor de retorno
                 bool datos = ValidarLogin.Acceso(log);
                 //
