@@ -21,19 +21,30 @@ namespace EXPO60.Vista
         }
         Constructor_Personajes Agregar = new Constructor_Personajes();
         Constructor_Personajes Actualizar = new Constructor_Personajes();
-     
-      
+
+        public void mostrarCombo()
+        {
+
+            cmbActor.DataSource = FuncionPersonajes.obtenerActor();
+            cmbActor.DisplayMember = "actor";
+            cmbActor.ValueMember = "id_actor";
+
+            cmbpeliculas.DataSource = FuncionPersonajes.obtenerpelicula();
+            cmbpeliculas.DisplayMember = "titulo";
+            cmbpeliculas.ValueMember = "id_pelicula";
+
+        }
         public void AgregarPersonaje()
         {
-            if (txtnombre.Text.Trim() == "" || txtactor.Text.Trim() == "" || txtpelicula.Text.Trim() == "")
+            if (txtnombre.Text.Trim() == "")
             {
                 MessageBox.Show("Complete todos los campos", "Falta informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 Agregar.nombre = txtnombre.Text;
-                Agregar.pelicula = txtpelicula.Text;
-                Agregar.actor = txtactor.Text;
+                Agregar.pelicula = Convert.ToInt16(cmbpeliculas.SelectedValue);
+                Agregar.actor = Convert.ToInt16(cmbActor.SelectedValue);
                 int datos = FuncionPersonajes.IngresarPersonaje(Agregar);
             }
         }
@@ -51,7 +62,7 @@ namespace EXPO60.Vista
             Actualizar.idpersonaje = Convert.ToInt32(txtid.Text);
             Actualizar.nombre = txtnombre.Text;
             Actualizar.pelicula = Convert.ToInt16(cmbpeliculas.SelectedValue);
-            Actualizar.actor = txtactor.Text;
+            Actualizar.actor = Convert.ToInt16(cmbActor.SelectedValue);
             FuncionPersonajes.ActualizarPersonaje(Actualizar);
         }
         public void EliminarPersonaje()

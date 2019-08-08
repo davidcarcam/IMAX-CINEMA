@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrimerUso));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.txtCifrado = new System.Windows.Forms.TextBox();
             this.idPrimerUsu = new System.Windows.Forms.TextBox();
             this.cmbTip = new System.Windows.Forms.ComboBox();
             this.cmbEst = new System.Windows.Forms.ComboBox();
@@ -46,19 +50,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtDui = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtNac = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtApe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCifrado = new System.Windows.Forms.TextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,9 +81,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtDui);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txtNac);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtApe);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtTel);
@@ -99,6 +95,46 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Primer uso de usuario";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnRegresar,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
+            this.toolStrip1.TabIndex = 64;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnRegresar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
+            this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(23, 22);
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(94, 22);
+            this.toolStripLabel1.Text = "Regresar al login";
+            // 
+            // txtCifrado
+            // 
+            this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCifrado.Location = new System.Drawing.Point(495, 44);
+            this.txtCifrado.Name = "txtCifrado";
+            this.txtCifrado.Size = new System.Drawing.Size(39, 20);
+            this.txtCifrado.TabIndex = 63;
+            this.txtCifrado.Visible = false;
+            this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
             // 
             // idPrimerUsu
             // 
@@ -150,7 +186,7 @@
             this.btnIngUsuario.IconVisible = true;
             this.btnIngUsuario.IconZoom = 90D;
             this.btnIngUsuario.IsTab = false;
-            this.btnIngUsuario.Location = new System.Drawing.Point(409, 304);
+            this.btnIngUsuario.Location = new System.Drawing.Point(397, 276);
             this.btnIngUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIngUsuario.Name = "btnIngUsuario";
             this.btnIngUsuario.Normalcolor = System.Drawing.Color.Brown;
@@ -230,7 +266,7 @@
             // txtDir
             // 
             this.txtDir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDir.Location = new System.Drawing.Point(427, 180);
+            this.txtDir.Location = new System.Drawing.Point(427, 140);
             this.txtDir.Multiline = true;
             this.txtDir.Name = "txtDir";
             this.txtDir.Size = new System.Drawing.Size(153, 71);
@@ -241,7 +277,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(346, 180);
+            this.label7.Location = new System.Drawing.Point(346, 140);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 54;
@@ -250,7 +286,7 @@
             // txtCor
             // 
             this.txtCor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCor.Location = new System.Drawing.Point(409, 142);
+            this.txtCor.Location = new System.Drawing.Point(409, 102);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(153, 20);
             this.txtCor.TabIndex = 46;
@@ -260,7 +296,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(346, 142);
+            this.label6.Location = new System.Drawing.Point(346, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 53;
@@ -269,7 +305,7 @@
             // txtDui
             // 
             this.txtDui.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDui.Location = new System.Drawing.Point(390, 102);
+            this.txtDui.Location = new System.Drawing.Point(169, 180);
             this.txtDui.Mask = "00000000-0";
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(153, 20);
@@ -280,21 +316,11 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(346, 102);
+            this.label12.Location = new System.Drawing.Point(125, 180);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 20);
             this.label12.TabIndex = 52;
             this.label12.Text = "DUI";
-            // 
-            // txtNac
-            // 
-            this.txtNac.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNac.Location = new System.Drawing.Point(169, 180);
-            this.txtNac.Mask = "00/00/0000";
-            this.txtNac.Name = "txtNac";
-            this.txtNac.Size = new System.Drawing.Size(153, 20);
-            this.txtNac.TabIndex = 26;
-            this.txtNac.ValidatingType = typeof(System.DateTime);
             // 
             // label4
             // 
@@ -306,17 +332,6 @@
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "Telefono";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 20);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Fecha nacimiento";
             // 
             // txtApe
             // 
@@ -376,46 +391,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Primer Uso de Usuario";
             // 
-            // txtCifrado
-            // 
-            this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCifrado.Location = new System.Drawing.Point(495, 44);
-            this.txtCifrado.Name = "txtCifrado";
-            this.txtCifrado.Size = new System.Drawing.Size(39, 20);
-            this.txtCifrado.TabIndex = 63;
-            this.txtCifrado.Visible = false;
-            this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnRegresar,
-            this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
-            this.toolStrip1.TabIndex = 64;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnRegresar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(23, 22);
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(94, 22);
-            this.toolStripLabel1.Text = "Regresar al login";
-            // 
             // FrmPrimerUso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,9 +413,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox txtNac;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtApe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtTel;

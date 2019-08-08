@@ -41,7 +41,7 @@ namespace EXPO60.Vista
             }
             else
             {
-                ContructorLogin log = new ContructorLogin(txtUsuario.Text, txtContra.Text);
+                ContructorLogin log = new ContructorLogin(txtUsuario.Text, txtCifrado.Text);
                 ContructorLogin.usuario = txtUsuario.Text;
                 log.clave = txtCifrado.Text;
                 //Recuperando el valor de retorno

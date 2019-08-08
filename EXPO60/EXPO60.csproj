@@ -54,6 +54,7 @@
     <Compile Include="Controlador\constructorEmpresa.cs" />
     <Compile Include="Controlador\constructorRecuperar.cs" />
     <Compile Include="Controlador\ConstructorTickets.cs" />
+    <Compile Include="Controlador\ConstructorUsuario.cs" />
     <Compile Include="Controlador\Constructor_Personajes.cs" />
     <Compile Include="Controlador\Constructor_primerUso.cs" />
     <Compile Include="Controlador\Constructor_Productos.cs" />
@@ -67,6 +68,7 @@
     </Compile>
     <Compile Include="Modelo\funcionesEmpresa.cs" />
     <Compile Include="Modelo\FuncionesTickets.cs" />
+    <Compile Include="Modelo\FuncionesUsuario.cs" />
     <Compile Include="Modelo\Funciones_primerUso.cs" />
     <Compile Include="Modelo\Funciones_Productos.cs" />
     <Compile Include="Modelo\Funciones_Salas.cs" />

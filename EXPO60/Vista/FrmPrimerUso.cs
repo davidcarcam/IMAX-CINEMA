@@ -33,18 +33,18 @@ namespace EXPO60.Vista
         {
 
             cmbTip.DataSource = Funciones_primerUso.ObtenerTipoUsuario();
-            cmbTip.DisplayMember = "NOMBRE_TIPO";
-            cmbTip.ValueMember = "ID_TIPO_USUARIO";
+            cmbTip.DisplayMember = "tipo_usu";
+            cmbTip.ValueMember = "id_tipo_usu";
 
             cmbEst.DataSource = Funciones_primerUso.ObtenerEstado();
-            cmbEst.DisplayMember = "NOMBRE_ESTADO";
-            cmbEst.ValueMember = "ID_ESTADO_USUARIO";
+            cmbEst.DisplayMember = "estado_usu";
+            cmbEst.ValueMember = "id_estado_usu";
 
         }
         public void AgregarUsu()
         {
             if (txtApe.Text.Trim() == "" || txtCla.Text.Trim() == "" || txtCor.Text.Trim() == ""
-                || txtDir.Text.Trim() == "" || txtDui.Text.Trim() == "" || txtNac.Text.Trim() == ""
+                || txtDir.Text.Trim() == "" || txtDui.Text.Trim() == ""
                 || txtNom.Text.Trim() == "" || txtTel.Text.Trim() == "" || txtUsu.Text.Trim() == "")
             {
                 MessageBox.Show("Complete todos los campos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -57,7 +57,6 @@ namespace EXPO60.Vista
                 agr.clave = txtCifrado.Text;
                 agr.correo = txtCor.Text;
                 agr.dui = txtDui.Text;
-                agr.fecha = txtNac.Text;
                 agr.telefono = txtTel.Text;
                 agr.usuario = txtUsu.Text;
                 agr.tipo = Convert.ToInt16(cmbTip.SelectedValue);
@@ -72,7 +71,7 @@ namespace EXPO60.Vista
 
         private void btnIngUsuario_Click(object sender, EventArgs e)
         {
-
+            AgregarUsu();
         }
 
         private void txtCla_TextChanged(object sender, EventArgs e)
