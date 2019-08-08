@@ -95,7 +95,7 @@
             this.bunifuFlatButton4.IconRightVisible = true;
             this.bunifuFlatButton4.IconRightZoom = 0D;
             this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 90D;
+            this.bunifuFlatButton4.IconZoom = 70D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(627, 304);
             this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -143,7 +143,7 @@
             this.bunifuFlatButton3.IconRightVisible = true;
             this.bunifuFlatButton3.IconRightZoom = 0D;
             this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
+            this.bunifuFlatButton3.IconZoom = 70D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(139, 304);
             this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -180,7 +180,7 @@
             this.bunifuFlatButton2.IconRightVisible = true;
             this.bunifuFlatButton2.IconRightZoom = 0D;
             this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IconZoom = 70D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(625, 269);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -217,7 +217,7 @@
             this.bunifuFlatButton1.IconRightVisible = true;
             this.bunifuFlatButton1.IconRightZoom = 0D;
             this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IconZoom = 70D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(382, 304);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -254,7 +254,7 @@
             this.bunifuFlatButton15.IconRightVisible = true;
             this.bunifuFlatButton15.IconRightZoom = 0D;
             this.bunifuFlatButton15.IconVisible = true;
-            this.bunifuFlatButton15.IconZoom = 90D;
+            this.bunifuFlatButton15.IconZoom = 70D;
             this.bunifuFlatButton15.IsTab = false;
             this.bunifuFlatButton15.Location = new System.Drawing.Point(382, 234);
             this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -292,7 +292,7 @@
             this.bunifuFlatButton12.IconRightVisible = true;
             this.bunifuFlatButton12.IconRightZoom = 0D;
             this.bunifuFlatButton12.IconVisible = true;
-            this.bunifuFlatButton12.IconZoom = 90D;
+            this.bunifuFlatButton12.IconZoom = 70D;
             this.bunifuFlatButton12.IsTab = false;
             this.bunifuFlatButton12.Location = new System.Drawing.Point(139, 269);
             this.bunifuFlatButton12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -330,7 +330,7 @@
             this.bunifuFlatButton19.IconRightVisible = true;
             this.bunifuFlatButton19.IconRightZoom = 0D;
             this.bunifuFlatButton19.IconVisible = true;
-            this.bunifuFlatButton19.IconZoom = 90D;
+            this.bunifuFlatButton19.IconZoom = 70D;
             this.bunifuFlatButton19.IsTab = false;
             this.bunifuFlatButton19.Location = new System.Drawing.Point(139, 199);
             this.bunifuFlatButton19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -368,7 +368,7 @@
             this.bunifuFlatButton22.IconRightVisible = true;
             this.bunifuFlatButton22.IconRightZoom = 0D;
             this.bunifuFlatButton22.IconVisible = true;
-            this.bunifuFlatButton22.IconZoom = 90D;
+            this.bunifuFlatButton22.IconZoom = 70D;
             this.bunifuFlatButton22.IsTab = false;
             this.bunifuFlatButton22.Location = new System.Drawing.Point(139, 164);
             this.bunifuFlatButton22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -406,7 +406,7 @@
             this.bunifuFlatButton13.IconRightVisible = true;
             this.bunifuFlatButton13.IconRightZoom = 0D;
             this.bunifuFlatButton13.IconVisible = true;
-            this.bunifuFlatButton13.IconZoom = 90D;
+            this.bunifuFlatButton13.IconZoom = 70D;
             this.bunifuFlatButton13.IsTab = false;
             this.bunifuFlatButton13.Location = new System.Drawing.Point(382, 269);
             this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -443,7 +443,7 @@
             this.bunifuFlatButton18.IconRightVisible = true;
             this.bunifuFlatButton18.IconRightZoom = 0D;
             this.bunifuFlatButton18.IconVisible = true;
-            this.bunifuFlatButton18.IconZoom = 90D;
+            this.bunifuFlatButton18.IconZoom = 70D;
             this.bunifuFlatButton18.IsTab = false;
             this.bunifuFlatButton18.Location = new System.Drawing.Point(382, 199);
             this.bunifuFlatButton18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -481,7 +481,7 @@
             this.bunifuFlatButton20.IconRightVisible = true;
             this.bunifuFlatButton20.IconRightZoom = 0D;
             this.bunifuFlatButton20.IconVisible = true;
-            this.bunifuFlatButton20.IconZoom = 90D;
+            this.bunifuFlatButton20.IconZoom = 70D;
             this.bunifuFlatButton20.IsTab = false;
             this.bunifuFlatButton20.Location = new System.Drawing.Point(382, 164);
             this.bunifuFlatButton20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -519,7 +519,7 @@
             this.bunifuFlatButton17.IconRightVisible = true;
             this.bunifuFlatButton17.IconRightZoom = 0D;
             this.bunifuFlatButton17.IconVisible = true;
-            this.bunifuFlatButton17.IconZoom = 90D;
+            this.bunifuFlatButton17.IconZoom = 70D;
             this.bunifuFlatButton17.IsTab = false;
             this.bunifuFlatButton17.Location = new System.Drawing.Point(627, 199);
             this.bunifuFlatButton17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -557,7 +557,7 @@
             this.bunifuFlatButton16.IconRightVisible = true;
             this.bunifuFlatButton16.IconRightZoom = 0D;
             this.bunifuFlatButton16.IconVisible = true;
-            this.bunifuFlatButton16.IconZoom = 90D;
+            this.bunifuFlatButton16.IconZoom = 70D;
             this.bunifuFlatButton16.IsTab = false;
             this.bunifuFlatButton16.Location = new System.Drawing.Point(139, 234);
             this.bunifuFlatButton16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -595,7 +595,7 @@
             this.bunifuFlatButton14.IconRightVisible = true;
             this.bunifuFlatButton14.IconRightZoom = 0D;
             this.bunifuFlatButton14.IconVisible = true;
-            this.bunifuFlatButton14.IconZoom = 90D;
+            this.bunifuFlatButton14.IconZoom = 70D;
             this.bunifuFlatButton14.IsTab = false;
             this.bunifuFlatButton14.Location = new System.Drawing.Point(625, 234);
             this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -633,7 +633,7 @@
             this.bunifuFlatButton21.IconRightVisible = true;
             this.bunifuFlatButton21.IconRightZoom = 0D;
             this.bunifuFlatButton21.IconVisible = true;
-            this.bunifuFlatButton21.IconZoom = 90D;
+            this.bunifuFlatButton21.IconZoom = 70D;
             this.bunifuFlatButton21.IsTab = false;
             this.bunifuFlatButton21.Location = new System.Drawing.Point(625, 164);
             this.bunifuFlatButton21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
