@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdcreate1 = new MySqlCommand(String.Format("INSERT INTO salas (NUM_SALA, CAPACIDAD, ID_ESTADO_SALA ) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
+                MySqlCommand cmdcreate1 = new MySqlCommand(String.Format("INSERT INTO salas (num_sala, capacidad, id_estado_sala) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdcreate1.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE salas SET NUM_SALA = '{1}', CAPACIDAD = '{2}', ID_ESTADO_SALA = '{3}' WHERE ID_SALA = '{0}'", upd.IDSala, upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala), Conexion.ObtenerConexion());
+                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE salas SET num_sala = '{1}', capacidad = '{2}', id_estado_sala = '{3}' WHERE id_sala = '{0}'", upd.IDSala, upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupdate1.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -85,7 +85,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdeliminar1 = new MySqlCommand(string.Format("DELETE FROM salas WHERE ID_SALA = '{0}'", id), Conexion.ObtenerConexion());
+                MySqlCommand cmdeliminar1 = new MySqlCommand(string.Format("DELETE FROM salas WHERE id_sala = '{0}'", id), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdeliminar1.ExecuteNonQuery());
                 if (retorno == true)
                 {

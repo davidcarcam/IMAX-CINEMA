@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO empresas(NOMBRE_EMPR, DIRECCION_EMPR ) VALUES ('{0}','{1}')", add.nombreEmpresa, add.direccionEmpresa), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO empresas(empresa, direccion_empresa ) VALUES ('{0}','{1}')", add.nombreEmpresa, add.direccionEmpresa), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -32,7 +32,7 @@ namespace EXPO60.Modelo
             catch (Exception e)
             {
 
-                MessageBox.Show("Error critico de alv conexion, consulte con el administrador " + e, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error critico de  conexion, consulte con el administrador " + e, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
 
@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET NOMBRE_EMPR ='{0}' , DIRECCION_EMPR = '{1}'",upd.nombreEmpresa,upd.direccionEmpresa ),Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET empresa ='{0}' , direccion_empresa = '{1}'",upd.nombreEmpresa,upd.direccionEmpresa ),Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if ( retorno == true)
                 {

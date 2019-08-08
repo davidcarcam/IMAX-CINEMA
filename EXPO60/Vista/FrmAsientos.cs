@@ -116,5 +116,27 @@ namespace EXPO60.Vista
             btnEliminar_Asiento.Enabled = true;
             btnAgregar_Asiento.Enabled = false;
         }
+        private void TxtNumero_Asiento_Validated(object sender, EventArgs e)
+        {
+            if (txtNumero_Asiento.Text.Trim() == "")
+            {
+                epError1.SetError(txtNumero_Asiento, "Introduce el numero del asiento.");
+                txtNumero_Asiento.Focus();
+            }
+            else
+            {
+                epError1.Clear();
+            }
+        }
+        private void TxtNumero_Asiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // codigo para solo ingresar numeros usando codigo ASCII
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Insertar solo numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

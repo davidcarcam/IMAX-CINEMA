@@ -102,5 +102,27 @@ namespace EXPO60.Vista
             btnActualizar_Actor.Enabled = false;
             btnEliminar_Actor.Enabled = false;
         }
+        private void TxtNombre_Actor_Validated(object sender, EventArgs e)
+        {
+            if (txtNombre_Actor.Text.Trim() == "")
+            {
+                epError3.SetError(txtNombre_Actor, "Introduce la capacidad de la sala.");
+                txtNombre_Actor.Focus();
+            }
+            else
+            {
+                epError3.Clear();
+            }
+        }
+        private void TxtNombre_Actor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // codigo para solo ingresar letras(vocales y mayusculas, sin simbolos) usando codigo ASCII
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Insertar solo vocales y consonantes", "ERROR DE PRUEBA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

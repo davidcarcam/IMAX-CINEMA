@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsientos));
             this.grpAsientos = new System.Windows.Forms.GroupBox();
             this.cmbEstado_Asiento = new System.Windows.Forms.ComboBox();
@@ -42,8 +43,10 @@
             this.btnActualizar_Asiento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMostrar_Asientos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Asiento = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.epError1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpAsientos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpAsientos
@@ -115,9 +118,12 @@
             // txtNumero_Asiento
             // 
             this.txtNumero_Asiento.Location = new System.Drawing.Point(180, 84);
+            this.txtNumero_Asiento.MaxLength = 7;
             this.txtNumero_Asiento.Name = "txtNumero_Asiento";
             this.txtNumero_Asiento.Size = new System.Drawing.Size(200, 20);
             this.txtNumero_Asiento.TabIndex = 58;
+            this.txtNumero_Asiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_Asiento_KeyPress);
+            this.txtNumero_Asiento.Validated += new System.EventHandler(this.TxtNumero_Asiento_Validated);
             // 
             // lblAsiento
             // 
@@ -283,6 +289,10 @@
             this.btnAgregar_Asiento.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar_Asiento.Click += new System.EventHandler(this.BtnAgregar_Asiento_Click);
             // 
+            // epError1
+            // 
+            this.epError1.ContainerControl = this;
+            // 
             // FrmAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +306,7 @@
             this.grpAsientos.ResumeLayout(false);
             this.grpAsientos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,5 +326,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar_Asiento;
         private System.Windows.Forms.ComboBox cmbEstado_Asiento;
         private System.Windows.Forms.ComboBox cmbSala;
+        private System.Windows.Forms.ErrorProvider epError1;
     }
 }
