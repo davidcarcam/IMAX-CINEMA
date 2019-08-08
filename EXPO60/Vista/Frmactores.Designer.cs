@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActores));
             this.grpActores = new System.Windows.Forms.GroupBox();
             this.dgvActores = new System.Windows.Forms.DataGridView();
@@ -38,8 +39,10 @@
             this.btnAgregar_Actor = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtNombre_Actor = new System.Windows.Forms.TextBox();
             this.lblNombre_Actor = new System.Windows.Forms.Label();
+            this.epError3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpActores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError3)).BeginInit();
             this.SuspendLayout();
             // 
             // grpActores
@@ -226,9 +229,12 @@
             // txtNombre_Actor
             // 
             this.txtNombre_Actor.Location = new System.Drawing.Point(429, 97);
+            this.txtNombre_Actor.MaxLength = 100;
             this.txtNombre_Actor.Name = "txtNombre_Actor";
             this.txtNombre_Actor.Size = new System.Drawing.Size(500, 20);
             this.txtNombre_Actor.TabIndex = 1;
+            this.txtNombre_Actor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_Actor_KeyPress);
+            this.txtNombre_Actor.Validated += new System.EventHandler(this.TxtNombre_Actor_Validated);
             // 
             // lblNombre_Actor
             // 
@@ -239,6 +245,10 @@
             this.lblNombre_Actor.Size = new System.Drawing.Size(134, 20);
             this.lblNombre_Actor.TabIndex = 0;
             this.lblNombre_Actor.Text = "Nombre del actor:";
+            // 
+            // epError3
+            // 
+            this.epError3.ContainerControl = this;
             // 
             // FrmActores
             // 
@@ -254,6 +264,7 @@
             this.grpActores.ResumeLayout(false);
             this.grpActores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +280,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar_Actor;
         private System.Windows.Forms.TextBox txtNombre_Actor;
         private System.Windows.Forms.Label lblNombre_Actor;
+        private System.Windows.Forms.ErrorProvider epError3;
     }
 }

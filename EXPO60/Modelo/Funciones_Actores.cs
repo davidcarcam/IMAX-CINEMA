@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdcreate2 = new MySqlCommand(String.Format("INSERT INTO actores (ACTOR) VALUES ('{0}')", add.Nombre_Actor), Conexion.ObtenerConexion());
+                MySqlCommand cmdcreate2 = new MySqlCommand(String.Format("INSERT INTO actores (actor) VALUES ('{0}')", add.Nombre_Actor), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt16(cmdcreate2.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate2 = new MySqlCommand(string.Format("UPDATE actores SET ACTOR = '{1}' WHERE ID_ACTOR = '{0}'", upd.ID_Actor, upd.Nombre_Actor), Conexion.ObtenerConexion());
+                MySqlCommand cmdupdate2 = new MySqlCommand(string.Format("UPDATE actores SET actor = '{1}' WHERE id_actor = '{0}'", upd.ID_Actor, upd.Nombre_Actor), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupdate2.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -85,7 +85,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdeliminar2 = new MySqlCommand(string.Format("DELETE FROM actores WHERE ID_ACTOR = '{0}'", id), Conexion.ObtenerConexion());
+                MySqlCommand cmdeliminar2 = new MySqlCommand(string.Format("DELETE FROM actores WHERE id_actor = '{0}'", id), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdeliminar2.ExecuteNonQuery());
                 if (retorno == true)
                 {
