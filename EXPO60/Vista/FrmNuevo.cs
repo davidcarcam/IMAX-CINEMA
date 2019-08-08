@@ -153,5 +153,21 @@ namespace EXPO60.Vista
         {
             AbrirFormulario<FrmBotones>();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmNuevo>();
+
+        }
+
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
