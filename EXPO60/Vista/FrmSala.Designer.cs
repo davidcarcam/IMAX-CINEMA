@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSala));
             this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
             this.cmbEstado_Sala = new System.Windows.Forms.ComboBox();
@@ -42,8 +43,10 @@
             this.btnActualizar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpRegistro_Sala.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError2)).BeginInit();
             this.SuspendLayout();
             // 
             // grpRegistro_Sala
@@ -90,9 +93,12 @@
             // txtCapacidad_Sala
             // 
             this.txtCapacidad_Sala.Location = new System.Drawing.Point(629, 102);
+            this.txtCapacidad_Sala.MaxLength = 7;
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
             this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
             this.txtCapacidad_Sala.TabIndex = 2;
+            this.txtCapacidad_Sala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCapacidad_Sala_KeyPress);
+            this.txtCapacidad_Sala.Validated += new System.EventHandler(this.TxtCapacidad_Sala_Validated);
             // 
             // lblCapacidad_Sala
             // 
@@ -115,9 +121,12 @@
             // txtNumero_Sala
             // 
             this.txtNumero_Sala.Location = new System.Drawing.Point(282, 102);
+            this.txtNumero_Sala.MaxLength = 7;
             this.txtNumero_Sala.Name = "txtNumero_Sala";
             this.txtNumero_Sala.Size = new System.Drawing.Size(153, 20);
             this.txtNumero_Sala.TabIndex = 1;
+            this.txtNumero_Sala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_Sala_KeyPress);
+            this.txtNumero_Sala.Validated += new System.EventHandler(this.TxtNumero_Sala_Validated);
             // 
             // lblNumero_Sala
             // 
@@ -283,6 +292,10 @@
             this.btnAgregar_Sala.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar_Sala.Click += new System.EventHandler(this.BtnAgregar_Sala_Click);
             // 
+            // epError2
+            // 
+            this.epError2.ContainerControl = this;
+            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +309,7 @@
             this.grpRegistro_Sala.ResumeLayout(false);
             this.grpRegistro_Sala.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,5 +329,6 @@
         private System.Windows.Forms.TextBox txtNumero_Sala;
         private System.Windows.Forms.Label lblNumero_Sala;
         private System.Windows.Forms.ComboBox cmbEstado_Sala;
+        private System.Windows.Forms.ErrorProvider epError2;
     }
 }

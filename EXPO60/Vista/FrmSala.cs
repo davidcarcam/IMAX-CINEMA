@@ -26,8 +26,8 @@ namespace EXPO60.Vista
 
 
             cmbEstado_Sala.DataSource = Funciones_Salas.Estado_Sala();
-            cmbEstado_Sala.DisplayMember = "NOMBRE_ESTADO";
-            cmbEstado_Sala.ValueMember = "ID_ESTADO_SALA";
+            cmbEstado_Sala.DisplayMember = "estado_sala";
+            cmbEstado_Sala.ValueMember = "id_estado_sala";
         }
         public FrmSala()
         {
@@ -114,10 +114,53 @@ namespace EXPO60.Vista
             btnAgregar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = false;
         }
-
         private void grpRegistro_Sala_Enter(object sender, EventArgs e)
         {
 
+        }
+        private void TxtNumero_Sala_Validated(object sender, EventArgs e)
+        {
+            if (txtNumero_Sala.Text.Trim() == "")
+            {
+                epError2.SetError(txtNumero_Sala, "Introduce el numero de la sala.");
+                txtNumero_Sala.Focus();
+            }
+            else
+            {
+                epError2.Clear();
+            }
+        }
+        private void TxtCapacidad_Sala_Validated(object sender, EventArgs e)
+        {
+            if (txtCapacidad_Sala.Text.Trim() == "")
+            {
+                epError2.SetError(txtCapacidad_Sala, "Introduce la capacidad de la sala.");
+                txtCapacidad_Sala.Focus();
+            }
+            else
+            {
+                epError2.Clear();
+            }
+        }
+        private void TxtNumero_Sala_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                // codigo para solo ingresar numeros usando codigo ASCII
+                MessageBox.Show("Insertar solo numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+        private void TxtCapacidad_Sala_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                // codigo para solo ingresar numeros usando codigo ASCII
+                MessageBox.Show("Insertar solo numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
