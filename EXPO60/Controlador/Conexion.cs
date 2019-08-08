@@ -15,7 +15,7 @@ namespace EXPO60.Controlador
         {
             MySqlConnection connect;
             string server = "127.0.0.1";
-            string database = "cinemax";
+            string database = "expo60";
             string user = "root";
             string pass = "";
             try
