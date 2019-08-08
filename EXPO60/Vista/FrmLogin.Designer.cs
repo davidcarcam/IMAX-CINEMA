@@ -74,6 +74,7 @@ namespace EXPO60.Vista
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(30, 20);
             this.txtCifrado.TabIndex = 13;
+            this.txtCifrado.Visible = false;
             // 
             // linkPrimerUso
             // 
