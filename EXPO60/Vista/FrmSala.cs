@@ -15,6 +15,8 @@ namespace EXPO60.Vista
 {
     public partial class FrmSala : Form
     {
+        Constructor_Salas Actualizar = new Constructor_Salas();
+        Constructor_Salas agregar = new Constructor_Salas();
         private void FrmSala_Load(object sender, EventArgs e)
         {
             Mostrar_Salas();
@@ -31,7 +33,6 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-
         public void Mostrar_Salas ()
         {
             dgvSalas.DataSource = Funciones_Salas.Mostrar_Salas();
@@ -52,7 +53,6 @@ namespace EXPO60.Vista
                 MessageBox.Show("Eliminacion de registro abortada","Eliminacion de registro",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
-
         public void Agregar_Salas()
         {
             if (txtNumero_Sala.Text.Trim() == "" || cmbEstado_Sala.Text.Trim() == "" || txtCapacidad_Sala.Text.Trim() == "")
@@ -74,14 +74,12 @@ namespace EXPO60.Vista
             Actualizar.EstadoSala = Convert.ToInt16(cmbEstado_Sala);
             Funciones_Salas.Actualizar_Sala(Actualizar);
         }
-
         private void BtnAgregar_Sala_Click(object sender, EventArgs e)
         {
+            Limpiar_Datos();
             Agregar_Salas();
             Mostrar_Salas();
-            Limpiar_Datos();
         }
-
         private void DgvSalas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int posicion;
@@ -94,29 +92,24 @@ namespace EXPO60.Vista
             btnEliminar_Sala.Enabled = true;
             btnAgregar_Sala.Enabled = false;
         }
-
         private void BtnMostrar_Salas_Click(object sender, EventArgs e)
         {
             Limpiar_Datos();
             Mostrar_Salas();
         }
-        Constructor_Salas Actualizar = new Constructor_Salas();
-        Constructor_Salas agregar = new Constructor_Salas();
-
         private void BtnActualizar_Salas_Click(object sender, EventArgs e)
         {
+            Limpiar_Datos();
+            Modificar_Salas();
             btnActualizar_Sala.Enabled = false;
             btnAgregar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = false;
-            Limpiar_Datos();
-            Modificar_Salas();
         }
-
         private void BtnEliminar_Salas_Click(object sender, EventArgs e)
         {
-            Mostrar_Salas();
             Eliminar_Sala();
             Limpiar_Datos();
+            Mostrar_Salas();
             btnActualizar_Sala.Enabled = false;
             btnAgregar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = false;

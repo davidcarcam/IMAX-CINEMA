@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EXPO60.Controlador
 {
-    class ContructorLogin
+   public class ContructorLogin
     {
         public static string usuario { get; set; }
         public string clave { get; set; }
