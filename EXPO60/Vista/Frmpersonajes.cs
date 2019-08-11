@@ -19,32 +19,25 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-        Constructor_Personajes Agregar = new Constructor_Personajes();
-        Constructor_Personajes Actualizar = new Constructor_Personajes();
-
-        public void mostrarCombo()
+        public void validar()
         {
-
-            cmbActor.DataSource = FuncionPersonajes.obtenerActor();
-            cmbActor.DisplayMember = "actor";
-            cmbActor.ValueMember = "id_actor";
-
-            cmbpeliculas.DataSource = FuncionPersonajes.obtenerpelicula();
-            cmbpeliculas.DisplayMember = "titulo";
-            cmbpeliculas.ValueMember = "id_pelicula";
 
         }
+        Constructor_Personajes Agregar = new Constructor_Personajes();
+        Constructor_Personajes Actualizar = new Constructor_Personajes();
+     
+      
         public void AgregarPersonaje()
         {
-            if (txtnombre.Text.Trim() == "")
+            if (txtnombre.Text.Trim() == "" || txtactor.Text.Trim() == "" || txtpelicula.Text.Trim() == "")
             {
                 MessageBox.Show("Complete todos los campos", "Falta informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 Agregar.nombre = txtnombre.Text;
-                Agregar.pelicula = Convert.ToInt16(cmbpeliculas.SelectedValue);
-                Agregar.actor = Convert.ToInt16(cmbActor.SelectedValue);
+                Agregar.pelicula = txtpelicula.Text;
+                Agregar.actor = txtactor.Text;
                 int datos = FuncionPersonajes.IngresarPersonaje(Agregar);
             }
         }
@@ -56,13 +49,15 @@ namespace EXPO60.Vista
         {
             txtid.Clear();
             txtnombre.Clear();
+            txtpelicula.Clear();
+            txtactor.Clear();
         }
         public void ModificarPersonaje()
         {
             Actualizar.idpersonaje = Convert.ToInt32(txtid.Text);
             Actualizar.nombre = txtnombre.Text;
-            Actualizar.pelicula = Convert.ToInt16(cmbpeliculas.SelectedValue);
-            Actualizar.actor = Convert.ToInt16(cmbActor.SelectedValue);
+            Actualizar.pelicula = txtpelicula.Text;
+            Actualizar.actor = txtactor.Text;
             FuncionPersonajes.ActualizarPersonaje(Actualizar);
         }
         public void EliminarPersonaje()
@@ -113,8 +108,8 @@ namespace EXPO60.Vista
             posicion = this.dgvpersonajes.CurrentRow.Index;
             txtid.Text = this.dgvpersonajes[0, posicion].Value.ToString();
             txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
-            cmbActor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
-            cmbpeliculas.Text = this.dgvpersonajes[3, posicion].Value.ToString();
+            txtactor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
+            txtpelicula.Text = this.dgvpersonajes[3, posicion].Value.ToString();
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
@@ -124,39 +119,29 @@ namespace EXPO60.Vista
         {
 
         }
-        public void ValidacionesNombre(KeyPressEventArgs e)
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            if (char.IsLetterOrDigit(e.KeyChar))
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                this.Close();
+            }
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = false;
             }
-            else if (char.IsSeparator(e.KeyChar))
+            else if (Char.IsControl(e.KeyChar))
             {
-                e.Handled = true;
+                e.Handled = false;
             }
-
-            else if (char.IsControl(e.KeyChar))
+            else if (Char.IsSeparator(e.KeyChar))
             {
-                e.Handled = true;
-            }
-
-            else if (char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("'"))
-            {
-                e.Handled = true;
-            }
-            else if (e.KeyChar.ToString().Equals(","))
-            {
-                e.Handled = true;
+                e.Handled = false;
             }
             else
             {

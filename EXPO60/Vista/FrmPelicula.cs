@@ -16,78 +16,29 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-        public void ValidacionesNombre(KeyPressEventArgs e)
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            if (char.IsLetter(e.KeyChar))
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }
 
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("'"))
-            {
-                e.Handled = true;
-            }
-            else if (e.KeyChar.ToString().Equals(","))
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                e.Handled = true;
+                this.Close();
             }
         }
-        public void valtitulo(KeyPressEventArgs e)
+
+        private void txtaudio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetterOrDigit(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
             {
                 e.Handled = false;
             }
-            else if (char.IsSeparator(e.KeyChar))
+            else if (Char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
-
-            else if (char.IsControl(e.KeyChar))
+            else if (Char.IsSeparator(e.KeyChar))
             {
-                e.Handled = true;
-            }
-
-            else if (char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("'"))
-            {
-                e.Handled = true;
-            }
-            else if (e.KeyChar.ToString().Equals(","))
-            {
-                e.Handled = true;
+                e.Handled = false;
             }
             else
             {
@@ -97,12 +48,42 @@ namespace EXPO60.Vista
 
         private void txtdirector_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionesNombre(e);
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void txttitulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            valtitulo(e);
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

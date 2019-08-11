@@ -17,8 +17,8 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(String.Format("INSERT INTO salas (NUM_SALA, CAPACIDAD, ID_ESTADO_SALA ) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
-                retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
+                MySqlCommand cmdcreate1 = new MySqlCommand(String.Format("INSERT INTO salas (num_sala, capacidad, id_estado_sala) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
+                retorno = Convert.ToInt32(cmdcreate1.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
                     MessageBox.Show("Nueva sala ingresada correctamente", "Exito al ingresar sala", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -40,11 +40,11 @@ namespace EXPO60.Modelo
             DataTable salas;
             try
             {
-                string query = "SELECT * FROM SALAS";
-                MySqlCommand cmdsal = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdsal);
+                string query1 = "SELECT * FROM salas";
+                MySqlCommand cmdread1 = new MySqlCommand(string.Format(query1), Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter1 = new MySqlDataAdapter(cmdread1);
                 salas = new DataTable();
-                adapter.Fill(salas);
+                adapter1.Fill(salas);
                 return salas;
             }
             catch (Exception b)
@@ -62,8 +62,8 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE SALAS SET NUM_SALA = '{0}', CAPACIDAD = '{1}', ID_ESTADO_SALA = '{2}' WHERE ID_SALA = '{3}'", upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala, upd.IDSala), Conexion.ObtenerConexion());
-                retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
+                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE salas SET num_sala = '{1}', capacidad = '{2}', id_estado_sala = '{3}' WHERE id_sala = '{0}'", upd.IDSala, upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala), Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmdupdate1.ExecuteNonQuery());
                 if (retorno == true)
                 {
                     MessageBox.Show("Los datos de la sala han sido actualizados satisfactoriamente", "Actualizacion safistactoria", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -85,15 +85,15 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdeliminar = new MySqlCommand(string.Format("DELETE FROM PRODUCTOS WHERE ID_SALA = '{0}'", id), Conexion.ObtenerConexion());
-                retorno = Convert.ToBoolean(cmdeliminar.ExecuteNonQuery());
+                MySqlCommand cmdeliminar1 = new MySqlCommand(string.Format("DELETE FROM salas WHERE id_sala = '{0}'", id), Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmdeliminar1.ExecuteNonQuery());
                 if (retorno == true)
                 {
                     MessageBox.Show("El registro ha sido eliminado satisfactoriamente", "Eliminacion completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("El no se ha podido eliminar", "Fallo durante la eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El registro no se ha podido eliminar de la base de datos", "Fallo durante la eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 return retorno;
             }

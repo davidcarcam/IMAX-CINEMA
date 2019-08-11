@@ -53,8 +53,8 @@
     <Compile Include="Controlador\Conexion.cs" />
     <Compile Include="Controlador\constructorEmpresa.cs" />
     <Compile Include="Controlador\constructorRecuperar.cs" />
-    <Compile Include="Controlador\ConstructorTickets.cs" />
-    <Compile Include="Controlador\ConstructorUsuario.cs" />
+    <Compile Include="Controlador\Constructor_Actores.cs" />
+    <Compile Include="Controlador\Constructor_Asientos.cs" />
     <Compile Include="Controlador\Constructor_Personajes.cs" />
     <Compile Include="Controlador\Constructor_primerUso.cs" />
     <Compile Include="Controlador\Constructor_Productos.cs" />
@@ -67,8 +67,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\funcionesEmpresa.cs" />
-    <Compile Include="Modelo\FuncionesTickets.cs" />
-    <Compile Include="Modelo\FuncionesUsuario.cs" />
+    <Compile Include="Modelo\Funciones_Actores.cs" />
+    <Compile Include="Modelo\Funciones_Asientos.cs" />
     <Compile Include="Modelo\Funciones_primerUso.cs" />
     <Compile Include="Modelo\Funciones_Productos.cs" />
     <Compile Include="Modelo\Funciones_Salas.cs" />
@@ -77,6 +77,7 @@
     <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\e.cs" />
     <Compile Include="Vista\Frmactores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,12 @@
     </Compile>
     <Compile Include="Vista\FrmAsientos.Designer.cs">
       <DependentUpon>FrmAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmBotones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmBotones.Designer.cs">
+      <DependentUpon>FrmBotones.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmEmpresas.cs">
       <SubType>Form</SubType>
@@ -197,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmAsientos.resx">
       <DependentUpon>FrmAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmBotones.resx">
+      <DependentUpon>FrmBotones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmEmpresas.resx">
       <DependentUpon>FrmEmpresas.cs</DependentUpon>

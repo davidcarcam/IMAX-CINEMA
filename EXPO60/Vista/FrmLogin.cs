@@ -41,9 +41,10 @@ namespace EXPO60.Vista
             }
             else
             {
-                ContructorLogin log = new ContructorLogin(txtUsuario.Text, txtCifrado.Text);
+                ContructorLogin log = new ContructorLogin(txtUsuario.Text, txtContra.Text);
                 ContructorLogin.usuario = txtUsuario.Text;
                 log.clave = txtCifrado.Text;
+                
                 //Recuperando el valor de retorno
                 bool datos = ValidarLogin.Acceso(log);
                 //
@@ -60,8 +61,6 @@ namespace EXPO60.Vista
         {
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
             txtCifrado.Text = Hash(pass);
-            txtContra.UseSystemPasswordChar = true;
-
         }
 
         private void linkPrimerUso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -78,14 +77,29 @@ namespace EXPO60.Vista
             this.Hide();
         }
 
-        private void txtCifrado_TextChanged(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Application.Exit();
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

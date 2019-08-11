@@ -22,9 +22,9 @@ namespace EXPO60.Modelo
         {
             bool retorno = false;
             //Verificar la existencia del usuario en la base de dato
-            string query = "SELECT *FROM usuarios WHERE USUARIO = ?user ";
-            //try
-            //{
+            string query = "SELECT * FROM usuario WHERE usuario = ?user ";
+            try
+            {
             MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
             // envio de parametroa la consulta
             cmdselect.Parameters.Add(new MySqlParameter("user", ContructorLogin.usuario));
@@ -34,7 +34,7 @@ namespace EXPO60.Modelo
             {
                 //verificar los datos
                 int estado = 1;
-                string query2 = "SELECT * FROM usuarios WHERE USUARIO = ?user AND CLAVE = ?pass AND ID_ESTADO_USUARIO = ?state";
+                string query2 = "SELECT * FROM usuario WHERE usuario = ?user AND clave = ?pass AND id_estado_usu = ?state";
                 MySqlCommand cmdseletc2 = new MySqlCommand(query2, Conexion.ObtenerConexion());
                 cmdseletc2.Parameters.Add(new MySqlParameter("user", ContructorLogin.usuario));
                 cmdseletc2.Parameters.Add(new MySqlParameter("pass", log.clave));
@@ -45,7 +45,7 @@ namespace EXPO60.Modelo
                 {
                     //actualizar el campo
                     int intentos = 0;
-                    MySqlCommand cmdreset = new MySqlCommand(string.Format("UPDATE usuarios SET INTENTOS = '{0}' WHERE USUARIO = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                    MySqlCommand cmdreset = new MySqlCommand(string.Format("UPDATE usuario SET intentos = '{0}' WHERE usuario = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
                     int reset = Convert.ToInt16(cmdreset.ExecuteNonQuery());
                     MySqlDataReader _reader = cmdselect.ExecuteReader();
                     while (_reader.Read())
@@ -67,10 +67,11 @@ namespace EXPO60.Modelo
                     {
                         int intentos = 0;
                         intentos = reader.GetInt16(8) + 1;
+                       
                         if (intentos > 5)
                         {
                             int bloqueo = 3;
-                            MySqlCommand cmdlock = new MySqlCommand(string.Format("UPDATE usuarios SET ID_ESTADO_USUARIO = '{0}' WHERE USUARIO = '{1}'", bloqueo, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                            MySqlCommand cmdlock = new MySqlCommand(string.Format("UPDATE usuario SET id_estado_usu = '{0}' WHERE usuario = '{1}'", bloqueo, ContructorLogin.usuario), Conexion.ObtenerConexion());
                             int verificacion = Convert.ToInt32(cmdlock.ExecuteNonQuery());
                             if (verificacion >= 1)
                             {
@@ -79,7 +80,7 @@ namespace EXPO60.Modelo
                         }
                         else
                         {
-                            MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuarios SET INTENTOS = ´{0}´ WHERE USUARIO = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                            MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuarios SET intentos = '{0}' WHERE usuario = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
                             int verificacion = Convert.ToInt32(cmdupdate.ExecuteNonQuery());
                             if (verificacion >= 1)
                             {
@@ -97,12 +98,12 @@ namespace EXPO60.Modelo
                 MessageBox.Show("El usuario que ha ingresado no esta registrado en la base de datos.", "Verifique su informacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             return retorno;
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Error de acceso,Ha ocurrido un error en la conexion al servidor" +ex,"Error de conexion", MessageBoxButtons.OK,MessageBoxIcon.Error);
-            //    return retorno;
-            //}
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show("Error de acceso,Ha ocurrido un error en la conexion al servidor" +ex,"Error de conexion", MessageBoxButtons.OK,MessageBoxIcon.Error);
+              return retorno;
+            }
 
         }
 

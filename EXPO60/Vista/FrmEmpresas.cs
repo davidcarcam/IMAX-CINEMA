@@ -21,82 +21,6 @@ namespace EXPO60.Vista
         }
         constructorEmpresa agregar = new constructorEmpresa();
         constructorEmpresa actualizar = new constructorEmpresa();
-
-        public void ValidacionesNombre(KeyPressEventArgs e)
-        {
-            if (char.IsLetterOrDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("'"))
-            {
-                e.Handled = true;
-            }
-            else if (e.KeyChar.ToString().Equals(","))
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-        public void ValidacionesDireccion(KeyPressEventArgs e)
-        {
-            if (char.IsLetterOrDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("'"))
-            {
-                e.Handled = true;
-            }
-            else if (e.KeyChar.ToString().Equals(","))
-            {
-                e.Handled = false;
-            }
-
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
         public void agregarEmpresa()
         {
             agregar.nombreEmpresa = txtNumero.Text;
@@ -187,14 +111,28 @@ namespace EXPO60.Vista
             btnagregar.Enabled = true;
         }
 
-        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            ValidacionesNombre(e);
+
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNumero_TextChanged(object sender, EventArgs e)
         {
-            ValidacionesDireccion(e);
+
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                this.Close();
+            }
+        }
+
+        private void btnagregar_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

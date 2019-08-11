@@ -16,84 +16,6 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-        public void val_localalimentos(KeyPressEventArgs e)
-        {
-            if (char.IsLetterOrDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("'"))
-            {
-                e.Handled = true;
-            }
-            else if (e.KeyChar.ToString().Equals(","))
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-        public void val_telefono(KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = true;
-            }
-
-            else if (e.KeyChar.ToString().Equals("'"))
-            {
-                e.Handled = true;
-            }
-            else if (e.KeyChar.ToString().Equals(","))
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -110,14 +32,38 @@ namespace EXPO60.Vista
 
         }
 
-        private void txtNobreLocal_KeyPress(object sender, KeyPressEventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            val_localalimentos(e);
+
         }
 
-        private void txtTelefonoLocal_KeyPress(object sender, KeyPressEventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            val_telefono(e);
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                this.Close();
+            }
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

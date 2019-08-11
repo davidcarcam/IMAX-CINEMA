@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrimerUso));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnRegresar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.txtCifrado = new System.Windows.Forms.TextBox();
             this.idPrimerUsu = new System.Windows.Forms.TextBox();
             this.cmbTip = new System.Windows.Forms.ComboBox();
             this.cmbEst = new System.Windows.Forms.ComboBox();
@@ -50,7 +46,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtDui = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtNac = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtApe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
@@ -58,13 +56,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.toolStrip1);
-            this.groupBox1.Controls.Add(this.txtCifrado);
             this.groupBox1.Controls.Add(this.idPrimerUsu);
             this.groupBox1.Controls.Add(this.cmbTip);
             this.groupBox1.Controls.Add(this.cmbEst);
@@ -81,7 +76,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtDui);
             this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txtNac);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtApe);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtTel);
@@ -96,55 +93,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Primer uso de usuario";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnRegresar,
-            this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
-            this.toolStrip1.TabIndex = 64;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnRegresar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(23, 22);
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(94, 22);
-            this.toolStripLabel1.Text = "Regresar al login";
-            // 
-            // txtCifrado
-            // 
-            this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCifrado.Location = new System.Drawing.Point(495, 44);
-            this.txtCifrado.Name = "txtCifrado";
-            this.txtCifrado.Size = new System.Drawing.Size(39, 20);
-            this.txtCifrado.TabIndex = 63;
-            this.txtCifrado.Visible = false;
-            this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
-            // 
             // idPrimerUsu
             // 
             this.idPrimerUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.idPrimerUsu.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.idPrimerUsu.Location = new System.Drawing.Point(427, 44);
+            this.idPrimerUsu.Location = new System.Drawing.Point(436, 29);
             this.idPrimerUsu.Name = "idPrimerUsu";
             this.idPrimerUsu.Size = new System.Drawing.Size(39, 20);
             this.idPrimerUsu.TabIndex = 62;
-            this.idPrimerUsu.Visible = false;
             // 
             // cmbTip
             // 
@@ -186,14 +141,14 @@
             this.btnIngUsuario.IconVisible = true;
             this.btnIngUsuario.IconZoom = 90D;
             this.btnIngUsuario.IsTab = false;
-            this.btnIngUsuario.Location = new System.Drawing.Point(397, 276);
+            this.btnIngUsuario.Location = new System.Drawing.Point(375, 319);
             this.btnIngUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIngUsuario.Name = "btnIngUsuario";
             this.btnIngUsuario.Normalcolor = System.Drawing.Color.Brown;
             this.btnIngUsuario.OnHovercolor = System.Drawing.Color.OrangeRed;
             this.btnIngUsuario.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIngUsuario.selected = false;
-            this.btnIngUsuario.Size = new System.Drawing.Size(205, 76);
+            this.btnIngUsuario.Size = new System.Drawing.Size(281, 78);
             this.btnIngUsuario.TabIndex = 59;
             this.btnIngUsuario.Text = "Ingresar Usuario";
             this.btnIngUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,6 +160,7 @@
             // 
             this.txtCla.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCla.Location = new System.Drawing.Point(116, 377);
+            this.txtCla.MaxLength = 40;
             this.txtCla.Name = "txtCla";
             this.txtCla.Size = new System.Drawing.Size(199, 20);
             this.txtCla.TabIndex = 51;
@@ -226,9 +182,11 @@
             // 
             this.txtUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsu.Location = new System.Drawing.Point(116, 341);
+            this.txtUsu.MaxLength = 40;
             this.txtUsu.Name = "txtUsu";
             this.txtUsu.Size = new System.Drawing.Size(199, 20);
             this.txtUsu.TabIndex = 50;
+            this.txtUsu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsu_KeyPress);
             // 
             // label10
             // 
@@ -266,7 +224,8 @@
             // txtDir
             // 
             this.txtDir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDir.Location = new System.Drawing.Point(427, 140);
+            this.txtDir.Location = new System.Drawing.Point(427, 180);
+            this.txtDir.MaxLength = 200;
             this.txtDir.Multiline = true;
             this.txtDir.Name = "txtDir";
             this.txtDir.Size = new System.Drawing.Size(153, 71);
@@ -277,7 +236,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(346, 140);
+            this.label7.Location = new System.Drawing.Point(346, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 54;
@@ -286,7 +245,8 @@
             // txtCor
             // 
             this.txtCor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCor.Location = new System.Drawing.Point(409, 102);
+            this.txtCor.Location = new System.Drawing.Point(409, 142);
+            this.txtCor.MaxLength = 40;
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(153, 20);
             this.txtCor.TabIndex = 46;
@@ -296,7 +256,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(346, 102);
+            this.label6.Location = new System.Drawing.Point(346, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 53;
@@ -305,7 +265,7 @@
             // txtDui
             // 
             this.txtDui.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDui.Location = new System.Drawing.Point(169, 180);
+            this.txtDui.Location = new System.Drawing.Point(390, 102);
             this.txtDui.Mask = "00000000-0";
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(153, 20);
@@ -316,11 +276,21 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(125, 180);
+            this.label12.Location = new System.Drawing.Point(346, 102);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 20);
             this.label12.TabIndex = 52;
             this.label12.Text = "DUI";
+            // 
+            // txtNac
+            // 
+            this.txtNac.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNac.Location = new System.Drawing.Point(169, 180);
+            this.txtNac.Mask = "00/00/0000";
+            this.txtNac.Name = "txtNac";
+            this.txtNac.Size = new System.Drawing.Size(153, 20);
+            this.txtNac.TabIndex = 26;
+            this.txtNac.ValidatingType = typeof(System.DateTime);
             // 
             // label4
             // 
@@ -333,14 +303,26 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Telefono";
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 20);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Fecha nacimiento";
+            // 
             // txtApe
             // 
             this.txtApe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtApe.Location = new System.Drawing.Point(169, 140);
+            this.txtApe.MaxLength = 40;
             this.txtApe.Name = "txtApe";
             this.txtApe.Size = new System.Drawing.Size(153, 20);
             this.txtApe.TabIndex = 25;
-            this.txtApe.TextChanged += new System.EventHandler(this.txtApe_TextChanged);
+            this.txtApe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApe_KeyPress);
             // 
             // label2
             // 
@@ -366,9 +348,11 @@
             // 
             this.txtNom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNom.Location = new System.Drawing.Point(169, 100);
+            this.txtNom.MaxLength = 40;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(153, 20);
             this.txtNom.TabIndex = 24;
+            this.txtNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNom_KeyPress);
             // 
             // label5
             // 
@@ -385,7 +369,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poor Richard", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(216, 41);
+            this.label1.Location = new System.Drawing.Point(233, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 22);
             this.label1.TabIndex = 0;
@@ -400,11 +384,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPrimerUso";
             this.Text = "FrmPrimerUso";
-            this.Load += new System.EventHandler(this.FrmPrimerUso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -413,7 +394,9 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtNac;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtApe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtTel;
@@ -435,9 +418,5 @@
         private System.Windows.Forms.MaskedTextBox txtDui;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox idPrimerUsu;
-        private System.Windows.Forms.TextBox txtCifrado;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnRegresar;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

@@ -1,6 +1,4 @@
-﻿using EXPO60.Controlador;
-using EXPO60.Modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,33 +16,14 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-        ConstructorTickets agr = new ConstructorTickets();
-        public void mostrarCombo()
-        {
 
-            cmbUsuario.DataSource = FuncionesTickets.obtenerUsuario();
-            cmbUsuario.DisplayMember = "USUARIO";
-            cmbUsuario.ValueMember = "ID_USUARIO";
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
 
-        }
-        private void FrmTicket_Load(object sender, EventArgs e)
-        {
-            mostrarCombo();
-        }
-        public void agregarticketss()
-        {
-            if (txtFecha.Text.Trim()=="")
-            {
-                MessageBox.Show("Complete todos los campos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-               
-                agr.fecha = txtFecha.Text;
-                agr.usuario = Convert.ToInt16(cmbUsuario.SelectedValue);
-                int datos = FuncionesTickets.ingresarticket(agr);
+                this.Close();
             }
         }
-
     }
 }

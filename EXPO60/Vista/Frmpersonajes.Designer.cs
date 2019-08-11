@@ -40,10 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbpeliculas = new System.Windows.Forms.ComboBox();
-            this.cmbActor = new System.Windows.Forms.ComboBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.cmbpelicula = new System.Windows.Forms.ComboBox();
+            this.cmbactor = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpersonajes)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -51,8 +54,9 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.cmbActor);
-            this.groupBox1.Controls.Add(this.cmbpeliculas);
+            this.groupBox1.Controls.Add(this.cmbactor);
+            this.groupBox1.Controls.Add(this.cmbpelicula);
+            this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.txtid);
             this.groupBox1.Controls.Add(this.dgvpersonajes);
             this.groupBox1.Controls.Add(this.btneliminar);
@@ -63,7 +67,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(1, 12);
+            this.groupBox1.Location = new System.Drawing.Point(0, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1254, 563);
             this.groupBox1.TabIndex = 1;
@@ -251,10 +255,11 @@
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(312, 62);
-            this.txtnombre.MaxLength = 30;
+            this.txtnombre.MaxLength = 40;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
             this.txtnombre.TabIndex = 7;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // label1
             // 
@@ -266,23 +271,43 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nombre del personaje";
             // 
-            // cmbpeliculas
+            // toolStrip1
             // 
-            this.cmbpeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbpeliculas.FormattingEnabled = true;
-            this.cmbpeliculas.Location = new System.Drawing.Point(561, 64);
-            this.cmbpeliculas.Name = "cmbpeliculas";
-            this.cmbpeliculas.Size = new System.Drawing.Size(140, 21);
-            this.cmbpeliculas.TabIndex = 57;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1248, 25);
+            this.toolStrip1.TabIndex = 59;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // cmbActor
+            // BtnCerrar
             // 
-            this.cmbActor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbActor.FormattingEnabled = true;
-            this.cmbActor.Location = new System.Drawing.Point(812, 66);
-            this.cmbActor.Name = "cmbActor";
-            this.cmbActor.Size = new System.Drawing.Size(140, 21);
-            this.cmbActor.TabIndex = 58;
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // cmbpelicula
+            // 
+            this.cmbpelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbpelicula.FormattingEnabled = true;
+            this.cmbpelicula.Location = new System.Drawing.Point(580, 61);
+            this.cmbpelicula.Name = "cmbpelicula";
+            this.cmbpelicula.Size = new System.Drawing.Size(153, 21);
+            this.cmbpelicula.TabIndex = 60;
+            // 
+            // cmbactor
+            // 
+            this.cmbactor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbactor.FormattingEnabled = true;
+            this.cmbactor.Location = new System.Drawing.Point(828, 63);
+            this.cmbactor.Name = "cmbactor";
+            this.cmbactor.Size = new System.Drawing.Size(153, 21);
+            this.cmbactor.TabIndex = 61;
             // 
             // FrmPersonajes
             // 
@@ -296,6 +321,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpersonajes)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -313,7 +340,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbActor;
-        private System.Windows.Forms.ComboBox cmbpeliculas;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.ComboBox cmbactor;
+        private System.Windows.Forms.ComboBox cmbpelicula;
     }
 }
