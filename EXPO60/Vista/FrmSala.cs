@@ -146,7 +146,7 @@ namespace EXPO60.Vista
         {
             try
             {
-                if (txtExp.Text.Contains('.'))
+                if (txtNumero_Sala.Text.Contains('.'))
                 {
                     if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
                     {
@@ -171,7 +171,7 @@ namespace EXPO60.Vista
                         e.Handled = true;
                     }
                 }
-                else if (e.KeyChar == '.' && txtExp.Text.Trim() == "")
+                else if (e.KeyChar == '.' && txtNumero_Sala.Text.Trim() == "")
                 {
                     e.Handled = true;
                 }
@@ -211,7 +211,7 @@ namespace EXPO60.Vista
         {
             try
             {
-                if (txtExp.Text.Contains('.'))
+                if (txtCapacidad_Sala.Text.Contains('.'))
                 {
                     if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
                     {
@@ -236,7 +236,7 @@ namespace EXPO60.Vista
                         e.Handled = true;
                     }
                 }
-                else if (e.KeyChar == '.' && txtExp.Text.Trim() == "")
+                else if (e.KeyChar == '.' && txtCapacidad_Sala.Text.Trim() == "")
                 {
                     e.Handled = true;
                 }

@@ -59,6 +59,7 @@ namespace EXPO60.Vista
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
+            txtContra.UseSystemPasswordChar = true;
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
             txtCifrado.Text = Hash(pass);
         }
