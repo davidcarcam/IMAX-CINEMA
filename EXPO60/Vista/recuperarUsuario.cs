@@ -72,5 +72,12 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            FrmLogin principal = new FrmLogin();
+            principal.Show();
+            this.Hide();
+        }
     }
 }

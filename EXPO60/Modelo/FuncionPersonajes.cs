@@ -104,6 +104,50 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
+        public static DataTable obtenerActor()
+        {
+            string query = "SELECT * FROM actores";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable obtenerpelicula()
+        {
+            string query = "SELECT * FROM peliculas";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
     }
 }
 

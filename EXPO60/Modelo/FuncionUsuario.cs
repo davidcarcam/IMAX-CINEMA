@@ -10,7 +10,7 @@ using System.Data;
 
 namespace EXPO60.Modelo
 {
-    class Funciones_primerUso
+    class FuncionUsuario
     {
         public static int ingresarusuario(Constructor_primerUso add)
         {
@@ -18,7 +18,7 @@ namespace EXPO60.Modelo
             try
             {
                 MySqlCommand cmadd = new MySqlCommand(string.Format("INSERT INTO usuario (nombre, apellido, direccion, correo, dui, telefono, usuario, clave, id_estado_usu, id_tipo_usu) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
-                                                                                            add.nombre,add.apellido,add.direccion,add.correo,add.dui,add.telefono,add.usuario,add.clave,add.estado,add.tipo), Conexion.ObtenerConexion());
+                                                                                            add.nombre, add.apellido, add.direccion, add.correo, add.dui, add.telefono, add.usuario, add.clave, add.estado, add.tipo), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt16(cmadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -81,6 +81,55 @@ namespace EXPO60.Modelo
             {
                 Conexion.ObtenerConexion().Close();
             }
+        }
+        public static DataTable mostrarusuario()
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM usuario";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data = new DataTable();
+            }
+            finally
+            {
+                Conexion.ObtenerConexion();
+            }
+        }
+        public static bool actualizarusuario(ConstructorUsuarios upd)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE usuario SET nombre = '{0}', apellido = '{1}', direccion = '{2}', correo = '{3}', dui = '{5}', telefono = '{6}', usuario = '{7}', clave = '{8}', id_estado_usu = '{9}', id_tipo_usu = '{10}' WHERE id_usuario = '{11}'",
+                                                                                        upd.nombre, upd.apellido, upd.direccion, upd.correo, upd.dui, upd.telefono, upd.usuario, upd.clave, upd.estado, upd.tipo), Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
+                if (retorno == true)
+                {
+                    MessageBox.Show("Datos Actualizados correctamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se han podido completar los datos", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Ha ocurrido un error consulte con el administrador " + e, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
+
         }
     }
 }

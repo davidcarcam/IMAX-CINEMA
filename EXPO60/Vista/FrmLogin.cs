@@ -59,6 +59,7 @@ namespace EXPO60.Vista
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
+            txtContra.UseSystemPasswordChar = true;
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
             txtCifrado.Text = Hash(pass);
         }
@@ -84,7 +85,7 @@ namespace EXPO60.Vista
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetterOrDigit(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -94,12 +95,17 @@ namespace EXPO60.Vista
             }
             else if (Char.IsSeparator(e.KeyChar))
             {
-                e.Handled = false;
+                e.Handled = true;
             }
             else
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

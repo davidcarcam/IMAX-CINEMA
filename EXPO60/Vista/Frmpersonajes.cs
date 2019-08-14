@@ -29,15 +29,14 @@ namespace EXPO60.Vista
       
         public void AgregarPersonaje()
         {
-            if (txtnombre.Text.Trim() == "" || cmbactor.Text.Trim() == "" || cmbpelicula.Text.Trim() == "")
+            if (txtnombre.Text.Trim() == "" )
             {
                 MessageBox.Show("Complete todos los campos", "Falta informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 Agregar.nombre = txtnombre.Text;
-                Agregar.pelicula = cmbpelicula.Text;
-                Agregar.actor = cmbactor.Text;
+             
                 int datos = FuncionPersonajes.IngresarPersonaje(Agregar);
             }
         }
@@ -49,13 +48,13 @@ namespace EXPO60.Vista
         {
             txtid.Clear();
             txtnombre.Clear();
+        
         }
         public void ModificarPersonaje()
         {
             Actualizar.idpersonaje = Convert.ToInt32(txtid.Text);
             Actualizar.nombre = txtnombre.Text;
-            Actualizar.pelicula = cmbpelicula.Text;
-            Actualizar.actor = cmbactor.Text;
+            
             FuncionPersonajes.ActualizarPersonaje(Actualizar);
         }
         public void EliminarPersonaje()
@@ -106,8 +105,6 @@ namespace EXPO60.Vista
             posicion = this.dgvpersonajes.CurrentRow.Index;
             txtid.Text = this.dgvpersonajes[0, posicion].Value.ToString();
             txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
-            cmbactor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
-            cmbpelicula.Text = this.dgvpersonajes[3, posicion].Value.ToString();
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
