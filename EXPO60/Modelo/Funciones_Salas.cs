@@ -17,8 +17,8 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdcreate1 = new MySqlCommand(String.Format("INSERT INTO salas (num_sala, capacidad, id_estado_sala) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
-                retorno = Convert.ToInt32(cmdcreate1.ExecuteNonQuery());
+                MySqlCommand cmdadd = new MySqlCommand(String.Format("INSERT INTO salas (num_sala, capacidad, id_estado_sala) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
+                retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
                     MessageBox.Show("Nueva sala ingresada correctamente", "Exito al ingresar sala", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,7 +49,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception b)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + b, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", b + "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return salas = new DataTable();
             }
             finally
@@ -76,7 +76,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception c)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + c, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", c + "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }
@@ -99,7 +99,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception d)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + d, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", d + "Error Critico" , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }
@@ -117,7 +117,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception e)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + e, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", e + "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return Estado_Sal = new DataTable();
             }
             finally
