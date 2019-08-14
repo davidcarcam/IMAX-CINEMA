@@ -15,23 +15,21 @@ namespace EXPO60.Vista
 {
     public partial class FrmSala : Form
     {
-        Constructor_Salas Actualizar = new Constructor_Salas();
         Constructor_Salas agregar = new Constructor_Salas();
+        Constructor_Salas Actualizar = new Constructor_Salas();
+        public FrmSala()
+        {
+            InitializeComponent();
+        }
         private void FrmSala_Load(object sender, EventArgs e)
         {
             Mostrar_Salas();
             this.dgvSalas.Columns[0].Visible = false;
             btnActualizar_Sala.Enabled = false;
             btnEliminar_Sala.Enabled = false;
-
-
             cmbEstado_Sala.DataSource = Funciones_Salas.Estado_Sala();
             cmbEstado_Sala.DisplayMember = "estado_sala";
             cmbEstado_Sala.ValueMember = "id_estado_sala";
-        }
-        public FrmSala()
-        {
-            InitializeComponent();
         }
         public void Mostrar_Salas ()
         {
@@ -57,7 +55,7 @@ namespace EXPO60.Vista
         {
             if (txtNumero_Sala.Text.Trim() == "" || cmbEstado_Sala.Text.Trim() == "" || txtCapacidad_Sala.Text.Trim() == "")
             {
-                MessageBox.Show("Se han encontrado campos vacios, Completelos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se han encontrado campos vacios, Completelos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -101,6 +99,7 @@ namespace EXPO60.Vista
         {
             Limpiar_Datos();
             Modificar_Salas();
+            Mostrar_Salas();
             btnActualizar_Sala.Enabled = false;
             btnAgregar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = false;
@@ -146,7 +145,7 @@ namespace EXPO60.Vista
         {
             try
             {
-                if (txtExp.Text.Contains('.'))
+                if (txtNumero_Sala.Text.Contains('.'))
                 {
                     if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
                     {
@@ -171,7 +170,7 @@ namespace EXPO60.Vista
                         e.Handled = true;
                     }
                 }
-                else if (e.KeyChar == '.' && txtExp.Text.Trim() == "")
+                else if (e.KeyChar == '.' && txtNumero_Sala.Text.Trim() == "")
                 {
                     e.Handled = true;
                 }
@@ -211,7 +210,7 @@ namespace EXPO60.Vista
         {
             try
             {
-                if (txtExp.Text.Contains('.'))
+                if (txtCapacidad_Sala.Text.Contains('.'))
                 {
                     if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
                     {
@@ -236,7 +235,7 @@ namespace EXPO60.Vista
                         e.Handled = true;
                     }
                 }
-                else if (e.KeyChar == '.' && txtExp.Text.Trim() == "")
+                else if (e.KeyChar == '.' && txtCapacidad_Sala.Text.Trim() == "")
                 {
                     e.Handled = true;
                 }
@@ -280,6 +279,11 @@ namespace EXPO60.Vista
 
                 this.Close();
             }
+        }
+
+        private void txtCapacidad_Sala_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
