@@ -62,6 +62,7 @@ namespace EXPO60.Vista
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCifrado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -77,6 +78,7 @@ namespace EXPO60.Vista
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.txtCifrado);
             this.groupBox2.Controls.Add(this.btnagregar);
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.cmbEstadoU);
@@ -144,6 +146,7 @@ namespace EXPO60.Vista
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
             // 
             // toolStrip1
             // 
@@ -163,6 +166,7 @@ namespace EXPO60.Vista
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click_1);
             // 
             // cmbEstadoU
             // 
@@ -192,6 +196,8 @@ namespace EXPO60.Vista
             this.txtclave.Name = "txtclave";
             this.txtclave.Size = new System.Drawing.Size(153, 20);
             this.txtclave.TabIndex = 11;
+            this.txtclave.TextChanged += new System.EventHandler(this.txtclave_TextChanged);
+            this.txtclave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtclave_KeyPress);
             // 
             // label11
             // 
@@ -212,6 +218,7 @@ namespace EXPO60.Vista
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(153, 20);
             this.txtusuario.TabIndex = 10;
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // label10
             // 
@@ -254,10 +261,12 @@ namespace EXPO60.Vista
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(153, 71);
             this.txtdireccion.TabIndex = 7;
+            this.txtdireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdireccion_KeyPress);
             // 
             // txtid
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtid.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtid.Location = new System.Drawing.Point(435, 95);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(31, 20);
@@ -272,6 +281,7 @@ namespace EXPO60.Vista
             this.dgvusuarios.Name = "dgvusuarios";
             this.dgvusuarios.Size = new System.Drawing.Size(1011, 265);
             this.dgvusuarios.TabIndex = 35;
+            this.dgvusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellClick);
             // 
             // btneliminar
             // 
@@ -342,6 +352,7 @@ namespace EXPO60.Vista
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnmostrar
             // 
@@ -377,6 +388,7 @@ namespace EXPO60.Vista
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click_1);
             // 
             // label7
             // 
@@ -397,6 +409,7 @@ namespace EXPO60.Vista
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(153, 20);
             this.txtcorreo.TabIndex = 6;
+            this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
             // 
             // label6
             // 
@@ -448,6 +461,7 @@ namespace EXPO60.Vista
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(153, 20);
             this.txtapellido.TabIndex = 2;
+            this.txtapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellido_KeyPress_1);
             // 
             // label2
             // 
@@ -477,6 +491,7 @@ namespace EXPO60.Vista
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
             this.txtnombre.TabIndex = 1;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress_1);
             // 
             // label1
             // 
@@ -488,6 +503,16 @@ namespace EXPO60.Vista
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "Nombre";
+            // 
+            // txtCifrado
+            // 
+            this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCifrado.Location = new System.Drawing.Point(435, 137);
+            this.txtCifrado.Name = "txtCifrado";
+            this.txtCifrado.Size = new System.Drawing.Size(31, 20);
+            this.txtCifrado.TabIndex = 49;
+            this.txtCifrado.Visible = false;
             // 
             // FrmUsuario
             // 
@@ -542,7 +567,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.MaskedTextBox txttelefono;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
-
-
+        private System.Windows.Forms.TextBox txtCifrado;
     }
 }

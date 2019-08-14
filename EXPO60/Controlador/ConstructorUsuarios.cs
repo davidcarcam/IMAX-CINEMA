@@ -19,5 +19,6 @@ namespace EXPO60.Controlador
         public string clave { get; set; }
         public int tipo { get; set; }
         public int estado { get; set; }
+        public ConstructorUsuarios() { }
     }
 }
