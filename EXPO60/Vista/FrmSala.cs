@@ -144,6 +144,61 @@ namespace EXPO60.Vista
         }
         private void TxtNumero_Sala_KeyPress(object sender, KeyPressEventArgs e)
         {
+            try
+            {
+                if (txtNumero_Sala.Text.Contains('.'))
+                {
+                    if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+                    {
+                        try
+                        {
+                            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == '.')
+                            {
+                                e.Handled = false;
+                            }
+                            else
+                            {
+                                e.Handled = true;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else if (e.KeyChar == '.' && txtNumero_Sala.Text.Trim() == "")
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    try
+                    {
+                        if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == '.')
+                        {
+                            e.Handled = false;
+                        }
+                        else
+                        {
+                            e.Handled = true;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
                 // codigo para solo ingresar numeros usando codigo ASCII
@@ -154,12 +209,76 @@ namespace EXPO60.Vista
         }
         private void TxtCapacidad_Sala_KeyPress(object sender, KeyPressEventArgs e)
         {
+            try
+            {
+                if (txtCapacidad_Sala.Text.Contains('.'))
+                {
+                    if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+                    {
+                        try
+                        {
+                            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == '.')
+                            {
+                                e.Handled = false;
+                            }
+                            else
+                            {
+                                e.Handled = true;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else if (e.KeyChar == '.' && txtCapacidad_Sala.Text.Trim() == "")
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    try
+                    {
+                        if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == '.')
+                        {
+                            e.Handled = false;
+                        }
+                        else
+                        {
+                            e.Handled = true;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
                 // codigo para solo ingresar numeros usando codigo ASCII
                 MessageBox.Show("Insertar solo numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                this.Close();
             }
         }
     }

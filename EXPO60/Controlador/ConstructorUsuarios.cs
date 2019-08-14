@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EXPO60.Controlador
 {
-    class Constructor_primerUso
+    class ConstructorUsuarios
     {
         public int idusu { get; set; }
         public string nombre { get; set; }

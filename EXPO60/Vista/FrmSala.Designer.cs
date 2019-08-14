@@ -44,13 +44,17 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.grpRegistro_Sala.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError2)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpRegistro_Sala
             // 
+            this.grpRegistro_Sala.Controls.Add(this.toolStrip1);
             this.grpRegistro_Sala.Controls.Add(this.cmbEstado_Sala);
             this.grpRegistro_Sala.Controls.Add(this.lblEstado_Sala);
             this.grpRegistro_Sala.Controls.Add(this.txtCapacidad_Sala);
@@ -74,6 +78,7 @@
             // 
             // cmbEstado_Sala
             // 
+            this.cmbEstado_Sala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado_Sala.FormattingEnabled = true;
             this.cmbEstado_Sala.Location = new System.Drawing.Point(951, 102);
             this.cmbEstado_Sala.Name = "cmbEstado_Sala";
@@ -112,7 +117,7 @@
             // 
             // txtID_Sala
             // 
-            this.txtID_Sala.Location = new System.Drawing.Point(629, 41);
+            this.txtID_Sala.Location = new System.Drawing.Point(629, 53);
             this.txtID_Sala.Name = "txtID_Sala";
             this.txtID_Sala.Size = new System.Drawing.Size(35, 20);
             this.txtID_Sala.TabIndex = 0;
@@ -296,6 +301,26 @@
             // 
             this.epError2.ContainerControl = this;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1213, 25);
+            this.toolStrip1.TabIndex = 63;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +335,8 @@
             this.grpRegistro_Sala.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError2)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -330,5 +357,7 @@
         private System.Windows.Forms.Label lblNumero_Sala;
         private System.Windows.Forms.ComboBox cmbEstado_Sala;
         private System.Windows.Forms.ErrorProvider epError2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
     }
 }

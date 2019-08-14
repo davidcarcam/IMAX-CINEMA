@@ -11,8 +11,8 @@ namespace EXPO60.Controlador
     {
         public int idpersonaje { get; set; }
         public string nombre { get; set; }
-        public string actor { get; set; }
-        public string pelicula { get; set; }
+        public int actor { get; set; }
+        public int pelicula { get; set; }
         public string personaje { get; set; }
         public Constructor_Personajes() { }
     }

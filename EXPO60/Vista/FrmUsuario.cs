@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using EXPO60.Modelo;
+using System.Windows.Forms;
+using EXPO60.Controlador;
+using System.Security.Cryptography;
 
 
 namespace EXPO60.Vista
@@ -46,6 +50,43 @@ namespace EXPO60.Vista
         {
 
         }
+        Constructor_primerUso agr = new Constructor_primerUso();
+        public void mostrarET()
+        {
+
+            cmbTipoU.DataSource = FuncionUsuario.ObtenerTipoUsuario();
+            cmbTipoU.DisplayMember = "tipo_usu";
+            cmbTipoU.ValueMember = "id_tipo_usu";
+
+            cmbEstadoU.DataSource = FuncionUsuario.ObtenerEstado();
+            cmbEstadoU.DisplayMember = "estado_usu";
+            cmbEstadoU.ValueMember = "id_estado_usu";
+
+        }
+        public void AgregarUsu()
+        {
+            if (txtapellido.Text.Trim() == "" || txtclave.Text.Trim() == "" || txtcorreo.Text.Trim() == ""
+                || txtdireccion.Text.Trim() == "" || txtdocumento.Text.Trim() == ""
+                || txtnombre.Text.Trim() == "" || txttelefono.Text.Trim() == "" || txtusuario.Text.Trim() == "")
+            {
+                MessageBox.Show("Complete todos los campos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                agr.nombre = txtnombre.Text;
+                agr.direccion = txtdireccion.Text;
+                agr.apellido = txtapellido.Text;
+                agr.clave = txtclave.Text;
+                agr.correo = txtcorreo.Text;
+                agr.dui = txtdocumento.Text;
+
+                agr.telefono = txttelefono.Text;
+                agr.usuario = txtusuario.Text;
+                agr.tipo = Convert.ToInt16(cmbTipoU.SelectedValue);
+                agr.estado = Convert.ToInt16(cmbEstadoU.SelectedValue);
+                int datos = Funciones_primerUso.ingresarusuario(agr);
+            }
+        }
 
         //private void btnagregar_Click(object sender, EventArgs e)
         //{
@@ -54,7 +95,7 @@ namespace EXPO60.Vista
         //    {
         //        error1.SetError(txtcorreo, " Ingrese un Email Válido");
         //        txtcorreo.Focus();
-                
+
         //        return;
         //    }
         //    else
@@ -69,6 +110,83 @@ namespace EXPO60.Vista
         private void txtusuario_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?","Pregunta",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+               
+                this.Close();
+            }
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtapellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            AgregarUsu();
+        }
+
+        private void btnmostrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            mostrarET();
         }
     }
   }
