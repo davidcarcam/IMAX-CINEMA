@@ -18,7 +18,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO PERSONAJES (PERSONAJE, ID_ACTORES, ID_PELICULA) VALUES ('{0}', '{1}', '{2}')", add.nombre, add.actor, add.pelicula), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO personajes (id_personaje, personaje, id_pelicula) VALUES ('{0}', '{1}', '{2}')", add.nombre, add.actor, add.pelicula), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {

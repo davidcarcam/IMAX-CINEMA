@@ -61,9 +61,10 @@
             this.groupBox1.Controls.Add(this.btnactualizar);
             this.groupBox1.Controls.Add(this.btnmostrar);
             this.groupBox1.Controls.Add(this.btnagregar);
-            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1244, 533);
+            this.groupBox1.Size = new System.Drawing.Size(1025, 547);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Empresas";
@@ -75,7 +76,7 @@
             this.BtnCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1238, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
             this.toolStrip1.TabIndex = 61;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -137,7 +138,7 @@
             // 
             this.dgvempresas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvempresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvempresas.Location = new System.Drawing.Point(116, 281);
+            this.dgvempresas.Location = new System.Drawing.Point(8, 276);
             this.dgvempresas.Name = "dgvempresas";
             this.dgvempresas.Size = new System.Drawing.Size(1011, 265);
             this.dgvempresas.TabIndex = 51;
@@ -165,7 +166,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(902, 168);
+            this.btneliminar.Location = new System.Drawing.Point(778, 175);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -201,7 +202,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(635, 168);
+            this.btnactualizar.Location = new System.Drawing.Point(521, 175);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -237,7 +238,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(368, 168);
+            this.btnmostrar.Location = new System.Drawing.Point(264, 175);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -273,7 +274,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(101, 168);
+            this.btnagregar.Location = new System.Drawing.Point(6, 175);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -295,7 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 533);
+            this.ClientSize = new System.Drawing.Size(1025, 547);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEmpresas";
