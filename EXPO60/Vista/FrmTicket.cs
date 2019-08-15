@@ -25,5 +25,10 @@ namespace EXPO60.Vista
                 this.Close();
             }
         }
+
+        private void cmbusuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

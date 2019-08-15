@@ -122,5 +122,10 @@ namespace EXPO60.Vista
         {
             AbrirFormulario<FrmTicket>();
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

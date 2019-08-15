@@ -27,9 +27,9 @@ namespace EXPO60.Vista
             this.dgvSalas.Columns[0].Visible = false;
             btnActualizar_Sala.Enabled = false;
             btnEliminar_Sala.Enabled = false;
-            cmbEstado_Sala.DataSource = Funciones_Salas.Estado_Sala();
-            cmbEstado_Sala.DisplayMember = "estado_sala";
-            cmbEstado_Sala.ValueMember = "id_estado_sala";
+            cmbESTADO_SALA.DataSource = Funciones_Salas.Estado_Sala();
+            cmbESTADO_SALA.DisplayMember = "estado_sala";
+            cmbESTADO_SALA.ValueMember = "id_estado_sala";
         }
         public void Mostrar_Salas ()
         {
@@ -53,13 +53,13 @@ namespace EXPO60.Vista
         }
         public void Agregar_Salas()
         {
-            if (txtNumero_Sala.Text.Trim() == "" || cmbEstado_Sala.Text.Trim() == "" || txtCapacidad_Sala.Text.Trim() == "")
+            if (txtNumero_Sala.Text.Trim() == "" || cmbESTADO_SALA.Text.Trim() == "" || txtCapacidad_Sala.Text.Trim() == "")
             {
                 MessageBox.Show("Se han encontrado campos vacios, Completelos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                agregar.EstadoSala = Convert.ToInt16(cmbEstado_Sala.Text);
+                agregar.EstadoSala = Convert.ToInt16(cmbESTADO_SALA.Text);
                 agregar.CapacidadSala = txtCapacidad_Sala.Text;
                 agregar.NumeroSala = txtNumero_Sala.Text;
             }
@@ -69,7 +69,7 @@ namespace EXPO60.Vista
             Actualizar.IDSala = Convert.ToInt32(txtID_Sala.Text);
             Actualizar.NumeroSala = txtNumero_Sala.Text;
             Actualizar.CapacidadSala = txtCapacidad_Sala.Text;
-            Actualizar.EstadoSala = Convert.ToInt16(cmbEstado_Sala);
+            Actualizar.EstadoSala = Convert.ToInt16(cmbESTADO_SALA);
             Funciones_Salas.Actualizar_Sala(Actualizar);
         }
         private void BtnAgregar_Sala_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace EXPO60.Vista
             txtID_Sala.Text = this.dgvSalas[0, posicion].Value.ToString();
             txtNumero_Sala.Text = this.dgvSalas[1, posicion].Value.ToString();
             txtCapacidad_Sala.Text = this.dgvSalas[2, posicion].Value.ToString();
-            cmbEstado_Sala.Text = this.dgvSalas[3, posicion].Value.ToString();
+            cmbESTADO_SALA.Text = this.dgvSalas[3, posicion].Value.ToString();
             btnActualizar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = true;
             btnAgregar_Sala.Enabled = false;
@@ -282,6 +282,11 @@ namespace EXPO60.Vista
         }
 
         private void txtCapacidad_Sala_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

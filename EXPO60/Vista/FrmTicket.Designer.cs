@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTicket));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbfecha = new System.Windows.Forms.MaskedTextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbusuario = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -39,12 +42,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.cmbfecha = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -70,6 +70,35 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de factura local";
             // 
+            // cmbfecha
+            // 
+            this.cmbfecha.Location = new System.Drawing.Point(352, 86);
+            this.cmbfecha.Mask = "00/00/0000";
+            this.cmbfecha.Name = "cmbfecha";
+            this.cmbfecha.Size = new System.Drawing.Size(153, 20);
+            this.cmbfecha.TabIndex = 67;
+            this.cmbfecha.ValidatingType = typeof(System.DateTime);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1224, 25);
+            this.toolStrip1.TabIndex = 66;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // cmbusuario
             // 
             this.cmbusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -78,6 +107,7 @@
             this.cmbusuario.Name = "cmbusuario";
             this.cmbusuario.Size = new System.Drawing.Size(153, 21);
             this.cmbusuario.TabIndex = 65;
+            this.cmbusuario.SelectedIndexChanged += new System.EventHandler(this.cmbusuario_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -256,35 +286,6 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Fecha Ticket";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1224, 25);
-            this.toolStrip1.TabIndex = 66;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
-            this.BtnCerrar.Text = "Cerrar Formulario";
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // cmbfecha
-            // 
-            this.cmbfecha.Location = new System.Drawing.Point(352, 86);
-            this.cmbfecha.Mask = "00/00/0000";
-            this.cmbfecha.Name = "cmbfecha";
-            this.cmbfecha.Size = new System.Drawing.Size(153, 20);
-            this.cmbfecha.TabIndex = 67;
-            this.cmbfecha.ValidatingType = typeof(System.DateTime);
-            // 
             // FrmTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,9 +297,9 @@
             this.Text = "FrmTicket";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
