@@ -147,7 +147,7 @@
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-7, 288);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 282);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1011, 265);
             this.dataGridView1.TabIndex = 43;
@@ -280,7 +280,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(-7, 179);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(6, 179);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Brown;
