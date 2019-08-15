@@ -138,5 +138,10 @@ namespace EXPO60.Vista
                 this.Close();
             }
         }
+
+        private void btnagregar_Click_1(object sender, EventArgs e)
+        {
+            AgregarProducto();
+        }
     }
 }

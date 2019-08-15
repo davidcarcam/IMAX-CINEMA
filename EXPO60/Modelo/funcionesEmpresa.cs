@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO empresas(empresa, direccion_empresa ) VALUES ('{0}','{1}')", add.nombreEmpresa, add.direccionEmpresa), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO empresas(empresa, direccion_empr ) VALUES ('{0}','{1}')", add.nombreEmpresa, add.direccionEmpresa), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -29,10 +29,10 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("Error critico de  conexion, consulte con el administrador " + e, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error critico de  conexion, consulte con el administrador " + ex, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
 
@@ -49,10 +49,10 @@ namespace EXPO60.Modelo
                 adapter.Fill(data);
                 return data;
             }
-            catch (Exception)
+            catch (Exception )
             {
 
-                MessageBox.Show("Ops a ocurrido un problema con la obteccion de datos consulte con el administrador","error critico",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ops a ocurrido un problema con la obteccion de datos consulte con el administrador" ,"error critico",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return data = new DataTable();
             }
             finally
@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET empresa ='{0}' , direccion_empresa = '{1}'",upd.nombreEmpresa,upd.direccionEmpresa ),Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET empresa ='{0}' , direccion_empr = '{1}'",upd.nombreEmpresa,upd.direccionEmpresa ),Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if ( retorno == true)
                 {
@@ -77,7 +77,7 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception)
+            catch (Exception )
             {
 
                 MessageBox.Show("Datos no actualizados correctamente , consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,7 +101,7 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception)
+            catch (Exception )
             {
 
                 MessageBox.Show("oops erro de coneccion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
