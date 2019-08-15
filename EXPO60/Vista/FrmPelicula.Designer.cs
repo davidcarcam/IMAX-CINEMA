@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPelicula));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.txtaño = new System.Windows.Forms.MaskedTextBox();
             this.dgvpeliculas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,20 +52,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtaudio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.cmbestado = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.cmbestado);
             this.groupBox1.Controls.Add(this.toolStrip1);
@@ -83,12 +80,51 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtaudio);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 0);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1263, 573);
+            this.groupBox1.Size = new System.Drawing.Size(1025, 547);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de peliculas";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(707, 43);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(153, 21);
+            this.comboBox2.TabIndex = 61;
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Location = new System.Drawing.Point(707, 116);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(153, 21);
+            this.cmbestado.TabIndex = 60;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 59;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // txtaño
             // 
@@ -102,7 +138,7 @@
             // 
             this.dgvpeliculas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvpeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpeliculas.Location = new System.Drawing.Point(128, 269);
+            this.dgvpeliculas.Location = new System.Drawing.Point(9, 256);
             this.dgvpeliculas.Name = "dgvpeliculas";
             this.dgvpeliculas.Size = new System.Drawing.Size(1011, 265);
             this.dgvpeliculas.TabIndex = 36;
@@ -129,7 +165,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(915, 189);
+            this.btneliminar.Location = new System.Drawing.Point(781, 176);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -164,7 +200,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(647, 189);
+            this.btnactualizar.Location = new System.Drawing.Point(528, 176);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -199,7 +235,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(379, 189);
+            this.btnmostrar.Location = new System.Drawing.Point(260, 176);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -234,7 +270,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(102, 189);
+            this.btnagregar.Location = new System.Drawing.Point(9, 176);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -360,49 +396,11 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Audio";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1257, 25);
-            this.toolStrip1.TabIndex = 59;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
-            this.BtnCerrar.Text = "Cerrar Formulario";
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // cmbestado
-            // 
-            this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(707, 116);
-            this.cmbestado.Name = "cmbestado";
-            this.cmbestado.Size = new System.Drawing.Size(153, 21);
-            this.cmbestado.TabIndex = 60;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(707, 43);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 21);
-            this.comboBox2.TabIndex = 61;
-            // 
             // FrmPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 572);
+            this.ClientSize = new System.Drawing.Size(1025, 547);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -410,9 +408,9 @@
             this.Text = "FrmPelicula";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).EndInit();
             this.ResumeLayout(false);
 
         }

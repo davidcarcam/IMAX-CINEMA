@@ -169,7 +169,7 @@
             this.btnEliminar_Asiento.IconVisible = true;
             this.btnEliminar_Asiento.IconZoom = 80D;
             this.btnEliminar_Asiento.IsTab = false;
-            this.btnEliminar_Asiento.Location = new System.Drawing.Point(892, 134);
+            this.btnEliminar_Asiento.Location = new System.Drawing.Point(886, 134);
             this.btnEliminar_Asiento.Name = "btnEliminar_Asiento";
             this.btnEliminar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnEliminar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
@@ -205,7 +205,7 @@
             this.btnActualizar_Asiento.IconVisible = true;
             this.btnActualizar_Asiento.IconZoom = 80D;
             this.btnActualizar_Asiento.IsTab = false;
-            this.btnActualizar_Asiento.Location = new System.Drawing.Point(625, 134);
+            this.btnActualizar_Asiento.Location = new System.Drawing.Point(590, 134);
             this.btnActualizar_Asiento.Name = "btnActualizar_Asiento";
             this.btnActualizar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnActualizar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
@@ -241,7 +241,7 @@
             this.btnMostrar_Asientos.IconVisible = true;
             this.btnMostrar_Asientos.IconZoom = 80D;
             this.btnMostrar_Asientos.IsTab = false;
-            this.btnMostrar_Asientos.Location = new System.Drawing.Point(358, 134);
+            this.btnMostrar_Asientos.Location = new System.Drawing.Point(307, 134);
             this.btnMostrar_Asientos.Name = "btnMostrar_Asientos";
             this.btnMostrar_Asientos.Normalcolor = System.Drawing.Color.Maroon;
             this.btnMostrar_Asientos.OnHovercolor = System.Drawing.Color.Brown;
@@ -277,7 +277,7 @@
             this.btnAgregar_Asiento.IconVisible = true;
             this.btnAgregar_Asiento.IconZoom = 80D;
             this.btnAgregar_Asiento.IsTab = false;
-            this.btnAgregar_Asiento.Location = new System.Drawing.Point(91, 134);
+            this.btnAgregar_Asiento.Location = new System.Drawing.Point(47, 134);
             this.btnAgregar_Asiento.Name = "btnAgregar_Asiento";
             this.btnAgregar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnAgregar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
