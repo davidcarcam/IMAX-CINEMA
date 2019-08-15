@@ -39,7 +39,7 @@ namespace EXPO60.Vista
             else
             {
                 error1.Clear();
-                     
+                
                 vaciarampos();
 
             }
