@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRecu = new System.Windows.Forms.Button();
             this.txtusuarioRecuperar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,15 +39,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnRecu
             // 
-            this.button1.Location = new System.Drawing.Point(295, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "recuperar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRecu.Location = new System.Drawing.Point(295, 188);
+            this.btnRecu.Name = "btnRecu";
+            this.btnRecu.Size = new System.Drawing.Size(116, 30);
+            this.btnRecu.TabIndex = 0;
+            this.btnRecu.Text = "recuperar";
+            this.btnRecu.UseVisualStyleBackColor = true;
+            this.btnRecu.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtusuarioRecuperar
             // 
@@ -61,7 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnRecu);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtusuarioRecuperar);
@@ -114,7 +114,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRecu;
         private System.Windows.Forms.TextBox txtusuarioRecuperar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
