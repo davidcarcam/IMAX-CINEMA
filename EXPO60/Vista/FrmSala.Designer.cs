@@ -33,7 +33,7 @@
             this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.cmbEstado_Sala = new System.Windows.Forms.ComboBox();
+            this.cmbESTADO_SALA = new System.Windows.Forms.ComboBox();
             this.lblEstado_Sala = new System.Windows.Forms.Label();
             this.txtCapacidad_Sala = new System.Windows.Forms.TextBox();
             this.lblCapacidad_Sala = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             // grpRegistro_Sala
             // 
             this.grpRegistro_Sala.Controls.Add(this.toolStrip1);
-            this.grpRegistro_Sala.Controls.Add(this.cmbEstado_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.cmbESTADO_SALA);
             this.grpRegistro_Sala.Controls.Add(this.lblEstado_Sala);
             this.grpRegistro_Sala.Controls.Add(this.txtCapacidad_Sala);
             this.grpRegistro_Sala.Controls.Add(this.lblCapacidad_Sala);
@@ -85,6 +85,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
             this.toolStrip1.TabIndex = 63;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // BtnCerrar
             // 
@@ -98,12 +99,12 @@
             // 
             // cmbEstado_Sala
             // 
-            this.cmbEstado_Sala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado_Sala.FormattingEnabled = true;
-            this.cmbEstado_Sala.Location = new System.Drawing.Point(951, 102);
-            this.cmbEstado_Sala.Name = "cmbEstado_Sala";
-            this.cmbEstado_Sala.Size = new System.Drawing.Size(153, 21);
-            this.cmbEstado_Sala.TabIndex = 3;
+            this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbESTADO_SALA.FormattingEnabled = true;
+            this.cmbESTADO_SALA.Location = new System.Drawing.Point(951, 102);
+            this.cmbESTADO_SALA.Name = "cmbEstado_Sala";
+            this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
+            this.cmbESTADO_SALA.TabIndex = 3;
             // 
             // lblEstado_Sala
             // 
@@ -356,7 +357,7 @@
         private System.Windows.Forms.TextBox txtID_Sala;
         private System.Windows.Forms.TextBox txtNumero_Sala;
         private System.Windows.Forms.Label lblNumero_Sala;
-        private System.Windows.Forms.ComboBox cmbEstado_Sala;
+        private System.Windows.Forms.ComboBox cmbESTADO_SALA;
         private System.Windows.Forms.ErrorProvider epError2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
