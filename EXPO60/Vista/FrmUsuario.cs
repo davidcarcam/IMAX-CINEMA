@@ -251,7 +251,7 @@ namespace EXPO60.Vista
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || e.KeyChar.ToString().Equals("."))
-            {
+           {
                 e.Handled = false;
             }
 
@@ -262,9 +262,9 @@ namespace EXPO60.Vista
             else
             {
                 e.Handled = true;
-            }
+           }
         }
-
+    
         private void txtdireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || e.KeyChar.ToString().Equals(".") || e.KeyChar.ToString().Equals(",") || e.KeyChar.ToString().Equals("#"))
@@ -386,6 +386,11 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
+        }
+
+        private void txtcorreo_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 
