@@ -23,17 +23,24 @@ namespace EXPO60.Vista
         constructorEmpresa actualizar = new constructorEmpresa();
         public void agregarEmpresa()
         {
-            agregar.nombreEmpresa = txtNumero.Text;
-            agregar.direccionEmpresa = textBox1.Text;
+            agregar.nombreEmpresa = txtNombre_empresa.Text;
+            agregar.direccionEmpresa = txtDireccion_empresa.Text;
             int datos = funcionesEmpresa.insertarLocal(agregar);
         }
 
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            agregarEmpresa();
-            mostrarEmpresas();
-            vaciarampos();
+            if (txtNombre_empresa.Text==""|| txtDireccion_empresa.Text=="")
+            {
+                MessageBox.Show("Por favor rellena todos los campos que se te piden","Campos vacios",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                agregarEmpresa();
+                mostrarEmpresas();
+                vaciarampos();
+            }
 
         }
 
@@ -47,8 +54,8 @@ namespace EXPO60.Vista
         }
         public void vaciarampos()
         {
-            txtNumero.Clear();
-            textBox1.Clear();
+            txtNombre_empresa.Clear();
+            txtDireccion_empresa.Clear();
         }
 
         private void FrmEmpresas_Load(object sender, EventArgs e)
@@ -69,16 +76,16 @@ namespace EXPO60.Vista
             int posicion;
             posicion = this.dgvempresas.CurrentRow.Index;
             txtid.Text = this.dgvempresas[0, posicion].Value.ToString();
-            txtNumero.Text = this.dgvempresas[1, posicion].Value.ToString();
-            textBox1.Text = this.dgvempresas[2, posicion].Value.ToString();
+            txtNombre_empresa.Text = this.dgvempresas[1, posicion].Value.ToString();
+            txtDireccion_empresa.Text = this.dgvempresas[2, posicion].Value.ToString();
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
         }
         public void modificarRegistro()
         {
-            actualizar.nombreEmpresa = txtNumero.Text;
-            actualizar.direccionEmpresa = textBox1.Text;
+            actualizar.nombreEmpresa = txtNombre_empresa.Text;
+            actualizar.direccionEmpresa = txtDireccion_empresa.Text;
             funcionesEmpresa.actualizarEmpresa(actualizar);
         }
         public void eliminarRegistro()
