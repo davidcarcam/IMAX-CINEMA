@@ -63,6 +63,7 @@ namespace EXPO60.Vista
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -75,6 +76,7 @@ namespace EXPO60.Vista
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.txtCifrado);
             this.groupBox2.Controls.Add(this.btnagregar);
             this.groupBox2.Controls.Add(this.toolStrip1);
@@ -417,7 +419,13 @@ namespace EXPO60.Vista
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(153, 20);
             this.txtcorreo.TabIndex = 6;
+            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged_1);
             this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
+
+            this.txtcorreo.Location = new System.Drawing.Point(0, 0);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(100, 20);
+            this.txtcorreo.TabIndex = 50;
             // 
             // label6
             // 
@@ -512,6 +520,13 @@ namespace EXPO60.Vista
             this.label1.TabIndex = 17;
             this.label1.Text = "Nombre";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(456, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 51;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -566,5 +581,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCifrado;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

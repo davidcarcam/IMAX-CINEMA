@@ -32,10 +32,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDireccion_empresa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtNombre_empresa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvempresas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -51,10 +51,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.toolStrip1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDireccion_empresa);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtid);
-            this.groupBox1.Controls.Add(this.txtNumero);
+            this.groupBox1.Controls.Add(this.txtNombre_empresa);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgvempresas);
             this.groupBox1.Controls.Add(this.btneliminar);
@@ -90,13 +90,13 @@
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // textBox1
+            // txtDireccion_empresa
             // 
-            this.textBox1.Location = new System.Drawing.Point(758, 76);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 48);
-            this.textBox1.TabIndex = 60;
+            this.txtDireccion_empresa.Location = new System.Drawing.Point(758, 76);
+            this.txtDireccion_empresa.Multiline = true;
+            this.txtDireccion_empresa.Name = "txtDireccion_empresa";
+            this.txtDireccion_empresa.Size = new System.Drawing.Size(153, 48);
+            this.txtDireccion_empresa.TabIndex = 60;
             // 
             // label2
             // 
@@ -116,13 +116,13 @@
             this.txtid.TabIndex = 57;
             this.txtid.Visible = false;
             // 
-            // txtNumero
+            // txtNombre_empresa
             // 
-            this.txtNumero.Location = new System.Drawing.Point(400, 87);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(153, 20);
-            this.txtNumero.TabIndex = 58;
-            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
+            this.txtNombre_empresa.Location = new System.Drawing.Point(400, 87);
+            this.txtNombre_empresa.Name = "txtNombre_empresa";
+            this.txtNombre_empresa.Size = new System.Drawing.Size(153, 20);
+            this.txtNombre_empresa.TabIndex = 58;
+            this.txtNombre_empresa.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // label1
             // 
@@ -314,10 +314,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDireccion_empresa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtNombre_empresa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvempresas;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;

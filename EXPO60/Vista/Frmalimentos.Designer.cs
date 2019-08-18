@@ -36,7 +36,7 @@
             this.txttelefonoLocal = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvactores = new System.Windows.Forms.DataGridView();
+            this.dgvlocal = new System.Windows.Forms.DataGridView();
             this.txtid = new System.Windows.Forms.TextBox();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,7 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -56,7 +56,7 @@
             this.groupBox1.Controls.Add(this.txttelefonoLocal);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dgvactores);
+            this.groupBox1.Controls.Add(this.dgvlocal);
             this.groupBox1.Controls.Add(this.txtid);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnactualizar);
@@ -134,18 +134,19 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "Telefono";
             // 
-            // dgvactores
+            // dgvlocal
             // 
-            this.dgvactores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvactores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvactores.Location = new System.Drawing.Point(6, 288);
-            this.dgvactores.Name = "dgvactores";
-            this.dgvactores.Size = new System.Drawing.Size(1011, 265);
-            this.dgvactores.TabIndex = 51;
+            this.dgvlocal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvlocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvlocal.Location = new System.Drawing.Point(6, 288);
+            this.dgvlocal.Name = "dgvlocal";
+            this.dgvlocal.Size = new System.Drawing.Size(1011, 265);
+            this.dgvlocal.TabIndex = 51;
+            this.dgvlocal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvactores_CellContentClick);
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(73, 80);
+            this.txtid.Location = new System.Drawing.Point(11, 125);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
             this.txtid.TabIndex = 1;
@@ -186,6 +187,7 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnactualizar
             // 
@@ -221,6 +223,7 @@
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnmostrar
             // 
@@ -244,7 +247,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(258, 175);
+            this.btnmostrar.Location = new System.Drawing.Point(268, 175);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -256,6 +259,7 @@
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
             // 
             // btnagregar
             // 
@@ -279,7 +283,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(-9, 175);
+            this.btnagregar.Location = new System.Drawing.Point(11, 175);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -291,6 +295,7 @@
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // txtnombre
             // 
@@ -324,11 +329,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frmalimentos";
             this.Text = "Frmalimentos";
+            this.Load += new System.EventHandler(this.Frmalimentos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,7 +342,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvactores;
+        private System.Windows.Forms.DataGridView dgvlocal;
         private System.Windows.Forms.TextBox txtid;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
