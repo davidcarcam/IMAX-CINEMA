@@ -56,6 +56,7 @@
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
     <Compile Include="Controlador\Constructor_Actores.cs" />
     <Compile Include="Controlador\Constructor_Asientos.cs" />
+    <Compile Include="Controlador\Constructor_funciones.cs" />
     <Compile Include="Controlador\Constructor_localAlimentos.cs" />
     <Compile Include="Controlador\Constructor_pelicula.cs" />
     <Compile Include="Controlador\Constructor_Personajes.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Modelo\funcionesEmpresa.cs" />
     <Compile Include="Modelo\Funciones_Actores.cs" />
     <Compile Include="Modelo\Funciones_Asientos.cs" />
+    <Compile Include="Modelo\Funciones_funcion.cs" />
     <Compile Include="Modelo\Funciones_peliculas.cs" />
     <Compile Include="Modelo\Funciones_primerUso.cs" />
     <Compile Include="Modelo\Funciones_Productos.cs" />
