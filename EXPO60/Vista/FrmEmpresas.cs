@@ -31,16 +31,7 @@ namespace EXPO60.Vista
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (txtNombre_empresa.Text==""|| txtDireccion_empresa.Text=="")
-            {
-                MessageBox.Show("Por favor rellena todos los campos que se te piden","Campos vacios",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-            else
-            {
-                agregarEmpresa();
-                mostrarEmpresas();
-                vaciarampos();
-            }
+           
 
         }
 
@@ -139,7 +130,16 @@ namespace EXPO60.Vista
 
         private void btnagregar_Click_1(object sender, EventArgs e)
         {
-            agregarEmpresa();
+            if (txtNombre_empresa.Text == "" || txtDireccion_empresa.Text == "")
+            {
+                MessageBox.Show("Por favor rellena todos los campos que se te piden", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                agregarEmpresa();
+                mostrarEmpresas();
+                vaciarampos();
+            }
         }
     }
 }
