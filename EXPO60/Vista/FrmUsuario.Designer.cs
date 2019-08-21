@@ -34,6 +34,7 @@ namespace EXPO60.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -63,7 +64,6 @@ namespace EXPO60.Vista
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -111,6 +111,13 @@ namespace EXPO60.Vista
             this.groupBox2.Size = new System.Drawing.Size(1025, 547);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(456, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 51;
             // 
             // txtCifrado
             // 
@@ -414,18 +421,13 @@ namespace EXPO60.Vista
             // txtcorreo
             // 
             this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtcorreo.Location = new System.Drawing.Point(438, 54);
-            this.txtcorreo.MaxLength = 50;
-            this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(153, 20);
-            this.txtcorreo.TabIndex = 6;
-            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged_1);
-            this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
-
             this.txtcorreo.Location = new System.Drawing.Point(0, 0);
+            this.txtcorreo.MaxLength = 50;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(100, 20);
             this.txtcorreo.TabIndex = 50;
+            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged_1);
+            this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
             // 
             // label6
             // 
@@ -519,13 +521,6 @@ namespace EXPO60.Vista
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "Nombre";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(456, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 51;
             // 
             // FrmUsuario
             // 
