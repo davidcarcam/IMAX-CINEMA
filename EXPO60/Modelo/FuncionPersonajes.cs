@@ -18,7 +18,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO PERSONAJES (PERSONAJE, ID_ACTORES, ID_PELICULA) VALUES ('{0}', '{1}', '{2}')", add.nombre, add.actor, add.pelicula), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO personajes (id_personaje, personaje, id_pelicula) VALUES ('{0}', '{1}', '{2}')", add.nombre, add.actor, add.pelicula), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -102,6 +102,50 @@ namespace EXPO60.Modelo
             {
                 MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. " + e, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
+            }
+        }
+        public static DataTable obtenerActor()
+        {
+            string query = "SELECT * FROM actores";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable obtenerpelicula()
+        {
+            string query = "SELECT * FROM peliculas";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
             }
         }
     }

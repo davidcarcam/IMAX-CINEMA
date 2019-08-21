@@ -74,6 +74,7 @@ namespace EXPO60.Vista
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(30, 20);
             this.txtCifrado.TabIndex = 13;
+            this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
             // 
             // linkPrimerUso
             // 
@@ -170,6 +171,8 @@ namespace EXPO60.Vista
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(286, 20);
             this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // FrmLogin
             // 

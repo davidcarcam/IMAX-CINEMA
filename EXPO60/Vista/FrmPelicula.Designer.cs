@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPelicula));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.txtaño = new System.Windows.Forms.MaskedTextBox();
             this.dgvpeliculas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -37,28 +41,28 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.idPelicula = new System.Windows.Forms.TextBox();
-            this.txtestado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txttitulo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtgenero = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtdirector = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtdimensiones = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtaudio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cmbestado);
+            this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.txtaño);
             this.groupBox1.Controls.Add(this.dgvpeliculas);
             this.groupBox1.Controls.Add(this.btneliminar);
@@ -66,29 +70,66 @@
             this.groupBox1.Controls.Add(this.btnmostrar);
             this.groupBox1.Controls.Add(this.btnagregar);
             this.groupBox1.Controls.Add(this.idPelicula);
-            this.groupBox1.Controls.Add(this.txtestado);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txttitulo);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtgenero);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtdirector);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtdimensiones);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtaudio);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 0);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1263, 573);
+            this.groupBox1.Size = new System.Drawing.Size(1025, 547);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de peliculas";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(707, 43);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(153, 21);
+            this.comboBox2.TabIndex = 61;
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Location = new System.Drawing.Point(707, 116);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(153, 21);
+            this.cmbestado.TabIndex = 60;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 59;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // txtaño
             // 
-            this.txtaño.Location = new System.Drawing.Point(337, 63);
+            this.txtaño.Location = new System.Drawing.Point(128, 83);
             this.txtaño.Mask = "0000";
             this.txtaño.Name = "txtaño";
             this.txtaño.Size = new System.Drawing.Size(153, 20);
@@ -98,10 +139,11 @@
             // 
             this.dgvpeliculas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvpeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpeliculas.Location = new System.Drawing.Point(128, 269);
+            this.dgvpeliculas.Location = new System.Drawing.Point(9, 256);
             this.dgvpeliculas.Name = "dgvpeliculas";
             this.dgvpeliculas.Size = new System.Drawing.Size(1011, 265);
             this.dgvpeliculas.TabIndex = 36;
+            this.dgvpeliculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpeliculas_CellContentClick);
             // 
             // btneliminar
             // 
@@ -125,7 +167,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(915, 189);
+            this.btneliminar.Location = new System.Drawing.Point(781, 176);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -137,6 +179,7 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnactualizar
             // 
@@ -160,7 +203,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(647, 189);
+            this.btnactualizar.Location = new System.Drawing.Point(528, 176);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -172,6 +215,7 @@
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnmostrar
             // 
@@ -195,7 +239,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(379, 189);
+            this.btnmostrar.Location = new System.Drawing.Point(260, 176);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -207,6 +251,7 @@
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
             // 
             // btnagregar
             // 
@@ -230,7 +275,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(102, 189);
+            this.btnagregar.Location = new System.Drawing.Point(9, 176);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -242,27 +287,21 @@
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // idPelicula
             // 
-            this.idPelicula.Location = new System.Drawing.Point(555, 62);
+            this.idPelicula.Location = new System.Drawing.Point(921, 48);
             this.idPelicula.Name = "idPelicula";
             this.idPelicula.Size = new System.Drawing.Size(28, 20);
             this.idPelicula.TabIndex = 28;
             this.idPelicula.Visible = false;
             // 
-            // txtestado
-            // 
-            this.txtestado.Location = new System.Drawing.Point(701, 99);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(153, 20);
-            this.txtestado.TabIndex = 27;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(635, 99);
+            this.label7.Location = new System.Drawing.Point(641, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 26;
@@ -270,33 +309,28 @@
             // 
             // txttitulo
             // 
-            this.txttitulo.Location = new System.Drawing.Point(701, 62);
+            this.txttitulo.Location = new System.Drawing.Point(128, 45);
+            this.txttitulo.MaxLength = 30;
             this.txttitulo.Name = "txttitulo";
             this.txttitulo.Size = new System.Drawing.Size(153, 20);
             this.txttitulo.TabIndex = 25;
+            this.txttitulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttitulo_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(645, 62);
+            this.label6.Location = new System.Drawing.Point(75, 43);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 20);
             this.label6.TabIndex = 24;
             this.label6.Text = "Titulo";
             // 
-            // txtgenero
-            // 
-            this.txtgenero.Location = new System.Drawing.Point(701, 28);
-            this.txtgenero.Name = "txtgenero";
-            this.txtgenero.Size = new System.Drawing.Size(153, 20);
-            this.txtgenero.TabIndex = 23;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(632, 28);
+            this.label5.Location = new System.Drawing.Point(638, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 22;
@@ -304,33 +338,28 @@
             // 
             // txtdirector
             // 
-            this.txtdirector.Location = new System.Drawing.Point(349, 134);
+            this.txtdirector.Location = new System.Drawing.Point(128, 129);
+            this.txtdirector.MaxLength = 45;
             this.txtdirector.Name = "txtdirector";
             this.txtdirector.Size = new System.Drawing.Size(153, 20);
             this.txtdirector.TabIndex = 21;
+            this.txtdirector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdirector_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(278, 134);
+            this.label4.Location = new System.Drawing.Point(57, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Director";
             // 
-            // txtdimensiones
-            // 
-            this.txtdimensiones.Location = new System.Drawing.Point(349, 99);
-            this.txtdimensiones.Name = "txtdimensiones";
-            this.txtdimensiones.Size = new System.Drawing.Size(153, 20);
-            this.txtdimensiones.TabIndex = 19;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(242, 99);
+            this.label3.Location = new System.Drawing.Point(338, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 20);
             this.label3.TabIndex = 18;
@@ -340,7 +369,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(293, 62);
+            this.label2.Location = new System.Drawing.Point(84, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 16;
@@ -348,33 +377,47 @@
             // 
             // txtaudio
             // 
-            this.txtaudio.Location = new System.Drawing.Point(349, 26);
+            this.txtaudio.Location = new System.Drawing.Point(449, 43);
+            this.txtaudio.MaxLength = 20;
             this.txtaudio.Name = "txtaudio";
             this.txtaudio.Size = new System.Drawing.Size(153, 20);
-            this.txtaudio.TabIndex = 15;
+            this.txtaudio.TabIndex = 1;
+            this.txtaudio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtaudio_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(293, 26);
+            this.label1.Location = new System.Drawing.Point(338, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Audio";
+            this.label1.Text = "Idioma";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(449, 117);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 21);
+            this.comboBox1.TabIndex = 62;
             // 
             // FrmPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 572);
+            this.ClientSize = new System.Drawing.Size(1025, 547);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPelicula";
             this.Text = "FrmPelicula";
+            this.Load += new System.EventHandler(this.FrmPelicula_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).EndInit();
             this.ResumeLayout(false);
 
@@ -390,18 +433,20 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnagregar;
         private System.Windows.Forms.TextBox idPelicula;
-        private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txttitulo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtgenero;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtdirector;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtdimensiones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtaudio;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbestado;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

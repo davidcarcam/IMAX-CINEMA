@@ -35,12 +35,13 @@
             this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
             this.btnnormal = new System.Windows.Forms.ToolStripButton();
             this.btnminimizar = new System.Windows.Forms.ToolStripButton();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.picimgL = new System.Windows.Forms.PictureBox();
             this.picimg = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picimgL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).BeginInit();
@@ -54,7 +55,9 @@
             this.toolStripButton6,
             this.btnmaximizar,
             this.btnnormal,
-            this.btnminimizar});
+            this.btnminimizar,
+            this.toolStripButton1,
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(243, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1025, 25);
@@ -79,7 +82,7 @@
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "toolStripButton2";
+            this.toolStripButton6.Text = "Cerrar";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // btnmaximizar
@@ -90,7 +93,7 @@
             this.btnmaximizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnmaximizar.Name = "btnmaximizar";
             this.btnmaximizar.Size = new System.Drawing.Size(23, 22);
-            this.btnmaximizar.Text = "toolStripButton3";
+            this.btnmaximizar.Text = "Maximizar";
             this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click);
             // 
             // btnnormal
@@ -101,7 +104,8 @@
             this.btnnormal.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnnormal.Name = "btnnormal";
             this.btnnormal.Size = new System.Drawing.Size(23, 22);
-            this.btnnormal.Text = "toolStripButton4";
+            this.btnnormal.Text = "Restaurar a tamaño normal";
+            this.btnnormal.Visible = false;
             this.btnnormal.Click += new System.EventHandler(this.btnnormal_Click);
             // 
             // btnminimizar
@@ -112,46 +116,62 @@
             this.btnminimizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(23, 22);
-            this.btnminimizar.Text = "toolStripButton5";
+            this.btnminimizar.Text = "Minimizar";
             this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
             // 
-            // bunifuFlatButton4
+            // toolStripButton1
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.Maroon;
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "         Inicio";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 90D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(6, 274);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.DarkRed;
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.DimGray;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(237, 42);
-            this.bunifuFlatButton4.TabIndex = 57;
-            this.bunifuFlatButton4.Text = "         Inicio";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Cerrar Formulario";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(100, 22);
+            this.toolStripLabel1.Text = "Cerrar Formulario";
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Activecolor = System.Drawing.Color.Maroon;
+            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInicio.BorderRadius = 0;
+            this.btnInicio.ButtonText = "         Inicio";
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.DisabledColor = System.Drawing.Color.Gray;
+            this.btnInicio.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnInicio.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnInicio.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnInicio.Iconimage")));
+            this.btnInicio.Iconimage_right = null;
+            this.btnInicio.Iconimage_right_Selected = null;
+            this.btnInicio.Iconimage_Selected = null;
+            this.btnInicio.IconMarginLeft = 0;
+            this.btnInicio.IconMarginRight = 0;
+            this.btnInicio.IconRightVisible = true;
+            this.btnInicio.IconRightZoom = 0D;
+            this.btnInicio.IconVisible = true;
+            this.btnInicio.IconZoom = 65D;
+            this.btnInicio.IsTab = false;
+            this.btnInicio.Location = new System.Drawing.Point(6, 274);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnInicio.OnHovercolor = System.Drawing.Color.DarkRed;
+            this.btnInicio.OnHoverTextColor = System.Drawing.Color.DimGray;
+            this.btnInicio.selected = false;
+            this.btnInicio.Size = new System.Drawing.Size(237, 42);
+            this.btnInicio.TabIndex = 57;
+            this.btnInicio.Text = "         Inicio";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Textcolor = System.Drawing.Color.White;
+            this.btnInicio.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // PanelContenedor
             // 
@@ -187,8 +207,7 @@
             // 
             this.MenuVertical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuVertical.BackgroundImage")));
             this.MenuVertical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MenuVertical.Controls.Add(this.bunifuFlatButton1);
-            this.MenuVertical.Controls.Add(this.bunifuFlatButton4);
+            this.MenuVertical.Controls.Add(this.btnInicio);
             this.MenuVertical.Controls.Add(this.picimg);
             this.MenuVertical.Controls.Add(this.picimgL);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -203,44 +222,6 @@
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Maroon;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "         regresar";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(3, 201);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.DarkRed;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.DimGray;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(237, 42);
-            this.bunifuFlatButton1.TabIndex = 58;
-            this.bunifuFlatButton1.Text = "         regresar";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
             // FrmNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +232,7 @@
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNuevo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNuevo";
             this.Load += new System.EventHandler(this.FrmNuevo_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -271,10 +253,11 @@
         private System.Windows.Forms.ToolStripButton btnminimizar;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Panel PanelContenedor;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
+        private Bunifu.Framework.UI.BunifuFlatButton btnInicio;
         private System.Windows.Forms.PictureBox picimgL;
         private System.Windows.Forms.PictureBox picimg;
         private Bunifu.Framework.UI.BunifuGradientPanel MenuVertical;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

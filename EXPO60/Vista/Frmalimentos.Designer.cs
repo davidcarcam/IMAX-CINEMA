@@ -30,9 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmalimentos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txttelefonoLocal = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvactores = new System.Windows.Forms.DataGridView();
+            this.dgvlocal = new System.Windows.Forms.DataGridView();
             this.txtid = new System.Windows.Forms.TextBox();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -40,22 +44,19 @@
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txttelefonoLocal = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txttelefonoLocal);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dgvactores);
+            this.groupBox1.Controls.Add(this.dgvlocal);
             this.groupBox1.Controls.Add(this.txtid);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnactualizar);
@@ -63,19 +64,60 @@
             this.groupBox1.Controls.Add(this.btnagregar);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1237, 570);
+            this.groupBox1.Size = new System.Drawing.Size(1025, 547);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de alimentos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 58;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(773, 78);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 21);
+            this.comboBox1.TabIndex = 57;
+            // 
+            // txttelefonoLocal
+            // 
+            this.txttelefonoLocal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txttelefonoLocal.Location = new System.Drawing.Point(430, 78);
+            this.txttelefonoLocal.Mask = "0000-0000";
+            this.txttelefonoLocal.Name = "txttelefonoLocal";
+            this.txttelefonoLocal.Size = new System.Drawing.Size(153, 20);
+            this.txttelefonoLocal.TabIndex = 56;
+            // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(737, 76);
+            this.label3.Location = new System.Drawing.Point(639, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 55;
@@ -83,26 +125,28 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(451, 78);
+            this.label2.Location = new System.Drawing.Point(353, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 52;
             this.label2.Text = "Telefono";
             // 
-            // dgvactores
+            // dgvlocal
             // 
-            this.dgvactores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvactores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvactores.Location = new System.Drawing.Point(112, 299);
-            this.dgvactores.Name = "dgvactores";
-            this.dgvactores.Size = new System.Drawing.Size(1011, 265);
-            this.dgvactores.TabIndex = 51;
+            this.dgvlocal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvlocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvlocal.Location = new System.Drawing.Point(6, 288);
+            this.dgvlocal.Name = "dgvlocal";
+            this.dgvlocal.Size = new System.Drawing.Size(1011, 265);
+            this.dgvlocal.TabIndex = 51;
+            this.dgvlocal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvactores_CellContentClick);
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(319, 29);
+            this.txtid.Location = new System.Drawing.Point(11, 125);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
             this.txtid.TabIndex = 1;
@@ -131,7 +175,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(898, 186);
+            this.btneliminar.Location = new System.Drawing.Point(781, 175);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -143,6 +187,7 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnactualizar
             // 
@@ -166,7 +211,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(631, 186);
+            this.btnactualizar.Location = new System.Drawing.Point(525, 175);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -178,6 +223,7 @@
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnmostrar
             // 
@@ -201,7 +247,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(364, 186);
+            this.btnmostrar.Location = new System.Drawing.Point(268, 175);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -213,6 +259,7 @@
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
             // 
             // btnagregar
             // 
@@ -236,7 +283,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(97, 186);
+            this.btnagregar.Location = new System.Drawing.Point(11, 175);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -248,56 +295,46 @@
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(264, 76);
+            this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtnombre.Location = new System.Drawing.Point(166, 78);
             this.txtnombre.MaxLength = 30;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
             this.txtnombre.TabIndex = 1;
             this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(128, 76);
+            this.label1.Location = new System.Drawing.Point(30, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre local";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txttelefonoLocal
-            // 
-            this.txttelefonoLocal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttelefonoLocal.Location = new System.Drawing.Point(528, 78);
-            this.txttelefonoLocal.Mask = "0000-0000";
-            this.txttelefonoLocal.Name = "txttelefonoLocal";
-            this.txttelefonoLocal.Size = new System.Drawing.Size(153, 20);
-            this.txttelefonoLocal.TabIndex = 56;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(871, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 21);
-            this.comboBox1.TabIndex = 57;
-            // 
             // Frmalimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1219, 568);
+            this.ClientSize = new System.Drawing.Size(1025, 547);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frmalimentos";
             this.Text = "Frmalimentos";
+            this.Load += new System.EventHandler(this.Frmalimentos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvactores)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,7 +342,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvactores;
+        private System.Windows.Forms.DataGridView dgvlocal;
         private System.Windows.Forms.TextBox txtid;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
@@ -317,5 +354,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.MaskedTextBox txttelefonoLocal;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
     }
 }

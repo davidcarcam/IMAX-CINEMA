@@ -32,12 +32,14 @@ namespace EXPO60.Vista
             {
                 error1.SetError(txtusuarioRecuperar, " Ingrese un Email Válido");
                 txtusuarioRecuperar.Focus();
+                
                 vaciarampos();
                 return;
             }
             else
             {
                 error1.Clear();
+                
                 vaciarampos();
 
             }
@@ -69,7 +71,14 @@ namespace EXPO60.Vista
 
         private void txtusuarioRecuperar_TextChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            FrmLogin principal = new FrmLogin();
+            principal.Show();
+            this.Hide();
         }
     }
 }

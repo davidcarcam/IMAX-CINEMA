@@ -92,11 +92,15 @@ namespace EXPO60.Vista
         private void bunifuFlatButton22_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmUsuario>();
+            toolStripButton1.Visible = true;
+            toolStripLabel1.Visible = true;
         }
 
         private void FrmNuevo_Load(object sender, EventArgs e)
         {
-
+            btnnormal.Visible = false;
+            toolStripButton1.Visible = false;
+            toolStripLabel1.Visible = false;
         }
 
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
@@ -161,13 +165,21 @@ namespace EXPO60.Vista
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmNuevo>();
-
+            Form frm = new FrmUsuario();
         }
 
         private void MenuVertical_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                this.Close();
+            }
         }
     }
 }

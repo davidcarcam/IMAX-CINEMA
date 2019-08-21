@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedores));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtdui = new System.Windows.Forms.MaskedTextBox();
@@ -53,14 +55,13 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.txttelefono);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtdui);
@@ -83,13 +84,34 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1251, 533);
+            this.groupBox1.Size = new System.Drawing.Size(1025, 547);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de proveedores";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 59;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // txttelefono
             // 
@@ -163,7 +185,7 @@
             // 
             this.dgvproveedores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvproveedores.Location = new System.Drawing.Point(127, 276);
+            this.dgvproveedores.Location = new System.Drawing.Point(6, 276);
             this.dgvproveedores.Name = "dgvproveedores";
             this.dgvproveedores.Size = new System.Drawing.Size(1011, 265);
             this.dgvproveedores.TabIndex = 39;
@@ -190,7 +212,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(911, 193);
+            this.btneliminar.Location = new System.Drawing.Point(778, 200);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -225,7 +247,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(644, 193);
+            this.btnactualizar.Location = new System.Drawing.Point(520, 200);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -260,7 +282,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(377, 193);
+            this.btnmostrar.Location = new System.Drawing.Point(264, 200);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -295,7 +317,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(110, 193);
+            this.btnagregar.Location = new System.Drawing.Point(6, 200);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -391,13 +413,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 533);
+            this.ClientSize = new System.Drawing.Size(1025, 547);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProveedores";
             this.Text = "FrmProveedores";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).EndInit();
             this.ResumeLayout(false);
 
@@ -428,5 +452,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
     }
 }

@@ -31,29 +31,33 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActores));
             this.grpActores = new System.Windows.Forms.GroupBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.dgvActores = new System.Windows.Forms.DataGridView();
             this.txtID_Actor = new System.Windows.Forms.TextBox();
             this.btnEliminar_Actor = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnActualizar_Actor = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMostrar_Actores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Actor = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtNombre_Actor = new System.Windows.Forms.TextBox();
+            this.txtactor = new System.Windows.Forms.TextBox();
             this.lblNombre_Actor = new System.Windows.Forms.Label();
             this.epError3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpActores.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError3)).BeginInit();
             this.SuspendLayout();
             // 
             // grpActores
             // 
+            this.grpActores.Controls.Add(this.toolStrip1);
             this.grpActores.Controls.Add(this.dgvActores);
             this.grpActores.Controls.Add(this.txtID_Actor);
             this.grpActores.Controls.Add(this.btnEliminar_Actor);
             this.grpActores.Controls.Add(this.btnActualizar_Actor);
             this.grpActores.Controls.Add(this.btnMostrar_Actores);
             this.grpActores.Controls.Add(this.btnAgregar_Actor);
-            this.grpActores.Controls.Add(this.txtNombre_Actor);
+            this.grpActores.Controls.Add(this.txtactor);
             this.grpActores.Controls.Add(this.lblNombre_Actor);
             this.grpActores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpActores.Location = new System.Drawing.Point(0, 0);
@@ -63,6 +67,26 @@
             this.grpActores.TabIndex = 1;
             this.grpActores.TabStop = false;
             this.grpActores.Text = "Registro de actores";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1231, 25);
+            this.toolStrip1.TabIndex = 48;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // dgvActores
             // 
@@ -76,7 +100,7 @@
             // 
             // txtID_Actor
             // 
-            this.txtID_Actor.Location = new System.Drawing.Point(620, 35);
+            this.txtID_Actor.Location = new System.Drawing.Point(613, 54);
             this.txtID_Actor.Name = "txtID_Actor";
             this.txtID_Actor.Size = new System.Drawing.Size(35, 20);
             this.txtID_Actor.TabIndex = 0;
@@ -226,15 +250,15 @@
             this.btnAgregar_Actor.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar_Actor.Click += new System.EventHandler(this.BtnAgregar_Actor_Click);
             // 
-            // txtNombre_Actor
+            // txtactor
             // 
-            this.txtNombre_Actor.Location = new System.Drawing.Point(429, 97);
-            this.txtNombre_Actor.MaxLength = 20;
-            this.txtNombre_Actor.Name = "txtNombre_Actor";
-            this.txtNombre_Actor.Size = new System.Drawing.Size(500, 20);
-            this.txtNombre_Actor.TabIndex = 1;
-            this.txtNombre_Actor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_Actor_KeyPress);
-            this.txtNombre_Actor.Validated += new System.EventHandler(this.TxtNombre_Actor_Validated);
+            this.txtactor.Location = new System.Drawing.Point(429, 97);
+            this.txtactor.MaxLength = 100;
+            this.txtactor.Name = "txtactor";
+            this.txtactor.Size = new System.Drawing.Size(500, 20);
+            this.txtactor.TabIndex = 1;
+            this.txtactor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_Actor_KeyPress);
+            this.txtactor.Validated += new System.EventHandler(this.TxtNombre_Actor_Validated);
             // 
             // lblNombre_Actor
             // 
@@ -263,6 +287,8 @@
             this.Load += new System.EventHandler(this.FrmActores_Load);
             this.grpActores.ResumeLayout(false);
             this.grpActores.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError3)).EndInit();
             this.ResumeLayout(false);
@@ -278,8 +304,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnActualizar_Actor;
         private Bunifu.Framework.UI.BunifuFlatButton btnMostrar_Actores;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar_Actor;
-        private System.Windows.Forms.TextBox txtNombre_Actor;
+        private System.Windows.Forms.TextBox txtactor;
         private System.Windows.Forms.Label lblNombre_Actor;
         private System.Windows.Forms.ErrorProvider epError3;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
     }
 }

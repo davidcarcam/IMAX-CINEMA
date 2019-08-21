@@ -95,12 +95,37 @@ namespace EXPO60.Vista
 
         private void bunifuFlatButton12_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<Frmfacturalocal>();
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void bunifuFlatButton13_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frmalimentos>();
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmTicket>();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEmpresas>();
         }
     }
 }

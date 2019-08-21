@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpresas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.txtDireccion_empresa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtNombre_empresa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvempresas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -42,36 +44,59 @@
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempresas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Controls.Add(this.txtDireccion_empresa);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtid);
-            this.groupBox1.Controls.Add(this.txtNumero);
+            this.groupBox1.Controls.Add(this.txtNombre_empresa);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgvempresas);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnactualizar);
             this.groupBox1.Controls.Add(this.btnmostrar);
             this.groupBox1.Controls.Add(this.btnagregar);
-            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1134, 533);
+            this.groupBox1.Size = new System.Drawing.Size(1025, 547);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Empresas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox1
+            // toolStrip1
             // 
-            this.textBox1.Location = new System.Drawing.Point(758, 76);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 48);
-            this.textBox1.TabIndex = 60;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 61;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // txtDireccion_empresa
+            // 
+            this.txtDireccion_empresa.Location = new System.Drawing.Point(758, 76);
+            this.txtDireccion_empresa.Multiline = true;
+            this.txtDireccion_empresa.Name = "txtDireccion_empresa";
+            this.txtDireccion_empresa.Size = new System.Drawing.Size(153, 48);
+            this.txtDireccion_empresa.TabIndex = 60;
             // 
             // label2
             // 
@@ -91,13 +116,13 @@
             this.txtid.TabIndex = 57;
             this.txtid.Visible = false;
             // 
-            // txtNumero
+            // txtNombre_empresa
             // 
-            this.txtNumero.Location = new System.Drawing.Point(400, 87);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(153, 20);
-            this.txtNumero.TabIndex = 58;
-            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
+            this.txtNombre_empresa.Location = new System.Drawing.Point(400, 87);
+            this.txtNombre_empresa.Name = "txtNombre_empresa";
+            this.txtNombre_empresa.Size = new System.Drawing.Size(153, 20);
+            this.txtNombre_empresa.TabIndex = 58;
+            this.txtNombre_empresa.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // label1
             // 
@@ -113,7 +138,7 @@
             // 
             this.dgvempresas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvempresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvempresas.Location = new System.Drawing.Point(61, 281);
+            this.dgvempresas.Location = new System.Drawing.Point(8, 276);
             this.dgvempresas.Name = "dgvempresas";
             this.dgvempresas.Size = new System.Drawing.Size(1011, 265);
             this.dgvempresas.TabIndex = 51;
@@ -141,7 +166,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(847, 168);
+            this.btneliminar.Location = new System.Drawing.Point(778, 175);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -177,7 +202,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(580, 168);
+            this.btnactualizar.Location = new System.Drawing.Point(521, 175);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -213,7 +238,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(313, 168);
+            this.btnmostrar.Location = new System.Drawing.Point(264, 175);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -249,7 +274,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(46, 168);
+            this.btnagregar.Location = new System.Drawing.Point(6, 175);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -261,6 +286,7 @@
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
             // 
             // backgroundWorker1
             // 
@@ -270,7 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 533);
+            this.ClientSize = new System.Drawing.Size(1025, 547);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEmpresas";
@@ -278,6 +304,8 @@
             this.Load += new System.EventHandler(this.FrmEmpresas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempresas)).EndInit();
             this.ResumeLayout(false);
 
@@ -286,10 +314,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDireccion_empresa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtNombre_empresa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvempresas;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
@@ -297,5 +325,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnagregar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
     }
 }

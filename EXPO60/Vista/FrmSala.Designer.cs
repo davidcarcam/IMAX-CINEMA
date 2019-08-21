@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSala));
             this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
-            this.cmbEstado_Sala = new System.Windows.Forms.ComboBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.cmbESTADO_SALA = new System.Windows.Forms.ComboBox();
             this.lblEstado_Sala = new System.Windows.Forms.Label();
             this.txtCapacidad_Sala = new System.Windows.Forms.TextBox();
             this.lblCapacidad_Sala = new System.Windows.Forms.Label();
@@ -45,13 +47,15 @@
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpRegistro_Sala.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError2)).BeginInit();
             this.SuspendLayout();
             // 
             // grpRegistro_Sala
             // 
-            this.grpRegistro_Sala.Controls.Add(this.cmbEstado_Sala);
+            this.grpRegistro_Sala.Controls.Add(this.toolStrip1);
+            this.grpRegistro_Sala.Controls.Add(this.cmbESTADO_SALA);
             this.grpRegistro_Sala.Controls.Add(this.lblEstado_Sala);
             this.grpRegistro_Sala.Controls.Add(this.txtCapacidad_Sala);
             this.grpRegistro_Sala.Controls.Add(this.lblCapacidad_Sala);
@@ -66,19 +70,41 @@
             this.grpRegistro_Sala.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpRegistro_Sala.Location = new System.Drawing.Point(0, 0);
             this.grpRegistro_Sala.Name = "grpRegistro_Sala";
-            this.grpRegistro_Sala.Size = new System.Drawing.Size(1219, 568);
+            this.grpRegistro_Sala.Size = new System.Drawing.Size(1025, 547);
             this.grpRegistro_Sala.TabIndex = 2;
             this.grpRegistro_Sala.TabStop = false;
             this.grpRegistro_Sala.Text = "Registro de sala";
             this.grpRegistro_Sala.Enter += new System.EventHandler(this.grpRegistro_Sala_Enter);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 63;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // cmbEstado_Sala
             // 
-            this.cmbEstado_Sala.FormattingEnabled = true;
-            this.cmbEstado_Sala.Location = new System.Drawing.Point(951, 102);
-            this.cmbEstado_Sala.Name = "cmbEstado_Sala";
-            this.cmbEstado_Sala.Size = new System.Drawing.Size(153, 21);
-            this.cmbEstado_Sala.TabIndex = 3;
+            this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbESTADO_SALA.FormattingEnabled = true;
+            this.cmbESTADO_SALA.Location = new System.Drawing.Point(951, 102);
+            this.cmbESTADO_SALA.Name = "cmbEstado_Sala";
+            this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
+            this.cmbESTADO_SALA.TabIndex = 3;
             // 
             // lblEstado_Sala
             // 
@@ -97,6 +123,7 @@
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
             this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
             this.txtCapacidad_Sala.TabIndex = 2;
+            this.txtCapacidad_Sala.TextChanged += new System.EventHandler(this.txtCapacidad_Sala_TextChanged);
             this.txtCapacidad_Sala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCapacidad_Sala_KeyPress);
             this.txtCapacidad_Sala.Validated += new System.EventHandler(this.TxtCapacidad_Sala_Validated);
             // 
@@ -112,7 +139,7 @@
             // 
             // txtID_Sala
             // 
-            this.txtID_Sala.Location = new System.Drawing.Point(629, 41);
+            this.txtID_Sala.Location = new System.Drawing.Point(629, 53);
             this.txtID_Sala.Name = "txtID_Sala";
             this.txtID_Sala.Size = new System.Drawing.Size(35, 20);
             this.txtID_Sala.TabIndex = 0;
@@ -142,7 +169,7 @@
             // 
             this.dgvSalas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalas.Location = new System.Drawing.Point(103, 298);
+            this.dgvSalas.Location = new System.Drawing.Point(6, 288);
             this.dgvSalas.Name = "dgvSalas";
             this.dgvSalas.Size = new System.Drawing.Size(1011, 265);
             this.dgvSalas.TabIndex = 0;
@@ -170,7 +197,7 @@
             this.btnEliminar_Sala.IconVisible = true;
             this.btnEliminar_Sala.IconZoom = 80D;
             this.btnEliminar_Sala.IsTab = false;
-            this.btnEliminar_Sala.Location = new System.Drawing.Point(889, 185);
+            this.btnEliminar_Sala.Location = new System.Drawing.Point(778, 175);
             this.btnEliminar_Sala.Name = "btnEliminar_Sala";
             this.btnEliminar_Sala.Normalcolor = System.Drawing.Color.Maroon;
             this.btnEliminar_Sala.OnHovercolor = System.Drawing.Color.Brown;
@@ -206,7 +233,7 @@
             this.btnActualizar_Sala.IconVisible = true;
             this.btnActualizar_Sala.IconZoom = 80D;
             this.btnActualizar_Sala.IsTab = false;
-            this.btnActualizar_Sala.Location = new System.Drawing.Point(622, 185);
+            this.btnActualizar_Sala.Location = new System.Drawing.Point(515, 175);
             this.btnActualizar_Sala.Name = "btnActualizar_Sala";
             this.btnActualizar_Sala.Normalcolor = System.Drawing.Color.Maroon;
             this.btnActualizar_Sala.OnHovercolor = System.Drawing.Color.Brown;
@@ -242,7 +269,7 @@
             this.btnMostrar_Salas.IconVisible = true;
             this.btnMostrar_Salas.IconZoom = 80D;
             this.btnMostrar_Salas.IsTab = false;
-            this.btnMostrar_Salas.Location = new System.Drawing.Point(355, 185);
+            this.btnMostrar_Salas.Location = new System.Drawing.Point(258, 175);
             this.btnMostrar_Salas.Name = "btnMostrar_Salas";
             this.btnMostrar_Salas.Normalcolor = System.Drawing.Color.Maroon;
             this.btnMostrar_Salas.OnHovercolor = System.Drawing.Color.Brown;
@@ -278,7 +305,7 @@
             this.btnAgregar_Sala.IconVisible = true;
             this.btnAgregar_Sala.IconZoom = 80D;
             this.btnAgregar_Sala.IsTab = false;
-            this.btnAgregar_Sala.Location = new System.Drawing.Point(88, 185);
+            this.btnAgregar_Sala.Location = new System.Drawing.Point(11, 175);
             this.btnAgregar_Sala.Name = "btnAgregar_Sala";
             this.btnAgregar_Sala.Normalcolor = System.Drawing.Color.Maroon;
             this.btnAgregar_Sala.OnHovercolor = System.Drawing.Color.Brown;
@@ -300,7 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1219, 568);
+            this.ClientSize = new System.Drawing.Size(1025, 547);
             this.Controls.Add(this.grpRegistro_Sala);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSala";
@@ -308,6 +335,8 @@
             this.Load += new System.EventHandler(this.FrmSala_Load);
             this.grpRegistro_Sala.ResumeLayout(false);
             this.grpRegistro_Sala.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError2)).EndInit();
             this.ResumeLayout(false);
@@ -328,7 +357,9 @@
         private System.Windows.Forms.TextBox txtID_Sala;
         private System.Windows.Forms.TextBox txtNumero_Sala;
         private System.Windows.Forms.Label lblNumero_Sala;
-        private System.Windows.Forms.ComboBox cmbEstado_Sala;
+        private System.Windows.Forms.ComboBox cmbESTADO_SALA;
         private System.Windows.Forms.ErrorProvider epError2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
     }
 }

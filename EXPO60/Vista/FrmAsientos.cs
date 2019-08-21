@@ -42,7 +42,7 @@ namespace EXPO60.Vista
         }
         public void Agregar_Asiento()
         {
-            if (txtNumero_Asiento.Text.Trim() == "" || cmbEstado_Asiento.Text.Trim() == "" || cmbSala.Text.Trim() == "")
+            if (txtNumero_Asiento.Text.Trim() == "")
             {
                 MessageBox.Show("Se han encontrado campos vacios, Completelos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -69,12 +69,12 @@ namespace EXPO60.Vista
             btnEliminar_Asiento.Enabled = false;
 
             cmbEstado_Asiento.DataSource = Funciones_Asientos.Estado_Asiento();
-            cmbEstado_Asiento.DisplayMember = "NOMBRE_ESTADO";
-            cmbEstado_Asiento.ValueMember = "ID_ESTADO_ASIENTO";
+            cmbEstado_Asiento.DisplayMember = "estado_as";
+            cmbEstado_Asiento.ValueMember = "id_estado_asiento";
 
             cmbSala.DataSource = Funciones_Asientos.Sala();
-            cmbSala.DisplayMember = "NUM_SALA";
-            cmbSala.ValueMember = "ID_SALA";
+            cmbSala.DisplayMember = "num_sala";
+            cmbSala.ValueMember = "id_sala";
         }
         private void BtnAgregar_Asiento_Click(object sender, EventArgs e)
         {
@@ -130,12 +130,30 @@ namespace EXPO60.Vista
         }
         private void TxtNumero_Asiento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // codigo para solo ingresar numeros usando codigo ASCII
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            if (Char.IsDigit(e.KeyChar))
             {
-                MessageBox.Show("Insertar solo numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
                 e.Handled = true;
-                return;
+            }           
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                this.Close();
             }
         }
     }
