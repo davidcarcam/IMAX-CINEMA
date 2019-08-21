@@ -30,22 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNuevo));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
             this.btnnormal = new System.Windows.Forms.ToolStripButton();
             this.btnminimizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.picimgL = new System.Windows.Forms.PictureBox();
-            this.picimg = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.picimg = new System.Windows.Forms.PictureBox();
+            this.picimgL = new System.Windows.Forms.PictureBox();
+            this.toolbtnCerrar_Sesion = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picimgL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picimg)).BeginInit();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picimgL)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -57,12 +58,28 @@
             this.btnnormal,
             this.btnminimizar,
             this.toolStripButton1,
-            this.toolStripLabel1});
+            this.toolStripLabel1,
+            this.toolbtnCerrar_Sesion});
             this.toolStrip1.Location = new System.Drawing.Point(243, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1025, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStrip1_MouseDown);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(100, 22);
+            this.toolStripLabel1.Text = "Cerrar Formulario";
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(243, 25);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1025, 547);
+            this.PanelContenedor.TabIndex = 2;
             // 
             // toolStripButton2
             // 
@@ -129,80 +146,6 @@
             this.toolStripButton1.Text = "Cerrar Formulario";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(100, 22);
-            this.toolStripLabel1.Text = "Cerrar Formulario";
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Activecolor = System.Drawing.Color.Maroon;
-            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInicio.BorderRadius = 0;
-            this.btnInicio.ButtonText = "         Inicio";
-            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInicio.DisabledColor = System.Drawing.Color.Gray;
-            this.btnInicio.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInicio.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnInicio.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnInicio.Iconimage")));
-            this.btnInicio.Iconimage_right = null;
-            this.btnInicio.Iconimage_right_Selected = null;
-            this.btnInicio.Iconimage_Selected = null;
-            this.btnInicio.IconMarginLeft = 0;
-            this.btnInicio.IconMarginRight = 0;
-            this.btnInicio.IconRightVisible = true;
-            this.btnInicio.IconRightZoom = 0D;
-            this.btnInicio.IconVisible = true;
-            this.btnInicio.IconZoom = 65D;
-            this.btnInicio.IsTab = false;
-            this.btnInicio.Location = new System.Drawing.Point(6, 274);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnInicio.OnHovercolor = System.Drawing.Color.DarkRed;
-            this.btnInicio.OnHoverTextColor = System.Drawing.Color.DimGray;
-            this.btnInicio.selected = false;
-            this.btnInicio.Size = new System.Drawing.Size(237, 42);
-            this.btnInicio.TabIndex = 57;
-            this.btnInicio.Text = "         Inicio";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Textcolor = System.Drawing.Color.White;
-            this.btnInicio.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(243, 25);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1025, 547);
-            this.PanelContenedor.TabIndex = 2;
-            // 
-            // picimgL
-            // 
-            this.picimgL.BackColor = System.Drawing.Color.Transparent;
-            this.picimgL.Image = ((System.Drawing.Image)(resources.GetObject("picimgL.Image")));
-            this.picimgL.Location = new System.Drawing.Point(32, 12);
-            this.picimgL.Name = "picimgL";
-            this.picimgL.Size = new System.Drawing.Size(162, 49);
-            this.picimgL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picimgL.TabIndex = 46;
-            this.picimgL.TabStop = false;
-            // 
-            // picimg
-            // 
-            this.picimg.Image = ((System.Drawing.Image)(resources.GetObject("picimg.Image")));
-            this.picimg.Location = new System.Drawing.Point(2, 0);
-            this.picimg.Name = "picimg";
-            this.picimg.Size = new System.Drawing.Size(60, 61);
-            this.picimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picimg.TabIndex = 45;
-            this.picimg.TabStop = false;
-            this.picimg.Visible = false;
-            // 
             // MenuVertical
             // 
             this.MenuVertical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuVertical.BackgroundImage")));
@@ -222,6 +165,77 @@
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
+            // btnInicio
+            // 
+            this.btnInicio.Activecolor = System.Drawing.Color.Maroon;
+            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInicio.BorderRadius = 0;
+            this.btnInicio.ButtonText = "Inicio";
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.DisabledColor = System.Drawing.Color.Gray;
+            this.btnInicio.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnInicio.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnInicio.Iconimage = global::EXPO60.Properties.Resources.home_96px;
+            this.btnInicio.Iconimage_right = null;
+            this.btnInicio.Iconimage_right_Selected = null;
+            this.btnInicio.Iconimage_Selected = null;
+            this.btnInicio.IconMarginLeft = 0;
+            this.btnInicio.IconMarginRight = 0;
+            this.btnInicio.IconRightVisible = true;
+            this.btnInicio.IconRightZoom = 0D;
+            this.btnInicio.IconVisible = true;
+            this.btnInicio.IconZoom = 100D;
+            this.btnInicio.IsTab = false;
+            this.btnInicio.Location = new System.Drawing.Point(12, 277);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnInicio.OnHovercolor = System.Drawing.Color.DarkRed;
+            this.btnInicio.OnHoverTextColor = System.Drawing.Color.DimGray;
+            this.btnInicio.selected = false;
+            this.btnInicio.Size = new System.Drawing.Size(202, 42);
+            this.btnInicio.TabIndex = 57;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInicio.Textcolor = System.Drawing.Color.White;
+            this.btnInicio.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
+            // 
+            // picimg
+            // 
+            this.picimg.Image = ((System.Drawing.Image)(resources.GetObject("picimg.Image")));
+            this.picimg.Location = new System.Drawing.Point(0, 0);
+            this.picimg.Name = "picimg";
+            this.picimg.Size = new System.Drawing.Size(76, 61);
+            this.picimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picimg.TabIndex = 45;
+            this.picimg.TabStop = false;
+            this.picimg.Visible = false;
+            // 
+            // picimgL
+            // 
+            this.picimgL.BackColor = System.Drawing.Color.Transparent;
+            this.picimgL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picimgL.Image = ((System.Drawing.Image)(resources.GetObject("picimgL.Image")));
+            this.picimgL.Location = new System.Drawing.Point(0, 0);
+            this.picimgL.Name = "picimgL";
+            this.picimgL.Size = new System.Drawing.Size(243, 61);
+            this.picimgL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picimgL.TabIndex = 46;
+            this.picimgL.TabStop = false;
+            // 
+            // toolbtnCerrar_Sesion
+            // 
+            this.toolbtnCerrar_Sesion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolbtnCerrar_Sesion.Image = global::EXPO60.Properties.Resources.change_power_options;
+            this.toolbtnCerrar_Sesion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolbtnCerrar_Sesion.Name = "toolbtnCerrar_Sesion";
+            this.toolbtnCerrar_Sesion.Size = new System.Drawing.Size(96, 22);
+            this.toolbtnCerrar_Sesion.Text = "Cerrar Sesion";
+            this.toolbtnCerrar_Sesion.Click += new System.EventHandler(this.ToolbtnCerrar_Sesion_Click_1);
+            // 
             // FrmNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,9 +251,9 @@
             this.Load += new System.EventHandler(this.FrmNuevo_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picimgL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picimg)).EndInit();
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picimgL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +273,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel MenuVertical;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolbtnCerrar_Sesion;
     }
 }

@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Threading;
+using EXPO60.Controlador;
+using MySql.Data.MySqlClient;
 
 namespace EXPO60.Vista
 {
@@ -17,6 +21,17 @@ namespace EXPO60.Vista
             InitializeComponent();
         }
         Form currentForm;
+
+        #region Dlls para mover el formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        public extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        const int GRIP_SIZE = 15;
+        int w = 0;
+        int h = 0;
+        #endregion
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
            
@@ -180,6 +195,23 @@ namespace EXPO60.Vista
 
                 this.Close();
             }
+        }
+
+        private void ToolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnnormal.Visible = false;
+            btnmaximizar.Visible = true;
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            w = this.Width;
+            h = this.Height;
+        }
+
+
+        private void ToolbtnCerrar_Sesion_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmLogin login = new FrmLogin();
+            login.Show();
         }
     }
 }
