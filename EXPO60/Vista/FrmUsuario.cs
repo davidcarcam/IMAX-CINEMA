@@ -49,20 +49,6 @@ namespace EXPO60.Vista
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            fucionesUsuarios(txtcorreo.Text);
-            if (Email_Valido(txtcorreo.Text) == false)// llamado del metodo Email_Valido
-            {
-                error1.SetError(txtcorreo, " Ingrese un Email Válido");
-                txtcorreo.Focus();
-                
-                return;
-            }
-            else
-            {
-                error1.Clear();
-                //limpiar
-
-            }
 
         }
 

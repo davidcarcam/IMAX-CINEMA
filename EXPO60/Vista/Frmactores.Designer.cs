@@ -229,7 +229,7 @@
             // txtNombre_Actor
             // 
             this.txtNombre_Actor.Location = new System.Drawing.Point(429, 97);
-            this.txtNombre_Actor.MaxLength = 100;
+            this.txtNombre_Actor.MaxLength = 20;
             this.txtNombre_Actor.Name = "txtNombre_Actor";
             this.txtNombre_Actor.Size = new System.Drawing.Size(500, 20);
             this.txtNombre_Actor.TabIndex = 1;
