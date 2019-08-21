@@ -119,7 +119,7 @@
             // txtCapacidad_Sala
             // 
             this.txtCapacidad_Sala.Location = new System.Drawing.Point(629, 102);
-            this.txtCapacidad_Sala.MaxLength = 7;
+            this.txtCapacidad_Sala.MaxLength = 4;
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
             this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
             this.txtCapacidad_Sala.TabIndex = 2;
@@ -148,7 +148,7 @@
             // txtNumero_Sala
             // 
             this.txtNumero_Sala.Location = new System.Drawing.Point(282, 102);
-            this.txtNumero_Sala.MaxLength = 7;
+            this.txtNumero_Sala.MaxLength = 2;
             this.txtNumero_Sala.Name = "txtNumero_Sala";
             this.txtNumero_Sala.Size = new System.Drawing.Size(153, 20);
             this.txtNumero_Sala.TabIndex = 1;
