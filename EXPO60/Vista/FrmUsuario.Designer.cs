@@ -204,6 +204,7 @@ namespace EXPO60.Vista
             this.cmbTipoU.Name = "cmbTipoU";
             this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
             this.cmbTipoU.TabIndex = 9;
+            this.cmbTipoU.SelectedIndexChanged += new System.EventHandler(this.cmbTipoU_SelectedIndexChanged);
             // 
             // txtclave
             // 

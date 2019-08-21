@@ -97,14 +97,15 @@
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // cmbEstado_Sala
+            // cmbESTADO_SALA
             // 
             this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbESTADO_SALA.FormattingEnabled = true;
             this.cmbESTADO_SALA.Location = new System.Drawing.Point(951, 102);
-            this.cmbESTADO_SALA.Name = "cmbEstado_Sala";
+            this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
             this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
             this.cmbESTADO_SALA.TabIndex = 3;
+            this.cmbESTADO_SALA.SelectedIndexChanged += new System.EventHandler(this.cmbESTADO_SALA_SelectedIndexChanged);
             // 
             // lblEstado_Sala
             // 

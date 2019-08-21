@@ -11,6 +11,7 @@ namespace EXPO60.Controlador
         public int id_empresa { get; set; }
         public string NombreLocal { get; set; }
         public string Telefono { get; set; }
+        public int tipo { get; set; }
         public Constructor_localAlimentos() { }
 
     }

@@ -290,5 +290,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void cmbESTADO_SALA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

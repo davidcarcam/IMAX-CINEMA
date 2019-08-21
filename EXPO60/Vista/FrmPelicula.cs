@@ -146,6 +146,7 @@ namespace EXPO60.Vista
         private void FrmPelicula_Load(object sender, EventArgs e)
         {
             mostrarPeliculas();
+            mostrarET();
             this.dgvpeliculas.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
@@ -177,6 +178,25 @@ namespace EXPO60.Vista
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
             mostrarPeliculas();
+        }
+        public void mostrarET()
+        {
+
+            cmbestado.DataSource = Funciones_peliculas.ObtenerEstadoPelicula();
+            cmbestado.DisplayMember = "estado_pel";
+            cmbestado.ValueMember = "id_estado_pelicula";
+
+
+            cmbDimensiones.DataSource = Funciones_peliculas.ObtenerDimensiones();
+            cmbDimensiones.DisplayMember = "formato";
+            cmbDimensiones.ValueMember = "id_formatos";
+
+            cmbGenero.DataSource = Funciones_peliculas.ObtenerGenero();
+            cmbGenero.DisplayMember = "genero";
+            cmbGenero.ValueMember = "id_genero";
+
+
+
         }
 
         private void btneliminar_Click(object sender, EventArgs e)

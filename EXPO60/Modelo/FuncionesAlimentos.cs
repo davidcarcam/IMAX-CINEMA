@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO local_alimentos (nombre, telefono ) VALUES ('{0}','{1}')", add.NombreLocal, add.Telefono), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO local_alimentos (nombre, telefono, id_estado_local ) VALUES ('{0}','{1}','{2}')", add.NombreLocal, add.Telefono , add.tipo), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -106,6 +106,28 @@ namespace EXPO60.Modelo
 
                 MessageBox.Show("oops error de conexion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
+            }
+        }
+        public static DataTable ObtenerEstadoUsuario()
+        {
+            string query = "SELECT * FROM estado_local";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
             }
         }
     }

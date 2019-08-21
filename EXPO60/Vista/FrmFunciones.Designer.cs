@@ -34,9 +34,9 @@
             this.mskDuracion = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbClasificacion = new System.Windows.Forms.ComboBox();
+            this.cmbSala = new System.Windows.Forms.ComboBox();
+            this.cmbpelicula = new System.Windows.Forms.ComboBox();
             this.dgvFuncion = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnActualizar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -58,9 +58,9 @@
             this.groupBox2.Controls.Add(this.mskHora);
             this.groupBox2.Controls.Add(this.mskDuracion);
             this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmbClasificacion);
+            this.groupBox2.Controls.Add(this.cmbSala);
+            this.groupBox2.Controls.Add(this.cmbpelicula);
             this.groupBox2.Controls.Add(this.dgvFuncion);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnActualizar);
@@ -117,32 +117,32 @@
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // comboBox3
+            // cmbClasificacion
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(688, 130);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(153, 21);
-            this.comboBox3.TabIndex = 47;
+            this.cmbClasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClasificacion.FormattingEnabled = true;
+            this.cmbClasificacion.Location = new System.Drawing.Point(688, 130);
+            this.cmbClasificacion.Name = "cmbClasificacion";
+            this.cmbClasificacion.Size = new System.Drawing.Size(153, 21);
+            this.cmbClasificacion.TabIndex = 47;
             // 
-            // comboBox2
+            // cmbSala
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(688, 88);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 21);
-            this.comboBox2.TabIndex = 46;
+            this.cmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSala.FormattingEnabled = true;
+            this.cmbSala.Location = new System.Drawing.Point(688, 88);
+            this.cmbSala.Name = "cmbSala";
+            this.cmbSala.Size = new System.Drawing.Size(153, 21);
+            this.cmbSala.TabIndex = 46;
             // 
-            // comboBox1
+            // cmbpelicula
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(688, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 21);
-            this.comboBox1.TabIndex = 45;
+            this.cmbpelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbpelicula.FormattingEnabled = true;
+            this.cmbpelicula.Location = new System.Drawing.Point(688, 42);
+            this.cmbpelicula.Name = "cmbpelicula";
+            this.cmbpelicula.Size = new System.Drawing.Size(153, 21);
+            this.cmbpelicula.TabIndex = 45;
             // 
             // dgvFuncion
             // 
@@ -378,9 +378,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbClasificacion;
+        private System.Windows.Forms.ComboBox cmbSala;
+        private System.Windows.Forms.ComboBox cmbpelicula;
         private System.Windows.Forms.DataGridView dgvFuncion;
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnActualizar;
