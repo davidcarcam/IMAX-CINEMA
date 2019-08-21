@@ -13,6 +13,9 @@ namespace EXPO60.Controlador
         public int Año { get; set; }
         public string Director { get; set; }
         public string Idioma { get; set; }
+        public int tipo { get; set; }
+        public int dimensiones { get; set; }
+        public int clasificacion { get; set; }
         public Constructor_pelicula() { }
     }
 }

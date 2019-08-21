@@ -69,6 +69,25 @@ namespace EXPO60.Vista
             btnEliminar.Enabled = false;
             btnagregar.Enabled = true;
         }
+        public void mostrarET()
+        {
+
+            cmbpelicula.DataSource = Funciones_funcion.ObtenerPelicula();
+            cmbpelicula.DisplayMember = "titulo";
+            cmbpelicula.ValueMember = "id_pelicula";
+
+
+            cmbClasificacion.DataSource = Funciones_funcion.ObtenerClasificacion();
+            cmbClasificacion.DisplayMember = "clasificacion";
+            cmbClasificacion.ValueMember = "id_clasificacion";
+
+            cmbSala.DataSource = Funciones_funcion.ObtenerSala();
+            cmbSala.DisplayMember = "num_sala";
+            cmbSala.ValueMember = "id_sala";
+
+
+
+        }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
@@ -120,6 +139,7 @@ namespace EXPO60.Vista
         private void FrmFunciones_Load(object sender, EventArgs e)
         {
             mostrarFunciones();
+            mostrarET();
             this.dgvFuncion.Columns[0].Visible = false;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;

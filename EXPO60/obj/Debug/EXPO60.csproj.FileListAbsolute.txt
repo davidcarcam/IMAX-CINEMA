@@ -201,3 +201,4 @@ C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\
 C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\MySql.Data.dll
 C:\Users\User\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\MySql.Data.xml
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Form1.resources

@@ -108,7 +108,72 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
+        public static DataTable ObtenerPelicula()
+        {
+            string query = "SELECT * FROM peliculas";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
 
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable ObtenerClasificacion()
+        {
+            string query = "SELECT * FROM clasificacion";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable ObtenerSala()
+        {
+            string query = "SELECT * FROM salas";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
 
     }
 }

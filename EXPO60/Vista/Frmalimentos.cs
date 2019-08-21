@@ -34,6 +34,7 @@ namespace EXPO60.Vista
         {
             agregar.NombreLocal = txtnombre.Text;
             agregar.Telefono = txttelefonoLocal.Text ;
+            agregar.tipo = Convert.ToInt16(cmbestado.SelectedValue);
             int datos = FuncionesAlimentos.insertarLocalAlimentos(agregar);
         }
         public void vaciarampos()
@@ -133,6 +134,7 @@ namespace EXPO60.Vista
         private void Frmalimentos_Load(object sender, EventArgs e)
         {
             mostrarLocal();
+            mostrarET();
             this.dgvlocal.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
@@ -156,6 +158,21 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
+        }
+        public void mostrarET()
+        {
+
+            cmbestado.DataSource = FuncionesAlimentos.ObtenerEstadoUsuario();
+            cmbestado.DisplayMember = "estado_local";
+           cmbestado.ValueMember = "id_estado_local";
+
+            
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

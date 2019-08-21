@@ -392,6 +392,11 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void cmbTipoU_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
