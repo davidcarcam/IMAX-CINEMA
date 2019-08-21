@@ -14,7 +14,8 @@ namespace EXPO60.Controlador
         public static MySqlConnection ObtenerConexion()
         {
             MySqlConnection connect;
-            string server = "127.0.0.1";
+            string port = "3306";
+            string server = "10.20.1.245";
             string database = "expo60";
             string user = "root";
             string pass = "";
@@ -23,7 +24,8 @@ namespace EXPO60.Controlador
                 connect = new MySqlConnection("server = " + server +
                                                 "; database = " + database +
                                                 "; Uid = " + user +
-                                                "; pwd = " + pass);
+                                                "; pwd = " + pass +
+                                                "; port = " + port);
                 connect.Open();
                 return connect;
             }
