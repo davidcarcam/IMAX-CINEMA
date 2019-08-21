@@ -24,6 +24,9 @@ namespace EXPO60.Vista
         {
             agregar.duracion = mskDuracion.Text;
             agregar.hora = mskHora.Text;
+            agregar.pelicula = cmbpelicula.Text;
+            agregar.clasifiacion = cmbClasificacion.Text;
+            agregar.sala = cmbSala.Text;
             int datos = Funciones_funcion.insertarFuncion(agregar);
         }
         public void eliminarRegistro()

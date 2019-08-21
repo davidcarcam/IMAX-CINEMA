@@ -72,9 +72,10 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1001, 547);
+            this.groupBox2.Size = new System.Drawing.Size(1025, 547);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de Funciones";
@@ -102,7 +103,7 @@
             this.BtnCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(995, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
             this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -147,7 +148,7 @@
             // 
             this.dgvFuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncion.Location = new System.Drawing.Point(-6, 282);
+            this.dgvFuncion.Location = new System.Drawing.Point(6, 282);
             this.dgvFuncion.Name = "dgvFuncion";
             this.dgvFuncion.Size = new System.Drawing.Size(1011, 265);
             this.dgvFuncion.TabIndex = 43;
@@ -175,7 +176,7 @@
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(769, 179);
+            this.btnEliminar.Location = new System.Drawing.Point(781, 179);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -211,7 +212,7 @@
             this.btnActualizar.IconVisible = true;
             this.btnActualizar.IconZoom = 90D;
             this.btnActualizar.IsTab = false;
-            this.btnActualizar.Location = new System.Drawing.Point(515, 179);
+            this.btnActualizar.Location = new System.Drawing.Point(527, 179);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnActualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -247,7 +248,7 @@
             this.btnMostar.IconVisible = true;
             this.btnMostar.IconZoom = 90D;
             this.btnMostar.IsTab = false;
-            this.btnMostar.Location = new System.Drawing.Point(248, 179);
+            this.btnMostar.Location = new System.Drawing.Point(260, 179);
             this.btnMostar.Name = "btnMostar";
             this.btnMostar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnMostar.OnHovercolor = System.Drawing.Color.Brown;
@@ -283,7 +284,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(-6, 179);
+            this.btnagregar.Location = new System.Drawing.Point(6, 179);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;

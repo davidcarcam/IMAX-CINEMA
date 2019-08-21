@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO funciones(duracion, hora ) VALUES ('{0}','{1}')", add.duracion, add.hora), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO funciones(duracion, hora, id_sala,id_pelicula, id_clasificacion ) VALUES ('{0}','{1}','{2}','{3}','{4}')", add.duracion, add.hora, add.sala, add.pelicula, add.clasifiacion), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -32,7 +32,7 @@ namespace EXPO60.Modelo
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error critico de  conexion, revise su conexion de internet o consulte con el administrador " , "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error critico de  conexion, revise su conexion de internet o consulte con el administrador " +ex, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
 
