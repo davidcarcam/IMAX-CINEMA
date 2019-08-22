@@ -110,8 +110,8 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE usuario SET nombre = '{0}', apellido = '{1}', direccion = '{2}', correo = '{3}', dui = '{5}', telefono = '{6}', usuario = '{7}', clave = '{8}', id_estado_usu = '{9}', id_tipo_usu = '{10}' WHERE id_usuario = '{11}'",
-                                                                                        upd.nombre, upd.apellido, upd.direccion, upd.correo, upd.dui, upd.telefono, upd.usuario, upd.clave, upd.estado, upd.tipo), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE usuario SET nombre = '{0}', apellido = '{1}', direccion = '{2}', correo = '{3}', dui = '{4}', telefono = '{5}', usuario = '{6}', clave = '{7}', id_estado_usu = '{8}', id_tipo_usu = '{9}' WHERE id_usuario = '{10}'",
+                                                                                        upd.nombre, upd.apellido, upd.direccion, upd.correo, upd.dui, upd.telefono, upd.usuario, upd.clave, upd.estado, upd.tipo, upd.idusu), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -130,6 +130,30 @@ namespace EXPO60.Modelo
                 return retorno;
             }
 
+        }
+        public static bool EliminarUsuarios(int id)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM usuario WHERE id_usuario = '{0}'", id), Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
+                if (retorno == true)
+                {
+                    MessageBox.Show("El registro se ha eliminado correctamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El registro no se ha podido eliminar", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Ha ocurrido un error consulte con el administrador " + e.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
         }
     }
 }

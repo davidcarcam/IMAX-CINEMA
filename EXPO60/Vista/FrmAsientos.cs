@@ -11,6 +11,7 @@ using EXPO60.Controlador;
 using EXPO60.Modelo;
 using MySql.Data.MySqlClient;
 
+
 namespace EXPO60.Vista
 {
     public partial class FrmAsientos : Form
@@ -24,10 +25,11 @@ namespace EXPO60.Vista
         public void Mostrar_Asientos()
         {
             dgvAsientos.DataSource = Funciones_Asientos.Mostrar_Asientos();
+            this.dgvAsientos.Columns[0].Visible = false;
         }
         public void Limpiar_Datos()
         {
-            txtNumero_Asiento.Clear();
+
         }
         public void Eliminar_Asiento()
         {
@@ -42,23 +44,22 @@ namespace EXPO60.Vista
         }
         public void Agregar_Asiento()
         {
-            if (txtNumero_Asiento.Text.Trim() == "")
-            {
-                MessageBox.Show("Se han encontrado campos vacios, Completelos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                agregar.ID_Estado_Asiento = Convert.ToInt16(cmbEstado_Asiento.Text);
-                agregar.ID_Sala = Convert.ToInt16(cmbSala.Text);
-                agregar.Asiento = txtNumero_Asiento.Text;
-            }
+
+
+            agregar.estado = Convert.ToInt16(cmbEstado.SelectedValue);
+            agregar.num = Convert.ToInt16(cmbNum.SelectedValue);
+            agregar.sala = Convert.ToInt16(cmbSala.SelectedValue);
+            agregar.fila = Convert.ToInt16(cmbFila.SelectedValue);
+            int datos = Funciones_Asientos.Ingresar_Asientos(agregar);
+
+
         }
         public void Modificar_Asiento()
         {
-            Actualizar.ID_Asiento = Convert.ToInt16(txtID_Asiento.Text);
-            Actualizar.Asiento = txtNumero_Asiento.Text;
-            Actualizar.ID_Sala =Convert.ToInt16(cmbSala.Text);
-            Actualizar.ID_Estado_Asiento = Convert.ToInt16(cmbEstado_Asiento);
+            Actualizar.estado = Convert.ToInt16(cmbEstado.SelectedValue);
+            Actualizar.num = Convert.ToInt16(cmbNum.SelectedValue);
+            Actualizar.sala = Convert.ToInt16(cmbSala.SelectedValue);
+            Actualizar.fila = Convert.ToInt16(cmbFila.SelectedValue);
             Funciones_Asientos.Actualizar_Asiento(Actualizar);
         }
         private void FrmAsientos_Load(object sender, EventArgs e)
@@ -68,13 +69,21 @@ namespace EXPO60.Vista
             btnActualizar_Asiento.Enabled = false;
             btnEliminar_Asiento.Enabled = false;
 
-            cmbEstado_Asiento.DataSource = Funciones_Asientos.Estado_Asiento();
-            cmbEstado_Asiento.DisplayMember = "estado_as";
-            cmbEstado_Asiento.ValueMember = "id_estado_asiento";
+            cmbEstado.DataSource = Funciones_Asientos.Estado_Asiento();
+            cmbEstado.DisplayMember = "estado_as";
+            cmbEstado.ValueMember = "id_estado_asiento";
 
             cmbSala.DataSource = Funciones_Asientos.Sala();
             cmbSala.DisplayMember = "num_sala";
             cmbSala.ValueMember = "id_sala";
+
+            cmbFila.DataSource = Funciones_Asientos.fila();
+            cmbFila.DisplayMember = "fila";
+            cmbFila.ValueMember = "id_fila";
+
+            cmbNum.DataSource = Funciones_Asientos.num();
+            cmbNum.DisplayMember = "num_asiento";
+            cmbNum.ValueMember = "id_num";
         }
         private void BtnAgregar_Asiento_Click(object sender, EventArgs e)
         {
@@ -86,11 +95,13 @@ namespace EXPO60.Vista
         {
             Limpiar_Datos();
             Mostrar_Asientos();
+            btnAgregar_Asiento.Enabled = true;
         }
         private void BtnActualizar_Asiento_Click(object sender, EventArgs e)
         {
             Limpiar_Datos();
             Modificar_Asiento();
+            Mostrar_Asientos();
             btnActualizar_Asiento.Enabled = false;
             btnAgregar_Asiento.Enabled = true;
             btnEliminar_Asiento.Enabled = false;
@@ -109,43 +120,21 @@ namespace EXPO60.Vista
             int posicion;
             posicion = this.dgvAsientos.CurrentRow.Index;
             txtID_Asiento.Text = this.dgvAsientos[0, posicion].Value.ToString();
-            txtNumero_Asiento.Text = this.dgvAsientos[1, posicion].Value.ToString();
-            cmbSala.Text = this.dgvAsientos[2, posicion].Value.ToString();
-            cmbEstado_Asiento.Text = this.dgvAsientos[3, posicion].Value.ToString();
+            cmbFila.Text = this.dgvAsientos[1, posicion].Value.ToString();
+            cmbNum.Text = this.dgvAsientos[2, posicion].Value.ToString();
+            cmbEstado.Text = this.dgvAsientos[3, posicion].Value.ToString();
+            cmbSala.Text = this.dgvAsientos[4, posicion].Value.ToString();
             btnActualizar_Asiento.Enabled = true;
             btnEliminar_Asiento.Enabled = true;
             btnAgregar_Asiento.Enabled = false;
         }
         private void TxtNumero_Asiento_Validated(object sender, EventArgs e)
         {
-            if (txtNumero_Asiento.Text.Trim() == "")
-            {
-                epError1.SetError(txtNumero_Asiento, "Introduce el numero del asiento.");
-                txtNumero_Asiento.Focus();
-            }
-            else
-            {
-                epError1.Clear();
-            }
+
         }
         private void TxtNumero_Asiento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }           
+
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)

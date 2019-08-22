@@ -81,7 +81,7 @@
             // BtnCerrar
             // 
             this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
             this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);

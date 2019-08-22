@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\Conexion.cs" />
+    <Compile Include="Controlador\ConstructorDetalleTicket.cs" />
     <Compile Include="Controlador\constructorEmpresa.cs" />
     <Compile Include="Controlador\constructorRecuperar.cs" />
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
@@ -71,6 +72,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\FuncionesAlimentos.cs" />
+    <Compile Include="Modelo\FuncionesDetalleTicket.cs" />
     <Compile Include="Modelo\funcionesEmpresa.cs" />
     <Compile Include="Modelo\Funciones_Actores.cs" />
     <Compile Include="Modelo\Funciones_Asientos.cs" />
@@ -109,6 +111,12 @@
     </Compile>
     <Compile Include="Vista\FrmBotones.Designer.cs">
       <DependentUpon>FrmBotones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmDetalleTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmDetalleTicket.Designer.cs">
+      <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmEmpresas.cs">
       <SubType>Form</SubType>
@@ -218,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmBotones.resx">
       <DependentUpon>FrmBotones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmDetalleTicket.resx">
+      <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmEmpresas.resx">
       <DependentUpon>FrmEmpresas.cs</DependentUpon>
