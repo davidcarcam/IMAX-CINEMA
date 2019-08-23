@@ -28,8 +28,7 @@ namespace EXPO60.Vista
             agregar.direccion = txtdireccion.Text;
             agregar.DUI = txtdui.Text;
             agregar.telefono = txttelefono.Text;
-            agregar.id_empresa = Convert.ToInt16(txtempresa);
-            agregar.id_estado_prov = Convert.ToInt16(txtestado);
+            
             int datos = Funciones_proveedores.insertarProveedor(agregar);
         }
         public void vaciarampos()
@@ -49,8 +48,7 @@ namespace EXPO60.Vista
             actualizar.direccion = txtdireccion.Text;
             actualizar.DUI = txtdui.Text;
             actualizar.telefono = txttelefono.Text;
-            actualizar.id_empresa = Convert.ToInt16(txtempresa);
-            actualizar.id_estado_prov = Convert.ToInt16(txtestado);
+           
             Funciones_proveedores.actualizarProveedor(actualizar);
         }
         public void mostrarProveedor()
