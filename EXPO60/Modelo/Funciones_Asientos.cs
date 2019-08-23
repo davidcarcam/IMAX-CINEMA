@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdcreate3 = new MySqlCommand(String.Format("INSERT INTO asientos (ASIENTO, ID_SALA, ID_ESTADO_ASIENTO ) VALUES ('{0}','{1}','{2}')", add.Asiento, add.ID_Sala, add.ID_Estado_Asiento), Conexion.ObtenerConexion());
+                MySqlCommand cmdcreate3 = new MySqlCommand(String.Format("INSERT INTO asientos (id_fila, id_num, id_estado_asiento, id_sala) VALUES ('{0}','{1}','{2}','{3}')", add.fila, add.num, add.estado, add.sala), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt16(cmdcreate3.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -62,7 +62,8 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate3 = new MySqlCommand(string.Format("UPDATE asientos SET ASIENTO = '{1}', ID_SALA = '{2}', ID_ESTADO_ASIENTO = '{3}' WHERE ID_ASIENTO = '{0}'", upd.ID_Asiento, upd.Asiento, upd.ID_Sala, upd.ID_Estado_Asiento), Conexion.ObtenerConexion());
+                MySqlCommand cmdupdate3 = new MySqlCommand(string.Format("UPDATE asientos SET id_fila = {0}, id_num = {1}, id_estado_asiento = {2}, id_sala = {3} WHERE id_asiento = {4} ",
+                                                                                            upd.fila, upd.num, upd.estado, upd.sala, upd.idasiento), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupdate3.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -76,7 +77,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception c)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + c, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano" + c, "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }
@@ -85,7 +86,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdeliminar3 = new MySqlCommand(string.Format("DELETE FROM asientos WHERE ID_ASIENTO = '{0}'", id), Conexion.ObtenerConexion());
+                MySqlCommand cmdeliminar3 = new MySqlCommand(string.Format("DELETE FROM asientos WHERE id_asiento = '{0}'", id), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdeliminar3.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -131,6 +132,50 @@ namespace EXPO60.Modelo
             try
             {
                 string Asiento1 = "SELECT * FROM estado_asiento";
+                MySqlCommand cmdasiento = new MySqlCommand(string.Format(Asiento1), Conexion.ObtenerConexion());
+                MySqlDataAdapter Estado = new MySqlDataAdapter(cmdasiento);
+                Estado_Asiento = new DataTable();
+                Estado.Fill(Estado_Asiento);
+                return Estado_Asiento;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + e, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Estado_Asiento = new DataTable();
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable num()
+        {
+            DataTable Estado_Asiento;
+            try
+            {
+                string Asiento1 = "SELECT * FROM numeracion";
+                MySqlCommand cmdasiento = new MySqlCommand(string.Format(Asiento1), Conexion.ObtenerConexion());
+                MySqlDataAdapter Estado = new MySqlDataAdapter(cmdasiento);
+                Estado_Asiento = new DataTable();
+                Estado.Fill(Estado_Asiento);
+                return Estado_Asiento;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + e, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Estado_Asiento = new DataTable();
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable fila()
+        {
+            DataTable Estado_Asiento;
+            try
+            {
+                string Asiento1 = "SELECT * FROM fila";
                 MySqlCommand cmdasiento = new MySqlCommand(string.Format(Asiento1), Conexion.ObtenerConexion());
                 MySqlDataAdapter Estado = new MySqlDataAdapter(cmdasiento);
                 Estado_Asiento = new DataTable();

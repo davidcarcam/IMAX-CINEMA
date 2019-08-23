@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsientos));
             this.grpAsientos = new System.Windows.Forms.GroupBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.cmbEstado_Asiento = new System.Windows.Forms.ComboBox();
             this.cmbSala = new System.Windows.Forms.ComboBox();
             this.lblEstado_Asiento = new System.Windows.Forms.Label();
@@ -44,13 +47,10 @@
             this.btnMostrar_Asientos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Asiento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.grpAsientos.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpAsientos
@@ -75,6 +75,35 @@
             this.grpAsientos.TabIndex = 3;
             this.grpAsientos.TabStop = false;
             this.grpAsientos.Text = "Registro de Asientos";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 65;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(99, 22);
+            this.toolStripLabel1.Text = "cerrar formulariio";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::EXPO60.Properties.Resources.cancel;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // cmbEstado_Asiento
             // 
@@ -300,35 +329,6 @@
             // 
             this.epError1.ContainerControl = this;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
-            this.toolStrip1.TabIndex = 65;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(99, 22);
-            this.toolStripLabel1.Text = "cerrar formulariio";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
             // FrmAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,10 +341,10 @@
             this.Load += new System.EventHandler(this.FrmAsientos_Load);
             this.grpAsientos.ResumeLayout(false);
             this.grpAsientos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epError1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError1)).EndInit();
             this.ResumeLayout(false);
 
         }
