@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using EXPO60.Modelo;
-using System.Windows.Forms;
 using EXPO60.Controlador;
 using System.Security.Cryptography;
 
@@ -21,6 +20,20 @@ namespace EXPO60.Vista
         public FrmUsuario()
         {
             InitializeComponent();
+        }
+        public void Limpiar()
+        {
+            txtapellido.Clear();
+            txtCifrado.Clear();
+            txtclave.Clear();
+            txtcorreo.Clear();
+            txtdireccion.Clear();
+            txtdocumento.Clear();
+            txtid.Clear();
+            txtnombre.Clear();
+            txttelefono.Clear();
+            txtusuario.Clear();
+
         }
         public static bool Email_Valido(String email) // Método para validar el Email ingresado
         {
@@ -167,7 +180,7 @@ namespace EXPO60.Vista
         }
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            AgregarUsu();
+
         }
 
         private void btnmostrar_Click(object sender, EventArgs e)
@@ -251,7 +264,7 @@ namespace EXPO60.Vista
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || e.KeyChar.ToString().Equals("."))
-           {
+            {
                 e.Handled = false;
             }
 
@@ -262,9 +275,9 @@ namespace EXPO60.Vista
             else
             {
                 e.Handled = true;
-           }
+            }
         }
-    
+
         private void txtdireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || e.KeyChar.ToString().Equals(".") || e.KeyChar.ToString().Equals(",") || e.KeyChar.ToString().Equals("#"))
@@ -324,6 +337,7 @@ namespace EXPO60.Vista
             this.dgvusuarios.Columns[5].Visible = false;
             this.dgvusuarios.Columns[10].Visible = false;
             this.dgvusuarios.Columns[11].Visible = false;
+            this.dgvusuarios.Columns[12].Visible = false;
         }
 
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -352,6 +366,7 @@ namespace EXPO60.Vista
             btnagregar.Enabled = true;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
+            Limpiar();
         }
 
         private void BtnCerrar_Click_1(object sender, EventArgs e)
@@ -385,17 +400,27 @@ namespace EXPO60.Vista
             Mostrarusuarios();
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
+            Limpiar();
             btnagregar.Enabled = true;
         }
-
-        private void txtcorreo_TextChanged_1(object sender, EventArgs e)
+        public void EliminarUsu()
         {
+            if (MessageBox.Show("¿Esta seguro que desea eliminar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FuncionUsuario.EliminarUsuarios(Convert.ToInt32(txtid.Text));
+
+            }
 
         }
 
-        private void cmbTipoU_SelectedIndexChanged(object sender, EventArgs e)
+        private void btneliminar_Click(object sender, EventArgs e)
         {
-
+            Limpiar();
+            EliminarUsu();
+            Mostrarusuarios();
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnagregar.Enabled = true;
         }
     }
 

@@ -11,11 +11,21 @@ using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
+using System.Runtime.InteropServices;
 
 namespace EXPO60.Vista
 {
     public partial class FrmLogin : Form
     {
+        #region Dlls para mover el formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        public extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        const int GRIP_SIZE = 15;
+        int w = 0;
+        int h = 0;
+        #endregion
         public FrmLogin()
         {
             InitializeComponent();
@@ -73,7 +83,7 @@ namespace EXPO60.Vista
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            recuperarUsuario recu = new recuperarUsuario();
+            FrmMetodos_Recuperar recu = new FrmMetodos_Recuperar();
             recu.Show();
             this.Hide();
         }
@@ -111,6 +121,18 @@ namespace EXPO60.Vista
         private void txtCifrado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolbtnCerra_Aplicacion_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ToolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            w = this.Width;
+            h = this.Height;
         }
     }
 }

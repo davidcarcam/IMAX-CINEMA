@@ -8,10 +8,12 @@ namespace EXPO60.Controlador
 {
     class Constructor_Asientos
     {
-        public int ID_Asiento { get; set; }
-        public string Asiento { get; set; }
-        public int ID_Sala { get; set; }
-        public int ID_Estado_Asiento { get; set; }
+
+        public int idasiento { get; set; }
+        public int fila { get; set; }
+        public int num { get; set; }
+        public int sala { get; set; }
+        public int estado { get; set; }
         public Constructor_Asientos() { }
     }
 }
