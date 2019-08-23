@@ -194,17 +194,7 @@ namespace EXPO60.Vista
             this.cmbEstadoU.Name = "cmbEstadoU";
             this.cmbEstadoU.Size = new System.Drawing.Size(153, 21);
             this.cmbEstadoU.TabIndex = 8;
-            // 
-            // cmbTipoU
-            // 
-            this.cmbTipoU.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbTipoU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoU.FormattingEnabled = true;
-            this.cmbTipoU.Location = new System.Drawing.Point(839, 53);
-            this.cmbTipoU.Name = "cmbTipoU";
-            this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
-            this.cmbTipoU.TabIndex = 9;
-            this.cmbTipoU.SelectedIndexChanged += new System.EventHandler(this.cmbTipoU_SelectedIndexChanged);
+          
             // 
             // txtclave
             // 
@@ -420,16 +410,7 @@ namespace EXPO60.Vista
             this.label7.TabIndex = 29;
             this.label7.Text = "Direccion";
             // 
-            // txtcorreo
-            // 
-            this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtcorreo.Location = new System.Drawing.Point(0, 0);
-            this.txtcorreo.MaxLength = 50;
-            this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(100, 20);
-            this.txtcorreo.TabIndex = 50;
-            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged_1);
-            this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
+      
             // 
             // label6
             // 

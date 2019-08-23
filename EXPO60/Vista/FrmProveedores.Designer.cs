@@ -189,6 +189,7 @@
             this.dgvproveedores.Name = "dgvproveedores";
             this.dgvproveedores.Size = new System.Drawing.Size(1011, 265);
             this.dgvproveedores.TabIndex = 39;
+            this.dgvproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellContentClick);
             // 
             // btneliminar
             // 
@@ -224,6 +225,7 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnactualizar
             // 
@@ -259,6 +261,7 @@
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnmostrar
             // 
@@ -294,6 +297,7 @@
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
             // 
             // btnagregar
             // 
@@ -329,6 +333,7 @@
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // label5
             // 
@@ -418,6 +423,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProveedores";
             this.Text = "FrmProveedores";
+            this.Load += new System.EventHandler(this.FrmProveedores_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
