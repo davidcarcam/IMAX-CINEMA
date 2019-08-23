@@ -83,7 +83,7 @@ namespace EXPO60.Vista
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            recuperarUsuario recu = new recuperarUsuario();
+            FrmMetodos_Recuperar recu = new FrmMetodos_Recuperar();
             recu.Show();
             this.Hide();
         }

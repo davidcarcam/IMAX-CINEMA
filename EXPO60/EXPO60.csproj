@@ -134,6 +134,12 @@
     <Compile Include="Vista\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmMetodos_Recuperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmMetodos_Recuperar.Designer.cs">
+      <DependentUpon>FrmMetodos_Recuperar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,18 @@
     </Compile>
     <Compile Include="Vista\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmRecuperar_Preguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmRecuperar_Preguntas.Designer.cs">
+      <DependentUpon>FrmRecuperar_Preguntas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmRecuperar_Telefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmRecuperar_Telefono.Designer.cs">
+      <DependentUpon>FrmRecuperar_Telefono.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmSala.cs">
       <SubType>Form</SubType>
@@ -231,6 +249,9 @@
     <EmbeddedResource Include="Vista\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmMetodos_Recuperar.resx">
+      <DependentUpon>FrmMetodos_Recuperar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmNuevo.resx">
       <DependentUpon>FrmNuevo.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +269,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmRecuperar_Preguntas.resx">
+      <DependentUpon>FrmRecuperar_Preguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmRecuperar_Telefono.resx">
+      <DependentUpon>FrmRecuperar_Telefono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmSala.resx">
       <DependentUpon>FrmSala.cs</DependentUpon>
@@ -279,16 +306,25 @@
     <None Include="Resources\test_passed_96px.png" />
     <None Include="Resources\cancel.png" />
     <None Include="Resources\change-power-options.png" />
+    <None Include="Resources\cancel_96px.png" />
+    <None Include="Resources\arrows_long_right_96px.png" />
     <Content Include="Resources\clear-button.png" />
     <Content Include="Resources\crop-button.png" />
     <Content Include="Resources\crop-tool-button.png" />
     <None Include="Resources\food_as_resources_96px.png" />
+    <None Include="Resources\document_96px.png" />
+    <None Include="Resources\end_call_male_96px.png" />
     <Content Include="Resources\full-screen-exit.png" />
     <None Include="Resources\home_96px.png" />
     <Content Include="Resources\horizontal-line-remove-button.png" />
     <Content Include="Resources\LogoDavid.jpg" />
     <Content Include="Resources\menu-button.png" />
     <None Include="Resources\organization_96px.png" />
+    <None Include="Resources\send_96px.png" />
+    <None Include="Resources\phone_96px.png" />
+    <None Include="Resources\question_mark_96px1.png" />
+    <None Include="Resources\send_96px1.png" />
+    <None Include="Resources\send_file_96px.png" />
     <Content Include="Resources\switch-to-full-screen-button.png" />
   </ItemGroup>
   <ItemGroup />
