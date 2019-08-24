@@ -127,7 +127,7 @@ namespace EXPO60.Vista
         {
             if (MessageBox.Show("¿Esta seguro que desea salir de la aplicacion?", "Salir de la aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
             }
         }
 

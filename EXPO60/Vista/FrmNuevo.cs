@@ -218,5 +218,10 @@ namespace EXPO60.Vista
                 login.Show();
             }
         }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
