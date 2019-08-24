@@ -33,7 +33,7 @@ namespace EXPO60.Vista
                 Agregar.nombre = txtnombre.Text;
                 Agregar.precio = txtprecio.Text;
                 Agregar.local = Convert.ToInt16(cmblocal.SelectedValue);
-                Agregar.proveedor = Convert.ToInt16(cmbprov.SelectedValue); ;
+                Agregar.proveedor = Convert.ToInt16(cmbprov.SelectedValue); 
                 Agregar.tipoproducto = Convert.ToInt16(cmbtipo.SelectedValue);
                 int datos = Funciones_Productos.IngresarProducto(Agregar);
             }

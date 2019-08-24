@@ -36,9 +36,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtdui = new System.Windows.Forms.MaskedTextBox();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.txtempresa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtestado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvproveedores = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -54,6 +52,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbempresa = new System.Windows.Forms.ComboBox();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
@@ -61,14 +61,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbestado);
+            this.groupBox1.Controls.Add(this.cmbempresa);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.txttelefono);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtdui);
             this.groupBox1.Controls.Add(this.txtid);
-            this.groupBox1.Controls.Add(this.txtempresa);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtestado);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.dgvproveedores);
             this.groupBox1.Controls.Add(this.btneliminar);
@@ -115,7 +115,7 @@
             // 
             // txttelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(767, 125);
+            this.txttelefono.Location = new System.Drawing.Point(769, 139);
             this.txttelefono.Mask = "0000-0000";
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(153, 20);
@@ -125,7 +125,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(688, 125);
+            this.label8.Location = new System.Drawing.Point(688, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 0;
@@ -147,13 +147,6 @@
             this.txtid.TabIndex = 0;
             this.txtid.Visible = false;
             // 
-            // txtempresa
-            // 
-            this.txtempresa.Location = new System.Drawing.Point(767, 91);
-            this.txtempresa.Name = "txtempresa";
-            this.txtempresa.Size = new System.Drawing.Size(153, 20);
-            this.txtempresa.TabIndex = 7;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -163,13 +156,6 @@
             this.label7.Size = new System.Drawing.Size(77, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Empresa:";
-            // 
-            // txtestado
-            // 
-            this.txtestado.Location = new System.Drawing.Point(851, 46);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(153, 20);
-            this.txtestado.TabIndex = 6;
             // 
             // label6
             // 
@@ -414,6 +400,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
+            // cmbempresa
+            // 
+            this.cmbempresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbempresa.FormattingEnabled = true;
+            this.cmbempresa.Location = new System.Drawing.Point(792, 92);
+            this.cmbempresa.Name = "cmbempresa";
+            this.cmbempresa.Size = new System.Drawing.Size(153, 21);
+            this.cmbempresa.TabIndex = 60;
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Location = new System.Drawing.Point(854, 47);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(153, 21);
+            this.cmbestado.TabIndex = 61;
+            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,9 +444,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox txtdui;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txtempresa;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvproveedores;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
@@ -460,5 +462,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.ComboBox cmbestado;
+        private System.Windows.Forms.ComboBox cmbempresa;
     }
 }
