@@ -101,7 +101,7 @@
             this.cmbestado.Location = new System.Drawing.Point(773, 78);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(151, 21);
-            this.cmbestado.TabIndex = 57;
+            this.cmbestado.TabIndex = 3;
             this.cmbestado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txttelefonoLocal
@@ -111,7 +111,7 @@
             this.txttelefonoLocal.Mask = "0000-0000";
             this.txttelefonoLocal.Name = "txttelefonoLocal";
             this.txttelefonoLocal.Size = new System.Drawing.Size(153, 20);
-            this.txttelefonoLocal.TabIndex = 56;
+            this.txttelefonoLocal.TabIndex = 2;
             // 
             // label3
             // 
@@ -121,7 +121,7 @@
             this.label3.Location = new System.Drawing.Point(639, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
-            this.label3.TabIndex = 55;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Estado local";
             // 
             // label2
@@ -132,7 +132,7 @@
             this.label2.Location = new System.Drawing.Point(353, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 52;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Telefono";
             // 
             // dgvlocal
@@ -150,7 +150,7 @@
             this.txtid.Location = new System.Drawing.Point(11, 125);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
-            this.txtid.TabIndex = 1;
+            this.txtid.TabIndex = 0;
             this.txtid.Visible = false;
             this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
@@ -161,7 +161,7 @@
             this.btneliminar.BackColor = System.Drawing.Color.Maroon;
             this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "      Eliminar";
+            this.btneliminar.ButtonText = "Eliminar";
             this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
             this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
@@ -183,9 +183,9 @@
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 50;
-            this.btneliminar.Text = "      Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.TabIndex = 7;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
@@ -197,7 +197,7 @@
             this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
             this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "      Actualizar";
+            this.btnactualizar.ButtonText = "Actualizar";
             this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
             this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
@@ -219,9 +219,9 @@
             this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnactualizar.selected = false;
             this.btnactualizar.Size = new System.Drawing.Size(241, 48);
-            this.btnactualizar.TabIndex = 49;
-            this.btnactualizar.Text = "      Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.TabIndex = 6;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
@@ -233,7 +233,7 @@
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "      Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -255,9 +255,9 @@
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
-            this.btnmostrar.TabIndex = 48;
-            this.btnmostrar.Text = "      Mostrar";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmostrar.TabIndex = 5;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
@@ -269,7 +269,7 @@
             this.btnagregar.BackColor = System.Drawing.Color.Maroon;
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
+            this.btnagregar.ButtonText = "Agregar";
             this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
             this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
@@ -291,9 +291,9 @@
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 47;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregar.TabIndex = 4;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);

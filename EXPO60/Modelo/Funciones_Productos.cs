@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio, id_proveedor, id_tipo_prod) VALUES ('{0}', '{1}', '{2}', '{3}')", add.precio, add.local, add.proveedor, add.tipoproducto), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio) VALUES ('{0}', '{1}' )", add.producto, add.precio ), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET precio = '{0}', ID_LOCAL = '{1}', ID_PROVEEDOR = '{2}', ID_TIPO_PRODUCTO = '{3}' WHERE ID_PRODUCTO = '{4}'", upd.precio, upd.local, upd.proveedor, upd.producto, upd.idproducto), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET precio = '{0}', id_local = '{1}', id_proveedor = '{2}', id_tipo_prod = '{3}' WHERE id_producto = '{4}'", upd.precio, upd.local, upd.proveedor, upd.producto, upd.idproducto), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -108,7 +108,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT ID_LOCAL, NOMBRE_LOCAL FROM local_alimentos";
+                string query = "SELECT * FROM local_alimentos";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();

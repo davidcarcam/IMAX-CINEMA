@@ -10,7 +10,7 @@ namespace EXPO60.Controlador
     {
         public int iddetalle { get; set; }
         public int funcion { get; set; }
-        public int asiento { get; set; }
+        public int asiento { get; set; }    
         public ConstructorDetalleTicket() { }
     }
 }

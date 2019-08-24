@@ -67,6 +67,7 @@
             this.grpActores.TabIndex = 1;
             this.grpActores.TabStop = false;
             this.grpActores.Text = "Registro de actores";
+            this.grpActores.Resize += new System.EventHandler(this.GrpActores_Resize);
             // 
             // toolStrip1
             // 
@@ -77,6 +78,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(1231, 25);
             this.toolStrip1.TabIndex = 48;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Resize += new System.EventHandler(this.ToolStrip1_Resize);
             // 
             // BtnCerrar
             // 

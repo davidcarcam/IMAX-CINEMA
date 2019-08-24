@@ -81,22 +81,37 @@ namespace EXPO60.Vista
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion","Salir de la aplicacion",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
-
-        private void btnmaximizar_Click(object sender, EventArgs e)
+        int lx, ly;
+        int sw, sh;
+        private void btnMaximizar_Click(object sender, EventArgs e)
         {
             btnmaximizar.Visible = false;
             btnnormal.Visible = true;
             WindowState = FormWindowState.Maximized;
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btnmaximizar.Visible = false;
+            btnnormal.Visible = true;
         }
-
-        private void btnnormal_Click(object sender, EventArgs e)
+        private void btnNormal_Click(object sender, EventArgs e)
         {
-
             btnmaximizar.Visible = true;
             btnnormal.Visible = false;
             WindowState = FormWindowState.Normal;
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+            btnmaximizar.Visible = true;
+            btnnormal.Visible = false;
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -192,7 +207,6 @@ namespace EXPO60.Vista
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
                 this.Close();
             }
         }
@@ -209,9 +223,22 @@ namespace EXPO60.Vista
 
         private void ToolbtnCerrar_Sesion_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            FrmLogin login = new FrmLogin();
-            login.Show();
+            if (MessageBox.Show("Esta seguro que desea cerrar sesion y regresar al login", "Cerrar Sesion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                FrmLogin login = new FrmLogin();
+                login.Show();
+            }
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelContenedor_Resize(object sender, EventArgs e)
+        {
+
         }
     }
 }

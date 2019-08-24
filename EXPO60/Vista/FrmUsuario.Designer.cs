@@ -34,7 +34,6 @@ namespace EXPO60.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -76,7 +75,6 @@ namespace EXPO60.Vista
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.txtCifrado);
             this.groupBox2.Controls.Add(this.btnagregar);
             this.groupBox2.Controls.Add(this.toolStrip1);
@@ -109,21 +107,14 @@ namespace EXPO60.Vista
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1025, 547);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(456, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 51;
             // 
             // txtCifrado
             // 
             this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCifrado.Location = new System.Drawing.Point(338, 107);
+            this.txtCifrado.Location = new System.Drawing.Point(326, 94);
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(31, 20);
             this.txtCifrado.TabIndex = 49;
@@ -136,7 +127,7 @@ namespace EXPO60.Vista
             this.btnagregar.BackColor = System.Drawing.Color.Maroon;
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
+            this.btnagregar.ButtonText = "Agregar";
             this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
             this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
@@ -158,18 +149,19 @@ namespace EXPO60.Vista
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 48;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregar.TabIndex = 8;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnCerrar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Location = new System.Drawing.Point(3, 519);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
             this.toolStrip1.TabIndex = 47;
@@ -178,7 +170,7 @@ namespace EXPO60.Vista
             // BtnCerrar
             // 
             this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
             this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
@@ -194,7 +186,13 @@ namespace EXPO60.Vista
             this.cmbEstadoU.Name = "cmbEstadoU";
             this.cmbEstadoU.Size = new System.Drawing.Size(153, 21);
             this.cmbEstadoU.TabIndex = 8;
-          
+            // 
+            // cmbTipoU
+            // 
+            this.cmbTipoU.Location = new System.Drawing.Point(839, 54);
+            this.cmbTipoU.Name = "cmbTipoU";
+            this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
+            this.cmbTipoU.TabIndex = 5;
             // 
             // txtclave
             // 
@@ -203,7 +201,7 @@ namespace EXPO60.Vista
             this.txtclave.MaxLength = 20;
             this.txtclave.Name = "txtclave";
             this.txtclave.Size = new System.Drawing.Size(153, 20);
-            this.txtclave.TabIndex = 11;
+            this.txtclave.TabIndex = 7;
             this.txtclave.TextChanged += new System.EventHandler(this.txtclave_TextChanged);
             this.txtclave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtclave_KeyPress);
             // 
@@ -212,11 +210,11 @@ namespace EXPO60.Vista
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(665, 126);
+            this.label11.Location = new System.Drawing.Point(727, 127);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 20);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "Contraseña";
+            this.label11.Size = new System.Drawing.Size(96, 20);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Contraseña:";
             // 
             // txtusuario
             // 
@@ -225,7 +223,7 @@ namespace EXPO60.Vista
             this.txtusuario.MaxLength = 25;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(153, 20);
-            this.txtusuario.TabIndex = 10;
+            this.txtusuario.TabIndex = 6;
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // label10
@@ -233,22 +231,22 @@ namespace EXPO60.Vista
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(665, 90);
+            this.label10.Location = new System.Drawing.Point(755, 91);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 20);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "Usuario";
+            this.label10.Size = new System.Drawing.Size(68, 20);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Usuario:";
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(665, 54);
+            this.label9.Location = new System.Drawing.Point(702, 55);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 20);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Tipo de usuario";
+            this.label9.Size = new System.Drawing.Size(121, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Tipo de usuario:";
             // 
             // label8
             // 
@@ -267,15 +265,15 @@ namespace EXPO60.Vista
             this.txtdireccion.Location = new System.Drawing.Point(456, 92);
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(153, 71);
-            this.txtdireccion.TabIndex = 7;
+            this.txtdireccion.Size = new System.Drawing.Size(196, 71);
+            this.txtdireccion.TabIndex = 4;
             this.txtdireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdireccion_KeyPress);
             // 
             // txtid
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtid.Location = new System.Drawing.Point(338, 65);
+            this.txtid.Location = new System.Drawing.Point(326, 41);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(31, 20);
             this.txtid.TabIndex = 36;
@@ -288,7 +286,7 @@ namespace EXPO60.Vista
             this.dgvusuarios.Location = new System.Drawing.Point(5, 257);
             this.dgvusuarios.Name = "dgvusuarios";
             this.dgvusuarios.Size = new System.Drawing.Size(1011, 265);
-            this.dgvusuarios.TabIndex = 35;
+            this.dgvusuarios.TabIndex = 0;
             this.dgvusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellClick);
             // 
             // btneliminar
@@ -298,7 +296,7 @@ namespace EXPO60.Vista
             this.btneliminar.BackColor = System.Drawing.Color.Maroon;
             this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "      Eliminar";
+            this.btneliminar.ButtonText = "Eliminar";
             this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
             this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
@@ -313,16 +311,16 @@ namespace EXPO60.Vista
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(772, 188);
+            this.btneliminar.Location = new System.Drawing.Point(771, 188);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 34;
-            this.btneliminar.Text = "      Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.TabIndex = 11;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
@@ -334,7 +332,7 @@ namespace EXPO60.Vista
             this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
             this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "      Actualizar";
+            this.btnactualizar.ButtonText = "Actualizar";
             this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
             this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
@@ -349,16 +347,16 @@ namespace EXPO60.Vista
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(509, 188);
+            this.btnactualizar.Location = new System.Drawing.Point(519, 188);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnactualizar.selected = false;
             this.btnactualizar.Size = new System.Drawing.Size(241, 48);
-            this.btnactualizar.TabIndex = 33;
-            this.btnactualizar.Text = "      Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.TabIndex = 10;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
@@ -370,7 +368,7 @@ namespace EXPO60.Vista
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "      Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -385,16 +383,16 @@ namespace EXPO60.Vista
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(262, 188);
+            this.btnmostrar.Location = new System.Drawing.Point(267, 188);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
-            this.btnmostrar.TabIndex = 32;
-            this.btnmostrar.Text = "      Mostrar";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmostrar.TabIndex = 9;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click_1);
@@ -406,30 +404,35 @@ namespace EXPO60.Vista
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(375, 92);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Direccion";
+            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Direccion:";
             // 
-      
+            // txtcorreo
+            // 
+            this.txtcorreo.Location = new System.Drawing.Point(456, 57);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(196, 20);
+            this.txtcorreo.TabIndex = 53;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(375, 54);
+            this.label6.Location = new System.Drawing.Point(393, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 20);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Correo";
+            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Correo:";
             // 
             // txtdocumento
             // 
             this.txtdocumento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtdocumento.Location = new System.Drawing.Point(419, 14);
+            this.txtdocumento.Location = new System.Drawing.Point(456, 23);
             this.txtdocumento.Mask = "00000000-0";
             this.txtdocumento.Name = "txtdocumento";
-            this.txtdocumento.Size = new System.Drawing.Size(153, 20);
+            this.txtdocumento.Size = new System.Drawing.Size(196, 20);
             this.txtdocumento.TabIndex = 5;
             // 
             // label5
@@ -437,7 +440,7 @@ namespace EXPO60.Vista
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(375, 14);
+            this.label5.Location = new System.Drawing.Point(397, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 20);
             this.label5.TabIndex = 24;
@@ -450,9 +453,9 @@ namespace EXPO60.Vista
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(59, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Telefono";
+            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Telefono:";
             // 
             // txtapellido
             // 
@@ -461,7 +464,7 @@ namespace EXPO60.Vista
             this.txtapellido.MaxLength = 8;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(153, 20);
-            this.txtapellido.TabIndex = 2;
+            this.txtapellido.TabIndex = 1;
             this.txtapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellido_KeyPress_1);
             // 
             // label2
@@ -471,9 +474,9 @@ namespace EXPO60.Vista
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(65, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Apellido";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Apellido:";
             // 
             // txttelefono
             // 
@@ -482,7 +485,7 @@ namespace EXPO60.Vista
             this.txttelefono.Mask = "0000-0000";
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(153, 20);
-            this.txttelefono.TabIndex = 4;
+            this.txttelefono.TabIndex = 2;
             // 
             // txtnombre
             // 
@@ -534,7 +537,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbEstadoU;
-        private System.Windows.Forms.ComboBox cmbTipoU;
         private System.Windows.Forms.TextBox txtclave;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtusuario;
@@ -559,6 +561,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCifrado;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbTipoU;
     }
 }

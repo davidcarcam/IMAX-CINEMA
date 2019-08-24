@@ -10,11 +10,23 @@ using EXPO60.Modelo;
 using System.Windows.Forms;
 using EXPO60.Controlador;
 using System.Security.Cryptography;
+using System.IO;
+using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
 
 namespace EXPO60.Vista
 {
     public partial class FrmPrimerUso : Form
     {
+        #region Dlls para mover el formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        public extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        const int GRIP_SIZE = 15;
+        int w = 0;
+        int h = 0;
+        #endregion
         public FrmPrimerUso()
         {
             InitializeComponent();
@@ -152,6 +164,48 @@ namespace EXPO60.Vista
         private void txtCifrado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir del formulario del primer usuario y cerrar la aplicacion","Cerrar Aplicacion",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void BtnCargar_Foto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ofpPrimer_Usuario.Filter = "Archivo de imagen (.jpg) | *.jpg | Archivos de Imagen (.png) | *.png | Archivos de Imagen (jpeg) | *jpeg | Todos los Archivos |*.*";
+                DialogResult Resultado1 = ofpPrimer_Usuario.ShowDialog();
+                if (Resultado1 == DialogResult.OK)
+                {
+                    picPerfil_image.Image = Image.FromFile(ofpPrimer_Usuario.FileName);
+                }
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show("Sucedio un problema durante el proceso, por favor contacte con el administrador", "Error" + a.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnIngUsuario_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolStripPrimer_Usuario_MouseDown(object sender, MouseEventArgs e)
+        {
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            w = this.Width;
+            h = this.Height;
+        }
+
+        private void FrmPrimerUso_Resize(object sender, EventArgs e)
+        {
+            
         }
     }
 }

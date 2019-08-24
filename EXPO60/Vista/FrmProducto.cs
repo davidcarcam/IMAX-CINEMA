@@ -30,6 +30,7 @@ namespace EXPO60.Vista
             }
             else
             {
+                Agregar.producto = txtnombre.Text;
                 Agregar.precio = txtprecio.Text;
                 Agregar.local = Convert.ToInt16(cbmlocal.SelectedValue);
                 Agregar.proveedor = Convert.ToInt16(cmbprov.SelectedValue); ;
@@ -91,7 +92,45 @@ namespace EXPO60.Vista
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
         }
-        private void dgvproductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void Frmproductos_Load(object sender, EventArgs e)
+        {
+            MostrarProducto();
+            mostarET();
+            this.dgvproductos.Columns[0].Visible = false;
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+        }
+        public void mostarET()
+        {
+            cmbprov.DataSource = Funciones_Productos.VerProveedor();
+            cmbprov.DisplayMember = "proveedores";
+            cmbprov.ValueMember = "id_proveedor";
+
+            cbmlocal.DataSource = Funciones_Productos.verLocal();
+            cbmlocal.DisplayMember = "nombre";
+            cbmlocal.ValueMember = "id_local";
+
+            cmbtipo.DataSource = Funciones_Productos.VerTipo();
+            cmbtipo.DisplayMember = "id_tipo_prod";
+            cmbtipo.ValueMember = "tipo_producto";
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnagregar_Click_1(object sender, EventArgs e)
+        {
+            AgregarProducto();
+        }
+
+        private void Dgvproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int posicion;
             posicion = this.dgvproductos.CurrentRow.Index;
@@ -103,45 +142,6 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
-        }
-        private void Frmproductos_Load(object sender, EventArgs e)
-        {
-            MostrarProducto();
-            this.dgvproductos.Columns[0].Visible = false;
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
-            
-
-            cmbprov.DataSource = Funciones_Productos.VerProveedor();
-            cmbprov.DisplayMember = "NOMBRE_PROV";
-            cmbprov.ValueMember = "ID_PROVEEDOR";
-
-            cbmlocal.DataSource = Funciones_Productos.verLocal();
-            cbmlocal.DisplayMember = "NOMBRE_LOCAL";
-            cbmlocal.ValueMember = "ID_LOCAL";
-
-            cmbtipo.DataSource = Funciones_Productos.VerTipo();
-            cmbtipo.DisplayMember = "NOMBRE_TIPO_P";
-            cmbtipo.ValueMember = "ID_TIPO_PRODUCTO";
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnCerrar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
-                this.Close();
-            }
-        }
-
-        private void btnagregar_Click_1(object sender, EventArgs e)
-        {
-            AgregarProducto();
         }
     }
 }

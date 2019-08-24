@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProducto));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
@@ -53,6 +55,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtnombre);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.cmbtipo);
             this.groupBox1.Controls.Add(this.cmbprov);
@@ -72,10 +76,27 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1025, 547);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de productos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(109, 63);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.TabIndex = 61;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "nombre";
             // 
             // toolStrip1
             // 
@@ -104,7 +125,7 @@
             this.cmbtipo.Location = new System.Drawing.Point(696, 109);
             this.cmbtipo.Name = "cmbtipo";
             this.cmbtipo.Size = new System.Drawing.Size(153, 21);
-            this.cmbtipo.TabIndex = 50;
+            this.cmbtipo.TabIndex = 4;
             // 
             // cmbprov
             // 
@@ -113,7 +134,7 @@
             this.cmbprov.Location = new System.Drawing.Point(696, 66);
             this.cmbprov.Name = "cmbprov";
             this.cmbprov.Size = new System.Drawing.Size(153, 21);
-            this.cmbprov.TabIndex = 49;
+            this.cmbprov.TabIndex = 3;
             // 
             // cbmlocal
             // 
@@ -121,16 +142,17 @@
             this.cbmlocal.Location = new System.Drawing.Point(337, 113);
             this.cbmlocal.Name = "cbmlocal";
             this.cbmlocal.Size = new System.Drawing.Size(153, 21);
-            this.cbmlocal.TabIndex = 0;
+            this.cbmlocal.TabIndex = 2;
             // 
             // dgvproductos
             // 
             this.dgvproductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvproductos.Location = new System.Drawing.Point(9, 283);
+            this.dgvproductos.Location = new System.Drawing.Point(12, 276);
             this.dgvproductos.Name = "dgvproductos";
-            this.dgvproductos.Size = new System.Drawing.Size(1011, 265);
-            this.dgvproductos.TabIndex = 47;
+            this.dgvproductos.Size = new System.Drawing.Size(1008, 265);
+            this.dgvproductos.TabIndex = 0;
+            this.dgvproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgvproductos_CellContentClick);
             // 
             // btneliminar
             // 
@@ -139,7 +161,7 @@
             this.btneliminar.BackColor = System.Drawing.Color.Maroon;
             this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "      Eliminar";
+            this.btneliminar.ButtonText = "Eliminar";
             this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
             this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
@@ -154,16 +176,16 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(794, 179);
+            this.btneliminar.Location = new System.Drawing.Point(780, 179);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
-            this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 46;
-            this.btneliminar.Text = "      Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.Size = new System.Drawing.Size(213, 48);
+            this.btneliminar.TabIndex = 8;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -174,7 +196,7 @@
             this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
             this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "      Actualizar";
+            this.btnactualizar.ButtonText = "Actualizar";
             this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
             this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
@@ -195,10 +217,10 @@
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnactualizar.selected = false;
-            this.btnactualizar.Size = new System.Drawing.Size(241, 48);
-            this.btnactualizar.TabIndex = 45;
-            this.btnactualizar.Text = "      Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Size = new System.Drawing.Size(213, 48);
+            this.btnactualizar.TabIndex = 7;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -209,7 +231,7 @@
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "      Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -224,16 +246,16 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(260, 179);
+            this.btnmostrar.Location = new System.Drawing.Point(277, 179);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
-            this.btnmostrar.Size = new System.Drawing.Size(241, 48);
-            this.btnmostrar.TabIndex = 44;
-            this.btnmostrar.Text = "      Mostrar";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmostrar.Size = new System.Drawing.Size(213, 48);
+            this.btnmostrar.TabIndex = 6;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -244,7 +266,7 @@
             this.btnagregar.BackColor = System.Drawing.Color.Maroon;
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
+            this.btnagregar.ButtonText = "Agregar";
             this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
             this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
@@ -259,16 +281,16 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(-7, 179);
+            this.btnagregar.Location = new System.Drawing.Point(27, 179);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
-            this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 43;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregar.Size = new System.Drawing.Size(213, 48);
+            this.btnagregar.TabIndex = 5;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
@@ -286,7 +308,7 @@
             this.txtid.Location = new System.Drawing.Point(521, 87);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
-            this.txtid.TabIndex = 10;
+            this.txtid.TabIndex = 0;
             this.txtid.Visible = false;
             // 
             // label5
@@ -295,19 +317,19 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(562, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Tipo de producto";
+            this.label5.Size = new System.Drawing.Size(132, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tipo de producto:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(609, 71);
+            this.label4.Location = new System.Drawing.Point(609, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Proveedor";
+            this.label4.Size = new System.Drawing.Size(85, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Proveedor:";
             // 
             // label2
             // 
@@ -315,9 +337,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(278, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Local";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Local:";
             // 
             // label1
             // 
@@ -325,9 +347,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(278, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Precio";
+            this.label1.Text = "Precio:";
             // 
             // FrmProducto
             // 
@@ -366,5 +388,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Label label3;
     }
 }

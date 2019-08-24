@@ -60,9 +60,12 @@ namespace EXPO60.Vista
 
         private void BtntoolCerrar_Metodos_Click(object sender, EventArgs e)
         {
-            this.Close();
-            FrmLogin login = new FrmLogin();
-            login.Show();
+            if (MessageBox.Show("¿Esta seguro que desea salir del formulario de los metodos de recuperacion?", "Salir de el formulario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                FrmLogin login = new FrmLogin();
+                login.Show();
+            }
         }
 
         private void ToolStripMetodos_MouseDown(object sender, MouseEventArgs e)
@@ -72,10 +75,7 @@ namespace EXPO60.Vista
             h = this.Height;
         }
 
-        private void MenuItemTelefono_Recuperacion_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmRecuperar_Telefono>();
-        }
+        
 
         private void MenuItemPreguntas_Recuperacion_Click(object sender, EventArgs e)
         {

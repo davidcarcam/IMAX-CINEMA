@@ -65,7 +65,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1025, 547);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Empresas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -96,7 +96,7 @@
             this.txtDireccion_empresa.Multiline = true;
             this.txtDireccion_empresa.Name = "txtDireccion_empresa";
             this.txtDireccion_empresa.Size = new System.Drawing.Size(153, 48);
-            this.txtDireccion_empresa.TabIndex = 60;
+            this.txtDireccion_empresa.TabIndex = 2;
             // 
             // label2
             // 
@@ -105,7 +105,7 @@
             this.label2.Location = new System.Drawing.Point(587, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 20);
-            this.label2.TabIndex = 59;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Direccion de Empresa";
             // 
             // txtid
@@ -113,7 +113,7 @@
             this.txtid.Location = new System.Drawing.Point(455, 40);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
-            this.txtid.TabIndex = 57;
+            this.txtid.TabIndex = 0;
             this.txtid.Visible = false;
             // 
             // txtNombre_empresa
@@ -121,7 +121,7 @@
             this.txtNombre_empresa.Location = new System.Drawing.Point(400, 87);
             this.txtNombre_empresa.Name = "txtNombre_empresa";
             this.txtNombre_empresa.Size = new System.Drawing.Size(153, 20);
-            this.txtNombre_empresa.TabIndex = 58;
+            this.txtNombre_empresa.TabIndex = 1;
             this.txtNombre_empresa.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // label1
@@ -131,7 +131,7 @@
             this.label1.Location = new System.Drawing.Point(239, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 20);
-            this.label1.TabIndex = 56;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Nombre de Empresa";
             // 
             // dgvempresas
@@ -141,7 +141,7 @@
             this.dgvempresas.Location = new System.Drawing.Point(8, 276);
             this.dgvempresas.Name = "dgvempresas";
             this.dgvempresas.Size = new System.Drawing.Size(1011, 265);
-            this.dgvempresas.TabIndex = 51;
+            this.dgvempresas.TabIndex = 0;
             this.dgvempresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvactores_CellContentClick);
             // 
             // btneliminar
@@ -150,8 +150,8 @@
             this.btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btneliminar.BackColor = System.Drawing.Color.Maroon;
             this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "      Eliminar";
+            this.btneliminar.BorderRadius = 6;
+            this.btneliminar.ButtonText = "Eliminar";
             this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
             this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
@@ -166,7 +166,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(778, 175);
+            this.btneliminar.Location = new System.Drawing.Point(777, 175);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -174,8 +174,8 @@
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(241, 48);
             this.btneliminar.TabIndex = 50;
-            this.btneliminar.Text = "      Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
@@ -186,8 +186,8 @@
             this.btnactualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
             this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "      Actualizar";
+            this.btnactualizar.BorderRadius = 5;
+            this.btnactualizar.ButtonText = "Actualizar";
             this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
             this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
@@ -202,7 +202,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(521, 175);
+            this.btnactualizar.Location = new System.Drawing.Point(520, 175);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -210,8 +210,8 @@
             this.btnactualizar.selected = false;
             this.btnactualizar.Size = new System.Drawing.Size(241, 48);
             this.btnactualizar.TabIndex = 49;
-            this.btnactualizar.Text = "      Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
@@ -222,8 +222,8 @@
             this.btnmostrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "      Mostrar";
+            this.btnmostrar.BorderRadius = 4;
+            this.btnmostrar.ButtonText = "Mostrar";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -238,7 +238,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(264, 175);
+            this.btnmostrar.Location = new System.Drawing.Point(263, 175);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -246,8 +246,8 @@
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
             this.btnmostrar.TabIndex = 48;
-            this.btnmostrar.Text = "      Mostrar";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
@@ -258,8 +258,8 @@
             this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnagregar.BackColor = System.Drawing.Color.Maroon;
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
+            this.btnagregar.BorderRadius = 3;
+            this.btnagregar.ButtonText = "Agregar";
             this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
             this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
@@ -282,8 +282,8 @@
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(241, 48);
             this.btnagregar.TabIndex = 47;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);

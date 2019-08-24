@@ -139,5 +139,10 @@ namespace EXPO60.Vista
                 this.Close();
             }
         }
+
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

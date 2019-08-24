@@ -37,6 +37,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRecuperar_Preguntas));
             this.toolStripRecuperar_Preguntas = new System.Windows.Forms.ToolStrip();
             this.lbltoolRecuperar_Preguntas = new System.Windows.Forms.ToolStripLabel();
+            this.btntoolCerrar_Preguntas = new System.Windows.Forms.ToolStripButton();
             this.cmbPregunta3 = new System.Windows.Forms.ComboBox();
             this.cmbPregunta1 = new System.Windows.Forms.ComboBox();
             this.cmbPregunta2 = new System.Windows.Forms.ComboBox();
@@ -48,7 +49,6 @@
             this.txtNueva_Contrasena = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnRecuperar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btntoolCerrar_Preguntas = new System.Windows.Forms.ToolStripButton();
             lblInformacion1 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             lblInstrucciones3 = new System.Windows.Forms.Label();
@@ -57,6 +57,68 @@
             lblUsuarios = new System.Windows.Forms.Label();
             this.toolStripRecuperar_Preguntas.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblInformacion1
+            // 
+            lblInformacion1.AutoSize = true;
+            lblInformacion1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblInformacion1.Location = new System.Drawing.Point(281, 73);
+            lblInformacion1.Name = "lblInformacion1";
+            lblInformacion1.Size = new System.Drawing.Size(414, 12);
+            lblInformacion1.TabIndex = 0;
+            lblInformacion1.Text = "Seleccion las preguntas y repondelas para recuperar la contrasena:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(88, 345);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(91, 12);
+            label4.TabIndex = 0;
+            label4.Text = "Nuevo Correo:";
+            // 
+            // lblInstrucciones3
+            // 
+            lblInstrucciones3.AutoSize = true;
+            lblInstrucciones3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblInstrucciones3.Location = new System.Drawing.Point(117, 315);
+            lblInstrucciones3.Name = "lblInstrucciones3";
+            lblInstrucciones3.Size = new System.Drawing.Size(718, 12);
+            lblInstrucciones3.TabIndex = 0;
+            lblInstrucciones3.Text = "Si no es asi. Probablemente los datos estan erroneos, los datos no existen o hay " +
+    "un problema con el envio de datos. ";
+            // 
+            // lblInstruccion2
+            // 
+            lblInstruccion2.AutoSize = true;
+            lblInstruccion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblInstruccion2.Location = new System.Drawing.Point(117, 293);
+            lblInstruccion2.Name = "lblInstruccion2";
+            lblInstruccion2.Size = new System.Drawing.Size(698, 12);
+            lblInstruccion2.TabIndex = 0;
+            lblInstruccion2.Text = "Si los datos fueron ingresados correctamente su nuevo correo y contrasena se most" +
+    "raria en los cuadros de abajo:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(88, 379);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(117, 12);
+            label1.TabIndex = 0;
+            label1.Text = "Nueva Contrasena:";
+            // 
+            // lblUsuarios
+            // 
+            lblUsuarios.AutoSize = true;
+            lblUsuarios.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblUsuarios.Location = new System.Drawing.Point(167, 30);
+            lblUsuarios.Name = "lblUsuarios";
+            lblUsuarios.Size = new System.Drawing.Size(139, 12);
+            lblUsuarios.TabIndex = 0;
+            lblUsuarios.Text = "Seleccione su usuario:";
             // 
             // toolStripRecuperar_Preguntas
             // 
@@ -77,6 +139,17 @@
             this.lbltoolRecuperar_Preguntas.Name = "lbltoolRecuperar_Preguntas";
             this.lbltoolRecuperar_Preguntas.Size = new System.Drawing.Size(131, 22);
             this.lbltoolRecuperar_Preguntas.Text = "Preguntas de seguridad";
+            // 
+            // btntoolCerrar_Preguntas
+            // 
+            this.btntoolCerrar_Preguntas.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btntoolCerrar_Preguntas.BackColor = System.Drawing.Color.White;
+            this.btntoolCerrar_Preguntas.Image = ((System.Drawing.Image)(resources.GetObject("btntoolCerrar_Preguntas.Image")));
+            this.btntoolCerrar_Preguntas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btntoolCerrar_Preguntas.Name = "btntoolCerrar_Preguntas";
+            this.btntoolCerrar_Preguntas.Size = new System.Drawing.Size(186, 22);
+            this.btntoolCerrar_Preguntas.Text = "Cerrar preguntas de seguridad";
+            this.btntoolCerrar_Preguntas.Click += new System.EventHandler(this.BtntoolCerrar_Preguntas_Click);
             // 
             // cmbPregunta3
             // 
@@ -125,16 +198,6 @@
             this.txtRespuesta1.TabIndex = 3;
             this.txtRespuesta1.TextChanged += new System.EventHandler(this.TextBox13_TextChanged);
             // 
-            // lblInformacion1
-            // 
-            lblInformacion1.AutoSize = true;
-            lblInformacion1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblInformacion1.Location = new System.Drawing.Point(281, 73);
-            lblInformacion1.Name = "lblInformacion1";
-            lblInformacion1.Size = new System.Drawing.Size(414, 12);
-            lblInformacion1.TabIndex = 13;
-            lblInformacion1.Text = "Seleccion las preguntas y repondelas para recuperar la contrasena:";
-            // 
             // separartorRecuperar_Contrasena
             // 
             this.separartorRecuperar_Contrasena.BackColor = System.Drawing.Color.Transparent;
@@ -156,48 +219,6 @@
             this.txtNuevo_Correo.Size = new System.Drawing.Size(594, 20);
             this.txtNuevo_Correo.TabIndex = 0;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(88, 345);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(91, 12);
-            label4.TabIndex = 23;
-            label4.Text = "Nuevo Correo:";
-            // 
-            // lblInstrucciones3
-            // 
-            lblInstrucciones3.AutoSize = true;
-            lblInstrucciones3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblInstrucciones3.Location = new System.Drawing.Point(117, 315);
-            lblInstrucciones3.Name = "lblInstrucciones3";
-            lblInstrucciones3.Size = new System.Drawing.Size(718, 12);
-            lblInstrucciones3.TabIndex = 24;
-            lblInstrucciones3.Text = "Si no es asi. Probablemente los datos estan erroneos, los datos no existen o hay " +
-    "un problema con el envio de datos. ";
-            // 
-            // lblInstruccion2
-            // 
-            lblInstruccion2.AutoSize = true;
-            lblInstruccion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblInstruccion2.Location = new System.Drawing.Point(117, 293);
-            lblInstruccion2.Name = "lblInstruccion2";
-            lblInstruccion2.Size = new System.Drawing.Size(698, 12);
-            lblInstruccion2.TabIndex = 25;
-            lblInstruccion2.Text = "Si los datos fueron ingresados correctamente su nuevo correo y contrasena se most" +
-    "raria en los cuadros de abajo:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(88, 379);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(117, 12);
-            label1.TabIndex = 23;
-            label1.Text = "Nueva Contrasena:";
-            // 
             // txtNueva_Contrasena
             // 
             this.txtNueva_Contrasena.Location = new System.Drawing.Point(237, 375);
@@ -214,16 +235,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(545, 21);
             this.comboBox1.TabIndex = 1;
-            // 
-            // lblUsuarios
-            // 
-            lblUsuarios.AutoSize = true;
-            lblUsuarios.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblUsuarios.Location = new System.Drawing.Point(167, 30);
-            lblUsuarios.Name = "lblUsuarios";
-            lblUsuarios.Size = new System.Drawing.Size(139, 12);
-            lblUsuarios.TabIndex = 13;
-            lblUsuarios.Text = "Seleccione su usuario:";
             // 
             // btnRecuperar
             // 
@@ -260,17 +271,6 @@
             this.btnRecuperar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecuperar.Textcolor = System.Drawing.Color.White;
             this.btnRecuperar.TextFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btntoolCerrar_Preguntas
-            // 
-            this.btntoolCerrar_Preguntas.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btntoolCerrar_Preguntas.BackColor = System.Drawing.Color.White;
-            this.btntoolCerrar_Preguntas.Image = ((System.Drawing.Image)(resources.GetObject("btntoolCerrar_Preguntas.Image")));
-            this.btntoolCerrar_Preguntas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btntoolCerrar_Preguntas.Name = "btntoolCerrar_Preguntas";
-            this.btntoolCerrar_Preguntas.Size = new System.Drawing.Size(186, 22);
-            this.btntoolCerrar_Preguntas.Text = "Cerrar preguntas de seguridad";
-            this.btntoolCerrar_Preguntas.Click += new System.EventHandler(this.BtntoolCerrar_Preguntas_Click);
             // 
             // FrmRecuperar_Preguntas
             // 

@@ -47,7 +47,7 @@ namespace EXPO60.Vista
             txttitulo.Clear();
             txtaño.Clear();
         }
-        public void agregarEmpresa()
+        public void agregarPelicula()
         {
             agregar.Titulo = txttitulo.Text;
             agregar.Año = Convert.ToInt16(txtaño.Text);
@@ -57,11 +57,7 @@ namespace EXPO60.Vista
         }
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
                 this.Close();
-            }
         }
 
         private void txtaudio_KeyPress(object sender, KeyPressEventArgs e)
@@ -137,7 +133,7 @@ namespace EXPO60.Vista
             }
             else
             {
-                agregarEmpresa();
+                agregarPelicula();
                 
                 vaciarampos();
             }
@@ -207,6 +203,11 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = false;
             btnagregar.Enabled = true;
             btneliminar.Enabled = false;
+        }
+
+        private void CmbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

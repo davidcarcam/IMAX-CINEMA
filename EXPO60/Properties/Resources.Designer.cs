@@ -73,6 +73,16 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camera_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("camera_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -126,6 +136,16 @@ namespace EXPO60.Properties {
         internal static System.Drawing.Bitmap food_as_resources_96px {
             get {
                 object obj = ResourceManager.GetObject("food_as_resources_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gender_neutral_user_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("gender_neutral_user_96px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
