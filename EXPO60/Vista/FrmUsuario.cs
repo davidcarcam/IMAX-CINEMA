@@ -428,6 +428,11 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

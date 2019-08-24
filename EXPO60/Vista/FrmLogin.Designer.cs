@@ -184,7 +184,7 @@ namespace EXPO60.Vista
             this.btbAcceder.Location = new System.Drawing.Point(389, 209);
             this.btbAcceder.Name = "btbAcceder";
             this.btbAcceder.Size = new System.Drawing.Size(133, 29);
-            this.btbAcceder.TabIndex = 5;
+            this.btbAcceder.TabIndex = 3;
             this.btbAcceder.Text = "Acceder";
             this.btbAcceder.UseVisualStyleBackColor = true;
             this.btbAcceder.Click += new System.EventHandler(this.btbAcceder_Click);

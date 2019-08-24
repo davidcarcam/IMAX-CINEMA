@@ -78,7 +78,7 @@ namespace EXPO60.Vista
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 60);
+            this.label1.Location = new System.Drawing.Point(58, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 17;
@@ -87,7 +87,7 @@ namespace EXPO60.Vista
             // txtnombre
             // 
             this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtnombre.Location = new System.Drawing.Point(133, 60);
+            this.txtnombre.Location = new System.Drawing.Point(133, 51);
             this.txtnombre.MaxLength = 8;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
@@ -108,7 +108,7 @@ namespace EXPO60.Vista
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 100);
+            this.label2.Location = new System.Drawing.Point(58, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 0;
@@ -117,7 +117,7 @@ namespace EXPO60.Vista
             // txtapellido
             // 
             this.txtapellido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtapellido.Location = new System.Drawing.Point(133, 100);
+            this.txtapellido.Location = new System.Drawing.Point(133, 94);
             this.txtapellido.MaxLength = 8;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(153, 20);
@@ -129,7 +129,7 @@ namespace EXPO60.Vista
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 144);
+            this.label4.Location = new System.Drawing.Point(52, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 0;
@@ -140,7 +140,7 @@ namespace EXPO60.Vista
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(394, 60);
+            this.label5.Location = new System.Drawing.Point(401, 42);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 20);
             this.label5.TabIndex = 24;
@@ -149,7 +149,7 @@ namespace EXPO60.Vista
             // txtdocumento
             // 
             this.txtdocumento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtdocumento.Location = new System.Drawing.Point(453, 60);
+            this.txtdocumento.Location = new System.Drawing.Point(457, 44);
             this.txtdocumento.Mask = "00000000-0";
             this.txtdocumento.Name = "txtdocumento";
             this.txtdocumento.Size = new System.Drawing.Size(196, 20);
@@ -160,7 +160,7 @@ namespace EXPO60.Vista
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(390, 91);
+            this.label6.Location = new System.Drawing.Point(390, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 20);
             this.label6.TabIndex = 0;
@@ -168,7 +168,7 @@ namespace EXPO60.Vista
             // 
             // txtcorreo
             // 
-            this.txtcorreo.Location = new System.Drawing.Point(453, 94);
+            this.txtcorreo.Location = new System.Drawing.Point(457, 76);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(196, 20);
             this.txtcorreo.TabIndex = 53;
@@ -178,7 +178,7 @@ namespace EXPO60.Vista
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(372, 129);
+            this.label7.Location = new System.Drawing.Point(372, 118);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 20);
             this.label7.TabIndex = 0;
@@ -206,7 +206,7 @@ namespace EXPO60.Vista
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(263, 211);
+            this.btnmostrar.Location = new System.Drawing.Point(263, 201);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -242,7 +242,7 @@ namespace EXPO60.Vista
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(515, 211);
+            this.btnactualizar.Location = new System.Drawing.Point(510, 201);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -278,7 +278,7 @@ namespace EXPO60.Vista
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(772, 211);
+            this.btneliminar.Location = new System.Drawing.Point(772, 201);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -296,9 +296,9 @@ namespace EXPO60.Vista
             // 
             this.dgvusuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvusuarios.Location = new System.Drawing.Point(4, 275);
+            this.dgvusuarios.Location = new System.Drawing.Point(10, 264);
             this.dgvusuarios.Name = "dgvusuarios";
-            this.dgvusuarios.Size = new System.Drawing.Size(1011, 265);
+            this.dgvusuarios.Size = new System.Drawing.Size(1009, 230);
             this.dgvusuarios.TabIndex = 0;
             this.dgvusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellClick);
             // 
@@ -306,7 +306,7 @@ namespace EXPO60.Vista
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtid.Location = new System.Drawing.Point(323, 78);
+            this.txtid.Location = new System.Drawing.Point(323, 54);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(31, 20);
             this.txtid.TabIndex = 36;
@@ -315,7 +315,7 @@ namespace EXPO60.Vista
             // txtdireccion
             // 
             this.txtdireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtdireccion.Location = new System.Drawing.Point(454, 134);
+            this.txtdireccion.Location = new System.Drawing.Point(457, 116);
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(196, 71);
@@ -327,18 +327,19 @@ namespace EXPO60.Vista
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(662, 53);
+            this.label8.Location = new System.Drawing.Point(679, 52);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(141, 20);
             this.label8.TabIndex = 38;
             this.label8.Text = "Estado del usuario";
+            this.label8.Click += new System.EventHandler(this.label8_Click_1);
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(699, 92);
+            this.label9.Location = new System.Drawing.Point(699, 79);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 20);
             this.label9.TabIndex = 0;
@@ -349,7 +350,7 @@ namespace EXPO60.Vista
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(752, 128);
+            this.label10.Location = new System.Drawing.Point(752, 116);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 20);
             this.label10.TabIndex = 0;
@@ -358,7 +359,7 @@ namespace EXPO60.Vista
             // txtusuario
             // 
             this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtusuario.Location = new System.Drawing.Point(836, 129);
+            this.txtusuario.Location = new System.Drawing.Point(836, 118);
             this.txtusuario.MaxLength = 25;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(153, 20);
@@ -370,7 +371,7 @@ namespace EXPO60.Vista
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(725, 169);
+            this.label11.Location = new System.Drawing.Point(724, 155);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 20);
             this.label11.TabIndex = 0;
@@ -379,7 +380,7 @@ namespace EXPO60.Vista
             // txtclave
             // 
             this.txtclave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtclave.Location = new System.Drawing.Point(837, 168);
+            this.txtclave.Location = new System.Drawing.Point(837, 155);
             this.txtclave.MaxLength = 20;
             this.txtclave.Name = "txtclave";
             this.txtclave.Size = new System.Drawing.Size(153, 20);
@@ -389,7 +390,7 @@ namespace EXPO60.Vista
             // 
             // cmbTipoU
             // 
-            this.cmbTipoU.Location = new System.Drawing.Point(836, 91);
+            this.cmbTipoU.Location = new System.Drawing.Point(837, 78);
             this.cmbTipoU.Name = "cmbTipoU";
             this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
             this.cmbTipoU.TabIndex = 5;
@@ -399,7 +400,7 @@ namespace EXPO60.Vista
             this.cmbEstadoU.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbEstadoU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoU.FormattingEnabled = true;
-            this.cmbEstadoU.Location = new System.Drawing.Point(836, 52);
+            this.cmbEstadoU.Location = new System.Drawing.Point(836, 51);
             this.cmbEstadoU.Name = "cmbEstadoU";
             this.cmbEstadoU.Size = new System.Drawing.Size(153, 21);
             this.cmbEstadoU.TabIndex = 8;
@@ -447,7 +448,7 @@ namespace EXPO60.Vista
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(16, 211);
+            this.btnagregar.Location = new System.Drawing.Point(16, 201);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -465,7 +466,7 @@ namespace EXPO60.Vista
             // 
             this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCifrado.Location = new System.Drawing.Point(323, 131);
+            this.txtCifrado.Location = new System.Drawing.Point(323, 107);
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(31, 20);
             this.txtCifrado.TabIndex = 49;
@@ -504,9 +505,10 @@ namespace EXPO60.Vista
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1025, 547);
+            this.groupBox2.Size = new System.Drawing.Size(1025, 500);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Registro de usuarios";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter_1);
             // 
             // FrmUsuario
@@ -514,7 +516,7 @@ namespace EXPO60.Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1025, 547);
+            this.ClientSize = new System.Drawing.Size(1025, 500);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
