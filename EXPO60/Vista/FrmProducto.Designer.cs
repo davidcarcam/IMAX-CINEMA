@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProducto));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
@@ -53,6 +55,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtnombre);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.cmbtipo);
             this.groupBox1.Controls.Add(this.cmbprov);
@@ -76,6 +80,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de productos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(109, 63);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.TabIndex = 61;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "nombre";
             // 
             // toolStrip1
             // 
@@ -127,10 +148,11 @@
             // 
             this.dgvproductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvproductos.Location = new System.Drawing.Point(9, 283);
+            this.dgvproductos.Location = new System.Drawing.Point(12, 276);
             this.dgvproductos.Name = "dgvproductos";
-            this.dgvproductos.Size = new System.Drawing.Size(1011, 265);
+            this.dgvproductos.Size = new System.Drawing.Size(1008, 265);
             this.dgvproductos.TabIndex = 0;
+            this.dgvproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgvproductos_CellContentClick);
             // 
             // btneliminar
             // 
@@ -366,5 +388,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Label label3;
     }
 }

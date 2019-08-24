@@ -223,5 +223,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void PanelContenedor_Resize(object sender, EventArgs e)
+        {
+
+        }
     }
 }

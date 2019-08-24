@@ -30,6 +30,7 @@ namespace EXPO60.Vista
             }
             else
             {
+                Agregar.producto = txtnombre.Text;
                 Agregar.precio = txtprecio.Text;
                 Agregar.local = Convert.ToInt16(cbmlocal.SelectedValue);
                 Agregar.proveedor = Convert.ToInt16(cmbprov.SelectedValue); ;
@@ -91,40 +92,29 @@ namespace EXPO60.Vista
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
         }
-        private void dgvproductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int posicion;
-            posicion = this.dgvproductos.CurrentRow.Index;
-            txtid.Text = this.dgvproductos[0, posicion].Value.ToString();
-            txtprecio.Text = this.dgvproductos[1, posicion].Value.ToString();
-            cbmlocal.Text = this.dgvproductos[2, posicion].Value.ToString();
-            cmbprov.Text = this.dgvproductos[3, posicion].Value.ToString();
-            cmbtipo.Text = this.dgvproductos[4, posicion].Value.ToString();
-            btnactualizar.Enabled = true;
-            btneliminar.Enabled = true;
-            btnagregar.Enabled = false;
-        }
+        
         private void Frmproductos_Load(object sender, EventArgs e)
         {
             MostrarProducto();
+            mostarET();
             this.dgvproductos.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
-            
-
+        }
+        public void mostarET()
+        {
             cmbprov.DataSource = Funciones_Productos.VerProveedor();
-            cmbprov.DisplayMember = "NOMBRE_PROV";
-            cmbprov.ValueMember = "ID_PROVEEDOR";
+            cmbprov.DisplayMember = "proveedores";
+            cmbprov.ValueMember = "id_proveedor";
 
             cbmlocal.DataSource = Funciones_Productos.verLocal();
-            cbmlocal.DisplayMember = "NOMBRE_LOCAL";
-            cbmlocal.ValueMember = "ID_LOCAL";
+            cbmlocal.DisplayMember = "nombre";
+            cbmlocal.ValueMember = "id_local";
 
             cmbtipo.DataSource = Funciones_Productos.VerTipo();
-            cmbtipo.DisplayMember = "NOMBRE_TIPO_P";
-            cmbtipo.ValueMember = "ID_TIPO_PRODUCTO";
+            cmbtipo.DisplayMember = "id_tipo_prod";
+            cmbtipo.ValueMember = "tipo_producto";
         }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -138,6 +128,20 @@ namespace EXPO60.Vista
         private void btnagregar_Click_1(object sender, EventArgs e)
         {
             AgregarProducto();
+        }
+
+        private void Dgvproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvproductos.CurrentRow.Index;
+            txtid.Text = this.dgvproductos[0, posicion].Value.ToString();
+            txtprecio.Text = this.dgvproductos[1, posicion].Value.ToString();
+            cbmlocal.Text = this.dgvproductos[2, posicion].Value.ToString();
+            cmbprov.Text = this.dgvproductos[3, posicion].Value.ToString();
+            cmbtipo.Text = this.dgvproductos[4, posicion].Value.ToString();
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
         }
     }
 }

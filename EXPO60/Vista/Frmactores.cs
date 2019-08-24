@@ -145,5 +145,15 @@ namespace EXPO60.Vista
         {
                 this.Close();
         }
+
+        private void ToolStrip1_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GrpActores_Resize(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -106,6 +106,7 @@
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(153, 21);
             this.cmbGenero.TabIndex = 6;
+            this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.CmbGenero_SelectedIndexChanged);
             // 
             // cmbestado
             // 

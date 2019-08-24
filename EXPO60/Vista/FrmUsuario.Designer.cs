@@ -34,12 +34,12 @@ namespace EXPO60.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbEstadoU = new System.Windows.Forms.ComboBox();
+            this.cmbTipoU = new System.Windows.Forms.ComboBox();
             this.txtclave = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
@@ -63,7 +63,6 @@ namespace EXPO60.Vista
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbTipoU = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -76,7 +75,6 @@ namespace EXPO60.Vista
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.txtCifrado);
             this.groupBox2.Controls.Add(this.btnagregar);
             this.groupBox2.Controls.Add(this.toolStrip1);
@@ -112,18 +110,11 @@ namespace EXPO60.Vista
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(456, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
             // txtCifrado
             // 
             this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCifrado.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCifrado.Location = new System.Drawing.Point(338, 107);
+            this.txtCifrado.Location = new System.Drawing.Point(326, 94);
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(31, 20);
             this.txtCifrado.TabIndex = 49;
@@ -167,9 +158,10 @@ namespace EXPO60.Vista
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnCerrar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Location = new System.Drawing.Point(3, 519);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
             this.toolStrip1.TabIndex = 47;
@@ -194,6 +186,13 @@ namespace EXPO60.Vista
             this.cmbEstadoU.Name = "cmbEstadoU";
             this.cmbEstadoU.Size = new System.Drawing.Size(153, 21);
             this.cmbEstadoU.TabIndex = 8;
+            // 
+            // cmbTipoU
+            // 
+            this.cmbTipoU.Location = new System.Drawing.Point(839, 54);
+            this.cmbTipoU.Name = "cmbTipoU";
+            this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
+            this.cmbTipoU.TabIndex = 5;
             // 
             // txtclave
             // 
@@ -266,7 +265,7 @@ namespace EXPO60.Vista
             this.txtdireccion.Location = new System.Drawing.Point(456, 92);
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(153, 71);
+            this.txtdireccion.Size = new System.Drawing.Size(196, 71);
             this.txtdireccion.TabIndex = 4;
             this.txtdireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdireccion_KeyPress);
             // 
@@ -274,7 +273,7 @@ namespace EXPO60.Vista
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtid.Location = new System.Drawing.Point(338, 65);
+            this.txtid.Location = new System.Drawing.Point(326, 41);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(31, 20);
             this.txtid.TabIndex = 36;
@@ -411,9 +410,9 @@ namespace EXPO60.Vista
             // 
             // txtcorreo
             // 
-            this.txtcorreo.Location = new System.Drawing.Point(0, 0);
+            this.txtcorreo.Location = new System.Drawing.Point(456, 57);
             this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(100, 20);
+            this.txtcorreo.Size = new System.Drawing.Size(196, 20);
             this.txtcorreo.TabIndex = 53;
             // 
             // label6
@@ -430,10 +429,10 @@ namespace EXPO60.Vista
             // txtdocumento
             // 
             this.txtdocumento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtdocumento.Location = new System.Drawing.Point(419, 14);
+            this.txtdocumento.Location = new System.Drawing.Point(456, 23);
             this.txtdocumento.Mask = "00000000-0";
             this.txtdocumento.Name = "txtdocumento";
-            this.txtdocumento.Size = new System.Drawing.Size(153, 20);
+            this.txtdocumento.Size = new System.Drawing.Size(196, 20);
             this.txtdocumento.TabIndex = 5;
             // 
             // label5
@@ -441,7 +440,7 @@ namespace EXPO60.Vista
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(375, 14);
+            this.label5.Location = new System.Drawing.Point(397, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 20);
             this.label5.TabIndex = 24;
@@ -509,13 +508,6 @@ namespace EXPO60.Vista
             this.label1.TabIndex = 17;
             this.label1.Text = "Nombre";
             // 
-            // cmbTipoU
-            // 
-            this.cmbTipoU.Location = new System.Drawing.Point(839, 54);
-            this.cmbTipoU.Name = "cmbTipoU";
-            this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
-            this.cmbTipoU.TabIndex = 5;
-            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,7 +561,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCifrado;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cmbTipoU;
     }
 }
