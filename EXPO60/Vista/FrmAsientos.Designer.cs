@@ -32,8 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsientos));
             this.grpAsientos = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolbtnCerrar_Asientos = new System.Windows.Forms.ToolStripButton();
             this.cmbEstado_Asiento = new System.Windows.Forms.ComboBox();
             this.cmbSala = new System.Windows.Forms.ComboBox();
             this.lblEstado_Asiento = new System.Windows.Forms.Label();
@@ -72,38 +71,29 @@
             this.grpAsientos.Location = new System.Drawing.Point(0, 0);
             this.grpAsientos.Name = "grpAsientos";
             this.grpAsientos.Size = new System.Drawing.Size(1025, 547);
-            this.grpAsientos.TabIndex = 3;
+            this.grpAsientos.TabIndex = 0;
             this.grpAsientos.TabStop = false;
             this.grpAsientos.Text = "Registro de Asientos";
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripButton1});
+            this.toolbtnCerrar_Asientos});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
             this.toolStrip1.TabIndex = 65;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // toolbtnCerrar_Asientos
             // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(99, 22);
-            this.toolStripLabel1.Text = "cerrar formulariio";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::EXPO60.Properties.Resources.cancel;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolbtnCerrar_Asientos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolbtnCerrar_Asientos.Image = global::EXPO60.Properties.Resources.cancel;
+            this.toolbtnCerrar_Asientos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolbtnCerrar_Asientos.Name = "toolbtnCerrar_Asientos";
+            this.toolbtnCerrar_Asientos.Size = new System.Drawing.Size(107, 22);
+            this.toolbtnCerrar_Asientos.Text = "Cerrar Asientos";
+            this.toolbtnCerrar_Asientos.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // cmbEstado_Asiento
             // 
@@ -112,7 +102,7 @@
             this.cmbEstado_Asiento.Location = new System.Drawing.Point(819, 79);
             this.cmbEstado_Asiento.Name = "cmbEstado_Asiento";
             this.cmbEstado_Asiento.Size = new System.Drawing.Size(200, 21);
-            this.cmbEstado_Asiento.TabIndex = 64;
+            this.cmbEstado_Asiento.TabIndex = 3;
             // 
             // cmbSala
             // 
@@ -121,7 +111,7 @@
             this.cmbSala.Location = new System.Drawing.Point(420, 80);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(200, 21);
-            this.cmbSala.TabIndex = 63;
+            this.cmbSala.TabIndex = 2;
             // 
             // lblEstado_Asiento
             // 
@@ -130,7 +120,7 @@
             this.lblEstado_Asiento.Location = new System.Drawing.Point(626, 80);
             this.lblEstado_Asiento.Name = "lblEstado_Asiento";
             this.lblEstado_Asiento.Size = new System.Drawing.Size(194, 20);
-            this.lblEstado_Asiento.TabIndex = 62;
+            this.lblEstado_Asiento.TabIndex = 0;
             this.lblEstado_Asiento.Text = "Estado actual del Asiento:";
             // 
             // lblSala
@@ -140,7 +130,7 @@
             this.lblSala.Location = new System.Drawing.Point(343, 81);
             this.lblSala.Name = "lblSala";
             this.lblSala.Size = new System.Drawing.Size(45, 20);
-            this.lblSala.TabIndex = 59;
+            this.lblSala.TabIndex = 0;
             this.lblSala.Text = "Sala:";
             // 
             // txtID_Asiento
@@ -148,7 +138,7 @@
             this.txtID_Asiento.Location = new System.Drawing.Point(643, 47);
             this.txtID_Asiento.Name = "txtID_Asiento";
             this.txtID_Asiento.Size = new System.Drawing.Size(89, 20);
-            this.txtID_Asiento.TabIndex = 57;
+            this.txtID_Asiento.TabIndex = 0;
             this.txtID_Asiento.Visible = false;
             // 
             // txtNumero_Asiento
@@ -157,7 +147,7 @@
             this.txtNumero_Asiento.MaxLength = 7;
             this.txtNumero_Asiento.Name = "txtNumero_Asiento";
             this.txtNumero_Asiento.Size = new System.Drawing.Size(200, 20);
-            this.txtNumero_Asiento.TabIndex = 58;
+            this.txtNumero_Asiento.TabIndex = 1;
             this.txtNumero_Asiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_Asiento_KeyPress);
             this.txtNumero_Asiento.Validated += new System.EventHandler(this.TxtNumero_Asiento_Validated);
             // 
@@ -168,7 +158,7 @@
             this.lblAsiento.Location = new System.Drawing.Point(23, 85);
             this.lblAsiento.Name = "lblAsiento";
             this.lblAsiento.Size = new System.Drawing.Size(67, 20);
-            this.lblAsiento.TabIndex = 56;
+            this.lblAsiento.TabIndex = 0;
             this.lblAsiento.Text = "Asiento:";
             // 
             // dgvAsientos
@@ -178,7 +168,7 @@
             this.dgvAsientos.Location = new System.Drawing.Point(27, 249);
             this.dgvAsientos.Name = "dgvAsientos";
             this.dgvAsientos.Size = new System.Drawing.Size(986, 265);
-            this.dgvAsientos.TabIndex = 51;
+            this.dgvAsientos.TabIndex = 0;
             this.dgvAsientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAsientos_CellClick);
             // 
             // btnEliminar_Asiento
@@ -210,7 +200,7 @@
             this.btnEliminar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEliminar_Asiento.selected = false;
             this.btnEliminar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnEliminar_Asiento.TabIndex = 50;
+            this.btnEliminar_Asiento.TabIndex = 7;
             this.btnEliminar_Asiento.Text = "Eliminar Asiento";
             this.btnEliminar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -246,7 +236,7 @@
             this.btnActualizar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnActualizar_Asiento.selected = false;
             this.btnActualizar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnActualizar_Asiento.TabIndex = 49;
+            this.btnActualizar_Asiento.TabIndex = 6;
             this.btnActualizar_Asiento.Text = "Actualizar Asiento";
             this.btnActualizar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -282,7 +272,7 @@
             this.btnMostrar_Asientos.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMostrar_Asientos.selected = false;
             this.btnMostrar_Asientos.Size = new System.Drawing.Size(241, 48);
-            this.btnMostrar_Asientos.TabIndex = 48;
+            this.btnMostrar_Asientos.TabIndex = 5;
             this.btnMostrar_Asientos.Text = "Mostrar Asientos";
             this.btnMostrar_Asientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostrar_Asientos.Textcolor = System.Drawing.Color.White;
@@ -318,7 +308,7 @@
             this.btnAgregar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAgregar_Asiento.selected = false;
             this.btnAgregar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnAgregar_Asiento.TabIndex = 47;
+            this.btnAgregar_Asiento.TabIndex = 4;
             this.btnAgregar_Asiento.Text = "Agregar Asiento";
             this.btnAgregar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -366,7 +356,6 @@
         private System.Windows.Forms.ComboBox cmbSala;
         private System.Windows.Forms.ErrorProvider epError1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolbtnCerrar_Asientos;
     }
 }

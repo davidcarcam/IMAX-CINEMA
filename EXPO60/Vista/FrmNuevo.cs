@@ -81,7 +81,10 @@ namespace EXPO60.Vista
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion","Salir de la aplicacion",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnmaximizar_Click(object sender, EventArgs e)
@@ -192,7 +195,6 @@ namespace EXPO60.Vista
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
                 this.Close();
             }
         }
@@ -209,9 +211,17 @@ namespace EXPO60.Vista
 
         private void ToolbtnCerrar_Sesion_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            FrmLogin login = new FrmLogin();
-            login.Show();
+            if (MessageBox.Show("Esta seguro que desea cerrar sesion y regresar al login", "Cerrar Sesion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                FrmLogin login = new FrmLogin();
+                login.Show();
+            }
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

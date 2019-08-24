@@ -32,15 +32,15 @@
             this.grpDetalleTicket = new System.Windows.Forms.GroupBox();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.txtFila = new System.Windows.Forms.TextBox();
+            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbfuncion = new System.Windows.Forms.ComboBox();
             this.cmbAsiento = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.idDetalletic = new System.Windows.Forms.TextBox();
             this.dgvusuarios = new System.Windows.Forms.DataGridView();
-            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -67,7 +67,7 @@
             this.grpDetalleTicket.Location = new System.Drawing.Point(1, 3);
             this.grpDetalleTicket.Name = "grpDetalleTicket";
             this.grpDetalleTicket.Size = new System.Drawing.Size(1025, 620);
-            this.grpDetalleTicket.TabIndex = 4;
+            this.grpDetalleTicket.TabIndex = 0;
             this.grpDetalleTicket.TabStop = false;
             this.grpDetalleTicket.Enter += new System.EventHandler(this.grpDetalleTicket_Enter);
             // 
@@ -89,79 +89,6 @@
             this.txtFila.Size = new System.Drawing.Size(22, 13);
             this.txtFila.TabIndex = 49;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
-            this.toolStrip1.TabIndex = 47;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // cmbfuncion
-            // 
-            this.cmbfuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbfuncion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbfuncion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbfuncion.FormattingEnabled = true;
-            this.cmbfuncion.Location = new System.Drawing.Point(277, 83);
-            this.cmbfuncion.Name = "cmbfuncion";
-            this.cmbfuncion.Size = new System.Drawing.Size(153, 21);
-            this.cmbfuncion.TabIndex = 8;
-            // 
-            // cmbAsiento
-            // 
-            this.cmbAsiento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbAsiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAsiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAsiento.FormattingEnabled = true;
-            this.cmbAsiento.Location = new System.Drawing.Point(649, 83);
-            this.cmbAsiento.Name = "cmbAsiento";
-            this.cmbAsiento.Size = new System.Drawing.Size(153, 21);
-            this.cmbAsiento.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(494, 84);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 20);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Asiento Asignado";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(190, 84);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 20);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "Funcion";
-            // 
-            // idDetalletic
-            // 
-            this.idDetalletic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.idDetalletic.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.idDetalletic.Location = new System.Drawing.Point(708, 36);
-            this.idDetalletic.Name = "idDetalletic";
-            this.idDetalletic.Size = new System.Drawing.Size(31, 20);
-            this.idDetalletic.TabIndex = 36;
-            this.idDetalletic.Visible = false;
-            // 
-            // dgvusuarios
-            // 
-            this.dgvusuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvusuarios.Location = new System.Drawing.Point(5, 293);
-            this.dgvusuarios.Name = "dgvusuarios";
-            this.dgvusuarios.Size = new System.Drawing.Size(1011, 265);
-            this.dgvusuarios.TabIndex = 35;
-            // 
             // btnagregar
             // 
             this.btnagregar.Activecolor = System.Drawing.Color.Maroon;
@@ -169,7 +96,7 @@
             this.btnagregar.BackColor = System.Drawing.Color.Maroon;
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
+            this.btnagregar.ButtonText = "Agregar";
             this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
             this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
@@ -191,11 +118,21 @@
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 48;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregar.TabIndex = 3;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 47;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // BtnCerrar
             // 
@@ -207,6 +144,69 @@
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
+            // cmbfuncion
+            // 
+            this.cmbfuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbfuncion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbfuncion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbfuncion.FormattingEnabled = true;
+            this.cmbfuncion.Location = new System.Drawing.Point(277, 83);
+            this.cmbfuncion.Name = "cmbfuncion";
+            this.cmbfuncion.Size = new System.Drawing.Size(153, 21);
+            this.cmbfuncion.TabIndex = 1;
+            // 
+            // cmbAsiento
+            // 
+            this.cmbAsiento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbAsiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAsiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAsiento.FormattingEnabled = true;
+            this.cmbAsiento.Location = new System.Drawing.Point(649, 83);
+            this.cmbAsiento.Name = "cmbAsiento";
+            this.cmbAsiento.Size = new System.Drawing.Size(153, 21);
+            this.cmbAsiento.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(494, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Asiento Asignado";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(190, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Funcion";
+            // 
+            // idDetalletic
+            // 
+            this.idDetalletic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.idDetalletic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.idDetalletic.Location = new System.Drawing.Point(708, 36);
+            this.idDetalletic.Name = "idDetalletic";
+            this.idDetalletic.Size = new System.Drawing.Size(31, 20);
+            this.idDetalletic.TabIndex = 0;
+            this.idDetalletic.Visible = false;
+            // 
+            // dgvusuarios
+            // 
+            this.dgvusuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvusuarios.Location = new System.Drawing.Point(5, 293);
+            this.dgvusuarios.Name = "dgvusuarios";
+            this.dgvusuarios.Size = new System.Drawing.Size(1011, 265);
+            this.dgvusuarios.TabIndex = 0;
+            // 
             // btneliminar
             // 
             this.btneliminar.Activecolor = System.Drawing.Color.Maroon;
@@ -214,7 +214,7 @@
             this.btneliminar.BackColor = System.Drawing.Color.Maroon;
             this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "      Eliminar";
+            this.btneliminar.ButtonText = "Eliminar";
             this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
             this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
@@ -229,16 +229,16 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(772, 224);
+            this.btneliminar.Location = new System.Drawing.Point(771, 224);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 34;
-            this.btneliminar.Text = "      Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.TabIndex = 6;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -249,7 +249,7 @@
             this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
             this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "      Actualizar";
+            this.btnactualizar.ButtonText = "Actualizar";
             this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
             this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
@@ -264,16 +264,16 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(509, 224);
+            this.btnactualizar.Location = new System.Drawing.Point(519, 224);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnactualizar.selected = false;
             this.btnactualizar.Size = new System.Drawing.Size(241, 48);
-            this.btnactualizar.TabIndex = 33;
-            this.btnactualizar.Text = "      Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.TabIndex = 5;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -284,7 +284,7 @@
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "      Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -299,16 +299,16 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(262, 224);
+            this.btnmostrar.Location = new System.Drawing.Point(267, 224);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
-            this.btnmostrar.TabIndex = 32;
-            this.btnmostrar.Text = "      Mostrar";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmostrar.TabIndex = 4;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 

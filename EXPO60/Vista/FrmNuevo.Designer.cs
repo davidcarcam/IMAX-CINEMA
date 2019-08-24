@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNuevo));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
             this.btnnormal = new System.Windows.Forms.ToolStripButton();
             this.btnminimizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolbtnCerrar_Sesion = new System.Windows.Forms.ToolStripButton();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
             this.picimg = new System.Windows.Forms.PictureBox();
             this.picimgL = new System.Windows.Forms.PictureBox();
-            this.toolbtnCerrar_Sesion = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).BeginInit();
@@ -66,20 +66,6 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStrip1_MouseDown);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(100, 22);
-            this.toolStripLabel1.Text = "Cerrar Formulario";
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(243, 25);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1025, 547);
-            this.PanelContenedor.TabIndex = 2;
             // 
             // toolStripButton2
             // 
@@ -146,6 +132,31 @@
             this.toolStripButton1.Text = "Cerrar Formulario";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(100, 22);
+            this.toolStripLabel1.Text = "Cerrar Formulario";
+            // 
+            // toolbtnCerrar_Sesion
+            // 
+            this.toolbtnCerrar_Sesion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolbtnCerrar_Sesion.Image = global::EXPO60.Properties.Resources.change_power_options;
+            this.toolbtnCerrar_Sesion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolbtnCerrar_Sesion.Name = "toolbtnCerrar_Sesion";
+            this.toolbtnCerrar_Sesion.Size = new System.Drawing.Size(96, 22);
+            this.toolbtnCerrar_Sesion.Text = "Cerrar Sesion";
+            this.toolbtnCerrar_Sesion.Click += new System.EventHandler(this.ToolbtnCerrar_Sesion_Click_1);
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(243, 25);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1025, 547);
+            this.PanelContenedor.TabIndex = 2;
+            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
+            // 
             // MenuVertical
             // 
             this.MenuVertical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuVertical.BackgroundImage")));
@@ -186,17 +197,17 @@
             this.btnInicio.IconRightVisible = true;
             this.btnInicio.IconRightZoom = 0D;
             this.btnInicio.IconVisible = true;
-            this.btnInicio.IconZoom = 100D;
+            this.btnInicio.IconZoom = 90D;
             this.btnInicio.IsTab = false;
-            this.btnInicio.Location = new System.Drawing.Point(12, 277);
+            this.btnInicio.Location = new System.Drawing.Point(3, 277);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Normalcolor = System.Drawing.Color.Transparent;
             this.btnInicio.OnHovercolor = System.Drawing.Color.DarkRed;
             this.btnInicio.OnHoverTextColor = System.Drawing.Color.DimGray;
             this.btnInicio.selected = false;
-            this.btnInicio.Size = new System.Drawing.Size(202, 42);
-            this.btnInicio.TabIndex = 57;
+            this.btnInicio.Size = new System.Drawing.Size(213, 46);
+            this.btnInicio.TabIndex = 1;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnInicio.Textcolor = System.Drawing.Color.White;
@@ -225,16 +236,6 @@
             this.picimgL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picimgL.TabIndex = 46;
             this.picimgL.TabStop = false;
-            // 
-            // toolbtnCerrar_Sesion
-            // 
-            this.toolbtnCerrar_Sesion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolbtnCerrar_Sesion.Image = global::EXPO60.Properties.Resources.change_power_options;
-            this.toolbtnCerrar_Sesion.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolbtnCerrar_Sesion.Name = "toolbtnCerrar_Sesion";
-            this.toolbtnCerrar_Sesion.Size = new System.Drawing.Size(96, 22);
-            this.toolbtnCerrar_Sesion.Text = "Cerrar Sesion";
-            this.toolbtnCerrar_Sesion.Click += new System.EventHandler(this.ToolbtnCerrar_Sesion_Click_1);
             // 
             // FrmNuevo
             // 

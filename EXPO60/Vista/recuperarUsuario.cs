@@ -27,22 +27,7 @@ namespace EXPO60.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            validarRecuperar.resetClave(txtusuarioRecuperar.Text);
-            if (Email_Valido(txtusuarioRecuperar.Text) == false)// llamado del metodo Email_Valido
-            {
-                error1.SetError(txtusuarioRecuperar, " Ingrese un Email Válido");
-                txtusuarioRecuperar.Focus();
-                
-                vaciarampos();
-                return;
-            }
-            else
-            {
-                error1.Clear();
-                
-                vaciarampos();
-
-            }
+            
 
         }
         public static bool Email_Valido(String email) // Método para validar el Email ingresado
@@ -79,6 +64,36 @@ namespace EXPO60.Vista
             FrmLogin principal = new FrmLogin();
             principal.Show();
             this.Hide();
+        }
+
+        private void BtnRecuperar_Click(object sender, EventArgs e)
+        {
+            validarRecuperar.resetClave(txtusuarioRecuperar.Text);
+            if (Email_Valido(txtusuarioRecuperar.Text) == false)// llamado del metodo Email_Valido
+            {
+                error1.SetError(txtusuarioRecuperar, " Ingrese un Email Válido");
+                txtusuarioRecuperar.Focus();
+
+                vaciarampos();
+                return;
+            }
+            else
+            {
+                error1.Clear();
+
+                vaciarampos();
+
+            }
+        }
+
+        private void BtntoolCerrar_Correo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

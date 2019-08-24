@@ -71,7 +71,7 @@
             this.grpRegistro_Sala.Location = new System.Drawing.Point(0, 0);
             this.grpRegistro_Sala.Name = "grpRegistro_Sala";
             this.grpRegistro_Sala.Size = new System.Drawing.Size(1025, 547);
-            this.grpRegistro_Sala.TabIndex = 2;
+            this.grpRegistro_Sala.TabIndex = 0;
             this.grpRegistro_Sala.TabStop = false;
             this.grpRegistro_Sala.Text = "Registro de sala";
             this.grpRegistro_Sala.Enter += new System.EventHandler(this.grpRegistro_Sala_Enter);
@@ -114,7 +114,7 @@
             this.lblEstado_Sala.Location = new System.Drawing.Point(799, 102);
             this.lblEstado_Sala.Name = "lblEstado_Sala";
             this.lblEstado_Sala.Size = new System.Drawing.Size(135, 20);
-            this.lblEstado_Sala.TabIndex = 62;
+            this.lblEstado_Sala.TabIndex = 0;
             this.lblEstado_Sala.Text = "Estado de la sala:";
             // 
             // txtCapacidad_Sala
@@ -135,7 +135,7 @@
             this.lblCapacidad_Sala.Location = new System.Drawing.Point(452, 102);
             this.lblCapacidad_Sala.Name = "lblCapacidad_Sala";
             this.lblCapacidad_Sala.Size = new System.Drawing.Size(160, 20);
-            this.lblCapacidad_Sala.TabIndex = 59;
+            this.lblCapacidad_Sala.TabIndex = 0;
             this.lblCapacidad_Sala.Text = "Capacidad de la sala:";
             // 
             // txtID_Sala
@@ -163,7 +163,7 @@
             this.lblNumero_Sala.Location = new System.Drawing.Point(125, 102);
             this.lblNumero_Sala.Name = "lblNumero_Sala";
             this.lblNumero_Sala.Size = new System.Drawing.Size(140, 20);
-            this.lblNumero_Sala.TabIndex = 56;
+            this.lblNumero_Sala.TabIndex = 0;
             this.lblNumero_Sala.Text = "Numero de la sala:";
             // 
             // dgvSalas

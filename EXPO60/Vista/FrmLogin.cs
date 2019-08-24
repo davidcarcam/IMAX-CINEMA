@@ -83,7 +83,7 @@ namespace EXPO60.Vista
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            recuperarUsuario recu = new recuperarUsuario();
+            FrmMetodos_Recuperar recu = new FrmMetodos_Recuperar();
             recu.Show();
             this.Hide();
         }
@@ -125,7 +125,10 @@ namespace EXPO60.Vista
 
         private void ToolbtnCerra_Aplicacion_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("¿Esta seguro que desea salir de la aplicacion?", "Salir de la aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void ToolStrip1_MouseDown(object sender, MouseEventArgs e)

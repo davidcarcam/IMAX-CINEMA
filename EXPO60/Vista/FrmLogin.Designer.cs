@@ -33,8 +33,12 @@ namespace EXPO60.Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolbtnCerra_Aplicacion = new System.Windows.Forms.ToolStripButton();
+            this.toollblLogin = new System.Windows.Forms.ToolStripLabel();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.linkPrimerUso = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,10 +46,6 @@ namespace EXPO60.Vista
             this.btbAcceder = new System.Windows.Forms.Button();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toollblLogin = new System.Windows.Forms.ToolStripLabel();
-            this.toolbtnCerra_Aplicacion = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,8 +69,36 @@ namespace EXPO60.Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(679, 298);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolbtnCerra_Aplicacion,
+            this.toollblLogin});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
+            this.toolStrip1.TabIndex = 14;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStrip1_MouseDown);
+            // 
+            // toolbtnCerra_Aplicacion
+            // 
+            this.toolbtnCerra_Aplicacion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolbtnCerra_Aplicacion.Image = global::EXPO60.Properties.Resources.cancel;
+            this.toolbtnCerra_Aplicacion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolbtnCerra_Aplicacion.Name = "toolbtnCerra_Aplicacion";
+            this.toolbtnCerra_Aplicacion.Size = new System.Drawing.Size(103, 22);
+            this.toolbtnCerra_Aplicacion.Text = "Cerrar Sistema";
+            this.toolbtnCerra_Aplicacion.Click += new System.EventHandler(this.ToolbtnCerra_Aplicacion_Click);
+            // 
+            // toollblLogin
+            // 
+            this.toollblLogin.Name = "toollblLogin";
+            this.toollblLogin.Size = new System.Drawing.Size(75, 22);
+            this.toollblLogin.Text = "Iniciar sesion";
             // 
             // txtCifrado
             // 
@@ -78,7 +106,7 @@ namespace EXPO60.Vista
             this.txtCifrado.Location = new System.Drawing.Point(250, 141);
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(30, 20);
-            this.txtCifrado.TabIndex = 13;
+            this.txtCifrado.TabIndex = 0;
             this.txtCifrado.Visible = false;
             this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
             // 
@@ -90,10 +118,20 @@ namespace EXPO60.Vista
             this.linkPrimerUso.Location = new System.Drawing.Point(76, 258);
             this.linkPrimerUso.Name = "linkPrimerUso";
             this.linkPrimerUso.Size = new System.Drawing.Size(72, 16);
-            this.linkPrimerUso.TabIndex = 11;
+            this.linkPrimerUso.TabIndex = 0;
             this.linkPrimerUso.TabStop = true;
             this.linkPrimerUso.Text = "Primer uso";
             this.linkPrimerUso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPrimerUso_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(196, 185);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // linkLabel1
             // 
@@ -103,7 +141,7 @@ namespace EXPO60.Vista
             this.linkLabel1.Location = new System.Drawing.Point(509, 258);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(144, 16);
-            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recuperar Contraseña\r\n";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -116,7 +154,7 @@ namespace EXPO60.Vista
             this.label3.Location = new System.Drawing.Point(306, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Inicio de Sesión";
             // 
             // label2
@@ -127,7 +165,7 @@ namespace EXPO60.Vista
             this.label2.Location = new System.Drawing.Point(307, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 16);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Contraseña";
             // 
             // label1
@@ -138,7 +176,7 @@ namespace EXPO60.Vista
             this.label1.Location = new System.Drawing.Point(307, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 16);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Ingresar su Usuario";
             // 
             // btbAcceder
@@ -157,7 +195,7 @@ namespace EXPO60.Vista
             this.txtContra.MaxLength = 20;
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(286, 20);
-            this.txtContra.TabIndex = 4;
+            this.txtContra.TabIndex = 2;
             this.txtContra.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // txtUsuario
@@ -166,47 +204,9 @@ namespace EXPO60.Vista
             this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(286, 20);
-            this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolbtnCerra_Aplicacion,
-            this.toollblLogin});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
-            this.toolStrip1.TabIndex = 14;
-            this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStrip1_MouseDown);
-            // 
-            // toollblLogin
-            // 
-            this.toollblLogin.Name = "toollblLogin";
-            this.toollblLogin.Size = new System.Drawing.Size(75, 22);
-            this.toollblLogin.Text = "Iniciar sesion";
-            // 
-            // toolbtnCerra_Aplicacion
-            // 
-            this.toolbtnCerra_Aplicacion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolbtnCerra_Aplicacion.Image = global::EXPO60.Properties.Resources.cancel;
-            this.toolbtnCerra_Aplicacion.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolbtnCerra_Aplicacion.Name = "toolbtnCerra_Aplicacion";
-            this.toolbtnCerra_Aplicacion.Size = new System.Drawing.Size(103, 22);
-            this.toolbtnCerra_Aplicacion.Text = "Cerrar Sistema";
-            this.toolbtnCerra_Aplicacion.Click += new System.EventHandler(this.ToolbtnCerra_Aplicacion_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 185);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // FrmLogin
             // 

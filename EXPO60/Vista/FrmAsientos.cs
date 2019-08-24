@@ -46,20 +46,20 @@ namespace EXPO60.Vista
         {
 
 
-            agregar.estado = Convert.ToInt16(cmbEstado.SelectedValue);
-            agregar.num = Convert.ToInt16(cmbNum.SelectedValue);
+            agregar.estado = Convert.ToInt16(cmbEstado_Asiento.SelectedValue);
+           
             agregar.sala = Convert.ToInt16(cmbSala.SelectedValue);
-            agregar.fila = Convert.ToInt16(cmbFila.SelectedValue);
+           
             int datos = Funciones_Asientos.Ingresar_Asientos(agregar);
 
 
         }
         public void Modificar_Asiento()
         {
-            Actualizar.estado = Convert.ToInt16(cmbEstado.SelectedValue);
-            Actualizar.num = Convert.ToInt16(cmbNum.SelectedValue);
+            Actualizar.estado = Convert.ToInt16(cmbEstado_Asiento.SelectedValue);
+       
             Actualizar.sala = Convert.ToInt16(cmbSala.SelectedValue);
-            Actualizar.fila = Convert.ToInt16(cmbFila.SelectedValue);
+        
             Funciones_Asientos.Actualizar_Asiento(Actualizar);
         }
         private void FrmAsientos_Load(object sender, EventArgs e)
@@ -69,21 +69,15 @@ namespace EXPO60.Vista
             btnActualizar_Asiento.Enabled = false;
             btnEliminar_Asiento.Enabled = false;
 
-            cmbEstado.DataSource = Funciones_Asientos.Estado_Asiento();
-            cmbEstado.DisplayMember = "estado_as";
-            cmbEstado.ValueMember = "id_estado_asiento";
+            cmbEstado_Asiento.DataSource = Funciones_Asientos.Estado_Asiento();
+            cmbEstado_Asiento.DisplayMember = "estado_as";
+            cmbEstado_Asiento.ValueMember = "id_estado_asiento";
 
             cmbSala.DataSource = Funciones_Asientos.Sala();
             cmbSala.DisplayMember = "num_sala";
             cmbSala.ValueMember = "id_sala";
 
-            cmbFila.DataSource = Funciones_Asientos.fila();
-            cmbFila.DisplayMember = "fila";
-            cmbFila.ValueMember = "id_fila";
-
-            cmbNum.DataSource = Funciones_Asientos.num();
-            cmbNum.DisplayMember = "num_asiento";
-            cmbNum.ValueMember = "id_num";
+            
         }
         private void BtnAgregar_Asiento_Click(object sender, EventArgs e)
         {
@@ -120,9 +114,9 @@ namespace EXPO60.Vista
             int posicion;
             posicion = this.dgvAsientos.CurrentRow.Index;
             txtID_Asiento.Text = this.dgvAsientos[0, posicion].Value.ToString();
-            cmbFila.Text = this.dgvAsientos[1, posicion].Value.ToString();
-            cmbNum.Text = this.dgvAsientos[2, posicion].Value.ToString();
-            cmbEstado.Text = this.dgvAsientos[3, posicion].Value.ToString();
+            cmbEstado_Asiento.Text = this.dgvAsientos[1, posicion].Value.ToString();
+           
+            
             cmbSala.Text = this.dgvAsientos[4, posicion].Value.ToString();
             btnActualizar_Asiento.Enabled = true;
             btnEliminar_Asiento.Enabled = true;
@@ -144,6 +138,11 @@ namespace EXPO60.Vista
 
                 this.Close();
             }
+        }
+
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

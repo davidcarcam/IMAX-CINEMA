@@ -57,11 +57,7 @@ namespace EXPO60.Vista
         }
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
                 this.Close();
-            }
         }
 
         private void txtaudio_KeyPress(object sender, KeyPressEventArgs e)
