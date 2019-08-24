@@ -51,13 +51,13 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.toolStripPrimer_Usuario = new System.Windows.Forms.ToolStrip();
+            this.toollblPrimer_Usuario = new System.Windows.Forms.ToolStripLabel();
+            this.toolbtnCerrar_Primer = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtConfirmar = new System.Windows.Forms.TextBox();
             this.picPerfil_image = new System.Windows.Forms.PictureBox();
             this.btnCargar_Foto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnIngUsuario = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.toollblPrimer_Usuario = new System.Windows.Forms.ToolStripLabel();
-            this.toolbtnCerrar_Primer = new System.Windows.Forms.ToolStripButton();
             this.ofpPrimer_Usuario = new System.Windows.Forms.OpenFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -299,6 +299,25 @@
             this.toolStripPrimer_Usuario.Text = "toolStrip1";
             this.toolStripPrimer_Usuario.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStripPrimer_Usuario_MouseDown);
             // 
+            // toollblPrimer_Usuario
+            // 
+            this.toollblPrimer_Usuario.ForeColor = System.Drawing.Color.White;
+            this.toollblPrimer_Usuario.Name = "toollblPrimer_Usuario";
+            this.toollblPrimer_Usuario.Size = new System.Drawing.Size(228, 22);
+            this.toollblPrimer_Usuario.Text = "Formulario de creacion del primer usuario";
+            // 
+            // toolbtnCerrar_Primer
+            // 
+            this.toolbtnCerrar_Primer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolbtnCerrar_Primer.BackColor = System.Drawing.Color.White;
+            this.toolbtnCerrar_Primer.ForeColor = System.Drawing.Color.Black;
+            this.toolbtnCerrar_Primer.Image = global::EXPO60.Properties.Resources.cancel;
+            this.toolbtnCerrar_Primer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolbtnCerrar_Primer.Name = "toolbtnCerrar_Primer";
+            this.toolbtnCerrar_Primer.Size = new System.Drawing.Size(118, 22);
+            this.toolbtnCerrar_Primer.Text = "Cerrar Aplicacion";
+            this.toolbtnCerrar_Primer.Click += new System.EventHandler(this.ToolStripButton1_Click);
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -402,25 +421,6 @@
             this.btnIngUsuario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngUsuario.Click += new System.EventHandler(this.BtnIngUsuario_Click_1);
             // 
-            // toollblPrimer_Usuario
-            // 
-            this.toollblPrimer_Usuario.ForeColor = System.Drawing.Color.White;
-            this.toollblPrimer_Usuario.Name = "toollblPrimer_Usuario";
-            this.toollblPrimer_Usuario.Size = new System.Drawing.Size(228, 22);
-            this.toollblPrimer_Usuario.Text = "Formulario de creacion del primer usuario";
-            // 
-            // toolbtnCerrar_Primer
-            // 
-            this.toolbtnCerrar_Primer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolbtnCerrar_Primer.BackColor = System.Drawing.Color.White;
-            this.toolbtnCerrar_Primer.ForeColor = System.Drawing.Color.Black;
-            this.toolbtnCerrar_Primer.Image = global::EXPO60.Properties.Resources.cancel;
-            this.toolbtnCerrar_Primer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolbtnCerrar_Primer.Name = "toolbtnCerrar_Primer";
-            this.toolbtnCerrar_Primer.Size = new System.Drawing.Size(118, 22);
-            this.toolbtnCerrar_Primer.Text = "Cerrar Aplicacion";
-            this.toolbtnCerrar_Primer.Click += new System.EventHandler(this.ToolStripButton1_Click);
-            // 
             // ofpPrimer_Usuario
             // 
             this.ofpPrimer_Usuario.FileName = "Image";
@@ -502,6 +502,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrimerUso";
             this.Load += new System.EventHandler(this.FrmPrimerUso_Load);
+            this.Resize += new System.EventHandler(this.FrmPrimerUso_Resize);
             this.toolStripPrimer_Usuario.ResumeLayout(false);
             this.toolStripPrimer_Usuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil_image)).EndInit();

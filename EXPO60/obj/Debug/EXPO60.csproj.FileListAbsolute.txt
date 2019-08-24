@@ -213,3 +213,6 @@ C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\
 C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmMetodos_Recuperar.resources
 C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Preguntas.resources
 C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Telefono.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmMetodos_Recuperar.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Preguntas.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Telefono.resources
