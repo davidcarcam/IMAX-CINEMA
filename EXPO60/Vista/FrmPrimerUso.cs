@@ -202,5 +202,10 @@ namespace EXPO60.Vista
             w = this.Width;
             h = this.Height;
         }
+
+        private void FrmPrimerUso_Resize(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
