@@ -67,7 +67,7 @@ namespace EXPO60.Vista
 
         private void btnmostrar_Click(object sender, EventArgs e)
         {
-            mostrarfuncion();
+            
         }       
     }
 }
