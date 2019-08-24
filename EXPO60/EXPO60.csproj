@@ -321,6 +321,7 @@
     <None Include="Resources\change-power-options.png" />
     <None Include="Resources\cancel_96px.png" />
     <None Include="Resources\arrows_long_right_96px.png" />
+    <None Include="Resources\camera_96px1.png" />
     <Content Include="Resources\clear-button.png" />
     <Content Include="Resources\crop-button.png" />
     <Content Include="Resources\crop-tool-button.png" />
@@ -329,6 +330,7 @@
     <None Include="Resources\end_call_male_96px.png" />
     <Content Include="Resources\full-screen-exit.png" />
     <None Include="Resources\home_96px.png" />
+    <None Include="Resources\gender_neutral_user_96px1.png" />
     <Content Include="Resources\horizontal-line-remove-button.png" />
     <Content Include="Resources\LogoDavid.jpg" />
     <Content Include="Resources\menu-button.png" />

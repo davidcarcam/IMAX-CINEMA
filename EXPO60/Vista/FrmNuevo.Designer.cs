@@ -206,7 +206,7 @@
             this.btnInicio.OnHoverTextColor = System.Drawing.Color.DimGray;
             this.btnInicio.selected = false;
             this.btnInicio.Size = new System.Drawing.Size(213, 46);
-            this.btnInicio.TabIndex = 57;
+            this.btnInicio.TabIndex = 1;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnInicio.Textcolor = System.Drawing.Color.White;

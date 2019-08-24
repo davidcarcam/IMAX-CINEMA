@@ -38,12 +38,12 @@
             this.separartorRecuperar_Contrasena = new Bunifu.Framework.UI.BunifuSeparator();
             this.toolStripRecuperar_Telefono = new System.Windows.Forms.ToolStrip();
             this.lbltoolRecuperar_Telefono = new System.Windows.Forms.ToolStripLabel();
+            this.btntoolCerrar_Telefono = new System.Windows.Forms.ToolStripButton();
             this.txtNueva_Contrasena = new System.Windows.Forms.TextBox();
             this.txtNuevo_Correo = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnRecuperar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btntoolCerrar_Telefono = new System.Windows.Forms.ToolStripButton();
             lblInstruccion1 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
@@ -52,6 +52,69 @@
             lblNumero = new System.Windows.Forms.Label();
             this.toolStripRecuperar_Telefono.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblInstruccion1
+            // 
+            lblInstruccion1.AutoSize = true;
+            lblInstruccion1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblInstruccion1.Location = new System.Drawing.Point(58, 76);
+            lblInstruccion1.Name = "lblInstruccion1";
+            lblInstruccion1.Size = new System.Drawing.Size(816, 12);
+            lblInstruccion1.TabIndex = 0;
+            lblInstruccion1.Text = "Si los datos fueron ingresados correctamente se enviaria un mensaje con un codigo" +
+    " de seguridad que debera escribir a continuacion:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(90, 360);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(117, 12);
+            label1.TabIndex = 0;
+            label1.Text = "Nueva Contrasena:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(90, 318);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(91, 12);
+            label4.TabIndex = 0;
+            label4.Text = "Nuevo Correo:";
+            // 
+            // lblInformacion3
+            // 
+            lblInformacion3.AutoSize = true;
+            lblInformacion3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblInformacion3.Location = new System.Drawing.Point(115, 281);
+            lblInformacion3.Name = "lblInformacion3";
+            lblInformacion3.Size = new System.Drawing.Size(718, 12);
+            lblInformacion3.TabIndex = 0;
+            lblInformacion3.Text = "Si no es asi. Probablemente los datos estan erroneos, los datos no existen o hay " +
+    "un problema con el envio de datos. ";
+            // 
+            // labelInformacion2
+            // 
+            labelInformacion2.AutoSize = true;
+            labelInformacion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            labelInformacion2.Location = new System.Drawing.Point(119, 256);
+            labelInformacion2.Name = "labelInformacion2";
+            labelInformacion2.Size = new System.Drawing.Size(698, 12);
+            labelInformacion2.TabIndex = 0;
+            labelInformacion2.Text = "Si los datos fueron ingresados correctamente su nuevo correo y contrasena se most" +
+    "raria en los cuadros de abajo:";
+            // 
+            // lblNumero
+            // 
+            lblNumero.AutoSize = true;
+            lblNumero.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblNumero.Location = new System.Drawing.Point(58, 36);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new System.Drawing.Size(320, 12);
+            lblNumero.TabIndex = 0;
+            lblNumero.Text = "Escriba el telefono de recuperacion a continuacion:";
             // 
             // separartorRecuperar_Contrasena
             // 
@@ -64,17 +127,6 @@
             this.separartorRecuperar_Contrasena.TabIndex = 37;
             this.separartorRecuperar_Contrasena.Transparency = 255;
             this.separartorRecuperar_Contrasena.Vertical = false;
-            // 
-            // lblInstruccion1
-            // 
-            lblInstruccion1.AutoSize = true;
-            lblInstruccion1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblInstruccion1.Location = new System.Drawing.Point(58, 76);
-            lblInstruccion1.Name = "lblInstruccion1";
-            lblInstruccion1.Size = new System.Drawing.Size(816, 12);
-            lblInstruccion1.TabIndex = 34;
-            lblInstruccion1.Text = "Si los datos fueron ingresados correctamente se enviaria un mensaje con un codigo" +
-    " de seguridad que debera escribir a continuacion:";
             // 
             // toolStripRecuperar_Telefono
             // 
@@ -96,6 +148,17 @@
             this.lbltoolRecuperar_Telefono.Size = new System.Drawing.Size(131, 22);
             this.lbltoolRecuperar_Telefono.Text = "Preguntas de seguridad";
             // 
+            // btntoolCerrar_Telefono
+            // 
+            this.btntoolCerrar_Telefono.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btntoolCerrar_Telefono.BackColor = System.Drawing.Color.White;
+            this.btntoolCerrar_Telefono.Image = ((System.Drawing.Image)(resources.GetObject("btntoolCerrar_Telefono.Image")));
+            this.btntoolCerrar_Telefono.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btntoolCerrar_Telefono.Name = "btntoolCerrar_Telefono";
+            this.btntoolCerrar_Telefono.Size = new System.Drawing.Size(194, 22);
+            this.btntoolCerrar_Telefono.Text = "Cerrar telefono de recuperacion";
+            this.btntoolCerrar_Telefono.Click += new System.EventHandler(this.BtntoolCerrar_Telefono_Click);
+            // 
             // txtNueva_Contrasena
             // 
             this.txtNueva_Contrasena.Location = new System.Drawing.Point(239, 356);
@@ -104,16 +167,6 @@
             this.txtNueva_Contrasena.ReadOnly = true;
             this.txtNueva_Contrasena.Size = new System.Drawing.Size(594, 20);
             this.txtNueva_Contrasena.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(90, 360);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(117, 12);
-            label1.TabIndex = 38;
-            label1.Text = "Nueva Contrasena:";
             // 
             // txtNuevo_Correo
             // 
@@ -124,54 +177,12 @@
             this.txtNuevo_Correo.Size = new System.Drawing.Size(594, 20);
             this.txtNuevo_Correo.TabIndex = 0;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(90, 318);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(91, 12);
-            label4.TabIndex = 39;
-            label4.Text = "Nuevo Correo:";
-            // 
-            // lblInformacion3
-            // 
-            lblInformacion3.AutoSize = true;
-            lblInformacion3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblInformacion3.Location = new System.Drawing.Point(115, 281);
-            lblInformacion3.Name = "lblInformacion3";
-            lblInformacion3.Size = new System.Drawing.Size(718, 12);
-            lblInformacion3.TabIndex = 40;
-            lblInformacion3.Text = "Si no es asi. Probablemente los datos estan erroneos, los datos no existen o hay " +
-    "un problema con el envio de datos. ";
-            // 
-            // labelInformacion2
-            // 
-            labelInformacion2.AutoSize = true;
-            labelInformacion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelInformacion2.Location = new System.Drawing.Point(119, 256);
-            labelInformacion2.Name = "labelInformacion2";
-            labelInformacion2.Size = new System.Drawing.Size(698, 12);
-            labelInformacion2.TabIndex = 41;
-            labelInformacion2.Text = "Si los datos fueron ingresados correctamente su nuevo correo y contrasena se most" +
-    "raria en los cuadros de abajo:";
-            // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(159, 116);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(615, 20);
             this.txtCodigo.TabIndex = 2;
-            // 
-            // lblNumero
-            // 
-            lblNumero.AutoSize = true;
-            lblNumero.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblNumero.Location = new System.Drawing.Point(58, 36);
-            lblNumero.Name = "lblNumero";
-            lblNumero.Size = new System.Drawing.Size(320, 12);
-            lblNumero.TabIndex = 34;
-            lblNumero.Text = "Escriba el telefono de recuperacion a continuacion:";
             // 
             // txtTelefono
             // 
@@ -215,17 +226,6 @@
             this.btnRecuperar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecuperar.Textcolor = System.Drawing.Color.White;
             this.btnRecuperar.TextFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btntoolCerrar_Telefono
-            // 
-            this.btntoolCerrar_Telefono.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btntoolCerrar_Telefono.BackColor = System.Drawing.Color.White;
-            this.btntoolCerrar_Telefono.Image = ((System.Drawing.Image)(resources.GetObject("btntoolCerrar_Telefono.Image")));
-            this.btntoolCerrar_Telefono.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btntoolCerrar_Telefono.Name = "btntoolCerrar_Telefono";
-            this.btntoolCerrar_Telefono.Size = new System.Drawing.Size(194, 22);
-            this.btntoolCerrar_Telefono.Text = "Cerrar telefono de recuperacion";
-            this.btntoolCerrar_Telefono.Click += new System.EventHandler(this.BtntoolCerrar_Telefono_Click);
             // 
             // FrmRecuperar_Telefono
             // 

@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBotones));
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton15 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -73,17 +73,6 @@
             this.PanelContenedor.TabIndex = 0;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(257, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(511, 25);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Seleccione  un  formularios para ingresar datos";
-            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DarkGray;
@@ -115,12 +104,23 @@
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton1.TabIndex = 76;
+            this.bunifuFlatButton1.TabIndex = 11;
             this.bunifuFlatButton1.Text = "Empresa";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(257, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(511, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Seleccione  un  formularios para ingresar datos";
             // 
             // bunifuFlatButton3
             // 
@@ -153,7 +153,7 @@
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton3.TabIndex = 74;
+            this.bunifuFlatButton3.TabIndex = 6;
             this.bunifuFlatButton3.Text = "Detalle de Idioma";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
@@ -191,7 +191,7 @@
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton2.TabIndex = 73;
+            this.bunifuFlatButton2.TabIndex = 3;
             this.bunifuFlatButton2.Text = "Detalle de Factura";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
@@ -229,7 +229,7 @@
             this.bunifuFlatButton15.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton15.selected = false;
             this.bunifuFlatButton15.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton15.TabIndex = 68;
+            this.bunifuFlatButton15.TabIndex = 9;
             this.bunifuFlatButton15.Text = "Proveedores";
             this.bunifuFlatButton15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton15.Textcolor = System.Drawing.Color.Black;
@@ -267,7 +267,7 @@
             this.bunifuFlatButton12.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton12.selected = false;
             this.bunifuFlatButton12.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton12.TabIndex = 71;
+            this.bunifuFlatButton12.TabIndex = 5;
             this.bunifuFlatButton12.Text = "Factura local";
             this.bunifuFlatButton12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton12.Textcolor = System.Drawing.Color.Black;
@@ -305,7 +305,7 @@
             this.bunifuFlatButton19.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton19.selected = false;
             this.bunifuFlatButton19.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton19.TabIndex = 64;
+            this.bunifuFlatButton19.TabIndex = 4;
             this.bunifuFlatButton19.Text = "Funciones";
             this.bunifuFlatButton19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton19.Textcolor = System.Drawing.Color.Black;
@@ -343,7 +343,7 @@
             this.bunifuFlatButton22.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton22.selected = false;
             this.bunifuFlatButton22.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton22.TabIndex = 61;
+            this.bunifuFlatButton22.TabIndex = 2;
             this.bunifuFlatButton22.Text = "Usuario";
             this.bunifuFlatButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton22.Textcolor = System.Drawing.Color.Black;
@@ -381,7 +381,7 @@
             this.bunifuFlatButton13.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton13.selected = false;
             this.bunifuFlatButton13.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton13.TabIndex = 70;
+            this.bunifuFlatButton13.TabIndex = 10;
             this.bunifuFlatButton13.Text = "Local de alimentos";
             this.bunifuFlatButton13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton13.Textcolor = System.Drawing.Color.Black;
@@ -419,7 +419,7 @@
             this.bunifuFlatButton18.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton18.selected = false;
             this.bunifuFlatButton18.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton18.TabIndex = 65;
+            this.bunifuFlatButton18.TabIndex = 8;
             this.bunifuFlatButton18.Text = "Salas";
             this.bunifuFlatButton18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton18.Textcolor = System.Drawing.Color.Black;
@@ -457,7 +457,7 @@
             this.bunifuFlatButton20.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton20.selected = false;
             this.bunifuFlatButton20.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton20.TabIndex = 63;
+            this.bunifuFlatButton20.TabIndex = 7;
             this.bunifuFlatButton20.Text = "Tickets";
             this.bunifuFlatButton20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton20.Textcolor = System.Drawing.Color.Black;
@@ -495,7 +495,7 @@
             this.bunifuFlatButton17.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton17.selected = false;
             this.bunifuFlatButton17.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton17.TabIndex = 66;
+            this.bunifuFlatButton17.TabIndex = 14;
             this.bunifuFlatButton17.Text = "Asientos";
             this.bunifuFlatButton17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton17.Textcolor = System.Drawing.Color.Black;
@@ -533,7 +533,7 @@
             this.bunifuFlatButton16.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton16.selected = false;
             this.bunifuFlatButton16.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton16.TabIndex = 67;
+            this.bunifuFlatButton16.TabIndex = 13;
             this.bunifuFlatButton16.Text = "Peliculas";
             this.bunifuFlatButton16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton16.Textcolor = System.Drawing.Color.Black;
@@ -571,7 +571,7 @@
             this.bunifuFlatButton14.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton14.selected = false;
             this.bunifuFlatButton14.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton14.TabIndex = 69;
+            this.bunifuFlatButton14.TabIndex = 15;
             this.bunifuFlatButton14.Text = "Productos";
             this.bunifuFlatButton14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton14.Textcolor = System.Drawing.Color.Black;
@@ -609,7 +609,7 @@
             this.bunifuFlatButton21.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton21.selected = false;
             this.bunifuFlatButton21.Size = new System.Drawing.Size(237, 62);
-            this.bunifuFlatButton21.TabIndex = 62;
+            this.bunifuFlatButton21.TabIndex = 12;
             this.bunifuFlatButton21.Text = "Personajes";
             this.bunifuFlatButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton21.Textcolor = System.Drawing.Color.Black;

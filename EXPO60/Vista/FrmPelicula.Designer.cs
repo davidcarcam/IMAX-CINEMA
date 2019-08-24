@@ -84,7 +84,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1025, 547);
-            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de peliculas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -96,7 +96,7 @@
             this.cmbDimensiones.Location = new System.Drawing.Point(449, 117);
             this.cmbDimensiones.Name = "cmbDimensiones";
             this.cmbDimensiones.Size = new System.Drawing.Size(153, 21);
-            this.cmbDimensiones.TabIndex = 62;
+            this.cmbDimensiones.TabIndex = 5;
             // 
             // cmbGenero
             // 
@@ -105,7 +105,7 @@
             this.cmbGenero.Location = new System.Drawing.Point(707, 43);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(153, 21);
-            this.cmbGenero.TabIndex = 61;
+            this.cmbGenero.TabIndex = 6;
             // 
             // cmbestado
             // 
@@ -114,7 +114,7 @@
             this.cmbestado.Location = new System.Drawing.Point(707, 116);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(153, 21);
-            this.cmbestado.TabIndex = 60;
+            this.cmbestado.TabIndex = 7;
             // 
             // toolStrip1
             // 
@@ -151,7 +151,7 @@
             this.dgvpeliculas.Location = new System.Drawing.Point(9, 256);
             this.dgvpeliculas.Name = "dgvpeliculas";
             this.dgvpeliculas.Size = new System.Drawing.Size(1011, 265);
-            this.dgvpeliculas.TabIndex = 36;
+            this.dgvpeliculas.TabIndex = 0;
             this.dgvpeliculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpeliculas_CellContentClick);
             // 
             // btneliminar
@@ -161,7 +161,7 @@
             this.btneliminar.BackColor = System.Drawing.Color.Maroon;
             this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "      Eliminar";
+            this.btneliminar.ButtonText = "Eliminar";
             this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
             this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
@@ -176,16 +176,16 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(781, 176);
+            this.btneliminar.Location = new System.Drawing.Point(780, 176);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 35;
-            this.btneliminar.Text = "      Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.TabIndex = 11;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
@@ -197,7 +197,7 @@
             this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
             this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "      Actualizar";
+            this.btnactualizar.ButtonText = "Actualizar";
             this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
             this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
@@ -212,16 +212,16 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(528, 176);
+            this.btnactualizar.Location = new System.Drawing.Point(523, 176);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnactualizar.selected = false;
             this.btnactualizar.Size = new System.Drawing.Size(241, 48);
-            this.btnactualizar.TabIndex = 34;
-            this.btnactualizar.Text = "      Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.TabIndex = 10;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
@@ -233,7 +233,7 @@
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "      Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -248,16 +248,16 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(260, 176);
+            this.btnmostrar.Location = new System.Drawing.Point(266, 176);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
-            this.btnmostrar.TabIndex = 33;
-            this.btnmostrar.Text = "      Mostrar";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmostrar.TabIndex = 9;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
@@ -269,7 +269,7 @@
             this.btnagregar.BackColor = System.Drawing.Color.Maroon;
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "      Agregar";
+            this.btnagregar.ButtonText = "Agregar";
             this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
             this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
@@ -291,9 +291,9 @@
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 32;
-            this.btnagregar.Text = "      Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregar.TabIndex = 8;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
@@ -303,7 +303,7 @@
             this.idPelicula.Location = new System.Drawing.Point(921, 48);
             this.idPelicula.Name = "idPelicula";
             this.idPelicula.Size = new System.Drawing.Size(28, 20);
-            this.idPelicula.TabIndex = 28;
+            this.idPelicula.TabIndex = 0;
             this.idPelicula.Visible = false;
             // 
             // label7
@@ -313,7 +313,7 @@
             this.label7.Location = new System.Drawing.Point(641, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
-            this.label7.TabIndex = 26;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Estado";
             // 
             // txttitulo
@@ -322,7 +322,7 @@
             this.txttitulo.MaxLength = 30;
             this.txttitulo.Name = "txttitulo";
             this.txttitulo.Size = new System.Drawing.Size(153, 20);
-            this.txttitulo.TabIndex = 25;
+            this.txttitulo.TabIndex = 1;
             this.txttitulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttitulo_KeyPress);
             // 
             // label6
@@ -332,7 +332,7 @@
             this.label6.Location = new System.Drawing.Point(75, 43);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 20);
-            this.label6.TabIndex = 24;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Titulo";
             // 
             // label5
@@ -342,7 +342,7 @@
             this.label5.Location = new System.Drawing.Point(638, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
-            this.label5.TabIndex = 22;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Genero";
             // 
             // txtdirector
@@ -351,7 +351,7 @@
             this.txtdirector.MaxLength = 45;
             this.txtdirector.Name = "txtdirector";
             this.txtdirector.Size = new System.Drawing.Size(153, 20);
-            this.txtdirector.TabIndex = 21;
+            this.txtdirector.TabIndex = 3;
             this.txtdirector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdirector_KeyPress);
             // 
             // label4
@@ -361,7 +361,7 @@
             this.label4.Location = new System.Drawing.Point(57, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 20;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Director";
             // 
             // label3
@@ -371,7 +371,7 @@
             this.label3.Location = new System.Drawing.Point(338, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 20);
-            this.label3.TabIndex = 18;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Dimensiones";
             // 
             // label2
@@ -381,7 +381,7 @@
             this.label2.Location = new System.Drawing.Point(84, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
-            this.label2.TabIndex = 16;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Año";
             // 
             // txtaudio
@@ -390,7 +390,7 @@
             this.txtaudio.MaxLength = 20;
             this.txtaudio.Name = "txtaudio";
             this.txtaudio.Size = new System.Drawing.Size(153, 20);
-            this.txtaudio.TabIndex = 1;
+            this.txtaudio.TabIndex = 4;
             this.txtaudio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtaudio_KeyPress);
             // 
             // label1
@@ -400,7 +400,7 @@
             this.label1.Location = new System.Drawing.Point(338, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
-            this.label1.TabIndex = 14;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Idioma";
             // 
             // FrmPelicula
