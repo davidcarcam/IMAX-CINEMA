@@ -101,7 +101,7 @@
             // 
             this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbESTADO_SALA.FormattingEnabled = true;
-            this.cmbESTADO_SALA.Location = new System.Drawing.Point(951, 102);
+            this.cmbESTADO_SALA.Location = new System.Drawing.Point(860, 99);
             this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
             this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
             this.cmbESTADO_SALA.TabIndex = 3;
@@ -111,7 +111,7 @@
             // 
             this.lblEstado_Sala.AutoSize = true;
             this.lblEstado_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Sala.Location = new System.Drawing.Point(799, 102);
+            this.lblEstado_Sala.Location = new System.Drawing.Point(711, 100);
             this.lblEstado_Sala.Name = "lblEstado_Sala";
             this.lblEstado_Sala.Size = new System.Drawing.Size(135, 20);
             this.lblEstado_Sala.TabIndex = 0;
@@ -119,7 +119,7 @@
             // 
             // txtCapacidad_Sala
             // 
-            this.txtCapacidad_Sala.Location = new System.Drawing.Point(629, 102);
+            this.txtCapacidad_Sala.Location = new System.Drawing.Point(552, 100);
             this.txtCapacidad_Sala.MaxLength = 4;
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
             this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
@@ -132,7 +132,7 @@
             // 
             this.lblCapacidad_Sala.AutoSize = true;
             this.lblCapacidad_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacidad_Sala.Location = new System.Drawing.Point(452, 102);
+            this.lblCapacidad_Sala.Location = new System.Drawing.Point(364, 100);
             this.lblCapacidad_Sala.Name = "lblCapacidad_Sala";
             this.lblCapacidad_Sala.Size = new System.Drawing.Size(160, 20);
             this.lblCapacidad_Sala.TabIndex = 0;
@@ -148,7 +148,7 @@
             // 
             // txtNumero_Sala
             // 
-            this.txtNumero_Sala.Location = new System.Drawing.Point(282, 102);
+            this.txtNumero_Sala.Location = new System.Drawing.Point(205, 100);
             this.txtNumero_Sala.MaxLength = 2;
             this.txtNumero_Sala.Name = "txtNumero_Sala";
             this.txtNumero_Sala.Size = new System.Drawing.Size(153, 20);
@@ -160,7 +160,7 @@
             // 
             this.lblNumero_Sala.AutoSize = true;
             this.lblNumero_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero_Sala.Location = new System.Drawing.Point(125, 102);
+            this.lblNumero_Sala.Location = new System.Drawing.Point(59, 100);
             this.lblNumero_Sala.Name = "lblNumero_Sala";
             this.lblNumero_Sala.Size = new System.Drawing.Size(140, 20);
             this.lblNumero_Sala.TabIndex = 0;
