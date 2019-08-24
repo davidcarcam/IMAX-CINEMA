@@ -33,7 +33,6 @@
             this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.cmbESTADO_SALA = new System.Windows.Forms.ComboBox();
             this.lblEstado_Sala = new System.Windows.Forms.Label();
             this.txtCapacidad_Sala = new System.Windows.Forms.TextBox();
             this.lblCapacidad_Sala = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbESTADO_SALA = new System.Windows.Forms.ComboBox();
             this.grpRegistro_Sala.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
@@ -97,21 +97,11 @@
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // cmbESTADO_SALA
-            // 
-            this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbESTADO_SALA.FormattingEnabled = true;
-            this.cmbESTADO_SALA.Location = new System.Drawing.Point(860, 99);
-            this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
-            this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
-            this.cmbESTADO_SALA.TabIndex = 3;
-            this.cmbESTADO_SALA.SelectedIndexChanged += new System.EventHandler(this.cmbESTADO_SALA_SelectedIndexChanged);
-            // 
             // lblEstado_Sala
             // 
             this.lblEstado_Sala.AutoSize = true;
             this.lblEstado_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Sala.Location = new System.Drawing.Point(711, 100);
+            this.lblEstado_Sala.Location = new System.Drawing.Point(686, 110);
             this.lblEstado_Sala.Name = "lblEstado_Sala";
             this.lblEstado_Sala.Size = new System.Drawing.Size(135, 20);
             this.lblEstado_Sala.TabIndex = 0;
@@ -119,7 +109,7 @@
             // 
             // txtCapacidad_Sala
             // 
-            this.txtCapacidad_Sala.Location = new System.Drawing.Point(552, 100);
+            this.txtCapacidad_Sala.Location = new System.Drawing.Point(516, 110);
             this.txtCapacidad_Sala.MaxLength = 4;
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
             this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
@@ -132,7 +122,7 @@
             // 
             this.lblCapacidad_Sala.AutoSize = true;
             this.lblCapacidad_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacidad_Sala.Location = new System.Drawing.Point(364, 100);
+            this.lblCapacidad_Sala.Location = new System.Drawing.Point(339, 110);
             this.lblCapacidad_Sala.Name = "lblCapacidad_Sala";
             this.lblCapacidad_Sala.Size = new System.Drawing.Size(160, 20);
             this.lblCapacidad_Sala.TabIndex = 0;
@@ -140,7 +130,7 @@
             // 
             // txtID_Sala
             // 
-            this.txtID_Sala.Location = new System.Drawing.Point(629, 53);
+            this.txtID_Sala.Location = new System.Drawing.Point(515, 59);
             this.txtID_Sala.Name = "txtID_Sala";
             this.txtID_Sala.Size = new System.Drawing.Size(35, 20);
             this.txtID_Sala.TabIndex = 0;
@@ -148,7 +138,7 @@
             // 
             // txtNumero_Sala
             // 
-            this.txtNumero_Sala.Location = new System.Drawing.Point(205, 100);
+            this.txtNumero_Sala.Location = new System.Drawing.Point(169, 110);
             this.txtNumero_Sala.MaxLength = 2;
             this.txtNumero_Sala.Name = "txtNumero_Sala";
             this.txtNumero_Sala.Size = new System.Drawing.Size(153, 20);
@@ -160,7 +150,7 @@
             // 
             this.lblNumero_Sala.AutoSize = true;
             this.lblNumero_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero_Sala.Location = new System.Drawing.Point(59, 100);
+            this.lblNumero_Sala.Location = new System.Drawing.Point(12, 110);
             this.lblNumero_Sala.Name = "lblNumero_Sala";
             this.lblNumero_Sala.Size = new System.Drawing.Size(140, 20);
             this.lblNumero_Sala.TabIndex = 0;
@@ -175,6 +165,7 @@
             this.dgvSalas.Size = new System.Drawing.Size(1011, 265);
             this.dgvSalas.TabIndex = 0;
             this.dgvSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSalas_CellClick);
+            this.dgvSalas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSalas_CellContentClick);
             // 
             // btnEliminar_Sala
             // 
@@ -324,6 +315,16 @@
             // 
             this.epError2.ContainerControl = this;
             // 
+            // cmbESTADO_SALA
+            // 
+            this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbESTADO_SALA.FormattingEnabled = true;
+            this.cmbESTADO_SALA.Location = new System.Drawing.Point(838, 110);
+            this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
+            this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
+            this.cmbESTADO_SALA.TabIndex = 3;
+            this.cmbESTADO_SALA.SelectedIndexChanged += new System.EventHandler(this.cmbESTADO_SALA_SelectedIndexChanged);
+            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,9 +359,9 @@
         private System.Windows.Forms.TextBox txtID_Sala;
         private System.Windows.Forms.TextBox txtNumero_Sala;
         private System.Windows.Forms.Label lblNumero_Sala;
-        private System.Windows.Forms.ComboBox cmbESTADO_SALA;
         private System.Windows.Forms.ErrorProvider epError2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.ComboBox cmbESTADO_SALA;
     }
 }

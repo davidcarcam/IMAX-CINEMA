@@ -132,13 +132,6 @@ namespace EXPO60.Vista
             {
                 e.Handled = true;
             }
-            // codigo para solo ingresar letras(vocales y mayusculas, sin simbolos) usando codigo ASCII
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Insertar solo vocales y consonantes", "ERROR DE PRUEBA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-                return;
-            }
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)

@@ -198,13 +198,6 @@ namespace EXPO60.Vista
 
                 MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                // codigo para solo ingresar numeros usando codigo ASCII
-                MessageBox.Show("Insertar solo numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-                return;
-            }
         }
         private void TxtCapacidad_Sala_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -263,33 +256,33 @@ namespace EXPO60.Vista
 
                 MessageBox.Show("Error Critico.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                // codigo para solo ingresar numeros usando codigo ASCII
-                MessageBox.Show("Insertar solo numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-                return;
-            }
         }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void txtCapacidad_Sala_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
-
         private void cmbESTADO_SALA_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void DgvSalas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvSalas.CurrentRow.Index;
+            txtID_Sala.Text = this.dgvSalas[0, posicion].Value.ToString();
+            txtNumero_Sala.Text = this.dgvSalas[1, posicion].Value.ToString();
+            cmbESTADO_SALA.Text = this.dgvSalas[2, posicion].Value.ToString();
+            btnActualizar_Sala.Enabled = true;
+            btnEliminar_Sala.Enabled = true;
+            btnAgregar_Sala.Enabled = false;
         }
     }
 }
