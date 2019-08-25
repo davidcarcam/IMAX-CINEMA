@@ -40,13 +40,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.idDetalletic = new System.Windows.Forms.TextBox();
-            this.dgvusuarios = new System.Windows.Forms.DataGridView();
+            this.dgvtickets = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.grpDetalleTicket.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvusuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDetalleTicket
@@ -60,7 +60,7 @@
             this.grpDetalleTicket.Controls.Add(this.label9);
             this.grpDetalleTicket.Controls.Add(this.label8);
             this.grpDetalleTicket.Controls.Add(this.idDetalletic);
-            this.grpDetalleTicket.Controls.Add(this.dgvusuarios);
+            this.grpDetalleTicket.Controls.Add(this.dgvtickets);
             this.grpDetalleTicket.Controls.Add(this.btneliminar);
             this.grpDetalleTicket.Controls.Add(this.btnactualizar);
             this.grpDetalleTicket.Controls.Add(this.btnmostrar);
@@ -199,14 +199,14 @@
             this.idDetalletic.TabIndex = 0;
             this.idDetalletic.Visible = false;
             // 
-            // dgvusuarios
+            // dgvtickets
             // 
-            this.dgvusuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvusuarios.Location = new System.Drawing.Point(5, 293);
-            this.dgvusuarios.Name = "dgvusuarios";
-            this.dgvusuarios.Size = new System.Drawing.Size(1011, 265);
-            this.dgvusuarios.TabIndex = 0;
+            this.dgvtickets.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvtickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvtickets.Location = new System.Drawing.Point(5, 293);
+            this.dgvtickets.Name = "dgvtickets";
+            this.dgvtickets.Size = new System.Drawing.Size(1011, 265);
+            this.dgvtickets.TabIndex = 0;
             // 
             // btneliminar
             // 
@@ -328,7 +328,7 @@
             this.grpDetalleTicket.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvusuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,7 +346,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox idDetalletic;
-        private System.Windows.Forms.DataGridView dgvusuarios;
+        private System.Windows.Forms.DataGridView dgvtickets;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;

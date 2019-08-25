@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EXPO60.Controlador
 {
-    class ConstructorDetalleTicket
+    public class ConstructorDetalleTicket
     {
         public int iddetalle { get; set; }
         public int funcion { get; set; }
