@@ -11,9 +11,9 @@ namespace EXPO60.Controlador
         public int id_empresa { get; set; }
         public string duracion { get; set; }
         public string hora { get; set; }
-        public string pelicula  { get; set; }
-        public string sala { get; set; }
-        public string clasifiacion { get; set; }
+        public int pelicula  { get; set; }
+        public int sala { get; set; }
+        public int clasifiacion { get; set; }
 
         public Constructor_funciones() { }
     }

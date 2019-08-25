@@ -63,6 +63,18 @@ namespace EXPO60.Vista
             }
 
         }
+        public void mostrarET()
+        {
+
+            cmbestado.DataSource = Funciones_proveedores.ObtenerEstado();
+            cmbestado.DisplayMember = "estado_prov";
+            cmbestado.ValueMember = "id_estado_prov";
+
+
+            cmbempresa.DataSource = Funciones_proveedores.ObtenerEmpresa();
+            cmbempresa.DisplayMember = "empresa";
+            cmbempresa.ValueMember = "id_empresa";
+        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -111,6 +123,7 @@ namespace EXPO60.Vista
 
         private void FrmProveedores_Load(object sender, EventArgs e)
         {
+            mostrarET();
             mostrarProveedor();
             this.dgvproveedores.Columns[0].Visible = false;
             btnactualizar.Enabled = false;

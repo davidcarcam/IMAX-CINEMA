@@ -36,7 +36,7 @@
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
             this.cmbprov = new System.Windows.Forms.ComboBox();
-            this.cbmlocal = new System.Windows.Forms.ComboBox();
+            this.cmblocal = new System.Windows.Forms.ComboBox();
             this.dgvproductos = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.cmbtipo);
             this.groupBox1.Controls.Add(this.cmbprov);
-            this.groupBox1.Controls.Add(this.cbmlocal);
+            this.groupBox1.Controls.Add(this.cmblocal);
             this.groupBox1.Controls.Add(this.dgvproductos);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnactualizar);
@@ -136,13 +136,13 @@
             this.cmbprov.Size = new System.Drawing.Size(153, 21);
             this.cmbprov.TabIndex = 3;
             // 
-            // cbmlocal
+            // cmblocal
             // 
-            this.cbmlocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmlocal.Location = new System.Drawing.Point(337, 113);
-            this.cbmlocal.Name = "cbmlocal";
-            this.cbmlocal.Size = new System.Drawing.Size(153, 21);
-            this.cbmlocal.TabIndex = 2;
+            this.cmblocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmblocal.Location = new System.Drawing.Point(337, 113);
+            this.cmblocal.Name = "cmblocal";
+            this.cmblocal.Size = new System.Drawing.Size(153, 21);
+            this.cmblocal.TabIndex = 2;
             // 
             // dgvproductos
             // 
@@ -188,6 +188,7 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
             // 
             // btnactualizar
             // 
@@ -223,6 +224,7 @@
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click_1);
             // 
             // btnmostrar
             // 
@@ -258,6 +260,7 @@
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click_1);
             // 
             // btnagregar
             // 
@@ -360,6 +363,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProducto";
             this.Text = "FrmProducto";
+            this.Load += new System.EventHandler(this.FrmProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -374,7 +378,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbtipo;
         private System.Windows.Forms.ComboBox cmbprov;
-        private System.Windows.Forms.ComboBox cbmlocal;
+        private System.Windows.Forms.ComboBox cmblocal;
         private System.Windows.Forms.DataGridView dgvproductos;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;

@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO peliculas(titulo, año, director, idioma ) VALUES ('{0}','{1}','{2}','{3}')", add.Titulo, add.Año, add.Director, add.Idioma), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO peliculas(titulo, año, director, id_genero, id_idioma, id_formatos, id_estado_pelicula) VALUES ('{0}','{1}','{2}','{3}' ,'{4}' ,'{5}' ,'{6}')", add.Titulo, add.Año, add.Director, add.tipo,add.Idioma, add.dimensiones,add.estado), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET titulo ='{0}' , año = '{1}', director='{2}' ,idioma='{3}'", upd.Titulo, upd.Año,upd.Director,upd.Idioma), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET titulo ='{0}' , año = '{1}', director='{2}' ,id_genero='{3}' ,id_idioma='{4}' ,id_formatos='{5}' ,id_estado_pelicula='{6}'", upd.Titulo, upd.Año,upd.Director,upd.tipo,upd.Idioma,upd.dimensiones,upd.estado), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -155,6 +155,28 @@ namespace EXPO60.Modelo
         public static DataTable ObtenerDimensiones()
         {
             string query = "SELECT * FROM formatos";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable ObtenerIdioma()
+        {
+            string query = "SELECT * FROM idiomas";
             DataTable data = new DataTable();
             try
             {

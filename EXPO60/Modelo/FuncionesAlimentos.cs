@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE  local_alimentos SET nombre ='{0}' , telefono = '{1}'", upd.NombreLocal, upd.Telefono), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE  local_alimentos SET nombre ='{0}' , telefono = '{1}', id_estado_local ='{2}'", upd.NombreLocal, upd.Telefono,upd.tipo), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
