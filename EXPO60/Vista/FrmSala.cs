@@ -53,16 +53,10 @@ namespace EXPO60.Vista
         }
         public void Agregar_Salas()
         {
-            if (txtNumero_Sala.Text.Trim() == "" || cmbESTADO_SALA.Text.Trim() == "" || txtCapacidad_Sala.Text.Trim() == "")
-            {
-                MessageBox.Show("Se han encontrado campos vacios, Completelos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                agregar.EstadoSala = Convert.ToInt16(cmbESTADO_SALA.Text);
-                agregar.CapacidadSala = txtCapacidad_Sala.Text;
-                agregar.NumeroSala = txtNumero_Sala.Text;
-            }
+            agregar.CapacidadSala = txtCapacidad_Sala.Text;
+            agregar.NumeroSala = txtNumero_Sala.Text;
+            agregar.EstadoSala = Convert.ToInt32(cmbESTADO_SALA.SelectedValue);
+            int datos = Funciones_Salas.ingresar_salas(agregar);
         }
         public void Modificar_Salas()
         {
@@ -74,8 +68,8 @@ namespace EXPO60.Vista
         }
         private void BtnAgregar_Sala_Click(object sender, EventArgs e)
         {
-            Limpiar_Datos();
             Agregar_Salas();
+            Limpiar_Datos();
             Mostrar_Salas();
         }
         private void DgvSalas_CellClick(object sender, DataGridViewCellEventArgs e)
