@@ -137,5 +137,10 @@ namespace EXPO60.Vista
                 vaciarampos();
             }
         }
+
+        private void txtDireccion_empresa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

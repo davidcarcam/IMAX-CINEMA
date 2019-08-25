@@ -44,11 +44,15 @@ namespace EXPO60.Vista
             cmbAsiento.DisplayMember = "id_num";
             cmbAsiento.ValueMember = "id_asiento";
         }
+       
         private void FrmDetalleTicket_Load(object sender, EventArgs e)
         {
-            
+            Mostrarcmb();
+            this.dgvtickets.Columns[0].Visible = false;
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
         }
-        public void agregarEmpresa()
+        public void agregarDetalleTickt()
         {
             agregar.funcion = Convert.ToInt16(cmbfuncion.Text);
             agregar.asiento = Convert.ToInt16(cmbAsiento.Text);
@@ -62,12 +66,26 @@ namespace EXPO60.Vista
             }
             else
             {
-                agregarEmpresa();              
+                agregarDetalleTickt();
+                mostrarDetalleTicket();
+                vaciarampos();
+                            
             }
         }
+
+        private void vaciarampos()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void mostrarDetalleTicket()
+        {
+            throw new NotImplementedException();
+        }
+
         private void btnmostrar_Click(object sender, EventArgs e)
         {
-            
+            Mostrarcmb();
         }       
     }
 }

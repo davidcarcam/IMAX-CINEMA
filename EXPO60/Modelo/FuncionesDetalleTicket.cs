@@ -37,6 +37,17 @@ namespace EXPO60.Modelo
             }
             return retorno;
         }
+
+        internal static object funcion()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static object asiento()
+        {
+            throw new NotImplementedException();
+        }
+
         public static DataTable MostrarTicket()
         {
             DataTable data;
@@ -59,6 +70,12 @@ namespace EXPO60.Modelo
                 Conexion.ObtenerConexion().Close();
             }         
         }
+
+        internal static int IngresarDetalle(ConstructorDetalleTicket agregar)
+        {
+            throw new NotImplementedException();
+        }
+
         public static bool ActualizarTicket(ConstructorDetalleTicket upd)
         {
             bool retorno = false;

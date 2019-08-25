@@ -97,6 +97,7 @@
             this.txtDireccion_empresa.Name = "txtDireccion_empresa";
             this.txtDireccion_empresa.Size = new System.Drawing.Size(153, 48);
             this.txtDireccion_empresa.TabIndex = 2;
+            this.txtDireccion_empresa.TextChanged += new System.EventHandler(this.txtDireccion_empresa_TextChanged);
             // 
             // label2
             // 
