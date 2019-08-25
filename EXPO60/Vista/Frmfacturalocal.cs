@@ -45,7 +45,7 @@ namespace EXPO60.Vista
         {
             if (MessageBox.Show("Esta seguro que desea eliminar el registro seleccionado?", "Eliminacion de registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Funciones_Salas.Eliminar_Salas(Convert.ToInt16(txtid.Text));
+                Funciones_Factura_Local.Eliminar_Factura_Local(Convert.ToInt32(txtid.Text));
             }
             else
             {
@@ -54,14 +54,15 @@ namespace EXPO60.Vista
         }
         public void Agregar_Factura_Local()
         {
-            agregar.monto_fac_local = txtmonto.Text;
-            agregar.fecha_fac_local = txtfecha.Text;
-            agregar.nombre_cliente = txtnombre.Text;
+            agregar.monto_fac_local = txtMont.Text;
+            agregar.fecha_fac_local = txtDate.Text;
+            agregar.nombre_cliente = txtNom.Text;
             agregar.id_usuario = Convert.ToInt32(cmbusuario.SelectedValue);
             int datos = Funciones_Factura_Local.Ingresar_Factura_Local(agregar);
         }
         public void Modificar_Factura_Local()
         {
+            Actualizar.id_factura_local = Convert.ToInt32(txtid.Text);
             Actualizar.monto_fac_local = txtmonto.Text;
             Actualizar.fecha_fac_local = txtfecha.Text;
             Actualizar.nombre_cliente = txtnombre.Text;
@@ -80,7 +81,9 @@ namespace EXPO60.Vista
 
         private void BunifuFlatButton4_Click(object sender, EventArgs e)
         {
-
+            Agregar_Factura_Local();
+            Limpiar_Factura_Local();
+            Mostrar_Factura_Local();
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -108,6 +111,59 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
+        }
+
+        private void BunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Eliminar_Factura_Local();
+            Limpiar_Factura_Local();
+            Mostrar_Factura_Local();
+            btnactualizar.Enabled = false;
+            btnagregar.Enabled = true;
+            btneliminar.Enabled = false;
+        }
+
+        private void BunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            Limpiar_Factura_Local();
+            Modificar_Factura_Local();
+            Mostrar_Factura_Local();
+            btnactualizar.Enabled = false;
+            btnagregar.Enabled = true;
+            btneliminar.Enabled = false;
+        }
+
+        private void BunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            Limpiar_Factura_Local();
+            Mostrar_Factura_Local();
+        }
+
+        private void TxtNom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtMont_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >=32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void MaskedTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >=32 && e.KeyChar <=47) || (e.KeyChar >=58 && e.KeyChar <=255))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
