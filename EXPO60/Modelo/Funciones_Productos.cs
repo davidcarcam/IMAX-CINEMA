@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio, id_proveedor, id_tipo_prod) VALUES ('{0}', '{1}', '{2}', '{3}')", add.precio, add.local, add.proveedor, add.tipoproducto), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio, id_proveedor,id_tipo_prod) VALUES ('{0}', '{1}', '{2}', '{3}' )", add.nombre, add.precio, add.proveedor, add.tipoproducto ), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET precio = '{0}', ID_LOCAL = '{1}', ID_PROVEEDOR = '{2}', ID_TIPO_PRODUCTO = '{3}' WHERE ID_PRODUCTO = '{4}'", upd.precio, upd.local, upd.proveedor, upd.producto, upd.idproducto), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET nombre = '{1}', precio = '{2}', id_local = '{3}', id_proveedor = '{4}', id_tipo_prod = '{5}' WHERE id_producto = '{0}'",upd.nombre, upd.precio, upd.local, upd.proveedor, upd.tipoproducto, upd.proveedor), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -103,55 +103,12 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
-        public static DataTable verLocal()
+        public static DataTable ObtenerProv()
         {
-            DataTable data;
-            try
-            {
-                string query = "SELECT ID_LOCAL, NOMBRE_LOCAL FROM local_alimentos";
-                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
-                data = new DataTable();
-                adapter.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. ", "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return data = new DataTable();
-            }
-            finally
-            {
-                Conexion.ObtenerConexion().Close();
-            }
-        }
-        public static DataTable VerProveedor()
-        {
+            string query = "SELECT * FROM proveedores";
             DataTable data = new DataTable();
             try
             {
-                string query = "SELECT * FROM proveedores";
-                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
-                adapter.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. ", "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return data = new DataTable();
-            }
-            finally
-            {
-                Conexion.ObtenerConexion().Close();
-            }
-        }
-        public static DataTable VerTipo()
-        {
-            DataTable data = new DataTable();
-            try
-            {
-                string query = "SELECT * FROM tipo_producto";
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 adapter.Fill(data);
@@ -159,8 +116,53 @@ namespace EXPO60.Modelo
             }
             catch (Exception e)
             {
-                MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. " + e, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return data = new DataTable();
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable ObtenerLocal()
+        {
+            string query = "SELECT * FROM local_alimentos";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static DataTable ObtenerEstado()
+        {
+            string query = "SELECT * FROM tipo_producto";
+            DataTable data = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return data;
             }
             finally
             {

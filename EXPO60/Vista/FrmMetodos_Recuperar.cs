@@ -75,10 +75,7 @@ namespace EXPO60.Vista
             h = this.Height;
         }
 
-        private void MenuItemTelefono_Recuperacion_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmRecuperar_Telefono>();
-        }
+        
 
         private void MenuItemPreguntas_Recuperacion_Click(object sender, EventArgs e)
         {

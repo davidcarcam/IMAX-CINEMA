@@ -24,9 +24,9 @@ namespace EXPO60.Vista
         {
             agregar.duracion = mskDuracion.Text;
             agregar.hora = mskHora.Text;
-            agregar.pelicula = cmbpelicula.Text;
-            agregar.clasifiacion = cmbClasificacion.Text;
-            agregar.sala = cmbSala.Text;
+            agregar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
+            agregar.sala = Convert.ToInt16(cmbSala.SelectedValue);
+            agregar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
             int datos = Funciones_funcion.insertarFuncion(agregar);
         }
         public void eliminarRegistro()
@@ -42,6 +42,9 @@ namespace EXPO60.Vista
         {
             actualizar.duracion = mskDuracion.Text;
             actualizar.hora = mskHora.Text;
+            agregar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
+            agregar.sala = Convert.ToInt16(cmbSala.SelectedValue);
+            agregar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
             Funciones_funcion.actualizarFunciones(actualizar);
         }
         public void vaciarampos()

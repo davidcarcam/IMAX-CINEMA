@@ -30,9 +30,10 @@ namespace EXPO60.Vista
             }
             else
             {
+                Agregar.nombre = txtnombre.Text;
                 Agregar.precio = txtprecio.Text;
-                Agregar.local = Convert.ToInt16(cbmlocal.SelectedValue);
-                Agregar.proveedor = Convert.ToInt16(cmbprov.SelectedValue); ;
+                Agregar.local = Convert.ToInt16(cmblocal.SelectedValue);
+                Agregar.proveedor = Convert.ToInt16(cmbprov.SelectedValue); 
                 Agregar.tipoproducto = Convert.ToInt16(cmbtipo.SelectedValue);
                 int datos = Funciones_Productos.IngresarProducto(Agregar);
             }
@@ -50,8 +51,9 @@ namespace EXPO60.Vista
         public void ModificarProducto()
         {
             Actualizar.idproducto = Convert.ToInt32(txtid.Text);
+            Actualizar.nombre = txtnombre.Text;
             Actualizar.precio = txtprecio.Text;
-            Actualizar.local = Convert.ToInt16(cbmlocal.SelectedValue);
+            Actualizar.local = Convert.ToInt16(cmblocal.SelectedValue);
             Actualizar.tipoproducto = Convert.ToInt16(cmbtipo.SelectedValue);
             Actualizar.proveedor = Convert.ToInt16(cmbprov.SelectedValue);
             Funciones_Productos.ActualizarProducto(Actualizar);
@@ -63,68 +65,35 @@ namespace EXPO60.Vista
                 Funciones_Productos.EliminarProducto(Convert.ToInt32(txtid.Text));
             }
         }
-        private void btnagregar_Click(object sender, EventArgs e)
+        public void mostrarEs()
         {
-            AgregarProducto();
-            MostrarProducto();
-            LimpiarCampos();
+
+            cmbprov.DataSource = Funciones_Productos.ObtenerProv();
+            cmbprov.DisplayMember = "nombre";
+            cmbprov.ValueMember = "id_proveedor";
+
+
+            cmblocal.DataSource = Funciones_Productos.ObtenerLocal();
+            cmblocal.DisplayMember = "nombre";
+            cmblocal.ValueMember = "id_local";
+
+            cmbtipo.DataSource = Funciones_Productos.ObtenerEstado();
+            cmbtipo.DisplayMember = "tipo_producto";
+            cmbtipo.ValueMember = "id_tipo_prod";
+
+
+
         }
+        
         private void btnmostrar_Click(object sender, EventArgs e)
         {
             MostrarProducto();
             LimpiarCampos();
         }
-        private void btnactualizar_Click(object sender, EventArgs e)
-        {
-            ModificarProducto();
-            LimpiarCampos();
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
-            btnagregar.Enabled = true;
-        }
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
-            EliminarProducto();
-            LimpiarCampos();
-            MostrarProducto();
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
-            btnagregar.Enabled = true;
-        }
-        private void dgvproductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int posicion;
-            posicion = this.dgvproductos.CurrentRow.Index;
-            txtid.Text = this.dgvproductos[0, posicion].Value.ToString();
-            txtprecio.Text = this.dgvproductos[1, posicion].Value.ToString();
-            cbmlocal.Text = this.dgvproductos[2, posicion].Value.ToString();
-            cmbprov.Text = this.dgvproductos[3, posicion].Value.ToString();
-            cmbtipo.Text = this.dgvproductos[4, posicion].Value.ToString();
-            btnactualizar.Enabled = true;
-            btneliminar.Enabled = true;
-            btnagregar.Enabled = false;
-        }
-        private void Frmproductos_Load(object sender, EventArgs e)
-        {
-            MostrarProducto();
-            this.dgvproductos.Columns[0].Visible = false;
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
-            
-
-            cmbprov.DataSource = Funciones_Productos.VerProveedor();
-            cmbprov.DisplayMember = "NOMBRE_PROV";
-            cmbprov.ValueMember = "ID_PROVEEDOR";
-
-            cbmlocal.DataSource = Funciones_Productos.verLocal();
-            cbmlocal.DisplayMember = "NOMBRE_LOCAL";
-            cbmlocal.ValueMember = "ID_LOCAL";
-
-            cmbtipo.DataSource = Funciones_Productos.VerTipo();
-            cmbtipo.DisplayMember = "NOMBRE_TIPO_P";
-            cmbtipo.ValueMember = "ID_TIPO_PRODUCTO";
-        }
-
+        
+        
+        
+      
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -138,6 +107,64 @@ namespace EXPO60.Vista
         private void btnagregar_Click_1(object sender, EventArgs e)
         {
             AgregarProducto();
+            MostrarProducto();
         }
+
+        private void Dgvproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvproductos.CurrentRow.Index;
+            txtid.Text = this.dgvproductos[0, posicion].Value.ToString();
+            txtprecio.Text = this.dgvproductos[1, posicion].Value.ToString();
+            cmblocal.Text = this.dgvproductos[2, posicion].Value.ToString();
+            cmbprov.Text = this.dgvproductos[3, posicion].Value.ToString();
+            cmbtipo.Text = this.dgvproductos[4, posicion].Value.ToString();
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
+        }
+
+        private void FrmProducto_Load(object sender, EventArgs e)
+        {
+            
+            MostrarProducto();
+            mostrarEs();
+            this.dgvproductos.Columns[0].Visible = false;
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+        }
+
+        private void btnmostrar_Click_1(object sender, EventArgs e)
+        {
+          
+        
+            MostrarProducto();
+            LimpiarCampos();
+        
+    }
+
+        private void btnactualizar_Click_1(object sender, EventArgs e)
+        {
+      
+            ModificarProducto();
+            LimpiarCampos();
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnagregar.Enabled = true;
+        
+    }
+
+        private void btneliminar_Click_1(object sender, EventArgs e)
+        {
+
+        
+            EliminarProducto();
+            LimpiarCampos();
+            MostrarProducto();
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnagregar.Enabled = true;
+        
+    }
     }
 }

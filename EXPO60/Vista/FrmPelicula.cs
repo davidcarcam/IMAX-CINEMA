@@ -30,7 +30,10 @@ namespace EXPO60.Vista
             actualizar.Titulo = txttitulo.Text;
             actualizar.Año = Convert.ToInt16(txtaño);
             actualizar.Director = txtdirector.Text;
-            actualizar.Idioma = txtaudio.Text;
+            actualizar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
+            actualizar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
+            actualizar.dimensiones = Convert.ToInt16(cmbDimensiones.SelectedValue);
+            actualizar.estado = Convert.ToInt16(cmbestado.SelectedValue);
             Funciones_peliculas.actualizarPelicula(actualizar);
         }
         public void eliminarRegistro()
@@ -47,12 +50,15 @@ namespace EXPO60.Vista
             txttitulo.Clear();
             txtaño.Clear();
         }
-        public void agregarEmpresa()
+        public void agregarPelicula()
         {
             agregar.Titulo = txttitulo.Text;
             agregar.Año = Convert.ToInt16(txtaño.Text);
             agregar.Director = txtdirector.Text;
-            agregar.Idioma = txtaudio.Text;
+            actualizar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
+            agregar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
+            agregar.dimensiones = Convert.ToInt16(cmbDimensiones.SelectedValue);
+            agregar.estado = Convert.ToInt16(cmbestado.SelectedValue);
             int datos = Funciones_peliculas.insertarPelicula(agregar);
         }
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -133,7 +139,7 @@ namespace EXPO60.Vista
             }
             else
             {
-                agregarEmpresa();
+                agregarPelicula();
                 
                 vaciarampos();
             }
@@ -191,8 +197,9 @@ namespace EXPO60.Vista
             cmbGenero.DisplayMember = "genero";
             cmbGenero.ValueMember = "id_genero";
 
-
-
+            cmbIdioma.DataSource = Funciones_peliculas.ObtenerIdioma();
+            cmbIdioma.DisplayMember = "idioma";
+            cmbIdioma.ValueMember = "id_idioma";
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
@@ -203,6 +210,16 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = false;
             btnagregar.Enabled = true;
             btneliminar.Enabled = false;
+        }
+
+        private void CmbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

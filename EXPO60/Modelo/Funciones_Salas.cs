@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(String.Format("INSERT INTO salas (num_sala, capacidad, id_estado_sala) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(String.Format("INSERT INTO salas (num_sala, capacidad, id_estado_sala) VALUES ('{1}','{2}','{3}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -49,7 +49,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception b)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", b + "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano" +b, "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return salas = new DataTable();
             }
             finally
@@ -105,20 +105,20 @@ namespace EXPO60.Modelo
         }
         public static DataTable Estado_Sala()
         {
-            DataTable Estado_Sal;
+            string query = "SELECT * FROM salas";
+            DataTable sal = new DataTable();
             try
             {
-                string query1 = "SELECT * FROM estado_salas";
-                MySqlCommand cmdsal = new MySqlCommand(string.Format(query1), Conexion.ObtenerConexion());
-                MySqlDataAdapter Estado = new MySqlDataAdapter(cmdsal);
-                Estado_Sal = new DataTable();
-                Estado.Fill(Estado_Sal);
-                return Estado_Sal;
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(sal);
+                return sal;
             }
             catch (Exception e)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", e + "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return Estado_Sal = new DataTable();
+
+                MessageBox.Show("Error crítico " + e);
+                return sal;
             }
             finally
             {

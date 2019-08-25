@@ -418,6 +418,21 @@ namespace EXPO60.Vista
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
         }
+
+        private void groupBox2_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbEstadoU_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

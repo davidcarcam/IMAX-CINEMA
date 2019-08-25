@@ -107,7 +107,6 @@ namespace EXPO60.Vista
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(30, 20);
             this.txtCifrado.TabIndex = 0;
-            this.txtCifrado.Visible = false;
             this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
             // 
             // linkPrimerUso
@@ -184,7 +183,7 @@ namespace EXPO60.Vista
             this.btbAcceder.Location = new System.Drawing.Point(389, 209);
             this.btbAcceder.Name = "btbAcceder";
             this.btbAcceder.Size = new System.Drawing.Size(133, 29);
-            this.btbAcceder.TabIndex = 5;
+            this.btbAcceder.TabIndex = 3;
             this.btbAcceder.Text = "Acceder";
             this.btbAcceder.UseVisualStyleBackColor = true;
             this.btbAcceder.Click += new System.EventHandler(this.btbAcceder_Click);

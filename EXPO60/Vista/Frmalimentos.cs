@@ -28,6 +28,7 @@ namespace EXPO60.Vista
         {
             actualizar.NombreLocal = txtnombre.Text;
             actualizar.Telefono = txttelefonoLocal.Text;
+            actualizar.tipo = Convert.ToInt16(cmbestado.SelectedValue);
             FuncionesAlimentos.actualizarLocal(actualizar);
         }
         public void agregarLocal()

@@ -50,8 +50,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtaudio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
@@ -59,6 +59,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbIdioma);
             this.groupBox1.Controls.Add(this.cmbDimensiones);
             this.groupBox1.Controls.Add(this.cmbGenero);
             this.groupBox1.Controls.Add(this.cmbestado);
@@ -78,7 +79,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtaudio);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -106,6 +106,7 @@
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(153, 21);
             this.cmbGenero.TabIndex = 6;
+            this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.CmbGenero_SelectedIndexChanged);
             // 
             // cmbestado
             // 
@@ -384,24 +385,25 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Año";
             // 
-            // txtaudio
-            // 
-            this.txtaudio.Location = new System.Drawing.Point(449, 43);
-            this.txtaudio.MaxLength = 20;
-            this.txtaudio.Name = "txtaudio";
-            this.txtaudio.Size = new System.Drawing.Size(153, 20);
-            this.txtaudio.TabIndex = 4;
-            this.txtaudio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtaudio_KeyPress);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(338, 44);
+            this.label1.Location = new System.Drawing.Point(358, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Idioma";
+            // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(449, 45);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(153, 21);
+            this.cmbIdioma.TabIndex = 61;
+            this.cmbIdioma.SelectedIndexChanged += new System.EventHandler(this.cmbIdioma_SelectedIndexChanged);
             // 
             // FrmPelicula
             // 
@@ -441,12 +443,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtaudio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.ComboBox cmbestado;
         private System.Windows.Forms.ComboBox cmbDimensiones;
+        private System.Windows.Forms.ComboBox cmbIdioma;
     }
 }

@@ -192,12 +192,6 @@
     <Compile Include="Vista\FrmRecuperar_Preguntas.Designer.cs">
       <DependentUpon>FrmRecuperar_Preguntas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FrmRecuperar_Telefono.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FrmRecuperar_Telefono.Designer.cs">
-      <DependentUpon>FrmRecuperar_Telefono.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\FrmSala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,9 +279,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmRecuperar_Preguntas.resx">
       <DependentUpon>FrmRecuperar_Preguntas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FrmRecuperar_Telefono.resx">
-      <DependentUpon>FrmRecuperar_Telefono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmSala.resx">
       <DependentUpon>FrmSala.cs</DependentUpon>
