@@ -107,6 +107,7 @@ namespace EXPO60.Vista
         private void btnagregar_Click_1(object sender, EventArgs e)
         {
             AgregarProducto();
+            MostrarProducto();
         }
 
         private void Dgvproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
