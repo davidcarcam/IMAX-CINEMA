@@ -65,6 +65,7 @@
     <Compile Include="Controlador\Constructor_Productos.cs" />
     <Compile Include="Controlador\Constructor_Proveedores.cs" />
     <Compile Include="Controlador\Constructor_Salas.cs" />
+    <Compile Include="Controlador\Constructo_Factura_Local.cs" />
     <Compile Include="Controlador\ContructorLogin.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -77,6 +78,7 @@
     <Compile Include="Modelo\funcionesEmpresa.cs" />
     <Compile Include="Modelo\Funciones_Actores.cs" />
     <Compile Include="Modelo\Funciones_Asientos.cs" />
+    <Compile Include="Modelo\Funciones_Factura_Local.cs" />
     <Compile Include="Modelo\Funciones_funcion.cs" />
     <Compile Include="Modelo\Funciones_peliculas.cs" />
     <Compile Include="Modelo\Funciones_primerUso.cs" />
