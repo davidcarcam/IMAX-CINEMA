@@ -278,5 +278,32 @@ namespace EXPO60.Vista
             btnEliminar_Sala.Enabled = true;
             btnAgregar_Sala.Enabled = false;
         }
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            string salida_datos = "";
+            string[] palabars_busqueda = this.txtbuscar.Text.Split(' ');
+            foreach (string palabra in palabars_busqueda)
+            {
+                if (salida_datos.Length == 0)
+                {
+                    salida_datos = "(num_sala LIKE '%" + palabra + "%' OR capacidad LIKE '%" + palabra + "%' OR id_estado_sala LIKE '%" + palabra + "%')";
+                }
+                else
+                {
+                    salida_datos += "AND(num_sala LIKE '%" + palabra + "%' OR capacidad LIKE '%" + palabra + "%' OR id_estado_sala LIKE '%" + palabra + "%')";
+                }
+                {
+
+                }
+            }
+            return;
+        }
     }
 }

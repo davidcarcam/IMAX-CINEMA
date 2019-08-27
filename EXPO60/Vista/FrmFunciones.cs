@@ -130,11 +130,14 @@ namespace EXPO60.Vista
         {
             int posicion;
             posicion = this.dgvFuncion.CurrentRow.Index;
-            textBox1.Text = this.dgvFuncion[0, posicion].Value.ToString();
-            mskDuracion.Text = this.dgvFuncion[1, posicion].Value.ToString();
-            mskHora.Text = this.dgvFuncion[2, posicion].Value.ToString();
-            btnActualizar.Enabled = true;
+            textBox1.Text = dgvFuncion[0, posicion].Value.ToString();
+            mskDuracion.Text = dgvFuncion[1, posicion].Value.ToString();
+            mskHora.Text = dgvFuncion[2, posicion].Value.ToString();
+            cmbpelicula.Text = dgvFuncion[3, posicion].Value.ToString();
+            cmbSala.Text = dgvFuncion[4, posicion].Value.ToString();
+            cmbClasificacion.Text = dgvFuncion[6, posicion].Value.ToString();
             btnEliminar.Enabled = true;
+            btnActualizar.Enabled = true;
             btnagregar.Enabled = false;
         }
 
