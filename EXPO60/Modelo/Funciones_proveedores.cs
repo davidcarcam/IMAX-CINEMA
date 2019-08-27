@@ -32,7 +32,7 @@ namespace EXPO60.Modelo
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error critico de  conexion, consulte con el administrador " + ex, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error critico de  conexion, consulte con el administrador " + ex.Message, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
 

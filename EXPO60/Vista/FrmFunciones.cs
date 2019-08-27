@@ -42,9 +42,9 @@ namespace EXPO60.Vista
         {
             actualizar.duracion = mskDuracion.Text;
             actualizar.hora = mskHora.Text;
-            agregar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
-            agregar.sala = Convert.ToInt16(cmbSala.SelectedValue);
-            agregar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
+            actualizar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
+            actualizar.sala = Convert.ToInt16(cmbSala.SelectedValue);
+            actualizar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
             Funciones_funcion.actualizarFunciones(actualizar);
         }
         public void vaciarampos()

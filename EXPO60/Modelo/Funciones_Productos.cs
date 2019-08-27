@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio, id_proveedor,id_tipo_prod) VALUES ('{0}', '{1}', '{2}', '{3}' )", add.nombre, add.precio, add.proveedor, add.tipoproducto ), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio, id_proveedor,id_tipo_prod, id_local) VALUES ('{0}', '{1}', '{2}', '{3}','{4}' )", add.nombre, add.precio, add.proveedor, add.tipoproducto, add.local ), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {

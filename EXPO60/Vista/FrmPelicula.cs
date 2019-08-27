@@ -28,7 +28,7 @@ namespace EXPO60.Vista
         public void modificarRegistro()
         {
             actualizar.Titulo = txttitulo.Text;
-            actualizar.Año = Convert.ToInt16(txtaño);
+            actualizar.Año = txtaño.Text;
             actualizar.Director = txtdirector.Text;
             actualizar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
             actualizar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
@@ -53,9 +53,9 @@ namespace EXPO60.Vista
         public void agregarPelicula()
         {
             agregar.Titulo = txttitulo.Text;
-            agregar.Año = Convert.ToInt16(txtaño.Text);
+            agregar.Año = txtaño.Text;
             agregar.Director = txtdirector.Text;
-            actualizar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
+            agregar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
             agregar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
             agregar.dimensiones = Convert.ToInt16(cmbDimensiones.SelectedValue);
             agregar.estado = Convert.ToInt16(cmbestado.SelectedValue);
