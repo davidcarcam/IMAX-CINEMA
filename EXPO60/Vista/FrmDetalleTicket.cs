@@ -22,18 +22,19 @@ namespace EXPO60.Vista
         }
         ConstructorDetalleTicket agregar = new ConstructorDetalleTicket();
         ConstructorDetalleTicket actualizar = new ConstructorDetalleTicket();
-
+        public void mostrarPeliculas()
+        {
+            dgvtickets.DataSource =FuncionesDetalleTicket.MostrarTicket();
+        }
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
                 this.Close();
         }
-
         private void grpDetalleTicket_Enter(object sender, EventArgs e)
         {
 
         }
-
-        private void FrmDetalleTicket_Load(object sender, EventArgs e)
+        public void Mostrarcmb()
         {
             cmbfuncion.DataSource = FuncionesDetalleTicket.funcion();
             cmbfuncion.DisplayMember = "hora";
@@ -43,14 +44,20 @@ namespace EXPO60.Vista
             cmbAsiento.DisplayMember = "id_num";
             cmbAsiento.ValueMember = "id_asiento";
         }
-        public void agregarEmpresa()
+       
+        private void FrmDetalleTicket_Load(object sender, EventArgs e)
+        {
+            Mostrarcmb();
+            this.dgvtickets.Columns[0].Visible = false;
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+        }
+        public void agregarDetalleTickt()
         {
             agregar.funcion = Convert.ToInt16(cmbfuncion.Text);
             agregar.asiento = Convert.ToInt16(cmbAsiento.Text);
-            int datos = FuncionesDetalleTicket.ingresardet(agregar);
-        }
-      
-
+            int datos = FuncionesDetalleTicket.IngresarDetalle(agregar);
+        }    
         private void btnagregar_Click(object sender, EventArgs e)
         {
             if (cmbfuncion.Text == "" || cmbfuncion.Text == "")
@@ -59,15 +66,26 @@ namespace EXPO60.Vista
             }
             else
             {
-                agregarEmpresa();
-
-                
+                agregarDetalleTickt();
+                mostrarDetalleTicket();
+                vaciarampos();
+                            
             }
+        }
+
+        private void vaciarampos()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void mostrarDetalleTicket()
+        {
+            throw new NotImplementedException();
         }
 
         private void btnmostrar_Click(object sender, EventArgs e)
         {
-            
+            Mostrarcmb();
         }       
     }
 }

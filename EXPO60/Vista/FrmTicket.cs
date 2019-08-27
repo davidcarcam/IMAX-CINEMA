@@ -26,5 +26,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void BunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

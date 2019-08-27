@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using EXPO60.Controlador;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
 
 namespace EXPO60.Modelo
 {
-    class Funciones_Salas
+    class Funciones_Factura_Local
     {
-        public static int ingresar_salas(Constructor_Salas add)
+        public static int Ingresar_Factura_Local(Constructo_Factura_Local add)
         {
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(String.Format("INSERT INTO salas (num_sala, capacidad, id_estado_sala) VALUES ('{0}','{1}','{2}')", add.NumeroSala, add.CapacidadSala, add.EstadoSala), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(String.Format("INSERT INTO factura_local (monto_fac_local, fecha_fac_local, nombre_cliente, id_usuario) VALUES ('{0}','{1}','{2}','{3}')", add.monto_fac_local, add.fecha_fac_local, add.nombre_cliente, add.id_usuario), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
-                    MessageBox.Show("Nueva sala ingresada correctamente", "Exito al ingresar sala", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nueva factura ingresada correctamente", "Exito al ingresar factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("No se ha logrado ingresar satisfactoriamente la sala", "Fallo al ingresar la sala", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No se ha logrado ingresar satisfactoriamente la nueva factura", "Fallo al ingresar factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -35,42 +35,42 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
-        public static DataTable Mostrar_Salas()
+        public static DataTable Mostrar_Facturas()
         {
-            DataTable salas;
+            DataTable Facturas;
             try
             {
-                string query1 = "SELECT * FROM salas";
+                string query1 = "SELECT * FROM factura_local";
                 MySqlCommand cmdread1 = new MySqlCommand(string.Format(query1), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter1 = new MySqlDataAdapter(cmdread1);
-                salas = new DataTable();
-                adapter1.Fill(salas);
-                return salas;
+                Facturas = new DataTable();
+                adapter1.Fill(Facturas);
+                return Facturas;
             }
             catch (Exception b)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano" +b, "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return salas = new DataTable();
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano" + b, "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Facturas = new DataTable();
             }
             finally
             {
                 Conexion.ObtenerConexion().Close();
             }
         }
-        public static bool Actualizar_Sala(Constructor_Salas upd)
+        public static bool Actualizar_Factura_Local(Constructo_Factura_Local upd)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE salas SET num_sala = '{1}', capacidad = '{2}', id_estado_sala = '{3}' WHERE id_sala = '{0}'", upd.IDSala, upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala), Conexion.ObtenerConexion());
+                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE factura_local SET monto_fac_local = '{0}', fecha_fac_local = '{1}', nombre_cliente = '{2}', id_usuario = '{3}'", upd.monto_fac_local, upd.fecha_fac_local, upd.nombre_cliente, upd.id_usuario), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupdate1.ExecuteNonQuery());
                 if (retorno == true)
                 {
-                    MessageBox.Show("Los datos de la sala han sido actualizados satisfactoriamente", "Actualizacion safistactoria", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Los datos de la factura han sido actualizados satisfactoriamente", "Actualizacion safistactoria", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Fallo al actualizar los datos de la sala", "Fallo en actualizar datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Fallo al actualizar los datos de la factura", "Fallo en actualizar datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -80,12 +80,12 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
-        public static bool Eliminar_Salas(int id)
+        public static bool Eliminar_Factura_Local(int id)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdeliminar1 = new MySqlCommand(string.Format("DELETE FROM salas WHERE id_sala = '{0}'", id), Conexion.ObtenerConexion());
+                MySqlCommand cmdeliminar1 = new MySqlCommand(string.Format("DELETE FROM factura_local WHERE id_factura_local = '{0}'", id), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdeliminar1.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -99,26 +99,26 @@ namespace EXPO60.Modelo
             }
             catch (Exception d)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", d + "Error Critico" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", d + "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }
-        public static DataTable Estado_Sala()
+        public static DataTable usuario()
         {
-            string query = "SELECT * FROM estado_sala";
-            DataTable sal = new DataTable();
+            string query = "SELECT * FROM usuario";
+            DataTable usua = new DataTable();
             try
             {
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
-                adapter.Fill(sal);
-                return sal;
+                adapter.Fill(usua);
+                return usua;
             }
             catch (Exception e)
             {
 
                 MessageBox.Show("Error crítico " + e);
-                return sal;
+                return usua;
             }
             finally
             {
