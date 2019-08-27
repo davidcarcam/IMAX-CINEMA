@@ -231,6 +231,12 @@ namespace EXPO60.Vista
             }
         }
 
+        private void btnmaximizar_Click_1(object sender, EventArgs e)
+        {
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
+
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
