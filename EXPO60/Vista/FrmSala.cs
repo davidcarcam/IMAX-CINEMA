@@ -287,23 +287,39 @@ namespace EXPO60.Vista
 
         private void txtbuscar_KeyUp(object sender, KeyEventArgs e)
         {
-            string salida_datos = "";
-            string[] palabars_busqueda = this.txtbuscar.Text.Split(' ');
-            foreach (string palabra in palabars_busqueda)
-            {
-                if (salida_datos.Length == 0)
-                {
-                    salida_datos = "(num_sala LIKE '%" + palabra + "%' OR capacidad LIKE '%" + palabra + "%' OR id_estado_sala LIKE '%" + palabra + "%')";
-                }
-                else
-                {
-                    salida_datos += "AND(num_sala LIKE '%" + palabra + "%' OR capacidad LIKE '%" + palabra + "%' OR id_estado_sala LIKE '%" + palabra + "%')";
-                }
-                {
+           
+        }
 
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text!= "")
+            {
+                dgvSalas.CurrentCell = null;
+                foreach (DataGridViewRow r  in dgvSalas.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvSalas.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper())==0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
                 }
             }
-            return;
+            else
+            {
+                Mostrar_Salas();
+            }
         }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSala));
             this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbESTADO_SALA = new System.Windows.Forms.ComboBox();
@@ -46,8 +47,7 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtbuscar = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.grpRegistro_Sala.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
@@ -56,7 +56,7 @@
             // 
             // grpRegistro_Sala
             // 
-            this.grpRegistro_Sala.Controls.Add(this.button1);
+            this.grpRegistro_Sala.Controls.Add(this.label1);
             this.grpRegistro_Sala.Controls.Add(this.txtbuscar);
             this.grpRegistro_Sala.Controls.Add(this.toolStrip1);
             this.grpRegistro_Sala.Controls.Add(this.cmbESTADO_SALA);
@@ -79,6 +79,15 @@
             this.grpRegistro_Sala.TabStop = false;
             this.grpRegistro_Sala.Text = "Registro de sala";
             this.grpRegistro_Sala.Enter += new System.EventHandler(this.grpRegistro_Sala_Enter);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(827, 59);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 64;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged_1);
             // 
             // toolStrip1
             // 
@@ -172,6 +181,8 @@
             // 
             // dgvSalas
             // 
+            this.dgvSalas.AllowUserToAddRows = false;
+            this.dgvSalas.AllowUserToDeleteRows = false;
             this.dgvSalas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSalas.Location = new System.Drawing.Point(6, 288);
@@ -329,23 +340,15 @@
             // 
             this.epError2.ContainerControl = this;
             // 
-            // txtbuscar
+            // label1
             // 
-            this.txtbuscar.Location = new System.Drawing.Point(720, 59);
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(100, 20);
-            this.txtbuscar.TabIndex = 64;
-            this.txtbuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtbuscar_KeyUp);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(872, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(762, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Buscar";
             // 
             // FrmSala
             // 
@@ -385,7 +388,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbESTADO_SALA;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.Label label1;
     }
 }
