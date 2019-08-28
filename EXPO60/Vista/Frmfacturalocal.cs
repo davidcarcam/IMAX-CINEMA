@@ -18,7 +18,7 @@ namespace EXPO60.Vista
         Constructo_Factura_Local agregar = new Constructo_Factura_Local();
         Constructo_Factura_Local Actualizar = new Constructo_Factura_Local();
         public Frmfacturalocal()
-        {
+        { 
             InitializeComponent();
         }
         private void Frmfacturalocal_Load(object sender, EventArgs e)
