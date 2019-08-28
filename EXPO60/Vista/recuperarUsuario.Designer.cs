@@ -138,7 +138,7 @@
             // txtusuarioRecuperar
             // 
             this.txtusuarioRecuperar.Location = new System.Drawing.Point(420, 108);
-            this.txtusuarioRecuperar.MaxLength = 100;
+            this.txtusuarioRecuperar.MaxLength = 50;
             this.txtusuarioRecuperar.Name = "txtusuarioRecuperar";
             this.txtusuarioRecuperar.Size = new System.Drawing.Size(504, 20);
             this.txtusuarioRecuperar.TabIndex = 1;

@@ -197,5 +197,10 @@ namespace EXPO60.Vista
                 Mostrar_Factura_Local();
             }
         }
+
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

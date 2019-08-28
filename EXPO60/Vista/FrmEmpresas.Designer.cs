@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpresas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.txtDireccion_empresa = new System.Windows.Forms.TextBox();
@@ -43,8 +45,6 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempresas)).BeginInit();
@@ -74,6 +74,26 @@
             this.groupBox1.Text = "Registro de Empresas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(771, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "Buscar";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(848, 68);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 74;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -97,6 +117,7 @@
             // txtDireccion_empresa
             // 
             this.txtDireccion_empresa.Location = new System.Drawing.Point(596, 89);
+            this.txtDireccion_empresa.MaxLength = 200;
             this.txtDireccion_empresa.Multiline = true;
             this.txtDireccion_empresa.Name = "txtDireccion_empresa";
             this.txtDireccion_empresa.Size = new System.Drawing.Size(153, 48);
@@ -124,6 +145,7 @@
             // txtNombre_empresa
             // 
             this.txtNombre_empresa.Location = new System.Drawing.Point(212, 91);
+            this.txtNombre_empresa.MaxLength = 50;
             this.txtNombre_empresa.Name = "txtNombre_empresa";
             this.txtNombre_empresa.Size = new System.Drawing.Size(153, 20);
             this.txtNombre_empresa.TabIndex = 1;
@@ -298,26 +320,6 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(771, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Buscar";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(848, 68);
-            this.txtbuscar.MaxLength = 50;
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 74;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmEmpresas
             // 

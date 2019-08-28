@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonajes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.cmbactor = new System.Windows.Forms.ComboBox();
             this.cmbpelicula = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -44,8 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpersonajes)).BeginInit();
@@ -76,6 +76,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de personajes";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(730, 65);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.TabIndex = 81;
+            this.label11.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(807, 65);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 80;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // cmbactor
             // 
@@ -297,7 +316,7 @@
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(200, 61);
-            this.txtnombre.MaxLength = 40;
+            this.txtnombre.MaxLength = 50;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
             this.txtnombre.TabIndex = 1;
@@ -312,25 +331,6 @@
             this.label1.Size = new System.Drawing.Size(164, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del personaje";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(730, 65);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 20);
-            this.label11.TabIndex = 81;
-            this.label11.Text = "Buscar";
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(807, 65);
-            this.txtbuscar.MaxLength = 50;
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 80;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmPersonajes
             // 
