@@ -19,12 +19,14 @@ namespace EXPO60.Controlador
             string database = "expo60";
             string user = "root";
             string pass = "";
+         
             try
             {
                 connect = new MySqlConnection("server = " + server +
                                                 "; database = " + database +
                                                 "; Uid = " + user +
-                                                "; pwd = " + pass );
+                                                "; pwd = " + pass);
+
                 connect.Open();
                 return connect;
             }

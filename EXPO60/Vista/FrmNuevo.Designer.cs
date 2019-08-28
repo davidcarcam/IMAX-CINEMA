@@ -97,6 +97,7 @@
             this.btnmaximizar.Name = "btnmaximizar";
             this.btnmaximizar.Size = new System.Drawing.Size(23, 22);
             this.btnmaximizar.Text = "Maximizar";
+            this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click_1);
             // 
             // btnnormal
             // 

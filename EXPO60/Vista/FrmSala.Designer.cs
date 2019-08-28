@@ -33,6 +33,7 @@
             this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.cmbESTADO_SALA = new System.Windows.Forms.ComboBox();
             this.lblEstado_Sala = new System.Windows.Forms.Label();
             this.txtCapacidad_Sala = new System.Windows.Forms.TextBox();
             this.lblCapacidad_Sala = new System.Windows.Forms.Label();
@@ -45,7 +46,8 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmbESTADO_SALA = new System.Windows.Forms.ComboBox();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.grpRegistro_Sala.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
@@ -54,6 +56,8 @@
             // 
             // grpRegistro_Sala
             // 
+            this.grpRegistro_Sala.Controls.Add(this.button1);
+            this.grpRegistro_Sala.Controls.Add(this.txtbuscar);
             this.grpRegistro_Sala.Controls.Add(this.toolStrip1);
             this.grpRegistro_Sala.Controls.Add(this.cmbESTADO_SALA);
             this.grpRegistro_Sala.Controls.Add(this.lblEstado_Sala);
@@ -96,6 +100,16 @@
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // cmbESTADO_SALA
+            // 
+            this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbESTADO_SALA.FormattingEnabled = true;
+            this.cmbESTADO_SALA.Location = new System.Drawing.Point(838, 110);
+            this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
+            this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
+            this.cmbESTADO_SALA.TabIndex = 3;
+            this.cmbESTADO_SALA.SelectedIndexChanged += new System.EventHandler(this.cmbESTADO_SALA_SelectedIndexChanged);
             // 
             // lblEstado_Sala
             // 
@@ -315,15 +329,23 @@
             // 
             this.epError2.ContainerControl = this;
             // 
-            // cmbESTADO_SALA
+            // txtbuscar
             // 
-            this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbESTADO_SALA.FormattingEnabled = true;
-            this.cmbESTADO_SALA.Location = new System.Drawing.Point(838, 110);
-            this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
-            this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
-            this.cmbESTADO_SALA.TabIndex = 3;
-            this.cmbESTADO_SALA.SelectedIndexChanged += new System.EventHandler(this.cmbESTADO_SALA_SelectedIndexChanged);
+            this.txtbuscar.Location = new System.Drawing.Point(720, 59);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtbuscar.TabIndex = 64;
+            this.txtbuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtbuscar_KeyUp);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(872, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmSala
             // 
@@ -363,5 +385,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbESTADO_SALA;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

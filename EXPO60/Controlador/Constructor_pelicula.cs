@@ -10,7 +10,7 @@ namespace EXPO60.Controlador
     {
         public int id_pelicula { get; set; }
         public string Titulo { get; set; }
-        public int Año { get; set; }
+        public string Año { get; set; }
         public string Director { get; set; }
         public int Idioma { get; set; }
         public int tipo { get; set; }

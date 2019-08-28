@@ -28,7 +28,9 @@ namespace EXPO60.Vista
             agregar.direccion = txtdireccion.Text;
             agregar.DUI = txtdui.Text;
             agregar.telefono = txttelefono.Text;
-            
+            agregar.id_empresa = Convert.ToInt16(cmbempresa.SelectedValue);
+            agregar.id_estado_prov = Convert.ToInt16(cmbestado.SelectedValue);
+
             int datos = Funciones_proveedores.insertarProveedor(agregar);
         }
         public void vaciarampos()
@@ -48,7 +50,9 @@ namespace EXPO60.Vista
             actualizar.direccion = txtdireccion.Text;
             actualizar.DUI = txtdui.Text;
             actualizar.telefono = txttelefono.Text;
-           
+            actualizar.id_empresa = Convert.ToInt16(cmbempresa.SelectedValue);
+            actualizar.id_estado_prov = Convert.ToInt16(cmbestado.SelectedValue);
+
             Funciones_proveedores.actualizarProveedor(actualizar);
         }
         public void mostrarProveedor()
@@ -65,15 +69,13 @@ namespace EXPO60.Vista
         }
         public void mostrarET()
         {
+            cmbempresa.DataSource = Funciones_proveedores.ObtenerEmpresa();
+            cmbempresa.DisplayMember = "empresa";
+            cmbempresa.ValueMember = "id_empresa";
 
             cmbestado.DataSource = Funciones_proveedores.ObtenerEstado();
             cmbestado.DisplayMember = "estado_prov";
             cmbestado.ValueMember = "id_estado_prov";
-
-
-            cmbempresa.DataSource = Funciones_proveedores.ObtenerEmpresa();
-            cmbempresa.DisplayMember = "empresa";
-            cmbempresa.ValueMember = "id_empresa";
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
