@@ -86,6 +86,24 @@ namespace EXPO60.Vista
         private void btnmostrar_Click(object sender, EventArgs e)
         {
             Mostrarcmb();
-        }       
+        }
+        public void eliminarRegistro()
+        {
+            if (MessageBox.Show("Esta seguro de realizar esta operacion?", "confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Funciones_peliculas.eliminarPelicula(Convert.ToInt32(idDetalleTicket.Text));
+            }
+
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            eliminarRegistro();
+            vaciarampos();
+            mostrarPeliculas();
+            btnactualizar.Enabled = false;
+            btnagregar.Enabled = true;
+            btneliminar.Enabled = false;
+        }
     }
 }
