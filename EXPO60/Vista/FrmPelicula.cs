@@ -28,7 +28,7 @@ namespace EXPO60.Vista
         public void modificarRegistro()
         {
             actualizar.Titulo = txttitulo.Text;
-            actualizar.Año = Convert.ToInt16(txtaño);
+            actualizar.Año = txtaño.Text;
             actualizar.Director = txtdirector.Text;
             actualizar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
             actualizar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
@@ -53,9 +53,9 @@ namespace EXPO60.Vista
         public void agregarPelicula()
         {
             agregar.Titulo = txttitulo.Text;
-            agregar.Año = Convert.ToInt16(txtaño.Text);
+            agregar.Año = txtaño.Text;
             agregar.Director = txtdirector.Text;
-            actualizar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
+            agregar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
             agregar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
             agregar.dimensiones = Convert.ToInt16(cmbDimensiones.SelectedValue);
             agregar.estado = Convert.ToInt16(cmbestado.SelectedValue);
@@ -218,6 +218,38 @@ namespace EXPO60.Vista
         }
 
         private void cmbIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text != "")
+            {
+                dgvpeliculas.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvpeliculas.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvpeliculas.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                mostrarPeliculas();
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

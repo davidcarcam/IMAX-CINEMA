@@ -44,11 +44,15 @@ namespace EXPO60.Vista
             cmbAsiento.DisplayMember = "id_num";
             cmbAsiento.ValueMember = "id_asiento";
         }
+       
         private void FrmDetalleTicket_Load(object sender, EventArgs e)
         {
-            
+            Mostrarcmb();
+            this.dgvtickets.Columns[0].Visible = false;
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
         }
-        public void agregarEmpresa()
+        public void agregarDetalleTickt()
         {
             agregar.funcion = Convert.ToInt16(cmbfuncion.Text);
             agregar.asiento = Convert.ToInt16(cmbAsiento.Text);
@@ -62,12 +66,63 @@ namespace EXPO60.Vista
             }
             else
             {
-                agregarEmpresa();              
+                agregarDetalleTickt();
+                mostrarDetalleTicket();
+                vaciarampos();
+                            
             }
         }
+
+        private void vaciarampos()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void mostrarDetalleTicket()
+        {
+            throw new NotImplementedException();
+        }
+
         private void btnmostrar_Click(object sender, EventArgs e)
         {
-            
-        }       
+            Mostrarcmb();
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text != "")
+            {
+                dgvtickets.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvtickets.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvtickets.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                mostrarDetalleTicket();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvtickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

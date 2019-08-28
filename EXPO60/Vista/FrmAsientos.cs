@@ -144,5 +144,37 @@ namespace EXPO60.Vista
         {
             this.Close();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text != "")
+            {
+                dgvAsientos.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvAsientos.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvAsientos.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Mostrar_Asientos();
+            }
+        }
     }
 }

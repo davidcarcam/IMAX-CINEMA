@@ -171,5 +171,32 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text != "")
+            {
+                dgvlocal.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvlocal.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvlocal.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                mostrarLocal();
+            }
+        }
     }
 }

@@ -44,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpersonajes)).BeginInit();
@@ -51,6 +53,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.cmbactor);
             this.groupBox1.Controls.Add(this.cmbpelicula);
             this.groupBox1.Controls.Add(this.toolStrip1);
@@ -77,7 +81,7 @@
             // 
             this.cmbactor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbactor.FormattingEnabled = true;
-            this.cmbactor.Location = new System.Drawing.Point(828, 63);
+            this.cmbactor.Location = new System.Drawing.Point(468, 103);
             this.cmbactor.Name = "cmbactor";
             this.cmbactor.Size = new System.Drawing.Size(153, 21);
             this.cmbactor.TabIndex = 3;
@@ -86,7 +90,7 @@
             // 
             this.cmbpelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbpelicula.FormattingEnabled = true;
-            this.cmbpelicula.Location = new System.Drawing.Point(580, 61);
+            this.cmbpelicula.Location = new System.Drawing.Point(468, 60);
             this.cmbpelicula.Name = "cmbpelicula";
             this.cmbpelicula.Size = new System.Drawing.Size(153, 21);
             this.cmbpelicula.TabIndex = 2;
@@ -113,7 +117,7 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(615, 116);
+            this.txtid.Location = new System.Drawing.Point(200, 129);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(28, 20);
             this.txtid.TabIndex = 0;
@@ -121,9 +125,11 @@
             // 
             // dgvpersonajes
             // 
+            this.dgvpersonajes.AllowUserToAddRows = false;
+            this.dgvpersonajes.AllowUserToDeleteRows = false;
             this.dgvpersonajes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvpersonajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpersonajes.Location = new System.Drawing.Point(9, 283);
+            this.dgvpersonajes.Location = new System.Drawing.Point(8, 270);
             this.dgvpersonajes.Name = "dgvpersonajes";
             this.dgvpersonajes.Size = new System.Drawing.Size(1011, 265);
             this.dgvpersonajes.TabIndex = 0;
@@ -272,7 +278,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(759, 64);
+            this.label3.Location = new System.Drawing.Point(395, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 20);
             this.label3.TabIndex = 0;
@@ -282,7 +288,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(491, 64);
+            this.label2.Location = new System.Drawing.Point(379, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 0;
@@ -290,7 +296,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(312, 62);
+            this.txtnombre.Location = new System.Drawing.Point(200, 61);
             this.txtnombre.MaxLength = 40;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
@@ -301,11 +307,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 62);
+            this.label1.Location = new System.Drawing.Point(10, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del personaje";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(730, 65);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.TabIndex = 81;
+            this.label11.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(807, 65);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 80;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmPersonajes
             // 
@@ -342,5 +367,7 @@
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbactor;
         private System.Windows.Forms.ComboBox cmbpelicula;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

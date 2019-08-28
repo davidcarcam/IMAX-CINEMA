@@ -168,6 +168,7 @@ namespace EXPO60.Vista
             // 
             // txtcorreo
             // 
+            this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtcorreo.Location = new System.Drawing.Point(457, 76);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(196, 20);
@@ -301,6 +302,7 @@ namespace EXPO60.Vista
             this.dgvusuarios.Size = new System.Drawing.Size(1009, 230);
             this.dgvusuarios.TabIndex = 0;
             this.dgvusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellClick);
+            this.dgvusuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellContentClick);
             // 
             // txtid
             // 

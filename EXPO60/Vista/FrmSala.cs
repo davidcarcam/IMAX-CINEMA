@@ -278,5 +278,48 @@ namespace EXPO60.Vista
             btnEliminar_Sala.Enabled = true;
             btnAgregar_Sala.Enabled = false;
         }
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text!= "")
+            {
+                dgvSalas.CurrentCell = null;
+                foreach (DataGridViewRow r  in dgvSalas.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvSalas.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper())==0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Mostrar_Salas();
+            }
+        }
     }
 }

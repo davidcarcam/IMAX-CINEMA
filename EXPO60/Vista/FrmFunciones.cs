@@ -42,9 +42,9 @@ namespace EXPO60.Vista
         {
             actualizar.duracion = mskDuracion.Text;
             actualizar.hora = mskHora.Text;
-            agregar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
-            agregar.sala = Convert.ToInt16(cmbSala.SelectedValue);
-            agregar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
+            actualizar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
+            actualizar.sala = Convert.ToInt16(cmbSala.SelectedValue);
+            actualizar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
             Funciones_funcion.actualizarFunciones(actualizar);
         }
         public void vaciarampos()
@@ -130,11 +130,14 @@ namespace EXPO60.Vista
         {
             int posicion;
             posicion = this.dgvFuncion.CurrentRow.Index;
-            textBox1.Text = this.dgvFuncion[0, posicion].Value.ToString();
-            mskDuracion.Text = this.dgvFuncion[1, posicion].Value.ToString();
-            mskHora.Text = this.dgvFuncion[2, posicion].Value.ToString();
-            btnActualizar.Enabled = true;
+            textBox1.Text = dgvFuncion[0, posicion].Value.ToString();
+            mskDuracion.Text = dgvFuncion[1, posicion].Value.ToString();
+            mskHora.Text = dgvFuncion[2, posicion].Value.ToString();
+            cmbpelicula.Text = dgvFuncion[3, posicion].Value.ToString();
+            cmbSala.Text = dgvFuncion[4, posicion].Value.ToString();
+            cmbClasificacion.Text = dgvFuncion[6, posicion].Value.ToString();
             btnEliminar.Enabled = true;
+            btnActualizar.Enabled = true;
             btnagregar.Enabled = false;
         }
 
@@ -145,6 +148,33 @@ namespace EXPO60.Vista
             this.dgvFuncion.Columns[0].Visible = false;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text != "")
+            {
+                dgvFuncion.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvFuncion.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvFuncion.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                mostrarFunciones();
+            }
         }
     }
 }

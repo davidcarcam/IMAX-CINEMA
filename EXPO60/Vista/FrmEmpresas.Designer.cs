@@ -43,6 +43,8 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempresas)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.txtDireccion_empresa);
             this.groupBox1.Controls.Add(this.label2);
@@ -92,17 +96,18 @@
             // 
             // txtDireccion_empresa
             // 
-            this.txtDireccion_empresa.Location = new System.Drawing.Point(758, 76);
+            this.txtDireccion_empresa.Location = new System.Drawing.Point(596, 89);
             this.txtDireccion_empresa.Multiline = true;
             this.txtDireccion_empresa.Name = "txtDireccion_empresa";
             this.txtDireccion_empresa.Size = new System.Drawing.Size(153, 48);
             this.txtDireccion_empresa.TabIndex = 2;
+            this.txtDireccion_empresa.TextChanged += new System.EventHandler(this.txtDireccion_empresa_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(587, 89);
+            this.label2.Location = new System.Drawing.Point(416, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 20);
             this.label2.TabIndex = 0;
@@ -110,7 +115,7 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(455, 40);
+            this.txtid.Location = new System.Drawing.Point(212, 56);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
             this.txtid.TabIndex = 0;
@@ -118,7 +123,7 @@
             // 
             // txtNombre_empresa
             // 
-            this.txtNombre_empresa.Location = new System.Drawing.Point(400, 87);
+            this.txtNombre_empresa.Location = new System.Drawing.Point(212, 91);
             this.txtNombre_empresa.Name = "txtNombre_empresa";
             this.txtNombre_empresa.Size = new System.Drawing.Size(153, 20);
             this.txtNombre_empresa.TabIndex = 1;
@@ -128,7 +133,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(239, 85);
+            this.label1.Location = new System.Drawing.Point(30, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 0;
@@ -136,6 +141,8 @@
             // 
             // dgvempresas
             // 
+            this.dgvempresas.AllowUserToAddRows = false;
+            this.dgvempresas.AllowUserToDeleteRows = false;
             this.dgvempresas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvempresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvempresas.Location = new System.Drawing.Point(8, 276);
@@ -292,6 +299,26 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(771, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "Buscar";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(848, 68);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 74;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
             // FrmEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,5 +354,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

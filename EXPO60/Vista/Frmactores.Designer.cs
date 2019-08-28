@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActores));
             this.grpActores = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.dgvActores = new System.Windows.Forms.DataGridView();
@@ -50,6 +52,8 @@
             // 
             // grpActores
             // 
+            this.grpActores.Controls.Add(this.label8);
+            this.grpActores.Controls.Add(this.txtbuscar);
             this.grpActores.Controls.Add(this.toolStrip1);
             this.grpActores.Controls.Add(this.dgvActores);
             this.grpActores.Controls.Add(this.txtID_Actor);
@@ -68,6 +72,25 @@
             this.grpActores.TabStop = false;
             this.grpActores.Text = "Registro de actores";
             this.grpActores.Resize += new System.EventHandler(this.GrpActores_Resize);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(903, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 20);
+            this.label8.TabIndex = 69;
+            this.label8.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(977, 99);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(182, 20);
+            this.txtbuscar.TabIndex = 68;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // toolStrip1
             // 
@@ -92,6 +115,8 @@
             // 
             // dgvActores
             // 
+            this.dgvActores.AllowUserToAddRows = false;
+            this.dgvActores.AllowUserToDeleteRows = false;
             this.dgvActores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvActores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActores.Location = new System.Drawing.Point(79, 236);
@@ -254,10 +279,10 @@
             // 
             // txtactor
             // 
-            this.txtactor.Location = new System.Drawing.Point(429, 97);
+            this.txtactor.Location = new System.Drawing.Point(313, 99);
             this.txtactor.MaxLength = 100;
             this.txtactor.Name = "txtactor";
-            this.txtactor.Size = new System.Drawing.Size(500, 20);
+            this.txtactor.Size = new System.Drawing.Size(404, 20);
             this.txtactor.TabIndex = 1;
             this.txtactor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_Actor_KeyPress);
             this.txtactor.Validated += new System.EventHandler(this.TxtNombre_Actor_Validated);
@@ -266,11 +291,12 @@
             // 
             this.lblNombre_Actor.AutoSize = true;
             this.lblNombre_Actor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre_Actor.Location = new System.Drawing.Point(274, 95);
+            this.lblNombre_Actor.Location = new System.Drawing.Point(173, 97);
             this.lblNombre_Actor.Name = "lblNombre_Actor";
             this.lblNombre_Actor.Size = new System.Drawing.Size(134, 20);
             this.lblNombre_Actor.TabIndex = 0;
             this.lblNombre_Actor.Text = "Nombre del actor:";
+            this.lblNombre_Actor.Click += new System.EventHandler(this.lblNombre_Actor_Click);
             // 
             // epError3
             // 
@@ -311,5 +337,7 @@
         private System.Windows.Forms.ErrorProvider epError3;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

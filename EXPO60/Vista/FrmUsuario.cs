@@ -335,29 +335,14 @@ namespace EXPO60.Vista
             this.dgvusuarios.Columns[0].Visible = false;
             this.dgvusuarios.Columns[9].Visible = false;
             this.dgvusuarios.Columns[5].Visible = false;
+            this.dgvusuarios.Columns[9].Visible = false;
             this.dgvusuarios.Columns[10].Visible = false;
             this.dgvusuarios.Columns[11].Visible = false;
-            this.dgvusuarios.Columns[12].Visible = false;
         }
 
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion;
-            posicion = this.dgvusuarios.CurrentRow.Index;
-            txtid.Text = dgvusuarios[0, posicion].Value.ToString();
-            txtnombre.Text = dgvusuarios[1, posicion].Value.ToString();
-            txtapellido.Text = dgvusuarios[2, posicion].Value.ToString();
-            txtdireccion.Text = dgvusuarios[3, posicion].Value.ToString();
-            txtcorreo.Text = dgvusuarios[4, posicion].Value.ToString();
-            txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
-            txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
-            txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
-            txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
-            cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
-            cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
-            btneliminar.Enabled = true;
-            btnactualizar.Enabled = true;
-            btnagregar.Enabled = false;
+            
         }
 
         private void btnmostrar_Click_1(object sender, EventArgs e)
@@ -432,6 +417,26 @@ namespace EXPO60.Vista
         private void label8_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvusuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvusuarios.CurrentRow.Index;
+            txtid.Text = dgvusuarios[0, posicion].Value.ToString();
+            txtnombre.Text = dgvusuarios[1, posicion].Value.ToString();
+            txtapellido.Text = dgvusuarios[2, posicion].Value.ToString();
+            txtdireccion.Text = dgvusuarios[3, posicion].Value.ToString();
+            txtcorreo.Text = dgvusuarios[4, posicion].Value.ToString();
+            txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
+            txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
+            txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
+            txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
+            cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
+            cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
+            btneliminar.Enabled = true;
+            btnactualizar.Enabled = true;
+            btnagregar.Enabled = false;
         }
     }
 

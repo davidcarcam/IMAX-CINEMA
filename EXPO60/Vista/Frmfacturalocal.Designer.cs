@@ -65,6 +65,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfacturaloc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -347,6 +349,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txtbuscar);
             this.groupBox2.Controls.Add(this.cmbTipo_Pago);
             this.groupBox2.Controls.Add(this.cmbusuario);
             this.groupBox2.Controls.Add(this.toolStrip1);
@@ -371,12 +375,13 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de factura local";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // cmbTipo_Pago
             // 
             this.cmbTipo_Pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo_Pago.FormattingEnabled = true;
-            this.cmbTipo_Pago.Location = new System.Drawing.Point(716, 46);
+            this.cmbTipo_Pago.Location = new System.Drawing.Point(514, 52);
             this.cmbTipo_Pago.Name = "cmbTipo_Pago";
             this.cmbTipo_Pago.Size = new System.Drawing.Size(153, 21);
             this.cmbTipo_Pago.TabIndex = 4;
@@ -385,7 +390,7 @@
             // 
             this.cmbusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbusuario.FormattingEnabled = true;
-            this.cmbusuario.Location = new System.Drawing.Point(716, 88);
+            this.cmbusuario.Location = new System.Drawing.Point(514, 94);
             this.cmbusuario.Name = "cmbusuario";
             this.cmbusuario.Size = new System.Drawing.Size(153, 21);
             this.cmbusuario.TabIndex = 4;
@@ -412,7 +417,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(324, 133);
+            this.maskedTextBox1.Location = new System.Drawing.Point(122, 139);
             this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(153, 20);
@@ -422,7 +427,7 @@
             // 
             // txtMont
             // 
-            this.txtMont.Location = new System.Drawing.Point(324, 85);
+            this.txtMont.Location = new System.Drawing.Point(122, 91);
             this.txtMont.Mask = "$00000";
             this.txtMont.Name = "txtMont";
             this.txtMont.Size = new System.Drawing.Size(153, 20);
@@ -431,9 +436,11 @@
             // 
             // txtDate
             // 
+            this.txtDate.AllowUserToAddRows = false;
+            this.txtDate.AllowUserToDeleteRows = false;
             this.txtDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.txtDate.Location = new System.Drawing.Point(-7, 288);
+            this.txtDate.Location = new System.Drawing.Point(11, 276);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(1011, 265);
             this.txtDate.TabIndex = 0;
@@ -586,7 +593,7 @@
             // 
             // txtIdentificador
             // 
-            this.txtIdentificador.Location = new System.Drawing.Point(523, 66);
+            this.txtIdentificador.Location = new System.Drawing.Point(321, 72);
             this.txtIdentificador.Name = "txtIdentificador";
             this.txtIdentificador.Size = new System.Drawing.Size(31, 20);
             this.txtIdentificador.TabIndex = 0;
@@ -596,7 +603,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(605, 86);
+            this.label6.Location = new System.Drawing.Point(403, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 0;
@@ -606,7 +613,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(606, 44);
+            this.label7.Location = new System.Drawing.Point(404, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 20);
             this.label7.TabIndex = 0;
@@ -616,7 +623,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(264, 133);
+            this.label8.Location = new System.Drawing.Point(62, 139);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 0;
@@ -626,7 +633,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(264, 86);
+            this.label9.Location = new System.Drawing.Point(62, 92);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 20);
             this.label9.TabIndex = 0;
@@ -634,7 +641,7 @@
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(324, 42);
+            this.txtNom.Location = new System.Drawing.Point(122, 48);
             this.txtNom.MaxLength = 40;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(153, 20);
@@ -645,11 +652,30 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(253, 42);
+            this.label10.Location = new System.Drawing.Point(51, 48);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Nombre";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(769, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.TabIndex = 77;
+            this.label11.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(846, 68);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 76;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // Frmfacturalocal
             // 
@@ -711,5 +737,7 @@
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbusuario;
         private System.Windows.Forms.ComboBox cmbTipo_Pago;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

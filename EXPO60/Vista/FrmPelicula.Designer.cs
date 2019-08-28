@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPelicula));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.cmbDimensiones = new System.Windows.Forms.ComboBox();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.cmbestado = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
@@ -59,6 +61,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.cmbIdioma);
             this.groupBox1.Controls.Add(this.cmbDimensiones);
             this.groupBox1.Controls.Add(this.cmbGenero);
@@ -89,11 +93,21 @@
             this.groupBox1.Text = "Registro de peliculas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Location = new System.Drawing.Point(388, 48);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(153, 21);
+            this.cmbIdioma.TabIndex = 61;
+            this.cmbIdioma.SelectedIndexChanged += new System.EventHandler(this.cmbIdioma_SelectedIndexChanged);
+            // 
             // cmbDimensiones
             // 
             this.cmbDimensiones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDimensiones.FormattingEnabled = true;
-            this.cmbDimensiones.Location = new System.Drawing.Point(449, 117);
+            this.cmbDimensiones.Location = new System.Drawing.Point(388, 120);
             this.cmbDimensiones.Name = "cmbDimensiones";
             this.cmbDimensiones.Size = new System.Drawing.Size(153, 21);
             this.cmbDimensiones.TabIndex = 5;
@@ -102,7 +116,7 @@
             // 
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(707, 43);
+            this.cmbGenero.Location = new System.Drawing.Point(628, 51);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(153, 21);
             this.cmbGenero.TabIndex = 6;
@@ -112,7 +126,7 @@
             // 
             this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(707, 116);
+            this.cmbestado.Location = new System.Drawing.Point(628, 120);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(153, 21);
             this.cmbestado.TabIndex = 7;
@@ -139,7 +153,7 @@
             // 
             // txtaño
             // 
-            this.txtaño.Location = new System.Drawing.Point(128, 83);
+            this.txtaño.Location = new System.Drawing.Point(97, 86);
             this.txtaño.Mask = "0000";
             this.txtaño.Name = "txtaño";
             this.txtaño.Size = new System.Drawing.Size(153, 20);
@@ -147,6 +161,8 @@
             // 
             // dgvpeliculas
             // 
+            this.dgvpeliculas.AllowUserToAddRows = false;
+            this.dgvpeliculas.AllowUserToDeleteRows = false;
             this.dgvpeliculas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvpeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvpeliculas.Location = new System.Drawing.Point(9, 256);
@@ -301,7 +317,7 @@
             // 
             // idPelicula
             // 
-            this.idPelicula.Location = new System.Drawing.Point(921, 48);
+            this.idPelicula.Location = new System.Drawing.Point(317, 81);
             this.idPelicula.Name = "idPelicula";
             this.idPelicula.Size = new System.Drawing.Size(28, 20);
             this.idPelicula.TabIndex = 0;
@@ -311,7 +327,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(641, 117);
+            this.label7.Location = new System.Drawing.Point(562, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 0;
@@ -319,7 +335,7 @@
             // 
             // txttitulo
             // 
-            this.txttitulo.Location = new System.Drawing.Point(128, 45);
+            this.txttitulo.Location = new System.Drawing.Point(97, 48);
             this.txttitulo.MaxLength = 30;
             this.txttitulo.Name = "txttitulo";
             this.txttitulo.Size = new System.Drawing.Size(153, 20);
@@ -330,7 +346,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(75, 43);
+            this.label6.Location = new System.Drawing.Point(44, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 20);
             this.label6.TabIndex = 0;
@@ -340,7 +356,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(638, 46);
+            this.label5.Location = new System.Drawing.Point(559, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 0;
@@ -348,7 +364,7 @@
             // 
             // txtdirector
             // 
-            this.txtdirector.Location = new System.Drawing.Point(128, 129);
+            this.txtdirector.Location = new System.Drawing.Point(97, 132);
             this.txtdirector.MaxLength = 45;
             this.txtdirector.Name = "txtdirector";
             this.txtdirector.Size = new System.Drawing.Size(153, 20);
@@ -359,7 +375,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 129);
+            this.label4.Location = new System.Drawing.Point(26, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 0;
@@ -369,17 +385,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 119);
+            this.label3.Location = new System.Drawing.Point(277, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 20);
+            this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Dimensiones";
+            this.label3.Text = "Formatos";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 81);
+            this.label2.Location = new System.Drawing.Point(53, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 0;
@@ -389,21 +405,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(358, 44);
+            this.label1.Location = new System.Drawing.Point(297, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Idioma";
             // 
-            // cmbIdioma
+            // label8
             // 
-            this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIdioma.FormattingEnabled = true;
-            this.cmbIdioma.Location = new System.Drawing.Point(449, 45);
-            this.cmbIdioma.Name = "cmbIdioma";
-            this.cmbIdioma.Size = new System.Drawing.Size(153, 21);
-            this.cmbIdioma.TabIndex = 61;
-            this.cmbIdioma.SelectedIndexChanged += new System.EventHandler(this.cmbIdioma_SelectedIndexChanged);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(776, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 20);
+            this.label8.TabIndex = 67;
+            this.label8.Text = "Buscar";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(869, 86);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 66;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmPelicula
             // 
@@ -450,5 +476,7 @@
         private System.Windows.Forms.ComboBox cmbestado;
         private System.Windows.Forms.ComboBox cmbDimensiones;
         private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }
