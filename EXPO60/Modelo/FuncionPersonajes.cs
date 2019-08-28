@@ -41,7 +41,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM PERSONAJES";
+                string query = "SELECT * FROM personajes";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -63,7 +63,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE PERSONAJES SET PERSONAJE = '{0}', ID_PELICULA = '{1}', ID_ACTORES = '{2}' WHERE ID_PERSONAJE = '{3}'", upd.nombre, upd.pelicula, upd.actor, upd.idpersonaje), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE personajes SET PERSONAJE = '{0}', id_pelicula = '{1}',id_personaje = '{2}' WHERE id_personaje = '{3}'", upd.nombre, upd.pelicula, upd.actor, upd.idpersonaje), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
