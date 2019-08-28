@@ -46,6 +46,8 @@
             this.btnMostrar_Asientos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Asiento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.grpAsientos.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).BeginInit();
@@ -54,6 +56,8 @@
             // 
             // grpAsientos
             // 
+            this.grpAsientos.Controls.Add(this.label8);
+            this.grpAsientos.Controls.Add(this.txtbuscar);
             this.grpAsientos.Controls.Add(this.toolStrip1);
             this.grpAsientos.Controls.Add(this.cmbEstado_Asiento);
             this.grpAsientos.Controls.Add(this.cmbSala);
@@ -99,7 +103,7 @@
             // 
             this.cmbEstado_Asiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado_Asiento.FormattingEnabled = true;
-            this.cmbEstado_Asiento.Location = new System.Drawing.Point(819, 79);
+            this.cmbEstado_Asiento.Location = new System.Drawing.Point(813, 96);
             this.cmbEstado_Asiento.Name = "cmbEstado_Asiento";
             this.cmbEstado_Asiento.Size = new System.Drawing.Size(200, 21);
             this.cmbEstado_Asiento.TabIndex = 3;
@@ -108,7 +112,7 @@
             // 
             this.cmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSala.FormattingEnabled = true;
-            this.cmbSala.Location = new System.Drawing.Point(420, 80);
+            this.cmbSala.Location = new System.Drawing.Point(379, 93);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(200, 21);
             this.cmbSala.TabIndex = 2;
@@ -117,7 +121,7 @@
             // 
             this.lblEstado_Asiento.AutoSize = true;
             this.lblEstado_Asiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Asiento.Location = new System.Drawing.Point(626, 80);
+            this.lblEstado_Asiento.Location = new System.Drawing.Point(598, 97);
             this.lblEstado_Asiento.Name = "lblEstado_Asiento";
             this.lblEstado_Asiento.Size = new System.Drawing.Size(194, 20);
             this.lblEstado_Asiento.TabIndex = 0;
@@ -127,7 +131,7 @@
             // 
             this.lblSala.AutoSize = true;
             this.lblSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSala.Location = new System.Drawing.Point(343, 81);
+            this.lblSala.Location = new System.Drawing.Point(317, 94);
             this.lblSala.Name = "lblSala";
             this.lblSala.Size = new System.Drawing.Size(45, 20);
             this.lblSala.TabIndex = 0;
@@ -135,7 +139,7 @@
             // 
             // txtID_Asiento
             // 
-            this.txtID_Asiento.Location = new System.Drawing.Point(643, 47);
+            this.txtID_Asiento.Location = new System.Drawing.Point(96, 61);
             this.txtID_Asiento.Name = "txtID_Asiento";
             this.txtID_Asiento.Size = new System.Drawing.Size(89, 20);
             this.txtID_Asiento.TabIndex = 0;
@@ -143,7 +147,7 @@
             // 
             // txtNumero_Asiento
             // 
-            this.txtNumero_Asiento.Location = new System.Drawing.Point(106, 83);
+            this.txtNumero_Asiento.Location = new System.Drawing.Point(96, 96);
             this.txtNumero_Asiento.MaxLength = 7;
             this.txtNumero_Asiento.Name = "txtNumero_Asiento";
             this.txtNumero_Asiento.Size = new System.Drawing.Size(200, 20);
@@ -155,7 +159,7 @@
             // 
             this.lblAsiento.AutoSize = true;
             this.lblAsiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsiento.Location = new System.Drawing.Point(23, 85);
+            this.lblAsiento.Location = new System.Drawing.Point(23, 94);
             this.lblAsiento.Name = "lblAsiento";
             this.lblAsiento.Size = new System.Drawing.Size(67, 20);
             this.lblAsiento.TabIndex = 0;
@@ -163,6 +167,8 @@
             // 
             // dgvAsientos
             // 
+            this.dgvAsientos.AllowUserToAddRows = false;
+            this.dgvAsientos.AllowUserToDeleteRows = false;
             this.dgvAsientos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAsientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsientos.Location = new System.Drawing.Point(27, 249);
@@ -319,6 +325,26 @@
             // 
             this.epError1.ContainerControl = this;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(703, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 20);
+            this.label8.TabIndex = 71;
+            this.label8.Text = "Buscar";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(768, 46);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 70;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
             // FrmAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,5 +383,7 @@
         private System.Windows.Forms.ErrorProvider epError1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolbtnCerrar_Asientos;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

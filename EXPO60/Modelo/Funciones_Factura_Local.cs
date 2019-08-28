@@ -40,11 +40,11 @@ namespace EXPO60.Modelo
             DataTable Facturas;
             try
             {
-                string query1 = "SELECT * FROM factura_local";
-                MySqlCommand cmdread1 = new MySqlCommand(string.Format(query1), Conexion.ObtenerConexion());
-                MySqlDataAdapter adapter1 = new MySqlDataAdapter(cmdread1);
+                string query = "SELECT * FROM factura_local";
+                MySqlCommand cmdread = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdread);
                 Facturas = new DataTable();
-                adapter1.Fill(Facturas);
+                adapter.Fill(Facturas);
                 return Facturas;
             }
             catch (Exception b)
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE factura_local SET monto_fac_local = '{0}', fecha_fac_local = '{1}', nombre_cliente = '{2}', id_usuario = '{3}'", upd.monto_fac_local, upd.fecha_fac_local, upd.nombre_cliente, upd.id_usuario), Conexion.ObtenerConexion());
+                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE factura_local SET monto_fac_local ='{0}' , fecha_fac_local = '{1}', nombre_cliente ='{2}', id_usuario ='{3}'", upd.monto_fac_local, upd.fecha_fac_local, upd.nombre_cliente, upd.id_usuario), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupdate1.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -85,7 +85,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdeliminar1 = new MySqlCommand(string.Format("DELETE FROM factura_local WHERE id_factura_local = '{0}'", id), Conexion.ObtenerConexion());
+                MySqlCommand cmdeliminar1 = new MySqlCommand(string.Format("DELETE FROM  factura_local WHERE id_factura_local = '{0}'", id), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdeliminar1.ExecuteNonQuery());
                 if (retorno == true)
                 {

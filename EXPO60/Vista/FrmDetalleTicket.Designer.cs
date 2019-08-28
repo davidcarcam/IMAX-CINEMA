@@ -44,6 +44,8 @@
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.grpDetalleTicket.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).BeginInit();
@@ -51,6 +53,8 @@
             // 
             // grpDetalleTicket
             // 
+            this.grpDetalleTicket.Controls.Add(this.label1);
+            this.grpDetalleTicket.Controls.Add(this.txtbuscar);
             this.grpDetalleTicket.Controls.Add(this.txtNum);
             this.grpDetalleTicket.Controls.Add(this.txtFila);
             this.grpDetalleTicket.Controls.Add(this.btnagregar);
@@ -64,9 +68,10 @@
             this.grpDetalleTicket.Controls.Add(this.btneliminar);
             this.grpDetalleTicket.Controls.Add(this.btnactualizar);
             this.grpDetalleTicket.Controls.Add(this.btnmostrar);
-            this.grpDetalleTicket.Location = new System.Drawing.Point(1, 3);
+            this.grpDetalleTicket.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpDetalleTicket.Location = new System.Drawing.Point(0, 0);
             this.grpDetalleTicket.Name = "grpDetalleTicket";
-            this.grpDetalleTicket.Size = new System.Drawing.Size(1025, 620);
+            this.grpDetalleTicket.Size = new System.Drawing.Size(1009, 597);
             this.grpDetalleTicket.TabIndex = 0;
             this.grpDetalleTicket.TabStop = false;
             this.grpDetalleTicket.Enter += new System.EventHandler(this.grpDetalleTicket_Enter);
@@ -75,7 +80,7 @@
             // 
             this.txtNum.BackColor = System.Drawing.SystemColors.Control;
             this.txtNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNum.Location = new System.Drawing.Point(729, 110);
+            this.txtNum.Location = new System.Drawing.Point(412, 67);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(32, 13);
             this.txtNum.TabIndex = 50;
@@ -84,7 +89,7 @@
             // 
             this.txtFila.BackColor = System.Drawing.SystemColors.Control;
             this.txtFila.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFila.Location = new System.Drawing.Point(701, 110);
+            this.txtFila.Location = new System.Drawing.Point(813, 128);
             this.txtFila.Name = "txtFila";
             this.txtFila.Size = new System.Drawing.Size(22, 13);
             this.txtFila.TabIndex = 49;
@@ -111,7 +116,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(15, 224);
+            this.btnagregar.Location = new System.Drawing.Point(7, 213);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -131,7 +136,7 @@
             this.BtnCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1003, 25);
             this.toolStrip1.TabIndex = 47;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -151,9 +156,9 @@
             this.cmbfuncion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbfuncion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbfuncion.FormattingEnabled = true;
-            this.cmbfuncion.Location = new System.Drawing.Point(277, 83);
+            this.cmbfuncion.Location = new System.Drawing.Point(184, 101);
             this.cmbfuncion.Name = "cmbfuncion";
-            this.cmbfuncion.Size = new System.Drawing.Size(153, 21);
+            this.cmbfuncion.Size = new System.Drawing.Size(195, 21);
             this.cmbfuncion.TabIndex = 1;
             // 
             // cmbAsiento
@@ -162,9 +167,9 @@
             this.cmbAsiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbAsiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAsiento.FormattingEnabled = true;
-            this.cmbAsiento.Location = new System.Drawing.Point(649, 83);
+            this.cmbAsiento.Location = new System.Drawing.Point(555, 101);
             this.cmbAsiento.Name = "cmbAsiento";
-            this.cmbAsiento.Size = new System.Drawing.Size(153, 21);
+            this.cmbAsiento.Size = new System.Drawing.Size(176, 21);
             this.cmbAsiento.TabIndex = 2;
             // 
             // label9
@@ -172,7 +177,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(494, 84);
+            this.label9.Location = new System.Drawing.Point(400, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 20);
             this.label9.TabIndex = 0;
@@ -183,7 +188,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(190, 84);
+            this.label8.Location = new System.Drawing.Point(71, 99);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 20);
             this.label8.TabIndex = 0;
@@ -193,7 +198,7 @@
             // 
             this.idDetalletic.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.idDetalletic.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.idDetalletic.Location = new System.Drawing.Point(708, 36);
+            this.idDetalletic.Location = new System.Drawing.Point(700, 44);
             this.idDetalletic.Name = "idDetalletic";
             this.idDetalletic.Size = new System.Drawing.Size(31, 20);
             this.idDetalletic.TabIndex = 0;
@@ -201,12 +206,15 @@
             // 
             // dgvtickets
             // 
+            this.dgvtickets.AllowUserToAddRows = false;
+            this.dgvtickets.AllowUserToDeleteRows = false;
             this.dgvtickets.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvtickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvtickets.Location = new System.Drawing.Point(5, 293);
+            this.dgvtickets.Location = new System.Drawing.Point(12, 283);
             this.dgvtickets.Name = "dgvtickets";
-            this.dgvtickets.Size = new System.Drawing.Size(1011, 265);
+            this.dgvtickets.Size = new System.Drawing.Size(980, 302);
             this.dgvtickets.TabIndex = 0;
+            this.dgvtickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtickets_CellContentClick);
             // 
             // btneliminar
             // 
@@ -230,7 +238,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(771, 224);
+            this.btneliminar.Location = new System.Drawing.Point(763, 213);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -266,7 +274,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(519, 224);
+            this.btnactualizar.Location = new System.Drawing.Point(511, 213);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -301,7 +309,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(267, 224);
+            this.btnmostrar.Location = new System.Drawing.Point(259, 213);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -314,6 +322,26 @@
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(750, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Buscar";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(827, 67);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 72;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmDetalleTicket
             // 
@@ -351,5 +379,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

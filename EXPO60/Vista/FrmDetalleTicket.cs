@@ -87,23 +87,42 @@ namespace EXPO60.Vista
         {
             Mostrarcmb();
         }
-        public void eliminarRegistro()
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de realizar esta operacion?", "confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtbuscar.Text != "")
             {
-                Funciones_peliculas.eliminarPelicula(Convert.ToInt32(idDetalleTicket.Text));
+                dgvtickets.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvtickets.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvtickets.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
             }
+            else
+            {
+                mostrarDetalleTicket();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void btneliminar_Click(object sender, EventArgs e)
+        private void dgvtickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            eliminarRegistro();
-            vaciarampos();
-            mostrarPeliculas();
-            btnactualizar.Enabled = false;
-            btnagregar.Enabled = true;
-            btneliminar.Enabled = false;
+
         }
     }
 }

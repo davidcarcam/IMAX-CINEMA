@@ -31,5 +31,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+        
+        }
     }
 }

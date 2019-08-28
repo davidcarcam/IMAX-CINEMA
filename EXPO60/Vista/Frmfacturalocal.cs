@@ -18,7 +18,7 @@ namespace EXPO60.Vista
         Constructo_Factura_Local agregar = new Constructo_Factura_Local();
         Constructo_Factura_Local Actualizar = new Constructo_Factura_Local();
         public Frmfacturalocal()
-        {
+        { 
             InitializeComponent();
         }
         private void Frmfacturalocal_Load(object sender, EventArgs e)
@@ -163,6 +163,38 @@ namespace EXPO60.Vista
             {
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text != "")
+            {
+                dgvfacturaloc.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvfacturaloc.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvfacturaloc.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Mostrar_Factura_Local();
             }
         }
     }

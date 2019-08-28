@@ -44,6 +44,8 @@
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).BeginInit();
@@ -51,6 +53,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.cmbestado);
             this.groupBox1.Controls.Add(this.txttelefonoLocal);
@@ -98,7 +102,7 @@
             this.cmbestado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(773, 78);
+            this.cmbestado.Location = new System.Drawing.Point(772, 99);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(151, 21);
             this.cmbestado.TabIndex = 3;
@@ -107,7 +111,7 @@
             // txttelefonoLocal
             // 
             this.txttelefonoLocal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttelefonoLocal.Location = new System.Drawing.Point(430, 78);
+            this.txttelefonoLocal.Location = new System.Drawing.Point(430, 99);
             this.txttelefonoLocal.Mask = "0000-0000";
             this.txttelefonoLocal.Name = "txttelefonoLocal";
             this.txttelefonoLocal.Size = new System.Drawing.Size(153, 20);
@@ -118,7 +122,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(639, 78);
+            this.label3.Location = new System.Drawing.Point(643, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 0;
@@ -129,7 +133,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(353, 80);
+            this.label2.Location = new System.Drawing.Point(353, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 0;
@@ -137,9 +141,11 @@
             // 
             // dgvlocal
             // 
+            this.dgvlocal.AllowUserToAddRows = false;
+            this.dgvlocal.AllowUserToDeleteRows = false;
             this.dgvlocal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvlocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvlocal.Location = new System.Drawing.Point(6, 288);
+            this.dgvlocal.Location = new System.Drawing.Point(0, 270);
             this.dgvlocal.Name = "dgvlocal";
             this.dgvlocal.Size = new System.Drawing.Size(1011, 265);
             this.dgvlocal.TabIndex = 51;
@@ -147,7 +153,7 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(11, 125);
+            this.txtid.Location = new System.Drawing.Point(169, 50);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
             this.txtid.TabIndex = 0;
@@ -301,7 +307,7 @@
             // txtnombre
             // 
             this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtnombre.Location = new System.Drawing.Point(166, 78);
+            this.txtnombre.Location = new System.Drawing.Point(146, 99);
             this.txtnombre.MaxLength = 30;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
@@ -314,12 +320,31 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 78);
+            this.label1.Location = new System.Drawing.Point(28, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre local";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(740, 50);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 20);
+            this.label8.TabIndex = 69;
+            this.label8.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(833, 52);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 68;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // Frmalimentos
             // 
@@ -357,5 +382,7 @@
         private System.Windows.Forms.MaskedTextBox txttelefonoLocal;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

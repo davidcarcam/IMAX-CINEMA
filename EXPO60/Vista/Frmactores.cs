@@ -148,5 +148,38 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void lblNombre_Actor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+
+            if (txtbuscar.Text != "")
+            {
+                dgvActores.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvActores.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvActores.Rows)
+                {
+                    foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtbuscar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Mostrar_Actores();
+            }
+        }
     }
 }

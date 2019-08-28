@@ -48,6 +48,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncion)).BeginInit();
@@ -55,6 +57,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txtbuscar);
             this.groupBox2.Controls.Add(this.mskHora);
             this.groupBox2.Controls.Add(this.mskDuracion);
             this.groupBox2.Controls.Add(this.toolStrip1);
@@ -83,7 +87,7 @@
             // 
             // mskHora
             // 
-            this.mskHora.Location = new System.Drawing.Point(199, 91);
+            this.mskHora.Location = new System.Drawing.Point(106, 98);
             this.mskHora.Mask = "00:00";
             this.mskHora.Name = "mskHora";
             this.mskHora.Size = new System.Drawing.Size(153, 20);
@@ -91,7 +95,7 @@
             // 
             // mskDuracion
             // 
-            this.mskDuracion.Location = new System.Drawing.Point(199, 46);
+            this.mskDuracion.Location = new System.Drawing.Point(106, 53);
             this.mskDuracion.Mask = "000 minutos";
             this.mskDuracion.Name = "mskDuracion";
             this.mskDuracion.Size = new System.Drawing.Size(153, 20);
@@ -121,7 +125,7 @@
             // 
             this.cmbClasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbClasificacion.FormattingEnabled = true;
-            this.cmbClasificacion.Location = new System.Drawing.Point(688, 130);
+            this.cmbClasificacion.Location = new System.Drawing.Point(556, 132);
             this.cmbClasificacion.Name = "cmbClasificacion";
             this.cmbClasificacion.Size = new System.Drawing.Size(153, 21);
             this.cmbClasificacion.TabIndex = 5;
@@ -130,7 +134,7 @@
             // 
             this.cmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSala.FormattingEnabled = true;
-            this.cmbSala.Location = new System.Drawing.Point(688, 88);
+            this.cmbSala.Location = new System.Drawing.Point(556, 90);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(153, 21);
             this.cmbSala.TabIndex = 4;
@@ -139,13 +143,15 @@
             // 
             this.cmbpelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbpelicula.FormattingEnabled = true;
-            this.cmbpelicula.Location = new System.Drawing.Point(688, 42);
+            this.cmbpelicula.Location = new System.Drawing.Point(556, 44);
             this.cmbpelicula.Name = "cmbpelicula";
             this.cmbpelicula.Size = new System.Drawing.Size(153, 21);
             this.cmbpelicula.TabIndex = 3;
             // 
             // dgvFuncion
             // 
+            this.dgvFuncion.AllowUserToAddRows = false;
+            this.dgvFuncion.AllowUserToDeleteRows = false;
             this.dgvFuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFuncion.Location = new System.Drawing.Point(6, 282);
@@ -300,7 +306,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(437, 68);
+            this.textBox1.Location = new System.Drawing.Point(344, 75);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(31, 20);
             this.textBox1.TabIndex = 0;
@@ -310,7 +316,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(605, 86);
+            this.label6.Location = new System.Drawing.Point(473, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 0;
@@ -320,7 +326,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(606, 44);
+            this.label7.Location = new System.Drawing.Point(474, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 20);
             this.label7.TabIndex = 0;
@@ -330,7 +336,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(572, 128);
+            this.label8.Location = new System.Drawing.Point(440, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 20);
             this.label8.TabIndex = 0;
@@ -340,7 +346,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(111, 89);
+            this.label9.Location = new System.Drawing.Point(18, 96);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 20);
             this.label9.TabIndex = 0;
@@ -350,11 +356,30 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(111, 43);
+            this.label10.Location = new System.Drawing.Point(18, 50);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Duracion";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(772, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.TabIndex = 79;
+            this.label11.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(849, 66);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 78;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmFunciones
             // 
@@ -396,5 +421,7 @@
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.MaskedTextBox mskHora;
         private System.Windows.Forms.MaskedTextBox mskDuracion;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }
