@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
@@ -55,6 +57,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.toolStrip1);
@@ -83,7 +87,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(109, 63);
+            this.txtnombre.Location = new System.Drawing.Point(82, 68);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(100, 20);
             this.txtnombre.TabIndex = 61;
@@ -92,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 63);
+            this.label3.Location = new System.Drawing.Point(8, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 60;
@@ -122,7 +126,7 @@
             // 
             this.cmbtipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtipo.FormattingEnabled = true;
-            this.cmbtipo.Location = new System.Drawing.Point(696, 109);
+            this.cmbtipo.Location = new System.Drawing.Point(601, 113);
             this.cmbtipo.Name = "cmbtipo";
             this.cmbtipo.Size = new System.Drawing.Size(153, 21);
             this.cmbtipo.TabIndex = 4;
@@ -131,7 +135,7 @@
             // 
             this.cmbprov.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbprov.FormattingEnabled = true;
-            this.cmbprov.Location = new System.Drawing.Point(696, 66);
+            this.cmbprov.Location = new System.Drawing.Point(601, 63);
             this.cmbprov.Name = "cmbprov";
             this.cmbprov.Size = new System.Drawing.Size(153, 21);
             this.cmbprov.TabIndex = 3;
@@ -139,13 +143,15 @@
             // cmblocal
             // 
             this.cmblocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmblocal.Location = new System.Drawing.Point(337, 113);
+            this.cmblocal.Location = new System.Drawing.Point(277, 115);
             this.cmblocal.Name = "cmblocal";
             this.cmblocal.Size = new System.Drawing.Size(153, 21);
             this.cmblocal.TabIndex = 2;
             // 
             // dgvproductos
             // 
+            this.dgvproductos.AllowUserToAddRows = false;
+            this.dgvproductos.AllowUserToDeleteRows = false;
             this.dgvproductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproductos.Location = new System.Drawing.Point(12, 276);
@@ -300,7 +306,7 @@
             // 
             // txtprecio
             // 
-            this.txtprecio.Location = new System.Drawing.Point(337, 65);
+            this.txtprecio.Location = new System.Drawing.Point(277, 63);
             this.txtprecio.Mask = "$00000";
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(153, 20);
@@ -308,7 +314,7 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(521, 87);
+            this.txtid.Location = new System.Drawing.Point(460, 90);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
             this.txtid.TabIndex = 0;
@@ -318,7 +324,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(562, 110);
+            this.label5.Location = new System.Drawing.Point(456, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 20);
             this.label5.TabIndex = 0;
@@ -328,7 +334,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(609, 64);
+            this.label4.Location = new System.Drawing.Point(484, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 0;
@@ -338,7 +344,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 111);
+            this.label2.Location = new System.Drawing.Point(200, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 0;
@@ -348,11 +354,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(278, 65);
+            this.label1.Location = new System.Drawing.Point(200, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Precio:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(789, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.TabIndex = 83;
+            this.label11.Text = "Buscar";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(854, 61);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 82;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmProducto
             // 
@@ -394,5 +420,7 @@
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

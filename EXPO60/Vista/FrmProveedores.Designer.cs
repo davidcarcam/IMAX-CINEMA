@@ -191,6 +191,8 @@
             // 
             // dgvproveedores
             // 
+            this.dgvproveedores.AllowUserToAddRows = false;
+            this.dgvproveedores.AllowUserToDeleteRows = false;
             this.dgvproveedores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproveedores.Location = new System.Drawing.Point(8, 276);
