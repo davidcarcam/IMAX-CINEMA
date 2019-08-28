@@ -21,6 +21,20 @@ namespace EXPO60.Vista
         }
         Constructor_pelicula agregar = new Constructor_pelicula();
         Constructor_pelicula actualizar = new Constructor_pelicula();
+        private const Keys CopyKeys = Keys.Control | Keys.C;
+        private const Keys PasteKeys = Keys.Control | Keys.V;
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if ((keyData == CopyKeys) || (keyData == PasteKeys))
+            {
+                Clipboard.Clear();
+                return true;
+            }
+            else
+            {
+                return base.ProcessCmdKey(ref msg, keyData);
+            }
+        }
         public void mostrarPeliculas()
         {
             dgvpeliculas.DataSource = Funciones_peliculas.mostrarPeliculas();
