@@ -168,6 +168,7 @@ namespace EXPO60.Vista
             // 
             // txtcorreo
             // 
+            this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtcorreo.Location = new System.Drawing.Point(457, 76);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(196, 20);
