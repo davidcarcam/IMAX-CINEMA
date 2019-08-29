@@ -38,11 +38,11 @@ namespace EXPO60.Vista
         ConstructorDetalleTicket actualizar = new ConstructorDetalleTicket();
         public void mostrarPeliculas()
         {
-            dgvtickets.DataSource =FuncionesDetalleTicket.MostrarTicket();
+            dgvtickets.DataSource = FuncionesDetalleTicket.MostrarTicket();
         }
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-                this.Close();
+            this.Close();
         }
         private void grpDetalleTicket_Enter(object sender, EventArgs e)
         {
@@ -58,7 +58,7 @@ namespace EXPO60.Vista
             cmbAsiento.DisplayMember = "id_num";
             cmbAsiento.ValueMember = "id_asiento";
         }
-       
+
         private void FrmDetalleTicket_Load(object sender, EventArgs e)
         {
             Mostrarcmb();
@@ -71,7 +71,7 @@ namespace EXPO60.Vista
             agregar.funcion = Convert.ToInt16(cmbfuncion.Text);
             agregar.asiento = Convert.ToInt16(cmbAsiento.Text);
             int datos = FuncionesDetalleTicket.IngresarDetalle(agregar);
-        }    
+        }
         private void btnagregar_Click(object sender, EventArgs e)
         {
             if (cmbfuncion.Text == "" || cmbfuncion.Text == "")
@@ -83,7 +83,7 @@ namespace EXPO60.Vista
                 agregarDetalleTickt();
                 mostrarDetalleTicket();
                 vaciarampos();
-                            
+
             }
         }
 
@@ -136,7 +136,70 @@ namespace EXPO60.Vista
 
         private void dgvtickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int posicion;
+            posicion = this.dgvtickets.CurrentRow.Index;
+            idDetalletic.Text = this.dgvtickets[0, posicion].Value.ToString();
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
+        }
+
+        public void mostrarET()
+        {
+
+            cmbfuncion.DataSource = FuncionesDetalleTicket.ActualizarTicket();
+            cmbfuncion.DisplayMember = "estado_pel";
+            cmbfuncion.ValueMember = "id_estado_pelicula";
+
+
+            cmbAsiento.DataSource = Funciones_peliculas.ObtenerDimensiones();
+            cmbAsiento.DisplayMember = "formato";
+            cmbAsiento.ValueMember = "id_formatos";
+
+        }
+        private void idDetalletic_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            modificarRegistro();
+            vaciarampos();
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnagregar.Enabled = true;
+            mostrarEmpresas();
+        }
+        public void modificarRegistro()
+        {
+            actualizar.funcion = cmbfuncion.Text;
+            actualizar.asiento = cmbAsiento.Text;
+            FuncionesDetalleTicket.ActualizarTicket(actualizar);
+        }
+        public void mostrarEmpresas()
+        {
+            dgvtickets.DataSource = FuncionesDetalleTicket.MostrarTicket();
+        }
+
+        private void btneliminar_Click_1(object sender, EventArgs e)
+        {
+            eliminarRegistro();
+            vaciarampos();
+            mostrarEmpresas();
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnagregar.Enabled = true;
+        }
+        public void eliminarRegistro()
+        {
+            if (MessageBox.Show("Esta seguro de realizar esta operacion?", "confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                funcionesEmpresa.eliminarEmpresa(Convert.ToInt32(idDetalletic.Text));
+            }
 
         }
     }
 }
+
+

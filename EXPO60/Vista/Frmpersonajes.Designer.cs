@@ -152,6 +152,7 @@
             this.dgvpersonajes.Name = "dgvpersonajes";
             this.dgvpersonajes.Size = new System.Drawing.Size(1011, 265);
             this.dgvpersonajes.TabIndex = 0;
+            this.dgvpersonajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpersonajes_CellContentClick);
             // 
             // btneliminar
             // 

@@ -188,5 +188,10 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

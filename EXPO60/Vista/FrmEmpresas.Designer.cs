@@ -141,6 +141,7 @@
             this.txtid.Size = new System.Drawing.Size(35, 20);
             this.txtid.TabIndex = 0;
             this.txtid.Visible = false;
+            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // txtNombre_empresa
             // 
