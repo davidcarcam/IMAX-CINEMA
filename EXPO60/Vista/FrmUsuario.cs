@@ -15,7 +15,6 @@ using System.Security.Cryptography;
 
 namespace EXPO60.Vista
 {
-
     public partial class FrmUsuario : Form
     {
         public FrmUsuario()
@@ -357,7 +356,29 @@ namespace EXPO60.Vista
 
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                int posicion;
+                posicion = this.dgvusuarios.CurrentRow.Index;
+                txtid.Text = dgvusuarios[0, posicion].Value.ToString();
+                txtnombre.Text = dgvusuarios[1, posicion].Value.ToString();
+                txtapellido.Text = dgvusuarios[2, posicion].Value.ToString();
+                txtdireccion.Text = dgvusuarios[3, posicion].Value.ToString();
+                txtcorreo.Text = dgvusuarios[4, posicion].Value.ToString();
+                txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
+                txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
+                txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
+                txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
+                cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
+                cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
+                btneliminar.Enabled = true;
+                btnactualizar.Enabled = true;
+                btnagregar.Enabled = false;
+            }
+            catch (Exception)
+            {
+                
+            }
         }
 
         private void btnmostrar_Click_1(object sender, EventArgs e)
@@ -403,27 +424,18 @@ namespace EXPO60.Vista
         {
             if (MessageBox.Show("¿Esta seguro que desea eliminar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FuncionUsuario.EliminarUsuarios(Convert.ToInt32(txtid.Text));
-
+                int id = Convert.ToInt32(txtid.Text);
+                FuncionUsuario.EliminarUsuarios(id);
             }
-
         }
-
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            Limpiar();
             EliminarUsu();
             Mostrarusuarios();
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
         }
-
-        private void groupBox2_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmbEstadoU_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -436,22 +448,11 @@ namespace EXPO60.Vista
 
         private void dgvusuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion;
-            posicion = this.dgvusuarios.CurrentRow.Index;
-            txtid.Text = dgvusuarios[0, posicion].Value.ToString();
-            txtnombre.Text = dgvusuarios[1, posicion].Value.ToString();
-            txtapellido.Text = dgvusuarios[2, posicion].Value.ToString();
-            txtdireccion.Text = dgvusuarios[3, posicion].Value.ToString();
-            txtcorreo.Text = dgvusuarios[4, posicion].Value.ToString();
-            txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
-            txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
-            txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
-            txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
-            cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
-            cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
-            btneliminar.Enabled = true;
-            btnactualizar.Enabled = true;
-            btnagregar.Enabled = false;
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

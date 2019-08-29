@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace EXPO60.Controlador
 {
-   public class ContructorLogin
+   public class ContructorLogin2
     {
         public static string usuario { get; set; }
-        public string clave { get; set; }
+        public static string clave { get; set; }
         public static string nombre { get; set; }
         public static int nivel { get; set; }
-        public ContructorLogin(string usuario, string clave)
+        public ContructorLogin2(string usuario, string clave)
         {
-            usuario = ContructorLogin.usuario;
-            clave = this.clave;
+            usuario = ContructorLogin2.usuario;
+            clave = ContructorLogin2.clave;
         }
-
     }
 }

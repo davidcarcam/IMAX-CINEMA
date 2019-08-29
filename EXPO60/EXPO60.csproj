@@ -66,7 +66,7 @@
     <Compile Include="Controlador\Constructor_Proveedores.cs" />
     <Compile Include="Controlador\Constructor_Salas.cs" />
     <Compile Include="Controlador\Constructo_Factura_Local.cs" />
-    <Compile Include="Controlador\ContructorLogin.cs" />
+    <Compile Include="Controlador\ContructorLogin2.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +91,12 @@
     <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\ConfirmarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConfirmarContraseña.Designer.cs">
+      <DependentUpon>ConfirmarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Frmactores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,12 @@
     <Compile Include="Vista\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\preguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\preguntas.Designer.cs">
+      <DependentUpon>preguntas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\recuperarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +242,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\ConfirmarContraseña.resx">
+      <DependentUpon>ConfirmarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Frmactores.resx">
       <DependentUpon>Frmactores.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\preguntas.resx">
+      <DependentUpon>preguntas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\recuperarUsuario.resx">
       <DependentUpon>recuperarUsuario.cs</DependentUpon>

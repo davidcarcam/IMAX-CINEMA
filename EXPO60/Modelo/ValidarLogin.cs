@@ -13,7 +13,7 @@ namespace EXPO60.Modelo
 {
     class ValidarLogin
     {
-        public static bool Acceso(ContructorLogin log)
+        public static bool Acceso(ContructorLogin2 log)
         {
             bool retorno = false;
             //Verificar la existencia de usuario en la base de datos
@@ -22,7 +22,7 @@ namespace EXPO60.Modelo
             {
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
                 //envio de parametro a la consulta
-                cmdselect.Parameters.Add(new MySqlParameter("user", ContructorLogin.usuario));
+                cmdselect.Parameters.Add(new MySqlParameter("user", ContructorLogin2.usuario));
                 retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
                 //Si el usuario existe el valor de retorno es TRUE, de lo contrario es FALSE
                 if (retorno == true)
@@ -31,24 +31,31 @@ namespace EXPO60.Modelo
                     int estado = 1;
                     string query2 = "SELECT * FROM usuario WHERE usuario = ?user AND clave = ?pass AND id_estado_usu = ?state";
                     MySqlCommand cmdselect2 = new MySqlCommand(query2, Conexion.ObtenerConexion());
-                    cmdselect2.Parameters.Add(new MySqlParameter("user", ContructorLogin.usuario));
-                    cmdselect2.Parameters.Add(new MySqlParameter("pass", log.clave));
+                    cmdselect2.Parameters.Add(new MySqlParameter("user", ContructorLogin2.usuario));
+                    cmdselect2.Parameters.Add(new MySqlParameter("pass", ContructorLogin2.clave));
                     cmdselect2.Parameters.Add(new MySqlParameter("state", estado));
                     retorno = Convert.ToBoolean(cmdselect2.ExecuteScalar());
                     if (retorno == true)
                     {
                         //Actualizar el campo intentos a 0
                         int intentos = 0;
-                        MySqlCommand cmdreset = new MySqlCommand(string.Format("UPDATE usuario SET intentos = '{0}' WHERE usuario = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                        MySqlCommand cmdreset = new MySqlCommand(string.Format("UPDATE usuario SET intentos = '{0}' WHERE usuario = '{1}'", intentos, ContructorLogin2.usuario), Conexion.ObtenerConexion());
                         int reset = Convert.ToInt16(cmdreset.ExecuteNonQuery());
                         MySqlDataReader _reader = cmdselect.ExecuteReader();
                         while (_reader.Read())
                         {
-                            ContructorLogin.nombre = _reader.GetString(1) + " " + _reader.GetString(2);
-                            ContructorLogin.nivel = _reader.GetInt16(11);
+                            ContructorLogin2.nombre = _reader.GetString(1) + " " + _reader.GetString(2);
+                            ContructorLogin2.nivel = _reader.GetInt16(11);
                             if (reset >= 1)
                             {
-                                MessageBox.Show("Bienvenido usuario : " + ContructorLogin.usuario, "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (ContructorLogin2.clave == "efAdsX436aQfSUcxfwNEbBolhN0=")
+                                {
+                                    MessageBox.Show("Se procedera a recuperar la contreseña", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else if (ContructorLogin2.clave != "efAdsX436aQfSUcxfwNEbBolhN0=")
+                                {
+                                    MessageBox.Show("Bienvenido usuario : " + ContructorLogin2.usuario, "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
                         }
                     }
@@ -64,7 +71,7 @@ namespace EXPO60.Modelo
                             {
                                 //Bloquear usuario
                                 int bloqueo = 3;
-                                MySqlCommand cmdlog = new MySqlCommand(string.Format("UPDATE usuario SET id_estado_usu = '{0}' WHERE usuario = '{1}'", bloqueo, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                                MySqlCommand cmdlog = new MySqlCommand(string.Format("UPDATE usuario SET id_estado_usu = '{0}' WHERE usuario = '{1}'", bloqueo, ContructorLogin2.usuario), Conexion.ObtenerConexion());
                                 int verificacion = Convert.ToInt32(cmdlog.ExecuteNonQuery());
                                 if (verificacion >= 1)
                                 {
@@ -73,7 +80,7 @@ namespace EXPO60.Modelo
                             }
                             else
                             {
-                                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuario SET intentos = '{0}' WHERE usuario = '{1}'", intentos, ContructorLogin.usuario), Conexion.ObtenerConexion());
+                                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuario SET intentos = '{0}' WHERE usuario = '{1}'", intentos, ContructorLogin2.usuario), Conexion.ObtenerConexion());
                                 int verificacion = Convert.ToInt32(cmdupdate.ExecuteNonQuery());
                                 if (verificacion >= 1)
                                 {
@@ -98,6 +105,54 @@ namespace EXPO60.Modelo
             finally
             {
                 Conexion.ObtenerConexion().Close();
+            }
+        }
+        public static bool ValidarExistencia()
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM usuario", Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmd.ExecuteScalar());
+                if (retorno == true)
+                {
+                    return retorno;
+                }
+                else
+                {
+                    return retorno;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de acceso! Ha ocurrido un error en la conexion al servidor" + ex, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+                throw;
+            }
+            
+        }
+        public static bool ActualizarContraseña()
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE usuario SET clave = '{0}' WHERE usuario = '{1}'" , ContructorLogin2.clave, ContructorLogin2.usuario), Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
+                if (retorno == true)
+                {
+                    MessageBox.Show("La contraseña ha sido actualizada exitosamente");
+                    return retorno;
+                }
+                else
+                {
+                    MessageBox.Show("La contraseña no pudo ser actualizada");
+                    return retorno;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error de conexion");
+                return retorno;
             }
         }
     }

@@ -319,27 +319,27 @@ namespace EXPO60.Vista
         }
         private void FrmBotones_Load(object sender, EventArgs e)
         {
-            if (ContructorLogin.nivel == 1)
+            if (ContructorLogin2.nivel == 1)
             {
                 UbicacionRoot();
                 MessageBox.Show("Root", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (ContructorLogin.nivel == 2)
+            else if (ContructorLogin2.nivel == 2)
             {
                 UbicacionAdministrador();
                 MessageBox.Show("Administrador", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (ContructorLogin.nivel == 3)
+            else if (ContructorLogin2.nivel == 3)
             {
                 EncargadoSala();
                 MessageBox.Show("Encargado de sala", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (ContructorLogin.nivel == 4)
+            else if (ContructorLogin2.nivel == 4)
             {
                 EncargadoInventario();
                 MessageBox.Show("Encargado de inventario", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (ContructorLogin.nivel == 5)
+            else if (ContructorLogin2.nivel == 5)
             {
                 Boletero();
                 MessageBox.Show("Boletero", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);

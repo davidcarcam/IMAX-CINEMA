@@ -61,10 +61,17 @@ namespace EXPO60.Vista
 
         private void FrmDetalleTicket_Load(object sender, EventArgs e)
         {
-            Mostrarcmb();
-            this.dgvtickets.Columns[0].Visible = false;
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
+            try
+            {
+                Mostrarcmb();
+                this.dgvtickets.Columns[0].Visible = false;
+                btnactualizar.Enabled = false;
+                btneliminar.Enabled = false;
+            }
+            catch (Exception)
+            {
+                
+            }
         }
         public void agregarDetalleTickt()
         {

@@ -131,14 +131,14 @@ namespace EXPO60.Modelo
             }
 
         }
-        public static bool EliminarUsuarios(int id)
+        public static int EliminarUsuarios(int id)
         {
-            bool retorno = false;
+            int retorno = 0;
             try
             {
                 MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM usuario WHERE id_usuario = '{0}'", id), Conexion.ObtenerConexion());
-                retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
-                if (retorno == true)
+                retorno = Convert.ToInt16(cmddel.ExecuteNonQuery());
+                if (retorno == 1)
                 {
                     MessageBox.Show("El registro se ha eliminado correctamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

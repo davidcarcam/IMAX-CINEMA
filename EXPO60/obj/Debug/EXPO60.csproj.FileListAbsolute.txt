@@ -211,3 +211,5 @@ C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmMetodos_Recuperar.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Preguntas.resources
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csprojResolveAssemblyReference.cache
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
