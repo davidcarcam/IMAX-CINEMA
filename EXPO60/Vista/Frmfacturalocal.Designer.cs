@@ -47,6 +47,8 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.cmbTipo_Pago = new System.Windows.Forms.ComboBox();
             this.cmbusuario = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -65,8 +67,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfacturaloc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -377,6 +377,25 @@
             this.groupBox2.Text = "Registro de factura local";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(769, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.TabIndex = 77;
+            this.label11.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(846, 68);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 76;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
             // cmbTipo_Pago
             // 
             this.cmbTipo_Pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -428,7 +447,7 @@
             // txtMont
             // 
             this.txtMont.Location = new System.Drawing.Point(122, 91);
-            this.txtMont.Mask = "$00000";
+            this.txtMont.Mask = "$00000.00";
             this.txtMont.Name = "txtMont";
             this.txtMont.Size = new System.Drawing.Size(153, 20);
             this.txtMont.TabIndex = 2;
@@ -642,10 +661,11 @@
             // txtNom
             // 
             this.txtNom.Location = new System.Drawing.Point(122, 48);
-            this.txtNom.MaxLength = 40;
+            this.txtNom.MaxLength = 25;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(153, 20);
             this.txtNom.TabIndex = 1;
+            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             this.txtNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNom_KeyPress);
             // 
             // label10
@@ -657,25 +677,6 @@
             this.label10.Size = new System.Drawing.Size(65, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Nombre";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(769, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 20);
-            this.label11.TabIndex = 77;
-            this.label11.Text = "Buscar";
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(846, 68);
-            this.txtbuscar.MaxLength = 50;
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 76;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // Frmfacturalocal
             // 

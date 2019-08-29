@@ -356,7 +356,7 @@
             // txttitulo
             // 
             this.txttitulo.Location = new System.Drawing.Point(97, 48);
-            this.txttitulo.MaxLength = 30;
+            this.txttitulo.MaxLength = 50;
             this.txttitulo.Name = "txttitulo";
             this.txttitulo.Size = new System.Drawing.Size(153, 20);
             this.txttitulo.TabIndex = 1;
@@ -385,7 +385,7 @@
             // txtdirector
             // 
             this.txtdirector.Location = new System.Drawing.Point(97, 132);
-            this.txtdirector.MaxLength = 45;
+            this.txtdirector.MaxLength = 40;
             this.txtdirector.Name = "txtdirector";
             this.txtdirector.Size = new System.Drawing.Size(153, 20);
             this.txtdirector.TabIndex = 3;

@@ -107,6 +107,7 @@ namespace EXPO60.Vista
             this.txtCifrado.Name = "txtCifrado";
             this.txtCifrado.Size = new System.Drawing.Size(30, 20);
             this.txtCifrado.TabIndex = 0;
+            this.txtCifrado.Visible = false;
             this.txtCifrado.TextChanged += new System.EventHandler(this.txtCifrado_TextChanged);
             // 
             // linkPrimerUso
@@ -191,7 +192,7 @@ namespace EXPO60.Vista
             // txtContra
             // 
             this.txtContra.Location = new System.Drawing.Point(310, 164);
-            this.txtContra.MaxLength = 20;
+            this.txtContra.MaxLength = 25;
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(286, 20);
             this.txtContra.TabIndex = 2;

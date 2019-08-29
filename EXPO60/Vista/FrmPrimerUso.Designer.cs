@@ -107,7 +107,7 @@
             // 
             this.txtCla.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCla.Location = new System.Drawing.Point(674, 200);
-            this.txtCla.MaxLength = 40;
+            this.txtCla.MaxLength = 50;
             this.txtCla.Name = "txtCla";
             this.txtCla.Size = new System.Drawing.Size(250, 20);
             this.txtCla.TabIndex = 10;
@@ -127,7 +127,7 @@
             // 
             this.txtUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsu.Location = new System.Drawing.Point(674, 158);
-            this.txtUsu.MaxLength = 40;
+            this.txtUsu.MaxLength = 25;
             this.txtUsu.Name = "txtUsu";
             this.txtUsu.Size = new System.Drawing.Size(250, 20);
             this.txtUsu.TabIndex = 9;
@@ -190,7 +190,7 @@
             // 
             this.txtCor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCor.Location = new System.Drawing.Point(164, 232);
-            this.txtCor.MaxLength = 40;
+            this.txtCor.MaxLength = 50;
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(250, 20);
             this.txtCor.TabIndex = 4;
@@ -241,7 +241,7 @@
             // 
             this.txtApe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtApe.Location = new System.Drawing.Point(164, 126);
-            this.txtApe.MaxLength = 40;
+            this.txtApe.MaxLength = 8;
             this.txtApe.Name = "txtApe";
             this.txtApe.Size = new System.Drawing.Size(250, 20);
             this.txtApe.TabIndex = 2;
@@ -270,7 +270,7 @@
             // 
             this.txtNom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNom.Location = new System.Drawing.Point(164, 73);
-            this.txtNom.MaxLength = 40;
+            this.txtNom.MaxLength = 8;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(250, 20);
             this.txtNom.TabIndex = 1;
@@ -333,7 +333,7 @@
             // 
             this.txtConfirmar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmar.Location = new System.Drawing.Point(674, 257);
-            this.txtConfirmar.MaxLength = 40;
+            this.txtConfirmar.MaxLength = 50;
             this.txtConfirmar.Name = "txtConfirmar";
             this.txtConfirmar.Size = new System.Drawing.Size(250, 20);
             this.txtConfirmar.TabIndex = 11;
