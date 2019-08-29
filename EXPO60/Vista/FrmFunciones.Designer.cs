@@ -32,7 +32,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
-            this.mskHora = new System.Windows.Forms.MaskedTextBox();
             this.mskDuracion = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
@@ -48,9 +47,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mskHora = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncion)).BeginInit();
@@ -58,9 +60,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.mskHora);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtbuscar);
-            this.groupBox2.Controls.Add(this.mskHora);
             this.groupBox2.Controls.Add(this.mskDuracion);
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.cmbClasificacion);
@@ -106,18 +110,10 @@
             this.txtbuscar.TabIndex = 78;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
-            // mskHora
-            // 
-            this.mskHora.Location = new System.Drawing.Point(106, 130);
-            this.mskHora.Mask = "00:00:00";
-            this.mskHora.Name = "mskHora";
-            this.mskHora.Size = new System.Drawing.Size(153, 20);
-            this.mskHora.TabIndex = 2;
-            // 
             // mskDuracion
             // 
-            this.mskDuracion.Location = new System.Drawing.Point(106, 53);
-            this.mskDuracion.Mask = "00:00:00 Tiempo";
+            this.mskDuracion.Location = new System.Drawing.Point(106, 44);
+            this.mskDuracion.Mask = "000minu";
             this.mskDuracion.Name = "mskDuracion";
             this.mskDuracion.Size = new System.Drawing.Size(153, 20);
             this.mskDuracion.TabIndex = 1;
@@ -363,11 +359,21 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Clasificacion";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(118, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Formato 24 horas";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(18, 128);
+            this.label9.Location = new System.Drawing.Point(27, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 20);
             this.label9.TabIndex = 0;
@@ -377,21 +383,37 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 50);
+            this.label10.Location = new System.Drawing.Point(27, 44);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Duracion";
             // 
-            // label1
+            // dateTimePicker1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Formato 24 horas";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 129);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker1.TabIndex = 80;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 20);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Dia";
+            // 
+            // mskHora
+            // 
+            this.mskHora.Location = new System.Drawing.Point(106, 91);
+            this.mskHora.Mask = "00:00";
+            this.mskHora.Name = "mskHora";
+            this.mskHora.Size = new System.Drawing.Size(153, 20);
+            this.mskHora.TabIndex = 82;
             // 
             // FrmFunciones
             // 
@@ -431,10 +453,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
-        private System.Windows.Forms.MaskedTextBox mskHora;
         private System.Windows.Forms.MaskedTextBox mskDuracion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MaskedTextBox mskHora;
+        private System.Windows.Forms.Label label2;
     }
 }
