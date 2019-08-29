@@ -117,6 +117,7 @@
             // txtDireccion_empresa
             // 
             this.txtDireccion_empresa.Location = new System.Drawing.Point(596, 89);
+            this.txtDireccion_empresa.MaxLength = 200;
             this.txtDireccion_empresa.Multiline = true;
             this.txtDireccion_empresa.Name = "txtDireccion_empresa";
             this.txtDireccion_empresa.Size = new System.Drawing.Size(153, 48);
@@ -145,6 +146,7 @@
             // txtNombre_empresa
             // 
             this.txtNombre_empresa.Location = new System.Drawing.Point(212, 91);
+            this.txtNombre_empresa.MaxLength = 50;
             this.txtNombre_empresa.Name = "txtNombre_empresa";
             this.txtNombre_empresa.Size = new System.Drawing.Size(153, 20);
             this.txtNombre_empresa.TabIndex = 1;

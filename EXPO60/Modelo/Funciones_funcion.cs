@@ -17,15 +17,15 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO funciones (duracion, hora, id_sala, id_pelicula, id_clasifiacion ) VALUES ('{0}','{1}','{2}','{3}','{4}')", add.duracion, add.hora, add.sala, add.pelicula, add.clasifiacion), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO funciones (duracion, hora, dia, id_sala, id_pelicula, id_clasifiacion ) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", add.duracion, add.hora,add.dia, add.sala, add.pelicula, add.clasifiacion), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
-                    MessageBox.Show("Local agregado exitosamente", "proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Funcion agregada exitosamente", "proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido agregar el local", "proceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No se ha podido agregar la funcion", "proceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE funciones SET duracion ='{0}' , hora = '{1}' ,id_sala = '{2}', id_pelicula = '{3}' ", upd.duracion, upd.hora, upd.sala, upd.pelicula, upd.clasifiacion), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE funciones SET duracion ='{0}' , hora = '{1}' ,dia = '{2},'id_sala = '{3}', id_pelicula = '{4}' ", upd.duracion, upd.hora,upd.dia, upd.sala, upd.pelicula, upd.clasifiacion), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {

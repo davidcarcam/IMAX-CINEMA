@@ -178,6 +178,7 @@
             // txtRespuesta3
             // 
             this.txtRespuesta3.Location = new System.Drawing.Point(438, 179);
+            this.txtRespuesta3.MaxLength = 100;
             this.txtRespuesta3.Name = "txtRespuesta3";
             this.txtRespuesta3.Size = new System.Drawing.Size(510, 20);
             this.txtRespuesta3.TabIndex = 7;
@@ -185,6 +186,7 @@
             // txtRespuesta2
             // 
             this.txtRespuesta2.Location = new System.Drawing.Point(438, 140);
+            this.txtRespuesta2.MaxLength = 100;
             this.txtRespuesta2.Name = "txtRespuesta2";
             this.txtRespuesta2.Size = new System.Drawing.Size(510, 20);
             this.txtRespuesta2.TabIndex = 5;
@@ -193,6 +195,7 @@
             // txtRespuesta1
             // 
             this.txtRespuesta1.Location = new System.Drawing.Point(438, 101);
+            this.txtRespuesta1.MaxLength = 100;
             this.txtRespuesta1.Name = "txtRespuesta1";
             this.txtRespuesta1.Size = new System.Drawing.Size(510, 20);
             this.txtRespuesta1.TabIndex = 3;

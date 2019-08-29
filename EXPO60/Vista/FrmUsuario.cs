@@ -15,11 +15,26 @@ using System.Security.Cryptography;
 
 namespace EXPO60.Vista
 {
+
     public partial class FrmUsuario : Form
     {
         public FrmUsuario()
         {
             InitializeComponent();
+        }
+        private const Keys CopyKeys = Keys.Control | Keys.C;
+        private const Keys PasteKeys = Keys.Control | Keys.V;
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if ((keyData == CopyKeys) || (keyData == PasteKeys))
+            {
+                Clipboard.Clear();
+                return true;
+            }
+            else
+            {
+                return base.ProcessCmdKey(ref msg, keyData);
+            }
         }
         public void Limpiar()
         {

@@ -26,6 +26,20 @@ namespace EXPO60.Vista
         int w = 0;
         int h = 0;
         #endregion
+        private const Keys CopyKeys = Keys.Control | Keys.C;
+        private const Keys PasteKeys = Keys.Control | Keys.V;
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if ((keyData == CopyKeys) || (keyData == PasteKeys))
+            {
+                Clipboard.Clear();
+                return true;
+            }
+            else
+            {
+                return base.ProcessCmdKey(ref msg, keyData);
+            }
+        }
         public FrmLogin()
         {
             InitializeComponent();

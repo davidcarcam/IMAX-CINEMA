@@ -20,6 +20,20 @@ namespace EXPO60.Vista
         }
         Constructor_funciones agregar = new Constructor_funciones();
         Constructor_funciones actualizar = new Constructor_funciones();
+        private const Keys CopyKeys = Keys.Control | Keys.C;
+        private const Keys PasteKeys = Keys.Control | Keys.V;
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if ((keyData == CopyKeys) || (keyData == PasteKeys))
+            {
+                Clipboard.Clear();
+                return true;
+            }
+            else
+            {
+                return base.ProcessCmdKey(ref msg, keyData);
+            }
+        }
         public void agregarFunciones()
         {
             agregar.duracion = mskDuracion.Text;
@@ -27,6 +41,7 @@ namespace EXPO60.Vista
             agregar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
             agregar.sala = Convert.ToInt16(cmbSala.SelectedValue);
             agregar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
+            agregar.dia = dateTimePicker1.Text;
             int datos = Funciones_funcion.insertarFuncion(agregar);
         }
         public void eliminarRegistro()
@@ -45,6 +60,7 @@ namespace EXPO60.Vista
             actualizar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
             actualizar.sala = Convert.ToInt16(cmbSala.SelectedValue);
             actualizar.clasifiacion = Convert.ToInt16(cmbClasificacion.SelectedValue);
+            agregar.dia = dateTimePicker1.Text;
             Funciones_funcion.actualizarFunciones(actualizar);
         }
         public void vaciarampos()
@@ -98,16 +114,17 @@ namespace EXPO60.Vista
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            if (mskDuracion.Text == "000minutos" || mskHora.Text == "00:00")
+            DateTime fecha = DateTime.Today.AddDays(15);
+            if (dateTimePicker1.Value.Date > fecha)
             {
-                MessageBox.Show("Por favor rellena todos los campos que se te piden", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La fecha ingresada esta fuera del rango permitido","Fecha superior",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
             else
             {
                 agregarFunciones();
                 mostrarFunciones();
                 vaciarampos();
-            }
+            }          
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
