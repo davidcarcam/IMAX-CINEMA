@@ -43,6 +43,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -50,6 +51,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnlimpiar);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtbuscar);
             this.groupBox2.Controls.Add(this.cmbfecha);
@@ -280,6 +282,42 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Fecha Ticket:";
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpiar.BorderRadius = 0;
+            this.btnlimpiar.ButtonText = "Limpiar";
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
+            this.btnlimpiar.Iconimage_right = null;
+            this.btnlimpiar.Iconimage_right_Selected = null;
+            this.btnlimpiar.Iconimage_Selected = null;
+            this.btnlimpiar.IconMarginLeft = 0;
+            this.btnlimpiar.IconMarginRight = 0;
+            this.btnlimpiar.IconRightVisible = true;
+            this.btnlimpiar.IconRightZoom = 0D;
+            this.btnlimpiar.IconVisible = true;
+            this.btnlimpiar.IconZoom = 80D;
+            this.btnlimpiar.IsTab = false;
+            this.btnlimpiar.Location = new System.Drawing.Point(804, 119);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpiar.selected = false;
+            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
+            this.btnlimpiar.TabIndex = 71;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
             // FrmTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,5 +352,6 @@
         private System.Windows.Forms.MaskedTextBox cmbfecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbuscar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

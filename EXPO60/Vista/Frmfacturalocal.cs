@@ -51,9 +51,10 @@ namespace EXPO60.Vista
         }
         public void Limpiar_Factura_Local()
         {
-            txtfecha.Clear();
+            
             txtmonto.Clear();
             txtnombre.Clear();
+            mskfecha.Clear();
         }
         public void Eliminar_Factura_Local()
         {
@@ -215,6 +216,11 @@ namespace EXPO60.Vista
         private void txtNom_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar_Factura_Local();
         }
     }
 }

@@ -357,7 +357,7 @@ namespace EXPO60.Vista
 
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnmostrar_Click_1(object sender, EventArgs e)
@@ -452,6 +452,25 @@ namespace EXPO60.Vista
             btneliminar.Enabled = true;
             btnactualizar.Enabled = true;
             btnagregar.Enabled = false;
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcorreo_Validated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtcorreo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 44) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 63) || (e.KeyChar >= 91 && e.KeyChar <= 94) || (e.KeyChar == 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 

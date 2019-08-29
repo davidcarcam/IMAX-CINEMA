@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonajes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.cmbactor = new System.Windows.Forms.ComboBox();
@@ -53,6 +54,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnlimpiar);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.cmbactor);
@@ -76,6 +78,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de personajes";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpiar.BorderRadius = 0;
+            this.btnlimpiar.ButtonText = "Limpiar";
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
+            this.btnlimpiar.Iconimage_right = null;
+            this.btnlimpiar.Iconimage_right_Selected = null;
+            this.btnlimpiar.Iconimage_Selected = null;
+            this.btnlimpiar.IconMarginLeft = 0;
+            this.btnlimpiar.IconMarginRight = 0;
+            this.btnlimpiar.IconRightVisible = true;
+            this.btnlimpiar.IconRightZoom = 0D;
+            this.btnlimpiar.IconVisible = true;
+            this.btnlimpiar.IconZoom = 80D;
+            this.btnlimpiar.IsTab = false;
+            this.btnlimpiar.Location = new System.Drawing.Point(219, 101);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpiar.selected = false;
+            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
+            this.btnlimpiar.TabIndex = 82;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // label11
             // 
@@ -141,7 +179,7 @@
             // txtid
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtid.Location = new System.Drawing.Point(200, 129);
+            this.txtid.Location = new System.Drawing.Point(137, 121);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(28, 20);
             this.txtid.TabIndex = 0;
@@ -157,6 +195,7 @@
             this.dgvpersonajes.Name = "dgvpersonajes";
             this.dgvpersonajes.Size = new System.Drawing.Size(1001, 265);
             this.dgvpersonajes.TabIndex = 0;
+            this.dgvpersonajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpersonajes_CellClick_1);
             this.dgvpersonajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpersonajes_CellContentClick);
             // 
             // btneliminar
@@ -193,6 +232,7 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnactualizar
             // 
@@ -228,6 +268,7 @@
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnactualizar.Textcolor = System.Drawing.Color.White;
             this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnmostrar
             // 
@@ -263,6 +304,7 @@
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
             // 
             // btnagregar
             // 
@@ -298,6 +340,7 @@
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
             // 
             // label3
             // 
@@ -351,6 +394,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPersonajes";
             this.Text = "FrmPersonajes";
+            this.Load += new System.EventHandler(this.FrmPersonajes_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -379,5 +423,6 @@
         private System.Windows.Forms.ComboBox cmbpelicula;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbuscar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

@@ -187,5 +187,10 @@ namespace EXPO60.Vista
                 mostrarProveedor();
             }
         }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            vaciarampos();
+        }
     }
 }

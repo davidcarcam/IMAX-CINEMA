@@ -196,6 +196,11 @@ namespace EXPO60.Vista
             }
 
         }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            vaciarampos();
+        }
     }
 }
 

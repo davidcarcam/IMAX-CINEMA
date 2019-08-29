@@ -48,6 +48,7 @@
             this.btnMostrar_Asientos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Asiento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.grpAsientos.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             // grpAsientos
             // 
+            this.grpAsientos.Controls.Add(this.btnlimpiar);
             this.grpAsientos.Controls.Add(this.label8);
             this.grpAsientos.Controls.Add(this.txtbuscar);
             this.grpAsientos.Controls.Add(this.toolStrip1);
@@ -126,7 +128,7 @@
             this.cmbEstado_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbEstado_Asiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado_Asiento.FormattingEnabled = true;
-            this.cmbEstado_Asiento.Location = new System.Drawing.Point(789, 94);
+            this.cmbEstado_Asiento.Location = new System.Drawing.Point(572, 98);
             this.cmbEstado_Asiento.Name = "cmbEstado_Asiento";
             this.cmbEstado_Asiento.Size = new System.Drawing.Size(200, 21);
             this.cmbEstado_Asiento.TabIndex = 3;
@@ -136,7 +138,7 @@
             this.cmbSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSala.FormattingEnabled = true;
-            this.cmbSala.Location = new System.Drawing.Point(368, 93);
+            this.cmbSala.Location = new System.Drawing.Point(435, 44);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(200, 21);
             this.cmbSala.TabIndex = 2;
@@ -146,7 +148,7 @@
             this.lblEstado_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEstado_Asiento.AutoSize = true;
             this.lblEstado_Asiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Asiento.Location = new System.Drawing.Point(589, 96);
+            this.lblEstado_Asiento.Location = new System.Drawing.Point(351, 96);
             this.lblEstado_Asiento.Name = "lblEstado_Asiento";
             this.lblEstado_Asiento.Size = new System.Drawing.Size(194, 20);
             this.lblEstado_Asiento.TabIndex = 0;
@@ -157,7 +159,7 @@
             this.lblSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSala.AutoSize = true;
             this.lblSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSala.Location = new System.Drawing.Point(317, 94);
+            this.lblSala.Location = new System.Drawing.Point(351, 46);
             this.lblSala.Name = "lblSala";
             this.lblSala.Size = new System.Drawing.Size(45, 20);
             this.lblSala.TabIndex = 0;
@@ -355,6 +357,42 @@
             // 
             this.epError1.ContainerControl = this;
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpiar.BorderRadius = 0;
+            this.btnlimpiar.ButtonText = "Limpiar";
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
+            this.btnlimpiar.Iconimage_right = null;
+            this.btnlimpiar.Iconimage_right_Selected = null;
+            this.btnlimpiar.Iconimage_Selected = null;
+            this.btnlimpiar.IconMarginLeft = 0;
+            this.btnlimpiar.IconMarginRight = 0;
+            this.btnlimpiar.IconRightVisible = true;
+            this.btnlimpiar.IconRightZoom = 0D;
+            this.btnlimpiar.IconVisible = true;
+            this.btnlimpiar.IconZoom = 80D;
+            this.btnlimpiar.IsTab = false;
+            this.btnlimpiar.Location = new System.Drawing.Point(824, 79);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpiar.selected = false;
+            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
+            this.btnlimpiar.TabIndex = 72;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
             // FrmAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,5 +433,6 @@
         private System.Windows.Forms.ToolStripButton toolbtnCerrar_Asientos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbuscar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

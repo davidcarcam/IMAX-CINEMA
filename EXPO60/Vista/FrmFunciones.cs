@@ -204,6 +204,16 @@ namespace EXPO60.Vista
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            vaciarampos();
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskHora_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
 
         }
     }
