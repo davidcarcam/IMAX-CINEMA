@@ -38,10 +38,7 @@ namespace EXPO60.Modelo
             return retorno;
         }
 
-        internal static object funcion()
-        {
-            throw new NotImplementedException();
-        }
+     
 
         internal static object asiento()
         {
