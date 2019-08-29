@@ -145,17 +145,14 @@ namespace EXPO60.Vista
         }
 
         public void mostrarET()
-        {
+        {            
+            cmbAsiento.DataSource = FuncionesDetalleTicket.asiento();
+            cmbAsiento.DisplayMember = "asiento";
+            cmbAsiento.ValueMember = "id_asiento";
 
-            cmbfuncion.DataSource = FuncionesDetalleTicket.ActualizarTicket();
-            cmbfuncion.DisplayMember = "estado_pel";
-            cmbfuncion.ValueMember = "id_estado_pelicula";
-
-
-            cmbAsiento.DataSource = Funciones_peliculas.ObtenerDimensiones();
-            cmbAsiento.DisplayMember = "formato";
-            cmbAsiento.ValueMember = "id_formatos";
-
+            cmbfuncion.DataSource = FuncionesDetalleTicket.funcion();
+            cmbfuncion.DataSource = "funciones";
+            cmbfuncion.DataSource = "id_funcion";
         }
         private void idDetalletic_TextChanged(object sender, EventArgs e)
         {
@@ -173,8 +170,8 @@ namespace EXPO60.Vista
         }
         public void modificarRegistro()
         {
-            actualizar.funcion = cmbfuncion.Text;
-            actualizar.asiento = cmbAsiento.Text;
+            actualizar.funcion = Convert.ToInt16(cmbfuncion.SelectedValue);
+            actualizar.asiento = Convert.ToInt16(cmbAsiento.SelectedValue);
             FuncionesDetalleTicket.ActualizarTicket(actualizar);
         }
         public void mostrarEmpresas()

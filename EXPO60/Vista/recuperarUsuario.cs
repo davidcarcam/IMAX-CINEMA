@@ -80,9 +80,9 @@ namespace EXPO60.Vista
             principal.Show();
             this.Hide();
         }
-        public static VerificarCorreo(string recuper)
+        public static bool VerificarCorreo(string recuper)
         {
-          
+            bool retorno = false;   
             List<constructorRecuperar> recu = new List<constructorRecuperar>();
             Random rd = new Random(DateTime.Now.Millisecond);
             int resetclave = rd.Next(100000, 999999);
@@ -112,15 +112,15 @@ namespace EXPO60.Vista
                     try
                     {
                         cliente.Send(msg);
+
                     }
                     catch (Exception)
                     {
-
-                        MessageBox.Show("Error");
+                        MessageBox.Show("Error");                       
                     }
-                    
+
                 }
-            
+                return retorno;       
             }
             catch (Exception)
             {
