@@ -154,7 +154,7 @@ namespace EXPO60.Vista
             else
             {
                 agregarPelicula();
-                
+                mostrarPeliculas();
                 vaciarampos();
             }
         }

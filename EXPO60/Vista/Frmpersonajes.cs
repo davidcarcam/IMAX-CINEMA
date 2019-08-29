@@ -180,5 +180,30 @@ namespace EXPO60.Vista
                 MostrarPersonaje();
             }
         }
+        public void mostrarET()
+        {
+
+            cmbpelicula.DataSource = Funciones_peliculas.ObtenerEstadoPelicula();
+            cmbpelicula.DisplayMember = "estado_pel";
+            cmbpelicula.ValueMember = "id_estado_pelicula";
+
+
+            cmbactor.DataSource = Funciones_peliculas.ObtenerDimensiones();
+            cmbactor.DisplayMember = "formato";
+            cmbactor.ValueMember = "id_formatos";
+
+        }
+
+        private void dgvpersonajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvpersonajes.CurrentRow.Index;
+            txtid.Text = this.dgvpersonajes[0, posicion].Value.ToString();
+            txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
+          
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
+        }
     }
 }

@@ -61,10 +61,8 @@ namespace EXPO60.Vista
                 formulario.BringToFront();
             }
         }
-
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-
             if (MenuVertical.Width == 250)
             {
                 MenuVertical.Width = 70;
@@ -78,7 +76,6 @@ namespace EXPO60.Vista
                 picimgL.Visible = true;
             }
         }
-
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion","Salir de la aplicacion",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
