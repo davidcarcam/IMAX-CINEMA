@@ -118,12 +118,20 @@ namespace EXPO60.Vista
             if (dateTimePicker1.Value.Date > fecha)
             {
                 MessageBox.Show("La fecha ingresada esta fuera del rango permitido","Fecha superior",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+              
             }
             else
             {
-                agregarFunciones();
-                mostrarFunciones();
-                vaciarampos();
+                if (dateTimePicker1.Value.Date < DateTime.Today)
+                {
+                    MessageBox.Show("La fecha ingresada es menor a la de hoy", "La fecha es erronea", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    agregarFunciones();
+                    mostrarFunciones();
+                    vaciarampos();
+                }
             }          
         }
 
@@ -192,6 +200,11 @@ namespace EXPO60.Vista
             {
                 mostrarFunciones();
             }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

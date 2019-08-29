@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFunciones));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.mskHora = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.mskDuracion = new System.Windows.Forms.MaskedTextBox();
@@ -50,9 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.mskHora = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncion)).BeginInit();
@@ -90,6 +90,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de Funciones";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // mskHora
+            // 
+            this.mskHora.Location = new System.Drawing.Point(106, 91);
+            this.mskHora.Mask = "00:00";
+            this.mskHora.Name = "mskHora";
+            this.mskHora.Size = new System.Drawing.Size(153, 20);
+            this.mskHora.TabIndex = 82;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 20);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Dia";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 129);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker1.TabIndex = 80;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label11
             // 
@@ -388,32 +415,6 @@
             this.label10.Size = new System.Drawing.Size(73, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Duracion";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 129);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 80;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 20);
-            this.label2.TabIndex = 81;
-            this.label2.Text = "Dia";
-            // 
-            // mskHora
-            // 
-            this.mskHora.Location = new System.Drawing.Point(106, 91);
-            this.mskHora.Mask = "00:00";
-            this.mskHora.Name = "mskHora";
-            this.mskHora.Size = new System.Drawing.Size(153, 20);
-            this.mskHora.TabIndex = 82;
             // 
             // FrmFunciones
             // 
