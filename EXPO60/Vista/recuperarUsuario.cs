@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
 using System.Text.RegularExpressions;
+using MySql.Data.MySqlClient;
 
 namespace EXPO60.Vista
 {
@@ -36,7 +37,7 @@ namespace EXPO60.Vista
         public void vaciarampos()
         {
             
-            txtusuarioRecuperar.Clear();
+            txtcorreo.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,25 +80,60 @@ namespace EXPO60.Vista
             principal.Show();
             this.Hide();
         }
+        public static VerificarCorreo(string recuper)
+        {
+          
+            List<constructorRecuperar> recu = new List<constructorRecuperar>();
+            Random rd = new Random(DateTime.Now.Millisecond);
+            int resetclave = rd.Next(100000, 999999);
+            try
+            {
+                string query = "SELECT * FROM usuario WHERE correo = '" + recu + "'";
+                MySqlCommand cmd = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
+                MySqlDataReader _reader = cmd.ExecuteReader();
+                while (_reader.Read())
+                {
+                    constructorRecuperar leer = new constructorRecuperar();
+                    leer.CORREO_USU = _reader.GetString(0);
+                    System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+                    msg.Subject = "Imax codigo";
+                    msg.SubjectEncoding = System.Text.Encoding.UTF8;
+
+                    msg.Body = "tu contraseña es:" +rd ;
+                    msg.BodyEncoding = System.Text.Encoding.UTF8;
+                    msg.IsBodyHtml = true;
+                    msg.From = new System.Net.Mail.MailAddress("ayudaImax@gmail.com");
+
+                    System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+                    cliente.Credentials = new System.Net.NetworkCredential("ayuda.imax@gmail.com", "contra");
+                    cliente.Port = 587;
+                    cliente.EnableSsl = true;
+                    cliente.Host = "smtp.gmail.com";//dominio
+                    try
+                    {
+                        cliente.Send(msg);
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Error");
+                    }
+                    
+                }
+            
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
 
         private void BtnRecuperar_Click(object sender, EventArgs e)
         {
-            validarRecuperar.resetClave(txtusuarioRecuperar.Text);
-            if (Email_Valido(txtusuarioRecuperar.Text) == false)// llamado del metodo Email_Valido
-            {
-                error1.SetError(txtusuarioRecuperar, " Ingrese un Email Válido");
-                txtusuarioRecuperar.Focus();
-
-                vaciarampos();
-                return;
-            }
-            else
-            {
-                error1.Clear();
-
-                vaciarampos();
-
-            }
+           
         }
 
         private void BtntoolCerrar_Correo_Click(object sender, EventArgs e)
