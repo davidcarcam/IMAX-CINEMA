@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label2;
-            System.Windows.Forms.Label label4;
             System.Windows.Forms.Label lblInformacion3;
             System.Windows.Forms.Label labelInformacion2;
             System.Windows.Forms.Label label1;
@@ -38,16 +37,14 @@
             System.Windows.Forms.Label label5;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recuperarUsuario));
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtusuarioRecuperar = new System.Windows.Forms.TextBox();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
             this.txtNueva_Contrasena = new System.Windows.Forms.TextBox();
-            this.txtNuevo_Correo = new System.Windows.Forms.TextBox();
             this.separartorRecuperar_Contrasena = new Bunifu.Framework.UI.BunifuSeparator();
             this.toolStripRecuperar_Telefono = new System.Windows.Forms.ToolStrip();
             this.lbltoolRecuperar_Telefono = new System.Windows.Forms.ToolStripLabel();
             this.btntoolCerrar_Correo = new System.Windows.Forms.ToolStripButton();
             this.btnRecu = new Bunifu.Framework.UI.BunifuFlatButton();
             label2 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
             lblInformacion3 = new System.Windows.Forms.Label();
             labelInformacion2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -61,21 +58,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(129, 358);
+            label2.Location = new System.Drawing.Point(99, 323);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(117, 12);
+            label2.Size = new System.Drawing.Size(49, 12);
             label2.TabIndex = 0;
-            label2.Text = "Nueva Contrasena:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(129, 316);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(91, 12);
-            label4.TabIndex = 0;
-            label4.Text = "Nuevo Correo:";
+            label2.Text = "Codigo";
             // 
             // lblInformacion3
             // 
@@ -92,22 +79,21 @@
             // 
             labelInformacion2.AutoSize = true;
             labelInformacion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelInformacion2.Location = new System.Drawing.Point(154, 254);
+            labelInformacion2.Location = new System.Drawing.Point(249, 245);
             labelInformacion2.Name = "labelInformacion2";
-            labelInformacion2.Size = new System.Drawing.Size(698, 12);
+            labelInformacion2.Size = new System.Drawing.Size(454, 12);
             labelInformacion2.TabIndex = 0;
-            labelInformacion2.Text = "Si los datos fueron ingresados correctamente su nuevo correo y contrasena se most" +
-    "raria en los cuadros de abajo:";
+            labelInformacion2.Text = "Inserta el codigo que se te ha sido enviado a tu correo revisa tu bandeja ";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(164, 112);
+            label1.Location = new System.Drawing.Point(116, 108);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(214, 12);
+            label1.Size = new System.Drawing.Size(112, 12);
             label1.TabIndex = 0;
-            label1.Text = "Inserte su correo de recuperacion:";
+            label1.Text = "Inserte su correo ";
             // 
             // label3
             // 
@@ -135,32 +121,23 @@
             // 
             this.error1.ContainerControl = this;
             // 
-            // txtusuarioRecuperar
+            // txtcorreo
             // 
-            this.txtusuarioRecuperar.Location = new System.Drawing.Point(420, 108);
-            this.txtusuarioRecuperar.MaxLength = 50;
-            this.txtusuarioRecuperar.Name = "txtusuarioRecuperar";
-            this.txtusuarioRecuperar.Size = new System.Drawing.Size(504, 20);
-            this.txtusuarioRecuperar.TabIndex = 1;
-            this.txtusuarioRecuperar.TextChanged += new System.EventHandler(this.txtusuarioRecuperar_TextChanged);
+            this.txtcorreo.Location = new System.Drawing.Point(251, 108);
+            this.txtcorreo.MaxLength = 50;
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(504, 20);
+            this.txtcorreo.TabIndex = 1;
+            this.txtcorreo.TextChanged += new System.EventHandler(this.txtusuarioRecuperar_TextChanged);
             // 
             // txtNueva_Contrasena
             // 
-            this.txtNueva_Contrasena.Location = new System.Drawing.Point(278, 354);
+            this.txtNueva_Contrasena.Location = new System.Drawing.Point(235, 319);
             this.txtNueva_Contrasena.MaxLength = 125;
             this.txtNueva_Contrasena.Name = "txtNueva_Contrasena";
             this.txtNueva_Contrasena.ReadOnly = true;
             this.txtNueva_Contrasena.Size = new System.Drawing.Size(594, 20);
             this.txtNueva_Contrasena.TabIndex = 0;
-            // 
-            // txtNuevo_Correo
-            // 
-            this.txtNuevo_Correo.Location = new System.Drawing.Point(278, 312);
-            this.txtNuevo_Correo.MaxLength = 125;
-            this.txtNuevo_Correo.Name = "txtNuevo_Correo";
-            this.txtNuevo_Correo.ReadOnly = true;
-            this.txtNuevo_Correo.Size = new System.Drawing.Size(594, 20);
-            this.txtNuevo_Correo.TabIndex = 0;
             // 
             // separartorRecuperar_Contrasena
             // 
@@ -211,7 +188,7 @@
             this.btnRecu.BackColor = System.Drawing.Color.DarkRed;
             this.btnRecu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRecu.BorderRadius = 0;
-            this.btnRecu.ButtonText = "Enviar Datos";
+            this.btnRecu.ButtonText = "Enviar Correo";
             this.btnRecu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRecu.DisabledColor = System.Drawing.Color.Maroon;
             this.btnRecu.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,7 +213,7 @@
             this.btnRecu.selected = false;
             this.btnRecu.Size = new System.Drawing.Size(277, 48);
             this.btnRecu.TabIndex = 2;
-            this.btnRecu.Text = "Enviar Datos";
+            this.btnRecu.Text = "Enviar Correo";
             this.btnRecu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecu.Textcolor = System.Drawing.Color.White;
             this.btnRecu.TextFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,8 +226,6 @@
             this.ClientSize = new System.Drawing.Size(960, 430);
             this.Controls.Add(this.txtNueva_Contrasena);
             this.Controls.Add(label2);
-            this.Controls.Add(this.txtNuevo_Correo);
-            this.Controls.Add(label4);
             this.Controls.Add(lblInformacion3);
             this.Controls.Add(label5);
             this.Controls.Add(label3);
@@ -259,7 +234,7 @@
             this.Controls.Add(this.btnRecu);
             this.Controls.Add(this.separartorRecuperar_Contrasena);
             this.Controls.Add(this.toolStripRecuperar_Telefono);
-            this.Controls.Add(this.txtusuarioRecuperar);
+            this.Controls.Add(this.txtcorreo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "recuperarUsuario";
             this.Text = "recuperarUsuario";
@@ -273,9 +248,8 @@
 
         #endregion
         private System.Windows.Forms.ErrorProvider error1;
-        private System.Windows.Forms.TextBox txtusuarioRecuperar;
+        private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.TextBox txtNueva_Contrasena;
-        private System.Windows.Forms.TextBox txtNuevo_Correo;
         private Bunifu.Framework.UI.BunifuFlatButton btnRecu;
         private Bunifu.Framework.UI.BunifuSeparator separartorRecuperar_Contrasena;
         private System.Windows.Forms.ToolStrip toolStripRecuperar_Telefono;
