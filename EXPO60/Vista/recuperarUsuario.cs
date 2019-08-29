@@ -102,10 +102,10 @@ namespace EXPO60.Vista
                     msg.Body = "tu contraseña es:" +rd ;
                     msg.BodyEncoding = System.Text.Encoding.UTF8;
                     msg.IsBodyHtml = true;
-                    msg.From = new System.Net.Mail.MailAddress("ayudaImax@gmail.com");
+                    msg.From = new System.Net.Mail.MailAddress("ayuda.imax@gmail.com");
 
                     System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
-                    cliente.Credentials = new System.Net.NetworkCredential("ayuda.imax@gmail.com", "contra");
+                    cliente.Credentials = new System.Net.NetworkCredential("ayuda.imax@gmail.com", "Ricaldone2019");
                     cliente.Port = 587;
                     cliente.EnableSsl = true;
                     cliente.Host = "smtp.gmail.com";//dominio

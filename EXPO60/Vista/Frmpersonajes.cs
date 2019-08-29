@@ -15,6 +15,8 @@ namespace EXPO60.Vista
 {
     public partial class FrmPersonajes : Form
     {
+        Constructor_Personajes agregar = new Constructor_Personajes();
+        Constructor_Personajes actualizar = new Constructor_Personajes();
         public FrmPersonajes()
         {
             InitializeComponent();
@@ -23,8 +25,6 @@ namespace EXPO60.Vista
         {
 
         }
-        Constructor_Personajes Agregar = new Constructor_Personajes();
-        Constructor_Personajes Actualizar = new Constructor_Personajes();
         private const Keys CopyKeys = Keys.Control | Keys.C;
         private const Keys PasteKeys = Keys.Control | Keys.V;
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -43,16 +43,10 @@ namespace EXPO60.Vista
 
         public void AgregarPersonaje()
         {
-            if (txtnombre.Text.Trim() == "" )
-            {
-                MessageBox.Show("Complete todos los campos", "Falta informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Agregar.nombre = txtnombre.Text;
-             
-                int datos = FuncionPersonajes.IngresarPersonaje(Agregar);
-            }
+            agregar.nombre = txtnombre.Text;
+            agregar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
+            agregar.actor = Convert.ToInt16(cmbactor.SelectedValue);
+            int datos = FuncionPersonajes.IngresarPersonaje(agregar);
         }
         public void MostrarPersonaje()
         {
@@ -60,16 +54,17 @@ namespace EXPO60.Vista
         }
         public void LimpiarCampos()
         {
-            txtid.Clear();
             txtnombre.Clear();
+            txtbuscar.Clear();
         
         }
         public void ModificarPersonaje()
         {
-            Actualizar.idpersonaje = Convert.ToInt32(txtid.Text);
-            Actualizar.nombre = txtnombre.Text;
-            
-            FuncionPersonajes.ActualizarPersonaje(Actualizar);
+            actualizar.nombre = txtnombre.Text;
+            actualizar.actor = Convert.ToInt16(cmbactor.SelectedValue);
+            actualizar.idpersonaje = Convert.ToInt16(txtid.Text);
+            actualizar.pelicula = Convert.ToInt16(cmbpelicula.SelectedValue);
+            FuncionPersonajes.ActualizarPersonaje(actualizar); ;
         }
         public void EliminarPersonaje()
         {
@@ -80,45 +75,35 @@ namespace EXPO60.Vista
         }
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            AgregarPersonaje();
-            MostrarPersonaje();
-            LimpiarCampos();
+            
         }
         private void Frmpersonajes_Load(object sender, EventArgs e)
         {
             MostrarPersonaje();
-            this.dgvpersonajes.Columns[0].Visible = false;
+            dgvpersonajes.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }
         private void btnmostrar_Click_1(object sender, EventArgs e)
         {
-            MostrarPersonaje();
-            LimpiarCampos();
+            
         }
         private void btnactualizar_Click_1(object sender, EventArgs e)
         {
-            ModificarPersonaje();
-            LimpiarCampos();
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
-            btnagregar.Enabled = true;
+            
         }
         private void btneliminar_Click_1(object sender, EventArgs e)
         {
-            EliminarPersonaje();
-            LimpiarCampos();
-            MostrarPersonaje();
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
-            btnagregar.Enabled = true;
+            
         }
         private void dgvpersonajes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int posicion;
-            posicion = this.dgvpersonajes.CurrentRow.Index;
-            txtid.Text = this.dgvpersonajes[0, posicion].Value.ToString();
-            txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
+            posicion = dgvpersonajes.CurrentRow.Index;
+            txtid.Text = dgvpersonajes[0, posicion].Value.ToString();
+            txtnombre.Text = dgvpersonajes[1, posicion].Value.ToString();
+            cmbactor.Text = dgvpersonajes[2, posicion].Value.ToString();
+            cmbpelicula.Text = dgvpersonajes[3, posicion].Value.ToString();
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
@@ -184,12 +169,11 @@ namespace EXPO60.Vista
         {
 
             cmbpelicula.DataSource = Funciones_peliculas.ObtenerEstadoPelicula();
-            cmbpelicula.DisplayMember = "estado_pel";
+            cmbpelicula.DisplayMember = "estado_pelicula";
             cmbpelicula.ValueMember = "id_estado_pelicula";
 
-
             cmbactor.DataSource = Funciones_peliculas.ObtenerDimensiones();
-            cmbactor.DisplayMember = "formato";
+            cmbactor.DisplayMember = "formatos";
             cmbactor.ValueMember = "id_formatos";
 
         }
@@ -200,7 +184,77 @@ namespace EXPO60.Vista
             posicion = this.dgvpersonajes.CurrentRow.Index;
             txtid.Text = this.dgvpersonajes[0, posicion].Value.ToString();
             txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
-          
+            cmbactor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
+            cmbpelicula.Text = this.dgvpersonajes[3, posicion].Value.ToString();
+
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void FrmPersonajes_Load_1(object sender, EventArgs e)
+        {
+            MostrarPersonaje();
+            dgvpersonajes.Columns[0].Visible = false;
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+
+            cmbpelicula.DataSource = FuncionPersonajes.obtenerpelicula();
+            cmbpelicula.DisplayMember = "titulo";
+            cmbpelicula.ValueMember = "id_pelicula";
+
+            cmbactor.DataSource = FuncionPersonajes.obtenerActor();
+            cmbactor.DisplayMember = "actor";
+            cmbactor.ValueMember = "id_actor";
+        }
+
+        private void btnagregar_Click_1(object sender, EventArgs e)
+        {
+            AgregarPersonaje();
+            MostrarPersonaje();
+            LimpiarCampos();
+        }
+
+        private void btnmostrar_Click(object sender, EventArgs e)
+        {
+            MostrarPersonaje();
+            LimpiarCampos();
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            ModificarPersonaje();
+            LimpiarCampos();
+            MostrarPersonaje();
+            btnactualizar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnagregar.Enabled = true;
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            EliminarPersonaje();
+            LimpiarCampos();
+            MostrarPersonaje();
+            btnactualizar.Enabled = false;
+            btnagregar.Enabled = true;
+            btneliminar.Enabled = false;
+        }
+
+        private void dgvpersonajes_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvpersonajes.CurrentRow.Index;
+            txtid.Text = this.dgvpersonajes[0, posicion].Value.ToString();
+            txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
+            cmbactor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
+            cmbpelicula.Text = this.dgvpersonajes[3, posicion].Value.ToString();
+
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;

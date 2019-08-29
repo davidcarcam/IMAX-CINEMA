@@ -51,9 +51,9 @@ namespace EXPO60.Vista
         
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void btnlimpiar_Click(object sender, EventArgs e)
         {
-
+             cmbfecha.Clear();
         }
     }
 }

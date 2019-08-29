@@ -99,7 +99,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception d)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + d, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano" +d.Message, "Error Critico" , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }

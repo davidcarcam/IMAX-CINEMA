@@ -335,5 +335,15 @@ namespace EXPO60.Vista
                 Mostrar_Salas();
             }
         }
+
+        private void txtNumero_Sala_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar_Datos();
+        }
     }
 }
