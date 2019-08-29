@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSala));
             this.grpRegistro_Sala = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
@@ -47,7 +48,6 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.grpRegistro_Sala.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
@@ -80,8 +80,20 @@
             this.grpRegistro_Sala.Text = "Registro de sala";
             this.grpRegistro_Sala.Enter += new System.EventHandler(this.grpRegistro_Sala_Enter);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(762, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Buscar";
+            // 
             // txtbuscar
             // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbuscar.Location = new System.Drawing.Point(827, 59);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
@@ -112,6 +124,7 @@
             // 
             // cmbESTADO_SALA
             // 
+            this.cmbESTADO_SALA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbESTADO_SALA.FormattingEnabled = true;
             this.cmbESTADO_SALA.Location = new System.Drawing.Point(838, 110);
@@ -122,6 +135,7 @@
             // 
             // lblEstado_Sala
             // 
+            this.lblEstado_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEstado_Sala.AutoSize = true;
             this.lblEstado_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado_Sala.Location = new System.Drawing.Point(686, 110);
@@ -132,6 +146,7 @@
             // 
             // txtCapacidad_Sala
             // 
+            this.txtCapacidad_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCapacidad_Sala.Location = new System.Drawing.Point(516, 110);
             this.txtCapacidad_Sala.MaxLength = 4;
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
@@ -143,6 +158,7 @@
             // 
             // lblCapacidad_Sala
             // 
+            this.lblCapacidad_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCapacidad_Sala.AutoSize = true;
             this.lblCapacidad_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapacidad_Sala.Location = new System.Drawing.Point(339, 110);
@@ -153,6 +169,7 @@
             // 
             // txtID_Sala
             // 
+            this.txtID_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID_Sala.Location = new System.Drawing.Point(515, 59);
             this.txtID_Sala.Name = "txtID_Sala";
             this.txtID_Sala.Size = new System.Drawing.Size(35, 20);
@@ -161,6 +178,7 @@
             // 
             // txtNumero_Sala
             // 
+            this.txtNumero_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNumero_Sala.Location = new System.Drawing.Point(169, 110);
             this.txtNumero_Sala.MaxLength = 2;
             this.txtNumero_Sala.Name = "txtNumero_Sala";
@@ -171,6 +189,7 @@
             // 
             // lblNumero_Sala
             // 
+            this.lblNumero_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNumero_Sala.AutoSize = true;
             this.lblNumero_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero_Sala.Location = new System.Drawing.Point(12, 110);
@@ -339,16 +358,6 @@
             // epError2
             // 
             this.epError2.ContainerControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(762, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 65;
-            this.label1.Text = "Buscar";
             // 
             // FrmSala
             // 

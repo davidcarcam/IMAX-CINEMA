@@ -76,6 +76,7 @@
             // btnempresa
             // 
             this.btnempresa.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnempresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnempresa.BackColor = System.Drawing.Color.White;
             this.btnempresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnempresa.BorderRadius = 0;
@@ -96,7 +97,7 @@
             this.btnempresa.IconVisible = true;
             this.btnempresa.IconZoom = 75D;
             this.btnempresa.IsTab = false;
-            this.btnempresa.Location = new System.Drawing.Point(376, 450);
+            this.btnempresa.Location = new System.Drawing.Point(376, 437);
             this.btnempresa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnempresa.Name = "btnempresa";
             this.btnempresa.Normalcolor = System.Drawing.Color.White;
@@ -113,6 +114,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -125,6 +127,7 @@
             // btnidioma
             // 
             this.btnidioma.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnidioma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnidioma.BackColor = System.Drawing.Color.White;
             this.btnidioma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnidioma.BorderRadius = 0;
@@ -145,7 +148,7 @@
             this.btnidioma.IconVisible = true;
             this.btnidioma.IconZoom = 75D;
             this.btnidioma.IsTab = false;
-            this.btnidioma.Location = new System.Drawing.Point(50, 450);
+            this.btnidioma.Location = new System.Drawing.Point(50, 437);
             this.btnidioma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnidioma.Name = "btnidioma";
             this.btnidioma.Normalcolor = System.Drawing.Color.White;
@@ -163,6 +166,7 @@
             // btnfactura
             // 
             this.btnfactura.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnfactura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnfactura.BackColor = System.Drawing.Color.White;
             this.btnfactura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnfactura.BorderRadius = 0;
@@ -183,7 +187,7 @@
             this.btnfactura.IconVisible = true;
             this.btnfactura.IconZoom = 75D;
             this.btnfactura.IsTab = false;
-            this.btnfactura.Location = new System.Drawing.Point(50, 183);
+            this.btnfactura.Location = new System.Drawing.Point(50, 167);
             this.btnfactura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnfactura.Name = "btnfactura";
             this.btnfactura.Normalcolor = System.Drawing.Color.White;
@@ -201,6 +205,7 @@
             // btnproveedores
             // 
             this.btnproveedores.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnproveedores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnproveedores.BackColor = System.Drawing.Color.White;
             this.btnproveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnproveedores.BorderRadius = 0;
@@ -221,7 +226,7 @@
             this.btnproveedores.IconVisible = true;
             this.btnproveedores.IconZoom = 75D;
             this.btnproveedores.IsTab = false;
-            this.btnproveedores.Location = new System.Drawing.Point(376, 272);
+            this.btnproveedores.Location = new System.Drawing.Point(376, 261);
             this.btnproveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnproveedores.Name = "btnproveedores";
             this.btnproveedores.Normalcolor = System.Drawing.Color.White;
@@ -239,6 +244,7 @@
             // btnfaclocal
             // 
             this.btnfaclocal.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnfaclocal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnfaclocal.BackColor = System.Drawing.Color.White;
             this.btnfaclocal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnfaclocal.BorderRadius = 0;
@@ -259,7 +265,7 @@
             this.btnfaclocal.IconVisible = true;
             this.btnfaclocal.IconZoom = 75D;
             this.btnfaclocal.IsTab = false;
-            this.btnfaclocal.Location = new System.Drawing.Point(50, 361);
+            this.btnfaclocal.Location = new System.Drawing.Point(50, 350);
             this.btnfaclocal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnfaclocal.Name = "btnfaclocal";
             this.btnfaclocal.Normalcolor = System.Drawing.Color.White;
@@ -277,6 +283,7 @@
             // btnfunciones
             // 
             this.btnfunciones.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnfunciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnfunciones.BackColor = System.Drawing.Color.White;
             this.btnfunciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnfunciones.BorderRadius = 0;
@@ -297,7 +304,7 @@
             this.btnfunciones.IconVisible = true;
             this.btnfunciones.IconZoom = 75D;
             this.btnfunciones.IsTab = false;
-            this.btnfunciones.Location = new System.Drawing.Point(50, 272);
+            this.btnfunciones.Location = new System.Drawing.Point(50, 261);
             this.btnfunciones.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnfunciones.Name = "btnfunciones";
             this.btnfunciones.Normalcolor = System.Drawing.Color.White;
@@ -315,6 +322,7 @@
             // btnusuario
             // 
             this.btnusuario.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnusuario.BackColor = System.Drawing.Color.White;
             this.btnusuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnusuario.BorderRadius = 0;
@@ -335,7 +343,7 @@
             this.btnusuario.IconVisible = true;
             this.btnusuario.IconZoom = 75D;
             this.btnusuario.IsTab = false;
-            this.btnusuario.Location = new System.Drawing.Point(50, 94);
+            this.btnusuario.Location = new System.Drawing.Point(50, 75);
             this.btnusuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnusuario.Name = "btnusuario";
             this.btnusuario.Normalcolor = System.Drawing.Color.White;
@@ -353,6 +361,7 @@
             // btnalimentos
             // 
             this.btnalimentos.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnalimentos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnalimentos.BackColor = System.Drawing.Color.White;
             this.btnalimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnalimentos.BorderRadius = 0;
@@ -373,7 +382,7 @@
             this.btnalimentos.IconVisible = true;
             this.btnalimentos.IconZoom = 75D;
             this.btnalimentos.IsTab = false;
-            this.btnalimentos.Location = new System.Drawing.Point(376, 361);
+            this.btnalimentos.Location = new System.Drawing.Point(376, 350);
             this.btnalimentos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnalimentos.Name = "btnalimentos";
             this.btnalimentos.Normalcolor = System.Drawing.Color.White;
@@ -391,6 +400,7 @@
             // btnsalas
             // 
             this.btnsalas.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnsalas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnsalas.BackColor = System.Drawing.Color.White;
             this.btnsalas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsalas.BorderRadius = 0;
@@ -411,7 +421,7 @@
             this.btnsalas.IconVisible = true;
             this.btnsalas.IconZoom = 75D;
             this.btnsalas.IsTab = false;
-            this.btnsalas.Location = new System.Drawing.Point(376, 183);
+            this.btnsalas.Location = new System.Drawing.Point(376, 167);
             this.btnsalas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnsalas.Name = "btnsalas";
             this.btnsalas.Normalcolor = System.Drawing.Color.White;
@@ -429,6 +439,7 @@
             // btntickets
             // 
             this.btntickets.Activecolor = System.Drawing.Color.DarkGray;
+            this.btntickets.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btntickets.BackColor = System.Drawing.Color.White;
             this.btntickets.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btntickets.BorderRadius = 0;
@@ -449,7 +460,7 @@
             this.btntickets.IconVisible = true;
             this.btntickets.IconZoom = 75D;
             this.btntickets.IsTab = false;
-            this.btntickets.Location = new System.Drawing.Point(376, 94);
+            this.btntickets.Location = new System.Drawing.Point(376, 75);
             this.btntickets.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btntickets.Name = "btntickets";
             this.btntickets.Normalcolor = System.Drawing.Color.White;
@@ -467,6 +478,7 @@
             // btnasientos
             // 
             this.btnasientos.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnasientos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnasientos.BackColor = System.Drawing.Color.White;
             this.btnasientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnasientos.BorderRadius = 0;
@@ -487,7 +499,7 @@
             this.btnasientos.IconVisible = true;
             this.btnasientos.IconZoom = 75D;
             this.btnasientos.IsTab = false;
-            this.btnasientos.Location = new System.Drawing.Point(711, 272);
+            this.btnasientos.Location = new System.Drawing.Point(711, 261);
             this.btnasientos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnasientos.Name = "btnasientos";
             this.btnasientos.Normalcolor = System.Drawing.Color.White;
@@ -505,6 +517,7 @@
             // btnpeliculas
             // 
             this.btnpeliculas.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnpeliculas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnpeliculas.BackColor = System.Drawing.Color.White;
             this.btnpeliculas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnpeliculas.BorderRadius = 0;
@@ -525,7 +538,7 @@
             this.btnpeliculas.IconVisible = true;
             this.btnpeliculas.IconZoom = 75D;
             this.btnpeliculas.IsTab = false;
-            this.btnpeliculas.Location = new System.Drawing.Point(711, 183);
+            this.btnpeliculas.Location = new System.Drawing.Point(711, 167);
             this.btnpeliculas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnpeliculas.Name = "btnpeliculas";
             this.btnpeliculas.Normalcolor = System.Drawing.Color.White;
@@ -543,6 +556,7 @@
             // btnproductos
             // 
             this.btnproductos.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnproductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnproductos.BackColor = System.Drawing.Color.White;
             this.btnproductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnproductos.BorderRadius = 0;
@@ -563,7 +577,7 @@
             this.btnproductos.IconVisible = true;
             this.btnproductos.IconZoom = 75D;
             this.btnproductos.IsTab = false;
-            this.btnproductos.Location = new System.Drawing.Point(711, 361);
+            this.btnproductos.Location = new System.Drawing.Point(711, 350);
             this.btnproductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnproductos.Name = "btnproductos";
             this.btnproductos.Normalcolor = System.Drawing.Color.White;
@@ -581,6 +595,7 @@
             // btnpersonajes
             // 
             this.btnpersonajes.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnpersonajes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnpersonajes.BackColor = System.Drawing.Color.White;
             this.btnpersonajes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnpersonajes.BorderRadius = 0;
@@ -601,7 +616,7 @@
             this.btnpersonajes.IconVisible = true;
             this.btnpersonajes.IconZoom = 75D;
             this.btnpersonajes.IsTab = false;
-            this.btnpersonajes.Location = new System.Drawing.Point(711, 94);
+            this.btnpersonajes.Location = new System.Drawing.Point(711, 75);
             this.btnpersonajes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnpersonajes.Name = "btnpersonajes";
             this.btnpersonajes.Normalcolor = System.Drawing.Color.White;

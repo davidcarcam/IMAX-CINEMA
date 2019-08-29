@@ -48,9 +48,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncion)).BeginInit();
@@ -89,6 +89,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(772, 44);
@@ -99,6 +100,7 @@
             // 
             // txtbuscar
             // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbuscar.Location = new System.Drawing.Point(849, 44);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
@@ -108,6 +110,7 @@
             // 
             // mskHora
             // 
+            this.mskHora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mskHora.Location = new System.Drawing.Point(106, 130);
             this.mskHora.Mask = "00:00:00";
             this.mskHora.Name = "mskHora";
@@ -116,6 +119,7 @@
             // 
             // mskDuracion
             // 
+            this.mskDuracion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mskDuracion.Location = new System.Drawing.Point(106, 53);
             this.mskDuracion.Mask = "00:00:00 Tiempo";
             this.mskDuracion.Name = "mskDuracion";
@@ -144,6 +148,7 @@
             // 
             // cmbClasificacion
             // 
+            this.cmbClasificacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbClasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbClasificacion.FormattingEnabled = true;
             this.cmbClasificacion.Location = new System.Drawing.Point(556, 132);
@@ -153,6 +158,7 @@
             // 
             // cmbSala
             // 
+            this.cmbSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSala.FormattingEnabled = true;
             this.cmbSala.Location = new System.Drawing.Point(556, 90);
@@ -162,6 +168,7 @@
             // 
             // cmbpelicula
             // 
+            this.cmbpelicula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbpelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbpelicula.FormattingEnabled = true;
             this.cmbpelicula.Location = new System.Drawing.Point(556, 44);
@@ -175,9 +182,9 @@
             this.dgvFuncion.AllowUserToDeleteRows = false;
             this.dgvFuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncion.Location = new System.Drawing.Point(6, 282);
+            this.dgvFuncion.Location = new System.Drawing.Point(12, 242);
             this.dgvFuncion.Name = "dgvFuncion";
-            this.dgvFuncion.Size = new System.Drawing.Size(1011, 265);
+            this.dgvFuncion.Size = new System.Drawing.Size(981, 265);
             this.dgvFuncion.TabIndex = 0;
             this.dgvFuncion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncion_CellContentClick);
             // 
@@ -203,7 +210,7 @@
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(773, 179);
+            this.btnEliminar.Location = new System.Drawing.Point(771, 179);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -239,7 +246,7 @@
             this.btnActualizar.IconVisible = true;
             this.btnActualizar.IconZoom = 90D;
             this.btnActualizar.IsTab = false;
-            this.btnActualizar.Location = new System.Drawing.Point(517, 179);
+            this.btnActualizar.Location = new System.Drawing.Point(518, 179);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnActualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -275,7 +282,7 @@
             this.btnMostar.IconVisible = true;
             this.btnMostar.IconZoom = 90D;
             this.btnMostar.IsTab = false;
-            this.btnMostar.Location = new System.Drawing.Point(260, 179);
+            this.btnMostar.Location = new System.Drawing.Point(265, 179);
             this.btnMostar.Name = "btnMostar";
             this.btnMostar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnMostar.OnHovercolor = System.Drawing.Color.Brown;
@@ -327,6 +334,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(344, 75);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(31, 20);
@@ -335,6 +343,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(473, 88);
@@ -345,6 +354,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(474, 46);
@@ -355,6 +365,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(440, 130);
@@ -363,8 +374,20 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Clasificacion";
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(60, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Formato 24 horas";
+            // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(18, 128);
@@ -375,6 +398,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(18, 50);
@@ -382,16 +406,6 @@
             this.label10.Size = new System.Drawing.Size(73, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Duracion";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Formato 24 horas";
             // 
             // FrmFunciones
             // 

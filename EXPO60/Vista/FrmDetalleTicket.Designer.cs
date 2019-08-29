@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDetalleTicket));
             this.grpDetalleTicket = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.txtFila = new System.Windows.Forms.TextBox();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,8 +46,6 @@
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.grpDetalleTicket.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).BeginInit();
@@ -75,6 +75,28 @@
             this.grpDetalleTicket.TabIndex = 0;
             this.grpDetalleTicket.TabStop = false;
             this.grpDetalleTicket.Enter += new System.EventHandler(this.grpDetalleTicket_Enter);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(750, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Buscar";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbuscar.Location = new System.Drawing.Point(827, 67);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 72;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // txtNum
             // 
@@ -212,7 +234,7 @@
             this.dgvtickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvtickets.Location = new System.Drawing.Point(12, 283);
             this.dgvtickets.Name = "dgvtickets";
-            this.dgvtickets.Size = new System.Drawing.Size(980, 302);
+            this.dgvtickets.Size = new System.Drawing.Size(980, 281);
             this.dgvtickets.TabIndex = 0;
             this.dgvtickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtickets_CellContentClick);
             // 
@@ -321,26 +343,6 @@
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(750, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "Buscar";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(827, 67);
-            this.txtbuscar.MaxLength = 50;
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 72;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // FrmDetalleTicket
             // 

@@ -190,5 +190,10 @@ namespace EXPO60.Vista
                 Mostrar_Asientos();
             }
         }
+
+        private void txtNumero_Asiento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

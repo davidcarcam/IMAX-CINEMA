@@ -75,6 +75,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(903, 95);
@@ -85,6 +86,7 @@
             // 
             // txtbuscar
             // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbuscar.Location = new System.Drawing.Point(977, 99);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
@@ -119,7 +121,7 @@
             this.dgvActores.AllowUserToDeleteRows = false;
             this.dgvActores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvActores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActores.Location = new System.Drawing.Point(79, 236);
+            this.dgvActores.Location = new System.Drawing.Point(79, 228);
             this.dgvActores.Name = "dgvActores";
             this.dgvActores.Size = new System.Drawing.Size(1042, 298);
             this.dgvActores.TabIndex = 0;
@@ -127,6 +129,7 @@
             // 
             // txtID_Actor
             // 
+            this.txtID_Actor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID_Actor.Location = new System.Drawing.Point(613, 54);
             this.txtID_Actor.Name = "txtID_Actor";
             this.txtID_Actor.Size = new System.Drawing.Size(35, 20);
@@ -279,6 +282,7 @@
             // 
             // txtactor
             // 
+            this.txtactor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtactor.Location = new System.Drawing.Point(313, 99);
             this.txtactor.MaxLength = 100;
             this.txtactor.Name = "txtactor";
@@ -289,6 +293,7 @@
             // 
             // lblNombre_Actor
             // 
+            this.lblNombre_Actor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre_Actor.AutoSize = true;
             this.lblNombre_Actor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre_Actor.Location = new System.Drawing.Point(173, 97);

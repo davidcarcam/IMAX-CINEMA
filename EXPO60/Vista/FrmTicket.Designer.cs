@@ -72,6 +72,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(774, 66);
@@ -82,6 +83,7 @@
             // 
             // txtbuscar
             // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbuscar.Location = new System.Drawing.Point(839, 66);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
@@ -91,6 +93,7 @@
             // 
             // cmbfecha
             // 
+            this.cmbfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbfecha.Location = new System.Drawing.Point(221, 87);
             this.cmbfecha.Mask = "00/00/0000";
             this.cmbfecha.Name = "cmbfecha";
@@ -121,6 +124,7 @@
             // 
             // cmbusuario
             // 
+            this.cmbusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbusuario.FormattingEnabled = true;
             this.cmbusuario.Location = new System.Drawing.Point(577, 87);
@@ -161,7 +165,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(522, 179);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(577, 179);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Brown;
@@ -196,7 +200,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(260, 179);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(299, 179);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Brown;
@@ -231,7 +235,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(6, 179);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(37, 179);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Brown;
@@ -247,6 +251,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(440, 44);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(31, 20);
@@ -255,6 +260,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(503, 88);
@@ -265,6 +271,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(111, 88);

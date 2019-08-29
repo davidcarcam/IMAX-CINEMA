@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmalimentos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbestado = new System.Windows.Forms.ComboBox();
@@ -44,8 +46,6 @@
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).BeginInit();
@@ -76,6 +76,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de alimentos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(740, 50);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 20);
+            this.label8.TabIndex = 69;
+            this.label8.Text = "Buscar";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbuscar.Location = new System.Drawing.Point(833, 52);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 68;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // toolStrip1
             // 
@@ -153,6 +173,7 @@
             // 
             // txtid
             // 
+            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.Location = new System.Drawing.Point(169, 50);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
@@ -326,25 +347,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre local";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(740, 50);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 20);
-            this.label8.TabIndex = 69;
-            this.label8.Text = "Buscar";
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(833, 52);
-            this.txtbuscar.MaxLength = 50;
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 68;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // Frmalimentos
             // 

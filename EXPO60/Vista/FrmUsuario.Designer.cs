@@ -392,6 +392,7 @@ namespace EXPO60.Vista
             // 
             // cmbTipoU
             // 
+            this.cmbTipoU.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbTipoU.Location = new System.Drawing.Point(837, 78);
             this.cmbTipoU.Name = "cmbTipoU";
             this.cmbTipoU.Size = new System.Drawing.Size(153, 21);

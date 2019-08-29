@@ -95,6 +95,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(776, 84);
@@ -106,6 +107,7 @@
             // 
             // txtbuscar
             // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbuscar.Location = new System.Drawing.Point(869, 86);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
@@ -115,6 +117,7 @@
             // 
             // cmbIdioma
             // 
+            this.cmbIdioma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdioma.FormattingEnabled = true;
             this.cmbIdioma.Location = new System.Drawing.Point(388, 48);
@@ -125,6 +128,7 @@
             // 
             // cmbDimensiones
             // 
+            this.cmbDimensiones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDimensiones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDimensiones.FormattingEnabled = true;
             this.cmbDimensiones.Location = new System.Drawing.Point(388, 120);
@@ -134,6 +138,7 @@
             // 
             // cmbGenero
             // 
+            this.cmbGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(628, 51);
@@ -144,6 +149,7 @@
             // 
             // cmbestado
             // 
+            this.cmbestado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbestado.FormattingEnabled = true;
             this.cmbestado.Location = new System.Drawing.Point(628, 120);
@@ -173,6 +179,7 @@
             // 
             // txtaño
             // 
+            this.txtaño.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtaño.Location = new System.Drawing.Point(97, 86);
             this.txtaño.Mask = "0000";
             this.txtaño.Name = "txtaño";
@@ -185,9 +192,9 @@
             this.dgvpeliculas.AllowUserToDeleteRows = false;
             this.dgvpeliculas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvpeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpeliculas.Location = new System.Drawing.Point(9, 256);
+            this.dgvpeliculas.Location = new System.Drawing.Point(30, 230);
             this.dgvpeliculas.Name = "dgvpeliculas";
-            this.dgvpeliculas.Size = new System.Drawing.Size(1011, 265);
+            this.dgvpeliculas.Size = new System.Drawing.Size(978, 282);
             this.dgvpeliculas.TabIndex = 0;
             this.dgvpeliculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpeliculas_CellContentClick);
             // 
@@ -219,7 +226,7 @@
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
-            this.btneliminar.Size = new System.Drawing.Size(241, 48);
+            this.btneliminar.Size = new System.Drawing.Size(228, 48);
             this.btneliminar.TabIndex = 11;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -249,13 +256,13 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(523, 176);
+            this.btnactualizar.Location = new System.Drawing.Point(530, 176);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnactualizar.selected = false;
-            this.btnactualizar.Size = new System.Drawing.Size(241, 48);
+            this.btnactualizar.Size = new System.Drawing.Size(228, 48);
             this.btnactualizar.TabIndex = 10;
             this.btnactualizar.Text = "Actualizar";
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -285,13 +292,13 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(266, 176);
+            this.btnmostrar.Location = new System.Drawing.Point(280, 176);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
-            this.btnmostrar.Size = new System.Drawing.Size(241, 48);
+            this.btnmostrar.Size = new System.Drawing.Size(228, 48);
             this.btnmostrar.TabIndex = 9;
             this.btnmostrar.Text = "Mostrar";
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,13 +328,13 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(9, 176);
+            this.btnagregar.Location = new System.Drawing.Point(30, 176);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
-            this.btnagregar.Size = new System.Drawing.Size(241, 48);
+            this.btnagregar.Size = new System.Drawing.Size(228, 48);
             this.btnagregar.TabIndex = 8;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -337,6 +344,7 @@
             // 
             // idPelicula
             // 
+            this.idPelicula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.idPelicula.Location = new System.Drawing.Point(317, 81);
             this.idPelicula.Name = "idPelicula";
             this.idPelicula.Size = new System.Drawing.Size(28, 20);
@@ -345,6 +353,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(562, 122);
@@ -355,6 +364,7 @@
             // 
             // txttitulo
             // 
+            this.txttitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txttitulo.Location = new System.Drawing.Point(97, 48);
             this.txttitulo.MaxLength = 50;
             this.txttitulo.Name = "txttitulo";
@@ -364,6 +374,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(44, 46);
@@ -374,6 +385,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(559, 49);
@@ -384,6 +396,7 @@
             // 
             // txtdirector
             // 
+            this.txtdirector.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtdirector.Location = new System.Drawing.Point(97, 132);
             this.txtdirector.MaxLength = 40;
             this.txtdirector.Name = "txtdirector";
@@ -393,6 +406,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(26, 132);
@@ -403,6 +417,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(277, 122);
@@ -413,6 +428,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(53, 84);
@@ -423,6 +439,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(297, 47);

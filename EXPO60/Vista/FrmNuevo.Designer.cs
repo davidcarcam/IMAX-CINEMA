@@ -109,6 +109,7 @@
             this.btnnormal.Size = new System.Drawing.Size(23, 22);
             this.btnnormal.Text = "Restaurar a tamaño normal";
             this.btnnormal.Visible = false;
+            this.btnnormal.Click += new System.EventHandler(this.btnnormal_Click_1);
             // 
             // btnminimizar
             // 
@@ -152,7 +153,7 @@
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(243, 25);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1025, 500);
+            this.PanelContenedor.Size = new System.Drawing.Size(1025, 547);
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
@@ -171,7 +172,7 @@
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Quality = 10;
-            this.MenuVertical.Size = new System.Drawing.Size(243, 525);
+            this.MenuVertical.Size = new System.Drawing.Size(243, 572);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
@@ -240,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 525);
+            this.ClientSize = new System.Drawing.Size(1268, 572);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.MenuVertical);
