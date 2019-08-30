@@ -92,7 +92,6 @@ namespace EXPO60.Vista
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
             this.txtnombre.TabIndex = 1;
-            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress_1);
             // 
             // txttelefono
@@ -111,9 +110,9 @@ namespace EXPO60.Vista
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(58, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Apellido:";
+            this.label2.Text = "Apellido";
             // 
             // txtapellido
             // 
@@ -132,9 +131,9 @@ namespace EXPO60.Vista
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(52, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Telefono:";
+            this.label4.Text = "Telefono";
             // 
             // label5
             // 
@@ -163,9 +162,9 @@ namespace EXPO60.Vista
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(390, 76);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Correo:";
+            this.label6.Text = "Correo";
             // 
             // txtcorreo
             // 
@@ -175,7 +174,6 @@ namespace EXPO60.Vista
             this.txtcorreo.Size = new System.Drawing.Size(196, 20);
             this.txtcorreo.TabIndex = 53;
             this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress_1);
-            this.txtcorreo.Validated += new System.EventHandler(this.txtcorreo_Validated);
             // 
             // label7
             // 
@@ -184,9 +182,9 @@ namespace EXPO60.Vista
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(372, 118);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Direccion:";
+            this.label7.Text = "Direccion";
             // 
             // btnmostrar
             // 
@@ -305,7 +303,6 @@ namespace EXPO60.Vista
             this.dgvusuarios.Size = new System.Drawing.Size(1009, 230);
             this.dgvusuarios.TabIndex = 0;
             this.dgvusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellClick);
-            this.dgvusuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellContentClick);
             // 
             // txtid
             // 
@@ -337,7 +334,6 @@ namespace EXPO60.Vista
             this.label8.Size = new System.Drawing.Size(141, 20);
             this.label8.TabIndex = 38;
             this.label8.Text = "Estado del usuario";
-            this.label8.Click += new System.EventHandler(this.label8_Click_1);
             // 
             // label9
             // 
@@ -346,9 +342,9 @@ namespace EXPO60.Vista
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(699, 79);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 20);
+            this.label9.Size = new System.Drawing.Size(117, 20);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Tipo de usuario:";
+            this.label9.Text = "Tipo de usuario";
             // 
             // label10
             // 
@@ -357,9 +353,9 @@ namespace EXPO60.Vista
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(752, 116);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 20);
+            this.label10.Size = new System.Drawing.Size(64, 20);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Usuario:";
+            this.label10.Text = "Usuario";
             // 
             // txtusuario
             // 
@@ -378,9 +374,9 @@ namespace EXPO60.Vista
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(724, 155);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 20);
+            this.label11.Size = new System.Drawing.Size(92, 20);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Contraseña:";
+            this.label11.Text = "Contraseña";
             // 
             // txtclave
             // 
@@ -396,6 +392,7 @@ namespace EXPO60.Vista
             // cmbTipoU
             // 
             this.cmbTipoU.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbTipoU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoU.Location = new System.Drawing.Point(837, 78);
             this.cmbTipoU.Name = "cmbTipoU";
             this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
@@ -410,7 +407,6 @@ namespace EXPO60.Vista
             this.cmbEstadoU.Name = "cmbEstadoU";
             this.cmbEstadoU.Size = new System.Drawing.Size(153, 21);
             this.cmbEstadoU.TabIndex = 8;
-            this.cmbEstadoU.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoU_SelectedIndexChanged);
             // 
             // toolStrip1
             // 
@@ -515,7 +511,6 @@ namespace EXPO60.Vista
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de usuarios";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter_1);
             // 
             // FrmUsuario
             // 

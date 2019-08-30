@@ -127,16 +127,7 @@ namespace EXPO60.Vista
 
         private void Dgvproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion;
-            posicion = this.dgvproductos.CurrentRow.Index;
-            txtid.Text = this.dgvproductos[0, posicion].Value.ToString();
-            txtprecio.Text = this.dgvproductos[1, posicion].Value.ToString();
-            cmblocal.Text = this.dgvproductos[2, posicion].Value.ToString();
-            cmbprov.Text = this.dgvproductos[3, posicion].Value.ToString();
-            cmbtipo.Text = this.dgvproductos[4, posicion].Value.ToString();
-            btnactualizar.Enabled = true;
-            btneliminar.Enabled = true;
-            btnagregar.Enabled = false;
+            
         }
 
         private void FrmProducto_Load(object sender, EventArgs e)
@@ -217,6 +208,18 @@ namespace EXPO60.Vista
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+        }
+
+        private void dgvproductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvproductos.CurrentRow.Index;
+            txtid.Text = this.dgvproductos[0, posicion].Value.ToString();
+            txtnombre.Text = this.dgvproductos[1, posicion].Value.ToString();
+            txtprecio.Text = this.dgvproductos[2, posicion].Value.ToString();
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
         }
     }
 }

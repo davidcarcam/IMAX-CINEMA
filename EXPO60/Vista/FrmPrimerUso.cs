@@ -18,6 +18,60 @@ namespace EXPO60.Vista
 {
     public partial class FrmPrimerUso : Form
     {
+        Form currentForm;
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            //Buscar la coleccion del formulario
+            formulario = panelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+
+                if (currentForm != null)
+                {
+                    currentForm.Close();
+                    panelContenedor.Controls.Remove(currentForm);
+                }
+
+                currentForm = formulario;
+                panelContenedor.Controls.Add(formulario);
+                panelContenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+
+        }
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            foreach (var control in panelContenedor.Controls)
+            {
+                if (control is FrmLogin)
+                {
+
+                }
+                else if (control is FrmNuevo)
+                {
+
+                }
+                else if (control is FrmPrimerUso)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
         #region Dlls para mover el formulario
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         public extern static void ReleaseCapture();
@@ -73,25 +127,13 @@ namespace EXPO60.Vista
                 agr.apellido = txtApe.Text;
                 agr.clave = txtCifrado.Text;
                 agr.correo = txtCor.Text;
-                agr.dui = txtDui.Text;
-             
+                agr.dui = txtDui.Text;             
                 agr.telefono = txtTel.Text;
                 agr.usuario = txtUsu.Text;
                 agr.tipo = Convert.ToInt16(cmbTip.SelectedValue);
                 agr.estado = Convert.ToInt16(cmbEst.SelectedValue);
                 int datos = Funciones_primerUso.ingresarusuario(agr);
             }
-        }
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnIngUsuario_Click(object sender, EventArgs e)
-        {
-            AgregarUsu();
-            FrmLogin principal = new FrmLogin();
-            principal.Show();
-            this.Hide();
         }
         private void txtCla_TextChanged(object sender, EventArgs e)
         {
@@ -160,6 +202,29 @@ namespace EXPO60.Vista
         {
             mostrarET();
         }
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }       
+        private void ToolStripPrimer_Usuario_MouseDown(object sender, MouseEventArgs e)
+        {
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            w = this.Width;
+            h = this.Height;
+        }
+        private void txtCla_TextChanged_1(object sender, EventArgs e)
+        {
+            txtCla.UseSystemPasswordChar = true;
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtCla.Text.ToString());
+            txtCifrado.Text = Hash(pass);
+        }
+        private void btnIngUsuario_Click_2(object sender, EventArgs e)
+        {
+            AgregarUsu();
+            FrmLogin principal = new FrmLogin();
+            principal.Show();
+            this.Hide();
+        }
         public string Hash(byte[] val)
         {
             using (SHA1Managed sha1 = new SHA1Managed())
@@ -168,49 +233,23 @@ namespace EXPO60.Vista
                 return Convert.ToBase64String(hash);
             }
         }
-        private void txtCifrado_TextChanged(object sender, EventArgs e)
+        private void txtConfirmar_TextChanged(object sender, EventArgs e)
         {
-
-        }
-        private void ToolStripButton1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void BtnCargar_Foto_Click(object sender, EventArgs e)
-        {
-            try
+            txtContra.UseSystemPasswordChar = true;
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
+            txtCifrado.Text = Hash(pass);
+            if (txtCla.Text == txtContra.Text)
             {
-                ofpPrimer_Usuario.Filter = "Archivo de imagen (.jpg) | *.jpg | Archivos de Imagen (.png) | *.png | Archivos de Imagen (jpeg) | *jpeg | Todos los Archivos |*.*";
-                DialogResult Resultado1 = ofpPrimer_Usuario.ShowDialog();
-                if (Resultado1 == DialogResult.OK)
-                {
-                    picPerfil_image.Image = Image.FromFile(ofpPrimer_Usuario.FileName);
-                }
+                label13.Visible = false;
             }
-            catch (Exception a)
+            else
             {
-                MessageBox.Show("Sucedio un problema durante el proceso, por favor contacte con el administrador", "Error" + a.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                label13.Visible = true;
             }
         }
-        private void BtnIngUsuario_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void ToolStripPrimer_Usuario_MouseDown(object sender, MouseEventArgs e)
-        {
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-            w = this.Width;
-            h = this.Height;
-        }
-        private void FrmPrimerUso_Resize(object sender, EventArgs e)
-        {
-            
-        }
-        private void txtCla_TextChanged_1(object sender, EventArgs e)
+        private void txtCla_TextChanged_2(object sender, EventArgs e)
         {
             txtCla.UseSystemPasswordChar = true;
-            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtCla.Text.ToString());
-            txtCifrado.Text = Hash(pass);
         }
     }
 }

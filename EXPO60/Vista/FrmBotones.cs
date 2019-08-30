@@ -317,7 +317,7 @@ namespace EXPO60.Vista
             btnidioma.Visible = false;
             btnempresa.Visible = false;
         }
-        private void FrmBotones_Load(object sender, EventArgs e)
+        private void FrmBotones_Load_1(object sender, EventArgs e)
         {
             if (ContructorLogin2.nivel == 1)
             {

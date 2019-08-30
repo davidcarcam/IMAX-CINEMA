@@ -84,14 +84,14 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
-        public static bool eliminarEmpresa( int id)
+        public static int eliminarEmpresa( int id)
         {
-            bool retorno = false;
+            int retorno = 0;
             try
             {
                 MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM empresas WHERE id_empresa = '{0}'", id), Conexion.ObtenerConexion());
-                retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
-                if (retorno == true)
+                retorno = Convert.ToInt32(cmddel.ExecuteNonQuery());
+                if (retorno == 1)
                 {
                     MessageBox.Show("Datos eliminados correctamente", "eliminacion completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -101,10 +101,10 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception )
+            catch (Exception e)
             {
 
-                MessageBox.Show("oops erro de coneccion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Oops error de conexion consulte con el administrador" + e, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }

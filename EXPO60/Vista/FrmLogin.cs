@@ -52,10 +52,6 @@ namespace EXPO60.Vista
                 return Convert.ToBase64String(hash);
             }
         }
-        private void btbAcceder_Click(object sender, EventArgs e)
-        {
-            
-        }
         void Validar()
         {
             if (txtUsuario.Text.Trim() == "" || txtContra.Text.Trim() == "")
@@ -99,18 +95,11 @@ namespace EXPO60.Vista
             principal.Show();
             this.Hide();
         }
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             if (ValidarLogin.ValidarExistencia() == true)
             {
-                linkPrimerUso.Visible = true;
+                linkPrimerUso.Visible = false;
             }
             else
             {
@@ -127,14 +116,12 @@ namespace EXPO60.Vista
         }
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
             FrmMetodos_Recuperar recu = new FrmMetodos_Recuperar();
             recu.Show();
             this.Hide();
         }
         private void txtContra_TextChanged(object sender, EventArgs e)
         {
-
             txtContra.UseSystemPasswordChar = true;
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
             txtCifrado.Text = Hash(pass);

@@ -42,16 +42,16 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM detalle_ticket";
+                string query = "SELECT * FROM detalle_fac_local";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query),Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adapter.Fill(data);
                 return data;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Ops a ocurrido un problema con la obteccion de datos consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ops a ocurrido un problema con la obtencion de datos consulte con el administrador" + e , "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return data = new DataTable();
             }
             finally

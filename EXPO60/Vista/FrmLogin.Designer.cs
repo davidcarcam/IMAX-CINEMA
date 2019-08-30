@@ -43,12 +43,8 @@ namespace EXPO60.Vista
             this.btbAcceder = new System.Windows.Forms.Button();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolbtnCerra_Aplicacion = new System.Windows.Forms.ToolStripButton();
-            this.toollblLogin = new System.Windows.Forms.ToolStripLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +56,6 @@ namespace EXPO60.Vista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 298);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // linkPrimerUso
             // 
@@ -170,39 +165,11 @@ namespace EXPO60.Vista
             this.txtUsuario.Size = new System.Drawing.Size(286, 20);
             this.txtUsuario.TabIndex = 9;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolbtnCerra_Aplicacion,
-            this.toollblLogin});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
-            this.toolStrip1.TabIndex = 15;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolbtnCerra_Aplicacion
-            // 
-            this.toolbtnCerra_Aplicacion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolbtnCerra_Aplicacion.Image = global::EXPO60.Properties.Resources.cancel;
-            this.toolbtnCerra_Aplicacion.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolbtnCerra_Aplicacion.Name = "toolbtnCerra_Aplicacion";
-            this.toolbtnCerra_Aplicacion.Size = new System.Drawing.Size(103, 22);
-            this.toolbtnCerra_Aplicacion.Text = "Cerrar Sistema";
-            this.toolbtnCerra_Aplicacion.Click += new System.EventHandler(this.toolbtnCerra_Aplicacion_Click_1);
-            // 
-            // toollblLogin
-            // 
-            this.toollblLogin.Name = "toollblLogin";
-            this.toollblLogin.Size = new System.Drawing.Size(75, 22);
-            this.toollblLogin.Text = "Iniciar sesion";
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 298);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtCifrado);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
@@ -220,8 +187,6 @@ namespace EXPO60.Vista
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,8 +205,5 @@ namespace EXPO60.Vista
         private Button btbAcceder;
         private TextBox txtContra;
         private TextBox txtUsuario;
-        private ToolStrip toolStrip1;
-        private ToolStripButton toolbtnCerra_Aplicacion;
-        private ToolStripLabel toollblLogin;
     }
 }

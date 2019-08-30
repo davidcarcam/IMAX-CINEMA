@@ -78,14 +78,6 @@ namespace EXPO60.Vista
 
         private void dgvactores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion;
-            posicion = this.dgvempresas.CurrentRow.Index;
-            txtid.Text = this.dgvempresas[0, posicion].Value.ToString();
-            txtNombre_empresa.Text = this.dgvempresas[1, posicion].Value.ToString();
-            txtDireccion_empresa.Text = this.dgvempresas[2, posicion].Value.ToString();
-            btnactualizar.Enabled = true;
-            btneliminar.Enabled = true;
-            btnagregar.Enabled = false;
         }
         public void modificarRegistro()
         {
@@ -197,6 +189,18 @@ namespace EXPO60.Vista
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
+        }
+
+        private void dgvempresas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvempresas.CurrentRow.Index;
+            txtid.Text = this.dgvempresas[0, posicion].Value.ToString();
+            txtNombre_empresa.Text = this.dgvempresas[1, posicion].Value.ToString();
+            txtDireccion_empresa.Text = this.dgvempresas[2, posicion].Value.ToString();
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
         }
     }
 }

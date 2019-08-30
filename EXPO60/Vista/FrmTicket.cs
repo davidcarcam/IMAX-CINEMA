@@ -55,5 +55,9 @@ namespace EXPO60.Vista
         {
              cmbfecha.Clear();
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

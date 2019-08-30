@@ -40,7 +40,7 @@ namespace EXPO60.Modelo
         }
         public static DataTable ObtenerTipoUsuario()
         {
-            string query = "SELECT * FROM tipo_usuario";
+            string query = "SELECT * FROM tipo_usuario WHERE id_tipo_usu != 1";
             DataTable data = new DataTable();
             try
             {

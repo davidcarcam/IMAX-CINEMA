@@ -31,6 +31,16 @@ namespace EXPO60.Vista
                 return base.ProcessCmdKey(ref msg, keyData);
             }
         }
+        public void MostrarComboBox()
+        {
+            cmbTipo_Pago.DataSource = Funciones_Factura_Local.pago();
+            cmbTipo_Pago.ValueMember = "id_tipo_pago"; 
+            cmbTipo_Pago.DisplayMember = "tipo_pago";
+
+            cmbusuario.DataSource = Funciones_Factura_Local.usuario();
+            cmbusuario.ValueMember = "id_usuario"; 
+            cmbusuario.DisplayMember = "usuario"; 
+        }
         public Frmfacturalocal()
         { 
             InitializeComponent();
@@ -40,10 +50,7 @@ namespace EXPO60.Vista
             Mostrar_Factura_Local();
             this.dgvfacturaloc.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
-            cmbusuario.DataSource = Funciones_Factura_Local.usuario();
-            cmbusuario.DisplayMember = "usuario";
-            cmbusuario.ValueMember = "id_usuario";
+            btneliminar.Enabled = false;          
         }
         public void Mostrar_Factura_Local()
         {
@@ -88,19 +95,16 @@ namespace EXPO60.Vista
         {
                 this.Close();
         }
-
         private void TextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void BunifuFlatButton4_Click(object sender, EventArgs e)
         {
             Agregar_Factura_Local();
             Limpiar_Factura_Local();
             Mostrar_Factura_Local();
         }
-
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int posicion;
@@ -127,7 +131,6 @@ namespace EXPO60.Vista
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
         }
-
         private void BunifuFlatButton1_Click(object sender, EventArgs e)
         {
             Eliminar_Factura_Local();
@@ -137,7 +140,6 @@ namespace EXPO60.Vista
             btnagregar.Enabled = true;
             btneliminar.Enabled = false;
         }
-
         private void BunifuFlatButton2_Click(object sender, EventArgs e)
         {
             Limpiar_Factura_Local();
@@ -147,13 +149,11 @@ namespace EXPO60.Vista
             btnagregar.Enabled = true;
             btneliminar.Enabled = false;
         }
-
         private void BunifuFlatButton3_Click(object sender, EventArgs e)
         {
             Limpiar_Factura_Local();
             Mostrar_Factura_Local();
         }
-
         private void TxtNom_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
@@ -162,7 +162,6 @@ namespace EXPO60.Vista
                 return;
             }
         }
-
         private void TxtMont_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >=32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
@@ -171,7 +170,6 @@ namespace EXPO60.Vista
                 return;
             }
         }
-
         private void MaskedTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >=32 && e.KeyChar <=47) || (e.KeyChar >=58 && e.KeyChar <=255))
@@ -180,12 +178,10 @@ namespace EXPO60.Vista
                 return;
             }
         }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
-
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             if (txtbuscar.Text != "")
@@ -212,15 +208,22 @@ namespace EXPO60.Vista
                 Mostrar_Factura_Local();
             }
         }
-
         private void txtNom_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             Limpiar_Factura_Local();
+        }
+        public void MostrarFactura()
+        {
+            dgvfacturaloc.DataSource = Funciones_Factura_Local.Mostrar_Facturas();
+        }
+        private void Frmfacturalocal_Load_1(object sender, EventArgs e)
+        {
+            MostrarComboBox();
+            MostrarFactura();
         }
     }
 }

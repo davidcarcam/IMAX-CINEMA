@@ -20,10 +20,6 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-        private void ConfirmarContraseña_Load(object sender, EventArgs e)
-        {
-
-        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             txtContra.UseSystemPasswordChar = true;

@@ -15,7 +15,6 @@ using System.Security.Cryptography;
 
 namespace EXPO60.Vista
 {
-
     public partial class FrmUsuario : Form
     {
         public FrmUsuario()
@@ -44,11 +43,9 @@ namespace EXPO60.Vista
             txtcorreo.Clear();
             txtdireccion.Clear();
             txtdocumento.Clear();
-            txtid.Clear();
             txtnombre.Clear();
             txttelefono.Clear();
             txtusuario.Clear();
-
         }
         public static bool Email_Valido(String email) // Método para validar el Email ingresado
         {
@@ -72,12 +69,7 @@ namespace EXPO60.Vista
                 return false;
             }
 
-        }
-
-        private void txtcorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }       
         Constructor_primerUso agr = new Constructor_primerUso();
         ConstructorUsuarios act = new ConstructorUsuarios();
         public void mostrarET()
@@ -116,7 +108,6 @@ namespace EXPO60.Vista
                 int datos = FuncionUsuario.ingresarusuario(agr);
             }
         }
-
         //private void btnagregar_Click(object sender, EventArgs e)
         //{
         //    fucionesUsuarios(txtcorreo.Text);
@@ -134,22 +125,11 @@ namespace EXPO60.Vista
 
         //    }
 
-        //}
-
-        private void txtusuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //}       
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
-                this.Close();
-            }
+            this.Close();
         }
-
         private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -169,7 +149,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtapellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -189,30 +168,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnagregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnmostrar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             mostrarET();
@@ -220,7 +175,6 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }
-
         private void btnagregar_Click_1(object sender, EventArgs e)
         {
             AgregarUsu();
@@ -234,14 +188,12 @@ namespace EXPO60.Vista
                 return Convert.ToBase64String(hash);
             }
         }
-
         private void txtclave_TextChanged(object sender, EventArgs e)
         {
             txtclave.UseSystemPasswordChar = true;
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtclave.Text.ToString());
             txtCifrado.Text = Hash(pass);
         }
-
         private void txtnombre_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
@@ -258,7 +210,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtapellido_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
@@ -275,7 +226,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || e.KeyChar.ToString().Equals("."))
@@ -292,7 +242,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtdireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || e.KeyChar.ToString().Equals(".") || e.KeyChar.ToString().Equals(",") || e.KeyChar.ToString().Equals("#"))
@@ -309,7 +258,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
@@ -326,7 +274,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtclave_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || e.KeyChar.ToString().Equals(".") || e.KeyChar.ToString().Equals(",") || e.KeyChar.ToString().Equals("#"))
@@ -354,12 +301,25 @@ namespace EXPO60.Vista
             this.dgvusuarios.Columns[10].Visible = false;
             this.dgvusuarios.Columns[11].Visible = false;
         }
-
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int posicion;
+            posicion = this.dgvusuarios.CurrentRow.Index;
+            txtid.Text = dgvusuarios[0, posicion].Value.ToString();
+            txtnombre.Text = dgvusuarios[1, posicion].Value.ToString();
+            txtapellido.Text = dgvusuarios[2, posicion].Value.ToString();
+            txtdireccion.Text = dgvusuarios[3, posicion].Value.ToString();
+            txtcorreo.Text = dgvusuarios[4, posicion].Value.ToString();
+            txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
+            txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
+            txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
+            txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
+            cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
+            cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
+            btneliminar.Enabled = true;
+            btnactualizar.Enabled = true;
+            btnagregar.Enabled = false;
         }
-
         private void btnmostrar_Click_1(object sender, EventArgs e)
         {
             Mostrarusuarios();
@@ -368,7 +328,6 @@ namespace EXPO60.Vista
             btneliminar.Enabled = false;
             Limpiar();
         }
-
         private void BtnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -389,7 +348,6 @@ namespace EXPO60.Vista
             act.estado = Convert.ToInt16(cmbEstadoU.SelectedValue);
             FuncionUsuario.actualizarusuario(act);
         }
-
         private void btnactualizar_Click(object sender, EventArgs e)
         {
             actualizarusuario();
@@ -406,9 +364,7 @@ namespace EXPO60.Vista
                 FuncionUsuario.EliminarUsuarios(Convert.ToInt32(txtid.Text));
 
             }
-
         }
-
         private void btneliminar_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -417,53 +373,7 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
             btnagregar.Enabled = true;
-        }
-
-        private void groupBox2_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbEstadoU_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvusuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int posicion;
-            posicion = this.dgvusuarios.CurrentRow.Index;
-            txtid.Text = dgvusuarios[0, posicion].Value.ToString();
-            txtnombre.Text = dgvusuarios[1, posicion].Value.ToString();
-            txtapellido.Text = dgvusuarios[2, posicion].Value.ToString();
-            txtdireccion.Text = dgvusuarios[3, posicion].Value.ToString();
-            txtcorreo.Text = dgvusuarios[4, posicion].Value.ToString();
-            txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
-            txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
-            txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
-            txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
-            cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
-            cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
-            btneliminar.Enabled = true;
-            btnactualizar.Enabled = true;
-            btnagregar.Enabled = false;
-        }
-
-        private void txtnombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcorreo_Validated(object sender, EventArgs e)
-        {
-            
-        }
-
+        }              
         private void txtcorreo_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 44) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 63) || (e.KeyChar >= 91 && e.KeyChar <= 94) || (e.KeyChar == 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))

@@ -125,5 +125,27 @@ namespace EXPO60.Modelo
                 Conexion.ObtenerConexion().Close();
             }
         }
+        public static DataTable pago()
+        {
+            string query = "SELECT * FROM tipo_pago";
+            DataTable usua = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(usua);
+                return usua;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return usua;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
     }
 }

@@ -63,6 +63,7 @@ namespace EXPO60.Vista
         {
             try
             {
+                mostrarEmpresas();
                 Mostrarcmb();
                 this.dgvtickets.Columns[0].Visible = false;
                 btnactualizar.Enabled = false;
@@ -90,10 +91,8 @@ namespace EXPO60.Vista
                 agregarDetalleTickt();
                 mostrarDetalleTicket();
                 vaciarampos();
-
             }
         }
-
         private void vaciarampos()
         {
             throw new NotImplementedException();
@@ -185,7 +184,6 @@ namespace EXPO60.Vista
         {
             dgvtickets.DataSource = FuncionesDetalleTicket.MostrarTicket();
         }
-
         private void btneliminar_Click_1(object sender, EventArgs e)
         {
             eliminarRegistro();
@@ -203,7 +201,6 @@ namespace EXPO60.Vista
             }
 
         }
-
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
