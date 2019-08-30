@@ -182,6 +182,7 @@
             this.cmbfuncion.Name = "cmbfuncion";
             this.cmbfuncion.Size = new System.Drawing.Size(195, 21);
             this.cmbfuncion.TabIndex = 1;
+            this.cmbfuncion.SelectedIndexChanged += new System.EventHandler(this.cmbfuncion_SelectedIndexChanged);
             // 
             // cmbAsiento
             // 
@@ -193,6 +194,7 @@
             this.cmbAsiento.Name = "cmbAsiento";
             this.cmbAsiento.Size = new System.Drawing.Size(176, 21);
             this.cmbAsiento.TabIndex = 2;
+            this.cmbAsiento.SelectedIndexChanged += new System.EventHandler(this.cmbAsiento_SelectedIndexChanged);
             // 
             // label9
             // 

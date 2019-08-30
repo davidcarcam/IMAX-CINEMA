@@ -16,7 +16,7 @@ namespace EXPO60
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vista.FrmLogin());
+            Application.Run(new Vista.FrmUsuario());
         }
     }
 }
