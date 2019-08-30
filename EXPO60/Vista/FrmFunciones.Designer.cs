@@ -97,7 +97,7 @@
             this.mskHora.Mask = "00:00";
             this.mskHora.Name = "mskHora";
             this.mskHora.Size = new System.Drawing.Size(153, 20);
-            this.mskHora.TabIndex = 82;
+            this.mskHora.TabIndex = 2;
             // 
             // label2
             // 
@@ -115,7 +115,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(106, 129);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 80;
+            this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label11
@@ -134,13 +134,13 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 78;
+            this.txtbuscar.TabIndex = 7;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // mskDuracion
             // 
             this.mskDuracion.Location = new System.Drawing.Point(106, 44);
-            this.mskDuracion.Mask = "000 minutos";
+            this.mskDuracion.Mask = "000min";
             this.mskDuracion.Name = "mskDuracion";
             this.mskDuracion.Size = new System.Drawing.Size(153, 20);
             this.mskDuracion.TabIndex = 1;
@@ -172,7 +172,7 @@
             this.cmbClasificacion.Location = new System.Drawing.Point(556, 132);
             this.cmbClasificacion.Name = "cmbClasificacion";
             this.cmbClasificacion.Size = new System.Drawing.Size(153, 21);
-            this.cmbClasificacion.TabIndex = 5;
+            this.cmbClasificacion.TabIndex = 6;
             // 
             // cmbSala
             // 
@@ -181,7 +181,7 @@
             this.cmbSala.Location = new System.Drawing.Point(556, 90);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(153, 21);
-            this.cmbSala.TabIndex = 4;
+            this.cmbSala.TabIndex = 5;
             // 
             // cmbpelicula
             // 
@@ -190,7 +190,7 @@
             this.cmbpelicula.Location = new System.Drawing.Point(556, 44);
             this.cmbpelicula.Name = "cmbpelicula";
             this.cmbpelicula.Size = new System.Drawing.Size(153, 21);
-            this.cmbpelicula.TabIndex = 3;
+            this.cmbpelicula.TabIndex = 4;
             // 
             // dgvFuncion
             // 
@@ -234,7 +234,7 @@
             this.btnEliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEliminar.selected = false;
             this.btnEliminar.Size = new System.Drawing.Size(220, 48);
-            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.White;
@@ -270,7 +270,7 @@
             this.btnActualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnActualizar.selected = false;
             this.btnActualizar.Size = new System.Drawing.Size(220, 48);
-            this.btnActualizar.TabIndex = 8;
+            this.btnActualizar.TabIndex = 11;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizar.Textcolor = System.Drawing.Color.White;
@@ -306,7 +306,7 @@
             this.btnMostar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMostar.selected = false;
             this.btnMostar.Size = new System.Drawing.Size(220, 48);
-            this.btnMostar.TabIndex = 7;
+            this.btnMostar.TabIndex = 10;
             this.btnMostar.Text = "Mostrar";
             this.btnMostar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostar.Textcolor = System.Drawing.Color.White;
@@ -342,7 +342,7 @@
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(220, 48);
-            this.btnagregar.TabIndex = 6;
+            this.btnagregar.TabIndex = 9;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;

@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsientos));
             this.grpAsientos = new System.Windows.Forms.GroupBox();
+            this.cmbsala = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbfila = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -47,9 +50,6 @@
             this.btnMostrar_Asientos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Asiento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmbfila = new System.Windows.Forms.ComboBox();
-            this.cmbsala = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.grpAsientos.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).BeginInit();
@@ -83,6 +83,37 @@
             this.grpAsientos.TabStop = false;
             this.grpAsientos.Text = "Registro de Asientos";
             // 
+            // cmbsala
+            // 
+            this.cmbsala.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbsala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbsala.FormattingEnabled = true;
+            this.cmbsala.Location = new System.Drawing.Point(132, 100);
+            this.cmbsala.Name = "cmbsala";
+            this.cmbsala.Size = new System.Drawing.Size(200, 21);
+            this.cmbsala.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(81, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 20);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Sala";
+            // 
+            // cmbfila
+            // 
+            this.cmbfila.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbfila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbfila.FormattingEnabled = true;
+            this.cmbfila.Location = new System.Drawing.Point(132, 44);
+            this.cmbfila.Name = "cmbfila";
+            this.cmbfila.Size = new System.Drawing.Size(200, 21);
+            this.cmbfila.TabIndex = 1;
+            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -102,7 +133,7 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 70;
+            this.txtbuscar.TabIndex = 9;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // toolStrip1
@@ -133,7 +164,7 @@
             this.cmbestado.Location = new System.Drawing.Point(597, 99);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(200, 21);
-            this.cmbestado.TabIndex = 3;
+            this.cmbestado.TabIndex = 4;
             // 
             // cmbasiento
             // 
@@ -228,7 +259,7 @@
             this.btnEliminar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEliminar_Asiento.selected = false;
             this.btnEliminar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnEliminar_Asiento.TabIndex = 7;
+            this.btnEliminar_Asiento.TabIndex = 8;
             this.btnEliminar_Asiento.Text = "Eliminar Asiento";
             this.btnEliminar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -264,7 +295,7 @@
             this.btnActualizar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnActualizar_Asiento.selected = false;
             this.btnActualizar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnActualizar_Asiento.TabIndex = 6;
+            this.btnActualizar_Asiento.TabIndex = 7;
             this.btnActualizar_Asiento.Text = "Actualizar Asiento";
             this.btnActualizar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -300,7 +331,7 @@
             this.btnMostrar_Asientos.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMostrar_Asientos.selected = false;
             this.btnMostrar_Asientos.Size = new System.Drawing.Size(241, 48);
-            this.btnMostrar_Asientos.TabIndex = 5;
+            this.btnMostrar_Asientos.TabIndex = 6;
             this.btnMostrar_Asientos.Text = "Mostrar Asientos";
             this.btnMostrar_Asientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostrar_Asientos.Textcolor = System.Drawing.Color.White;
@@ -336,7 +367,7 @@
             this.btnAgregar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAgregar_Asiento.selected = false;
             this.btnAgregar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnAgregar_Asiento.TabIndex = 4;
+            this.btnAgregar_Asiento.TabIndex = 5;
             this.btnAgregar_Asiento.Text = "Agregar Asiento";
             this.btnAgregar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -346,37 +377,6 @@
             // epError1
             // 
             this.epError1.ContainerControl = this;
-            // 
-            // cmbfila
-            // 
-            this.cmbfila.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbfila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbfila.FormattingEnabled = true;
-            this.cmbfila.Location = new System.Drawing.Point(132, 44);
-            this.cmbfila.Name = "cmbfila";
-            this.cmbfila.Size = new System.Drawing.Size(200, 21);
-            this.cmbfila.TabIndex = 72;
-            // 
-            // cmbsala
-            // 
-            this.cmbsala.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbsala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbsala.FormattingEnabled = true;
-            this.cmbsala.Location = new System.Drawing.Point(132, 100);
-            this.cmbsala.Name = "cmbsala";
-            this.cmbsala.Size = new System.Drawing.Size(200, 21);
-            this.cmbsala.TabIndex = 74;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 20);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "Sala";
             // 
             // FrmAsientos
             // 
