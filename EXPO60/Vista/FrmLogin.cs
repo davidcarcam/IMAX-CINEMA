@@ -116,7 +116,7 @@ namespace EXPO60.Vista
         }
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Tipo_recuperacion recu = new Tipo_recuperacion();
+            FrmMetodos_Recuperar recu = new FrmMetodos_Recuperar();
             recu.Show();
             this.Hide();
         }

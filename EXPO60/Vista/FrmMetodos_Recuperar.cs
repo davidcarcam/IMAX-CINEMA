@@ -81,7 +81,9 @@ namespace EXPO60.Vista
 
         private void MenuItemContactar_Administrador_Click(object sender, EventArgs e)
         {
-            
+            RecuAdmin kk = new RecuAdmin();
+            kk.Show();
+            this.Hide();
         }
 
         private void MenuItemCorreo_Recuperacion_Click(object sender, EventArgs e)
