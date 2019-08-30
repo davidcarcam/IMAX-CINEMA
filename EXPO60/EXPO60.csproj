@@ -74,6 +74,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Conexion_Correo.cs" />
     <Compile Include="Modelo\FuncionesAlimentos.cs" />
     <Compile Include="Modelo\FuncionesDetalleTicket.cs" />
     <Compile Include="Modelo\funcionesEmpresa.cs" />
@@ -88,6 +89,8 @@
     <Compile Include="Modelo\Funciones_Salas.cs" />
     <Compile Include="Modelo\FuncionPersonajes.cs" />
     <Compile Include="Modelo\FuncionUsuario.cs" />
+    <Compile Include="Modelo\Recovery.cs" />
+    <Compile Include="Modelo\Validacion_Correo.cs" />
     <Compile Include="Modelo\ValidarLogin.cs" />
     <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
