@@ -54,7 +54,7 @@ namespace EXPO60.Vista
         }
         private void btbAcceder_Click(object sender, EventArgs e)
         {
-            Validar();
+            
         }
         void Validar()
         {
@@ -65,91 +65,79 @@ namespace EXPO60.Vista
             }
             else
             {
-                ContructorLogin log = new ContructorLogin(txtUsuario.Text, txtContra.Text);
-                ContructorLogin.usuario = txtUsuario.Text;
-                log.clave = txtCifrado.Text;
+                ContructorLogin2 log = new ContructorLogin2(txtUsuario.Text, txtContra.Text);
+                ContructorLogin2.usuario = txtUsuario.Text;
+                ContructorLogin2.clave = txtCifrado.Text;
                 
                 //Recuperando el valor de retorno
                 bool datos = ValidarLogin.Acceso(log);
                 //
                 if (datos == true)
                 {
-                    FrmNuevo principal = new FrmNuevo();
-                    principal.Show();
-                    this.Hide();
+                    if (ContructorLogin2.clave == "efAdsX436aQfSUcxfwNEbBolhN0=")
+                    {
+                        ConfirmarContraseña kk = new ConfirmarContraseña();
+                        this.Hide();
+                        kk.Show();   
+                    }
+                    else
+                    {
+                        FrmNuevo principal = new FrmNuevo();
+                        principal.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+
                 }
             }
         }
-
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-            txtContra.UseSystemPasswordChar = true;
-            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
-            txtCifrado.Text = Hash(pass);
-        }
-
         private void linkPrimerUso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmPrimerUso principal = new FrmPrimerUso();
             principal.Show();
             this.Hide();
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmMetodos_Recuperar recu = new FrmMetodos_Recuperar();
-            recu.Show();
-            this.Hide();
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
-            if (Char.IsLetterOrDigit(e.KeyChar))
+            if (ValidarLogin.ValidarExistencia() == true)
             {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
+                linkPrimerUso.Visible = true;
             }
             else
             {
-                e.Handled = true;
+                linkPrimerUso.Visible = true;
             }
         }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void toolbtnCerra_Aplicacion_Click_1(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
-
-        private void txtCifrado_TextChanged(object sender, EventArgs e)
+        private void btbAcceder_Click_1(object sender, EventArgs e)
         {
-
+            Validar();
         }
-
-        private void ToolbtnCerra_Aplicacion_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro que desea salir de la aplicacion?", "Salir de la aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+
+            FrmMetodos_Recuperar recu = new FrmMetodos_Recuperar();
+            recu.Show();
+            this.Hide();
         }
-
-        private void ToolStrip1_MouseDown(object sender, MouseEventArgs e)
+        private void txtContra_TextChanged(object sender, EventArgs e)
         {
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-            w = this.Width;
-            h = this.Height;
+
+            txtContra.UseSystemPasswordChar = true;
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
+            txtCifrado.Text = Hash(pass);
         }
     }
 }

@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFunciones));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.mskHora = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.mskDuracion = new System.Windows.Forms.MaskedTextBox();
@@ -50,9 +54,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.mskHora = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncion)).BeginInit();
@@ -60,6 +61,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnlimpiar);
             this.groupBox2.Controls.Add(this.mskHora);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
@@ -91,6 +93,70 @@
             this.groupBox2.Text = "Registro de Funciones";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpiar.BorderRadius = 0;
+            this.btnlimpiar.ButtonText = "Limpiar";
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
+            this.btnlimpiar.Iconimage_right = null;
+            this.btnlimpiar.Iconimage_right_Selected = null;
+            this.btnlimpiar.Iconimage_Selected = null;
+            this.btnlimpiar.IconMarginLeft = 0;
+            this.btnlimpiar.IconMarginRight = 0;
+            this.btnlimpiar.IconRightVisible = true;
+            this.btnlimpiar.IconRightZoom = 0D;
+            this.btnlimpiar.IconVisible = true;
+            this.btnlimpiar.IconZoom = 80D;
+            this.btnlimpiar.IsTab = false;
+            this.btnlimpiar.Location = new System.Drawing.Point(789, 129);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpiar.selected = false;
+            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
+            this.btnlimpiar.TabIndex = 83;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
+            // mskHora
+            // 
+            this.mskHora.Location = new System.Drawing.Point(106, 91);
+            this.mskHora.Mask = "00:00:00";
+            this.mskHora.Name = "mskHora";
+            this.mskHora.Size = new System.Drawing.Size(153, 20);
+            this.mskHora.TabIndex = 82;
+            this.mskHora.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskHora_MaskInputRejected);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 20);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Dia";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 129);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker1.TabIndex = 80;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -113,7 +179,7 @@
             // mskDuracion
             // 
             this.mskDuracion.Location = new System.Drawing.Point(106, 44);
-            this.mskDuracion.Mask = "000minu";
+            this.mskDuracion.Mask = "00:00:00 minutos";
             this.mskDuracion.Name = "mskDuracion";
             this.mskDuracion.Size = new System.Drawing.Size(153, 20);
             this.mskDuracion.TabIndex = 1;
@@ -389,32 +455,6 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Duracion";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 129);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 80;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 20);
-            this.label2.TabIndex = 81;
-            this.label2.Text = "Dia";
-            // 
-            // mskHora
-            // 
-            this.mskHora.Location = new System.Drawing.Point(106, 91);
-            this.mskHora.Mask = "00:00";
-            this.mskHora.Name = "mskHora";
-            this.mskHora.Size = new System.Drawing.Size(153, 20);
-            this.mskHora.TabIndex = 82;
-            // 
             // FrmFunciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,5 +500,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MaskedTextBox mskHora;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

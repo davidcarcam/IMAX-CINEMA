@@ -63,6 +63,7 @@ namespace EXPO60.Vista
         {
             txttitulo.Clear();
             txtaño.Clear();
+            txtdirector.Clear();
         }
         public void agregarPelicula()
         {
@@ -266,6 +267,11 @@ namespace EXPO60.Vista
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            vaciarampos();
         }
     }
 }

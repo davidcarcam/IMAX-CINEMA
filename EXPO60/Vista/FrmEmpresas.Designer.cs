@@ -45,6 +45,7 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempresas)).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnlimpiar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.toolStrip1);
@@ -76,9 +78,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(771, 68);
+            this.label3.Location = new System.Drawing.Point(760, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 75;
@@ -87,7 +90,8 @@
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Location = new System.Drawing.Point(848, 68);
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbuscar.Location = new System.Drawing.Point(825, 56);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
@@ -116,6 +120,7 @@
             // 
             // txtDireccion_empresa
             // 
+            this.txtDireccion_empresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDireccion_empresa.Location = new System.Drawing.Point(596, 89);
             this.txtDireccion_empresa.MaxLength = 200;
             this.txtDireccion_empresa.Multiline = true;
@@ -126,6 +131,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(416, 89);
@@ -136,6 +142,7 @@
             // 
             // txtid
             // 
+            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.Location = new System.Drawing.Point(212, 56);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(35, 20);
@@ -145,6 +152,7 @@
             // 
             // txtNombre_empresa
             // 
+            this.txtNombre_empresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre_empresa.Location = new System.Drawing.Point(212, 91);
             this.txtNombre_empresa.MaxLength = 50;
             this.txtNombre_empresa.Name = "txtNombre_empresa";
@@ -154,6 +162,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 89);
@@ -168,9 +177,9 @@
             this.dgvempresas.AllowUserToDeleteRows = false;
             this.dgvempresas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvempresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvempresas.Location = new System.Drawing.Point(8, 276);
+            this.dgvempresas.Location = new System.Drawing.Point(12, 229);
             this.dgvempresas.Name = "dgvempresas";
-            this.dgvempresas.Size = new System.Drawing.Size(1011, 265);
+            this.dgvempresas.Size = new System.Drawing.Size(1001, 265);
             this.dgvempresas.TabIndex = 0;
             this.dgvempresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvactores_CellContentClick);
             // 
@@ -196,7 +205,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(777, 175);
+            this.btneliminar.Location = new System.Drawing.Point(768, 175);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
             this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
@@ -232,7 +241,7 @@
             this.btnactualizar.IconVisible = true;
             this.btnactualizar.IconZoom = 90D;
             this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(520, 175);
+            this.btnactualizar.Location = new System.Drawing.Point(518, 175);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
@@ -268,7 +277,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(263, 175);
+            this.btnmostrar.Location = new System.Drawing.Point(268, 175);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
@@ -304,7 +313,7 @@
             this.btnagregar.IconVisible = true;
             this.btnagregar.IconZoom = 90D;
             this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(6, 175);
+            this.btnagregar.Location = new System.Drawing.Point(18, 175);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
             this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
@@ -321,6 +330,42 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpiar.BorderRadius = 0;
+            this.btnlimpiar.ButtonText = "Limpiar";
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
+            this.btnlimpiar.Iconimage_right = null;
+            this.btnlimpiar.Iconimage_right_Selected = null;
+            this.btnlimpiar.Iconimage_Selected = null;
+            this.btnlimpiar.IconMarginLeft = 0;
+            this.btnlimpiar.IconMarginRight = 0;
+            this.btnlimpiar.IconRightVisible = true;
+            this.btnlimpiar.IconRightZoom = 0D;
+            this.btnlimpiar.IconVisible = true;
+            this.btnlimpiar.IconZoom = 80D;
+            this.btnlimpiar.IsTab = false;
+            this.btnlimpiar.Location = new System.Drawing.Point(803, 97);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpiar.selected = false;
+            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
+            this.btnlimpiar.TabIndex = 76;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // FrmEmpresas
             // 
@@ -359,5 +404,6 @@
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbuscar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

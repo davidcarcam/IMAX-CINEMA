@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label lblInformacion1;
-            System.Windows.Forms.Label label4;
             System.Windows.Forms.Label lblInstrucciones3;
             System.Windows.Forms.Label lblInstruccion2;
             System.Windows.Forms.Label label1;
@@ -45,12 +44,10 @@
             this.txtRespuesta2 = new System.Windows.Forms.TextBox();
             this.txtRespuesta1 = new System.Windows.Forms.TextBox();
             this.separartorRecuperar_Contrasena = new Bunifu.Framework.UI.BunifuSeparator();
-            this.txtNuevo_Correo = new System.Windows.Forms.TextBox();
             this.txtNueva_Contrasena = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnRecuperar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             lblInformacion1 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
             lblInstrucciones3 = new System.Windows.Forms.Label();
             lblInstruccion2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -67,16 +64,6 @@
             lblInformacion1.Size = new System.Drawing.Size(414, 12);
             lblInformacion1.TabIndex = 0;
             lblInformacion1.Text = "Seleccion las preguntas y repondelas para recuperar la contrasena:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(88, 345);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(91, 12);
-            label4.TabIndex = 0;
-            label4.Text = "Nuevo Correo:";
             // 
             // lblInstrucciones3
             // 
@@ -104,7 +91,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(88, 379);
+            label1.Location = new System.Drawing.Point(88, 358);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(117, 12);
             label1.TabIndex = 0;
@@ -153,6 +140,7 @@
             // 
             // cmbPregunta3
             // 
+            this.cmbPregunta3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta3.FormattingEnabled = true;
             this.cmbPregunta3.Location = new System.Drawing.Point(12, 179);
             this.cmbPregunta3.Name = "cmbPregunta3";
@@ -161,6 +149,7 @@
             // 
             // cmbPregunta1
             // 
+            this.cmbPregunta1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta1.FormattingEnabled = true;
             this.cmbPregunta1.Location = new System.Drawing.Point(12, 101);
             this.cmbPregunta1.Name = "cmbPregunta1";
@@ -169,6 +158,7 @@
             // 
             // cmbPregunta2
             // 
+            this.cmbPregunta2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta2.FormattingEnabled = true;
             this.cmbPregunta2.Location = new System.Drawing.Point(12, 140);
             this.cmbPregunta2.Name = "cmbPregunta2";
@@ -213,31 +203,14 @@
             this.separartorRecuperar_Contrasena.Transparency = 255;
             this.separartorRecuperar_Contrasena.Vertical = false;
             // 
-            // txtNuevo_Correo
-            // 
-            this.txtNuevo_Correo.Location = new System.Drawing.Point(237, 341);
-            this.txtNuevo_Correo.MaxLength = 125;
-            this.txtNuevo_Correo.Name = "txtNuevo_Correo";
-            this.txtNuevo_Correo.ReadOnly = true;
-            this.txtNuevo_Correo.Size = new System.Drawing.Size(594, 20);
-            this.txtNuevo_Correo.TabIndex = 0;
-            // 
             // txtNueva_Contrasena
             // 
-            this.txtNueva_Contrasena.Location = new System.Drawing.Point(237, 375);
+            this.txtNueva_Contrasena.Location = new System.Drawing.Point(237, 354);
             this.txtNueva_Contrasena.MaxLength = 125;
             this.txtNueva_Contrasena.Name = "txtNueva_Contrasena";
             this.txtNueva_Contrasena.ReadOnly = true;
             this.txtNueva_Contrasena.Size = new System.Drawing.Size(594, 20);
             this.txtNueva_Contrasena.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(324, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(545, 21);
-            this.comboBox1.TabIndex = 1;
             // 
             // btnRecuperar
             // 
@@ -275,21 +248,27 @@
             this.btnRecuperar.Textcolor = System.Drawing.Color.White;
             this.btnRecuperar.TextFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(312, 26);
+            this.textBox1.MaxLength = 100;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(230, 20);
+            this.textBox1.TabIndex = 29;
+            // 
             // FrmRecuperar_Preguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 430);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnRecuperar);
             this.Controls.Add(this.separartorRecuperar_Contrasena);
             this.Controls.Add(this.txtNueva_Contrasena);
             this.Controls.Add(label1);
-            this.Controls.Add(this.txtNuevo_Correo);
-            this.Controls.Add(label4);
             this.Controls.Add(lblInstrucciones3);
             this.Controls.Add(lblInstruccion2);
             this.Controls.Add(this.cmbPregunta3);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cmbPregunta1);
             this.Controls.Add(this.cmbPregunta2);
             this.Controls.Add(this.txtRespuesta3);
@@ -301,6 +280,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRecuperar_Preguntas";
             this.Text = "FrmRecuperar_Preguntas";
+            this.Load += new System.EventHandler(this.FrmRecuperar_Preguntas_Load);
             this.toolStripRecuperar_Preguntas.ResumeLayout(false);
             this.toolStripRecuperar_Preguntas.PerformLayout();
             this.ResumeLayout(false);
@@ -321,8 +301,7 @@
         private System.Windows.Forms.TextBox txtRespuesta1;
         private Bunifu.Framework.UI.BunifuFlatButton btnRecuperar;
         private Bunifu.Framework.UI.BunifuSeparator separartorRecuperar_Contrasena;
-        private System.Windows.Forms.TextBox txtNuevo_Correo;
         private System.Windows.Forms.TextBox txtNueva_Contrasena;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

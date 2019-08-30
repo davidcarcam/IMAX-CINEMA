@@ -43,7 +43,7 @@ namespace EXPO60.Vista
         }
         public void Limpiar_Datos()
         {
-
+            txtNumero_Asiento.Clear();
         }
         public void Eliminar_Asiento()
         {
@@ -189,6 +189,16 @@ namespace EXPO60.Vista
             {
                 Mostrar_Asientos();
             }
+        }
+
+        private void txtNumero_Asiento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar_Datos();
         }
     }
 }

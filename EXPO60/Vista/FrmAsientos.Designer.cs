@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsientos));
             this.grpAsientos = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolbtnCerrar_Asientos = new System.Windows.Forms.ToolStripButton();
             this.cmbEstado_Asiento = new System.Windows.Forms.ComboBox();
@@ -46,8 +48,7 @@
             this.btnMostrar_Asientos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Asiento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.grpAsientos.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientos)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             // grpAsientos
             // 
+            this.grpAsientos.Controls.Add(this.btnlimpiar);
             this.grpAsientos.Controls.Add(this.label8);
             this.grpAsientos.Controls.Add(this.txtbuscar);
             this.grpAsientos.Controls.Add(this.toolStrip1);
@@ -79,6 +81,28 @@
             this.grpAsientos.TabStop = false;
             this.grpAsientos.Text = "Registro de Asientos";
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(741, 41);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 20);
+            this.label8.TabIndex = 71;
+            this.label8.Text = "Buscar";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbuscar.Location = new System.Drawing.Point(824, 46);
+            this.txtbuscar.MaxLength = 50;
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
+            this.txtbuscar.TabIndex = 70;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -101,27 +125,30 @@
             // 
             // cmbEstado_Asiento
             // 
+            this.cmbEstado_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbEstado_Asiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado_Asiento.FormattingEnabled = true;
-            this.cmbEstado_Asiento.Location = new System.Drawing.Point(813, 96);
+            this.cmbEstado_Asiento.Location = new System.Drawing.Point(572, 98);
             this.cmbEstado_Asiento.Name = "cmbEstado_Asiento";
             this.cmbEstado_Asiento.Size = new System.Drawing.Size(200, 21);
             this.cmbEstado_Asiento.TabIndex = 3;
             // 
             // cmbSala
             // 
+            this.cmbSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSala.FormattingEnabled = true;
-            this.cmbSala.Location = new System.Drawing.Point(379, 93);
+            this.cmbSala.Location = new System.Drawing.Point(435, 44);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(200, 21);
             this.cmbSala.TabIndex = 2;
             // 
             // lblEstado_Asiento
             // 
+            this.lblEstado_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEstado_Asiento.AutoSize = true;
             this.lblEstado_Asiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Asiento.Location = new System.Drawing.Point(598, 97);
+            this.lblEstado_Asiento.Location = new System.Drawing.Point(351, 96);
             this.lblEstado_Asiento.Name = "lblEstado_Asiento";
             this.lblEstado_Asiento.Size = new System.Drawing.Size(194, 20);
             this.lblEstado_Asiento.TabIndex = 0;
@@ -129,9 +156,10 @@
             // 
             // lblSala
             // 
+            this.lblSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSala.AutoSize = true;
             this.lblSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSala.Location = new System.Drawing.Point(317, 94);
+            this.lblSala.Location = new System.Drawing.Point(351, 46);
             this.lblSala.Name = "lblSala";
             this.lblSala.Size = new System.Drawing.Size(45, 20);
             this.lblSala.TabIndex = 0;
@@ -139,6 +167,7 @@
             // 
             // txtID_Asiento
             // 
+            this.txtID_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID_Asiento.Location = new System.Drawing.Point(96, 61);
             this.txtID_Asiento.Name = "txtID_Asiento";
             this.txtID_Asiento.Size = new System.Drawing.Size(89, 20);
@@ -147,16 +176,19 @@
             // 
             // txtNumero_Asiento
             // 
+            this.txtNumero_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNumero_Asiento.Location = new System.Drawing.Point(96, 96);
             this.txtNumero_Asiento.MaxLength = 7;
             this.txtNumero_Asiento.Name = "txtNumero_Asiento";
             this.txtNumero_Asiento.Size = new System.Drawing.Size(200, 20);
             this.txtNumero_Asiento.TabIndex = 1;
+            this.txtNumero_Asiento.TextChanged += new System.EventHandler(this.txtNumero_Asiento_TextChanged);
             this.txtNumero_Asiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_Asiento_KeyPress);
             this.txtNumero_Asiento.Validated += new System.EventHandler(this.TxtNumero_Asiento_Validated);
             // 
             // lblAsiento
             // 
+            this.lblAsiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAsiento.AutoSize = true;
             this.lblAsiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsiento.Location = new System.Drawing.Point(23, 94);
@@ -171,7 +203,7 @@
             this.dgvAsientos.AllowUserToDeleteRows = false;
             this.dgvAsientos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAsientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsientos.Location = new System.Drawing.Point(27, 249);
+            this.dgvAsientos.Location = new System.Drawing.Point(12, 215);
             this.dgvAsientos.Name = "dgvAsientos";
             this.dgvAsientos.Size = new System.Drawing.Size(986, 265);
             this.dgvAsientos.TabIndex = 0;
@@ -199,7 +231,7 @@
             this.btnEliminar_Asiento.IconVisible = true;
             this.btnEliminar_Asiento.IconZoom = 80D;
             this.btnEliminar_Asiento.IsTab = false;
-            this.btnEliminar_Asiento.Location = new System.Drawing.Point(781, 161);
+            this.btnEliminar_Asiento.Location = new System.Drawing.Point(757, 152);
             this.btnEliminar_Asiento.Name = "btnEliminar_Asiento";
             this.btnEliminar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnEliminar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
@@ -235,7 +267,7 @@
             this.btnActualizar_Asiento.IconVisible = true;
             this.btnActualizar_Asiento.IconZoom = 80D;
             this.btnActualizar_Asiento.IsTab = false;
-            this.btnActualizar_Asiento.Location = new System.Drawing.Point(521, 161);
+            this.btnActualizar_Asiento.Location = new System.Drawing.Point(506, 152);
             this.btnActualizar_Asiento.Name = "btnActualizar_Asiento";
             this.btnActualizar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnActualizar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
@@ -271,7 +303,7 @@
             this.btnMostrar_Asientos.IconVisible = true;
             this.btnMostrar_Asientos.IconZoom = 80D;
             this.btnMostrar_Asientos.IsTab = false;
-            this.btnMostrar_Asientos.Location = new System.Drawing.Point(274, 161);
+            this.btnMostrar_Asientos.Location = new System.Drawing.Point(259, 152);
             this.btnMostrar_Asientos.Name = "btnMostrar_Asientos";
             this.btnMostrar_Asientos.Normalcolor = System.Drawing.Color.Maroon;
             this.btnMostrar_Asientos.OnHovercolor = System.Drawing.Color.Brown;
@@ -307,7 +339,7 @@
             this.btnAgregar_Asiento.IconVisible = true;
             this.btnAgregar_Asiento.IconZoom = 80D;
             this.btnAgregar_Asiento.IsTab = false;
-            this.btnAgregar_Asiento.Location = new System.Drawing.Point(27, 161);
+            this.btnAgregar_Asiento.Location = new System.Drawing.Point(12, 152);
             this.btnAgregar_Asiento.Name = "btnAgregar_Asiento";
             this.btnAgregar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnAgregar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
@@ -325,25 +357,41 @@
             // 
             this.epError1.ContainerControl = this;
             // 
-            // label8
+            // btnlimpiar
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(703, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 20);
-            this.label8.TabIndex = 71;
-            this.label8.Text = "Buscar";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(768, 46);
-            this.txtbuscar.MaxLength = 50;
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 70;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpiar.BorderRadius = 0;
+            this.btnlimpiar.ButtonText = "Limpiar";
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
+            this.btnlimpiar.Iconimage_right = null;
+            this.btnlimpiar.Iconimage_right_Selected = null;
+            this.btnlimpiar.Iconimage_Selected = null;
+            this.btnlimpiar.IconMarginLeft = 0;
+            this.btnlimpiar.IconMarginRight = 0;
+            this.btnlimpiar.IconRightVisible = true;
+            this.btnlimpiar.IconRightZoom = 0D;
+            this.btnlimpiar.IconVisible = true;
+            this.btnlimpiar.IconZoom = 80D;
+            this.btnlimpiar.IsTab = false;
+            this.btnlimpiar.Location = new System.Drawing.Point(824, 79);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpiar.selected = false;
+            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
+            this.btnlimpiar.TabIndex = 72;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // FrmAsientos
             // 
@@ -385,5 +433,6 @@
         private System.Windows.Forms.ToolStripButton toolbtnCerrar_Asientos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbuscar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

@@ -18,7 +18,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO personajes (id_personaje, personaje, id_pelicula) VALUES ('{0}', '{1}', '{2}')", add.nombre, add.actor, add.pelicula), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO personajes (personaje ,id_actor , id_pelicula ) VALUES ('{0}', '{1}', '{2}')",add.nombre, add.actor, add.pelicula), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -32,7 +32,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error critico de conexion " + e, "Fallo de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error critico de conexion " + e.Message, "Fallo de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }
@@ -63,7 +63,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE personajes SET PERSONAJE = '{0}', id_pelicula = '{1}',id_personaje = '{2}' WHERE id_personaje = '{3}'", upd.nombre, upd.pelicula, upd.actor, upd.idpersonaje), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE personajes SET personaje = '{0}', id_actor = '{1}',id_pelicula = '{2}' WHERE id_personaje = '{3}'", upd.nombre, upd.actor, upd.pelicula,upd.idpersonaje), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -86,7 +86,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM PERSONAJES WHERE ID_PERSONAJES = '{0}'", id), Conexion.ObtenerConexion());
+                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM personajes WHERE id_personaje = '{0}'", id), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
                 if (retorno == true)
                 {

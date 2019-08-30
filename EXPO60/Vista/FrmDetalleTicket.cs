@@ -61,10 +61,17 @@ namespace EXPO60.Vista
 
         private void FrmDetalleTicket_Load(object sender, EventArgs e)
         {
-            Mostrarcmb();
-            this.dgvtickets.Columns[0].Visible = false;
-            btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;
+            try
+            {
+                Mostrarcmb();
+                this.dgvtickets.Columns[0].Visible = false;
+                btnactualizar.Enabled = false;
+                btneliminar.Enabled = false;
+            }
+            catch (Exception)
+            {
+                
+            }
         }
         public void agregarDetalleTickt()
         {
@@ -145,17 +152,14 @@ namespace EXPO60.Vista
         }
 
         public void mostrarET()
-        {
+        {            
+            cmbAsiento.DataSource = FuncionesDetalleTicket.asiento();
+            cmbAsiento.DisplayMember = "asiento";
+            cmbAsiento.ValueMember = "id_asiento";
 
-            cmbfuncion.DataSource = FuncionesDetalleTicket.ActualizarTicket();
-            cmbfuncion.DisplayMember = "estado_pel";
-            cmbfuncion.ValueMember = "id_estado_pelicula";
-
-
-            cmbAsiento.DataSource = Funciones_peliculas.ObtenerDimensiones();
-            cmbAsiento.DisplayMember = "formato";
-            cmbAsiento.ValueMember = "id_formatos";
-
+            cmbfuncion.DataSource = FuncionesDetalleTicket.funcion();
+            cmbfuncion.DataSource = "funciones";
+            cmbfuncion.DataSource = "id_funcion";
         }
         private void idDetalletic_TextChanged(object sender, EventArgs e)
         {
@@ -173,8 +177,8 @@ namespace EXPO60.Vista
         }
         public void modificarRegistro()
         {
-            actualizar.funcion = cmbfuncion.Text;
-            actualizar.asiento = cmbAsiento.Text;
+            actualizar.funcion = Convert.ToInt16(cmbfuncion.SelectedValue);
+            actualizar.asiento = Convert.ToInt16(cmbAsiento.SelectedValue);
             FuncionesDetalleTicket.ActualizarTicket(actualizar);
         }
         public void mostrarEmpresas()
@@ -198,6 +202,11 @@ namespace EXPO60.Vista
                 funcionesEmpresa.eliminarEmpresa(Convert.ToInt32(idDetalletic.Text));
             }
 
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            vaciarampos();
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtCifrado = new System.Windows.Forms.TextBox();
-            this.idPrimerUsu = new System.Windows.Forms.TextBox();
             this.cmbTip = new System.Windows.Forms.ComboBox();
             this.cmbEst = new System.Windows.Forms.ComboBox();
             this.txtCla = new System.Windows.Forms.TextBox();
@@ -75,16 +74,6 @@
             this.txtCifrado.TabIndex = 23;
             this.txtCifrado.Visible = false;
             // 
-            // idPrimerUsu
-            // 
-            this.idPrimerUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.idPrimerUsu.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.idPrimerUsu.Location = new System.Drawing.Point(452, 73);
-            this.idPrimerUsu.Name = "idPrimerUsu";
-            this.idPrimerUsu.Size = new System.Drawing.Size(39, 20);
-            this.idPrimerUsu.TabIndex = 22;
-            this.idPrimerUsu.Visible = false;
-            // 
             // cmbTip
             // 
             this.cmbTip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -111,6 +100,7 @@
             this.txtCla.Name = "txtCla";
             this.txtCla.Size = new System.Drawing.Size(250, 20);
             this.txtCla.TabIndex = 10;
+            this.txtCla.TextChanged += new System.EventHandler(this.txtCla_TextChanged_1);
             // 
             // label11
             // 
@@ -469,7 +459,6 @@
             this.Controls.Add(this.toolStripPrimer_Usuario);
             this.Controls.Add(this.picPerfil_image);
             this.Controls.Add(this.txtCifrado);
-            this.Controls.Add(this.idPrimerUsu);
             this.Controls.Add(this.cmbTip);
             this.Controls.Add(this.cmbEst);
             this.Controls.Add(this.btnCargar_Foto);
@@ -515,7 +504,6 @@
 
         private System.Windows.Forms.PictureBox picPerfil_image;
         private System.Windows.Forms.TextBox txtCifrado;
-        private System.Windows.Forms.TextBox idPrimerUsu;
         private System.Windows.Forms.ComboBox cmbTip;
         private System.Windows.Forms.ComboBox cmbEst;
         private Bunifu.Framework.UI.BunifuFlatButton btnIngUsuario;

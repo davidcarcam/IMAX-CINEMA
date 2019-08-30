@@ -80,9 +80,9 @@ namespace EXPO60.Vista
             principal.Show();
             this.Hide();
         }
-        public static VerificarCorreo(string recuper)
+        public static bool VerificarCorreo(string recuper)
         {
-          
+            bool retorno = false;   
             List<constructorRecuperar> recu = new List<constructorRecuperar>();
             Random rd = new Random(DateTime.Now.Millisecond);
             int resetclave = rd.Next(100000, 999999);
@@ -102,25 +102,25 @@ namespace EXPO60.Vista
                     msg.Body = "tu contraseña es:" +rd ;
                     msg.BodyEncoding = System.Text.Encoding.UTF8;
                     msg.IsBodyHtml = true;
-                    msg.From = new System.Net.Mail.MailAddress("ayudaImax@gmail.com");
+                    msg.From = new System.Net.Mail.MailAddress("ayuda.imax@gmail.com");
 
                     System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
-                    cliente.Credentials = new System.Net.NetworkCredential("ayuda.imax@gmail.com", "contra");
+                    cliente.Credentials = new System.Net.NetworkCredential("ayuda.imax@gmail.com", "Ricaldone2019");
                     cliente.Port = 587;
                     cliente.EnableSsl = true;
                     cliente.Host = "smtp.gmail.com";//dominio
                     try
                     {
                         cliente.Send(msg);
+
                     }
                     catch (Exception)
                     {
-
-                        MessageBox.Show("Error");
+                        MessageBox.Show("Error");                       
                     }
-                    
+
                 }
-            
+                return retorno;       
             }
             catch (Exception)
             {

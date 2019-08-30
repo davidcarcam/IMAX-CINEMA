@@ -60,6 +60,7 @@ namespace EXPO60.Vista
         {
             txtid.Clear();
             txtprecio.Clear();
+            txtprecio.Clear();
 
         }
         public void ModificarProducto()
@@ -211,6 +212,11 @@ namespace EXPO60.Vista
             {
                 MostrarProducto();
             }
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

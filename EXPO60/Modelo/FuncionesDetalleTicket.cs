@@ -14,7 +14,7 @@ namespace EXPO60.Modelo
 {
     class FuncionesDetalleTicket
     {
-        public static int IngresarDetalle(FuncionesDetalleTicket add)
+        public static int IngresarDetalle(ConstructorDetalleTicket add)
         {
             int retorno = 0;
             try
@@ -36,15 +36,7 @@ namespace EXPO60.Modelo
                 MessageBox.Show("Error de conexion, si el problema persiste con sulte con su administrador", "Fallo en la conexion");
             }
             return retorno;
-        }
-
-     
-
-        internal static object asiento()
-        {
-            throw new NotImplementedException();
-        }
-
+        }  
         public static DataTable MostrarTicket()
         {
             DataTable data;
@@ -67,12 +59,6 @@ namespace EXPO60.Modelo
                 Conexion.ObtenerConexion().Close();
             }         
         }
-
-        internal static int IngresarDetalle(ConstructorDetalleTicket agregar)
-        {
-            throw new NotImplementedException();
-        }
-
         public static bool ActualizarTicket(ConstructorDetalleTicket upd)
         {
             bool retorno = false;
@@ -94,6 +80,40 @@ namespace EXPO60.Modelo
             {
                 MessageBox.Show("Error critico de conexion, si el problema persiste consulte con un administrador" +e, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
+            }
+        }
+        public static DataTable funcion()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT * FROM funciones";
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error critico", "Fallo de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return data = new DataTable();
+            }
+        }
+        public static DataTable asiento()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT * FROM asientos";
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error critico de conexion", "Fallo de conexion",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return data = new DataTable();
             }
         }
     }

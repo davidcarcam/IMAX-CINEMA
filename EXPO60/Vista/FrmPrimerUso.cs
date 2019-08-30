@@ -71,7 +71,7 @@ namespace EXPO60.Vista
                 agr.nombre = txtNom.Text;
                 agr.direccion = txtDir.Text;
                 agr.apellido = txtApe.Text;
-                agr.clave = txtCla.Text;
+                agr.clave = txtCifrado.Text;
                 agr.correo = txtCor.Text;
                 agr.dui = txtDui.Text;
              
@@ -86,7 +86,6 @@ namespace EXPO60.Vista
         {
 
         }
-
         private void btnIngUsuario_Click(object sender, EventArgs e)
         {
             AgregarUsu();
@@ -94,14 +93,12 @@ namespace EXPO60.Vista
             principal.Show();
             this.Hide();
         }
-
         private void txtCla_TextChanged(object sender, EventArgs e)
         {
             txtCla.UseSystemPasswordChar = true;
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtCla.Text.ToString());
             txtCifrado.Text = Hash(pass);
         }
-
         private void txtNom_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -121,7 +118,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtApe_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -141,7 +137,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtUsu_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetterOrDigit(e.KeyChar))
@@ -161,7 +156,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void FrmPrimerUso_Load(object sender, EventArgs e)
         {
             mostrarET();
@@ -174,20 +168,14 @@ namespace EXPO60.Vista
                 return Convert.ToBase64String(hash);
             }
         }
-
         private void txtCifrado_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro que desea salir del formulario del primer usuario y cerrar la aplicacion","Cerrar Aplicacion",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
         }
-
         private void BtnCargar_Foto_Click(object sender, EventArgs e)
         {
             try
@@ -204,22 +192,25 @@ namespace EXPO60.Vista
                 MessageBox.Show("Sucedio un problema durante el proceso, por favor contacte con el administrador", "Error" + a.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void BtnIngUsuario_Click_1(object sender, EventArgs e)
         {
 
         }
-
         private void ToolStripPrimer_Usuario_MouseDown(object sender, MouseEventArgs e)
         {
             SendMessage(this.Handle, 0x112, 0xf012, 0);
             w = this.Width;
             h = this.Height;
         }
-
         private void FrmPrimerUso_Resize(object sender, EventArgs e)
         {
             
+        }
+        private void txtCla_TextChanged_1(object sender, EventArgs e)
+        {
+            txtCla.UseSystemPasswordChar = true;
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtCla.Text.ToString());
+            txtCifrado.Text = Hash(pass);
         }
     }
 }

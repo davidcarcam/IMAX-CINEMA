@@ -61,10 +61,8 @@ namespace EXPO60.Vista
                 formulario.BringToFront();
             }
         }
-
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-
             if (MenuVertical.Width == 250)
             {
                 MenuVertical.Width = 70;
@@ -78,7 +76,6 @@ namespace EXPO60.Vista
                 picimgL.Visible = true;
             }
         }
-
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion","Salir de la aplicacion",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
@@ -100,8 +97,6 @@ namespace EXPO60.Vista
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            btnmaximizar.Visible = false;
-            btnnormal.Visible = true;
         }
         private void btnNormal_Click(object sender, EventArgs e)
         {
@@ -110,8 +105,6 @@ namespace EXPO60.Vista
             WindowState = FormWindowState.Normal;
             this.Size = new Size(sw, sh);
             this.Location = new Point(lx, ly);
-            btnmaximizar.Visible = true;
-            btnnormal.Visible = false;
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -215,6 +208,8 @@ namespace EXPO60.Vista
         {
             btnnormal.Visible = false;
             btnmaximizar.Visible = true;
+            this.Width = 1268;
+            this.Height = 572;
             SendMessage(this.Handle, 0x112, 0xf012, 0);
             w = this.Width;
             h = this.Height;
@@ -235,6 +230,22 @@ namespace EXPO60.Vista
         {
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            btnmaximizar.Visible = false;
+            btnnormal.Visible = true;
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            
+        }
+
+        private void btnnormal_Click_1(object sender, EventArgs e)
+        {
+            btnnormal.Visible = false;
+            btnmaximizar.Visible = true;
+            this.Width = 1268;
+            this.Height = 572;
+            this.CenterToScreen();
         }
 
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
