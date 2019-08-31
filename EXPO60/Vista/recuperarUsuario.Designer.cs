@@ -135,7 +135,6 @@
             this.txtNueva_Contrasena.Location = new System.Drawing.Point(235, 319);
             this.txtNueva_Contrasena.MaxLength = 125;
             this.txtNueva_Contrasena.Name = "txtNueva_Contrasena";
-            this.txtNueva_Contrasena.ReadOnly = true;
             this.txtNueva_Contrasena.Size = new System.Drawing.Size(594, 20);
             this.txtNueva_Contrasena.TabIndex = 0;
             // 

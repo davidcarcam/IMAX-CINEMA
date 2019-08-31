@@ -80,52 +80,48 @@ namespace EXPO60.Vista
             principal.Show();
             this.Hide();
         }
-        public static bool VerificarCorreo(string recuper)
+        void VerificarCorreo(string recuper)
         {
-            bool retorno = false;   
             List<constructorRecuperar> recu = new List<constructorRecuperar>();
+            constructorRecuperar leer = new constructorRecuperar();
             Random rd = new Random(DateTime.Now.Millisecond);
             int resetclave = rd.Next(100000, 999999);
             try
             {
-                string query = "SELECT * FROM usuario WHERE correo = '" + recu + "'";
+                string query = "SELECT * FROM usuario WHERE correo = '" + recuper + "'";
                 MySqlCommand cmd = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
-                MySqlDataReader _reader = cmd.ExecuteReader();
-                while (_reader.Read())
+               
+
+                System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+                msg.To.Add(recuper);
+                msg.Subject = "Imax codigo";
+                msg.SubjectEncoding = System.Text.Encoding.UTF8;
+
+                msg.Body = "tu contraseña es:" +resetclave ;
+                msg.BodyEncoding = System.Text.Encoding.UTF8;
+                msg.IsBodyHtml = true;
+                msg.From = new System.Net.Mail.MailAddress("ayuda.imax@gmail.com");
+
+                System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+                cliente.Credentials = new System.Net.NetworkCredential("ayuda.imax@gmail.com", "Ricaldone2019");
+                cliente.Port = 587;
+                cliente.EnableSsl = true;
+                cliente.Host = "smtp.gmail.com";//dominio
+                try
                 {
-                    constructorRecuperar leer = new constructorRecuperar();
-                    leer.CORREO_USU = _reader.GetString(0);
-                    System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
-                    msg.Subject = "Imax codigo";
-                    msg.SubjectEncoding = System.Text.Encoding.UTF8;
-
-                    msg.Body = "tu contraseña es:" +rd ;
-                    msg.BodyEncoding = System.Text.Encoding.UTF8;
-                    msg.IsBodyHtml = true;
-                    msg.From = new System.Net.Mail.MailAddress("ayuda.imax@gmail.com");
-
-                    System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
-                    cliente.Credentials = new System.Net.NetworkCredential("ayuda.imax@gmail.com", "Ricaldone2019");
-                    cliente.Port = 587;
-                    cliente.EnableSsl = true;
-                    cliente.Host = "smtp.gmail.com";//dominio
-                    try
-                    {
-                        cliente.Send(msg);
-
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Error");                       
-                    }
-
+                    cliente.Send(msg);
+                    MessageBox.Show("Mensaje Enviado con exito.");
                 }
-                return retorno;       
+                catch (Exception)
+                {
+                    MessageBox.Show("Error");                       
+                }
+
+                              
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error al momento de enviar el correo.","Error de conexión",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -133,7 +129,7 @@ namespace EXPO60.Vista
 
         private void BtnRecuperar_Click(object sender, EventArgs e)
         {
-           
+            VerificarCorreo(txtcorreo.Text);
         }
 
         private void BtntoolCerrar_Correo_Click(object sender, EventArgs e)
