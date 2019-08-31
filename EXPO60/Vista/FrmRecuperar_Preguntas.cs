@@ -45,7 +45,6 @@ namespace EXPO60.Vista
         }
         public void MostrarComboBox()
         {
-
             cmbPregunta1.DataSource = validarRecuperar.preguntas();
             cmbPregunta1.DisplayMember = "preguntas";
             cmbPregunta1.ValueMember = "id_preguntas";

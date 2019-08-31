@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdcreate3 = new MySqlCommand(String.Format("INSERT INTO asientos (id_fila, id_num, id_estado_asiento, id_sala) VALUES ('{0}','{1}','{2}','{3}')", add.fila, add.num, add.estado, add.sala), Conexion.ObtenerConexion());
+                MySqlCommand cmdcreate3 = new MySqlCommand(string.Format("INSERT INTO asientos (id_fila, id_num, id_estado_asiento, id_sala) VALUES ('{0}','{1}','{2}','{3}')", add.fila, add.num, add.estado, add.sala), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt16(cmdcreate3.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -31,7 +31,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception a)
             {
-                MessageBox.Show("ha ocurrido un fallo al ejecutar el comando, por favor contacte con el administrador", "Error Critico" + a, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ha ocurrido un fallo al ejecutar el comando, por favor contacte con el administrador" + a , "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }
@@ -40,7 +40,7 @@ namespace EXPO60.Modelo
             DataTable Asientos;
             try
             {
-                string query3 = "SELECT * FROM asientos";
+                string query3 = "SELECT * FROM numeracion";
                 MySqlCommand cmdread3 = new MySqlCommand(string.Format(query3), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter3 = new MySqlDataAdapter(cmdread3);
                 Asientos = new DataTable();

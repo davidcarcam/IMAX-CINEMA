@@ -56,7 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
@@ -64,7 +63,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnlimpiar);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.cmbestado);
@@ -104,7 +102,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(803, 59);
+            this.label9.Location = new System.Drawing.Point(804, 100);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 20);
             this.label9.TabIndex = 69;
@@ -113,7 +111,7 @@
             // txtbuscar
             // 
             this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuscar.Location = new System.Drawing.Point(863, 59);
+            this.txtbuscar.Location = new System.Drawing.Point(869, 100);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
@@ -125,7 +123,7 @@
             this.cmbestado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(632, 57);
+            this.cmbestado.Location = new System.Drawing.Point(662, 53);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(153, 21);
             this.cmbestado.TabIndex = 61;
@@ -135,7 +133,7 @@
             this.cmbempresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbempresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbempresa.FormattingEnabled = true;
-            this.cmbempresa.Location = new System.Drawing.Point(573, 103);
+            this.cmbempresa.Location = new System.Drawing.Point(614, 99);
             this.cmbempresa.Name = "cmbempresa";
             this.cmbempresa.Size = new System.Drawing.Size(153, 21);
             this.cmbempresa.TabIndex = 60;
@@ -163,7 +161,7 @@
             // txttelefono
             // 
             this.txttelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttelefono.Location = new System.Drawing.Point(571, 152);
+            this.txttelefono.Location = new System.Drawing.Point(612, 148);
             this.txttelefono.Mask = "0000-0000";
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(153, 20);
@@ -174,7 +172,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(490, 150);
+            this.label8.Location = new System.Drawing.Point(531, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 0;
@@ -183,7 +181,7 @@
             // txtdui
             // 
             this.txtdui.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtdui.Location = new System.Drawing.Point(281, 59);
+            this.txtdui.Location = new System.Drawing.Point(297, 59);
             this.txtdui.Mask = "00000000-0";
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(153, 20);
@@ -203,7 +201,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(490, 101);
+            this.label7.Location = new System.Drawing.Point(531, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 20);
             this.label7.TabIndex = 0;
@@ -214,7 +212,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(451, 55);
+            this.label6.Location = new System.Drawing.Point(492, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(164, 20);
             this.label6.TabIndex = 0;
@@ -230,6 +228,7 @@
             this.dgvproveedores.Name = "dgvproveedores";
             this.dgvproveedores.Size = new System.Drawing.Size(991, 244);
             this.dgvproveedores.TabIndex = 0;
+            this.dgvproveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellClick);
             this.dgvproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellContentClick);
             // 
             // btneliminar
@@ -381,7 +380,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(242, 55);
+            this.label5.Location = new System.Drawing.Point(258, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 20);
             this.label5.TabIndex = 0;
@@ -390,7 +389,7 @@
             // txtdireccion
             // 
             this.txtdireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtdireccion.Location = new System.Drawing.Point(318, 99);
+            this.txtdireccion.Location = new System.Drawing.Point(334, 99);
             this.txtdireccion.MaxLength = 200;
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
@@ -402,7 +401,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(242, 97);
+            this.label4.Location = new System.Drawing.Point(258, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 0;
@@ -468,42 +467,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // btnlimpiar
-            // 
-            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlimpiar.BorderRadius = 0;
-            this.btnlimpiar.ButtonText = "Limpiar";
-            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
-            this.btnlimpiar.Iconimage_right = null;
-            this.btnlimpiar.Iconimage_right_Selected = null;
-            this.btnlimpiar.Iconimage_Selected = null;
-            this.btnlimpiar.IconMarginLeft = 0;
-            this.btnlimpiar.IconMarginRight = 0;
-            this.btnlimpiar.IconRightVisible = true;
-            this.btnlimpiar.IconRightZoom = 0D;
-            this.btnlimpiar.IconVisible = true;
-            this.btnlimpiar.IconZoom = 80D;
-            this.btnlimpiar.IsTab = false;
-            this.btnlimpiar.Location = new System.Drawing.Point(807, 97);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnlimpiar.selected = false;
-            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
-            this.btnlimpiar.TabIndex = 71;
-            this.btnlimpiar.Text = "Limpiar";
-            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
-            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
-            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,6 +515,5 @@
         private System.Windows.Forms.ComboBox cmbempresa;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtbuscar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

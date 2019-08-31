@@ -63,6 +63,7 @@ namespace EXPO60.Vista
         {
             try
             {
+                mostrarEmpresas();
                 Mostrarcmb();
                 this.dgvtickets.Columns[0].Visible = false;
                 btnactualizar.Enabled = false;
@@ -90,10 +91,8 @@ namespace EXPO60.Vista
                 agregarDetalleTickt();
                 mostrarDetalleTicket();
                 vaciarampos();
-
             }
         }
-
         private void vaciarampos()
         {
             throw new NotImplementedException();
@@ -154,7 +153,7 @@ namespace EXPO60.Vista
         public void mostrarET()
         {            
             cmbAsiento.DataSource = FuncionesDetalleTicket.asiento();
-            cmbAsiento.DisplayMember = "asiento";
+            cmbAsiento.DisplayMember = "asientos";
             cmbAsiento.ValueMember = "id_asiento";
 
             cmbfuncion.DataSource = FuncionesDetalleTicket.funcion();
@@ -185,7 +184,6 @@ namespace EXPO60.Vista
         {
             dgvtickets.DataSource = FuncionesDetalleTicket.MostrarTicket();
         }
-
         private void btneliminar_Click_1(object sender, EventArgs e)
         {
             eliminarRegistro();
@@ -203,10 +201,19 @@ namespace EXPO60.Vista
             }
 
         }
-
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
+        }
+
+        private void cmbAsiento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbfuncion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

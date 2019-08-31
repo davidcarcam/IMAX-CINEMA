@@ -640,6 +640,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBotones";
             this.Text = "FrmBotones";
+            this.Load += new System.EventHandler(this.FrmBotones_Load_1);
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
             this.ResumeLayout(false);

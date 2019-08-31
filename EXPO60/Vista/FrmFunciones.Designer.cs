@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFunciones));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.mskHora = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -61,7 +60,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnlimpiar);
             this.groupBox2.Controls.Add(this.mskHora);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
@@ -93,50 +91,13 @@
             this.groupBox2.Text = "Registro de Funciones";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // btnlimpiar
-            // 
-            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlimpiar.BorderRadius = 0;
-            this.btnlimpiar.ButtonText = "Limpiar";
-            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
-            this.btnlimpiar.Iconimage_right = null;
-            this.btnlimpiar.Iconimage_right_Selected = null;
-            this.btnlimpiar.Iconimage_Selected = null;
-            this.btnlimpiar.IconMarginLeft = 0;
-            this.btnlimpiar.IconMarginRight = 0;
-            this.btnlimpiar.IconRightVisible = true;
-            this.btnlimpiar.IconRightZoom = 0D;
-            this.btnlimpiar.IconVisible = true;
-            this.btnlimpiar.IconZoom = 80D;
-            this.btnlimpiar.IsTab = false;
-            this.btnlimpiar.Location = new System.Drawing.Point(789, 129);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnlimpiar.selected = false;
-            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
-            this.btnlimpiar.TabIndex = 83;
-            this.btnlimpiar.Text = "Limpiar";
-            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
-            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
-            // 
             // mskHora
             // 
             this.mskHora.Location = new System.Drawing.Point(106, 91);
-            this.mskHora.Mask = "00:00:00";
+            this.mskHora.Mask = "00:00";
             this.mskHora.Name = "mskHora";
             this.mskHora.Size = new System.Drawing.Size(153, 20);
-            this.mskHora.TabIndex = 82;
-            this.mskHora.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskHora_MaskInputRejected);
+            this.mskHora.TabIndex = 2;
             // 
             // label2
             // 
@@ -154,7 +115,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(106, 129);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 80;
+            this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label11
@@ -173,13 +134,13 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 78;
+            this.txtbuscar.TabIndex = 7;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // mskDuracion
             // 
             this.mskDuracion.Location = new System.Drawing.Point(106, 44);
-            this.mskDuracion.Mask = "00:00:00 minutos";
+            this.mskDuracion.Mask = "000min";
             this.mskDuracion.Name = "mskDuracion";
             this.mskDuracion.Size = new System.Drawing.Size(153, 20);
             this.mskDuracion.TabIndex = 1;
@@ -211,7 +172,7 @@
             this.cmbClasificacion.Location = new System.Drawing.Point(556, 132);
             this.cmbClasificacion.Name = "cmbClasificacion";
             this.cmbClasificacion.Size = new System.Drawing.Size(153, 21);
-            this.cmbClasificacion.TabIndex = 5;
+            this.cmbClasificacion.TabIndex = 6;
             // 
             // cmbSala
             // 
@@ -220,7 +181,7 @@
             this.cmbSala.Location = new System.Drawing.Point(556, 90);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(153, 21);
-            this.cmbSala.TabIndex = 4;
+            this.cmbSala.TabIndex = 5;
             // 
             // cmbpelicula
             // 
@@ -229,7 +190,7 @@
             this.cmbpelicula.Location = new System.Drawing.Point(556, 44);
             this.cmbpelicula.Name = "cmbpelicula";
             this.cmbpelicula.Size = new System.Drawing.Size(153, 21);
-            this.cmbpelicula.TabIndex = 3;
+            this.cmbpelicula.TabIndex = 4;
             // 
             // dgvFuncion
             // 
@@ -241,6 +202,7 @@
             this.dgvFuncion.Name = "dgvFuncion";
             this.dgvFuncion.Size = new System.Drawing.Size(1011, 265);
             this.dgvFuncion.TabIndex = 0;
+            this.dgvFuncion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncion_CellClick);
             this.dgvFuncion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncion_CellContentClick);
             // 
             // btnEliminar
@@ -272,7 +234,7 @@
             this.btnEliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEliminar.selected = false;
             this.btnEliminar.Size = new System.Drawing.Size(220, 48);
-            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.White;
@@ -308,7 +270,7 @@
             this.btnActualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnActualizar.selected = false;
             this.btnActualizar.Size = new System.Drawing.Size(220, 48);
-            this.btnActualizar.TabIndex = 8;
+            this.btnActualizar.TabIndex = 11;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizar.Textcolor = System.Drawing.Color.White;
@@ -344,7 +306,7 @@
             this.btnMostar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMostar.selected = false;
             this.btnMostar.Size = new System.Drawing.Size(220, 48);
-            this.btnMostar.TabIndex = 7;
+            this.btnMostar.TabIndex = 10;
             this.btnMostar.Text = "Mostrar";
             this.btnMostar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostar.Textcolor = System.Drawing.Color.White;
@@ -380,7 +342,7 @@
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(220, 48);
-            this.btnagregar.TabIndex = 6;
+            this.btnagregar.TabIndex = 9;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;
@@ -500,6 +462,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MaskedTextBox mskHora;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

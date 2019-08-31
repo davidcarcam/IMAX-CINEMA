@@ -56,9 +56,7 @@ namespace EXPO60.Vista
             {
                 Funciones_peliculas.eliminarPelicula(Convert.ToInt32(idPelicula.Text));
             }
-
         }
-
         public void vaciarampos()
         {
             txttitulo.Clear();
@@ -80,7 +78,6 @@ namespace EXPO60.Vista
         {
                 this.Close();
         }
-
         private void txtaudio_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -100,7 +97,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txtdirector_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -120,7 +116,6 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void txttitulo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -139,13 +134,7 @@ namespace EXPO60.Vista
             {
                 e.Handled = true;
             }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        }    
         private void btnagregar_Click(object sender, EventArgs e)
         {
             if (txttitulo.Text == "" || txtaño.Text == "")
@@ -159,34 +148,22 @@ namespace EXPO60.Vista
                 vaciarampos();
             }
         }
-
         private void FrmPelicula_Load(object sender, EventArgs e)
         {
             mostrarPeliculas();
             mostrarET();
             this.dgvpeliculas.Columns[0].Visible = false;
+            this.dgvpeliculas.Columns[4].Visible = false;
+            this.dgvpeliculas.Columns[5].Visible = false;
+            this.dgvpeliculas.Columns[6].Visible = false;
+            this.dgvpeliculas.Columns[7].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }
-
         private void btnmostrar_Click(object sender, EventArgs e)
         {
             mostrarPeliculas();
         }
-
-        private void dgvpeliculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int posicion;
-            posicion = this.dgvpeliculas.CurrentRow.Index;
-            idPelicula.Text = this.dgvpeliculas[0, posicion].Value.ToString();
-            txttitulo.Text = this.dgvpeliculas[1, posicion].Value.ToString();
-            txtaño.Text = this.dgvpeliculas[2, posicion].Value.ToString();
-            txtdirector.Text = this.dgvpeliculas[3, posicion].Value.ToString();
-            btnactualizar.Enabled = true;
-            btneliminar.Enabled = true;
-            btnagregar.Enabled = false;
-        }
-
         private void btnactualizar_Click(object sender, EventArgs e)
         {
             modificarRegistro();
@@ -216,7 +193,6 @@ namespace EXPO60.Vista
             cmbIdioma.DisplayMember = "idioma";
             cmbIdioma.ValueMember = "id_idioma";
         }
-
         private void btneliminar_Click(object sender, EventArgs e)
         {
             eliminarRegistro();
@@ -226,17 +202,6 @@ namespace EXPO60.Vista
             btnagregar.Enabled = true;
             btneliminar.Enabled = false;
         }
-
-        private void CmbGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbIdioma_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             if (txtbuscar.Text != "")
@@ -263,15 +228,21 @@ namespace EXPO60.Vista
                 mostrarPeliculas();
             }
         }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
+        }
+        private void dgvpeliculas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvpeliculas.CurrentRow.Index;
+            idPelicula.Text = this.dgvpeliculas[0, posicion].Value.ToString();
+            txttitulo.Text = this.dgvpeliculas[2, posicion].Value.ToString();
+            txtaño.Text = this.dgvpeliculas[1, posicion].Value.ToString();
+            txtdirector.Text = this.dgvpeliculas[3, posicion].Value.ToString();
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
         }
     }
 }

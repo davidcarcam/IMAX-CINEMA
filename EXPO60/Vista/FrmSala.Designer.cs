@@ -48,7 +48,6 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.grpRegistro_Sala.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
@@ -57,7 +56,6 @@
             // 
             // grpRegistro_Sala
             // 
-            this.grpRegistro_Sala.Controls.Add(this.btnlimpiar);
             this.grpRegistro_Sala.Controls.Add(this.label1);
             this.grpRegistro_Sala.Controls.Add(this.txtbuscar);
             this.grpRegistro_Sala.Controls.Add(this.toolStrip1);
@@ -87,7 +85,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(762, 57);
+            this.label1.Location = new System.Drawing.Point(393, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 65;
@@ -96,7 +94,7 @@
             // txtbuscar
             // 
             this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuscar.Location = new System.Drawing.Point(827, 59);
+            this.txtbuscar.Location = new System.Drawing.Point(458, 108);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
@@ -129,7 +127,7 @@
             this.cmbESTADO_SALA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbESTADO_SALA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbESTADO_SALA.FormattingEnabled = true;
-            this.cmbESTADO_SALA.Location = new System.Drawing.Point(471, 59);
+            this.cmbESTADO_SALA.Location = new System.Drawing.Point(489, 57);
             this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
             this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
             this.cmbESTADO_SALA.TabIndex = 3;
@@ -140,7 +138,7 @@
             this.lblEstado_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEstado_Sala.AutoSize = true;
             this.lblEstado_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Sala.Location = new System.Drawing.Point(330, 57);
+            this.lblEstado_Sala.Location = new System.Drawing.Point(348, 57);
             this.lblEstado_Sala.Name = "lblEstado_Sala";
             this.lblEstado_Sala.Size = new System.Drawing.Size(135, 20);
             this.lblEstado_Sala.TabIndex = 0;
@@ -149,7 +147,7 @@
             // txtCapacidad_Sala
             // 
             this.txtCapacidad_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCapacidad_Sala.Location = new System.Drawing.Point(173, 110);
+            this.txtCapacidad_Sala.Location = new System.Drawing.Point(841, 60);
             this.txtCapacidad_Sala.MaxLength = 4;
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
             this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
@@ -163,7 +161,7 @@
             this.lblCapacidad_Sala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCapacidad_Sala.AutoSize = true;
             this.lblCapacidad_Sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacidad_Sala.Location = new System.Drawing.Point(7, 108);
+            this.lblCapacidad_Sala.Location = new System.Drawing.Point(675, 58);
             this.lblCapacidad_Sala.Name = "lblCapacidad_Sala";
             this.lblCapacidad_Sala.Size = new System.Drawing.Size(160, 20);
             this.lblCapacidad_Sala.TabIndex = 0;
@@ -362,42 +360,6 @@
             // 
             this.epError2.ContainerControl = this;
             // 
-            // btnlimpiar
-            // 
-            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlimpiar.BorderRadius = 0;
-            this.btnlimpiar.ButtonText = "Limpiar";
-            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
-            this.btnlimpiar.Iconimage_right = null;
-            this.btnlimpiar.Iconimage_right_Selected = null;
-            this.btnlimpiar.Iconimage_Selected = null;
-            this.btnlimpiar.IconMarginLeft = 0;
-            this.btnlimpiar.IconMarginRight = 0;
-            this.btnlimpiar.IconRightVisible = true;
-            this.btnlimpiar.IconRightZoom = 0D;
-            this.btnlimpiar.IconVisible = true;
-            this.btnlimpiar.IconZoom = 80D;
-            this.btnlimpiar.IsTab = false;
-            this.btnlimpiar.Location = new System.Drawing.Point(498, 108);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnlimpiar.selected = false;
-            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
-            this.btnlimpiar.TabIndex = 71;
-            this.btnlimpiar.Text = "Limpiar";
-            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
-            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
-            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +400,5 @@
         private System.Windows.Forms.ComboBox cmbESTADO_SALA;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

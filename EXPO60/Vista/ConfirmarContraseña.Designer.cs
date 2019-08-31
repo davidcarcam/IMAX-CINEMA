@@ -152,7 +152,6 @@
             this.Name = "ConfirmarContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfirmarContraseña";
-            this.Load += new System.EventHandler(this.ConfirmarContraseña_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

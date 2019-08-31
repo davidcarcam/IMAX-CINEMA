@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using EXPO60.Controlador;
 using System.Windows.Forms;
 using EXPO60.Modelo;
-
+using System.Data;
 
 namespace EXPO60.Modelo
 {
@@ -153,6 +153,88 @@ namespace EXPO60.Modelo
             {
                 MessageBox.Show("Error de conexion");
                 return retorno;
+            }
+        }
+
+
+
+        public static string recover(string usuario)
+        {
+
+            Random rdn = new Random();
+            int codigo = rdn.Next(10000, 90000);
+            codigo.ToString();
+
+            string query = "SELECT * FROM usuario WHERE binary usuario=?user";
+            MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
+            cmdselect.Parameters.AddWithValue("user", usuario);
+            cmdselect.CommandType = CommandType.Text;
+
+
+            MySqlDataReader reader = cmdselect.ExecuteReader();
+
+
+            if (reader.Read() == true)
+            {
+                int ID = Convert.ToInt16(reader.GetInt16(0));
+                ContructorLogin2.id = ID;
+                string nombreusuario = reader.GetString(1) + " " + reader.GetString(2);
+                string correo = reader.GetString(4);
+
+
+                var Modelo = new Modelo.Conexion_Correo();
+                bool datos = false;
+
+                MySqlCommand cod = new MySqlCommand(string.Format("UPDATE usuario SET Codigo='{0}' WHERE usuario='{1}'", codigo, usuario), Conexion.ObtenerConexion());
+                datos = Convert.ToBoolean(cod.ExecuteNonQuery());
+                if (datos == true)
+                {
+
+                    Modelo.sendmail
+                        (
+                        subject: "Código para cambio de contraseña",
+                        body: "Hola," + nombreusuario + "\nSolicitación de cambios de contraseñas\n" +
+                        "tu codigo de seguridad es:\n" + codigo + "\nPor favor, reescriba el código dentro del campo solicitado ",
+                        recipientmail: new List<string> { correo }
+                        );
+                }
+                MessageBox.Show("Hola, se ha enviado un mensaje a tu correo electronico");
+                return "Hola, se ha enviado un mensaje a tu correo electronico";
+
+            }
+            else
+            {
+                return "No tienes una cuenta con estas credenciales";
+            }
+        }
+
+        public static bool validarcod(ContructorLogin2 cod)
+        {
+            bool retorno = false;
+            string query = "SELECT * FROM usuario WHERE binary Codigo=?cod";
+            try
+            {
+                MySqlCommand cmdeselct = new MySqlCommand(query, Conexion.ObtenerConexion());
+                //envio de parametros a la consulta
+                cmdeselct.Parameters.Add(new MySqlParameter("cod", cod.cod));
+                retorno = Convert.ToBoolean(cmdeselct.ExecuteScalar());
+                if (retorno == true)
+                {
+                    MessageBox.Show("Se procedera al cambio de contraseña", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El codigo no concuerda con lo enviado en el correo electronico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("error en la base de datos" + e, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                return retorno;
+
             }
         }
     }

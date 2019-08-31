@@ -127,14 +127,7 @@ namespace EXPO60.Vista
 
         private void dgvproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion;
-            posicion = this.dgvproveedores.CurrentRow.Index;
-            txtid.Text = this.dgvproveedores[0, posicion].Value.ToString();
-            txtnombre.Text = this.dgvproveedores[1, posicion].Value.ToString();
-            txtapellido.Text = this.dgvproveedores[2, posicion].Value.ToString();
-            btnactualizar.Enabled = true;
-            btneliminar.Enabled = true;
-            btnagregar.Enabled = false;
+            
         }
 
         private void FrmProveedores_Load(object sender, EventArgs e)
@@ -191,6 +184,22 @@ namespace EXPO60.Vista
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
+        }
+
+        private void dgvproveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvproveedores.CurrentRow.Index;
+            txtid.Text = this.dgvproveedores[0, posicion].Value.ToString();
+            txtnombre.Text = this.dgvproveedores[1, posicion].Value.ToString();
+            txtapellido.Text = this.dgvproveedores[2, posicion].Value.ToString();
+            txtcorreo.Text = this.dgvproveedores[3, posicion].Value.ToString();
+            txtdireccion.Text = this.dgvproveedores[4, posicion].Value.ToString();
+            txtdui.Text = this.dgvproveedores[5, posicion].Value.ToString();            
+            txttelefono.Text = this.dgvproveedores[6, posicion].Value.ToString();
+            btnactualizar.Enabled = true;
+            btneliminar.Enabled = true;
+            btnagregar.Enabled = false;
         }
     }
 }

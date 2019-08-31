@@ -153,17 +153,7 @@ namespace EXPO60.Vista
 
         private void dgvFuncion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion;
-            posicion = this.dgvFuncion.CurrentRow.Index;
-            textBox1.Text = dgvFuncion[0, posicion].Value.ToString();
-            mskDuracion.Text = dgvFuncion[1, posicion].Value.ToString();
-            mskHora.Text = dgvFuncion[2, posicion].Value.ToString();
-            cmbpelicula.Text = dgvFuncion[3, posicion].Value.ToString();
-            cmbSala.Text = dgvFuncion[4, posicion].Value.ToString();
-            cmbClasificacion.Text = dgvFuncion[6, posicion].Value.ToString();
-            btnEliminar.Enabled = true;
-            btnActualizar.Enabled = true;
-            btnagregar.Enabled = false;
+            
         }
 
         private void FrmFunciones_Load(object sender, EventArgs e)
@@ -206,15 +196,16 @@ namespace EXPO60.Vista
         {
             vaciarampos();
         }
-
-        private void btnlimpiar_Click(object sender, EventArgs e)
+        private void dgvFuncion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void mskHora_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
+            int posicion;
+            posicion = this.dgvFuncion.CurrentRow.Index;
+            textBox1.Text = dgvFuncion[0, posicion].Value.ToString();
+            mskDuracion.Text = dgvFuncion[1, posicion].Value.ToString();
+            mskHora.Text = dgvFuncion[2, posicion].Value.ToString();
+            btnEliminar.Enabled = true;
+            btnActualizar.Enabled = true;
+            btnagregar.Enabled = false;
         }
     }
 }
