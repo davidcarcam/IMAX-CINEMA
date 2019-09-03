@@ -54,7 +54,6 @@
     <Compile Include="Controlador\ConstructorDetalleTicket.cs" />
     <Compile Include="Controlador\constructorEmpresa.cs" />
     <Compile Include="Controlador\constructorRecuperar.cs" />
-    <Compile Include="Controlador\ConstructorRecuperarClave.cs" />
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
     <Compile Include="Controlador\Constructor_Actores.cs" />
     <Compile Include="Controlador\Constructor_Asientos.cs" />
@@ -227,23 +226,17 @@
     <Compile Include="Vista\preguntas.Designer.cs">
       <DependentUpon>preguntas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\RecuAdmin.cs">
+    <Compile Include="Vista\Recuperacion_Correo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\RecuAdmin.Designer.cs">
-      <DependentUpon>RecuAdmin.cs</DependentUpon>
+    <Compile Include="Vista\Recuperacion_Correo.Designer.cs">
+      <DependentUpon>Recuperacion_Correo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\recuperarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\recuperarUsuario.Designer.cs">
       <DependentUpon>recuperarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Tipo_recuperacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Tipo_recuperacion.Designer.cs">
-      <DependentUpon>Tipo_recuperacion.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -324,14 +317,11 @@
     <EmbeddedResource Include="Vista\preguntas.resx">
       <DependentUpon>preguntas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\RecuAdmin.resx">
-      <DependentUpon>RecuAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Recuperacion_Correo.resx">
+      <DependentUpon>Recuperacion_Correo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\recuperarUsuario.resx">
       <DependentUpon>recuperarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Tipo_recuperacion.resx">
-      <DependentUpon>Tipo_recuperacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -639,6 +639,7 @@
             this.Controls.Add(this.PanelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBotones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBotones";
             this.Load += new System.EventHandler(this.FrmBotones_Load_1);
             this.PanelContenedor.ResumeLayout(false);

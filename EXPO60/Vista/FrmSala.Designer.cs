@@ -98,7 +98,7 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 64;
+            this.txtbuscar.TabIndex = 4;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged_1);
             // 
             // toolStrip1
@@ -130,7 +130,7 @@
             this.cmbESTADO_SALA.Location = new System.Drawing.Point(489, 57);
             this.cmbESTADO_SALA.Name = "cmbESTADO_SALA";
             this.cmbESTADO_SALA.Size = new System.Drawing.Size(153, 21);
-            this.cmbESTADO_SALA.TabIndex = 3;
+            this.cmbESTADO_SALA.TabIndex = 2;
             this.cmbESTADO_SALA.SelectedIndexChanged += new System.EventHandler(this.cmbESTADO_SALA_SelectedIndexChanged);
             // 
             // lblEstado_Sala
@@ -151,7 +151,7 @@
             this.txtCapacidad_Sala.MaxLength = 4;
             this.txtCapacidad_Sala.Name = "txtCapacidad_Sala";
             this.txtCapacidad_Sala.Size = new System.Drawing.Size(153, 20);
-            this.txtCapacidad_Sala.TabIndex = 2;
+            this.txtCapacidad_Sala.TabIndex = 3;
             this.txtCapacidad_Sala.TextChanged += new System.EventHandler(this.txtCapacidad_Sala_TextChanged);
             this.txtCapacidad_Sala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCapacidad_Sala_KeyPress);
             this.txtCapacidad_Sala.Validated += new System.EventHandler(this.TxtCapacidad_Sala_Validated);
@@ -291,7 +291,7 @@
             this.btnMostrar_Salas.BackColor = System.Drawing.Color.Maroon;
             this.btnMostrar_Salas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMostrar_Salas.BorderRadius = 0;
-            this.btnMostrar_Salas.ButtonText = "Mostrar Salas";
+            this.btnMostrar_Salas.ButtonText = "Mostrar y Limpiar Campos";
             this.btnMostrar_Salas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostrar_Salas.DisabledColor = System.Drawing.Color.Gray;
             this.btnMostrar_Salas.Iconcolor = System.Drawing.Color.Transparent;
@@ -314,7 +314,7 @@
             this.btnMostrar_Salas.selected = false;
             this.btnMostrar_Salas.Size = new System.Drawing.Size(241, 48);
             this.btnMostrar_Salas.TabIndex = 5;
-            this.btnMostrar_Salas.Text = "Mostrar Salas";
+            this.btnMostrar_Salas.Text = "Mostrar y Limpiar Campos";
             this.btnMostrar_Salas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostrar_Salas.Textcolor = System.Drawing.Color.White;
             this.btnMostrar_Salas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -39,13 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvlocal = new System.Windows.Forms.DataGridView();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).BeginInit();
@@ -94,7 +94,7 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 68;
+            this.txtbuscar.TabIndex = 4;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // toolStrip1
@@ -170,16 +170,6 @@
             this.dgvlocal.Size = new System.Drawing.Size(1011, 265);
             this.dgvlocal.TabIndex = 51;
             this.dgvlocal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvactores_CellContentClick);
-            // 
-            // txtid
-            // 
-            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtid.Location = new System.Drawing.Point(206, 52);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(35, 20);
-            this.txtid.TabIndex = 0;
-            this.txtid.Visible = false;
-            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // btneliminar
             // 
@@ -260,7 +250,7 @@
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar y Limpiar Campos";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -283,7 +273,7 @@
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
             this.btnmostrar.TabIndex = 5;
-            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.Text = "Mostrar y Limpiar Campos";
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -347,6 +337,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre local";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtid
+            // 
+            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtid.Location = new System.Drawing.Point(206, 52);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(35, 20);
+            this.txtid.TabIndex = 0;
+            this.txtid.Visible = false;
+            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // Frmalimentos
             // 

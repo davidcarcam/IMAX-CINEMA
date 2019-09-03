@@ -133,7 +133,7 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 9;
+            this.txtbuscar.TabIndex = 5;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // toolStrip1
@@ -259,7 +259,7 @@
             this.btnEliminar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEliminar_Asiento.selected = false;
             this.btnEliminar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnEliminar_Asiento.TabIndex = 8;
+            this.btnEliminar_Asiento.TabIndex = 7;
             this.btnEliminar_Asiento.Text = "Eliminar Asiento";
             this.btnEliminar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -295,7 +295,7 @@
             this.btnActualizar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnActualizar_Asiento.selected = false;
             this.btnActualizar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnActualizar_Asiento.TabIndex = 7;
+            this.btnActualizar_Asiento.TabIndex = 6;
             this.btnActualizar_Asiento.Text = "Actualizar Asiento";
             this.btnActualizar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizar_Asiento.Textcolor = System.Drawing.Color.White;
@@ -309,7 +309,7 @@
             this.btnMostrar_Asientos.BackColor = System.Drawing.Color.Maroon;
             this.btnMostrar_Asientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMostrar_Asientos.BorderRadius = 0;
-            this.btnMostrar_Asientos.ButtonText = "Mostrar Asientos";
+            this.btnMostrar_Asientos.ButtonText = "Mostrar y Limpiar Campos";
             this.btnMostrar_Asientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostrar_Asientos.DisabledColor = System.Drawing.Color.Gray;
             this.btnMostrar_Asientos.Iconcolor = System.Drawing.Color.Transparent;
@@ -331,8 +331,8 @@
             this.btnMostrar_Asientos.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMostrar_Asientos.selected = false;
             this.btnMostrar_Asientos.Size = new System.Drawing.Size(241, 48);
-            this.btnMostrar_Asientos.TabIndex = 6;
-            this.btnMostrar_Asientos.Text = "Mostrar Asientos";
+            this.btnMostrar_Asientos.TabIndex = 5;
+            this.btnMostrar_Asientos.Text = "Mostrar y Limpiar Campos";
             this.btnMostrar_Asientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostrar_Asientos.Textcolor = System.Drawing.Color.White;
             this.btnMostrar_Asientos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -367,7 +367,7 @@
             this.btnAgregar_Asiento.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAgregar_Asiento.selected = false;
             this.btnAgregar_Asiento.Size = new System.Drawing.Size(241, 48);
-            this.btnAgregar_Asiento.TabIndex = 5;
+            this.btnAgregar_Asiento.TabIndex = 4;
             this.btnAgregar_Asiento.Text = "Agregar Asiento";
             this.btnAgregar_Asiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregar_Asiento.Textcolor = System.Drawing.Color.White;

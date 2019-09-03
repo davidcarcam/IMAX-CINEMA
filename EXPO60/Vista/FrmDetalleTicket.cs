@@ -153,7 +153,7 @@ namespace EXPO60.Vista
         public void mostrarET()
         {            
             cmbAsiento.DataSource = FuncionesDetalleTicket.asiento();
-            cmbAsiento.DisplayMember = "asientos";
+            cmbAsiento.DisplayMember = "asiento";
             cmbAsiento.ValueMember = "id_asiento";
 
             cmbfuncion.DataSource = FuncionesDetalleTicket.funcion();
@@ -204,16 +204,6 @@ namespace EXPO60.Vista
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
-        }
-
-        private void cmbAsiento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbfuncion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

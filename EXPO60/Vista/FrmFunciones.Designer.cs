@@ -140,7 +140,7 @@
             // mskDuracion
             // 
             this.mskDuracion.Location = new System.Drawing.Point(106, 44);
-            this.mskDuracion.Mask = "000min";
+            this.mskDuracion.Mask = "000 minutos";
             this.mskDuracion.Name = "mskDuracion";
             this.mskDuracion.Size = new System.Drawing.Size(153, 20);
             this.mskDuracion.TabIndex = 1;
@@ -234,7 +234,7 @@
             this.btnEliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEliminar.selected = false;
             this.btnEliminar.Size = new System.Drawing.Size(220, 48);
-            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.White;
@@ -270,7 +270,7 @@
             this.btnActualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnActualizar.selected = false;
             this.btnActualizar.Size = new System.Drawing.Size(220, 48);
-            this.btnActualizar.TabIndex = 11;
+            this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizar.Textcolor = System.Drawing.Color.White;
@@ -284,7 +284,7 @@
             this.btnMostar.BackColor = System.Drawing.Color.Maroon;
             this.btnMostar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMostar.BorderRadius = 0;
-            this.btnMostar.ButtonText = "Mostrar";
+            this.btnMostar.ButtonText = "Mostrar y Limpiar Campos";
             this.btnMostar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostar.DisabledColor = System.Drawing.Color.Gray;
             this.btnMostar.Iconcolor = System.Drawing.Color.Transparent;
@@ -306,8 +306,8 @@
             this.btnMostar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMostar.selected = false;
             this.btnMostar.Size = new System.Drawing.Size(220, 48);
-            this.btnMostar.TabIndex = 10;
-            this.btnMostar.Text = "Mostrar";
+            this.btnMostar.TabIndex = 7;
+            this.btnMostar.Text = "Mostrar y Limpiar Campos";
             this.btnMostar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostar.Textcolor = System.Drawing.Color.White;
             this.btnMostar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,7 +342,7 @@
             this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnagregar.selected = false;
             this.btnagregar.Size = new System.Drawing.Size(220, 48);
-            this.btnagregar.TabIndex = 9;
+            this.btnagregar.TabIndex = 6;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnagregar.Textcolor = System.Drawing.Color.White;

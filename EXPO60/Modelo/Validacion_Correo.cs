@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EXPO60.Modelo
@@ -43,7 +43,7 @@ namespace EXPO60.Modelo
                 mensaje.Body = body;
                 mensaje.Priority = MailPriority.Normal;
                 smtpClient.Send(mensaje);
-                MessageBox.Show("El correo fue enviado exitosamente","Mensaje enviado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             }
             catch (Exception ex)
             {

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActores));
             this.grpActores = new System.Windows.Forms.GroupBox();
-            this.btnlimpiar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label8 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -53,7 +52,6 @@
             // 
             // grpActores
             // 
-            this.grpActores.Controls.Add(this.btnlimpiar);
             this.grpActores.Controls.Add(this.label8);
             this.grpActores.Controls.Add(this.txtbuscar);
             this.grpActores.Controls.Add(this.toolStrip1);
@@ -75,48 +73,12 @@
             this.grpActores.Text = "Registro de actores";
             this.grpActores.Resize += new System.EventHandler(this.GrpActores_Resize);
             // 
-            // btnlimpiar
-            // 
-            this.btnlimpiar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnlimpiar.BackColor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlimpiar.BorderRadius = 0;
-            this.btnlimpiar.ButtonText = "Limpiar";
-            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpiar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnlimpiar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnlimpiar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpiar.Iconimage")));
-            this.btnlimpiar.Iconimage_right = null;
-            this.btnlimpiar.Iconimage_right_Selected = null;
-            this.btnlimpiar.Iconimage_Selected = null;
-            this.btnlimpiar.IconMarginLeft = 0;
-            this.btnlimpiar.IconMarginRight = 0;
-            this.btnlimpiar.IconRightVisible = true;
-            this.btnlimpiar.IconRightZoom = 0D;
-            this.btnlimpiar.IconVisible = true;
-            this.btnlimpiar.IconZoom = 80D;
-            this.btnlimpiar.IsTab = false;
-            this.btnlimpiar.Location = new System.Drawing.Point(1020, 105);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnlimpiar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnlimpiar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnlimpiar.selected = false;
-            this.btnlimpiar.Size = new System.Drawing.Size(155, 40);
-            this.btnlimpiar.TabIndex = 70;
-            this.btnlimpiar.Text = "Limpiar";
-            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnlimpiar.Textcolor = System.Drawing.Color.White;
-            this.btnlimpiar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(888, 52);
+            this.label8.Location = new System.Drawing.Point(766, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 20);
             this.label8.TabIndex = 69;
@@ -125,11 +87,11 @@
             // txtbuscar
             // 
             this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuscar.Location = new System.Drawing.Point(963, 54);
+            this.txtbuscar.Location = new System.Drawing.Point(841, 99);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(182, 20);
-            this.txtbuscar.TabIndex = 8;
+            this.txtbuscar.TabIndex = 2;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // toolStrip1
@@ -253,7 +215,7 @@
             this.btnMostrar_Actores.BackColor = System.Drawing.Color.Maroon;
             this.btnMostrar_Actores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMostrar_Actores.BorderRadius = 0;
-            this.btnMostrar_Actores.ButtonText = "Mostrar Actores";
+            this.btnMostrar_Actores.ButtonText = "Mostrar y Limpiar Campos";
             this.btnMostrar_Actores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostrar_Actores.DisabledColor = System.Drawing.Color.Gray;
             this.btnMostrar_Actores.Iconcolor = System.Drawing.Color.Transparent;
@@ -276,7 +238,7 @@
             this.btnMostrar_Actores.selected = false;
             this.btnMostrar_Actores.Size = new System.Drawing.Size(241, 48);
             this.btnMostrar_Actores.TabIndex = 3;
-            this.btnMostrar_Actores.Text = "Mostrar Actores";
+            this.btnMostrar_Actores.Text = "Mostrar y Limpiar Campos";
             this.btnMostrar_Actores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMostrar_Actores.Textcolor = System.Drawing.Color.White;
             this.btnMostrar_Actores.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -324,7 +286,7 @@
             this.txtactor.Location = new System.Drawing.Point(313, 99);
             this.txtactor.MaxLength = 100;
             this.txtactor.Name = "txtactor";
-            this.txtactor.Size = new System.Drawing.Size(404, 20);
+            this.txtactor.Size = new System.Drawing.Size(322, 20);
             this.txtactor.TabIndex = 1;
             this.txtactor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_Actor_KeyPress);
             this.txtactor.Validated += new System.EventHandler(this.TxtNombre_Actor_Validated);
@@ -382,6 +344,5 @@
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbuscar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnlimpiar;
     }
 }

@@ -61,7 +61,7 @@ namespace EXPO60.Vista
             }
             else
             {
-                ContructorLogin2 log = new ContructorLogin2(txtUsuario.Text, txtContra.Text);
+                ContructorLogin2 log = new ContructorLogin2();
                 ContructorLogin2.usuario = txtUsuario.Text;
                 ContructorLogin2.clave = txtCifrado.Text;
                 
@@ -100,10 +100,24 @@ namespace EXPO60.Vista
             if (ValidarLogin.ValidarExistencia() == true)
             {
                 linkPrimerUso.Visible = false;
+                txtUsuario.Enabled = true;
+                txtContra.Enabled = true;
+                btbAcceder.Enabled = true;
+                label1.Enabled = true;
+                label2.Enabled = true;
+                label3.Enabled = true;
+                linkLabel1.Enabled = true;
             }
             else
             {
-                linkPrimerUso.Visible = true;
+                linkPrimerUso.Visible = true;            
+                txtUsuario.Enabled = false;
+                txtContra.Enabled = false;
+                btbAcceder.Enabled = false;
+                label1.Enabled = false;
+                label2.Enabled = false;
+                label3.Enabled = false;
+                linkLabel1.Enabled = false;
             }
         }
         private void toolbtnCerra_Aplicacion_Click_1(object sender, EventArgs e)
@@ -125,6 +139,18 @@ namespace EXPO60.Vista
             txtContra.UseSystemPasswordChar = true;
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtContra.Text.ToString());
             txtCifrado.Text = Hash(pass);
+        }
+        private void picvisible_Click(object sender, EventArgs e)
+        {
+            picocultar.Visible = true;
+            txtContra.UseSystemPasswordChar = false;
+            picvisible.Visible = false;
+        }
+        private void picocultar_Click(object sender, EventArgs e)
+        {
+            picocultar.Visible = false;
+            txtContra.UseSystemPasswordChar = true;
+            picvisible.Visible = true;
         }
     }
 }

@@ -149,7 +149,7 @@
             this.cmbTip.Location = new System.Drawing.Point(686, 45);
             this.cmbTip.Name = "cmbTip";
             this.cmbTip.Size = new System.Drawing.Size(250, 21);
-            this.cmbTip.TabIndex = 58;
+            this.cmbTip.TabIndex = 7;
             // 
             // cmbEst
             // 
@@ -158,7 +158,7 @@
             this.cmbEst.Location = new System.Drawing.Point(686, 89);
             this.cmbEst.Name = "cmbEst";
             this.cmbEst.Size = new System.Drawing.Size(250, 21);
-            this.cmbEst.TabIndex = 59;
+            this.cmbEst.TabIndex = 8;
             // 
             // btnIngUsuario
             // 
@@ -190,7 +190,7 @@
             this.btnIngUsuario.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIngUsuario.selected = false;
             this.btnIngUsuario.Size = new System.Drawing.Size(257, 58);
-            this.btnIngUsuario.TabIndex = 64;
+            this.btnIngUsuario.TabIndex = 12;
             this.btnIngUsuario.Text = "Ingresar Usuario";
             this.btnIngUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIngUsuario.Textcolor = System.Drawing.Color.White;
@@ -204,7 +204,7 @@
             this.txtContra.MaxLength = 50;
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(250, 20);
-            this.txtContra.TabIndex = 62;
+            this.txtContra.TabIndex = 11;
             this.txtContra.TextChanged += new System.EventHandler(this.txtConfirmar_TextChanged);
             // 
             // txtCla
@@ -214,7 +214,7 @@
             this.txtCla.MaxLength = 50;
             this.txtCla.Name = "txtCla";
             this.txtCla.Size = new System.Drawing.Size(250, 20);
-            this.txtCla.TabIndex = 61;
+            this.txtCla.TabIndex = 10;
             this.txtCla.TextChanged += new System.EventHandler(this.txtCla_TextChanged_2);
             // 
             // label13
@@ -259,7 +259,7 @@
             this.txtUsu.MaxLength = 50;
             this.txtUsu.Name = "txtUsu";
             this.txtUsu.Size = new System.Drawing.Size(250, 20);
-            this.txtUsu.TabIndex = 60;
+            this.txtUsu.TabIndex = 9;
             // 
             // label10
             // 
@@ -315,7 +315,7 @@
             this.txtDir.Multiline = true;
             this.txtDir.Name = "txtDir";
             this.txtDir.Size = new System.Drawing.Size(390, 114);
-            this.txtDir.TabIndex = 57;
+            this.txtDir.TabIndex = 6;
             // 
             // label7
             // 
@@ -335,7 +335,7 @@
             this.txtCor.MaxLength = 50;
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(250, 20);
-            this.txtCor.TabIndex = 55;
+            this.txtCor.TabIndex = 4;
             // 
             // label6
             // 
@@ -355,7 +355,7 @@
             this.txtDui.Mask = "00000000-0";
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(250, 20);
-            this.txtDui.TabIndex = 54;
+            this.txtDui.TabIndex = 3;
             // 
             // label12
             // 
@@ -386,7 +386,7 @@
             this.txtApe.MaxLength = 40;
             this.txtApe.Name = "txtApe";
             this.txtApe.Size = new System.Drawing.Size(250, 20);
-            this.txtApe.TabIndex = 53;
+            this.txtApe.TabIndex = 2;
             // 
             // label2
             // 
@@ -406,7 +406,7 @@
             this.txtTel.Mask = "0000-0000";
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(250, 20);
-            this.txtTel.TabIndex = 56;
+            this.txtTel.TabIndex = 5;
             // 
             // txtNom
             // 
@@ -415,7 +415,7 @@
             this.txtNom.MaxLength = 40;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(250, 20);
-            this.txtNom.TabIndex = 52;
+            this.txtNom.TabIndex = 1;
             // 
             // label5
             // 

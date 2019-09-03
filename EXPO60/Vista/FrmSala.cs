@@ -77,7 +77,7 @@ namespace EXPO60.Vista
             Actualizar.IDSala = Convert.ToInt32(txtID_Sala.Text);
             Actualizar.NumeroSala = txtNumero_Sala.Text;
             Actualizar.CapacidadSala = txtCapacidad_Sala.Text;
-            Actualizar.EstadoSala = Convert.ToInt16(cmbESTADO_SALA.SelectedValue);
+            Actualizar.EstadoSala = Convert.ToInt16(cmbESTADO_SALA);
             Funciones_Salas.Actualizar_Sala(Actualizar);
         }
         private void BtnAgregar_Sala_Click(object sender, EventArgs e)

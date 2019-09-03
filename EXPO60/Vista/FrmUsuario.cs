@@ -300,12 +300,6 @@ namespace EXPO60.Vista
             this.dgvusuarios.Columns[9].Visible = false;
             this.dgvusuarios.Columns[10].Visible = false;
             this.dgvusuarios.Columns[11].Visible = false;
-            this.dgvusuarios.Columns[12].Visible = false;
-            this.dgvusuarios.Columns[13].Visible = false;
-            this.dgvusuarios.Columns[14].Visible = false;
-            this.dgvusuarios.Columns[15].Visible = false;
-            this.dgvusuarios.Columns[16].Visible = false;
-            this.dgvusuarios.Columns[17].Visible = false;
         }
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
