@@ -156,6 +156,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStripBotones_Metodos;
             this.Name = "FrmMetodos_Recuperar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMetodos_Recuperar";
             this.toolStripMetodos.ResumeLayout(false);
             this.toolStripMetodos.PerformLayout();

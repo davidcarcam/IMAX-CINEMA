@@ -395,7 +395,7 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 76;
+            this.txtbuscar.TabIndex = 6;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // cmbTipo_Pago
@@ -416,7 +416,7 @@
             this.cmbusuario.Location = new System.Drawing.Point(514, 94);
             this.cmbusuario.Name = "cmbusuario";
             this.cmbusuario.Size = new System.Drawing.Size(153, 21);
-            this.cmbusuario.TabIndex = 4;
+            this.cmbusuario.TabIndex = 5;
             // 
             // toolStrip1
             // 
@@ -551,7 +551,7 @@
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Mostrar";
+            this.bunifuFlatButton3.ButtonText = "Mostrar y Limpiar Campos";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
@@ -574,7 +574,7 @@
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(219, 48);
             this.bunifuFlatButton3.TabIndex = 7;
-            this.bunifuFlatButton3.Text = "Mostrar";
+            this.bunifuFlatButton3.Text = "Mostrar y Limpiar Campos";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

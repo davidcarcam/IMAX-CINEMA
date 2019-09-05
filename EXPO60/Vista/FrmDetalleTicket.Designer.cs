@@ -95,7 +95,7 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 8;
+            this.txtbuscar.TabIndex = 3;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // txtNum
@@ -182,7 +182,6 @@
             this.cmbfuncion.Name = "cmbfuncion";
             this.cmbfuncion.Size = new System.Drawing.Size(195, 21);
             this.cmbfuncion.TabIndex = 1;
-            this.cmbfuncion.SelectedIndexChanged += new System.EventHandler(this.cmbfuncion_SelectedIndexChanged);
             // 
             // cmbAsiento
             // 
@@ -194,7 +193,6 @@
             this.cmbAsiento.Name = "cmbAsiento";
             this.cmbAsiento.Size = new System.Drawing.Size(176, 21);
             this.cmbAsiento.TabIndex = 2;
-            this.cmbAsiento.SelectedIndexChanged += new System.EventHandler(this.cmbAsiento_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -317,7 +315,7 @@
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar y Limpiar Campos";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -340,7 +338,7 @@
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
             this.btnmostrar.TabIndex = 4;
-            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.Text = "Mostrar y Limpiar Campos";
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

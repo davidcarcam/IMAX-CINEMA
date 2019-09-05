@@ -104,7 +104,7 @@
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 82;
+            this.txtbuscar.TabIndex = 6;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // txtnombre
@@ -114,7 +114,7 @@
             this.txtnombre.MaxLength = 25;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(100, 20);
-            this.txtnombre.TabIndex = 61;
+            this.txtnombre.TabIndex = 1;
             // 
             // label3
             // 
@@ -155,7 +155,7 @@
             this.cmbtipo.Location = new System.Drawing.Point(601, 113);
             this.cmbtipo.Name = "cmbtipo";
             this.cmbtipo.Size = new System.Drawing.Size(153, 21);
-            this.cmbtipo.TabIndex = 4;
+            this.cmbtipo.TabIndex = 5;
             // 
             // cmbprov
             // 
@@ -171,7 +171,7 @@
             // 
             this.cmblocal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmblocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmblocal.Location = new System.Drawing.Point(277, 115);
+            this.cmblocal.Location = new System.Drawing.Point(286, 68);
             this.cmblocal.Name = "cmblocal";
             this.cmblocal.Size = new System.Drawing.Size(153, 21);
             this.cmblocal.TabIndex = 2;
@@ -268,7 +268,7 @@
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar y Limpiar Campos";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -291,7 +291,7 @@
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(213, 48);
             this.btnmostrar.TabIndex = 6;
-            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.Text = "Mostrar y Limpiar Campos";
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,11 +336,11 @@
             // txtprecio
             // 
             this.txtprecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtprecio.Location = new System.Drawing.Point(277, 63);
+            this.txtprecio.Location = new System.Drawing.Point(82, 113);
             this.txtprecio.Mask = "$000";
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(153, 20);
-            this.txtprecio.TabIndex = 1;
+            this.txtprecio.TabIndex = 4;
             // 
             // txtid
             // 
@@ -378,7 +378,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(200, 113);
+            this.label2.Location = new System.Drawing.Point(209, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 0;
@@ -389,7 +389,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(200, 65);
+            this.label1.Location = new System.Drawing.Point(5, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 0;

@@ -8,7 +8,6 @@ namespace EXPO60.Modelo
 {
     class Recovery
     {
-
         public string recovery(string solicitud)
         {
             return ValidarLogin.recover(solicitud);

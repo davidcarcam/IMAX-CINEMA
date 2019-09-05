@@ -220,10 +220,17 @@ namespace EXPO60.Vista
         }
         private void btnIngUsuario_Click_2(object sender, EventArgs e)
         {
-            AgregarUsu();
-            FrmLogin principal = new FrmLogin();
-            principal.Show();
-            this.Hide();
+            if (txtCla.Text != txtContra.Text)
+            {
+                MessageBox.Show("Las contraseñas no coinciden, por favor verifique que sean iguales e intentelo de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                AgregarUsu();
+                FrmLogin principal = new FrmLogin();
+                principal.Show();
+                this.Hide();
+            }
         }
         public string Hash(byte[] val)
         {

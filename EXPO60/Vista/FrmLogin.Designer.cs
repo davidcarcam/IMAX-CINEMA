@@ -32,6 +32,7 @@ namespace EXPO60.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkPrimerUso = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,8 +44,12 @@ namespace EXPO60.Vista
             this.btbAcceder = new System.Windows.Forms.Button();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.picvisible = new System.Windows.Forms.PictureBox();
+            this.picocultar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picvisible)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picocultar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -165,20 +170,44 @@ namespace EXPO60.Vista
             this.txtUsuario.Size = new System.Drawing.Size(286, 20);
             this.txtUsuario.TabIndex = 9;
             // 
+            // picvisible
+            // 
+            this.picvisible.Image = ((System.Drawing.Image)(resources.GetObject("picvisible.Image")));
+            this.picvisible.Location = new System.Drawing.Point(621, 164);
+            this.picvisible.Name = "picvisible";
+            this.picvisible.Size = new System.Drawing.Size(38, 20);
+            this.picvisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picvisible.TabIndex = 12;
+            this.picvisible.TabStop = false;
+            this.picvisible.Click += new System.EventHandler(this.picvisible_Click);
+            // 
+            // picocultar
+            // 
+            this.picocultar.Image = ((System.Drawing.Image)(resources.GetObject("picocultar.Image")));
+            this.picocultar.Location = new System.Drawing.Point(621, 164);
+            this.picocultar.Name = "picocultar";
+            this.picocultar.Size = new System.Drawing.Size(38, 20);
+            this.picocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picocultar.TabIndex = 13;
+            this.picocultar.TabStop = false;
+            this.picocultar.Click += new System.EventHandler(this.picocultar_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 298);
+            this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtCifrado);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btbAcceder);
-            this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.picvisible);
+            this.Controls.Add(this.picocultar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -187,6 +216,8 @@ namespace EXPO60.Vista
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picvisible)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picocultar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +236,7 @@ namespace EXPO60.Vista
         private Button btbAcceder;
         private TextBox txtContra;
         private TextBox txtUsuario;
+        private PictureBox picvisible;
+        private PictureBox picocultar;
     }
 }

@@ -101,7 +101,7 @@ namespace EXPO60.Vista
             this.txttelefono.Mask = "0000-0000";
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(153, 20);
-            this.txttelefono.TabIndex = 2;
+            this.txttelefono.TabIndex = 3;
             // 
             // label2
             // 
@@ -121,7 +121,7 @@ namespace EXPO60.Vista
             this.txtapellido.MaxLength = 8;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(153, 20);
-            this.txtapellido.TabIndex = 1;
+            this.txtapellido.TabIndex = 2;
             this.txtapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellido_KeyPress_1);
             // 
             // label4
@@ -153,7 +153,7 @@ namespace EXPO60.Vista
             this.txtdocumento.Mask = "00000000-0";
             this.txtdocumento.Name = "txtdocumento";
             this.txtdocumento.Size = new System.Drawing.Size(196, 20);
-            this.txtdocumento.TabIndex = 5;
+            this.txtdocumento.TabIndex = 4;
             // 
             // label6
             // 
@@ -172,7 +172,7 @@ namespace EXPO60.Vista
             this.txtcorreo.Location = new System.Drawing.Point(457, 76);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(196, 20);
-            this.txtcorreo.TabIndex = 53;
+            this.txtcorreo.TabIndex = 5;
             this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress_1);
             // 
             // label7
@@ -193,7 +193,7 @@ namespace EXPO60.Vista
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "Mostrar";
+            this.btnmostrar.ButtonText = "Mostrar y Limpiar Campos";
             this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -216,7 +216,7 @@ namespace EXPO60.Vista
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(241, 48);
             this.btnmostrar.TabIndex = 9;
-            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.Text = "Mostrar y Limpiar Campos";
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,7 +321,7 @@ namespace EXPO60.Vista
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(196, 71);
-            this.txtdireccion.TabIndex = 4;
+            this.txtdireccion.TabIndex = 6;
             this.txtdireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdireccion_KeyPress);
             // 
             // label8
@@ -364,7 +364,7 @@ namespace EXPO60.Vista
             this.txtusuario.MaxLength = 25;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(153, 20);
-            this.txtusuario.TabIndex = 6;
+            this.txtusuario.TabIndex = 9;
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // label11
@@ -385,7 +385,7 @@ namespace EXPO60.Vista
             this.txtclave.MaxLength = 20;
             this.txtclave.Name = "txtclave";
             this.txtclave.Size = new System.Drawing.Size(153, 20);
-            this.txtclave.TabIndex = 7;
+            this.txtclave.TabIndex = 10;
             this.txtclave.TextChanged += new System.EventHandler(this.txtclave_TextChanged);
             this.txtclave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtclave_KeyPress);
             // 
@@ -396,7 +396,7 @@ namespace EXPO60.Vista
             this.cmbTipoU.Location = new System.Drawing.Point(837, 78);
             this.cmbTipoU.Name = "cmbTipoU";
             this.cmbTipoU.Size = new System.Drawing.Size(153, 21);
-            this.cmbTipoU.TabIndex = 5;
+            this.cmbTipoU.TabIndex = 8;
             // 
             // cmbEstadoU
             // 
@@ -406,7 +406,7 @@ namespace EXPO60.Vista
             this.cmbEstadoU.Location = new System.Drawing.Point(836, 51);
             this.cmbEstadoU.Name = "cmbEstadoU";
             this.cmbEstadoU.Size = new System.Drawing.Size(153, 21);
-            this.cmbEstadoU.TabIndex = 8;
+            this.cmbEstadoU.TabIndex = 7;
             // 
             // toolStrip1
             // 

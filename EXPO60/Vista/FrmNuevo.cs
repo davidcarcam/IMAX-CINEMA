@@ -124,6 +124,7 @@ namespace EXPO60.Vista
             btnnormal.Visible = false;
             toolStripButton1.Visible = false;
             toolStripLabel1.Visible = false;
+            lblconectado.Text = ContructorLogin2.nombre;
         }
 
         private void bunifuFlatButton21_Click(object sender, EventArgs e)

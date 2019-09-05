@@ -61,7 +61,7 @@
             lblInformacion1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblInformacion1.Location = new System.Drawing.Point(281, 73);
             lblInformacion1.Name = "lblInformacion1";
-            lblInformacion1.Size = new System.Drawing.Size(414, 12);
+            lblInformacion1.Size = new System.Drawing.Size(377, 12);
             lblInformacion1.TabIndex = 0;
             lblInformacion1.Text = "Seleccion las preguntas y repondelas para recuperar la contrasena:";
             // 
@@ -71,7 +71,7 @@
             lblInstrucciones3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblInstrucciones3.Location = new System.Drawing.Point(117, 315);
             lblInstrucciones3.Name = "lblInstrucciones3";
-            lblInstrucciones3.Size = new System.Drawing.Size(718, 12);
+            lblInstrucciones3.Size = new System.Drawing.Size(660, 12);
             lblInstrucciones3.TabIndex = 0;
             lblInstrucciones3.Text = "Si no es asi. Probablemente los datos estan erroneos, los datos no existen o hay " +
     "un problema con el envio de datos. ";
@@ -82,7 +82,7 @@
             lblInstruccion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblInstruccion2.Location = new System.Drawing.Point(117, 293);
             lblInstruccion2.Name = "lblInstruccion2";
-            lblInstruccion2.Size = new System.Drawing.Size(698, 12);
+            lblInstruccion2.Size = new System.Drawing.Size(642, 12);
             lblInstruccion2.TabIndex = 0;
             lblInstruccion2.Text = "Si los datos fueron ingresados correctamente su nuevo correo y contrasena se most" +
     "raria en los cuadros de abajo:";
@@ -93,7 +93,7 @@
             label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.Location = new System.Drawing.Point(88, 358);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(117, 12);
+            label1.Size = new System.Drawing.Size(108, 12);
             label1.TabIndex = 0;
             label1.Text = "Nueva Contrasena:";
             // 
@@ -101,9 +101,9 @@
             // 
             lblUsuarios.AutoSize = true;
             lblUsuarios.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblUsuarios.Location = new System.Drawing.Point(167, 30);
+            lblUsuarios.Location = new System.Drawing.Point(282, 30);
             lblUsuarios.Name = "lblUsuarios";
-            lblUsuarios.Size = new System.Drawing.Size(139, 12);
+            lblUsuarios.Size = new System.Drawing.Size(129, 12);
             lblUsuarios.TabIndex = 0;
             lblUsuarios.Text = "Seleccione su usuario:";
             // 
@@ -208,9 +208,8 @@
             this.txtNueva_Contrasena.Location = new System.Drawing.Point(237, 354);
             this.txtNueva_Contrasena.MaxLength = 125;
             this.txtNueva_Contrasena.Name = "txtNueva_Contrasena";
-            this.txtNueva_Contrasena.ReadOnly = true;
             this.txtNueva_Contrasena.Size = new System.Drawing.Size(594, 20);
-            this.txtNueva_Contrasena.TabIndex = 0;
+            this.txtNueva_Contrasena.TabIndex = 9;
             // 
             // btnRecuperar
             // 
@@ -250,11 +249,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(312, 26);
+            this.textBox1.Location = new System.Drawing.Point(427, 26);
             this.textBox1.MaxLength = 100;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 29;
+            this.textBox1.TabIndex = 1;
             // 
             // FrmRecuperar_Preguntas
             // 
@@ -279,6 +278,7 @@
             this.Controls.Add(this.toolStripRecuperar_Preguntas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRecuperar_Preguntas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmRecuperar_Preguntas";
             this.Load += new System.EventHandler(this.FrmRecuperar_Preguntas_Load);
             this.toolStripRecuperar_Preguntas.ResumeLayout(false);

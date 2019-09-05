@@ -39,11 +39,16 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolbtnCerrar_Sesion = new System.Windows.Forms.ToolStripButton();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.lblusuario = new System.Windows.Forms.ToolStripButton();
+            this.lblconectado = new System.Windows.Forms.ToolStripButton();
             this.MenuVertical = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
             this.picimg = new System.Windows.Forms.PictureBox();
             this.picimgL = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
+            this.PanelContenedor.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picimgL)).BeginInit();
@@ -150,12 +155,44 @@
             // 
             // PanelContenedor
             // 
+            this.PanelContenedor.Controls.Add(this.toolStrip2);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(243, 25);
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1025, 547);
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblusuario,
+            this.lblconectado});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 522);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1025, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // lblusuario
+            // 
+            this.lblusuario.Image = ((System.Drawing.Image)(resources.GetObject("lblusuario.Image")));
+            this.lblusuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(128, 22);
+            this.lblusuario.Text = "Usuario Conectado";
+            // 
+            // lblconectado
+            // 
+            this.lblconectado.BackColor = System.Drawing.Color.White;
+            this.lblconectado.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.lblconectado.ForeColor = System.Drawing.Color.Lime;
+            this.lblconectado.Image = ((System.Drawing.Image)(resources.GetObject("lblconectado.Image")));
+            this.lblconectado.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblconectado.Name = "lblconectado";
+            this.lblconectado.Size = new System.Drawing.Size(23, 22);
+            this.lblconectado.Text = ".";
             // 
             // MenuVertical
             // 
@@ -252,6 +289,10 @@
             this.Load += new System.EventHandler(this.FrmNuevo_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.PanelContenedor.ResumeLayout(false);
+            this.PanelContenedor.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picimgL)).EndInit();
@@ -275,5 +316,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolbtnCerrar_Sesion;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton lblusuario;
+        private System.Windows.Forms.ToolStripButton lblconectado;
     }
 }

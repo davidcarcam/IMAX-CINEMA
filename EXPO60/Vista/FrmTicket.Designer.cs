@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTicket));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.cmbfecha = new System.Windows.Forms.MaskedTextBox();
@@ -43,7 +44,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -72,12 +72,48 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de factura local";
             // 
+            // btneliminar
+            // 
+            this.btneliminar.Activecolor = System.Drawing.Color.Maroon;
+            this.btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btneliminar.BackColor = System.Drawing.Color.Maroon;
+            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btneliminar.BorderRadius = 0;
+            this.btneliminar.ButtonText = "Eliminar";
+            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
+            this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btneliminar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btneliminar.Iconimage")));
+            this.btneliminar.Iconimage_right = null;
+            this.btneliminar.Iconimage_right_Selected = null;
+            this.btneliminar.Iconimage_Selected = null;
+            this.btneliminar.IconMarginLeft = 0;
+            this.btneliminar.IconMarginRight = 0;
+            this.btneliminar.IconRightVisible = true;
+            this.btneliminar.IconRightZoom = 0D;
+            this.btneliminar.IconVisible = true;
+            this.btneliminar.IconZoom = 90D;
+            this.btneliminar.IsTab = false;
+            this.btneliminar.Location = new System.Drawing.Point(774, 179);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btneliminar.selected = false;
+            this.btneliminar.Size = new System.Drawing.Size(241, 48);
+            this.btneliminar.TabIndex = 72;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btneliminar.Textcolor = System.Drawing.Color.White;
+            this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(774, 66);
+            this.label1.Location = new System.Drawing.Point(780, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 68;
@@ -86,11 +122,11 @@
             // txtbuscar
             // 
             this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuscar.Location = new System.Drawing.Point(839, 66);
+            this.txtbuscar.Location = new System.Drawing.Point(845, 87);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
-            this.txtbuscar.TabIndex = 67;
+            this.txtbuscar.TabIndex = 3;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // cmbfecha
@@ -187,7 +223,7 @@
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Mostrar";
+            this.bunifuFlatButton3.ButtonText = "Mostrar y Limpiar Campos";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
@@ -210,7 +246,7 @@
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(241, 48);
             this.bunifuFlatButton3.TabIndex = 4;
-            this.bunifuFlatButton3.Text = "Mostrar";
+            this.bunifuFlatButton3.Text = "Mostrar y Limpiar Campos";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -281,42 +317,6 @@
             this.label10.Size = new System.Drawing.Size(104, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Fecha Ticket:";
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.Activecolor = System.Drawing.Color.Maroon;
-            this.btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btneliminar.BackColor = System.Drawing.Color.Maroon;
-            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "Eliminar";
-            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
-            this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btneliminar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btneliminar.Iconimage")));
-            this.btneliminar.Iconimage_right = null;
-            this.btneliminar.Iconimage_right_Selected = null;
-            this.btneliminar.Iconimage_Selected = null;
-            this.btneliminar.IconMarginLeft = 0;
-            this.btneliminar.IconMarginRight = 0;
-            this.btneliminar.IconRightVisible = true;
-            this.btneliminar.IconRightZoom = 0D;
-            this.btneliminar.IconVisible = true;
-            this.btneliminar.IconZoom = 90D;
-            this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(774, 179);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btneliminar.selected = false;
-            this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 72;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btneliminar.Textcolor = System.Drawing.Color.White;
-            this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // FrmTicket
             // 

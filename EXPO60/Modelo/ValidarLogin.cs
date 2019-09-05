@@ -44,6 +44,7 @@ namespace EXPO60.Modelo
                         MySqlDataReader _reader = cmdselect.ExecuteReader();
                         while (_reader.Read())
                         {
+                            ContructorLogin2.id = _reader.GetInt16(0);
                             ContructorLogin2.nombre = _reader.GetString(1) + " " + _reader.GetString(2);
                             ContructorLogin2.nivel = _reader.GetInt16(11);
                             if (reset >= 1)
@@ -155,9 +156,7 @@ namespace EXPO60.Modelo
                 return retorno;
             }
         }
-
-
-
+        //Validacion correo electronico
         public static string recover(string usuario)
         {
 
