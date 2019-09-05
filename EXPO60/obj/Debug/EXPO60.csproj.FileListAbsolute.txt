@@ -252,3 +252,7 @@ D:\IMAX-CINEMA-master\EXPO60\obj\Debug\EXPO60.exe
 D:\IMAX-CINEMA-master\EXPO60\obj\Debug\EXPO60.pdb
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.RecuAdmin.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Tipo_recuperacion.resources
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.RecuAdmin.resources
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.Tipo_recuperacion.resources
