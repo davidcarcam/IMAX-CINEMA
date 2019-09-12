@@ -101,7 +101,7 @@
             // txtContra
             // 
             this.txtContra.Location = new System.Drawing.Point(219, 131);
-            this.txtContra.MaxLength = 50;
+            this.txtContra.MaxLength = 60;
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(179, 20);
             this.txtContra.TabIndex = 2;
@@ -110,7 +110,7 @@
             // txt1
             // 
             this.txt1.Location = new System.Drawing.Point(219, 61);
-            this.txt1.MaxLength = 50;
+            this.txt1.MaxLength = 60;
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(179, 20);
             this.txt1.TabIndex = 1;
