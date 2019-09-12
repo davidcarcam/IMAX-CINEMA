@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recuperarUsuario));
             System.Windows.Forms.Label lblinformacion;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label lblinformacion2;
             System.Windows.Forms.Label lblcodigo;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recuperarUsuario));
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStripRecuperar_Telefono = new System.Windows.Forms.ToolStrip();
             this.lbltoolRecuperar_Telefono = new System.Windows.Forms.ToolStripLabel();
             this.btntoolCerrar_Correo = new System.Windows.Forms.ToolStripButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.separartorRecuperar_Contrasena = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btnRecu = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.btnvalidar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.btnRecu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.separartorRecuperar_Contrasena = new Bunifu.Framework.UI.BunifuSeparator();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             lblinformacion = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -56,6 +56,68 @@
             this.toolStripRecuperar_Telefono.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblinformacion
+            // 
+            lblinformacion.AutoSize = true;
+            lblinformacion.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblinformacion.Location = new System.Drawing.Point(249, 228);
+            lblinformacion.Name = "lblinformacion";
+            lblinformacion.Size = new System.Drawing.Size(454, 12);
+            lblinformacion.TabIndex = 53;
+            lblinformacion.Text = "Inserta el codigo que se te ha sido enviado a tu correo revisa tu bandeja ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(116, 91);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(113, 12);
+            label1.TabIndex = 52;
+            label1.Text = "Inserte su Usuario";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(233, 54);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(540, 12);
+            label3.TabIndex = 51;
+            label3.Text = "En el proximo espacio escriba el usuario de recuperacion que inserto al crear su " +
+    "usuario";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Location = new System.Drawing.Point(331, 17);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(344, 18);
+            label5.TabIndex = 50;
+            label5.Text = "Recuperacion por correo de recuperacion";
+            // 
+            // lblinformacion2
+            // 
+            lblinformacion2.AutoSize = true;
+            lblinformacion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblinformacion2.Location = new System.Drawing.Point(144, 262);
+            lblinformacion2.Name = "lblinformacion2";
+            lblinformacion2.Size = new System.Drawing.Size(718, 12);
+            lblinformacion2.TabIndex = 49;
+            lblinformacion2.Text = "Si no es asi. Probablemente los datos estan erroneos, los datos no existen o hay " +
+    "un problema con el envio de datos. ";
+            // 
+            // lblcodigo
+            // 
+            lblcodigo.AutoSize = true;
+            lblcodigo.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblcodigo.Location = new System.Drawing.Point(116, 306);
+            lblcodigo.Name = "lblcodigo";
+            lblcodigo.Size = new System.Drawing.Size(49, 12);
+            lblcodigo.TabIndex = 48;
+            lblcodigo.Text = "Codigo";
             // 
             // error1
             // 
@@ -111,25 +173,50 @@
             this.panelContenedor.Size = new System.Drawing.Size(960, 430);
             this.panelContenedor.TabIndex = 0;
             // 
-            // txtUsuario
+            // btnvalidar
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(251, 91);
-            this.txtUsuario.MaxLength = 50;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(504, 20);
-            this.txtUsuario.TabIndex = 55;
+            this.btnvalidar.Activecolor = System.Drawing.Color.DarkOrange;
+            this.btnvalidar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnvalidar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnvalidar.BorderRadius = 0;
+            this.btnvalidar.ButtonText = "Validar Codigo";
+            this.btnvalidar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnvalidar.DisabledColor = System.Drawing.Color.Maroon;
+            this.btnvalidar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvalidar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnvalidar.Iconimage = global::EXPO60.Properties.Resources.send_file_96px;
+            this.btnvalidar.Iconimage_right = null;
+            this.btnvalidar.Iconimage_right_Selected = null;
+            this.btnvalidar.Iconimage_Selected = null;
+            this.btnvalidar.IconMarginLeft = 0;
+            this.btnvalidar.IconMarginRight = 0;
+            this.btnvalidar.IconRightVisible = true;
+            this.btnvalidar.IconRightZoom = 0D;
+            this.btnvalidar.IconVisible = true;
+            this.btnvalidar.IconZoom = 90D;
+            this.btnvalidar.IsTab = false;
+            this.btnvalidar.Location = new System.Drawing.Point(368, 328);
+            this.btnvalidar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnvalidar.Name = "btnvalidar";
+            this.btnvalidar.Normalcolor = System.Drawing.Color.DarkRed;
+            this.btnvalidar.OnHovercolor = System.Drawing.Color.White;
+            this.btnvalidar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnvalidar.selected = false;
+            this.btnvalidar.Size = new System.Drawing.Size(277, 48);
+            this.btnvalidar.TabIndex = 58;
+            this.btnvalidar.Text = "Validar Codigo";
+            this.btnvalidar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnvalidar.Textcolor = System.Drawing.Color.White;
+            this.btnvalidar.TextFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvalidar.Click += new System.EventHandler(this.bunifuFlatButton1_Click_1);
             // 
-            // separartorRecuperar_Contrasena
+            // txtcodigo
             // 
-            this.separartorRecuperar_Contrasena.BackColor = System.Drawing.Color.Transparent;
-            this.separartorRecuperar_Contrasena.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.separartorRecuperar_Contrasena.LineThickness = 1;
-            this.separartorRecuperar_Contrasena.Location = new System.Drawing.Point(12, 204);
-            this.separartorRecuperar_Contrasena.Name = "separartorRecuperar_Contrasena";
-            this.separartorRecuperar_Contrasena.Size = new System.Drawing.Size(936, 21);
-            this.separartorRecuperar_Contrasena.TabIndex = 54;
-            this.separartorRecuperar_Contrasena.Transparency = 255;
-            this.separartorRecuperar_Contrasena.Vertical = false;
+            this.txtcodigo.Location = new System.Drawing.Point(251, 302);
+            this.txtcodigo.MaxLength = 5;
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(504, 20);
+            this.txtcodigo.TabIndex = 47;
             // 
             // btnRecu
             // 
@@ -168,112 +255,25 @@
             this.btnRecu.TextFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecu.Click += new System.EventHandler(this.btnRecu_Click);
             // 
-            // lblinformacion
+            // separartorRecuperar_Contrasena
             // 
-            lblinformacion.AutoSize = true;
-            lblinformacion.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblinformacion.Location = new System.Drawing.Point(249, 228);
-            lblinformacion.Name = "lblinformacion";
-            lblinformacion.Size = new System.Drawing.Size(415, 12);
-            lblinformacion.TabIndex = 53;
-            lblinformacion.Text = "Inserta el codigo que se te ha sido enviado a tu correo revisa tu bandeja ";
+            this.separartorRecuperar_Contrasena.BackColor = System.Drawing.Color.Transparent;
+            this.separartorRecuperar_Contrasena.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.separartorRecuperar_Contrasena.LineThickness = 1;
+            this.separartorRecuperar_Contrasena.Location = new System.Drawing.Point(12, 204);
+            this.separartorRecuperar_Contrasena.Name = "separartorRecuperar_Contrasena";
+            this.separartorRecuperar_Contrasena.Size = new System.Drawing.Size(936, 21);
+            this.separartorRecuperar_Contrasena.TabIndex = 54;
+            this.separartorRecuperar_Contrasena.Transparency = 255;
+            this.separartorRecuperar_Contrasena.Vertical = false;
             // 
-            // label1
+            // txtUsuario
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(116, 91);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(107, 12);
-            label1.TabIndex = 52;
-            label1.Text = "Inserte su Usuario";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.Location = new System.Drawing.Point(233, 54);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(504, 12);
-            label3.TabIndex = 51;
-            label3.Text = "En el proximo espacio escriba el usuario de recuperacion que inserto al crear su " +
-    "usuario";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label5.Location = new System.Drawing.Point(331, 17);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(346, 18);
-            label5.TabIndex = 50;
-            label5.Text = "Recuperacion por correo de recuperacion";
-            // 
-            // lblinformacion2
-            // 
-            lblinformacion2.AutoSize = true;
-            lblinformacion2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblinformacion2.Location = new System.Drawing.Point(144, 262);
-            lblinformacion2.Name = "lblinformacion2";
-            lblinformacion2.Size = new System.Drawing.Size(660, 12);
-            lblinformacion2.TabIndex = 49;
-            lblinformacion2.Text = "Si no es asi. Probablemente los datos estan erroneos, los datos no existen o hay " +
-    "un problema con el envio de datos. ";
-            // 
-            // lblcodigo
-            // 
-            lblcodigo.AutoSize = true;
-            lblcodigo.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblcodigo.Location = new System.Drawing.Point(116, 306);
-            lblcodigo.Name = "lblcodigo";
-            lblcodigo.Size = new System.Drawing.Size(45, 12);
-            lblcodigo.TabIndex = 48;
-            lblcodigo.Text = "Codigo";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.Location = new System.Drawing.Point(251, 302);
-            this.txtcodigo.MaxLength = 5;
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(504, 20);
-            this.txtcodigo.TabIndex = 47;
-            // 
-            // btnvalidar
-            // 
-            this.btnvalidar.Activecolor = System.Drawing.Color.DarkOrange;
-            this.btnvalidar.BackColor = System.Drawing.Color.DarkRed;
-            this.btnvalidar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnvalidar.BorderRadius = 0;
-            this.btnvalidar.ButtonText = "Validar Codigo";
-            this.btnvalidar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnvalidar.DisabledColor = System.Drawing.Color.Maroon;
-            this.btnvalidar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvalidar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnvalidar.Iconimage = global::EXPO60.Properties.Resources.send_file_96px;
-            this.btnvalidar.Iconimage_right = null;
-            this.btnvalidar.Iconimage_right_Selected = null;
-            this.btnvalidar.Iconimage_Selected = null;
-            this.btnvalidar.IconMarginLeft = 0;
-            this.btnvalidar.IconMarginRight = 0;
-            this.btnvalidar.IconRightVisible = true;
-            this.btnvalidar.IconRightZoom = 0D;
-            this.btnvalidar.IconVisible = true;
-            this.btnvalidar.IconZoom = 90D;
-            this.btnvalidar.IsTab = false;
-            this.btnvalidar.Location = new System.Drawing.Point(368, 328);
-            this.btnvalidar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnvalidar.Name = "btnvalidar";
-            this.btnvalidar.Normalcolor = System.Drawing.Color.DarkRed;
-            this.btnvalidar.OnHovercolor = System.Drawing.Color.White;
-            this.btnvalidar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnvalidar.selected = false;
-            this.btnvalidar.Size = new System.Drawing.Size(277, 48);
-            this.btnvalidar.TabIndex = 58;
-            this.btnvalidar.Text = "Validar Codigo";
-            this.btnvalidar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnvalidar.Textcolor = System.Drawing.Color.White;
-            this.btnvalidar.TextFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvalidar.Click += new System.EventHandler(this.bunifuFlatButton1_Click_1);
+            this.txtUsuario.Location = new System.Drawing.Point(251, 91);
+            this.txtUsuario.MaxLength = 60;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(504, 20);
+            this.txtUsuario.TabIndex = 55;
             // 
             // recuperarUsuario
             // 

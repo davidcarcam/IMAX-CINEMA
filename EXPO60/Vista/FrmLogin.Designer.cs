@@ -156,7 +156,7 @@ namespace EXPO60.Vista
             // 
             this.txtContra.ForeColor = System.Drawing.Color.Black;
             this.txtContra.Location = new System.Drawing.Point(329, 164);
-            this.txtContra.MaxLength = 25;
+            this.txtContra.MaxLength = 30;
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(286, 20);
             this.txtContra.TabIndex = 10;
@@ -165,7 +165,7 @@ namespace EXPO60.Vista
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(329, 108);
-            this.txtUsuario.MaxLength = 25;
+            this.txtUsuario.MaxLength = 30;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(286, 20);
             this.txtUsuario.TabIndex = 9;

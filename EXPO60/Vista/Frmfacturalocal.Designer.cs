@@ -673,7 +673,7 @@
             // 
             this.txtNom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNom.Location = new System.Drawing.Point(122, 48);
-            this.txtNom.MaxLength = 25;
+            this.txtNom.MaxLength = 50;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(153, 20);
             this.txtNom.TabIndex = 1;

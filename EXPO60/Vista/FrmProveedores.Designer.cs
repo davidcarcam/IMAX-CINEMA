@@ -411,7 +411,7 @@
             // 
             this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtcorreo.Location = new System.Drawing.Point(83, 135);
-            this.txtcorreo.MaxLength = 50;
+            this.txtcorreo.MaxLength = 60;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(153, 20);
             this.txtcorreo.TabIndex = 3;
@@ -431,7 +431,7 @@
             // 
             this.txtapellido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtapellido.Location = new System.Drawing.Point(83, 97);
-            this.txtapellido.MaxLength = 25;
+            this.txtapellido.MaxLength = 60;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(153, 20);
             this.txtapellido.TabIndex = 2;
@@ -451,7 +451,7 @@
             // 
             this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtnombre.Location = new System.Drawing.Point(83, 57);
-            this.txtnombre.MaxLength = 25;
+            this.txtnombre.MaxLength = 60;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
             this.txtnombre.TabIndex = 1;
