@@ -203,7 +203,7 @@ namespace EXPO60.Vista
 
             else if (Char.IsSeparator(e.KeyChar))
             {
-                e.Handled = true;
+                e.Handled = false;
             }
             else
             {
@@ -219,7 +219,7 @@ namespace EXPO60.Vista
 
             else if (Char.IsSeparator(e.KeyChar))
             {
-                e.Handled = true;
+                e.Handled = false;
             }
             else
             {
@@ -295,11 +295,30 @@ namespace EXPO60.Vista
         {
             dgvusuarios.DataSource = FuncionUsuario.mostrarusuario();
             this.dgvusuarios.Columns[0].Visible = false;
-            this.dgvusuarios.Columns[9].Visible = false;
+            this.dgvusuarios.Columns[1].HeaderText = "Nombres";
+            this.dgvusuarios.Columns[1].Width = 80;
+            this.dgvusuarios.Columns[2].HeaderText = "Apellidos";
+            this.dgvusuarios.Columns[2].Width = 80;
+            this.dgvusuarios.Columns[3].HeaderText = "Direccion";
+            this.dgvusuarios.Columns[3].Width = 100;
+            this.dgvusuarios.Columns[4].HeaderText = "Correo";
+            this.dgvusuarios.Columns[4].Width = 80;
+            this.dgvusuarios.Columns[6].HeaderText = "DUI";
+            this.dgvusuarios.Columns[6].Width = 50;
+            this.dgvusuarios.Columns[7].HeaderText = "Teléfono";
+            this.dgvusuarios.Columns[7].Width = 50;
+            this.dgvusuarios.Columns[8].HeaderText = "Usuario";
+            this.dgvusuarios.Columns[8].Width = 70;
             this.dgvusuarios.Columns[5].Visible = false;
             this.dgvusuarios.Columns[9].Visible = false;
             this.dgvusuarios.Columns[10].Visible = false;
             this.dgvusuarios.Columns[11].Visible = false;
+            this.dgvusuarios.Columns[12].Visible = false;
+            this.dgvusuarios.Columns[13].Visible = false;
+            this.dgvusuarios.Columns[14].Visible = false;
+            this.dgvusuarios.Columns[15].Visible = false;
+            this.dgvusuarios.Columns[16].Visible = false;
+            this.dgvusuarios.Columns[17].Visible = false;
         }
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
