@@ -46,12 +46,14 @@
             this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
             this.picimg = new System.Windows.Forms.PictureBox();
             this.picimgL = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picimgL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -155,6 +157,7 @@
             // 
             // PanelContenedor
             // 
+            this.PanelContenedor.Controls.Add(this.pictureBox1);
             this.PanelContenedor.Controls.Add(this.toolStrip2);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(243, 25);
@@ -274,6 +277,17 @@
             this.picimgL.TabIndex = 46;
             this.picimgL.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1025, 522);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +310,7 @@
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picimgL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +334,6 @@
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton lblusuario;
         private System.Windows.Forms.ToolStripButton lblconectado;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

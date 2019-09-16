@@ -152,7 +152,7 @@
             // 
             this.txtNombre_empresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre_empresa.Location = new System.Drawing.Point(212, 91);
-            this.txtNombre_empresa.MaxLength = 50;
+            this.txtNombre_empresa.MaxLength = 60;
             this.txtNombre_empresa.Name = "txtNombre_empresa";
             this.txtNombre_empresa.Size = new System.Drawing.Size(153, 20);
             this.txtNombre_empresa.TabIndex = 1;

@@ -90,6 +90,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(286, 68);
+            this.txtUsuario.MaxLength = 100;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(193, 20);
             this.txtUsuario.TabIndex = 1;
@@ -97,6 +98,7 @@
             // txtcodigo
             // 
             this.txtcodigo.Location = new System.Drawing.Point(286, 167);
+            this.txtcodigo.MaxLength = 50;
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(193, 20);
             this.txtcodigo.TabIndex = 2;

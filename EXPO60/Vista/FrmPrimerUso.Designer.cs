@@ -256,7 +256,7 @@
             // 
             this.txtUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsu.Location = new System.Drawing.Point(686, 133);
-            this.txtUsu.MaxLength = 50;
+            this.txtUsu.MaxLength = 60;
             this.txtUsu.Name = "txtUsu";
             this.txtUsu.Size = new System.Drawing.Size(250, 20);
             this.txtUsu.TabIndex = 9;
@@ -332,7 +332,7 @@
             // 
             this.txtCor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCor.Location = new System.Drawing.Point(176, 207);
-            this.txtCor.MaxLength = 50;
+            this.txtCor.MaxLength = 80;
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(250, 20);
             this.txtCor.TabIndex = 4;
@@ -383,7 +383,7 @@
             // 
             this.txtApe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtApe.Location = new System.Drawing.Point(176, 101);
-            this.txtApe.MaxLength = 40;
+            this.txtApe.MaxLength = 60;
             this.txtApe.Name = "txtApe";
             this.txtApe.Size = new System.Drawing.Size(250, 20);
             this.txtApe.TabIndex = 2;
@@ -412,7 +412,7 @@
             // 
             this.txtNom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNom.Location = new System.Drawing.Point(176, 48);
-            this.txtNom.MaxLength = 40;
+            this.txtNom.MaxLength = 60;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(250, 20);
             this.txtNom.TabIndex = 1;

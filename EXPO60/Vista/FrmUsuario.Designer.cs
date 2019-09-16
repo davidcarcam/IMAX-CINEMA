@@ -88,7 +88,7 @@ namespace EXPO60.Vista
             // 
             this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtnombre.Location = new System.Drawing.Point(133, 51);
-            this.txtnombre.MaxLength = 8;
+            this.txtnombre.MaxLength = 60;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(153, 20);
             this.txtnombre.TabIndex = 1;
@@ -118,7 +118,7 @@ namespace EXPO60.Vista
             // 
             this.txtapellido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtapellido.Location = new System.Drawing.Point(133, 94);
-            this.txtapellido.MaxLength = 8;
+            this.txtapellido.MaxLength = 60;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(153, 20);
             this.txtapellido.TabIndex = 2;
@@ -170,6 +170,7 @@ namespace EXPO60.Vista
             // 
             this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtcorreo.Location = new System.Drawing.Point(457, 76);
+            this.txtcorreo.MaxLength = 200;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(196, 20);
             this.txtcorreo.TabIndex = 5;
@@ -318,6 +319,7 @@ namespace EXPO60.Vista
             // 
             this.txtdireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtdireccion.Location = new System.Drawing.Point(457, 116);
+            this.txtdireccion.MaxLength = 200;
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(196, 71);
@@ -361,7 +363,7 @@ namespace EXPO60.Vista
             // 
             this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtusuario.Location = new System.Drawing.Point(836, 118);
-            this.txtusuario.MaxLength = 25;
+            this.txtusuario.MaxLength = 60;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(153, 20);
             this.txtusuario.TabIndex = 9;
@@ -382,7 +384,7 @@ namespace EXPO60.Vista
             // 
             this.txtclave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtclave.Location = new System.Drawing.Point(837, 155);
-            this.txtclave.MaxLength = 20;
+            this.txtclave.MaxLength = 60;
             this.txtclave.Name = "txtclave";
             this.txtclave.Size = new System.Drawing.Size(153, 20);
             this.txtclave.TabIndex = 10;
