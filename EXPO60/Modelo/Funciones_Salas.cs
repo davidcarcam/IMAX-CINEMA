@@ -40,7 +40,7 @@ namespace EXPO60.Modelo
             DataTable salas;
             try
             {
-                string query1 = "SELECT * FROM salas";
+                string query1 = "SELECT ts.id_sala, ts.num_sala,ts.capacidad, te.estado_sala FROM salas ts , estado_sala te WHERE te.id_estado_sala = ts.id_estado_sala";
                 MySqlCommand cmdread1 = new MySqlCommand(string.Format(query1), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter1 = new MySqlDataAdapter(cmdread1);
                 salas = new DataTable();

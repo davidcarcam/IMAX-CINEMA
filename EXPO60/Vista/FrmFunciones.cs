@@ -160,7 +160,7 @@ namespace EXPO60.Vista
         {
             mostrarFunciones();
             mostrarET();
-            this.dgvFuncion.Columns[0].Visible = false;
+           
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
         }
