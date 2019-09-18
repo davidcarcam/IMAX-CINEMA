@@ -223,6 +223,7 @@
             this.dgvAsientos.AllowUserToAddRows = false;
             this.dgvAsientos.AllowUserToDeleteRows = false;
             this.dgvAsientos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvAsientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAsientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsientos.Location = new System.Drawing.Point(12, 215);
             this.dgvAsientos.Name = "dgvAsientos";

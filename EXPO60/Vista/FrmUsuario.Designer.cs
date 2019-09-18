@@ -298,6 +298,7 @@ namespace EXPO60.Vista
             // dgvusuarios
             // 
             this.dgvusuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvusuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvusuarios.Location = new System.Drawing.Point(10, 264);
             this.dgvusuarios.Name = "dgvusuarios";

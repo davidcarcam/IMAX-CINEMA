@@ -164,6 +164,7 @@
             this.dgvlocal.AllowUserToAddRows = false;
             this.dgvlocal.AllowUserToDeleteRows = false;
             this.dgvlocal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvlocal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvlocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvlocal.Location = new System.Drawing.Point(8, 270);
             this.dgvlocal.Name = "dgvlocal";

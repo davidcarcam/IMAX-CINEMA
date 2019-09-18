@@ -174,6 +174,7 @@
             this.dgvempresas.AllowUserToAddRows = false;
             this.dgvempresas.AllowUserToDeleteRows = false;
             this.dgvempresas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvempresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvempresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvempresas.Location = new System.Drawing.Point(12, 229);
             this.dgvempresas.Name = "dgvempresas";

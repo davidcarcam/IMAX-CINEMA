@@ -464,6 +464,7 @@
             this.txtDate.AllowUserToAddRows = false;
             this.txtDate.AllowUserToDeleteRows = false;
             this.txtDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.txtDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.txtDate.Location = new System.Drawing.Point(23, 273);
             this.txtDate.Name = "txtDate";

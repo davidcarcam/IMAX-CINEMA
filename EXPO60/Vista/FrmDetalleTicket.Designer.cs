@@ -228,9 +228,9 @@
             // 
             // dgvtickets
             // 
-            this.dgvtickets.AllowUserToAddRows = false;
             this.dgvtickets.AllowUserToDeleteRows = false;
             this.dgvtickets.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvtickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvtickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvtickets.Location = new System.Drawing.Point(12, 283);
             this.dgvtickets.Name = "dgvtickets";
