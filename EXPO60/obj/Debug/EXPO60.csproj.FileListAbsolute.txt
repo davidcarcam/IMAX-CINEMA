@@ -210,7 +210,6 @@ C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\
 C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Preguntas.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmMetodos_Recuperar.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Preguntas.resources
-C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csprojResolveAssemblyReference.cache
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
 C:\Users\Pardito\Desktop\IMAX-CINEMA-master\EXPO60\bin\Debug\EXPO60.exe.config
@@ -284,3 +283,9 @@ C:\Users\Pardito\Desktop\IMAX\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.
 C:\Users\Pardito\Desktop\IMAX\EXPO60\obj\Debug\EXPO60.Vista.recuperarUsuario.resources
 C:\Users\Pardito\Desktop\IMAX\EXPO60\obj\Debug\EXPO60.csproj.GenerateResource.Cache
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources
+C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csprojAssemblyReference.cache
+C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
+C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
+C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources
+C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CopyComplete

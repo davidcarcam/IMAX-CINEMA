@@ -223,6 +223,7 @@
             this.dgvproveedores.AllowUserToAddRows = false;
             this.dgvproveedores.AllowUserToDeleteRows = false;
             this.dgvproveedores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvproveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproveedores.Location = new System.Drawing.Point(16, 276);
             this.dgvproveedores.Name = "dgvproveedores";

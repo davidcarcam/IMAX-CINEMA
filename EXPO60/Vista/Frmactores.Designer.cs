@@ -120,6 +120,7 @@
             this.dgvActores.AllowUserToAddRows = false;
             this.dgvActores.AllowUserToDeleteRows = false;
             this.dgvActores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvActores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvActores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActores.Location = new System.Drawing.Point(79, 228);
             this.dgvActores.Name = "dgvActores";

@@ -152,6 +152,7 @@
             this.dgvpersonajes.AllowUserToAddRows = false;
             this.dgvpersonajes.AllowUserToDeleteRows = false;
             this.dgvpersonajes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvpersonajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvpersonajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvpersonajes.Location = new System.Drawing.Point(12, 241);
             this.dgvpersonajes.Name = "dgvpersonajes";

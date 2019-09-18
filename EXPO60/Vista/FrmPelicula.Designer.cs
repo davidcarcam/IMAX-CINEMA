@@ -180,6 +180,7 @@
             this.dgvpeliculas.AllowUserToAddRows = false;
             this.dgvpeliculas.AllowUserToDeleteRows = false;
             this.dgvpeliculas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvpeliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvpeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvpeliculas.Location = new System.Drawing.Point(9, 256);
             this.dgvpeliculas.Name = "dgvpeliculas";

@@ -204,6 +204,7 @@
             this.dgvSalas.AllowUserToAddRows = false;
             this.dgvSalas.AllowUserToDeleteRows = false;
             this.dgvSalas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvSalas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSalas.Location = new System.Drawing.Point(6, 288);
             this.dgvSalas.Name = "dgvSalas";
