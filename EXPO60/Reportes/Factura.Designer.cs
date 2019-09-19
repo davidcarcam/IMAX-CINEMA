@@ -31,16 +31,17 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataSetFacturaLocal = new EXPO60.Reportes.DataSetFacturaLocal();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturaLocal)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report3.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report5.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 24);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(737, 435);
+            this.reportViewer1.Size = new System.Drawing.Size(737, 411);
             this.reportViewer1.TabIndex = 0;
             // 
             // DataSetFacturaLocal
@@ -52,10 +53,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(737, 435);
+            this.panel1.Size = new System.Drawing.Size(737, 411);
             this.panel1.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(737, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // Factura
             // 
@@ -64,11 +73,14 @@
             this.ClientSize = new System.Drawing.Size(737, 435);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Factura";
             this.Text = "Factura";
             this.Load += new System.EventHandler(this.Factura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturaLocal)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -77,5 +89,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private DataSetFacturaLocal DataSetFacturaLocal;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
