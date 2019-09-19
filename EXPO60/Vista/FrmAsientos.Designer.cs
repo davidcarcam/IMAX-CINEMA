@@ -161,12 +161,11 @@
             // BtnAsientos
             // 
             this.BtnAsientos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnAsientos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnAsientos.Image = ((System.Drawing.Image)(resources.GetObject("BtnAsientos.Image")));
+            this.BtnAsientos.Image = global::EXPO60.Properties.Resources.connection_indicator;
             this.BtnAsientos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAsientos.Name = "BtnAsientos";
-            this.BtnAsientos.Size = new System.Drawing.Size(23, 22);
-            this.BtnAsientos.Text = "toolStripButton1";
+            this.BtnAsientos.Size = new System.Drawing.Size(109, 22);
+            this.BtnAsientos.Text = "Generar reporte";
             this.BtnAsientos.Click += new System.EventHandler(this.BtnAsientos_Click);
             // 
             // cmbestado

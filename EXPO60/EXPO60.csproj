@@ -496,6 +496,7 @@
     <None Include="Resources\arrows_long_right_96px.png" />
     <None Include="Resources\camera_96px1.png" />
     <Content Include="Resources\clear-button.png" />
+    <None Include="Resources\connection-indicator.png" />
     <Content Include="Resources\crop-button.png" />
     <Content Include="Resources\crop-tool-button.png" />
     <None Include="Resources\food_as_resources_96px.png" />

@@ -294,7 +294,7 @@ namespace EXPO60.Vista
         public void Mostrarusuarios()
         {
             dgvusuarios.DataSource = FuncionUsuario.mostrarusuario();
-            this.dgvusuarios.Columns[0].Visible = true;
+            this.dgvusuarios.Columns[0].Visible = false;
             this.dgvusuarios.Columns[1].HeaderText = "Nombres";
             this.dgvusuarios.Columns[1].Width = 80;
             this.dgvusuarios.Columns[2].HeaderText = "Apellidos";
