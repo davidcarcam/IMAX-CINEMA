@@ -20,7 +20,7 @@ namespace EXPO60.Reportes
         private void ReporteFacturaLocal_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'DataSetFacturaLocal.factura_local' Puede moverla o quitarla según sea necesario.
-            this.factura_localTableAdapter.MostrarDatosDeFactura(this.DataSetFacturaLocal.factura_local);
+            this.factura_localTableAdapter.MostrarDatosDeFactura(DataSetFacturaLocal.factura_local);
 
             this.reportViewer1.RefreshReport();
         }
