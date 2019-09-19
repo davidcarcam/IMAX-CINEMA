@@ -24,5 +24,11 @@ namespace EXPO60.Reportes
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void ReporteFacturaLocal_Load_1(object sender, EventArgs e)
+        {
+
+            this.reportViewer2.RefreshReport();
+        }
     }
 }

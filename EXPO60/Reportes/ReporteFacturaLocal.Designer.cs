@@ -28,78 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetFacturaLocal = new EXPO60.Reportes.DataSetFacturaLocal();
-            this.factura_localBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.factura_localTableAdapter = new EXPO60.Reportes.DataSetFacturaLocalTableAdapters.factura_localTableAdapter();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturaLocal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.factura_localBindingSource)).BeginInit();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip2
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(976, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(864, 24);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.reportViewer1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 466);
-            this.panel1.TabIndex = 1;
+            this.panel2.Controls.Add(this.reportViewer2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(864, 445);
+            this.panel2.TabIndex = 1;
             // 
-            // reportViewer1
+            // reportViewer2
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetFacturaLocal";
-            reportDataSource1.Value = this.factura_localBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report3.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(976, 466);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // DataSetFacturaLocal
-            // 
-            this.DataSetFacturaLocal.DataSetName = "DataSetFacturaLocal";
-            this.DataSetFacturaLocal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // factura_localBindingSource
-            // 
-            this.factura_localBindingSource.DataMember = "factura_local";
-            this.factura_localBindingSource.DataSource = this.DataSetFacturaLocal;
-            // 
-            // factura_localTableAdapter
-            // 
-            this.factura_localTableAdapter.ClearBeforeFill = true;
+            this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer2.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.Size = new System.Drawing.Size(864, 445);
+            this.reportViewer2.TabIndex = 0;
             // 
             // ReporteFacturaLocal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 490);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(864, 469);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.menuStrip2);
+            this.MainMenuStrip = this.menuStrip2;
             this.Name = "ReporteFacturaLocal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reporte de FacturaLocal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ReporteFacturaLocal_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturaLocal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.factura_localBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.ReporteFacturaLocal_Load_1);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +81,8 @@
         private System.Windows.Forms.BindingSource factura_localBindingSource;
         private DataSetFacturaLocal DataSetFacturaLocal;
         private DataSetFacturaLocalTableAdapters.factura_localTableAdapter factura_localTableAdapter;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.Panel panel2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }

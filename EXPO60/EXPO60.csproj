@@ -102,11 +102,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetAsientos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\DataSetDetalleTicket.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetDetalleTicket.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reportes\DataSetFacturaLocal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,12 +125,6 @@
     </Compile>
     <Compile Include="Reportes\ReporteAsientos.Designer.cs">
       <DependentUpon>ReporteAsientos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ReporteDetalleTicket.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ReporteDetalleTicket.Designer.cs">
-      <DependentUpon>ReporteDetalleTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ReporteFacturaLocal.cs">
       <SubType>Form</SubType>
@@ -319,9 +308,6 @@
     <EmbeddedResource Include="Reportes\ReporteAsientos.resx">
       <DependentUpon>ReporteAsientos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteDetalleTicket.resx">
-      <DependentUpon>ReporteDetalleTicket.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteFacturaLocal.resx">
       <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,17 +413,6 @@
     </None>
     <None Include="Reportes\DataSetAsientos.xss">
       <DependentUpon>DataSetAsientos.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\DataSetDetalleTicket.xsc">
-      <DependentUpon>DataSetDetalleTicket.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\DataSetDetalleTicket.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetDetalleTicket.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Reportes\DataSetDetalleTicket.xss">
-      <DependentUpon>DataSetDetalleTicket.xsd</DependentUpon>
     </None>
     <None Include="Reportes\DataSetFacturaLocal.xsc">
       <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>

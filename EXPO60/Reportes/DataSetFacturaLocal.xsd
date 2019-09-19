@@ -7,24 +7,23 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.EXPO60.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="factura_localTableAdapter" GeneratorDataComponentClassName="factura_localTableAdapter" Name="factura_local" UserDataComponentName="factura_localTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableTableAdapter" GeneratorDataComponentClassName="DataTableTableAdapter" Name="DataTable" UserDataComponentName="DataTableTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="MostrarDatosDeFactura" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="MostrarDatosDeFactura" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="MostrarDatosDeFactura">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        tp.monto_fac_local, tp.fecha_fac_local, tp.nombre_cliente, te.nombre
-FROM            factura_local tp, usuario te
-WHERE        tp.id_usuario = te.id_usuario</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `detalle_fac_local`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="monto_fac_local" DataSetColumn="monto_fac_local" />
-              <Mapping SourceColumn="fecha_fac_local" DataSetColumn="fecha_fac_local" />
-              <Mapping SourceColumn="nombre_cliente" DataSetColumn="nombre_cliente" />
-              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="id_detalle_fac" DataSetColumn="id_detalle_fac" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="subtotal" DataSetColumn="subtotal" />
+              <Mapping SourceColumn="id_producto" DataSetColumn="id_producto" />
+              <Mapping SourceColumn="id_local" DataSetColumn="id_local" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -36,41 +35,28 @@ WHERE        tp.id_usuario = te.id_usuario</CommandText>
   <xs:element name="DataSetFacturaLocal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetFacturaLocal" msprop:Generator_UserDSName="DataSetFacturaLocal">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="factura_local" msprop:Generator_TableClassName="factura_localDataTable" msprop:Generator_TableVarName="tablefactura_local" msprop:Generator_TablePropName="factura_local" msprop:Generator_RowDeletingName="factura_localRowDeleting" msprop:Generator_RowChangingName="factura_localRowChanging" msprop:Generator_RowEvHandlerName="factura_localRowChangeEventHandler" msprop:Generator_RowDeletedName="factura_localRowDeleted" msprop:Generator_UserTableName="factura_local" msprop:Generator_RowChangedName="factura_localRowChanged" msprop:Generator_RowEvArgName="factura_localRowChangeEvent" msprop:Generator_RowClassName="factura_localRow">
+        <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_RowEvArgName="DataTableRowChangeEvent" msprop:Generator_RowClassName="DataTableRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="monto_fac_local" msprop:Generator_ColumnVarNameInTable="columnmonto_fac_local" msprop:Generator_ColumnPropNameInRow="monto_fac_local" msprop:Generator_ColumnPropNameInTable="monto_fac_localColumn" msprop:Generator_UserColumnName="monto_fac_local" minOccurs="0">
+              <xs:element name="id_detalle_fac" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_detalle_fac" msprop:Generator_ColumnPropNameInRow="id_detalle_fac" msprop:Generator_ColumnPropNameInTable="id_detalle_facColumn" msprop:Generator_UserColumnName="id_detalle_fac" type="xs:int" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fecha_fac_local" msprop:Generator_ColumnVarNameInTable="columnfecha_fac_local" msprop:Generator_ColumnPropNameInRow="fecha_fac_local" msprop:Generator_ColumnPropNameInTable="fecha_fac_localColumn" msprop:Generator_UserColumnName="fecha_fac_local" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="nombre_cliente" msprop:Generator_ColumnVarNameInTable="columnnombre_cliente" msprop:Generator_ColumnPropNameInRow="nombre_cliente" msprop:Generator_ColumnPropNameInTable="nombre_clienteColumn" msprop:Generator_UserColumnName="nombre_cliente" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="60" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="id_producto" msprop:Generator_ColumnVarNameInTable="columnid_producto" msprop:Generator_ColumnPropNameInRow="id_producto" msprop:Generator_ColumnPropNameInTable="id_productoColumn" msprop:Generator_UserColumnName="id_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="id_local" msprop:Generator_ColumnVarNameInTable="columnid_local" msprop:Generator_ColumnPropNameInRow="id_local" msprop:Generator_ColumnPropNameInTable="id_localColumn" msprop:Generator_UserColumnName="id_local" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DataTable" />
+      <xs:field xpath="mstns:id_detalle_fac" />
+    </xs:unique>
   </xs:element>
 </xs:schema>
