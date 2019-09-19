@@ -6,16 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.18792cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.135cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.94979cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>3.22729cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -38,7 +32,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.65292cm</Height>
+              <Height>0.67497cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -193,7 +187,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Intentos</Value>
+                              <Value>Dui</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -229,7 +223,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Dui</Value>
+                              <Value>Telefono</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -265,7 +259,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Telefono</Value>
+                              <Value>Usuario</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -301,7 +295,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Usuario</Value>
+                              <Value>Estado usu</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -328,82 +322,10 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox17">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Clave</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#7292cc</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox19">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Estado usu</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#7292cc</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.65292cm</Height>
+              <Height>0.67497cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -539,39 +461,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="intentos">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!intentos.Value)</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>intentos</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#e5e5e5</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="dui">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -671,39 +560,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="clave">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!clave.Value</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>clave</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#e5e5e5</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="estado_usu">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -749,8 +605,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -763,40 +617,88 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetUsuario</DataSetName>
-        <Top>0.14111cm</Top>
-        <Left>0cm</Left>
-        <Height>1.30583cm</Height>
-        <Width>27.5cm</Width>
+        <DataSetName>DataSetUsuarioN</DataSetName>
+        <Top>0.17639cm</Top>
+        <Height>1.34993cm</Height>
+        <Width>20cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>IMAX CINEMA - 2019</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>4.47146cm</Top>
+        <Left>0cm</Left>
+        <Height>0.6cm</Height>
+        <Width>20cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.23611in</Height>
+    <Height>1.99664in</Height>
     <Style />
   </Body>
-  <Width>10.82677in</Width>
+  <Width>7.87402in</Width>
   <Page>
     <PageHeader>
-      <Height>1.93844cm</Height>
+      <Height>2.20542cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Rectangle Name="Rectangle1">
+        <Textbox Name="Textbox18">
+          <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
           <Left>0cm</Left>
-          <Height>0.43307cm</Height>
-          <Width>27.5cm</Width>
+          <Height>0.6cm</Height>
+          <Width>20cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
             <BackgroundColor>Maroon</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
           </Style>
-        </Rectangle>
+        </Textbox>
         <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -842,10 +744,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.43307cm</Top>
-          <Left>0cm</Left>
-          <Height>1.50537cm</Height>
-          <Width>27.5cm</Width>
+          <Top>0.63528cm</Top>
+          <Height>1.57014cm</Height>
+          <Width>20cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -865,50 +766,17 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.83785cm</Height>
+      <Height>0.02646cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="Textbox10">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>IMAX CINEMA - 2019</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>0.03528cm</Top>
-          <Left>0cm</Left>
-          <Height>0.76729cm</Height>
-          <Width>27.2225cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>21cm</PageHeight>
-    <PageWidth>29.7cm</PageWidth>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>
@@ -923,11 +791,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>fc6fd70e-01d9-4747-b861-cf7341e37c59</rd:DataSourceID>
+      <rd:DataSourceID>04e4931a-f8b4-4d47-abf8-448c2674325b</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetUsuario">
+    <DataSet Name="DataSetUsuarioN">
       <Query>
         <DataSourceName>DataSetUsuario</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -949,10 +817,6 @@
           <DataField>correo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="intentos">
-          <DataField>intentos</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="dui">
           <DataField>dui</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -963,10 +827,6 @@
         </Field>
         <Field Name="usuario">
           <DataField>usuario</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="clave">
-          <DataField>clave</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="estado_usu">
@@ -985,5 +845,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>be53f861-8916-48a2-9dcd-fece5a981858</rd:ReportID>
+  <rd:ReportID>c5008be7-9224-4d83-ab88-d077b0027a99</rd:ReportID>
 </Report>

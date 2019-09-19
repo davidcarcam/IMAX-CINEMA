@@ -24,7 +24,7 @@ namespace EXPO60.Reportes {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetFacturaLocal : global::System.Data.DataSet {
         
-        private factura_localDataTable tablefactura_local;
+        private DataTableDataTable tableDataTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace EXPO60.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["factura_local"] != null)) {
-                    base.Tables.Add(new factura_localDataTable(ds.Tables["factura_local"]));
+                if ((ds.Tables["DataTable"] != null)) {
+                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EXPO60.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public factura_localDataTable factura_local {
+        public DataTableDataTable DataTable {
             get {
-                return this.tablefactura_local;
+                return this.tableDataTable;
             }
         }
         
@@ -152,8 +152,8 @@ namespace EXPO60.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["factura_local"] != null)) {
-                    base.Tables.Add(new factura_localDataTable(ds.Tables["factura_local"]));
+                if ((ds.Tables["DataTable"] != null)) {
+                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EXPO60.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablefactura_local = ((factura_localDataTable)(base.Tables["factura_local"]));
+            this.tableDataTable = ((DataTableDataTable)(base.Tables["DataTable"]));
             if ((initTable == true)) {
-                if ((this.tablefactura_local != null)) {
-                    this.tablefactura_local.InitVars();
+                if ((this.tableDataTable != null)) {
+                    this.tableDataTable.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace EXPO60.Reportes {
             this.Namespace = "http://tempuri.org/DataSetFacturaLocal.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablefactura_local = new factura_localDataTable();
-            base.Tables.Add(this.tablefactura_local);
+            this.tableDataTable = new DataTableDataTable();
+            base.Tables.Add(this.tableDataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializefactura_local() {
+        private bool ShouldSerializeDataTable() {
             return false;
         }
         
@@ -270,27 +270,27 @@ namespace EXPO60.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void factura_localRowChangeEventHandler(object sender, factura_localRowChangeEvent e);
+        public delegate void DataTableRowChangeEventHandler(object sender, DataTableRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class factura_localDataTable : global::System.Data.TypedTableBase<factura_localRow> {
+        public partial class DataTableDataTable : global::System.Data.TypedTableBase<DataTableRow> {
             
-            private global::System.Data.DataColumn columnCantidad;
+            private global::System.Data.DataColumn columnmonto_fac_local;
             
-            private global::System.Data.DataColumn columnsubtotal;
+            private global::System.Data.DataColumn columnfecha_fac_local;
+            
+            private global::System.Data.DataColumn columnnombre_cliente;
             
             private global::System.Data.DataColumn columnnombre;
             
-            private global::System.Data.DataColumn columnExpr1;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public factura_localDataTable() {
-                this.TableName = "factura_local";
+            public DataTableDataTable() {
+                this.TableName = "DataTable";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal factura_localDataTable(global::System.Data.DataTable table) {
+            internal DataTableDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,24 +315,32 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected factura_localDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DataTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CantidadColumn {
+            public global::System.Data.DataColumn monto_fac_localColumn {
                 get {
-                    return this.columnCantidad;
+                    return this.columnmonto_fac_local;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn subtotalColumn {
+            public global::System.Data.DataColumn fecha_fac_localColumn {
                 get {
-                    return this.columnsubtotal;
+                    return this.columnfecha_fac_local;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre_clienteColumn {
+                get {
+                    return this.columnnombre_cliente;
                 }
             }
             
@@ -341,14 +349,6 @@ namespace EXPO60.Reportes {
             public global::System.Data.DataColumn nombreColumn {
                 get {
                     return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
-                get {
-                    return this.columnExpr1;
                 }
             }
             
@@ -363,48 +363,48 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public factura_localRow this[int index] {
+            public DataTableRow this[int index] {
                 get {
-                    return ((factura_localRow)(this.Rows[index]));
+                    return ((DataTableRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event factura_localRowChangeEventHandler factura_localRowChanging;
+            public event DataTableRowChangeEventHandler DataTableRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event factura_localRowChangeEventHandler factura_localRowChanged;
+            public event DataTableRowChangeEventHandler DataTableRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event factura_localRowChangeEventHandler factura_localRowDeleting;
+            public event DataTableRowChangeEventHandler DataTableRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event factura_localRowChangeEventHandler factura_localRowDeleted;
+            public event DataTableRowChangeEventHandler DataTableRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addfactura_localRow(factura_localRow row) {
+            public void AddDataTableRow(DataTableRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public factura_localRow Addfactura_localRow(int Cantidad, string subtotal, string nombre, string Expr1) {
-                factura_localRow rowfactura_localRow = ((factura_localRow)(this.NewRow()));
+            public DataTableRow AddDataTableRow(string monto_fac_local, string fecha_fac_local, string nombre_cliente, string nombre) {
+                DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Cantidad,
-                        subtotal,
-                        nombre,
-                        Expr1};
-                rowfactura_localRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowfactura_localRow);
-                return rowfactura_localRow;
+                        monto_fac_local,
+                        fecha_fac_local,
+                        nombre_cliente,
+                        nombre};
+                rowDataTableRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataTableRow);
+                return rowDataTableRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                factura_localDataTable cln = ((factura_localDataTable)(base.Clone()));
+                DataTableDataTable cln = ((DataTableDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,58 +412,59 @@ namespace EXPO60.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new factura_localDataTable();
+                return new DataTableDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnCantidad = base.Columns["Cantidad"];
-                this.columnsubtotal = base.Columns["subtotal"];
+                this.columnmonto_fac_local = base.Columns["monto_fac_local"];
+                this.columnfecha_fac_local = base.Columns["fecha_fac_local"];
+                this.columnnombre_cliente = base.Columns["nombre_cliente"];
                 this.columnnombre = base.Columns["nombre"];
-                this.columnExpr1 = base.Columns["Expr1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCantidad);
-                this.columnsubtotal = new global::System.Data.DataColumn("subtotal", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsubtotal);
+                this.columnmonto_fac_local = new global::System.Data.DataColumn("monto_fac_local", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmonto_fac_local);
+                this.columnfecha_fac_local = new global::System.Data.DataColumn("fecha_fac_local", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_fac_local);
+                this.columnnombre_cliente = new global::System.Data.DataColumn("nombre_cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_cliente);
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
-                this.columnsubtotal.MaxLength = 7;
+                this.columnmonto_fac_local.MaxLength = 7;
+                this.columnfecha_fac_local.MaxLength = 10;
+                this.columnnombre_cliente.MaxLength = 60;
                 this.columnnombre.MaxLength = 50;
-                this.columnExpr1.MaxLength = 60;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public factura_localRow Newfactura_localRow() {
-                return ((factura_localRow)(this.NewRow()));
+            public DataTableRow NewDataTableRow() {
+                return ((DataTableRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new factura_localRow(builder);
+                return new DataTableRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(factura_localRow);
+                return typeof(DataTableRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.factura_localRowChanged != null)) {
-                    this.factura_localRowChanged(this, new factura_localRowChangeEvent(((factura_localRow)(e.Row)), e.Action));
+                if ((this.DataTableRowChanged != null)) {
+                    this.DataTableRowChanged(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -471,8 +472,8 @@ namespace EXPO60.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.factura_localRowChanging != null)) {
-                    this.factura_localRowChanging(this, new factura_localRowChangeEvent(((factura_localRow)(e.Row)), e.Action));
+                if ((this.DataTableRowChanging != null)) {
+                    this.DataTableRowChanging(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -480,8 +481,8 @@ namespace EXPO60.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.factura_localRowDeleted != null)) {
-                    this.factura_localRowDeleted(this, new factura_localRowChangeEvent(((factura_localRow)(e.Row)), e.Action));
+                if ((this.DataTableRowDeleted != null)) {
+                    this.DataTableRowDeleted(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -489,14 +490,14 @@ namespace EXPO60.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.factura_localRowDeleting != null)) {
-                    this.factura_localRowDeleting(this, new factura_localRowChangeEvent(((factura_localRow)(e.Row)), e.Action));
+                if ((this.DataTableRowDeleting != null)) {
+                    this.DataTableRowDeleting(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removefactura_localRow(factura_localRow row) {
+            public void RemoveDataTableRow(DataTableRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -523,7 +524,7 @@ namespace EXPO60.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "factura_localDataTable";
+                attribute2.FixedValue = "DataTableDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -567,46 +568,62 @@ namespace EXPO60.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class factura_localRow : global::System.Data.DataRow {
+        public partial class DataTableRow : global::System.Data.DataRow {
             
-            private factura_localDataTable tablefactura_local;
+            private DataTableDataTable tableDataTable;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal factura_localRow(global::System.Data.DataRowBuilder rb) : 
+            internal DataTableRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablefactura_local = ((factura_localDataTable)(this.Table));
+                this.tableDataTable = ((DataTableDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Cantidad {
+            public string monto_fac_local {
                 get {
                     try {
-                        return ((int)(this[this.tablefactura_local.CantidadColumn]));
+                        return ((string)(this[this.tableDataTable.monto_fac_localColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad\' de la tabla \'factura_local\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'monto_fac_local\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefactura_local.CantidadColumn] = value;
+                    this[this.tableDataTable.monto_fac_localColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string subtotal {
+            public string fecha_fac_local {
                 get {
                     try {
-                        return ((string)(this[this.tablefactura_local.subtotalColumn]));
+                        return ((string)(this[this.tableDataTable.fecha_fac_localColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'subtotal\' de la tabla \'factura_local\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_fac_local\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefactura_local.subtotalColumn] = value;
+                    this[this.tableDataTable.fecha_fac_localColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre_cliente {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable.nombre_clienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_cliente\' de la tabla \'DataTable\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.nombre_clienteColumn] = value;
                 }
             }
             
@@ -615,79 +632,63 @@ namespace EXPO60.Reportes {
             public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tablefactura_local.nombreColumn]));
+                        return ((string)(this[this.tableDataTable.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'factura_local\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefactura_local.nombreColumn] = value;
+                    this[this.tableDataTable.nombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Expr1 {
-                get {
-                    try {
-                        return ((string)(this[this.tablefactura_local.Expr1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Expr1\' de la tabla \'factura_local\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablefactura_local.Expr1Column] = value;
-                }
+            public bool Ismonto_fac_localNull() {
+                return this.IsNull(this.tableDataTable.monto_fac_localColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCantidadNull() {
-                return this.IsNull(this.tablefactura_local.CantidadColumn);
+            public void Setmonto_fac_localNull() {
+                this[this.tableDataTable.monto_fac_localColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCantidadNull() {
-                this[this.tablefactura_local.CantidadColumn] = global::System.Convert.DBNull;
+            public bool Isfecha_fac_localNull() {
+                return this.IsNull(this.tableDataTable.fecha_fac_localColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IssubtotalNull() {
-                return this.IsNull(this.tablefactura_local.subtotalColumn);
+            public void Setfecha_fac_localNull() {
+                this[this.tableDataTable.fecha_fac_localColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetsubtotalNull() {
-                this[this.tablefactura_local.subtotalColumn] = global::System.Convert.DBNull;
+            public bool Isnombre_clienteNull() {
+                return this.IsNull(this.tableDataTable.nombre_clienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre_clienteNull() {
+                this[this.tableDataTable.nombre_clienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsnombreNull() {
-                return this.IsNull(this.tablefactura_local.nombreColumn);
+                return this.IsNull(this.tableDataTable.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetnombreNull() {
-                this[this.tablefactura_local.nombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsExpr1Null() {
-                return this.IsNull(this.tablefactura_local.Expr1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetExpr1Null() {
-                this[this.tablefactura_local.Expr1Column] = global::System.Convert.DBNull;
+                this[this.tableDataTable.nombreColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -695,22 +696,22 @@ namespace EXPO60.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class factura_localRowChangeEvent : global::System.EventArgs {
+        public class DataTableRowChangeEvent : global::System.EventArgs {
             
-            private factura_localRow eventRow;
+            private DataTableRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public factura_localRowChangeEvent(factura_localRow row, global::System.Data.DataRowAction action) {
+            public DataTableRowChangeEvent(DataTableRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public factura_localRow Row {
+            public DataTableRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -738,7 +739,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class factura_localTableAdapter : global::System.ComponentModel.Component {
+    public partial class DataTableTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.Odbc.OdbcDataAdapter _adapter;
         
@@ -752,7 +753,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public factura_localTableAdapter() {
+        public DataTableTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -849,11 +850,11 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
             this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "factura_local";
-            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
-            tableMapping.ColumnMappings.Add("subtotal", "subtotal");
+            tableMapping.DataSetTable = "DataTable";
+            tableMapping.ColumnMappings.Add("monto_fac_local", "monto_fac_local");
+            tableMapping.ColumnMappings.Add("fecha_fac_local", "fecha_fac_local");
+            tableMapping.ColumnMappings.Add("nombre_cliente", "nombre_cliente");
             tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -870,9 +871,9 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        tp.Cantidad, tp.subtotal, ta.nombre, te.nombre AS Expr1\r\nFROM      " +
-                "      detalle_fac_local tp, productos ta, local_alimentos te\r\nWHERE        tp.id" +
-                "_producto = ta.id_producto AND tp.id_local = te.id_local";
+            this._commandCollection[0].CommandText = "SELECT        tp.monto_fac_local, tp.fecha_fac_local, tp.nombre_cliente, te.nombr" +
+                "e\r\nFROM            factura_local tp, usuario te\r\nWHERE        tp.id_usuario = te" +
+                ".id_usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -880,7 +881,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FacturaLocalDatos(DataSetFacturaLocal.factura_localDataTable dataTable) {
+        public virtual int FacturaLocal(DataSetFacturaLocal.DataTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -893,9 +894,9 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetFacturaLocal.factura_localDataTable GetData() {
+        public virtual DataSetFacturaLocal.DataTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetFacturaLocal.factura_localDataTable dataTable = new DataSetFacturaLocal.factura_localDataTable();
+            DataSetFacturaLocal.DataTableDataTable dataTable = new DataSetFacturaLocal.DataTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

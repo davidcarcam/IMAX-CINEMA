@@ -34,10 +34,6 @@ namespace EXPO60.Vista
         }
         public void MostrarComboBox()
         {
-            cmbTipo_Pago.DataSource = Funciones_Factura_Local.pago();
-            cmbTipo_Pago.ValueMember = "id_tipo_pago";
-            cmbTipo_Pago.DisplayMember = "tipo_pago";
-
             cmbusuario.DataSource = Funciones_Factura_Local.usuario();
             cmbusuario.ValueMember = "id_usuario";
             cmbusuario.DisplayMember = "usuario";
@@ -229,8 +225,8 @@ namespace EXPO60.Vista
 
         private void BtnFacturaLocal_Click(object sender, EventArgs e)
         {
-            ReporteFacturaLocal repro = new ReporteFacturaLocal();
-            repro.Show();
+            Factura form2 = new Factura();
+            form2.Show();
         }
     }
 }

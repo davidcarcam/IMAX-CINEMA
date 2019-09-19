@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO empresas(empresa, direccion_empr ) VALUES ('{0}','{1}')", add.nombreEmpresa, add.direccionEmpresa), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO empresas(empresa, direccion_empr ) VALUES ('{0}','{1}')", add.nombre, add.direccionEmpresa), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET empresa ='{0}' , direccion_empr = '{1}'",upd.nombreEmpresa,upd.direccionEmpresa ),Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE empresas SET empresa ='{0}' , direccion_empr = '{1}'",upd.nombre,upd.direccionEmpresa ),Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if ( retorno == true)
                 {

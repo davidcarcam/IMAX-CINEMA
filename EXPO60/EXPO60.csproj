@@ -60,6 +60,7 @@
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
     <Compile Include="Controlador\Constructor_Actores.cs" />
     <Compile Include="Controlador\Constructor_Asientos.cs" />
+    <Compile Include="Controlador\Constructor_ConfigEmpresa.cs" />
     <Compile Include="Controlador\Constructor_funciones.cs" />
     <Compile Include="Controlador\Constructor_localAlimentos.cs" />
     <Compile Include="Controlador\Constructor_pelicula.cs" />
@@ -77,6 +78,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Conexion_Correo.cs" />
+    <Compile Include="Modelo\ConfiguracionEmpresa.cs" />
     <Compile Include="Modelo\FuncionesAlimentos.cs" />
     <Compile Include="Modelo\FuncionesDetalleTicket.cs" />
     <Compile Include="Modelo\funcionesEmpresa.cs" />
@@ -128,6 +130,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetUsuario.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteAsientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,12 +147,6 @@
     </Compile>
     <Compile Include="Reportes\ReporteDetalleTicket.Designer.cs">
       <DependentUpon>ReporteDetalleTicket.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ReporteFacturaLocal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ReporteFacturaLocal.Designer.cs">
-      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ReporteProductos.cs">
       <SubType>Form</SubType>
@@ -193,6 +195,12 @@
     </Compile>
     <Compile Include="Vista\FrmDetalleTicket.Designer.cs">
       <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmEmpresa.Designer.cs">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmEmpresas.cs">
       <SubType>Form</SubType>
@@ -315,19 +323,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
-    <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\Report4.rdlc" />
     <EmbeddedResource Include="Reportes\Report5.rdlc" />
+    <EmbeddedResource Include="Reportes\Report6.rdlc" />
+    <EmbeddedResource Include="Reportes\Report7.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteAsientos.resx">
       <DependentUpon>ReporteAsientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteDetalleTicket.resx">
       <DependentUpon>ReporteDetalleTicket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteFacturaLocal.resx">
-      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteProductos.resx">
       <DependentUpon>ReporteProductos.cs</DependentUpon>
@@ -352,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmDetalleTicket.resx">
       <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmEmpresa.resx">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmEmpresas.resx">
       <DependentUpon>FrmEmpresas.cs</DependentUpon>
