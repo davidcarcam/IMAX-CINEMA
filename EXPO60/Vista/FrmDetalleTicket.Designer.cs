@@ -46,6 +46,7 @@
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnDetalleTicket = new System.Windows.Forms.ToolStripButton();
             this.grpDetalleTicket.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).BeginInit();
@@ -155,7 +156,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.BtnDetalleTicket});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1003, 25);
@@ -344,6 +346,15 @@
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
             // 
+            // BtnDetalleTicket
+            // 
+            this.BtnDetalleTicket.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnDetalleTicket.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnDetalleTicket.Image = ((System.Drawing.Image)(resources.GetObject("BtnDetalleTicket.Image")));
+            this.BtnDetalleTicket.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnDetalleTicket.Name = "BtnDetalleTicket";
+            this.BtnDetalleTicket.Size = new System.Drawing.Size(23, 22);
+            // 
             // FrmDetalleTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,5 +393,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.ToolStripButton BtnDetalleTicket;
     }
 }

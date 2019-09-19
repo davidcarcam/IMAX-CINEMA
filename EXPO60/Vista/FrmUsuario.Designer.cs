@@ -63,6 +63,7 @@ namespace EXPO60.Vista
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnUsuario = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvusuarios)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -414,7 +415,8 @@ namespace EXPO60.Vista
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.BtnUsuario});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -515,6 +517,17 @@ namespace EXPO60.Vista
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de usuarios";
             // 
+            // BtnUsuario
+            // 
+            this.BtnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuario.Image")));
+            this.BtnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnUsuario.Name = "BtnUsuario";
+            this.BtnUsuario.Size = new System.Drawing.Size(23, 22);
+            this.BtnUsuario.Text = "toolStripButton1";
+            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,5 +582,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.MaskedTextBox txttelefono;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton BtnUsuario;
     }
 }

@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using EXPO60.Modelo;
 using EXPO60.Controlador;
 using System.Security.Cryptography;
-
+using EXPO60.Reportes;
 
 namespace EXPO60.Vista
 {
@@ -294,7 +294,7 @@ namespace EXPO60.Vista
         public void Mostrarusuarios()
         {
             dgvusuarios.DataSource = FuncionUsuario.mostrarusuario();
-            this.dgvusuarios.Columns[0].Visible = false;
+            this.dgvusuarios.Columns[0].Visible = true;
             this.dgvusuarios.Columns[1].HeaderText = "Nombres";
             this.dgvusuarios.Columns[1].Width = 80;
             this.dgvusuarios.Columns[2].HeaderText = "Apellidos";
@@ -400,6 +400,12 @@ namespace EXPO60.Vista
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void BtnUsuario_Click(object sender, EventArgs e)
+        {
+            ReporteUsuario repro = new ReporteUsuario();
+            repro.Show();
         }
     }
 
