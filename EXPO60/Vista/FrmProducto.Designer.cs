@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.BtnProductos = new System.Windows.Forms.ToolStripButton();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
             this.cmbprov = new System.Windows.Forms.ComboBox();
             this.cmblocal = new System.Windows.Forms.ComboBox();
@@ -130,7 +131,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.BtnProductos});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -146,6 +148,16 @@
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // BtnProductos
+            // 
+            this.BtnProductos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnProductos.Image = global::EXPO60.Properties.Resources.connection_indicator;
+            this.BtnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnProductos.Name = "BtnProductos";
+            this.BtnProductos.Size = new System.Drawing.Size(109, 22);
+            this.BtnProductos.Text = "Generar reporte";
+            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
             // cmbtipo
             // 
@@ -432,11 +444,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnCerrar;
+        private System.Windows.Forms.ToolStripButton BtnProductos;
     }
 }

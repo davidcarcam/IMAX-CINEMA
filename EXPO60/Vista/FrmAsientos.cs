@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
 using MySql.Data.MySqlClient;
-
+using EXPO60.Reportes;
 
 namespace EXPO60.Vista
 {
@@ -184,6 +184,12 @@ namespace EXPO60.Vista
         }
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
+        }
+
+        private void BtnAsientos_Click(object sender, EventArgs e)
+        {
+            ReporteAsientos repro = new ReporteAsientos();
+            repro.Show();
         }
     }
 }

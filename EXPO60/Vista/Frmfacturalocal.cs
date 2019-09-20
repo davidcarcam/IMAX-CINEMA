@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
 using MySql.Data.MySqlClient;
+using EXPO60.Reportes;
 
 namespace EXPO60.Vista
 {
@@ -33,16 +34,12 @@ namespace EXPO60.Vista
         }
         public void MostrarComboBox()
         {
-            cmbTipo_Pago.DataSource = Funciones_Factura_Local.pago();
-            cmbTipo_Pago.ValueMember = "id_tipo_pago"; 
-            cmbTipo_Pago.DisplayMember = "tipo_pago";
-
             cmbusuario.DataSource = Funciones_Factura_Local.usuario();
-            cmbusuario.ValueMember = "id_usuario"; 
-            cmbusuario.DisplayMember = "usuario"; 
+            cmbusuario.ValueMember = "id_usuario";
+            cmbusuario.DisplayMember = "usuario";
         }
         public Frmfacturalocal()
-        { 
+        {
             InitializeComponent();
         }
         private void Frmfacturalocal_Load(object sender, EventArgs e)
@@ -50,7 +47,7 @@ namespace EXPO60.Vista
             Mostrar_Factura_Local();
             this.dgvfacturaloc.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
-            btneliminar.Enabled = false;          
+            btneliminar.Enabled = false;
         }
         public void Mostrar_Factura_Local()
         {
@@ -58,7 +55,7 @@ namespace EXPO60.Vista
         }
         public void Limpiar_Factura_Local()
         {
-            
+
             txtmonto.Clear();
             txtnombre.Clear();
             mskfecha.Clear();
@@ -93,7 +90,7 @@ namespace EXPO60.Vista
         }
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-                this.Close();
+            this.Close();
         }
         private void TextBox2_TextChanged(object sender, EventArgs e)
         {
@@ -164,7 +161,7 @@ namespace EXPO60.Vista
         }
         private void TxtMont_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >=32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
                 e.Handled = true;
                 return;
@@ -172,7 +169,7 @@ namespace EXPO60.Vista
         }
         private void MaskedTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >=32 && e.KeyChar <=47) || (e.KeyChar >=58 && e.KeyChar <=255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
                 e.Handled = true;
                 return;
@@ -225,5 +222,12 @@ namespace EXPO60.Vista
             MostrarComboBox();
             MostrarFactura();
         }
+
+        private void BtnFacturaLocal_Click(object sender, EventArgs e)
+        {
+            Factura form2 = new Factura();
+            form2.Show();
+        }
     }
 }
+

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
-
+using EXPO60.Reportes;
 
 namespace EXPO60.Vista
 {
@@ -220,6 +220,12 @@ namespace EXPO60.Vista
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
+        }
+
+        private void BtnProductos_Click(object sender, EventArgs e)
+        {
+            ReporteProductos repro = new ReporteProductos();
+            repro.Show();
         }
     }
 }

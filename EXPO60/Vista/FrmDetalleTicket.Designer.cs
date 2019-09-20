@@ -34,15 +34,16 @@
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.txtFila = new System.Windows.Forms.TextBox();
-            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbfuncion = new System.Windows.Forms.ComboBox();
             this.cmbAsiento = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.idDetalletic = new System.Windows.Forms.TextBox();
             this.dgvtickets = new System.Windows.Forms.DataGridView();
+            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.BtnDetalleTicket = new System.Windows.Forms.ToolStripButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -116,61 +117,16 @@
             this.txtFila.Size = new System.Drawing.Size(22, 13);
             this.txtFila.TabIndex = 49;
             // 
-            // btnagregar
-            // 
-            this.btnagregar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnagregar.BackColor = System.Drawing.Color.Maroon;
-            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "Agregar";
-            this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnagregar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnagregar.Iconimage")));
-            this.btnagregar.Iconimage_right = null;
-            this.btnagregar.Iconimage_right_Selected = null;
-            this.btnagregar.Iconimage_Selected = null;
-            this.btnagregar.IconMarginLeft = 0;
-            this.btnagregar.IconMarginRight = 0;
-            this.btnagregar.IconRightVisible = true;
-            this.btnagregar.IconRightZoom = 0D;
-            this.btnagregar.IconVisible = true;
-            this.btnagregar.IconZoom = 90D;
-            this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(7, 213);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnagregar.selected = false;
-            this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 3;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnagregar.Textcolor = System.Drawing.Color.White;
-            this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.BtnDetalleTicket});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1003, 25);
             this.toolStrip1.TabIndex = 47;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
-            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
-            this.BtnCerrar.Text = "Cerrar Formulario";
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // cmbfuncion
             // 
@@ -237,6 +193,61 @@
             this.dgvtickets.Size = new System.Drawing.Size(980, 281);
             this.dgvtickets.TabIndex = 0;
             this.dgvtickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtickets_CellContentClick);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnagregar.BackColor = System.Drawing.Color.Maroon;
+            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnagregar.BorderRadius = 0;
+            this.btnagregar.ButtonText = "Agregar";
+            this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnagregar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnagregar.Iconimage")));
+            this.btnagregar.Iconimage_right = null;
+            this.btnagregar.Iconimage_right_Selected = null;
+            this.btnagregar.Iconimage_Selected = null;
+            this.btnagregar.IconMarginLeft = 0;
+            this.btnagregar.IconMarginRight = 0;
+            this.btnagregar.IconRightVisible = true;
+            this.btnagregar.IconRightZoom = 0D;
+            this.btnagregar.IconVisible = true;
+            this.btnagregar.IconZoom = 90D;
+            this.btnagregar.IsTab = false;
+            this.btnagregar.Location = new System.Drawing.Point(7, 213);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnagregar.selected = false;
+            this.btnagregar.Size = new System.Drawing.Size(241, 48);
+            this.btnagregar.TabIndex = 3;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnagregar.Textcolor = System.Drawing.Color.White;
+            this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // BtnDetalleTicket
+            // 
+            this.BtnDetalleTicket.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnDetalleTicket.Image = global::EXPO60.Properties.Resources.connection_indicator;
+            this.BtnDetalleTicket.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnDetalleTicket.Name = "BtnDetalleTicket";
+            this.BtnDetalleTicket.Size = new System.Drawing.Size(109, 22);
+            this.BtnDetalleTicket.Text = "Generar reporte";
             // 
             // btneliminar
             // 
@@ -382,5 +393,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.ToolStripButton BtnDetalleTicket;
     }
 }

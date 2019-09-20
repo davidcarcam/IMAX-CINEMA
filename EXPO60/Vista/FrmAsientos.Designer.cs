@@ -38,6 +38,7 @@
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolbtnCerrar_Asientos = new System.Windows.Forms.ToolStripButton();
+            this.BtnAsientos = new System.Windows.Forms.ToolStripButton();
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.cmbasiento = new System.Windows.Forms.ComboBox();
             this.lblEstado_Asiento = new System.Windows.Forms.Label();
@@ -139,7 +140,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolbtnCerrar_Asientos});
+            this.toolbtnCerrar_Asientos,
+            this.BtnAsientos});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -155,6 +157,16 @@
             this.toolbtnCerrar_Asientos.Size = new System.Drawing.Size(107, 22);
             this.toolbtnCerrar_Asientos.Text = "Cerrar Asientos";
             this.toolbtnCerrar_Asientos.Click += new System.EventHandler(this.ToolStripButton1_Click);
+            // 
+            // BtnAsientos
+            // 
+            this.BtnAsientos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnAsientos.Image = global::EXPO60.Properties.Resources.connection_indicator;
+            this.BtnAsientos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAsientos.Name = "BtnAsientos";
+            this.BtnAsientos.Size = new System.Drawing.Size(109, 22);
+            this.BtnAsientos.Text = "Generar reporte";
+            this.BtnAsientos.Click += new System.EventHandler(this.BtnAsientos_Click);
             // 
             // cmbestado
             // 
@@ -421,5 +433,6 @@
         private System.Windows.Forms.ComboBox cmbfila;
         private System.Windows.Forms.ComboBox cmbsala;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton BtnAsientos;
     }
 }
