@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace EXPO60.Reportes
 {
-    public partial class ReporteProducto : Form
+    public partial class ReporteProductos : Form
     {
-        public ReporteProducto()
+        public ReporteProductos()
         {
             InitializeComponent();
         }
 
-        private void ReporteProducto_Load(object sender, EventArgs e)
+        private void ReporteProductos_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();

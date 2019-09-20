@@ -404,8 +404,7 @@ namespace EXPO60.Vista
 
         private void BtnUsuario_Click(object sender, EventArgs e)
         {
-            ReporteUsuario repro = new ReporteUsuario();
-            repro.Show();
+           
         }
     }
 

@@ -239,8 +239,7 @@ namespace EXPO60.Vista
         }
         private void BtnFacturaLocal_Click(object sender, EventArgs e)
         {
-            Factura form2 = new Factura();
-            form2.Show();
+          
         }
     }
 }

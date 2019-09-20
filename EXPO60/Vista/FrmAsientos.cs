@@ -175,8 +175,7 @@ namespace EXPO60.Vista
         }
         private void BtnAsientos_Click(object sender, EventArgs e)
         {
-            ReporteAsientos repro = new ReporteAsientos();
-            repro.Show();
+           
         }
     }
 }

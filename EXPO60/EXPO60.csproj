@@ -99,11 +99,16 @@
     <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\ReporteProducto.cs">
+    <Compile Include="Reportes\DataSetProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\ReporteProducto.Designer.cs">
-      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    <Compile Include="Reportes\ReporteProductos.Designer.cs">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConfirmarContraseña.cs">
       <SubType>Form</SubType>
@@ -268,8 +273,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reportes\ReporteProducto.resx">
-      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteProductos.resx">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConfirmarContraseña.resx">
       <DependentUpon>ConfirmarContraseña.cs</DependentUpon>
@@ -360,6 +367,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\DataSetProducto.xsc">
+      <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetProducto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProducto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetProducto.xss">
+      <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </None>
     <None Include="Resources\talk_male_96px.png" />
     <None Include="Resources\test_passed_96px.png" />
     <None Include="Resources\cancel.png" />
