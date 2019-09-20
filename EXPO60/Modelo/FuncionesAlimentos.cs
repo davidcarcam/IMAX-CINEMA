@@ -42,7 +42,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM  local_alimentos";
+                string query = "SELECT id_local AS ID, nombre, telefono,estado_local FROM local_alimentos INNER JOIN estado_local ON local_alimentos.id_estado_local = local_alimentos.id_estado_local";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();

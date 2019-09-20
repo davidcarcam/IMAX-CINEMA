@@ -289,3 +289,6 @@ C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CoreCompileInputs.cache
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CopyComplete
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources

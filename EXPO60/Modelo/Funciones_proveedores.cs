@@ -101,16 +101,16 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception)
+            catch (Exception d)
             {
 
-                MessageBox.Show("oops erro de coneccion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("oops error de coneccion consulte con el administrador"+d,  "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }
         public static DataTable ObtenerEstado()
         {
-            string query = "SELECT * FROM estado_prov";
+            string query = "SELECT id_proveedor AS ID, nombre, apellido,correo,direccion,dui,telefono, empresa,estado_prov FROM proveedores INNER JOIN empresas ON proveedores.id_empresa = empresas.id_empresa INNER JOIN estado_prov ON estado_prov.id_estado_prov = empresas.id_empresa ";
             DataTable data = new DataTable();
             try
             {
