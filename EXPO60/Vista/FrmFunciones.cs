@@ -160,7 +160,7 @@ namespace EXPO60.Vista
         {
             mostrarFunciones();
             mostrarET();
-           
+            this.dgvFuncion.Columns[0].Visible = false;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
         }
@@ -194,7 +194,7 @@ namespace EXPO60.Vista
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            vaciarampos();
+            
         }
         private void dgvFuncion_CellClick(object sender, DataGridViewCellEventArgs e)
         {

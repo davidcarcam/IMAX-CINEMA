@@ -220,6 +220,7 @@ namespace EXPO60.Vista
         private void Frmfacturalocal_Load_1(object sender, EventArgs e)
         {
             MostrarComboBox();
+            this.dgvfacturaloc.Columns[0].Visible = false;
             MostrarFactura();
         }
 

@@ -140,6 +140,7 @@ namespace EXPO60.Vista
         private void btnmostrar_Click(object sender, EventArgs e)
         {
             mostrarLocal();
+            vaciarampos();
         }
 
         private void Frmalimentos_Load(object sender, EventArgs e)

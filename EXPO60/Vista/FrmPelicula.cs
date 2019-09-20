@@ -152,7 +152,7 @@ namespace EXPO60.Vista
         {
             mostrarPeliculas();
             mostrarET();
-    
+            this.dgvpeliculas.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }
