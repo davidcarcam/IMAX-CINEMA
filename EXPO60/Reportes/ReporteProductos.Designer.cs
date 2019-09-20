@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataSetProducto = new EXPO60.Reportes.DataSetProducto();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new EXPO60.Reportes.DataSetProductoTableAdapters.productoTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,7 +61,10 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report1.rdlc";
+            reportDataSource1.Name = "Producto";
+            reportDataSource1.Value = this.productoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(784, 455);
@@ -66,6 +74,15 @@
             // 
             this.DataSetProducto.DataSetName = "DataSetProducto";
             this.DataSetProducto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "producto";
+            this.productoBindingSource.DataSource = this.DataSetProducto;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // ReporteProductos
             // 
@@ -82,6 +99,7 @@
             this.Load += new System.EventHandler(this.ReporteProductos_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataSetProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +111,7 @@
         private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private DataSetProducto DataSetProducto;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private DataSetProductoTableAdapters.productoTableAdapter productoTableAdapter;
     }
 }

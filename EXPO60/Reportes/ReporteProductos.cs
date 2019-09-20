@@ -19,6 +19,8 @@ namespace EXPO60.Reportes
 
         private void ReporteProductos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSetProducto.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Productos(this.DataSetProducto.producto);
 
             this.reportViewer1.RefreshReport();
         }

@@ -455,7 +455,7 @@
                 <TextRun>
                   <Value>INSTITUTO TECNICO RICALDONE </Value>
                   <Style>
-                    <FontSize>16pt</FontSize>
+                    <FontSize>24pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -468,7 +468,7 @@
                 <TextRun>
                   <Value>REPORTE DE PRODUCTOS</Value>
                   <Style>
-                    <FontSize>16pt</FontSize>
+                    <FontSize>24pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
