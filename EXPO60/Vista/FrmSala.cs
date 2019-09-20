@@ -78,7 +78,7 @@ namespace EXPO60.Vista
             Actualizar.NumeroSala = txtNumero_Sala.Text;
             Actualizar.CapacidadSala = txtCapacidad_Sala.Text;
             Actualizar.EstadoSala = Convert.ToInt16(cmbESTADO_SALA.SelectedValue);
-            Funciones_Salas.ActualizarSala(Actualizar);
+            Funciones_Salas.Actualizar_Sala(Actualizar);
         }
         private void BtnAgregar_Sala_Click(object sender, EventArgs e)
         {
@@ -105,9 +105,9 @@ namespace EXPO60.Vista
         }
         private void BtnActualizar_Salas_Click(object sender, EventArgs e)
         {
+            Limpiar_Datos();
             Modificar_Salas();
             Mostrar_Salas();
-            Limpiar_Datos();                     
             btnActualizar_Sala.Enabled = false;
             btnAgregar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = false;
@@ -291,11 +291,24 @@ namespace EXPO60.Vista
             btnActualizar_Sala.Enabled = true;
             btnEliminar_Sala.Enabled = true;
             btnAgregar_Sala.Enabled = false;
-        }        
+        }
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void txtbuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtbuscar_TextChanged_1(object sender, EventArgs e)
         {
             if (txtbuscar.Text!= "")
@@ -321,6 +334,16 @@ namespace EXPO60.Vista
             {
                 Mostrar_Salas();
             }
+        }
+
+        private void txtNumero_Sala_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar_Datos();
         }
     }
 }
