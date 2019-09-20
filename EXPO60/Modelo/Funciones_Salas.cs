@@ -40,7 +40,7 @@ namespace EXPO60.Modelo
             DataTable salas;
             try
             {
-                string query1 = "SELECT * FROM salas";
+                string query1 = "SELECT ts.id_sala, ts.num_sala,ts.capacidad, te.estado_sala FROM salas ts , estado_sala te WHERE te.id_estado_sala = ts.id_estado_sala";
                 MySqlCommand cmdread1 = new MySqlCommand(string.Format(query1), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter1 = new MySqlDataAdapter(cmdread1);
                 salas = new DataTable();
@@ -57,26 +57,27 @@ namespace EXPO60.Modelo
                 Conexion.ObtenerConexion().Close();
             }
         }
-        public static bool Actualizar_Sala(Constructor_Salas upd)
+        public static bool ActualizarSala(Constructor_Salas upd)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate1 = new MySqlCommand(string.Format("UPDATE salas SET num_sala = '{1}', capacidad = '{2}', id_estado_sala = '{3}' WHERE id_sala = '{0}'", upd.IDSala, upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala), Conexion.ObtenerConexion());
-                retorno = Convert.ToBoolean(cmdupdate1.ExecuteNonQuery());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE salas SET num_sala = '{0}', capacidad = '{1}', id_estado_sala = '{2}' WHERE id_sala = '{3}'", upd.NumeroSala, upd.CapacidadSala, upd.EstadoSala, upd.IDSala), Conexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
-                    MessageBox.Show("Los datos de la sala han sido actualizados satisfactoriamente", "Actualizacion safistactoria", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La sala ha sido actualizada correctamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Fallo al actualizar los datos de la sala", "Fallo en actualizar datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Error al actualizar", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
                 return retorno;
             }
-            catch (Exception c)
+            catch (Exception e)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", c + "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }

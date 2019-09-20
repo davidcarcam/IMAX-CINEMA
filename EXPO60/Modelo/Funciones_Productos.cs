@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio, id_proveedor,id_tipo_prod, id_local) VALUES ('{0}', '{1}', '{2}', '{3}','{4}' )", add.nombre, add.precio, add.proveedor, add.tipoproducto, add.local ), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre_prod, precio, id_proveedor,id_tipo_prod, id_local) VALUES ('{0}', '{1}', '{2}', '{3}','{4}' )", add.nombre, add.precio, add.proveedor, add.tipoproducto, add.local ), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -40,16 +40,16 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM productos";
+                string query = "SELECT id_producto AS ID, nombre_prod,precio,nombre,tipo_producto,nombre_local FROM productos INNER JOIN proveedores ON productos.id_proveedor = proveedores.id_proveedor INNER JOIN tipo_producto ON productos.id_tipo_prod = tipo_producto.id_tipo_prod INNER JOIN local_alimentos ON productos.id_local = local_alimentos.id_local";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adapter.Fill(data);
                 return data;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. ", "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. "+ex, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return data = new DataTable();
             }
             finally
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET nombre = '{0}', precio = '{1}', id_local = '{2}', id_proveedor = '{3}', id_tipo_prod = '{4}' WHERE id_producto = '{5}'",upd.nombre, upd.precio, upd.local, upd.proveedor, upd.tipoproducto, upd.idproducto), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET nombre_prod = '{0}', precio = '{1}', id_local = '{2}', id_proveedor = '{3}', id_tipo_prod = '{4}' WHERE id_producto = '{5}'",upd.nombre, upd.precio, upd.local, upd.proveedor, upd.tipoproducto, upd.idproducto), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {

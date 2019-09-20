@@ -32,7 +32,6 @@
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.btnempresa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnidioma = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnfactura = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnproveedores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnfaclocal = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -53,7 +52,6 @@
             this.PanelContenedor.BackColor = System.Drawing.Color.Maroon;
             this.PanelContenedor.Controls.Add(this.btnempresa);
             this.PanelContenedor.Controls.Add(this.label1);
-            this.PanelContenedor.Controls.Add(this.btnidioma);
             this.PanelContenedor.Controls.Add(this.btnfactura);
             this.PanelContenedor.Controls.Add(this.btnproveedores);
             this.PanelContenedor.Controls.Add(this.btnfaclocal);
@@ -97,7 +95,7 @@
             this.btnempresa.IconVisible = true;
             this.btnempresa.IconZoom = 75D;
             this.btnempresa.IsTab = false;
-            this.btnempresa.Location = new System.Drawing.Point(376, 437);
+            this.btnempresa.Location = new System.Drawing.Point(50, 441);
             this.btnempresa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnempresa.Name = "btnempresa";
             this.btnempresa.Normalcolor = System.Drawing.Color.White;
@@ -123,45 +121,6 @@
             this.label1.Size = new System.Drawing.Size(511, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccione  un  formularios para ingresar datos";
-            // 
-            // btnidioma
-            // 
-            this.btnidioma.Activecolor = System.Drawing.Color.DarkGray;
-            this.btnidioma.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnidioma.BackColor = System.Drawing.Color.White;
-            this.btnidioma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnidioma.BorderRadius = 0;
-            this.btnidioma.ButtonText = "Detalle de Idioma";
-            this.btnidioma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnidioma.DisabledColor = System.Drawing.Color.Gray;
-            this.btnidioma.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnidioma.ForeColor = System.Drawing.Color.Transparent;
-            this.btnidioma.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnidioma.Iconimage = global::EXPO60.Properties.Resources.talk_male_96px;
-            this.btnidioma.Iconimage_right = null;
-            this.btnidioma.Iconimage_right_Selected = null;
-            this.btnidioma.Iconimage_Selected = null;
-            this.btnidioma.IconMarginLeft = 0;
-            this.btnidioma.IconMarginRight = 0;
-            this.btnidioma.IconRightVisible = true;
-            this.btnidioma.IconRightZoom = 0D;
-            this.btnidioma.IconVisible = true;
-            this.btnidioma.IconZoom = 75D;
-            this.btnidioma.IsTab = false;
-            this.btnidioma.Location = new System.Drawing.Point(50, 437);
-            this.btnidioma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnidioma.Name = "btnidioma";
-            this.btnidioma.Normalcolor = System.Drawing.Color.White;
-            this.btnidioma.OnHovercolor = System.Drawing.Color.Red;
-            this.btnidioma.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnidioma.selected = false;
-            this.btnidioma.Size = new System.Drawing.Size(237, 62);
-            this.btnidioma.TabIndex = 6;
-            this.btnidioma.Text = "Detalle de Idioma";
-            this.btnidioma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnidioma.Textcolor = System.Drawing.Color.Black;
-            this.btnidioma.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnidioma.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // btnfactura
             // 
@@ -651,7 +610,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelContenedor;
-        private Bunifu.Framework.UI.BunifuFlatButton btnidioma;
         private Bunifu.Framework.UI.BunifuFlatButton btnfactura;
         private Bunifu.Framework.UI.BunifuFlatButton btnproveedores;
         private Bunifu.Framework.UI.BunifuFlatButton btnfaclocal;

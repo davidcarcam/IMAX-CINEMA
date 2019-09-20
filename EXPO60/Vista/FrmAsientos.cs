@@ -68,6 +68,10 @@ namespace EXPO60.Vista
         
             Funciones_Asientos.Actualizar_Asiento(Actualizar);
         }
+        void LimpiarCampos()
+        {
+            txtbuscar.Clear();            
+        }
         private void FrmAsientos_Load(object sender, EventArgs e)
         {
             Mostrar_Asientos();
@@ -98,8 +102,11 @@ namespace EXPO60.Vista
         }
         private void BtnMostrar_Asientos_Click(object sender, EventArgs e)
         {
+            LimpiarCampos();
             Mostrar_Asientos();
             btnAgregar_Asiento.Enabled = true;
+            btnActualizar_Asiento.Enabled = false;
+            btnEliminar_Asiento.Enabled = false;
         }
         private void BtnActualizar_Asiento_Click(object sender, EventArgs e)
         {
@@ -128,14 +135,6 @@ namespace EXPO60.Vista
             btnEliminar_Asiento.Enabled = true;
             btnAgregar_Asiento.Enabled = false;
         }
-        private void TxtNumero_Asiento_Validated(object sender, EventArgs e)
-        {
-
-        }
-        private void TxtNumero_Asiento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar el formulario?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -147,10 +146,6 @@ namespace EXPO60.Vista
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
@@ -178,14 +173,6 @@ namespace EXPO60.Vista
                 Mostrar_Asientos();
             }
         }
-        private void txtNumero_Asiento_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void btnlimpiar_Click(object sender, EventArgs e)
-        {
-        }
-
         private void BtnAsientos_Click(object sender, EventArgs e)
         {
             ReporteAsientos repro = new ReporteAsientos();
