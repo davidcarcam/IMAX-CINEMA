@@ -121,6 +121,20 @@ namespace EXPO60.Vista
 
         private void FrmNuevo_Load(object sender, EventArgs e)
         {
+            btnA.Location = new Point(12, 68);
+            btnB.Location = new Point(12, 126);
+            btnC.Location = new Point(12, 184);
+            btnD.Location = new Point(12, 242);
+            btnE.Location = new Point(12, 300);
+
+            btnA1.Hide(); btnA2.Hide(); btnA3.Hide(); btnA4.Hide();
+
+            btnB1.Hide(); btnB2.Hide(); btnB3.Hide();
+
+            btnC1.Hide(); btnC2.Hide();
+
+            btnD1.Hide(); btnD2.Hide(); btnD3.Hide();
+
             btnnormal.Visible = false;
             toolStripButton1.Visible = false;
             toolStripLabel1.Visible = false;
@@ -129,57 +143,57 @@ namespace EXPO60.Vista
 
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmPersonajes>();
+            
         }
 
         private void bunifuFlatButton20_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmTicket>();
+            
         }
 
         private void bunifuFlatButton19_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmFunciones>();
+            
         }
 
         private void bunifuFlatButton18_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmSala>();
+            
         }
 
         private void bunifuFlatButton17_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmAsientos>();
+            
         }
 
         private void bunifuFlatButton16_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmPelicula>();
+            
         }
 
         private void bunifuFlatButton15_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmProveedores>();
+            
         }
 
         private void bunifuFlatButton14_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmProducto>();
+            
         }
 
         private void bunifuFlatButton13_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Frmalimentos>();
+            
         }
 
         private void bunifuFlatButton12_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Frmfacturalocal>();
+            
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmBotones>();
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -247,6 +261,331 @@ namespace EXPO60.Vista
             this.Width = 1268;
             this.Height = 572;
             this.CenterToScreen();
+        }
+
+        private void Peliculas(object sender, EventArgs e)
+        {
+            btnA.Location = new Point(12, 68);
+            btnB.Location = new Point(12, 126);
+            btnC.Location = new Point(12, 332);
+            btnD.Location = new Point(12, 390);
+            btnE.Location = new Point(12, 448);
+
+            btnB1.Location = new Point(12, 176);
+            btnB2.Location = new Point(12, 225);
+            btnB3.Location = new Point(12, 274);
+
+            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+            {
+                btnA.BringToFront();
+                btnB.BringToFront();
+                btnC.BringToFront();
+                btnD.BringToFront();
+                btnE.BringToFront();
+
+                btnB1.Visible = false;
+                btnB2.Visible = false;
+                btnB3.Visible = false;
+            }
+            else
+            {
+                btnB1.Visible = true;
+                btnB2.Visible = true;
+                btnB3.Visible = true;
+            }
+            if (btnB1.Visible == false && btnB2.Visible == false && btnB3.Visible == false)
+            {
+                btnA.Location = new Point(12, 68);
+                btnB.Location = new Point(12, 126);
+                btnC.Location = new Point(12, 184);
+                btnD.Location = new Point(12, 242);
+                btnE.Location = new Point(12, 300);
+            }
+            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+            {
+                btnA1.Visible = false;
+                btnA2.Visible = false;
+                btnA3.Visible = false;
+                btnA4.Visible = false;
+            }
+            if (btnC1.Visible == true && btnC2.Visible == true)
+            {
+                btnC1.Visible = false;
+                btnC2.Visible = false;
+            }
+            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+            {
+                btnD1.Visible = false;
+                btnD2.Visible = false;
+                btnD3.Visible = false;
+            }
+        }
+
+        private void Suministro(object sender, EventArgs e)
+        {
+            btnA.Location = new Point(12, 68);
+            btnB.Location = new Point(12, 126);
+            btnC.Location = new Point(12, 184);
+            btnD.Location = new Point(12, 341);
+            btnE.Location = new Point(12, 399);
+
+            btnC1.Location = new Point(12, 234);
+            btnC2.Location = new Point(12, 283);
+
+            if (btnC1.Visible == true && btnC2.Visible == true)
+            {
+                btnA.BringToFront();
+                btnB.BringToFront();
+                btnC.BringToFront();
+                btnD.BringToFront();
+                btnE.BringToFront();
+
+                btnC1.Visible = false;
+                btnC2.Visible = false;
+            }
+            else
+            {
+                btnC1.Visible = true;
+                btnC2.Visible = true;
+            }
+            if (btnC1.Visible == false && btnC2.Visible == false)
+            {
+                btnA.Location = new Point(12, 68);
+                btnB.Location = new Point(12, 126);
+                btnC.Location = new Point(12, 184);
+                btnD.Location = new Point(12, 242);
+                btnE.Location = new Point(12, 300);
+            }
+            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+            {
+                btnA1.Visible = false;
+                btnA2.Visible = false;
+                btnA3.Visible = false;
+                btnA4.Visible = false;
+            }
+            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+            {
+                btnB1.Visible = false;
+                btnB2.Visible = false;
+                btnB3.Visible = false;
+            }
+            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+            {
+                btnD1.Visible = false;
+                btnD2.Visible = false;
+                btnD3.Visible = false;
+            }
+        }
+
+        private void Funciones(object sender, EventArgs e)
+        {
+            btnA.Location = new Point(12, 68);
+            btnB.Location = new Point(12, 126);
+            btnC.Location = new Point(12, 184);
+            btnD.Location = new Point(12, 242);
+            btnE.Location = new Point(12, 449);
+
+            btnD1.Location = new Point(12, 293);
+            btnD2.Location = new Point(12, 342);
+            btnD3.Location = new Point(12, 391);
+
+            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+            {
+                btnA.BringToFront();
+                btnB.BringToFront();
+                btnC.BringToFront();
+                btnD.BringToFront();
+                btnE.BringToFront();
+
+                btnD1.Visible = false;
+                btnD2.Visible = false;
+                btnD3.Visible = false;
+            }
+            else
+            {
+                btnD1.Visible = true;
+                btnD2.Visible = true;
+                btnD3.Visible = true;
+            }
+            if (btnD1.Visible == false && btnD2.Visible == false && btnD3.Visible == false)
+            {
+                btnA.Location = new Point(12, 68);
+                btnB.Location = new Point(12, 126);
+                btnC.Location = new Point(12, 184);
+                btnD.Location = new Point(12, 242);
+                btnE.Location = new Point(12, 300);
+            }
+            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+            {
+                btnA1.Visible = false;
+                btnA2.Visible = false;
+                btnA3.Visible = false;
+                btnA4.Visible = false;
+            }
+            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+            {
+                btnB1.Visible = false;
+                btnB2.Visible = false;
+                btnB3.Visible = false;
+            }
+            if (btnC1.Visible == true && btnC2.Visible == true)
+            {
+                btnC1.Visible = false;
+                btnC2.Visible = false;
+            }
+        }
+
+        private void Ventas(object sender, EventArgs e)
+        {
+            btnA.Location = new Point(12, 68);
+            btnB.Location = new Point(12, 324);
+            btnC.Location = new Point(12, 382);
+            btnD.Location = new Point(12, 440);
+            btnE.Location = new Point(12, 498);
+
+            btnA1.Location = new Point(12, 118);
+            btnA2.Location = new Point(12, 167);
+            btnA3.Location = new Point(12, 216);
+            btnA4.Location = new Point(12, 265);
+            if (btnA.Visible == true && btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+            {
+                btnA.BringToFront();
+                btnB.BringToFront();
+                btnC.BringToFront();
+                btnD.BringToFront();
+                btnE.BringToFront();
+
+                btnA2.Visible = false;
+                btnA3.Visible = false;
+                btnA4.Visible = false;
+                btnA1.Visible = false;
+            }
+            else
+            {
+                btnA2.Visible = true;
+                btnA3.Visible = true;
+                btnA4.Visible = true;
+                btnA1.Visible = true;
+            }
+            if (btnA1.Visible == false && btnA2.Visible == false && btnA3.Visible == false && btnA4.Visible == false)
+            {
+                btnA.Location = new Point(12, 68);
+                btnB.Location = new Point(12, 126);
+                btnC.Location = new Point(12, 184);
+                btnD.Location = new Point(12, 242);
+                btnE.Location = new Point(12, 300);
+            }
+            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+            {
+                btnB1.Visible = false;
+                btnB2.Visible = false;
+                btnB3.Visible = false;
+            }
+            if (btnC1.Visible == true && btnC2.Visible == true)
+            {
+                btnC1.Visible = false;
+                btnC2.Visible = false;
+            }
+            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+            {
+                btnD1.Visible = false;
+                btnD2.Visible = false;
+                btnD3.Visible = false;
+            }
+        }
+
+        private void usuarios(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmUsuario>();
+            btnA.Location = new Point(12, 68);
+            btnB.Location = new Point(12, 126);
+            btnC.Location = new Point(12, 184);
+            btnD.Location = new Point(12, 242);
+            btnE.Location = new Point(12, 300);
+            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+            {
+                btnA1.Visible = false;
+                btnA2.Visible = false;
+                btnA3.Visible = false;
+                btnA4.Visible = false;
+            }
+            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+            {
+                btnB1.Visible = false;
+                btnB2.Visible = false;
+                btnB3.Visible = false;
+            }
+            if (btnC1.Visible == true && btnC2.Visible == true)
+            {
+                btnC1.Visible = false;
+                btnC2.Visible = false;
+            }
+            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+            {
+                btnD1.Visible = false;
+                btnD2.Visible = false;
+                btnD3.Visible = false;
+            }
+        }
+
+        private void Personajes(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmPersonajes>();
+        }
+
+        private void Ticket(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmTicket>();
+        }
+
+        private void Datos(object sender, EventArgs e)
+        {
+            AbrirFormulario< FrmPelicula > ();
+        }
+
+        private void Proveedores(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmProveedores>();
+        }
+
+        private void Empresa(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEmpresas>();
+        }
+
+        private void Factura(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frmfacturalocal>();
+        }
+
+        private void Local(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frmalimentos>();
+        }
+
+        private void Producto(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmProducto>();
+        }
+
+        private void Detalle(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmDetalleTicket>();
+        }
+
+        private void Salas(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmSala>();
+        }
+
+        private void Programacion(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmFunciones>();
+        }
+
+        private void Asiento(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmAsientos>();
         }
 
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
