@@ -1,6 +1,6 @@
 ﻿namespace EXPO60.Reportes
 {
-    partial class ReporteProductos
+    partial class ReporteProveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -33,19 +33,19 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetProducto = new EXPO60.Reportes.DataSetProducto();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTableAdapter = new EXPO60.Reportes.DataSetProductoTableAdapters.ProductoTableAdapter();
+            this.DataSetProveedores = new EXPO60.Reportes.DataSetProveedores();
+            this.ProveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProveedoresTableAdapter = new EXPO60.Reportes.DataSetProveedoresTableAdapters.ProveedoresTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(801, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,51 +55,49 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 455);
+            this.panel1.Size = new System.Drawing.Size(801, 435);
             this.panel1.TabIndex = 1;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Producto";
-            reportDataSource1.Value = this.productoBindingSource;
+            reportDataSource1.Name = "Proveedores";
+            reportDataSource1.Value = this.ProveedoresBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report2.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report8.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(784, 455);
+            this.reportViewer1.Size = new System.Drawing.Size(801, 435);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSetProducto
+            // DataSetProveedores
             // 
-            this.DataSetProducto.DataSetName = "DataSetProducto";
-            this.DataSetProducto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.DataSetProveedores.DataSetName = "DataSetProveedores";
+            this.DataSetProveedores.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // productoBindingSource
+            // ProveedoresBindingSource
             // 
-            this.productoBindingSource.DataMember = "producto";
-            this.productoBindingSource.DataSource = this.DataSetProducto;
+            this.ProveedoresBindingSource.DataMember = "Proveedores";
+            this.ProveedoresBindingSource.DataSource = this.DataSetProveedores;
             // 
-            // productoTableAdapter
+            // ProveedoresTableAdapter
             // 
-            this.productoTableAdapter.ClearBeforeFill = true;
+            this.ProveedoresTableAdapter.ClearBeforeFill = true;
             // 
-            // ReporteProductos
+            // ReporteProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 479);
+            this.ClientSize = new System.Drawing.Size(801, 459);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "ReporteProductos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reporte de Productos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ReporteProductos_Load);
+            this.Name = "ReporteProveedores";
+            this.Text = "ReporteProveedores";
+            this.Load += new System.EventHandler(this.ReporteProveedores_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,8 +108,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private DataSetProducto DataSetProducto;
-        private System.Windows.Forms.BindingSource productoBindingSource;
-        private DataSetProductoTableAdapters.ProductoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.BindingSource ProveedoresBindingSource;
+        private DataSetProveedores DataSetProveedores;
+        private DataSetProveedoresTableAdapters.ProveedoresTableAdapter ProveedoresTableAdapter;
     }
 }

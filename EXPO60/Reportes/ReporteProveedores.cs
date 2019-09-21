@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace EXPO60.Reportes
 {
-    public partial class ReporteProductos : Form
+    public partial class ReporteProveedores : Form
     {
-        public ReporteProductos()
+        public ReporteProveedores()
         {
             InitializeComponent();
         }
 
-        private void ReporteProductos_Load(object sender, EventArgs e)
+        private void ReporteProveedores_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'DataSetProducto.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Productos(this.DataSetProducto.Producto);
+            // TODO: esta línea de código carga datos en la tabla 'DataSetProveedores.Proveedores' Puede moverla o quitarla según sea necesario.
+            this.ProveedoresTableAdapter.Proveedores(this.DataSetProveedores.Proveedores);
 
             this.reportViewer1.RefreshReport();
         }
