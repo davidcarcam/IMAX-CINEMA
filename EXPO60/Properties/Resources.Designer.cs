@@ -73,6 +73,16 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barber_chair_96px {
+            get {
+                object obj = ResourceManager.GetObject("barber_chair_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap camera_96px1 {
             get {
                 object obj = ResourceManager.GetObject("camera_96px1", resourceCulture);
@@ -113,9 +123,49 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clapperboard_96px {
+            get {
+                object obj = ResourceManager.GetObject("clapperboard_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap connection_indicator {
             get {
                 object obj = ResourceManager.GetObject("connection-indicator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap curtains_96px {
+            get {
+                object obj = ResourceManager.GetObject("curtains_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap curtains_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("curtains_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dining_room_96px {
+            get {
+                object obj = ResourceManager.GetObject("dining_room_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +183,26 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("document_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap documentary_96px {
+            get {
+                object obj = ResourceManager.GetObject("documentary_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap end_call_male_96px {
             get {
                 object obj = ResourceManager.GetObject("end_call_male_96px", resourceCulture);
@@ -143,9 +213,29 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap film_reel_96px {
+            get {
+                object obj = ResourceManager.GetObject("film_reel_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap food_as_resources_96px {
             get {
                 object obj = ResourceManager.GetObject("food_as_resources_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gender_neutral_user_96px {
+            get {
+                object obj = ResourceManager.GetObject("gender_neutral_user_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +263,16 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ingredients_list_96px {
+            get {
+                object obj = ResourceManager.GetObject("ingredients_list_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoDavid {
             get {
                 object obj = ResourceManager.GetObject("LogoDavid", resourceCulture);
@@ -193,6 +293,26 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap organization_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("organization_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pen_96px {
+            get {
+                object obj = ResourceManager.GetObject("pen_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phone_96px {
             get {
                 object obj = ResourceManager.GetObject("phone_96px", resourceCulture);
@@ -206,6 +326,26 @@ namespace EXPO60.Properties {
         internal static System.Drawing.Bitmap question_mark_96px1 {
             get {
                 object obj = ResourceManager.GetObject("question_mark_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_contacts_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("search_contacts_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sell_property_96px {
+            get {
+                object obj = ResourceManager.GetObject("sell_property_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +383,26 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shop_96px_1 {
+            get {
+                object obj = ResourceManager.GetObject("shop_96px-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starred_ticket_96px {
+            get {
+                object obj = ResourceManager.GetObject("starred_ticket_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap talk_male_96px {
             get {
                 object obj = ResourceManager.GetObject("talk_male_96px", resourceCulture);
@@ -256,6 +416,36 @@ namespace EXPO60.Properties {
         internal static System.Drawing.Bitmap test_passed_96px {
             get {
                 object obj = ResourceManager.GetObject("test_passed_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap test_passed_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("test_passed_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theatre_mask_96px {
+            get {
+                object obj = ResourceManager.GetObject("theatre_mask_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap todo_list_96px {
+            get {
+                object obj = ResourceManager.GetObject("todo_list_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
