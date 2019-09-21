@@ -71,6 +71,7 @@
             this.grpActores.TabIndex = 1;
             this.grpActores.TabStop = false;
             this.grpActores.Text = "Registro de actores";
+            this.grpActores.Resize += new System.EventHandler(this.GrpActores_Resize);
             // 
             // label8
             // 
@@ -102,6 +103,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(1231, 25);
             this.toolStrip1.TabIndex = 48;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Resize += new System.EventHandler(this.ToolStrip1_Resize);
             // 
             // BtnCerrar
             // 
@@ -283,7 +285,7 @@
             // 
             this.txtactor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtactor.Location = new System.Drawing.Point(313, 99);
-            this.txtactor.MaxLength = 40;
+            this.txtactor.MaxLength = 100;
             this.txtactor.Name = "txtactor";
             this.txtactor.Size = new System.Drawing.Size(322, 20);
             this.txtactor.TabIndex = 1;
@@ -300,6 +302,7 @@
             this.lblNombre_Actor.Size = new System.Drawing.Size(134, 20);
             this.lblNombre_Actor.TabIndex = 0;
             this.lblNombre_Actor.Text = "Nombre del actor:";
+            this.lblNombre_Actor.Click += new System.EventHandler(this.lblNombre_Actor_Click);
             // 
             // epError3
             // 

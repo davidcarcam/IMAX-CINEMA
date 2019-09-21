@@ -55,6 +55,7 @@ namespace EXPO60.Vista
         }
         public void Limpiar_Factura_Local()
         {
+
             txtmonto.Clear();
             txtnombre.Clear();
         }
@@ -114,7 +115,7 @@ namespace EXPO60.Vista
                     Limpiar_Factura_Local();
                     Mostrar_Factura_Local();
                 }
-            }         
+            }          
         }
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -234,12 +235,12 @@ namespace EXPO60.Vista
         private void Frmfacturalocal_Load_1(object sender, EventArgs e)
         {
             MostrarComboBox();
-            this.dgvfacturaloc.Columns[0].Visible = false;
             MostrarFactura();
         }
         private void BtnFacturaLocal_Click(object sender, EventArgs e)
         {
-          
+            Factura form2 = new Factura();
+            form2.Show();
         }
     }
 }

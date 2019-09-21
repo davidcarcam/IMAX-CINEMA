@@ -135,7 +135,6 @@ namespace EXPO60.Vista
             
             MostrarProducto();
             mostrarEs();
-            this.dgvproductos.Columns[0].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }

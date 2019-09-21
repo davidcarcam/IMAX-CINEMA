@@ -47,6 +47,7 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.cmbusuario = new System.Windows.Forms.ComboBox();
@@ -65,7 +66,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfacturaloc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -374,12 +374,20 @@
             this.groupBox2.Text = "Registro de factura local";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(510, 115);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker1.TabIndex = 78;
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(740, 53);
+            this.label11.Location = new System.Drawing.Point(740, 68);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 20);
             this.label11.TabIndex = 77;
@@ -388,7 +396,7 @@
             // txtbuscar
             // 
             this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuscar.Location = new System.Drawing.Point(805, 53);
+            this.txtbuscar.Location = new System.Drawing.Point(805, 68);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
@@ -400,7 +408,7 @@
             this.cmbusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbusuario.FormattingEnabled = true;
-            this.cmbusuario.Location = new System.Drawing.Point(504, 53);
+            this.cmbusuario.Location = new System.Drawing.Point(504, 68);
             this.cmbusuario.Name = "cmbusuario";
             this.cmbusuario.Size = new System.Drawing.Size(153, 21);
             this.cmbusuario.TabIndex = 5;
@@ -429,18 +437,17 @@
             // BtnFacturaLocal
             // 
             this.BtnFacturaLocal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnFacturaLocal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnFacturaLocal.Image = ((System.Drawing.Image)(resources.GetObject("BtnFacturaLocal.Image")));
+            this.BtnFacturaLocal.Image = global::EXPO60.Properties.Resources.connection_indicator;
             this.BtnFacturaLocal.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnFacturaLocal.Name = "BtnFacturaLocal";
-            this.BtnFacturaLocal.Size = new System.Drawing.Size(23, 22);
-            this.BtnFacturaLocal.Text = "toolStripButton1";
+            this.BtnFacturaLocal.Size = new System.Drawing.Size(109, 22);
+            this.BtnFacturaLocal.Text = "Generar reporte";
             this.BtnFacturaLocal.Click += new System.EventHandler(this.BtnFacturaLocal_Click);
             // 
             // txtMont
             // 
             this.txtMont.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMont.Location = new System.Drawing.Point(122, 91);
+            this.txtMont.Location = new System.Drawing.Point(122, 114);
             this.txtMont.Mask = "$000";
             this.txtMont.Name = "txtMont";
             this.txtMont.Size = new System.Drawing.Size(153, 20);
@@ -454,7 +461,7 @@
             this.txtDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.txtDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.txtDate.Location = new System.Drawing.Point(23, 273);
+            this.txtDate.Location = new System.Drawing.Point(23, 288);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(979, 243);
             this.txtDate.TabIndex = 0;
@@ -483,7 +490,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(783, 201);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(783, 216);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Brown;
@@ -519,7 +526,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(530, 201);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(530, 216);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Brown;
@@ -555,7 +562,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(277, 201);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(277, 216);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Brown;
@@ -591,7 +598,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(24, 201);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(24, 216);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Maroon;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Brown;
@@ -608,7 +615,7 @@
             // txtIdentificador
             // 
             this.txtIdentificador.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIdentificador.Location = new System.Drawing.Point(321, 72);
+            this.txtIdentificador.Location = new System.Drawing.Point(321, 87);
             this.txtIdentificador.Name = "txtIdentificador";
             this.txtIdentificador.Size = new System.Drawing.Size(31, 20);
             this.txtIdentificador.TabIndex = 0;
@@ -619,7 +626,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(393, 51);
+            this.label6.Location = new System.Drawing.Point(393, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 0;
@@ -630,7 +637,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(62, 139);
+            this.label8.Location = new System.Drawing.Point(393, 116);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 0;
@@ -641,7 +648,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(62, 92);
+            this.label9.Location = new System.Drawing.Point(51, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 20);
             this.label9.TabIndex = 0;
@@ -650,7 +657,7 @@
             // txtNom
             // 
             this.txtNom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNom.Location = new System.Drawing.Point(122, 48);
+            this.txtNom.Location = new System.Drawing.Point(122, 63);
             this.txtNom.MaxLength = 50;
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(153, 20);
@@ -663,19 +670,11 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(51, 48);
+            this.label10.Location = new System.Drawing.Point(51, 63);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Nombre";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 139);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 78;
             // 
             // Frmfacturalocal
             // 

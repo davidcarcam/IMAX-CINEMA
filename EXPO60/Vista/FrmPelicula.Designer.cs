@@ -38,6 +38,7 @@
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.txtaño = new System.Windows.Forms.MaskedTextBox();
             this.dgvpeliculas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -53,7 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
@@ -61,7 +61,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtbuscar);
             this.groupBox1.Controls.Add(this.cmbIdioma);
@@ -69,6 +68,7 @@
             this.groupBox1.Controls.Add(this.cmbGenero);
             this.groupBox1.Controls.Add(this.cmbestado);
             this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Controls.Add(this.txtaño);
             this.groupBox1.Controls.Add(this.dgvpeliculas);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnactualizar);
@@ -166,6 +166,14 @@
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // txtaño
+            // 
+            this.txtaño.Location = new System.Drawing.Point(97, 86);
+            this.txtaño.Mask = "0000";
+            this.txtaño.Name = "txtaño";
+            this.txtaño.Size = new System.Drawing.Size(153, 20);
+            this.txtaño.TabIndex = 2;
             // 
             // dgvpeliculas
             // 
@@ -420,14 +428,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Idioma";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(97, 84);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 79;
-            // 
             // FrmPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,6 +451,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MaskedTextBox txtaño;
         private System.Windows.Forms.DataGridView dgvpeliculas;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactualizar;
@@ -474,6 +475,5 @@
         private System.Windows.Forms.ComboBox cmbIdioma;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbuscar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

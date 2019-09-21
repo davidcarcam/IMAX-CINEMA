@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTicket));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
-            this.cmbfecha = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.cmbusuario = new System.Windows.Forms.ComboBox();
@@ -51,10 +51,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.btneliminar);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtbuscar);
-            this.groupBox2.Controls.Add(this.cmbfecha);
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.cmbusuario);
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -71,6 +71,14 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de factura local";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(221, 88);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker1.TabIndex = 79;
             // 
             // btneliminar
             // 
@@ -106,7 +114,6 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.Textcolor = System.Drawing.Color.White;
             this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // label1
             // 
@@ -127,18 +134,6 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
             this.txtbuscar.TabIndex = 3;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
-            // 
-            // cmbfecha
-            // 
-            this.cmbfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbfecha.Location = new System.Drawing.Point(221, 87);
-            this.cmbfecha.Mask = "00/00/0000";
-            this.cmbfecha.Name = "cmbfecha";
-            this.cmbfecha.Size = new System.Drawing.Size(153, 20);
-            this.cmbfecha.TabIndex = 1;
-            this.cmbfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cmbfecha.ValidatingType = typeof(System.DateTime);
             // 
             // toolStrip1
             // 
@@ -286,7 +281,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.Click += new System.EventHandler(this.BunifuFlatButton4_Click);
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // textBox1
             // 
@@ -350,9 +345,9 @@
         private System.Windows.Forms.ComboBox cmbusuario;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
-        private System.Windows.Forms.MaskedTextBox cmbfecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbuscar;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

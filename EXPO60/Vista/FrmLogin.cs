@@ -83,10 +83,6 @@ namespace EXPO60.Vista
                         this.Hide();
                     }
                 }
-                else
-                {
-
-                }
             }
         }
         private void linkPrimerUso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -99,35 +95,41 @@ namespace EXPO60.Vista
         {
             if (ValidarLogin.ValidarExistencia() == true)
             {
-                txtUsuario.Visible = true;
-                txtContra.Visible = true;
-                btbAcceder.Visible = true;
-                label1.Visible = true;
-                label2.Visible = true;
-                label3.Visible = true;
-                linkLabel1.Visible = true;
-                bunifuFlatButton1.Visible = false;
-                label4.Visible = false;
-                label5.Visible = false;
-                label6.Visible = false;
                 label7.Visible = false;
+                label6.Visible = false;
+                label5.Visible = false;
+                label4.Visible = false;
+                btncontinuar.Visible = false;
                 panel1.Visible = true;
                 pictureBox1.Visible = true;
+                btbAcceder.Visible = true;
+                txtContra.Visible = true;
+                txtUsuario.Visible = true;
+                label2.Visible = true;
+                label8.Visible = true;
+                picvisible.Visible = true;
+                picocultar.Visible = true;
+                label3.Visible = true;
+                linkLabel1.Visible = true;
             }
             else if (ValidarLogin.ValidarExistencia() == false)
             {
-                txtUsuario.Visible = false;
-                txtContra.Visible = false;
+                label7.Visible = true;
+                label6.Visible = true;
+                label5.Visible = true;
+                label4.Visible = true;
+                btncontinuar.Visible = true;
+                panel1.Visible = false;
+                pictureBox1.Visible = false;
                 btbAcceder.Visible = false;
-                label1.Visible = false;
+                txtContra.Visible = false;
+                txtUsuario.Visible = false;
                 label2.Visible = false;
+                label8.Visible = false;
+                picvisible.Visible = false;
+                picocultar.Visible = false;
                 label3.Visible = false;
                 linkLabel1.Visible = false;
-                bunifuFlatButton1.Visible = true;
-                label4.Visible = true;
-                label5.Visible = true;
-                label6.Visible = true;
-                label7.Visible = true;
             }
         }
         private void toolbtnCerra_Aplicacion_Click_1(object sender, EventArgs e)
@@ -162,7 +164,7 @@ namespace EXPO60.Vista
             txtContra.UseSystemPasswordChar = true;
             picvisible.Visible = true;
         }
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
             FrmPrimerUso kk = new FrmPrimerUso();
             kk.Show();

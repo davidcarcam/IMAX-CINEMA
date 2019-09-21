@@ -103,7 +103,7 @@
             // 
             this.txtNum.BackColor = System.Drawing.SystemColors.Control;
             this.txtNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNum.Location = new System.Drawing.Point(412, 67);
+            this.txtNum.Location = new System.Drawing.Point(25, 175);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(32, 13);
             this.txtNum.TabIndex = 50;
@@ -182,7 +182,6 @@
             this.BtnDetalleTicket.Name = "BtnDetalleTicket";
             this.BtnDetalleTicket.Size = new System.Drawing.Size(109, 22);
             this.BtnDetalleTicket.Text = "Generar reporte";
-            this.BtnDetalleTicket.Click += new System.EventHandler(this.BtnDetalleTicket_Click);
             // 
             // cmbfuncion
             // 

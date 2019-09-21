@@ -227,7 +227,7 @@ namespace EXPO60.Vista
             else
             {
                 AgregarUsu();
-                FrmLogin principal = new FrmLogin();
+                FrmEmpresa principal = new FrmEmpresa();
                 principal.Show();
                 this.Hide();
             }

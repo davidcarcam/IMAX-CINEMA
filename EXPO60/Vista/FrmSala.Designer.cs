@@ -184,6 +184,7 @@
             this.txtNumero_Sala.Name = "txtNumero_Sala";
             this.txtNumero_Sala.Size = new System.Drawing.Size(153, 20);
             this.txtNumero_Sala.TabIndex = 1;
+            this.txtNumero_Sala.TextChanged += new System.EventHandler(this.txtNumero_Sala_TextChanged);
             this.txtNumero_Sala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_Sala_KeyPress);
             this.txtNumero_Sala.Validated += new System.EventHandler(this.TxtNumero_Sala_Validated);
             // 

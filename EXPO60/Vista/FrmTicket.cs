@@ -30,34 +30,37 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
                 this.Close();
         }
-
-        private void cmbusuario_SelectedIndexChanged(object sender, EventArgs e)
+        void LimpiarCampos()
         {
-
+            txtbuscar.Clear();
         }
-
-        private void BunifuFlatButton4_Click(object sender, EventArgs e)
+        void AgregarTicket()
         {
+            DateTime fecha = DateTime.Today.AddDays(15);
+            if (dateTimePicker1.Value.Date > fecha)
+            {
+                MessageBox.Show("La fecha ingresada esta fuera del rango permitido", "Fecha superior", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+            }
+            else
+            {
+                if (dateTimePicker1.Value.Date < DateTime.Today)
+                {
+                    MessageBox.Show("La fecha ingresada es menor a la de hoy", "La fecha es erronea", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+
+                }
+            }
         }
-
-        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-        
-        }
 
-        private void btnlimpiar_Click(object sender, EventArgs e)
-        {
-             cmbfecha.Clear();
-        }
-
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
         }
     }
 }
