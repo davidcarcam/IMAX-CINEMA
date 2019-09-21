@@ -168,5 +168,17 @@ namespace EXPO60.Vista
             kk.Show();
             this.Hide();
         }
+
+        private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            w = this.Width;
+            h = this.Height;
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

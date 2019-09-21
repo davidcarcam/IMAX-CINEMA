@@ -279,12 +279,9 @@ C:\Users\Pardito\Desktop\IMAX\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.
 C:\Users\Pardito\Desktop\IMAX\EXPO60\obj\Debug\EXPO60.Vista.recuperarUsuario.resources
 C:\Users\Pardito\Desktop\IMAX\EXPO60\obj\Debug\EXPO60.csproj.GenerateResource.Cache
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources
-C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csprojAssemblyReference.cache
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources
-C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CoreCompileInputs.cache
-C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csproj.CopyComplete
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
@@ -351,3 +348,22 @@ C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\r
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteProveedores.resources
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteProductos.resources
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteProveedores.resources
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmEmpresa.resources
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\RdlCompile.cache
+C:\Users\Alejandro molina\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\RdlCompile.compiled

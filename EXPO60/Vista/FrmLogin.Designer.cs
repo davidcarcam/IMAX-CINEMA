@@ -52,10 +52,14 @@ namespace EXPO60.Vista
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picvisible)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picocultar)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,7 +124,7 @@ namespace EXPO60.Vista
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(404, 25);
+            this.label3.Location = new System.Drawing.Point(404, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 6;
@@ -133,7 +137,7 @@ namespace EXPO60.Vista
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(326, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Contraseña";
             // 
@@ -144,7 +148,7 @@ namespace EXPO60.Vista
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(326, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 16);
+            this.label1.Size = new System.Drawing.Size(143, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Ingresar su Usuario";
             // 
@@ -284,16 +288,45 @@ namespace EXPO60.Vista
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(326, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(147, 16);
+            this.label8.Size = new System.Drawing.Size(143, 16);
             this.label8.TabIndex = 19;
             this.label8.Text = "Ingresar su Usuario";
             this.label8.Visible = false;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
+            this.toolStrip1.TabIndex = 25;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(76, 22);
+            this.toolStripLabel1.Text = "Imax Cinema";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.Image = global::EXPO60.Properties.Resources.cancel;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(103, 22);
+            this.toolStripButton1.Text = "Cerrar Sistema";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 298);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -321,6 +354,8 @@ namespace EXPO60.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picvisible)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picocultar)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +382,8 @@ namespace EXPO60.Vista
         private Label label6;
         private Label label7;
         private Label label8;
+        private ToolStrip toolStrip1;
+        private ToolStripLabel toolStripLabel1;
+        private ToolStripButton toolStripButton1;
     }
 }
