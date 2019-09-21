@@ -229,8 +229,7 @@ namespace EXPO60.Vista
 
         private void BtnFacturaLocal_Click(object sender, EventArgs e)
         {
-            ReporteFacturaLocal repro = new ReporteFacturaLocal();
-            repro.Show();
+          
         }
     }
 }

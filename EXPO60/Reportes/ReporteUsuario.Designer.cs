@@ -34,18 +34,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataSetUsuario = new EXPO60.Reportes.DataSetUsuario();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new EXPO60.Reportes.DataSetUsuarioTableAdapters.usuarioTableAdapter();
+            this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTableTableAdapter = new EXPO60.Reportes.DataSetUsuarioTableAdapters.DataTableTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(981, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(821, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,19 +55,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(981, 427);
+            this.panel1.Size = new System.Drawing.Size(821, 471);
             this.panel1.TabIndex = 1;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetUsuario";
-            reportDataSource1.Value = this.usuarioBindingSource;
+            reportDataSource1.Name = "Usuario";
+            reportDataSource1.Value = this.DataTableBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report2.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(981, 427);
+            this.reportViewer1.Size = new System.Drawing.Size(821, 471);
             this.reportViewer1.TabIndex = 0;
             // 
             // DataSetUsuario
@@ -75,20 +75,20 @@
             this.DataSetUsuario.DataSetName = "DataSetUsuario";
             this.DataSetUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usuarioBindingSource
+            // DataTableBindingSource
             // 
-            this.usuarioBindingSource.DataMember = "usuario";
-            this.usuarioBindingSource.DataSource = this.DataSetUsuario;
+            this.DataTableBindingSource.DataMember = "DataTable";
+            this.DataTableBindingSource.DataSource = this.DataSetUsuario;
             // 
-            // usuarioTableAdapter
+            // DataTableTableAdapter
             // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
+            this.DataTableTableAdapter.ClearBeforeFill = true;
             // 
             // ReporteUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 451);
+            this.ClientSize = new System.Drawing.Size(821, 495);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -99,7 +99,7 @@
             this.Load += new System.EventHandler(this.ReporteUsuario_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataSetUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,8 +110,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.BindingSource DataTableBindingSource;
         private DataSetUsuario DataSetUsuario;
-        private DataSetUsuarioTableAdapters.usuarioTableAdapter usuarioTableAdapter;
+        private DataSetUsuarioTableAdapters.DataTableTableAdapter DataTableTableAdapter;
     }
 }

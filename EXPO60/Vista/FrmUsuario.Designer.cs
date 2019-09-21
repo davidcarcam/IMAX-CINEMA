@@ -520,12 +520,11 @@ namespace EXPO60.Vista
             // BtnUsuario
             // 
             this.BtnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuario.Image")));
+            this.BtnUsuario.Image = global::EXPO60.Properties.Resources.document_96px;
             this.BtnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnUsuario.Name = "BtnUsuario";
-            this.BtnUsuario.Size = new System.Drawing.Size(23, 22);
-            this.BtnUsuario.Text = "toolStripButton1";
+            this.BtnUsuario.Size = new System.Drawing.Size(112, 22);
+            this.BtnUsuario.Text = "Generar Reporte";
             this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
             // FrmUsuario
