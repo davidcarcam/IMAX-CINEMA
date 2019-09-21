@@ -76,9 +76,17 @@ namespace EXPO60.Vista
         }
         public void agregarDetalleTickt()
         {
-            agregar.funcion = Convert.ToInt16(cmbfuncion.Text);
-            agregar.asiento = Convert.ToInt16(cmbAsiento.Text);
-            int datos = FuncionesDetalleTicket.IngresarDetalle(agregar);
+            try
+            {
+
+                agregar.funcion = Convert.ToInt16(cmbfuncion.Text);
+                agregar.asiento = Convert.ToInt16(cmbAsiento.Text);
+                int datos = FuncionesDetalleTicket.IngresarDetalle(agregar);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void btnagregar_Click(object sender, EventArgs e)
         {

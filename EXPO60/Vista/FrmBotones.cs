@@ -319,7 +319,7 @@ namespace EXPO60.Vista
         }
         private void FrmBotones_Load_1(object sender, EventArgs e)
         {
-            if (ContructorLogin2.nivel == 1)
+            /*if (ContructorLogin2.nivel == 1)
             {
                 UbicacionRoot();
                 MessageBox.Show("Root", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -348,7 +348,7 @@ namespace EXPO60.Vista
             {
                 Consesionario();
                 MessageBox.Show("Consesionario", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
         }
     }
 }

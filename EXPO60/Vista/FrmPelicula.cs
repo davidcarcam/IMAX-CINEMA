@@ -244,5 +244,15 @@ namespace EXPO60.Vista
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
         }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+           FileDialog nuevafoto = 
+        }
     }
 }
