@@ -34,7 +34,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Asiento</Value>
+                              <Value>id asiento</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -70,7 +70,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fila</Value>
+                              <Value>id fila</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -106,7 +106,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Numero</Value>
+                              <Value>id num</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -142,7 +142,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Estado asiento</Value>
+                              <Value>id estado asiento</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -178,7 +178,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Sala</Value>
+                              <Value>id sala</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>

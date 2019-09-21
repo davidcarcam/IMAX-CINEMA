@@ -37,7 +37,7 @@ namespace EXPO60.Vista
         }
         public void agregarEmpresa()
         {
-            agregar.nombre = txtNombre_empresa.Text;
+            agregar.nombreEmpresa = txtNombre_empresa.Text;
             agregar.direccionEmpresa = txtDireccion_empresa.Text;
             int datos = funcionesEmpresa.insertarLocal(agregar);
         }
@@ -81,7 +81,7 @@ namespace EXPO60.Vista
         }
         public void modificarRegistro()
         {
-            actualizar.nombre = txtNombre_empresa.Text;
+            actualizar.nombreEmpresa = txtNombre_empresa.Text;
             actualizar.direccionEmpresa = txtDireccion_empresa.Text;
             funcionesEmpresa.actualizarEmpresa(actualizar);
         }

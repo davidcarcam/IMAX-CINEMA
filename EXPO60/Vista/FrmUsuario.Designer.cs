@@ -44,6 +44,9 @@ namespace EXPO60.Vista
             this.label6 = new System.Windows.Forms.Label();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvusuarios = new System.Windows.Forms.DataGridView();
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -56,14 +59,11 @@ namespace EXPO60.Vista
             this.cmbTipoU = new System.Windows.Forms.ComboBox();
             this.cmbEstadoU = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.BtnUsuario = new System.Windows.Forms.ToolStripButton();
-            this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvusuarios)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -187,6 +187,114 @@ namespace EXPO60.Vista
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Direccion";
+            // 
+            // btnmostrar
+            // 
+            this.btnmostrar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnmostrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
+            this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnmostrar.BorderRadius = 0;
+            this.btnmostrar.ButtonText = "Mostrar y Limpiar Campos";
+            this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnmostrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnmostrar.Iconimage")));
+            this.btnmostrar.Iconimage_right = null;
+            this.btnmostrar.Iconimage_right_Selected = null;
+            this.btnmostrar.Iconimage_Selected = null;
+            this.btnmostrar.IconMarginLeft = 0;
+            this.btnmostrar.IconMarginRight = 0;
+            this.btnmostrar.IconRightVisible = true;
+            this.btnmostrar.IconRightZoom = 0D;
+            this.btnmostrar.IconVisible = true;
+            this.btnmostrar.IconZoom = 90D;
+            this.btnmostrar.IsTab = false;
+            this.btnmostrar.Location = new System.Drawing.Point(263, 201);
+            this.btnmostrar.Name = "btnmostrar";
+            this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnmostrar.selected = false;
+            this.btnmostrar.Size = new System.Drawing.Size(241, 48);
+            this.btnmostrar.TabIndex = 9;
+            this.btnmostrar.Text = "Mostrar y Limpiar Campos";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnmostrar.Textcolor = System.Drawing.Color.White;
+            this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click_1);
+            // 
+            // btnactualizar
+            // 
+            this.btnactualizar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnactualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
+            this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnactualizar.BorderRadius = 0;
+            this.btnactualizar.ButtonText = "Actualizar";
+            this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnactualizar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Iconimage")));
+            this.btnactualizar.Iconimage_right = null;
+            this.btnactualizar.Iconimage_right_Selected = null;
+            this.btnactualizar.Iconimage_Selected = null;
+            this.btnactualizar.IconMarginLeft = 0;
+            this.btnactualizar.IconMarginRight = 0;
+            this.btnactualizar.IconRightVisible = true;
+            this.btnactualizar.IconRightZoom = 0D;
+            this.btnactualizar.IconVisible = true;
+            this.btnactualizar.IconZoom = 90D;
+            this.btnactualizar.IsTab = false;
+            this.btnactualizar.Location = new System.Drawing.Point(510, 201);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnactualizar.selected = false;
+            this.btnactualizar.Size = new System.Drawing.Size(241, 48);
+            this.btnactualizar.TabIndex = 10;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnactualizar.Textcolor = System.Drawing.Color.White;
+            this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.Activecolor = System.Drawing.Color.Maroon;
+            this.btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btneliminar.BackColor = System.Drawing.Color.Maroon;
+            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btneliminar.BorderRadius = 0;
+            this.btneliminar.ButtonText = "Eliminar";
+            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
+            this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btneliminar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btneliminar.Iconimage")));
+            this.btneliminar.Iconimage_right = null;
+            this.btneliminar.Iconimage_right_Selected = null;
+            this.btneliminar.Iconimage_Selected = null;
+            this.btneliminar.IconMarginLeft = 0;
+            this.btneliminar.IconMarginRight = 0;
+            this.btneliminar.IconRightVisible = true;
+            this.btneliminar.IconRightZoom = 0D;
+            this.btneliminar.IconVisible = true;
+            this.btneliminar.IconZoom = 90D;
+            this.btneliminar.IsTab = false;
+            this.btneliminar.Location = new System.Drawing.Point(772, 201);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btneliminar.selected = false;
+            this.btneliminar.Size = new System.Drawing.Size(241, 48);
+            this.btneliminar.TabIndex = 11;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btneliminar.Textcolor = System.Drawing.Color.White;
+            this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // dgvusuarios
             // 
@@ -315,6 +423,52 @@ namespace EXPO60.Vista
             this.toolStrip1.TabIndex = 47;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click_1);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.Activecolor = System.Drawing.Color.Maroon;
+            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnagregar.BackColor = System.Drawing.Color.Maroon;
+            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnagregar.BorderRadius = 0;
+            this.btnagregar.ButtonText = "Agregar";
+            this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnagregar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnagregar.Iconimage")));
+            this.btnagregar.Iconimage_right = null;
+            this.btnagregar.Iconimage_right_Selected = null;
+            this.btnagregar.Iconimage_Selected = null;
+            this.btnagregar.IconMarginLeft = 0;
+            this.btnagregar.IconMarginRight = 0;
+            this.btnagregar.IconRightVisible = true;
+            this.btnagregar.IconRightZoom = 0D;
+            this.btnagregar.IconVisible = true;
+            this.btnagregar.IconZoom = 90D;
+            this.btnagregar.IsTab = false;
+            this.btnagregar.Location = new System.Drawing.Point(16, 201);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
+            this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnagregar.selected = false;
+            this.btnagregar.Size = new System.Drawing.Size(241, 48);
+            this.btnagregar.TabIndex = 8;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnagregar.Textcolor = System.Drawing.Color.White;
+            this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
+            // 
             // txtCifrado
             // 
             this.txtCifrado.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -363,169 +517,16 @@ namespace EXPO60.Vista
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de usuarios";
             // 
-            // btnagregar
-            // 
-            this.btnagregar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnagregar.BackColor = System.Drawing.Color.Maroon;
-            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnagregar.BorderRadius = 0;
-            this.btnagregar.ButtonText = "Agregar";
-            this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnagregar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnagregar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnagregar.Iconimage")));
-            this.btnagregar.Iconimage_right = null;
-            this.btnagregar.Iconimage_right_Selected = null;
-            this.btnagregar.Iconimage_Selected = null;
-            this.btnagregar.IconMarginLeft = 0;
-            this.btnagregar.IconMarginRight = 0;
-            this.btnagregar.IconRightVisible = true;
-            this.btnagregar.IconRightZoom = 0D;
-            this.btnagregar.IconVisible = true;
-            this.btnagregar.IconZoom = 90D;
-            this.btnagregar.IsTab = false;
-            this.btnagregar.Location = new System.Drawing.Point(16, 201);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnagregar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnagregar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnagregar.selected = false;
-            this.btnagregar.Size = new System.Drawing.Size(241, 48);
-            this.btnagregar.TabIndex = 8;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnagregar.Textcolor = System.Drawing.Color.White;
-            this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
-            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
-            this.BtnCerrar.Text = "Cerrar Formulario";
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click_1);
-            // 
             // BtnUsuario
             // 
             this.BtnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnUsuario.Image = global::EXPO60.Properties.Resources.connection_indicator;
+            this.BtnUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuario.Image")));
             this.BtnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnUsuario.Name = "BtnUsuario";
-            this.BtnUsuario.Size = new System.Drawing.Size(109, 22);
-            this.BtnUsuario.Text = "Generar reporte";
+            this.BtnUsuario.Size = new System.Drawing.Size(23, 22);
+            this.BtnUsuario.Text = "toolStripButton1";
             this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.Activecolor = System.Drawing.Color.Maroon;
-            this.btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btneliminar.BackColor = System.Drawing.Color.Maroon;
-            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btneliminar.BorderRadius = 0;
-            this.btneliminar.ButtonText = "Eliminar";
-            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btneliminar.DisabledColor = System.Drawing.Color.Gray;
-            this.btneliminar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btneliminar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btneliminar.Iconimage")));
-            this.btneliminar.Iconimage_right = null;
-            this.btneliminar.Iconimage_right_Selected = null;
-            this.btneliminar.Iconimage_Selected = null;
-            this.btneliminar.IconMarginLeft = 0;
-            this.btneliminar.IconMarginRight = 0;
-            this.btneliminar.IconRightVisible = true;
-            this.btneliminar.IconRightZoom = 0D;
-            this.btneliminar.IconVisible = true;
-            this.btneliminar.IconZoom = 90D;
-            this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(772, 201);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btneliminar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btneliminar.selected = false;
-            this.btneliminar.Size = new System.Drawing.Size(241, 48);
-            this.btneliminar.TabIndex = 11;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btneliminar.Textcolor = System.Drawing.Color.White;
-            this.btneliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
-            // 
-            // btnactualizar
-            // 
-            this.btnactualizar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnactualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnactualizar.BackColor = System.Drawing.Color.Maroon;
-            this.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnactualizar.BorderRadius = 0;
-            this.btnactualizar.ButtonText = "Actualizar";
-            this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnactualizar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnactualizar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnactualizar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Iconimage")));
-            this.btnactualizar.Iconimage_right = null;
-            this.btnactualizar.Iconimage_right_Selected = null;
-            this.btnactualizar.Iconimage_Selected = null;
-            this.btnactualizar.IconMarginLeft = 0;
-            this.btnactualizar.IconMarginRight = 0;
-            this.btnactualizar.IconRightVisible = true;
-            this.btnactualizar.IconRightZoom = 0D;
-            this.btnactualizar.IconVisible = true;
-            this.btnactualizar.IconZoom = 90D;
-            this.btnactualizar.IsTab = false;
-            this.btnactualizar.Location = new System.Drawing.Point(510, 201);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnactualizar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnactualizar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnactualizar.selected = false;
-            this.btnactualizar.Size = new System.Drawing.Size(241, 48);
-            this.btnactualizar.TabIndex = 10;
-            this.btnactualizar.Text = "Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnactualizar.Textcolor = System.Drawing.Color.White;
-            this.btnactualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
-            // 
-            // btnmostrar
-            // 
-            this.btnmostrar.Activecolor = System.Drawing.Color.Maroon;
-            this.btnmostrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
-            this.btnmostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnmostrar.BorderRadius = 0;
-            this.btnmostrar.ButtonText = "Mostrar y Limpiar Campos";
-            this.btnmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnmostrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnmostrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnmostrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnmostrar.Iconimage")));
-            this.btnmostrar.Iconimage_right = null;
-            this.btnmostrar.Iconimage_right_Selected = null;
-            this.btnmostrar.Iconimage_Selected = null;
-            this.btnmostrar.IconMarginLeft = 0;
-            this.btnmostrar.IconMarginRight = 0;
-            this.btnmostrar.IconRightVisible = true;
-            this.btnmostrar.IconRightZoom = 0D;
-            this.btnmostrar.IconVisible = true;
-            this.btnmostrar.IconZoom = 90D;
-            this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(263, 201);
-            this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Normalcolor = System.Drawing.Color.Maroon;
-            this.btnmostrar.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnmostrar.selected = false;
-            this.btnmostrar.Size = new System.Drawing.Size(241, 48);
-            this.btnmostrar.TabIndex = 9;
-            this.btnmostrar.Text = "Mostrar y Limpiar Campos";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnmostrar.Textcolor = System.Drawing.Color.White;
-            this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click_1);
             // 
             // FrmUsuario
             // 

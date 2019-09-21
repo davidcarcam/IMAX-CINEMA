@@ -48,7 +48,6 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.BtnSala = new System.Windows.Forms.ToolStripButton();
             this.grpRegistro_Sala.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
@@ -105,8 +104,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar,
-            this.BtnSala});
+            this.BtnCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -186,6 +184,7 @@
             this.txtNumero_Sala.Name = "txtNumero_Sala";
             this.txtNumero_Sala.Size = new System.Drawing.Size(153, 20);
             this.txtNumero_Sala.TabIndex = 1;
+            this.txtNumero_Sala.TextChanged += new System.EventHandler(this.txtNumero_Sala_TextChanged);
             this.txtNumero_Sala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_Sala_KeyPress);
             this.txtNumero_Sala.Validated += new System.EventHandler(this.TxtNumero_Sala_Validated);
             // 
@@ -362,15 +361,6 @@
             // 
             this.epError2.ContainerControl = this;
             // 
-            // BtnSala
-            // 
-            this.BtnSala.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnSala.Image = global::EXPO60.Properties.Resources.connection_indicator;
-            this.BtnSala.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnSala.Name = "BtnSala";
-            this.BtnSala.Size = new System.Drawing.Size(109, 22);
-            this.BtnSala.Text = "Generar reporte";
-            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,6 +401,5 @@
         private System.Windows.Forms.ComboBox cmbESTADO_SALA;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton BtnSala;
     }
 }

@@ -70,7 +70,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1025, 547);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Registro de Ticket";
+            this.groupBox2.Text = "Registro de factura local";
             // 
             // btneliminar
             // 

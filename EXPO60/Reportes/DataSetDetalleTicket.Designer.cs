@@ -279,11 +279,15 @@ namespace EXPO60.Reportes {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTableDataTable : global::System.Data.TypedTableBase<DataTableRow> {
             
-            private global::System.Data.DataColumn columnid_detalle_ticket;
+            private global::System.Data.DataColumn columnid_detalle_fac;
             
-            private global::System.Data.DataColumn columnid_asiento;
+            private global::System.Data.DataColumn columnCantidad;
             
-            private global::System.Data.DataColumn columnid_funcion;
+            private global::System.Data.DataColumn columnsubtotal;
+            
+            private global::System.Data.DataColumn columnid_producto;
+            
+            private global::System.Data.DataColumn columnid_local;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -320,25 +324,41 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_detalle_ticketColumn {
+            public global::System.Data.DataColumn id_detalle_facColumn {
                 get {
-                    return this.columnid_detalle_ticket;
+                    return this.columnid_detalle_fac;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_asientoColumn {
+            public global::System.Data.DataColumn CantidadColumn {
                 get {
-                    return this.columnid_asiento;
+                    return this.columnCantidad;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_funcionColumn {
+            public global::System.Data.DataColumn subtotalColumn {
                 get {
-                    return this.columnid_funcion;
+                    return this.columnsubtotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_productoColumn {
+                get {
+                    return this.columnid_producto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_localColumn {
+                get {
+                    return this.columnid_local;
                 }
             }
             
@@ -379,12 +399,14 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow AddDataTableRow(int id_asiento, int id_funcion) {
+            public DataTableRow AddDataTableRow(int Cantidad, string subtotal, int id_producto, int id_local) {
                 DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        id_asiento,
-                        id_funcion};
+                        Cantidad,
+                        subtotal,
+                        id_producto,
+                        id_local};
                 rowDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableRow);
                 return rowDataTableRow;
@@ -407,26 +429,33 @@ namespace EXPO60.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnid_detalle_ticket = base.Columns["id_detalle_ticket"];
-                this.columnid_asiento = base.Columns["id_asiento"];
-                this.columnid_funcion = base.Columns["id_funcion"];
+                this.columnid_detalle_fac = base.Columns["id_detalle_fac"];
+                this.columnCantidad = base.Columns["Cantidad"];
+                this.columnsubtotal = base.Columns["subtotal"];
+                this.columnid_producto = base.Columns["id_producto"];
+                this.columnid_local = base.Columns["id_local"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnid_detalle_ticket = new global::System.Data.DataColumn("id_detalle_ticket", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_detalle_ticket);
-                this.columnid_asiento = new global::System.Data.DataColumn("id_asiento", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_asiento);
-                this.columnid_funcion = new global::System.Data.DataColumn("id_funcion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_funcion);
+                this.columnid_detalle_fac = new global::System.Data.DataColumn("id_detalle_fac", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_detalle_fac);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
+                this.columnsubtotal = new global::System.Data.DataColumn("subtotal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsubtotal);
+                this.columnid_producto = new global::System.Data.DataColumn("id_producto", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_producto);
+                this.columnid_local = new global::System.Data.DataColumn("id_local", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_local);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_detalle_ticket}, false));
-                this.columnid_detalle_ticket.AutoIncrement = true;
-                this.columnid_detalle_ticket.AutoIncrementSeed = -1;
-                this.columnid_detalle_ticket.AutoIncrementStep = -1;
-                this.columnid_detalle_ticket.Unique = true;
+                                this.columnid_detalle_fac}, false));
+                this.columnid_detalle_fac.AutoIncrement = true;
+                this.columnid_detalle_fac.AutoIncrementSeed = -1;
+                this.columnid_detalle_fac.AutoIncrementStep = -1;
+                this.columnid_detalle_fac.Unique = true;
+                this.columnsubtotal.MaxLength = 7;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -569,86 +598,142 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_detalle_ticket {
+            public int id_detalle_fac {
                 get {
                     try {
-                        return ((int)(this[this.tableDataTable.id_detalle_ticketColumn]));
+                        return ((int)(this[this.tableDataTable.id_detalle_facColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_detalle_ticket\' de la tabla \'DataTable\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_detalle_fac\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable.id_detalle_ticketColumn] = value;
+                    this[this.tableDataTable.id_detalle_facColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_asiento {
+            public int Cantidad {
                 get {
                     try {
-                        return ((int)(this[this.tableDataTable.id_asientoColumn]));
+                        return ((int)(this[this.tableDataTable.CantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_asiento\' de la tabla \'DataTable\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable.id_asientoColumn] = value;
+                    this[this.tableDataTable.CantidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_funcion {
+            public string subtotal {
                 get {
                     try {
-                        return ((int)(this[this.tableDataTable.id_funcionColumn]));
+                        return ((string)(this[this.tableDataTable.subtotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_funcion\' de la tabla \'DataTable\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'subtotal\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable.id_funcionColumn] = value;
+                    this[this.tableDataTable.subtotalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isid_detalle_ticketNull() {
-                return this.IsNull(this.tableDataTable.id_detalle_ticketColumn);
+            public int id_producto {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable.id_productoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_producto\' de la tabla \'DataTable\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.id_productoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setid_detalle_ticketNull() {
-                this[this.tableDataTable.id_detalle_ticketColumn] = global::System.Convert.DBNull;
+            public int id_local {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable.id_localColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_local\' de la tabla \'DataTable\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.id_localColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isid_asientoNull() {
-                return this.IsNull(this.tableDataTable.id_asientoColumn);
+            public bool Isid_detalle_facNull() {
+                return this.IsNull(this.tableDataTable.id_detalle_facColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setid_asientoNull() {
-                this[this.tableDataTable.id_asientoColumn] = global::System.Convert.DBNull;
+            public void Setid_detalle_facNull() {
+                this[this.tableDataTable.id_detalle_facColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isid_funcionNull() {
-                return this.IsNull(this.tableDataTable.id_funcionColumn);
+            public bool IsCantidadNull() {
+                return this.IsNull(this.tableDataTable.CantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setid_funcionNull() {
-                this[this.tableDataTable.id_funcionColumn] = global::System.Convert.DBNull;
+            public void SetCantidadNull() {
+                this[this.tableDataTable.CantidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssubtotalNull() {
+                return this.IsNull(this.tableDataTable.subtotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsubtotalNull() {
+                this[this.tableDataTable.subtotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_productoNull() {
+                return this.IsNull(this.tableDataTable.id_productoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_productoNull() {
+                this[this.tableDataTable.id_productoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_localNull() {
+                return this.IsNull(this.tableDataTable.id_localColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_localNull() {
+                this[this.tableDataTable.id_localColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -811,9 +896,11 @@ namespace EXPO60.Reportes.DataSetDetalleTicketTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable";
-            tableMapping.ColumnMappings.Add("id_detalle_ticket", "id_detalle_ticket");
-            tableMapping.ColumnMappings.Add("id_asiento", "id_asiento");
-            tableMapping.ColumnMappings.Add("id_funcion", "id_funcion");
+            tableMapping.ColumnMappings.Add("id_detalle_fac", "id_detalle_fac");
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
+            tableMapping.ColumnMappings.Add("subtotal", "subtotal");
+            tableMapping.ColumnMappings.Add("id_producto", "id_producto");
+            tableMapping.ColumnMappings.Add("id_local", "id_local");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -830,7 +917,7 @@ namespace EXPO60.Reportes.DataSetDetalleTicketTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM `detalle_ticket`";
+            this._commandCollection[0].CommandText = "SELECT * FROM `detalle_fac_local`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

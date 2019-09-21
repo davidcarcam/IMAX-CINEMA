@@ -12,16 +12,18 @@
               <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT * FROM `detalle_ticket`</CommandText>
+                    <CommandText>SELECT * FROM `detalle_fac_local`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="id_detalle_ticket" DataSetColumn="id_detalle_ticket" />
-              <Mapping SourceColumn="id_asiento" DataSetColumn="id_asiento" />
-              <Mapping SourceColumn="id_funcion" DataSetColumn="id_funcion" />
+              <Mapping SourceColumn="id_detalle_fac" DataSetColumn="id_detalle_fac" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="subtotal" DataSetColumn="subtotal" />
+              <Mapping SourceColumn="id_producto" DataSetColumn="id_producto" />
+              <Mapping SourceColumn="id_local" DataSetColumn="id_local" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -36,9 +38,17 @@
         <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_RowEvArgName="DataTableRowChangeEvent" msprop:Generator_RowClassName="DataTableRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_detalle_ticket" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_detalle_ticket" msprop:Generator_ColumnPropNameInRow="id_detalle_ticket" msprop:Generator_ColumnPropNameInTable="id_detalle_ticketColumn" msprop:Generator_UserColumnName="id_detalle_ticket" type="xs:int" minOccurs="0" />
-              <xs:element name="id_asiento" msprop:Generator_ColumnVarNameInTable="columnid_asiento" msprop:Generator_ColumnPropNameInRow="id_asiento" msprop:Generator_ColumnPropNameInTable="id_asientoColumn" msprop:Generator_UserColumnName="id_asiento" type="xs:int" minOccurs="0" />
-              <xs:element name="id_funcion" msprop:Generator_ColumnVarNameInTable="columnid_funcion" msprop:Generator_ColumnPropNameInRow="id_funcion" msprop:Generator_ColumnPropNameInTable="id_funcionColumn" msprop:Generator_UserColumnName="id_funcion" type="xs:int" minOccurs="0" />
+              <xs:element name="id_detalle_fac" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_detalle_fac" msprop:Generator_ColumnPropNameInRow="id_detalle_fac" msprop:Generator_ColumnPropNameInTable="id_detalle_facColumn" msprop:Generator_UserColumnName="id_detalle_fac" type="xs:int" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_producto" msprop:Generator_ColumnVarNameInTable="columnid_producto" msprop:Generator_ColumnPropNameInRow="id_producto" msprop:Generator_ColumnPropNameInTable="id_productoColumn" msprop:Generator_UserColumnName="id_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="id_local" msprop:Generator_ColumnVarNameInTable="columnid_local" msprop:Generator_ColumnPropNameInRow="id_local" msprop:Generator_ColumnPropNameInTable="id_localColumn" msprop:Generator_UserColumnName="id_local" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -46,7 +56,7 @@
     </xs:complexType>
     <xs:unique name="Constraint1">
       <xs:selector xpath=".//mstns:DataTable" />
-      <xs:field xpath="mstns:id_detalle_ticket" />
+      <xs:field xpath="mstns:id_detalle_fac" />
     </xs:unique>
   </xs:element>
 </xs:schema>

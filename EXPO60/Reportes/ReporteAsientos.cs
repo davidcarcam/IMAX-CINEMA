@@ -20,7 +20,8 @@ namespace EXPO60.Reportes
 
         private void ReporteAsientos_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.RefreshReport();
+            ReporteAsientos repro = new ReporteAsientos();
+            repro.Show();
         }
     }
 }

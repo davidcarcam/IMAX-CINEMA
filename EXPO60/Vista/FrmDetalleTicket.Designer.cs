@@ -37,7 +37,6 @@
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.BtnDetalleTicket = new System.Windows.Forms.ToolStripButton();
             this.cmbfuncion = new System.Windows.Forms.ComboBox();
             this.cmbAsiento = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnDetalleTicket = new System.Windows.Forms.ToolStripButton();
             this.grpDetalleTicket.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).BeginInit();
@@ -173,16 +173,6 @@
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnDetalleTicket
-            // 
-            this.BtnDetalleTicket.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnDetalleTicket.Image = global::EXPO60.Properties.Resources.connection_indicator;
-            this.BtnDetalleTicket.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnDetalleTicket.Name = "BtnDetalleTicket";
-            this.BtnDetalleTicket.Size = new System.Drawing.Size(109, 22);
-            this.BtnDetalleTicket.Text = "Generar reporte";
-            this.BtnDetalleTicket.Click += new System.EventHandler(this.BtnDetalleTicket_Click);
             // 
             // cmbfuncion
             // 
@@ -355,6 +345,15 @@
             this.btnmostrar.Textcolor = System.Drawing.Color.White;
             this.btnmostrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            // 
+            // BtnDetalleTicket
+            // 
+            this.BtnDetalleTicket.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnDetalleTicket.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnDetalleTicket.Image = ((System.Drawing.Image)(resources.GetObject("BtnDetalleTicket.Image")));
+            this.BtnDetalleTicket.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnDetalleTicket.Name = "BtnDetalleTicket";
+            this.BtnDetalleTicket.Size = new System.Drawing.Size(23, 22);
             // 
             // FrmDetalleTicket
             // 

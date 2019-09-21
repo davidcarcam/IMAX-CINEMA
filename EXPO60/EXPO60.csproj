@@ -60,7 +60,6 @@
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
     <Compile Include="Controlador\Constructor_Actores.cs" />
     <Compile Include="Controlador\Constructor_Asientos.cs" />
-    <Compile Include="Controlador\Constructor_ConfigEmpresa.cs" />
     <Compile Include="Controlador\Constructor_funciones.cs" />
     <Compile Include="Controlador\Constructor_localAlimentos.cs" />
     <Compile Include="Controlador\Constructor_pelicula.cs" />
@@ -78,7 +77,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Conexion_Correo.cs" />
-    <Compile Include="Modelo\ConfiguracionEmpresa.cs" />
     <Compile Include="Modelo\FuncionesAlimentos.cs" />
     <Compile Include="Modelo\FuncionesDetalleTicket.cs" />
     <Compile Include="Modelo\funcionesEmpresa.cs" />
@@ -99,15 +97,51 @@
     <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSetAsientos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAsientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetDetalleTicket.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDetalleTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetFacturaLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetProducto.cs">
+      <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DataSetProducto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProducto.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\DataSetProveedores.Designer.cs">
+    <Compile Include="Reportes\DataSetUsuario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteAsientos.Designer.cs">
+      <DependentUpon>ReporteAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteDetalleTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteDetalleTicket.Designer.cs">
+      <DependentUpon>ReporteDetalleTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaLocal.Designer.cs">
+      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ReporteProductos.cs">
       <SubType>Form</SubType>
@@ -115,11 +149,11 @@
     <Compile Include="Reportes\ReporteProductos.Designer.cs">
       <DependentUpon>ReporteProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\ReporteProveedores.cs">
+    <Compile Include="Reportes\ReporteUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\ReporteProveedores.Designer.cs">
-      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    <Compile Include="Reportes\ReporteUsuario.Designer.cs">
+      <DependentUpon>ReporteUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConfirmarContraseña.cs">
       <SubType>Form</SubType>
@@ -156,12 +190,6 @@
     </Compile>
     <Compile Include="Vista\FrmDetalleTicket.Designer.cs">
       <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FrmEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FrmEmpresa.Designer.cs">
-      <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmEmpresas.cs">
       <SubType>Form</SubType>
@@ -284,13 +312,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
-    <EmbeddedResource Include="Reportes\Report8.rdlc" />
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\Report4.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteAsientos.resx">
+      <DependentUpon>ReporteAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteDetalleTicket.resx">
+      <DependentUpon>ReporteDetalleTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteFacturaLocal.resx">
+      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteProductos.resx">
       <DependentUpon>ReporteProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteProveedores.resx">
-      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\ReporteUsuario.resx">
+      <DependentUpon>ReporteUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConfirmarContraseña.resx">
       <DependentUpon>ConfirmarContraseña.cs</DependentUpon>
@@ -309,9 +348,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmDetalleTicket.resx">
       <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FrmEmpresa.resx">
-      <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmEmpresas.resx">
       <DependentUpon>FrmEmpresas.cs</DependentUpon>
@@ -381,6 +417,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\DataSetAsientos.xsc">
+      <DependentUpon>DataSetAsientos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetAsientos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAsientos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetAsientos.xss">
+      <DependentUpon>DataSetAsientos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetDetalleTicket.xsc">
+      <DependentUpon>DataSetDetalleTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetDetalleTicket.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDetalleTicket.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetDetalleTicket.xss">
+      <DependentUpon>DataSetDetalleTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetFacturaLocal.xsc">
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetFacturaLocal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFacturaLocal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetFacturaLocal.xss">
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\DataSetProducto.xsc">
       <DependentUpon>DataSetProducto.xsd</DependentUpon>
     </None>
@@ -392,16 +461,16 @@
     <None Include="Reportes\DataSetProducto.xss">
       <DependentUpon>DataSetProducto.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DataSetProveedores.xsc">
-      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    <None Include="Reportes\DataSetUsuario.xsc">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DataSetProveedores.xsd">
+    <None Include="Reportes\DataSetUsuario.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetProveedores.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetUsuario.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\DataSetProveedores.xss">
-      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    <None Include="Reportes\DataSetUsuario.xss">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
     </None>
     <None Include="Resources\talk_male_96px.png" />
     <None Include="Resources\test_passed_96px.png" />
@@ -411,7 +480,6 @@
     <None Include="Resources\arrows_long_right_96px.png" />
     <None Include="Resources\camera_96px1.png" />
     <Content Include="Resources\clear-button.png" />
-    <None Include="Resources\connection-indicator.png" />
     <Content Include="Resources\crop-button.png" />
     <Content Include="Resources\crop-tool-button.png" />
     <None Include="Resources\food_as_resources_96px.png" />

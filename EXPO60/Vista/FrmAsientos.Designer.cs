@@ -89,7 +89,7 @@
             this.cmbsala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbsala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbsala.FormattingEnabled = true;
-            this.cmbsala.Location = new System.Drawing.Point(132, 126);
+            this.cmbsala.Location = new System.Drawing.Point(132, 100);
             this.cmbsala.Name = "cmbsala";
             this.cmbsala.Size = new System.Drawing.Size(200, 21);
             this.cmbsala.TabIndex = 3;
@@ -110,7 +110,7 @@
             this.cmbfila.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbfila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbfila.FormattingEnabled = true;
-            this.cmbfila.Location = new System.Drawing.Point(132, 70);
+            this.cmbfila.Location = new System.Drawing.Point(132, 44);
             this.cmbfila.Name = "cmbfila";
             this.cmbfila.Size = new System.Drawing.Size(200, 21);
             this.cmbfila.TabIndex = 1;
@@ -120,16 +120,17 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(738, 72);
+            this.label8.Location = new System.Drawing.Point(738, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 20);
             this.label8.TabIndex = 71;
             this.label8.Text = "Buscar";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtbuscar
             // 
             this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuscar.Location = new System.Drawing.Point(803, 74);
+            this.txtbuscar.Location = new System.Drawing.Point(803, 48);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
@@ -160,11 +161,12 @@
             // BtnAsientos
             // 
             this.BtnAsientos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnAsientos.Image = global::EXPO60.Properties.Resources.connection_indicator;
+            this.BtnAsientos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnAsientos.Image = ((System.Drawing.Image)(resources.GetObject("BtnAsientos.Image")));
             this.BtnAsientos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAsientos.Name = "BtnAsientos";
-            this.BtnAsientos.Size = new System.Drawing.Size(109, 22);
-            this.BtnAsientos.Text = "Generar reporte";
+            this.BtnAsientos.Size = new System.Drawing.Size(23, 22);
+            this.BtnAsientos.Text = "toolStripButton1";
             this.BtnAsientos.Click += new System.EventHandler(this.BtnAsientos_Click);
             // 
             // cmbestado
@@ -172,7 +174,7 @@
             this.cmbestado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(597, 125);
+            this.cmbestado.Location = new System.Drawing.Point(597, 99);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(200, 21);
             this.cmbestado.TabIndex = 4;
@@ -182,7 +184,7 @@
             this.cmbasiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbasiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbasiento.FormattingEnabled = true;
-            this.cmbasiento.Location = new System.Drawing.Point(506, 71);
+            this.cmbasiento.Location = new System.Drawing.Point(506, 45);
             this.cmbasiento.Name = "cmbasiento";
             this.cmbasiento.Size = new System.Drawing.Size(200, 21);
             this.cmbasiento.TabIndex = 2;
@@ -192,7 +194,7 @@
             this.lblEstado_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEstado_Asiento.AutoSize = true;
             this.lblEstado_Asiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Asiento.Location = new System.Drawing.Point(397, 126);
+            this.lblEstado_Asiento.Location = new System.Drawing.Point(397, 100);
             this.lblEstado_Asiento.Name = "lblEstado_Asiento";
             this.lblEstado_Asiento.Size = new System.Drawing.Size(194, 20);
             this.lblEstado_Asiento.TabIndex = 0;
@@ -203,7 +205,7 @@
             this.lblSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSala.AutoSize = true;
             this.lblSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSala.Location = new System.Drawing.Point(357, 71);
+            this.lblSala.Location = new System.Drawing.Point(357, 45);
             this.lblSala.Name = "lblSala";
             this.lblSala.Size = new System.Drawing.Size(143, 20);
             this.lblSala.TabIndex = 0;
@@ -212,7 +214,7 @@
             // txtID_Asiento
             // 
             this.txtID_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtID_Asiento.Location = new System.Drawing.Point(315, 105);
+            this.txtID_Asiento.Location = new System.Drawing.Point(315, 79);
             this.txtID_Asiento.Name = "txtID_Asiento";
             this.txtID_Asiento.Size = new System.Drawing.Size(32, 20);
             this.txtID_Asiento.TabIndex = 0;
@@ -223,7 +225,7 @@
             this.lblAsiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAsiento.AutoSize = true;
             this.lblAsiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsiento.Location = new System.Drawing.Point(15, 68);
+            this.lblAsiento.Location = new System.Drawing.Point(15, 46);
             this.lblAsiento.Name = "lblAsiento";
             this.lblAsiento.Size = new System.Drawing.Size(111, 20);
             this.lblAsiento.TabIndex = 0;
@@ -236,7 +238,7 @@
             this.dgvAsientos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAsientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAsientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsientos.Location = new System.Drawing.Point(12, 241);
+            this.dgvAsientos.Location = new System.Drawing.Point(12, 215);
             this.dgvAsientos.Name = "dgvAsientos";
             this.dgvAsientos.Size = new System.Drawing.Size(986, 265);
             this.dgvAsientos.TabIndex = 0;
@@ -264,7 +266,7 @@
             this.btnEliminar_Asiento.IconVisible = true;
             this.btnEliminar_Asiento.IconZoom = 80D;
             this.btnEliminar_Asiento.IsTab = false;
-            this.btnEliminar_Asiento.Location = new System.Drawing.Point(757, 178);
+            this.btnEliminar_Asiento.Location = new System.Drawing.Point(757, 152);
             this.btnEliminar_Asiento.Name = "btnEliminar_Asiento";
             this.btnEliminar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnEliminar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
@@ -300,7 +302,7 @@
             this.btnActualizar_Asiento.IconVisible = true;
             this.btnActualizar_Asiento.IconZoom = 80D;
             this.btnActualizar_Asiento.IsTab = false;
-            this.btnActualizar_Asiento.Location = new System.Drawing.Point(506, 178);
+            this.btnActualizar_Asiento.Location = new System.Drawing.Point(506, 152);
             this.btnActualizar_Asiento.Name = "btnActualizar_Asiento";
             this.btnActualizar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnActualizar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
@@ -336,7 +338,7 @@
             this.btnMostrar_Asientos.IconVisible = true;
             this.btnMostrar_Asientos.IconZoom = 80D;
             this.btnMostrar_Asientos.IsTab = false;
-            this.btnMostrar_Asientos.Location = new System.Drawing.Point(259, 178);
+            this.btnMostrar_Asientos.Location = new System.Drawing.Point(259, 152);
             this.btnMostrar_Asientos.Name = "btnMostrar_Asientos";
             this.btnMostrar_Asientos.Normalcolor = System.Drawing.Color.Maroon;
             this.btnMostrar_Asientos.OnHovercolor = System.Drawing.Color.Brown;
@@ -372,7 +374,7 @@
             this.btnAgregar_Asiento.IconVisible = true;
             this.btnAgregar_Asiento.IconZoom = 80D;
             this.btnAgregar_Asiento.IsTab = false;
-            this.btnAgregar_Asiento.Location = new System.Drawing.Point(12, 178);
+            this.btnAgregar_Asiento.Location = new System.Drawing.Point(12, 152);
             this.btnAgregar_Asiento.Name = "btnAgregar_Asiento";
             this.btnAgregar_Asiento.Normalcolor = System.Drawing.Color.Maroon;
             this.btnAgregar_Asiento.OnHovercolor = System.Drawing.Color.Brown;
