@@ -205,6 +205,11 @@ namespace EXPO60.Vista
         {
             vaciarampos();
         }
+
+        private void BtnDetalleTicket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

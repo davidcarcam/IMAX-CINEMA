@@ -55,10 +55,8 @@ namespace EXPO60.Vista
         }
         public void Limpiar_Factura_Local()
         {
-
             txtmonto.Clear();
             txtnombre.Clear();
-            mskfecha.Clear();
         }
         public void Eliminar_Factura_Local()
         {
@@ -98,9 +96,25 @@ namespace EXPO60.Vista
         }
         private void BunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            Agregar_Factura_Local();
-            Limpiar_Factura_Local();
-            Mostrar_Factura_Local();
+            DateTime fecha = DateTime.Today.AddDays(15);
+            if (dateTimePicker1.Value.Date > fecha)
+            {
+                MessageBox.Show("La fecha ingresada esta fuera del rango permitido", "Fecha superior", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                if (dateTimePicker1.Value.Date < DateTime.Today)
+                {
+                    MessageBox.Show("La fecha ingresada es menor a la de hoy", "La fecha es erronea", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    Agregar_Factura_Local();
+                    Limpiar_Factura_Local();
+                    Mostrar_Factura_Local();
+                }
+            }         
         }
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -223,11 +237,9 @@ namespace EXPO60.Vista
             this.dgvfacturaloc.Columns[0].Visible = false;
             MostrarFactura();
         }
-
         private void BtnFacturaLocal_Click(object sender, EventArgs e)
         {
-            Factura form2 = new Factura();
-            form2.Show();
+          
         }
     }
 }

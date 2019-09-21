@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.5085cm</Width>
+              <Width>4.64079cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.5085cm</Width>
+              <Width>4.64079cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.5085cm</Width>
+              <Width>4.64079cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.5085cm</Width>
+              <Width>4.64079cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.5085cm</Width>
+              <Width>4.64079cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -34,7 +34,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre de Producto</Value>
+                              <Value>nombre prod</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -70,7 +70,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Precio</Value>
+                              <Value>precio</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -106,7 +106,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre</Value>
+                              <Value>nombre</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -142,7 +142,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tipo de Producto</Value>
+                              <Value>tipo producto</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -178,7 +178,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre  de Local</Value>
+                              <Value>nombre local</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -399,10 +399,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Producto</DataSetName>
-        <Top>0.07056cm</Top>
         <Left>0cm</Left>
         <Height>1.2cm</Height>
-        <Width>22.5425cm</Width>
+        <Width>23.20396cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -410,21 +409,21 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.91667in</Height>
+    <Height>1.64264in</Height>
     <Style />
   </Body>
-  <Width>8.875in</Width>
+  <Width>9.13542in</Width>
   <Page>
     <PageHeader>
-      <Height>2.34194cm</Height>
+      <Height>2.63581cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Rectangle Name="Rectangle2">
+        <Rectangle Name="Rectangle1">
           <KeepTogether>true</KeepTogether>
           <Left>0cm</Left>
-          <Height>0.55972cm</Height>
-          <Width>22.5425cm</Width>
+          <Height>0.54208cm</Height>
+          <Width>23.20396cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -432,7 +431,22 @@
             <BackgroundColor>Maroon</BackgroundColor>
           </Style>
         </Rectangle>
-        <Textbox Name="Textbox11">
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>LogoDavid</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.54208cm</Top>
+          <Left>0cm</Left>
+          <Height>2.05563cm</Height>
+          <Width>3.11078cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox12">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -441,7 +455,7 @@
                 <TextRun>
                   <Value>INSTITUTO TECNICO RICALDONE </Value>
                   <Style>
-                    <FontSize>16pt</FontSize>
+                    <FontSize>24pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -454,7 +468,7 @@
                 <TextRun>
                   <Value>REPORTE DE PRODUCTOS</Value>
                   <Style>
-                    <FontSize>16pt</FontSize>
+                    <FontSize>24pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -464,11 +478,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>0.595cm</Top>
-          <Left>2.46063cm</Left>
-          <Height>1.6603cm</Height>
-          <Width>20.08187cm</Width>
-          <ZIndex>1</ZIndex>
+          <Top>0.54208cm</Top>
+          <Left>3.11078cm</Left>
+          <Height>2.09373cm</Height>
+          <Width>20.09318cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -479,21 +493,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image2">
-          <Source>Embedded</Source>
-          <Value>LogoDavid</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.63028cm</Top>
-          <Left>0cm</Left>
-          <Height>1.71167cm</Height>
-          <Width>2.39007cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -502,24 +501,35 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.01345cm</Height>
+      <Height>1.91382cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox12">
+        <Rectangle Name="Rectangle2">
+          <KeepTogether>true</KeepTogether>
+          <Top>1.37174cm</Top>
+          <Left>0cm</Left>
+          <Height>0.54208cm</Height>
+          <Width>23.20396cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BackgroundColor>Maroon</BackgroundColor>
+          </Style>
+        </Rectangle>
+        <Textbox Name="Textbox14">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>IMAX CINEMA</Value>
+                  <Value>                                                                                                    IMAX CINEMA</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
+              <Style />
             </Paragraph>
             <Paragraph>
               <TextRuns>
@@ -544,10 +554,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox12</rd:DefaultName>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
           <Left>0cm</Left>
-          <Height>1.42988cm</Height>
-          <Width>22.5425cm</Width>
+          <Height>1.37174cm</Height>
+          <Width>23.20395cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -558,19 +569,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Rectangle Name="Rectangle3">
-          <KeepTogether>true</KeepTogether>
-          <Top>1.45373cm</Top>
-          <Height>0.55972cm</Height>
-          <Width>22.5425cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <BackgroundColor>Maroon</BackgroundColor>
-          </Style>
-        </Rectangle>
       </ReportItems>
       <Style>
         <Border>
@@ -594,7 +592,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>6ffa313d-ba5e-480f-b52a-83e8db86ad09</rd:DataSourceID>
+      <rd:DataSourceID>d64a8a11-6991-437c-99b0-fe87afca15b7</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -628,10 +626,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetProducto</rd:DataSetName>
         <rd:SchemaPath>C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\Reportes\DataSetProducto.xsd</rd:SchemaPath>
-        <rd:TableName>DataTable</rd:TableName>
+        <rd:TableName>producto</rd:TableName>
         <rd:TableAdapterFillMethod>Productos</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>DataTableTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>productoTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -713,5 +711,5 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>c6625e44-bd1a-4cec-a3e3-da8523d8fd4e</rd:ReportID>
+  <rd:ReportID>fe2b5912-e53a-46a7-b1a0-e8340a30b88e</rd:ReportID>
 </Report>

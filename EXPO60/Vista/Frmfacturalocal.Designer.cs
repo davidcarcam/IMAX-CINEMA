@@ -53,7 +53,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.BtnFacturaLocal = new System.Windows.Forms.ToolStripButton();
-            this.mskfecha = new System.Windows.Forms.MaskedTextBox();
             this.txtMont = new System.Windows.Forms.MaskedTextBox();
             this.txtDate = new System.Windows.Forms.DataGridView();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -66,6 +65,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfacturaloc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -348,11 +348,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtbuscar);
             this.groupBox2.Controls.Add(this.cmbusuario);
             this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Controls.Add(this.mskfecha);
             this.groupBox2.Controls.Add(this.txtMont);
             this.groupBox2.Controls.Add(this.txtDate);
             this.groupBox2.Controls.Add(this.bunifuFlatButton1);
@@ -436,17 +436,6 @@
             this.BtnFacturaLocal.Size = new System.Drawing.Size(23, 22);
             this.BtnFacturaLocal.Text = "toolStripButton1";
             this.BtnFacturaLocal.Click += new System.EventHandler(this.BtnFacturaLocal_Click);
-            // 
-            // mskfecha
-            // 
-            this.mskfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mskfecha.Location = new System.Drawing.Point(122, 139);
-            this.mskfecha.Mask = "00/00/0000";
-            this.mskfecha.Name = "mskfecha";
-            this.mskfecha.Size = new System.Drawing.Size(153, 20);
-            this.mskfecha.TabIndex = 3;
-            this.mskfecha.ValidatingType = typeof(System.DateTime);
-            this.mskfecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaskedTextBox1_KeyPress);
             // 
             // txtMont
             // 
@@ -680,6 +669,14 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Nombre";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(122, 139);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker1.TabIndex = 78;
+            // 
             // Frmfacturalocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -723,7 +720,6 @@
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.MaskedTextBox mskfecha;
         private System.Windows.Forms.MaskedTextBox txtMont;
         private System.Windows.Forms.DataGridView txtDate;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
@@ -742,5 +738,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.ToolStripButton BtnFacturaLocal;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
