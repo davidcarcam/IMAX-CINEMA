@@ -254,6 +254,7 @@ namespace EXPO60.Vista
             txtnombre.Text = this.dgvpersonajes[1, posicion].Value.ToString();
             cmbactor.Text = this.dgvpersonajes[2, posicion].Value.ToString();
             cmbpelicula.Text = this.dgvpersonajes[3, posicion].Value.ToString();
+
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;

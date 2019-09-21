@@ -42,7 +42,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM proveedores";
+                string query = "SELECT id_proveedor AS ID, nombre, apellido,correo,direccion,dui,telefono, empresa,estado_prov FROM proveedores INNER JOIN empresas ON proveedores.id_empresa = empresas.id_empresa INNER JOIN estado_prov ON estado_prov.id_estado_prov = empresas.id_empresa ";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -110,10 +110,10 @@ namespace EXPO60.Modelo
         }
         public static DataTable ObtenerEstado()
         {
+            string query = "SELECT * FROM estado_prov";
             DataTable data = new DataTable();
             try
             {
-                string query = "SELECT * FROM estado_prov";
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 adapter.Fill(data);

@@ -83,7 +83,6 @@
             this.btnExaminar.TabIndex = 237;
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.UseVisualStyleBackColor = false;
-            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click_1);
             // 
             // pbLogo
             // 
@@ -160,7 +159,6 @@
             this.btnGuardar.TabIndex = 232;
             this.btnGuardar.Text = "GUARDAR Y CONTINUAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // label7
             // 
@@ -277,9 +275,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEmpresa";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmpresa";
-            this.Load += new System.EventHandler(this.FrmEmpresa_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

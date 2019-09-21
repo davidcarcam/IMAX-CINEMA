@@ -101,10 +101,10 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("oops erro de coneccion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("oops error de coneccion consulte con el administrador"+ex, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }

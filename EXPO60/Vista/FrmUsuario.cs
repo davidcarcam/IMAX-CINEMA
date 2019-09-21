@@ -295,17 +295,6 @@ namespace EXPO60.Vista
         {
             dgvusuarios.DataSource = FuncionUsuario.mostrarusuario();
             this.dgvusuarios.Columns[0].Visible = false;
-            this.dgvusuarios.Columns[5].Visible = false;
-            this.dgvusuarios.Columns[9].Visible = false;
-            this.dgvusuarios.Columns[10].Visible = false;
-            this.dgvusuarios.Columns[11].Visible = false;
-            this.dgvusuarios.Columns[12].Visible = false;
-            this.dgvusuarios.Columns[13].Visible = false;
-            this.dgvusuarios.Columns[14].Visible = false;
-            this.dgvusuarios.Columns[15].Visible = false;
-            this.dgvusuarios.Columns[16].Visible = false;
-            this.dgvusuarios.Columns[17].Visible = false;
-            this.dgvusuarios.Columns[18].Visible = false;
             this.dgvusuarios.Columns[1].HeaderText = "Nombres";
             this.dgvusuarios.Columns[1].Width = 80;
             this.dgvusuarios.Columns[2].HeaderText = "Apellidos";
@@ -320,6 +309,16 @@ namespace EXPO60.Vista
             this.dgvusuarios.Columns[7].Width = 50;
             this.dgvusuarios.Columns[8].HeaderText = "Usuario";
             this.dgvusuarios.Columns[8].Width = 70;
+            this.dgvusuarios.Columns[5].Visible = false;
+            this.dgvusuarios.Columns[9].Visible = false;
+            this.dgvusuarios.Columns[10].Visible = false;
+            this.dgvusuarios.Columns[11].Visible = false;
+            this.dgvusuarios.Columns[12].Visible = false;
+            this.dgvusuarios.Columns[13].Visible = false;
+            this.dgvusuarios.Columns[14].Visible = false;
+            this.dgvusuarios.Columns[15].Visible = false;
+            this.dgvusuarios.Columns[16].Visible = false;
+            this.dgvusuarios.Columns[17].Visible = false;
         }
         private void dgvusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -330,12 +329,12 @@ namespace EXPO60.Vista
             txtapellido.Text = dgvusuarios[2, posicion].Value.ToString();
             txtdireccion.Text = dgvusuarios[3, posicion].Value.ToString();
             txtcorreo.Text = dgvusuarios[4, posicion].Value.ToString();
-            txtdocumento.Text = dgvusuarios[5, posicion].Value.ToString();
-            txttelefono.Text = dgvusuarios[6, posicion].Value.ToString();
-            txtusuario.Text = dgvusuarios[7, posicion].Value.ToString();
-            txtclave.Text = dgvusuarios[8, posicion].Value.ToString();
-            cmbEstadoU.Text = dgvusuarios[9, posicion].Value.ToString();
-            cmbTipoU.Text = dgvusuarios[10, posicion].Value.ToString();
+            txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
+            txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
+            txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
+            txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
+            cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
+            cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
             btneliminar.Enabled = true;
             btnactualizar.Enabled = true;
             btnagregar.Enabled = false;
@@ -402,10 +401,10 @@ namespace EXPO60.Vista
                 return;
             }
         }
+
         private void BtnUsuario_Click(object sender, EventArgs e)
         {
-            ReporteUsuario repro = new ReporteUsuario();
-            repro.Show();
+           
         }
     }
 

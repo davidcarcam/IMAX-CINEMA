@@ -83,13 +83,13 @@ namespace EXPO60.Vista
         {
             actualizar.nombre = txtNombre_empresa.Text;
             actualizar.direccionEmpresa = txtDireccion_empresa.Text;
-            ConfiguracionEmpresa.actualizarEmpresa(actualizar);
+            funcionesEmpresa.actualizarEmpresa(actualizar);
         }
         public void eliminarRegistro()
         {
-            if (MessageBox.Show("Esta seguro de eliminar este registro", "confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro de realizar esta operacion?", "confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
             {
-                ConfiguracionEmpresa.eliminarEmpresa(Convert.ToInt32(txtid.Text));
+                funcionesEmpresa.eliminarEmpresa(Convert.ToInt32(txtid.Text));
             }
             
         }

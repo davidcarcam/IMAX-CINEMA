@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
         {
             bool retorno = false;
             //Verificar la existencia de usuario en la base de datos
-            string query = "SELECT * FROM usuario WHERE usuario = ?user";
+            string query = "SELECT * FROM usuario WHERE binary usuario = ?user";
             try
             {
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
@@ -46,7 +46,7 @@ namespace EXPO60.Modelo
                         {
                             ContructorLogin2.id = _reader.GetInt16(0);
                             ContructorLogin2.nombre = _reader.GetString(1) + " " + _reader.GetString(2);
-                            ContructorLogin2.nivel = _reader.GetInt16(10);
+                            ContructorLogin2.nivel = _reader.GetInt16(11);
                             if (reset >= 1)
                             {
                                 if (ContructorLogin2.clave == "efAdsX436aQfSUcxfwNEbBolhN0=")
@@ -67,7 +67,7 @@ namespace EXPO60.Modelo
                         while (reader.Read())
                         {
                             int intentos = 0;
-                            intentos = reader.GetInt16(18) + 1;
+                            intentos = reader.GetInt16(5) + 1;
                             if (intentos > 5)
                             {
                                 //Bloquear usuario
@@ -100,7 +100,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error de acceso! Ha ocurrido un error en la conexion al servidor " + ex, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error de acceso! Ha ocurrido un error en la conexion al servidor" + ex, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
             finally
@@ -206,6 +206,7 @@ namespace EXPO60.Modelo
                 return "No tienes una cuenta con estas credenciales";
             }
         }
+
         public static bool validarcod(ContructorLogin2 cod)
         {
             bool retorno = false;

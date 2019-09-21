@@ -104,11 +104,11 @@ namespace EXPO60.Modelo
             }
         }
         public static DataTable usuario()
-        {           
+        {
+            string query = "SELECT * FROM usuario";
             DataTable usua = new DataTable();
             try
             {
-                string query = "SELECT * FROM usuario";
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 adapter.Fill(usua);
@@ -124,6 +124,28 @@ namespace EXPO60.Modelo
             {
                 Conexion.ObtenerConexion().Close();
             }
-        }       
+        }
+        public static DataTable pago()
+        {
+            string query = "SELECT * FROM tipo_pago";
+            DataTable usua = new DataTable();
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(usua);
+                return usua;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error crítico " + e);
+                return usua;
+            }
+            finally
+            {
+                Conexion.ObtenerConexion().Close();
+            }
+        }
     }
 }

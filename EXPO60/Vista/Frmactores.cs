@@ -63,6 +63,7 @@ namespace EXPO60.Vista
             else
             {
                 agregar.Nombre_Actor = txtactor.Text;
+                Funciones_Actores.Ingresar_Actor(agregar);
             }
         }
         public void Modificar_Actor()
@@ -72,10 +73,10 @@ namespace EXPO60.Vista
             Funciones_Actores.Actualizar_Actor(Actualizar);
         }
         private void BtnAgregar_Actor_Click(object sender, EventArgs e)
-        {
-            Limpiar_Datos();
+        {            
             Agregar_Actor();
             Mostrar_Actores();
+            Limpiar_Datos();
         }
         private void BtnMostrar_Actores_Click(object sender, EventArgs e)
         {
@@ -147,27 +148,10 @@ namespace EXPO60.Vista
                 e.Handled = true;
             }
         }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
                 this.Close();
         }
-
-        private void ToolStrip1_Resize(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GrpActores_Resize(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombre_Actor_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
 
@@ -195,7 +179,6 @@ namespace EXPO60.Vista
                 Mostrar_Actores();
             }
         }
-
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             Limpiar_Datos();

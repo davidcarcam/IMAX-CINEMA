@@ -39,6 +39,7 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolbtnCerrar_Sesion = new System.Windows.Forms.ToolStripButton();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.lblusuario = new System.Windows.Forms.ToolStripButton();
             this.lblconectado = new System.Windows.Forms.ToolStripButton();
@@ -46,14 +47,13 @@
             this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
             this.picimg = new System.Windows.Forms.PictureBox();
             this.picimgL = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picimgL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -166,6 +166,17 @@
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1025, 522);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // toolStrip2
             // 
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -190,7 +201,7 @@
             // 
             this.lblconectado.BackColor = System.Drawing.Color.White;
             this.lblconectado.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.lblconectado.ForeColor = System.Drawing.Color.Lime;
+            this.lblconectado.ForeColor = System.Drawing.Color.YellowGreen;
             this.lblconectado.Image = ((System.Drawing.Image)(resources.GetObject("lblconectado.Image")));
             this.lblconectado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.lblconectado.Name = "lblconectado";
@@ -277,17 +288,6 @@
             this.picimgL.TabIndex = 46;
             this.picimgL.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1025, 522);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,12 +305,12 @@
             this.toolStrip1.PerformLayout();
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picimg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picimgL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

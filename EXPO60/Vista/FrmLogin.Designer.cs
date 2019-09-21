@@ -34,6 +34,7 @@ namespace EXPO60.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkPrimerUso = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -45,7 +46,7 @@ namespace EXPO60.Vista
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.picvisible = new System.Windows.Forms.PictureBox();
             this.picocultar = new System.Windows.Forms.PictureBox();
-            this.btncontinuar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,11 +61,25 @@ namespace EXPO60.Vista
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.linkPrimerUso);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 298);
             this.panel1.TabIndex = 0;
+            // 
+            // linkPrimerUso
+            // 
+            this.linkPrimerUso.AutoSize = true;
+            this.linkPrimerUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkPrimerUso.LinkColor = System.Drawing.Color.White;
+            this.linkPrimerUso.Location = new System.Drawing.Point(84, 258);
+            this.linkPrimerUso.Name = "linkPrimerUso";
+            this.linkPrimerUso.Size = new System.Drawing.Size(72, 16);
+            this.linkPrimerUso.TabIndex = 0;
+            this.linkPrimerUso.TabStop = true;
+            this.linkPrimerUso.Text = "Primer uso";
+            this.linkPrimerUso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPrimerUso_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -118,7 +133,7 @@ namespace EXPO60.Vista
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(326, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 16);
+            this.label2.Size = new System.Drawing.Size(89, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Contraseña";
             // 
@@ -129,7 +144,7 @@ namespace EXPO60.Vista
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(326, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 16);
+            this.label1.Size = new System.Drawing.Size(147, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Ingresar su Usuario";
             // 
@@ -183,41 +198,40 @@ namespace EXPO60.Vista
             this.picocultar.TabStop = false;
             this.picocultar.Click += new System.EventHandler(this.picocultar_Click);
             // 
-            // btncontinuar
+            // bunifuFlatButton1
             // 
-            this.btncontinuar.Activecolor = System.Drawing.Color.DarkRed;
-            this.btncontinuar.BackColor = System.Drawing.Color.DarkRed;
-            this.btncontinuar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncontinuar.BorderRadius = 0;
-            this.btncontinuar.ButtonText = "                             Continuar";
-            this.btncontinuar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncontinuar.DisabledColor = System.Drawing.Color.Gray;
-            this.btncontinuar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btncontinuar.Iconimage = null;
-            this.btncontinuar.Iconimage_right = null;
-            this.btncontinuar.Iconimage_right_Selected = null;
-            this.btncontinuar.Iconimage_Selected = null;
-            this.btncontinuar.IconMarginLeft = 0;
-            this.btncontinuar.IconMarginRight = 0;
-            this.btncontinuar.IconRightVisible = true;
-            this.btncontinuar.IconRightZoom = 0D;
-            this.btncontinuar.IconVisible = true;
-            this.btncontinuar.IconZoom = 90D;
-            this.btncontinuar.IsTab = false;
-            this.btncontinuar.Location = new System.Drawing.Point(204, 207);
-            this.btncontinuar.Name = "btncontinuar";
-            this.btncontinuar.Normalcolor = System.Drawing.Color.DarkRed;
-            this.btncontinuar.OnHovercolor = System.Drawing.Color.DarkRed;
-            this.btncontinuar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btncontinuar.selected = false;
-            this.btncontinuar.Size = new System.Drawing.Size(241, 48);
-            this.btncontinuar.TabIndex = 24;
-            this.btncontinuar.Text = "                             Continuar";
-            this.btncontinuar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncontinuar.Textcolor = System.Drawing.Color.White;
-            this.btncontinuar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncontinuar.Visible = false;
-            this.btncontinuar.Click += new System.EventHandler(this.bunifuFlatButton1_Click_1);
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.DarkRed;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "                             Continuar";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(204, 207);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DarkRed;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Brown;
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 48);
+            this.bunifuFlatButton1.TabIndex = 24;
+            this.bunifuFlatButton1.Text = "                             Continuar";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Visible = false;
             // 
             // label4
             // 
@@ -270,7 +284,7 @@ namespace EXPO60.Vista
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(326, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 16);
+            this.label8.Size = new System.Drawing.Size(147, 16);
             this.label8.TabIndex = 19;
             this.label8.Text = "Ingresar su Usuario";
             this.label8.Visible = false;
@@ -280,7 +294,7 @@ namespace EXPO60.Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 298);
-            this.Controls.Add(this.btncontinuar);
+            this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -303,6 +317,7 @@ namespace EXPO60.Vista
             this.Text = "FrmLogin";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picvisible)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picocultar)).EndInit();
@@ -314,6 +329,7 @@ namespace EXPO60.Vista
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel linkPrimerUso;
         private System.Windows.Forms.PictureBox pictureBox1;
         private TextBox txtCifrado;
         private LinkLabel linkLabel1;
@@ -325,7 +341,7 @@ namespace EXPO60.Vista
         private TextBox txtUsuario;
         private PictureBox picvisible;
         private PictureBox picocultar;
-        private Bunifu.Framework.UI.BunifuFlatButton btncontinuar;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Label label4;
         private Label label5;
         private Label label6;

@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO local_alimentos (nombre, telefono, id_estado_local ) VALUES ('{0}','{1}','{2}')", add.NombreLocal, add.Telefono , add.tipo), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO local_alimentos (nombre_local, telefono, id_estado_local ) VALUES ('{0}','{1}','{2}')", add.NombreLocal, add.Telefono , add.tipo), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -42,7 +42,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT id_local AS ID, nombre, telefono,estado_local FROM local_alimentos INNER JOIN estado_local ON local_alimentos.id_estado_local = local_alimentos.id_estado_local";
+                string query = "SELECT id_local AS ID, nombre_local, telefono,estado_local FROM local_alimentos INNER JOIN estado_local ON local_alimentos.id_estado_local = estado_local.id_estado_local";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE  local_alimentos SET nombre ='{0}' , telefono = '{1}', id_estado_local ='{2}'", upd.NombreLocal, upd.Telefono,upd.tipo), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE  local_alimentos SET nombre_local ='{0}' , telefono = '{1}', id_estado_local ='{2}'", upd.NombreLocal, upd.Telefono,upd.tipo), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -101,10 +101,10 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("oops error de conexion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("oops error de conexion consulte con el administrador"+ex, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }

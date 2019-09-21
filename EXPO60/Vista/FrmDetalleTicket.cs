@@ -58,6 +58,7 @@ namespace EXPO60.Vista
             cmbAsiento.DisplayMember = "id_num";
             cmbAsiento.ValueMember = "id_asiento";
         }
+
         private void FrmDetalleTicket_Load(object sender, EventArgs e)
         {
             try
@@ -96,14 +97,17 @@ namespace EXPO60.Vista
         {
             throw new NotImplementedException();
         }
+
         private void mostrarDetalleTicket()
         {
             throw new NotImplementedException();
         }
+
         private void btnmostrar_Click(object sender, EventArgs e)
         {
             Mostrarcmb();
         }
+
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             if (txtbuscar.Text != "")
@@ -130,10 +134,12 @@ namespace EXPO60.Vista
                 mostrarDetalleTicket();
             }
         }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
         private void dgvtickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int posicion;
@@ -143,6 +149,7 @@ namespace EXPO60.Vista
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
         }
+
         public void mostrarET()
         {            
             cmbAsiento.DataSource = FuncionesDetalleTicket.asiento();
@@ -157,6 +164,7 @@ namespace EXPO60.Vista
         {
 
         }
+
         private void btnactualizar_Click(object sender, EventArgs e)
         {
             modificarRegistro();
@@ -189,13 +197,18 @@ namespace EXPO60.Vista
         {
             if (MessageBox.Show("Esta seguro de realizar esta operacion?", "confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                ConfiguracionEmpresa.eliminarEmpresa(Convert.ToInt32(idDetalletic.Text));
+                funcionesEmpresa.eliminarEmpresa(Convert.ToInt32(idDetalletic.Text));
             }
 
         }
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
+        }
+
+        private void BtnDetalleTicket_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
