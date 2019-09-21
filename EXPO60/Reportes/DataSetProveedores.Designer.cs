@@ -20,17 +20,17 @@ namespace EXPO60.Reportes {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetFacturaLocal")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetProveedores")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetFacturaLocal : global::System.Data.DataSet {
+    public partial class DataSetProveedores : global::System.Data.DataSet {
         
-        private DataTableDataTable tableDataTable;
+        private ProveedoresDataTable tableProveedores;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataSetFacturaLocal() {
+        public DataSetProveedores() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EXPO60.Reportes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DataSetFacturaLocal(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetProveedores(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EXPO60.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DataTable"] != null)) {
-                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
+                if ((ds.Tables["Proveedores"] != null)) {
+                    base.Tables.Add(new ProveedoresDataTable(ds.Tables["Proveedores"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EXPO60.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTableDataTable DataTable {
+        public ProveedoresDataTable Proveedores {
             get {
-                return this.tableDataTable;
+                return this.tableProveedores;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EXPO60.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetFacturaLocal cln = ((DataSetFacturaLocal)(base.Clone()));
+            DataSetProveedores cln = ((DataSetProveedores)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EXPO60.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DataTable"] != null)) {
-                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
+                if ((ds.Tables["Proveedores"] != null)) {
+                    base.Tables.Add(new ProveedoresDataTable(ds.Tables["Proveedores"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EXPO60.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDataTable = ((DataTableDataTable)(base.Tables["DataTable"]));
+            this.tableProveedores = ((ProveedoresDataTable)(base.Tables["Proveedores"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable != null)) {
-                    this.tableDataTable.InitVars();
+                if ((this.tableProveedores != null)) {
+                    this.tableProveedores.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EXPO60.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetFacturaLocal";
+            this.DataSetName = "DataSetProveedores";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetFacturaLocal.xsd";
+            this.Namespace = "http://tempuri.org/DataSetProveedores.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDataTable = new DataTableDataTable();
-            base.Tables.Add(this.tableDataTable);
+            this.tableProveedores = new ProveedoresDataTable();
+            base.Tables.Add(this.tableProveedores);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDataTable() {
+        private bool ShouldSerializeProveedores() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EXPO60.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetFacturaLocal ds = new DataSetFacturaLocal();
+            DataSetProveedores ds = new DataSetProveedores();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,35 @@ namespace EXPO60.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DataTableRowChangeEventHandler(object sender, DataTableRowChangeEvent e);
+        public delegate void ProveedoresRowChangeEventHandler(object sender, ProveedoresRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTableDataTable : global::System.Data.TypedTableBase<DataTableRow> {
-            
-            private global::System.Data.DataColumn columnmonto_fac_local;
-            
-            private global::System.Data.DataColumn columnfecha_fac_local;
-            
-            private global::System.Data.DataColumn columnnombre_cliente;
+        public partial class ProveedoresDataTable : global::System.Data.TypedTableBase<ProveedoresRow> {
             
             private global::System.Data.DataColumn columnnombre;
             
+            private global::System.Data.DataColumn columnapellido;
+            
+            private global::System.Data.DataColumn columncorreo;
+            
+            private global::System.Data.DataColumn columndireccion;
+            
+            private global::System.Data.DataColumn columndui;
+            
+            private global::System.Data.DataColumn columntelefono;
+            
+            private global::System.Data.DataColumn columnempresa;
+            
+            private global::System.Data.DataColumn columnestado_prov;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableDataTable() {
-                this.TableName = "DataTable";
+            public ProveedoresDataTable() {
+                this.TableName = "Proveedores";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +306,7 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DataTableDataTable(global::System.Data.DataTable table) {
+            internal ProveedoresDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,33 +323,9 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DataTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProveedoresDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn monto_fac_localColumn {
-                get {
-                    return this.columnmonto_fac_local;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fecha_fac_localColumn {
-                get {
-                    return this.columnfecha_fac_local;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre_clienteColumn {
-                get {
-                    return this.columnnombre_cliente;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -349,6 +333,62 @@ namespace EXPO60.Reportes {
             public global::System.Data.DataColumn nombreColumn {
                 get {
                     return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn apellidoColumn {
+                get {
+                    return this.columnapellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn correoColumn {
+                get {
+                    return this.columncorreo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn direccionColumn {
+                get {
+                    return this.columndireccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn duiColumn {
+                get {
+                    return this.columndui;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefonoColumn {
+                get {
+                    return this.columntelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn empresaColumn {
+                get {
+                    return this.columnempresa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn estado_provColumn {
+                get {
+                    return this.columnestado_prov;
                 }
             }
             
@@ -363,48 +403,52 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow this[int index] {
+            public ProveedoresRow this[int index] {
                 get {
-                    return ((DataTableRow)(this.Rows[index]));
+                    return ((ProveedoresRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowChanging;
+            public event ProveedoresRowChangeEventHandler ProveedoresRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowChanged;
+            public event ProveedoresRowChangeEventHandler ProveedoresRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowDeleting;
+            public event ProveedoresRowChangeEventHandler ProveedoresRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowDeleted;
+            public event ProveedoresRowChangeEventHandler ProveedoresRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDataTableRow(DataTableRow row) {
+            public void AddProveedoresRow(ProveedoresRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow AddDataTableRow(string monto_fac_local, string fecha_fac_local, string nombre_cliente, string nombre) {
-                DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
+            public ProveedoresRow AddProveedoresRow(string nombre, string apellido, string correo, string direccion, string dui, string telefono, string empresa, string estado_prov) {
+                ProveedoresRow rowProveedoresRow = ((ProveedoresRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        monto_fac_local,
-                        fecha_fac_local,
-                        nombre_cliente,
-                        nombre};
-                rowDataTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTableRow);
-                return rowDataTableRow;
+                        nombre,
+                        apellido,
+                        correo,
+                        direccion,
+                        dui,
+                        telefono,
+                        empresa,
+                        estado_prov};
+                rowProveedoresRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProveedoresRow);
+                return rowProveedoresRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTableDataTable cln = ((DataTableDataTable)(base.Clone()));
+                ProveedoresDataTable cln = ((ProveedoresDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,59 +456,75 @@ namespace EXPO60.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTableDataTable();
+                return new ProveedoresDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnmonto_fac_local = base.Columns["monto_fac_local"];
-                this.columnfecha_fac_local = base.Columns["fecha_fac_local"];
-                this.columnnombre_cliente = base.Columns["nombre_cliente"];
                 this.columnnombre = base.Columns["nombre"];
+                this.columnapellido = base.Columns["apellido"];
+                this.columncorreo = base.Columns["correo"];
+                this.columndireccion = base.Columns["direccion"];
+                this.columndui = base.Columns["dui"];
+                this.columntelefono = base.Columns["telefono"];
+                this.columnempresa = base.Columns["empresa"];
+                this.columnestado_prov = base.Columns["estado_prov"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnmonto_fac_local = new global::System.Data.DataColumn("monto_fac_local", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmonto_fac_local);
-                this.columnfecha_fac_local = new global::System.Data.DataColumn("fecha_fac_local", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_fac_local);
-                this.columnnombre_cliente = new global::System.Data.DataColumn("nombre_cliente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_cliente);
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
-                this.columnmonto_fac_local.MaxLength = 7;
-                this.columnfecha_fac_local.MaxLength = 10;
-                this.columnnombre_cliente.MaxLength = 60;
+                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellido);
+                this.columncorreo = new global::System.Data.DataColumn("correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncorreo);
+                this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndireccion);
+                this.columndui = new global::System.Data.DataColumn("dui", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndui);
+                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono);
+                this.columnempresa = new global::System.Data.DataColumn("empresa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnempresa);
+                this.columnestado_prov = new global::System.Data.DataColumn("estado_prov", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado_prov);
                 this.columnnombre.MaxLength = 50;
+                this.columnapellido.MaxLength = 50;
+                this.columncorreo.MaxLength = 60;
+                this.columndireccion.MaxLength = 200;
+                this.columndui.MaxLength = 10;
+                this.columntelefono.MaxLength = 9;
+                this.columnempresa.MaxLength = 60;
+                this.columnestado_prov.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow NewDataTableRow() {
-                return ((DataTableRow)(this.NewRow()));
+            public ProveedoresRow NewProveedoresRow() {
+                return ((ProveedoresRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTableRow(builder);
+                return new ProveedoresRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTableRow);
+                return typeof(ProveedoresRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTableRowChanged != null)) {
-                    this.DataTableRowChanged(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.ProveedoresRowChanged != null)) {
+                    this.ProveedoresRowChanged(this, new ProveedoresRowChangeEvent(((ProveedoresRow)(e.Row)), e.Action));
                 }
             }
             
@@ -472,8 +532,8 @@ namespace EXPO60.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTableRowChanging != null)) {
-                    this.DataTableRowChanging(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.ProveedoresRowChanging != null)) {
+                    this.ProveedoresRowChanging(this, new ProveedoresRowChangeEvent(((ProveedoresRow)(e.Row)), e.Action));
                 }
             }
             
@@ -481,8 +541,8 @@ namespace EXPO60.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTableRowDeleted != null)) {
-                    this.DataTableRowDeleted(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.ProveedoresRowDeleted != null)) {
+                    this.ProveedoresRowDeleted(this, new ProveedoresRowChangeEvent(((ProveedoresRow)(e.Row)), e.Action));
                 }
             }
             
@@ -490,14 +550,14 @@ namespace EXPO60.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTableRowDeleting != null)) {
-                    this.DataTableRowDeleting(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.ProveedoresRowDeleting != null)) {
+                    this.ProveedoresRowDeleting(this, new ProveedoresRowChangeEvent(((ProveedoresRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDataTableRow(DataTableRow row) {
+            public void RemoveProveedoresRow(ProveedoresRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -506,7 +566,7 @@ namespace EXPO60.Reportes {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetFacturaLocal ds = new DataSetFacturaLocal();
+                DataSetProveedores ds = new DataSetProveedores();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -524,7 +584,7 @@ namespace EXPO60.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTableDataTable";
+                attribute2.FixedValue = "ProveedoresDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -568,63 +628,15 @@ namespace EXPO60.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTableRow : global::System.Data.DataRow {
+        public partial class ProveedoresRow : global::System.Data.DataRow {
             
-            private DataTableDataTable tableDataTable;
+            private ProveedoresDataTable tableProveedores;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DataTableRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProveedoresRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable = ((DataTableDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string monto_fac_local {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable.monto_fac_localColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'monto_fac_local\' de la tabla \'DataTable\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.monto_fac_localColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string fecha_fac_local {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable.fecha_fac_localColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_fac_local\' de la tabla \'DataTable\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.fecha_fac_localColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre_cliente {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable.nombre_clienteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_cliente\' de la tabla \'DataTable\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.nombre_clienteColumn] = value;
-                }
+                this.tableProveedores = ((ProveedoresDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -632,63 +644,223 @@ namespace EXPO60.Reportes {
             public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable.nombreColumn]));
+                        return ((string)(this[this.tableProveedores.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'DataTable\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'Proveedores\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable.nombreColumn] = value;
+                    this[this.tableProveedores.nombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Ismonto_fac_localNull() {
-                return this.IsNull(this.tableDataTable.monto_fac_localColumn);
+            public string apellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableProveedores.apellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'Proveedores\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedores.apellidoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setmonto_fac_localNull() {
-                this[this.tableDataTable.monto_fac_localColumn] = global::System.Convert.DBNull;
+            public string correo {
+                get {
+                    try {
+                        return ((string)(this[this.tableProveedores.correoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correo\' de la tabla \'Proveedores\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedores.correoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isfecha_fac_localNull() {
-                return this.IsNull(this.tableDataTable.fecha_fac_localColumn);
+            public string direccion {
+                get {
+                    try {
+                        return ((string)(this[this.tableProveedores.direccionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'direccion\' de la tabla \'Proveedores\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedores.direccionColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setfecha_fac_localNull() {
-                this[this.tableDataTable.fecha_fac_localColumn] = global::System.Convert.DBNull;
+            public string dui {
+                get {
+                    try {
+                        return ((string)(this[this.tableProveedores.duiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'dui\' de la tabla \'Proveedores\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedores.duiColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnombre_clienteNull() {
-                return this.IsNull(this.tableDataTable.nombre_clienteColumn);
+            public string telefono {
+                get {
+                    try {
+                        return ((string)(this[this.tableProveedores.telefonoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono\' de la tabla \'Proveedores\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedores.telefonoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnombre_clienteNull() {
-                this[this.tableDataTable.nombre_clienteColumn] = global::System.Convert.DBNull;
+            public string empresa {
+                get {
+                    try {
+                        return ((string)(this[this.tableProveedores.empresaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'empresa\' de la tabla \'Proveedores\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedores.empresaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string estado_prov {
+                get {
+                    try {
+                        return ((string)(this[this.tableProveedores.estado_provColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado_prov\' de la tabla \'Proveedores\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProveedores.estado_provColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsnombreNull() {
-                return this.IsNull(this.tableDataTable.nombreColumn);
+                return this.IsNull(this.tableProveedores.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetnombreNull() {
-                this[this.tableDataTable.nombreColumn] = global::System.Convert.DBNull;
+                this[this.tableProveedores.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsapellidoNull() {
+                return this.IsNull(this.tableProveedores.apellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetapellidoNull() {
+                this[this.tableProveedores.apellidoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscorreoNull() {
+                return this.IsNull(this.tableProveedores.correoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcorreoNull() {
+                this[this.tableProveedores.correoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdireccionNull() {
+                return this.IsNull(this.tableProveedores.direccionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdireccionNull() {
+                this[this.tableProveedores.direccionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsduiNull() {
+                return this.IsNull(this.tableProveedores.duiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetduiNull() {
+                this[this.tableProveedores.duiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstelefonoNull() {
+                return this.IsNull(this.tableProveedores.telefonoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettelefonoNull() {
+                this[this.tableProveedores.telefonoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsempresaNull() {
+                return this.IsNull(this.tableProveedores.empresaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetempresaNull() {
+                this[this.tableProveedores.empresaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isestado_provNull() {
+                return this.IsNull(this.tableProveedores.estado_provColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setestado_provNull() {
+                this[this.tableProveedores.estado_provColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -696,22 +868,22 @@ namespace EXPO60.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DataTableRowChangeEvent : global::System.EventArgs {
+        public class ProveedoresRowChangeEvent : global::System.EventArgs {
             
-            private DataTableRow eventRow;
+            private ProveedoresRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRowChangeEvent(DataTableRow row, global::System.Data.DataRowAction action) {
+            public ProveedoresRowChangeEvent(ProveedoresRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow Row {
+            public ProveedoresRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -727,7 +899,7 @@ namespace EXPO60.Reportes {
         }
     }
 }
-namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
+namespace EXPO60.Reportes.DataSetProveedoresTableAdapters {
     
     
     /// <summary>
@@ -739,7 +911,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTableTableAdapter : global::System.ComponentModel.Component {
+    public partial class ProveedoresTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.Odbc.OdbcDataAdapter _adapter;
         
@@ -753,7 +925,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataTableTableAdapter() {
+        public ProveedoresTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -850,11 +1022,15 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
             this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTable";
-            tableMapping.ColumnMappings.Add("monto_fac_local", "monto_fac_local");
-            tableMapping.ColumnMappings.Add("fecha_fac_local", "fecha_fac_local");
-            tableMapping.ColumnMappings.Add("nombre_cliente", "nombre_cliente");
+            tableMapping.DataSetTable = "Proveedores";
             tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("apellido", "apellido");
+            tableMapping.ColumnMappings.Add("correo", "correo");
+            tableMapping.ColumnMappings.Add("direccion", "direccion");
+            tableMapping.ColumnMappings.Add("dui", "dui");
+            tableMapping.ColumnMappings.Add("telefono", "telefono");
+            tableMapping.ColumnMappings.Add("empresa", "empresa");
+            tableMapping.ColumnMappings.Add("estado_prov", "estado_prov");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -871,9 +1047,9 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        tp.monto_fac_local, tp.fecha_fac_local, tp.nombre_cliente, te.nombr" +
-                "e\r\nFROM            factura_local tp, usuario te\r\nWHERE        tp.id_usuario = te" +
-                ".id_usuario";
+            this._commandCollection[0].CommandText = @"SELECT        tp.nombre, tp.apellido, tp.correo, tp.direccion, tp.dui, tp.telefono, te.empresa, ta.estado_prov
+FROM            proveedores tp, estado_prov ta, empresas te
+WHERE        tp.id_estado_prov = ta.id_estado_prov AND tp.id_empresa = te.id_empresa";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -881,7 +1057,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FacturaLocal(DataSetFacturaLocal.DataTableDataTable dataTable) {
+        public virtual int Proveedores(DataSetProveedores.ProveedoresDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -894,9 +1070,9 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetFacturaLocal.DataTableDataTable GetData() {
+        public virtual DataSetProveedores.ProveedoresDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetFacturaLocal.DataTableDataTable dataTable = new DataSetFacturaLocal.DataTableDataTable();
+            DataSetProveedores.ProveedoresDataTable dataTable = new DataSetProveedores.ProveedoresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -970,7 +1146,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DataSetFacturaLocal dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetProveedores dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -980,7 +1156,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DataSetFacturaLocal dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetProveedores dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -990,7 +1166,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DataSetFacturaLocal dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetProveedores dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1024,7 +1200,7 @@ namespace EXPO60.Reportes.DataSetFacturaLocalTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DataSetFacturaLocal dataSet) {
+        public virtual int UpdateAll(DataSetProveedores dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

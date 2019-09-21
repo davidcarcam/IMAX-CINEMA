@@ -350,3 +350,4 @@ C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\p
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteProveedores.resources

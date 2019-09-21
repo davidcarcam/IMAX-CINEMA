@@ -104,11 +104,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProducto.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\DataSetProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\ReporteProductos.Designer.cs">
       <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteProveedores.Designer.cs">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConfirmarContraseña.cs">
       <SubType>Form</SubType>
@@ -274,8 +285,12 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\Report8.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteProductos.resx">
       <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteProveedores.resx">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConfirmarContraseña.resx">
       <DependentUpon>ConfirmarContraseña.cs</DependentUpon>
@@ -376,6 +391,17 @@
     </None>
     <None Include="Reportes\DataSetProducto.xss">
       <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetProveedores.xsc">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetProveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProveedores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetProveedores.xss">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </None>
     <None Include="Resources\talk_male_96px.png" />
     <None Include="Resources\test_passed_96px.png" />
