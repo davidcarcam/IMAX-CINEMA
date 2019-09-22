@@ -40,6 +40,7 @@
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.btnGrafico = new System.Windows.Forms.ToolStripButton();
             this.txtaño = new System.Windows.Forms.MaskedTextBox();
             this.dgvpeliculas = new System.Windows.Forms.DataGridView();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -57,7 +58,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.fileNuevo = new System.Windows.Forms.OpenFileDialog();
-            this.btnGrafico = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -117,6 +117,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label8
             // 
@@ -193,6 +194,15 @@
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // btnGrafico
+            // 
+            this.btnGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnGrafico.Image")));
+            this.btnGrafico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGrafico.Name = "btnGrafico";
+            this.btnGrafico.Size = new System.Drawing.Size(108, 22);
+            this.btnGrafico.Text = "Generar Gráfica";
+            this.btnGrafico.Click += new System.EventHandler(this.btnGrafico_Click);
             // 
             // txtaño
             // 
@@ -458,15 +468,6 @@
             // fileNuevo
             // 
             this.fileNuevo.FileName = "openFileDialog1";
-            // 
-            // btnGrafico
-            // 
-            this.btnGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnGrafico.Image")));
-            this.btnGrafico.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGrafico.Name = "btnGrafico";
-            this.btnGrafico.Size = new System.Drawing.Size(108, 22);
-            this.btnGrafico.Text = "Generar Gráfica";
-            this.btnGrafico.Click += new System.EventHandler(this.btnGrafico_Click);
             // 
             // FrmPelicula
             // 
