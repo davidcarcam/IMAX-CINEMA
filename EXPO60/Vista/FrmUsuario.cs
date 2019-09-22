@@ -407,6 +407,10 @@ namespace EXPO60.Vista
             ReporteUsuario repro = new ReporteUsuario();
             repro.Show();
         }
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

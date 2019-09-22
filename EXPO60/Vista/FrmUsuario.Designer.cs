@@ -60,10 +60,11 @@ namespace EXPO60.Vista
             this.cmbEstadoU = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.BtnUsuario = new System.Windows.Forms.ToolStripButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnUsuario = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvusuarios)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -416,7 +417,8 @@ namespace EXPO60.Vista
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnCerrar,
-            this.BtnUsuario});
+            this.BtnUsuario,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -432,6 +434,16 @@ namespace EXPO60.Vista
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click_1);
+            // 
+            // BtnUsuario
+            // 
+            this.BtnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnUsuario.Image = global::EXPO60.Properties.Resources.document_96px;
+            this.BtnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnUsuario.Name = "BtnUsuario";
+            this.BtnUsuario.Size = new System.Drawing.Size(112, 22);
+            this.BtnUsuario.Text = "Generar Reporte";
+            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
             // btnagregar
             // 
@@ -517,15 +529,14 @@ namespace EXPO60.Vista
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de usuarios";
             // 
-            // BtnUsuario
+            // toolStripButton1
             // 
-            this.BtnUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnUsuario.Image = global::EXPO60.Properties.Resources.document_96px;
-            this.BtnUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnUsuario.Name = "BtnUsuario";
-            this.BtnUsuario.Size = new System.Drawing.Size(112, 22);
-            this.BtnUsuario.Text = "Generar Reporte";
-            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(125, 22);
+            this.toolStripButton1.Text = "Recuperar contraseña";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // FrmUsuario
             // 
@@ -582,5 +593,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton BtnUsuario;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
