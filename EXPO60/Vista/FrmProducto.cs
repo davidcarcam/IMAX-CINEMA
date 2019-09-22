@@ -224,7 +224,8 @@ namespace EXPO60.Vista
 
         private void BtnProductos_Click(object sender, EventArgs e)
         {
-            
+            ReporteProducto repro = new ReporteProducto();
+            repro.Show();
         }
     }
 }
