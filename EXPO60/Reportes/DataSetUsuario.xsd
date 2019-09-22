@@ -7,14 +7,14 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.EXPO60.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usuarioTableAdapter" GeneratorDataComponentClassName="usuarioTableAdapter" Name="usuario" UserDataComponentName="usuarioTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableTableAdapter" GeneratorDataComponentClassName="DataTableTableAdapter" Name="DataTable" UserDataComponentName="DataTableTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="TodoLosDatosDeUsuario" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="TodoLosDatosDeUsuario" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="TodoLosDatosDeUsuario">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Usuario" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Usuario" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Usuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        tp.nombre, tp.apellido, tp.direccion, tp.correo, tp.intentos, tp.dui, tp.telefono, tp.usuario, tp.clave, te.estado_usu
-FROM            usuario tp, estado_usuario te
-WHERE        tp.id_estado_usu = te.id_estado_usu</CommandText>
+                    <CommandText>SELECT        tp.nombre, tp.apellido, tp.direccion, tp.correo, tp.dui, tp.telefono, tp.usuario, te.estado_usu, ta.tipo_usu
+FROM            usuario tp, estado_usuario te, tipo_usuario ta
+WHERE        tp.id_estado_usu = te.id_estado_usu AND tp.id_tipo_usu = ta.id_tipo_usu</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -25,12 +25,11 @@ WHERE        tp.id_estado_usu = te.id_estado_usu</CommandText>
               <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
               <Mapping SourceColumn="direccion" DataSetColumn="direccion" />
               <Mapping SourceColumn="correo" DataSetColumn="correo" />
-              <Mapping SourceColumn="intentos" DataSetColumn="intentos" />
               <Mapping SourceColumn="dui" DataSetColumn="dui" />
               <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
               <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
-              <Mapping SourceColumn="clave" DataSetColumn="clave" />
               <Mapping SourceColumn="estado_usu" DataSetColumn="estado_usu" />
+              <Mapping SourceColumn="tipo_usu" DataSetColumn="tipo_usu" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -42,7 +41,7 @@ WHERE        tp.id_estado_usu = te.id_estado_usu</CommandText>
   <xs:element name="DataSetUsuario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetUsuario" msprop:Generator_UserDSName="DataSetUsuario">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="usuario" msprop:Generator_TableClassName="usuarioDataTable" msprop:Generator_TableVarName="tableusuario" msprop:Generator_TablePropName="usuario" msprop:Generator_RowDeletingName="usuarioRowDeleting" msprop:Generator_RowChangingName="usuarioRowChanging" msprop:Generator_RowEvHandlerName="usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="usuarioRowDeleted" msprop:Generator_UserTableName="usuario" msprop:Generator_RowChangedName="usuarioRowChanged" msprop:Generator_RowEvArgName="usuarioRowChangeEvent" msprop:Generator_RowClassName="usuarioRow">
+        <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_RowClassName="DataTableRow" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowEvArgName="DataTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
@@ -73,7 +72,6 @@ WHERE        tp.id_estado_usu = te.id_estado_usu</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="intentos" msprop:Generator_ColumnVarNameInTable="columnintentos" msprop:Generator_ColumnPropNameInRow="intentos" msprop:Generator_ColumnPropNameInTable="intentosColumn" msprop:Generator_UserColumnName="intentos" type="xs:int" minOccurs="0" />
               <xs:element name="dui" msprop:Generator_ColumnVarNameInTable="columndui" msprop:Generator_ColumnPropNameInRow="dui" msprop:Generator_ColumnPropNameInTable="duiColumn" msprop:Generator_UserColumnName="dui" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -95,17 +93,17 @@ WHERE        tp.id_estado_usu = te.id_estado_usu</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="estado_usu" msprop:Generator_ColumnVarNameInTable="columnestado_usu" msprop:Generator_ColumnPropNameInRow="estado_usu" msprop:Generator_ColumnPropNameInTable="estado_usuColumn" msprop:Generator_UserColumnName="estado_usu" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo_usu" msprop:Generator_ColumnVarNameInTable="columntipo_usu" msprop:Generator_ColumnPropNameInRow="tipo_usu" msprop:Generator_ColumnPropNameInTable="tipo_usuColumn" msprop:Generator_UserColumnName="tipo_usu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

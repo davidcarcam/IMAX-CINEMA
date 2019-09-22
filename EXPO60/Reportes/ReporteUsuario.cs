@@ -19,8 +19,8 @@ namespace EXPO60.Reportes
 
         private void ReporteUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'DataSetUsuario.usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.TodoLosDatosDeUsuario(this.DataSetUsuario.usuario);
+            // TODO: esta línea de código carga datos en la tabla 'DataSetUsuario.DataTable' Puede moverla o quitarla según sea necesario.
+            this.DataTableTableAdapter.Usuario(this.DataSetUsuario.DataTable);
 
             this.reportViewer1.RefreshReport();
         }
