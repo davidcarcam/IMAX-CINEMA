@@ -118,32 +118,80 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="send_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="organization_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\organization_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="question_mark_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\question_mark_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gender_neutral_user_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gender_neutral_user_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camera_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camera_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="curtains_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curtains_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="food_as_resources_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\food_as_resources_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pen_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pen_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="end_call_male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\end_call_male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="todo_list_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\todo_list_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="film_reel_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\film_reel_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_contacts_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_contacts_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LogoDavid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoDavid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phone_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phone_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sell_property_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sell_property_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curtains_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curtains_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="question_mark_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question_mark_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="food_as_resources_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\food_as_resources_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="truck_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\truck_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="send_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\send_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="end_call_male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\end_call_male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="organization_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\organization_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="test_passed_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test_passed_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="talk_male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\talk_male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="documentary_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\documentary_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="starred_ticket_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\starred_ticket_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="change-power-options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\change-power-options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,31 +199,40 @@
   <data name="arrows_long_right_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrows_long_right_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="test_passed_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test_passed_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shopping_cart_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping_cart_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="send_file_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\send_file_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="send_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="send_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\send_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="organization_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\organization_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clapperboard_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clapperboard_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gender_neutral_user_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gender_neutral_user_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="barber_chair_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barber_chair_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="phone_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phone_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="camera_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="document_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ingredients_list_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ingredients_list_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancel_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoDavid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoDavid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="regresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\regresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="theatre_mask_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theatre_mask_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clapperboard_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clapperboard_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shop_96px-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop_96px-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gender_neutral_user_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gender_neutral_user_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

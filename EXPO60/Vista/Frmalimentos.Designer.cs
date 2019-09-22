@@ -46,6 +46,7 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.Btnalimento = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlocal)).BeginInit();
@@ -100,7 +101,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.Btnalimento});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -349,6 +351,16 @@
             this.txtid.Visible = false;
             this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
+            // Btnalimento
+            // 
+            this.Btnalimento.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Btnalimento.Image = global::EXPO60.Properties.Resources.document_96px;
+            this.Btnalimento.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Btnalimento.Name = "Btnalimento";
+            this.Btnalimento.Size = new System.Drawing.Size(142, 22);
+            this.Btnalimento.Text = "Generador de Reporte";
+            this.Btnalimento.Click += new System.EventHandler(this.Btnalimento_Click);
+            // 
             // Frmalimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,5 +399,6 @@
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.ToolStripButton Btnalimento;
     }
 }

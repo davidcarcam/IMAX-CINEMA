@@ -6,16 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.1275cm</Width>
+              <Width>5.50333cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.1275cm</Width>
+              <Width>5.50333cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.1275cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>4.1275cm</Width>
+              <Width>5.50333cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -31,7 +28,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nombre prod</Value>
+                              <Value>nombre local</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -67,7 +64,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>precio</Value>
+                              <Value>telefono</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -103,7 +100,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nombre</Value>
+                              <Value>estado local</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -130,42 +127,6 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox7">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>tipo producto</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#7292cc</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -173,14 +134,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nombre_prod">
+                    <Textbox Name="nombre_local">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nombre_prod.Value</Value>
+                              <Value>=Fields!nombre_local.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -190,7 +151,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nombre_prod</rd:DefaultName>
+                      <rd:DefaultName>nombre_local</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -206,14 +167,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="precio">
+                    <Textbox Name="telefono">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!precio.Value</Value>
+                              <Value>=Fields!telefono.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -223,7 +184,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>precio</rd:DefaultName>
+                      <rd:DefaultName>telefono</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -239,14 +200,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nombre">
+                    <Textbox Name="estado_local">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nombre.Value</Value>
+                              <Value>=Fields!estado_local.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -256,40 +217,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nombre</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#e5e5e5</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="tipo_producto">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!tipo_producto.Value</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>tipo_producto</rd:DefaultName>
+                      <rd:DefaultName>estado_local</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -312,7 +240,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -325,8 +252,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetProducto</DataSetName>
-        <Top>0.0491cm</Top>
+        <DataSetName>DataSetLocalAlimento</DataSetName>
         <Left>0cm</Left>
         <Height>1.2cm</Height>
         <Width>16.51cm</Width>
@@ -337,20 +263,20 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.90164in</Height>
+    <Height>2.61192in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>2.55474cm</Height>
+      <Height>2.28021cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
         <Rectangle Name="Rectangle1">
           <KeepTogether>true</KeepTogether>
           <Left>0cm</Left>
-          <Height>0.62146cm</Height>
+          <Height>0.56854cm</Height>
           <Width>16.51cm</Width>
           <Style>
             <Border>
@@ -359,7 +285,22 @@
             <BackgroundColor>Maroon</BackgroundColor>
           </Style>
         </Rectangle>
-        <Textbox Name="Textbox9">
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>LogoDavid</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.56854cm</Top>
+          <Left>0cm</Left>
+          <Height>1.71167cm</Height>
+          <Width>2.79646cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox7">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -379,20 +320,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>REPORTE DE PRODUCTO</Value>
-                  <Style>
-                    <FontSize>18pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
+                  <Value>REPORTE DE LOCAL ALIMENTO</Value>
                   <Style>
                     <FontSize>18pt</FontSize>
                   </Style>
@@ -403,12 +331,12 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>0.62146cm</Top>
-          <Left>3.43641cm</Left>
-          <Height>1.93328cm</Height>
-          <Width>13.07359cm</Width>
-          <ZIndex>1</ZIndex>
+          <rd:DefaultName>Textbox7</rd:DefaultName>
+          <Top>0.60382cm</Top>
+          <Left>2.83174cm</Left>
+          <Height>1.67639cm</Height>
+          <Width>13.67826cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -419,20 +347,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image1">
-          <Source>Embedded</Source>
-          <Value>LogoDavid</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.62146cm</Top>
-          <Height>1.93328cm</Height>
-          <Width>3.36585cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -441,15 +355,14 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.16076cm</Height>
+      <Height>1.98438cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
         <Rectangle Name="Rectangle2">
           <KeepTogether>true</KeepTogether>
-          <Top>1.49231cm</Top>
-          <Left>0cm</Left>
-          <Height>0.66845cm</Height>
+          <Top>1.40906cm</Top>
+          <Height>0.56854cm</Height>
           <Width>16.51cm</Width>
           <Style>
             <Border>
@@ -458,7 +371,7 @@
             <BackgroundColor>Maroon</BackgroundColor>
           </Style>
         </Rectangle>
-        <Textbox Name="Textbox10">
+        <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -496,8 +409,9 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Height>1.45703cm</Height>
+          <rd:DefaultName>Textbox7</rd:DefaultName>
+          <Left>0cm</Left>
+          <Height>1.40906cm</Height>
           <Width>16.51cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -528,45 +442,41 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DataSetProducto">
+    <DataSource Name="DataSetLocalAlimento">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>24dd0a0a-1e36-4d5c-84f4-e6748bec8b92</rd:DataSourceID>
+      <rd:DataSourceID>d6e0f95e-8cf8-453f-b877-d47ea118a5de</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetProducto">
+    <DataSet Name="DataSetLocalAlimento">
       <Query>
-        <DataSourceName>DataSetProducto</DataSourceName>
+        <DataSourceName>DataSetLocalAlimento</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="nombre_prod">
-          <DataField>nombre_prod</DataField>
+        <Field Name="nombre_local">
+          <DataField>nombre_local</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="precio">
-          <DataField>precio</DataField>
+        <Field Name="telefono">
+          <DataField>telefono</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="nombre">
-          <DataField>nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tipo_producto">
-          <DataField>tipo_producto</DataField>
+        <Field Name="estado_local">
+          <DataField>estado_local</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DataSetProducto</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\Reportes\DataSetProducto.xsd</rd:SchemaPath>
-        <rd:TableName>Producto</rd:TableName>
-        <rd:TableAdapterFillMethod>Productos</rd:TableAdapterFillMethod>
+        <rd:DataSetName>DataSetLocalAlimento</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\Reportes\DataSetLocalAlimento.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable</rd:TableName>
+        <rd:TableAdapterFillMethod>LocalAlimento</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ProductoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DataTableTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -648,5 +558,5 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>aa1888be-eff7-47c3-a26a-52cb1171e8c3</rd:ReportID>
+  <rd:ReportID>e8873a5f-698f-4f85-836c-15f9c11a5890</rd:ReportID>
 </Report>
