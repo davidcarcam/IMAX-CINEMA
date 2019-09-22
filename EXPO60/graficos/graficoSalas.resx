@@ -117,65 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="send_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="question_mark_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\question_mark_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="camera_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camera_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="food_as_resources_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\food_as_resources_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="end_call_male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\end_call_male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoDavid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoDavid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="talk_male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\talk_male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="change-power-options" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\change-power-options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrows_long_right_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrows_long_right_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="test_passed_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test_passed_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="send_file_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send_file_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="send_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="organization_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\organization_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gender_neutral_user_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gender_neutral_user_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="phone_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phone_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="regresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\regresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

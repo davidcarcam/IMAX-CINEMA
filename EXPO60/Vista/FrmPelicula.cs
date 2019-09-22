@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
 using MySql.Data.MySqlClient;
+using EXPO60.graficos;
 
 namespace EXPO60.Vista
 {
@@ -160,7 +161,7 @@ namespace EXPO60.Vista
             this.dgvpeliculas.Columns[5].Visible = false;
             this.dgvpeliculas.Columns[6].Visible = false;
             this.dgvpeliculas.Columns[7].Visible = false;
-            this.dgvpeliculas.Columns["foto"].Visible = false;
+            
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }
@@ -244,7 +245,7 @@ namespace EXPO60.Vista
             txttitulo.Text = this.dgvpeliculas[2, posicion].Value.ToString();
             txtaño.Text = this.dgvpeliculas[1, posicion].Value.ToString();
             txtdirector.Text = this.dgvpeliculas[3, posicion].Value.ToString();
-            imagen = this.dgvpeliculas["foto", posicion].Value.ToString();
+            
             pictureBox1.Image = Image.FromFile(imagen);
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
@@ -259,6 +260,13 @@ namespace EXPO60.Vista
                 imagen = fileNuevo.FileName;
                 pictureBox1.Image = Image.FromFile(imagen);
             }
+        }
+
+        private void btnGrafico_Click(object sender, EventArgs e)
+        {
+            Grafico_pelicula kk = new Grafico_pelicula();
+            kk.Show();
+            
         }
     }
 }
