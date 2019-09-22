@@ -42,7 +42,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT id_pelicula AS ID,año,titulo,director, genero, idioma, formato,estado_pel FROM peliculas INNER JOIN generos ON peliculas.id_genero = generos.id_genero INNER JOIN idiomas ON peliculas.id_idioma = idiomas.id_idioma INNER JOIN formatos ON peliculas.id_formatos = formatos.id_formatos INNER JOIN estado_pelicula ON peliculas.id_estado_pelicula = estado_pelicula.id_estado_pelicula";
+                string query = "SELECT id_pelicula AS ID,año,titulo,director, genero, idioma, formato,estado_pel,foto FROM peliculas INNER JOIN generos ON peliculas.id_genero = generos.id_genero INNER JOIN idiomas ON peliculas.id_idioma = idiomas.id_idioma INNER JOIN formatos ON peliculas.id_formatos = formatos.id_formatos INNER JOIN estado_pelicula ON peliculas.id_estado_pelicula = estado_pelicula.id_estado_pelicula";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();

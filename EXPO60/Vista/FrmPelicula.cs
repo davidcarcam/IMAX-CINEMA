@@ -49,6 +49,7 @@ namespace EXPO60.Vista
             actualizar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
             actualizar.dimensiones = Convert.ToInt16(cmbDimensiones.SelectedValue);
             actualizar.estado = Convert.ToInt16(cmbestado.SelectedValue);
+            actualizar.foto = imagen.Replace("\\", "\\\\");
             Funciones_peliculas.actualizarPelicula(actualizar);
         }
         public void eliminarRegistro()

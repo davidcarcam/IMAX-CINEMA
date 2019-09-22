@@ -34,16 +34,12 @@ C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\E
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmactores.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmalimentos.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmAsientos.resources
-C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmClasificacion.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmEmpresas.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmfacturalocal.resources
-C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmFormato.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmFunciones.resources
-C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmIdioma.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmLogin.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmPelicula.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Frmpersonajes.resources
-C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.FrmPrincipal.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmProveedores.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmSala.resources
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmTicket.resources
@@ -301,3 +297,37 @@ C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vist
 C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
 C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources
 C:\Users\Isaac\source\repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.csprojAssemblyReference.cache
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\MySql.Data.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\MySql.Data.xml
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Form1.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteProveedores.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteUsuario.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmBotones.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmDetalleTicket.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmMetodos_Recuperar.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmNuevo.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmPrimerUso.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmProducto.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_Preguntas.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.Recuperacion_Correo.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.recuperarUsuario.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\RdlCompile.cache
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\RdlCompile.compiled
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.Producto.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteLocalAlimento.resources
+C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Reportes.ReporteFacturaLocal.resources

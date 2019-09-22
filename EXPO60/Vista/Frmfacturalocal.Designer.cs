@@ -67,6 +67,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.Btnfacturalocal = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfacturaloc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -421,12 +422,14 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.Btnfacturalocal});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
             this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // BtnCerrar
             // 
@@ -692,6 +695,16 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Nombre";
             // 
+            // Btnfacturalocal
+            // 
+            this.Btnfacturalocal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Btnfacturalocal.Image = global::EXPO60.Properties.Resources.document_96px;
+            this.Btnfacturalocal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Btnfacturalocal.Name = "Btnfacturalocal";
+            this.Btnfacturalocal.Size = new System.Drawing.Size(142, 22);
+            this.Btnfacturalocal.Text = "Generador de Reporte";
+            this.Btnfacturalocal.Click += new System.EventHandler(this.Btnalimento_Click);
+            // 
             // Frmfacturalocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -755,5 +768,6 @@
         private System.Windows.Forms.ComboBox cmbTipo_Pago;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.ToolStripButton Btnfacturalocal;
     }
 }

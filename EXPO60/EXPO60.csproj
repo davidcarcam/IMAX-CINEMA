@@ -97,6 +97,16 @@
     <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSetFacturaLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetLocalAlimento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLocalAlimento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DataSetProducto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,11 +122,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetUsuario.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\ReporteProducto.cs">
+    <Compile Include="Reportes\Producto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\ReporteProducto.Designer.cs">
-      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    <Compile Include="Reportes\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaLocal.Designer.cs">
+      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteLocalAlimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteLocalAlimento.Designer.cs">
+      <DependentUpon>ReporteLocalAlimento.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ReporteProveedores.cs">
       <SubType>Form</SubType>
@@ -287,11 +309,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\Report4.rdlc" />
-    <EmbeddedResource Include="Reportes\ReporteProducto.resx">
-      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\Report5.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteFacturaLocal.resx">
+      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteLocalAlimento.resx">
+      <DependentUpon>ReporteLocalAlimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteProveedores.resx">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
@@ -385,6 +415,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\DataSetFacturaLocal.xsc">
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetFacturaLocal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFacturaLocal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetFacturaLocal.xss">
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetLocalAlimento.xsc">
+      <DependentUpon>DataSetLocalAlimento.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetLocalAlimento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLocalAlimento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetLocalAlimento.xss">
+      <DependentUpon>DataSetLocalAlimento.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\DataSetProducto.xsc">
       <DependentUpon>DataSetProducto.xsd</DependentUpon>
     </None>

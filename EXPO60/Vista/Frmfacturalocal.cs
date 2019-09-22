@@ -231,6 +231,17 @@ namespace EXPO60.Vista
         {
           
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Btnalimento_Click(object sender, EventArgs e)
+        {
+            ReporteFacturaLocal repro = new ReporteFacturaLocal();
+            repro.Show();
+        }
     }
 }
 

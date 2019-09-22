@@ -9,10 +9,12 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductoTableAdapter" GeneratorDataComponentClassName="ProductoTableAdapter" Name="Producto" UserDataComponentName="ProductoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Productos" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Productos" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Productos">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Producto" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Producto" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Producto">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT productos.nombre_prod,productos.precio,proveedores.nombre, tipo_producto.tipo_producto FROM productos INNER JOIN proveedores ON productos.id_proveedor=proveedores.id_proveedor INNER JOIN tipo_producto ON productos.id_tipo_prod=tipo_producto.id_tipo_prod</CommandText>
+                    <CommandText>SELECT        tp.nombre_prod, tp.precio, te.nombre, ta.tipo_producto, tu.nombre_local
+FROM            productos tp, proveedores te, tipo_producto ta, local_alimentos tu
+WHERE        tp.id_proveedor = te.id_proveedor AND tp.id_tipo_prod = ta.id_tipo_prod AND tp.id_local = tu.id_local</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -23,6 +25,7 @@
               <Mapping SourceColumn="precio" DataSetColumn="precio" />
               <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
               <Mapping SourceColumn="tipo_producto" DataSetColumn="tipo_producto" />
+              <Mapping SourceColumn="nombre_local" DataSetColumn="nombre_local" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -34,7 +37,7 @@
   <xs:element name="DataSetProducto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetProducto" msprop:Generator_UserDSName="DataSetProducto">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_RowClassName="ProductoRow" msprop:Generator_UserTableName="Producto" msprop:Generator_RowEvArgName="ProductoRowChangeEvent">
+        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_UserTableName="Producto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_RowEvArgName="ProductoRowChangeEvent" msprop:Generator_RowClassName="ProductoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre_prod" msprop:Generator_ColumnVarNameInTable="columnnombre_prod" msprop:Generator_ColumnPropNameInRow="nombre_prod" msprop:Generator_ColumnPropNameInTable="nombre_prodColumn" msprop:Generator_UserColumnName="nombre_prod" minOccurs="0">
@@ -62,6 +65,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_local" msprop:Generator_ColumnVarNameInTable="columnnombre_local" msprop:Generator_ColumnPropNameInRow="nombre_local" msprop:Generator_ColumnPropNameInTable="nombre_localColumn" msprop:Generator_UserColumnName="nombre_local" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

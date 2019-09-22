@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
+using EXPO60.Reportes;
 
 namespace EXPO60.Vista
 {
@@ -216,6 +217,12 @@ namespace EXPO60.Vista
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             vaciarampos();
+        }
+
+        private void Btnalimento_Click(object sender, EventArgs e)
+        {
+            ReporteLocalAlimento repro = new ReporteLocalAlimento();
+            repro.Show();
         }
     }
 }
