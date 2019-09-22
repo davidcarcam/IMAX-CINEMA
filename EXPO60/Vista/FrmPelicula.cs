@@ -23,6 +23,7 @@ namespace EXPO60.Vista
         Constructor_pelicula actualizar = new Constructor_pelicula();
         private const Keys CopyKeys = Keys.Control | Keys.C;
         private const Keys PasteKeys = Keys.Control | Keys.V;
+        private string imagen = "";
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if ((keyData == CopyKeys) || (keyData == PasteKeys))
@@ -62,6 +63,7 @@ namespace EXPO60.Vista
             txttitulo.Clear();
             txtaño.Clear();
             txtdirector.Clear();
+            pictureBox1.Image = null;
         }
         public void agregarPelicula()
         {
@@ -72,6 +74,7 @@ namespace EXPO60.Vista
             agregar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
             agregar.dimensiones = Convert.ToInt16(cmbDimensiones.SelectedValue);
             agregar.estado = Convert.ToInt16(cmbestado.SelectedValue);
+            agregar.foto = imagen.Replace("\\","\\\\");
             int datos = Funciones_peliculas.insertarPelicula(agregar);
         }
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -157,6 +160,7 @@ namespace EXPO60.Vista
             this.dgvpeliculas.Columns[5].Visible = false;
             this.dgvpeliculas.Columns[6].Visible = false;
             this.dgvpeliculas.Columns[7].Visible = false;
+            this.dgvpeliculas.Columns["foto"].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }
@@ -240,19 +244,21 @@ namespace EXPO60.Vista
             txttitulo.Text = this.dgvpeliculas[2, posicion].Value.ToString();
             txtaño.Text = this.dgvpeliculas[1, posicion].Value.ToString();
             txtdirector.Text = this.dgvpeliculas[3, posicion].Value.ToString();
+            imagen = this.dgvpeliculas["foto", posicion].Value.ToString();
+            pictureBox1.Image = Image.FromFile(imagen);
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void btnFoto_Click(object sender, EventArgs e)
         {
-           FileDialog nuevafoto = 
+            imagen = "";
+            if (fileNuevo.ShowDialog() == DialogResult.OK)
+            {
+                imagen = fileNuevo.FileName;
+                pictureBox1.Image = Image.FromFile(imagen);
+            }
         }
     }
 }

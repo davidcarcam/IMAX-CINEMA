@@ -37,13 +37,12 @@ namespace EXPO60.Modelo
             }
 
         }
-        public static DataTable mostrarFunciones()
+        public static DataTable mostrarFunciones(string fecha, string sala)
         {
             DataTable data;
             try
             {
-                string query = "SELECT * FROM funciones";
-                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
+                MySqlCommand cmdselect = new MySqlCommand(string.Format("SELECT funciones.id_funcion, peliculas.titulo, funciones.dia, funciones.hora, funciones.duracion, salas.num_sala, clasificacion.clasificacion, funciones.id_sala,funciones.id_pelicula,funciones.id_clasifiacion FROM funciones INNER JOIN salas ON funciones.id_sala=salas.id_sala INNER JOIN peliculas ON funciones.id_pelicula=peliculas.id_pelicula INNER JOIN clasificacion ON funciones.id_clasifiacion=clasificacion.id_clasificacion where funciones.dia='{0}' and funciones.id_sala={1}", fecha,sala), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adapter.Fill(data);
@@ -65,7 +64,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE funciones SET duracion ='{0}' , hora = '{1}' ,dia = '{2},'id_sala = '{3}', id_pelicula = '{4}' ", upd.duracion, upd.hora,upd.dia, upd.sala, upd.pelicula, upd.clasifiacion), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE funciones SET duracion ='{0}' , hora = '{1}' ,dia = '{2}',id_sala = {3}, id_pelicula = {4}, id_clasifiacion = {5} where id_funcion = {6}", upd.duracion, upd.hora,upd.dia, upd.sala, upd.pelicula, upd.clasifiacion, upd.id_funcion), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
