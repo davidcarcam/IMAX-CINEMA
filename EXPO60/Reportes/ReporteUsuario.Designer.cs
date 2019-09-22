@@ -30,16 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetUsuario = new EXPO60.Reportes.DataSetUsuario();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetUsuario = new EXPO60.Reportes.DataSetUsuario();
-            this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataTableTableAdapter = new EXPO60.Reportes.DataSetUsuarioTableAdapters.DataTableTableAdapter();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetUsuario)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // DataTableBindingSource
+            // 
+            this.DataTableBindingSource.DataMember = "DataTable";
+            this.DataTableBindingSource.DataSource = this.DataSetUsuario;
+            // 
+            // DataSetUsuario
+            // 
+            this.DataSetUsuario.DataSetName = "DataSetUsuario";
+            this.DataSetUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
@@ -61,7 +71,7 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Usuario";
+            reportDataSource1.Name = "DataSetUsuario";
             reportDataSource1.Value = this.DataTableBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "EXPO60.Reportes.Report1.rdlc";
@@ -69,16 +79,6 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(821, 471);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // DataSetUsuario
-            // 
-            this.DataSetUsuario.DataSetName = "DataSetUsuario";
-            this.DataSetUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // DataTableBindingSource
-            // 
-            this.DataTableBindingSource.DataMember = "DataTable";
-            this.DataTableBindingSource.DataSource = this.DataSetUsuario;
             // 
             // DataTableTableAdapter
             // 
@@ -97,9 +97,9 @@
             this.Text = "Reporte de Usuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReporteUsuario_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetUsuario)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

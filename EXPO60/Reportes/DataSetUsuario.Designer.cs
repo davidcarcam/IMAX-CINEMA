@@ -287,15 +287,11 @@ namespace EXPO60.Reportes {
             
             private global::System.Data.DataColumn columncorreo;
             
-            private global::System.Data.DataColumn columnintentos;
-            
             private global::System.Data.DataColumn columndui;
             
             private global::System.Data.DataColumn columntelefono;
             
             private global::System.Data.DataColumn columnusuario;
-            
-            private global::System.Data.DataColumn columnclave;
             
             private global::System.Data.DataColumn columnestado_usu;
             
@@ -368,14 +364,6 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn intentosColumn {
-                get {
-                    return this.columnintentos;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn duiColumn {
                 get {
                     return this.columndui;
@@ -395,14 +383,6 @@ namespace EXPO60.Reportes {
             public global::System.Data.DataColumn usuarioColumn {
                 get {
                     return this.columnusuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn claveColumn {
-                get {
-                    return this.columnclave;
                 }
             }
             
@@ -459,18 +439,16 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow AddDataTableRow(string nombre, string apellido, string direccion, string correo, int intentos, string dui, string telefono, string usuario, string clave, string estado_usu, string tipo_usu) {
+            public DataTableRow AddDataTableRow(string nombre, string apellido, string direccion, string correo, string dui, string telefono, string usuario, string estado_usu, string tipo_usu) {
                 DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nombre,
                         apellido,
                         direccion,
                         correo,
-                        intentos,
                         dui,
                         telefono,
                         usuario,
-                        clave,
                         estado_usu,
                         tipo_usu};
                 rowDataTableRow.ItemArray = columnValuesArray;
@@ -499,11 +477,9 @@ namespace EXPO60.Reportes {
                 this.columnapellido = base.Columns["apellido"];
                 this.columndireccion = base.Columns["direccion"];
                 this.columncorreo = base.Columns["correo"];
-                this.columnintentos = base.Columns["intentos"];
                 this.columndui = base.Columns["dui"];
                 this.columntelefono = base.Columns["telefono"];
                 this.columnusuario = base.Columns["usuario"];
-                this.columnclave = base.Columns["clave"];
                 this.columnestado_usu = base.Columns["estado_usu"];
                 this.columntipo_usu = base.Columns["tipo_usu"];
             }
@@ -519,16 +495,12 @@ namespace EXPO60.Reportes {
                 base.Columns.Add(this.columndireccion);
                 this.columncorreo = new global::System.Data.DataColumn("correo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncorreo);
-                this.columnintentos = new global::System.Data.DataColumn("intentos", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintentos);
                 this.columndui = new global::System.Data.DataColumn("dui", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndui);
                 this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntelefono);
                 this.columnusuario = new global::System.Data.DataColumn("usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuario);
-                this.columnclave = new global::System.Data.DataColumn("clave", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclave);
                 this.columnestado_usu = new global::System.Data.DataColumn("estado_usu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado_usu);
                 this.columntipo_usu = new global::System.Data.DataColumn("tipo_usu", typeof(string), null, global::System.Data.MappingType.Element);
@@ -540,7 +512,6 @@ namespace EXPO60.Reportes {
                 this.columndui.MaxLength = 10;
                 this.columntelefono.MaxLength = 9;
                 this.columnusuario.MaxLength = 50;
-                this.columnclave.MaxLength = 50;
                 this.columnestado_usu.MaxLength = 20;
                 this.columntipo_usu.MaxLength = 30;
             }
@@ -749,22 +720,6 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int intentos {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable.intentosColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'intentos\' de la tabla \'DataTable\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.intentosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string dui {
                 get {
                     try {
@@ -808,22 +763,6 @@ namespace EXPO60.Reportes {
                 }
                 set {
                     this[this.tableDataTable.usuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string clave {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable.claveColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'clave\' de la tabla \'DataTable\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.claveColumn] = value;
                 }
             }
             
@@ -909,18 +848,6 @@ namespace EXPO60.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsintentosNull() {
-                return this.IsNull(this.tableDataTable.intentosColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetintentosNull() {
-                this[this.tableDataTable.intentosColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsduiNull() {
                 return this.IsNull(this.tableDataTable.duiColumn);
             }
@@ -953,18 +880,6 @@ namespace EXPO60.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioNull() {
                 this[this.tableDataTable.usuarioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsclaveNull() {
-                return this.IsNull(this.tableDataTable.claveColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetclaveNull() {
-                this[this.tableDataTable.claveColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1155,11 +1070,9 @@ namespace EXPO60.Reportes.DataSetUsuarioTableAdapters {
             tableMapping.ColumnMappings.Add("apellido", "apellido");
             tableMapping.ColumnMappings.Add("direccion", "direccion");
             tableMapping.ColumnMappings.Add("correo", "correo");
-            tableMapping.ColumnMappings.Add("intentos", "intentos");
             tableMapping.ColumnMappings.Add("dui", "dui");
             tableMapping.ColumnMappings.Add("telefono", "telefono");
             tableMapping.ColumnMappings.Add("usuario", "usuario");
-            tableMapping.ColumnMappings.Add("clave", "clave");
             tableMapping.ColumnMappings.Add("estado_usu", "estado_usu");
             tableMapping.ColumnMappings.Add("tipo_usu", "tipo_usu");
             this._adapter.TableMappings.Add(tableMapping);
@@ -1178,7 +1091,7 @@ namespace EXPO60.Reportes.DataSetUsuarioTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tp.nombre, tp.apellido, tp.direccion, tp.correo, tp.intentos, tp.dui, tp.telefono, tp.usuario, tp.clave, te.estado_usu, ta.tipo_usu
+            this._commandCollection[0].CommandText = @"SELECT        tp.nombre, tp.apellido, tp.direccion, tp.correo, tp.dui, tp.telefono, tp.usuario, te.estado_usu, ta.tipo_usu
 FROM            usuario tp, estado_usuario te, tipo_usuario ta
 WHERE        tp.id_estado_usu = te.id_estado_usu AND tp.id_tipo_usu = ta.id_tipo_usu";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
