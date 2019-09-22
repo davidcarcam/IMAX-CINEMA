@@ -53,6 +53,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncion)).BeginInit();
@@ -60,6 +61,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.mskHora);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
@@ -140,9 +142,8 @@
             // mskDuracion
             // 
             this.mskDuracion.Location = new System.Drawing.Point(106, 44);
-            this.mskDuracion.Mask = "000 minutos";
             this.mskDuracion.Name = "mskDuracion";
-            this.mskDuracion.Size = new System.Drawing.Size(153, 20);
+            this.mskDuracion.Size = new System.Drawing.Size(49, 20);
             this.mskDuracion.TabIndex = 1;
             // 
             // toolStrip1
@@ -182,6 +183,7 @@
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.Size = new System.Drawing.Size(153, 21);
             this.cmbSala.TabIndex = 5;
+            this.cmbSala.SelectedIndexChanged += new System.EventHandler(this.cmbSala_SelectedIndexChanged);
             // 
             // cmbpelicula
             // 
@@ -418,6 +420,15 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Duracion";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(161, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 82;
+            this.label3.Text = "minutos";
+            // 
             // FrmFunciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,5 +474,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MaskedTextBox mskHora;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -1047,9 +1047,9 @@ namespace EXPO60.Reportes.DataSetProveedoresTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tp.nombre, tp.apellido, tp.correo, tp.direccion, tp.dui, tp.telefono, te.empresa, ta.estado_prov
-FROM            proveedores tp, estado_prov ta, empresas te
-WHERE        tp.id_estado_prov = ta.id_estado_prov AND tp.id_empresa = te.id_empresa";
+            this._commandCollection[0].CommandText = @"SELECT        tp.nombre, tp.apellido, tp.correo, tp.direccion, tp.dui, tp.telefono, te.empresa, tu.estado_prov
+FROM            proveedores tp, empresas te, estado_prov tu
+WHERE        tp.id_empresa = te.id_empresa AND tp.id_estado_prov = tu.id_estado_prov";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO peliculas (titulo, año, director, id_genero, id_idioma, id_formatos, id_estado_pelicula) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", add.Titulo, add.Año, add.Director, add.tipo,add.Idioma, add.dimensiones,add.estado), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO peliculas (titulo, año, director, id_genero, id_idioma, id_formatos, id_estado_pelicula,foto) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", add.Titulo, add.Año, add.Director, add.tipo,add.Idioma, add.dimensiones,add.estado,add.foto), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -42,7 +42,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT id_pelicula AS ID,año,titulo,director, genero, idioma, formato,estado_pel FROM peliculas INNER JOIN generos ON peliculas.id_genero = generos.id_genero INNER JOIN idiomas ON peliculas.id_idioma = idiomas.id_idioma INNER JOIN formatos ON peliculas.id_formatos = formatos.id_formatos INNER JOIN estado_pelicula ON peliculas.id_estado_pelicula = estado_pelicula.id_estado_pelicula";
+                string query = "SELECT id_pelicula AS ID,ano,titulo,director, genero, idioma, formato,estado_pel FROM peliculas INNER JOIN generos ON peliculas.id_genero = generos.id_genero INNER JOIN idiomas ON peliculas.id_idioma = idiomas.id_idioma INNER JOIN formatos ON peliculas.id_formatos = formatos.id_formatos INNER JOIN estado_pelicula ON peliculas.id_estado_pelicula = estado_pelicula.id_estado_pelicula";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -65,7 +65,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE peliculas SET titulo ='{0}' , año = '{1}', director='{2}' ,id_genero='{3}' ,id_idioma='{4}' ,id_formatos='{5}' ,id_estado_pelicula='{6}', WHERE id_pelicula = '{7}'", upd.Titulo, upd.Año,upd.Director,upd.tipo,upd.Idioma,upd.dimensiones,upd.estado, upd.id_pelicula), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE peliculas SET titulo ='{0}' , año = '{1}', director='{2}' ,id_genero='{3}' ,id_idioma='{4}' ,id_formatos='{5}' ,id_estado_pelicula='{6}'", upd.Titulo, upd.Año,upd.Director,upd.tipo,upd.Idioma,upd.dimensiones,upd.estado), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -101,10 +101,10 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                MessageBox.Show("oops erro de coneccion consulte con el administrador"+ex, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("oops erro de coneccion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }

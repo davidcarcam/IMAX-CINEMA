@@ -152,11 +152,11 @@
             // BtnProductos
             // 
             this.BtnProductos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnProductos.Image = global::EXPO60.Properties.Resources.connection_indicator;
+            this.BtnProductos.Image = global::EXPO60.Properties.Resources.document_96px;
             this.BtnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(109, 22);
-            this.BtnProductos.Text = "Generar reporte";
+            this.BtnProductos.Size = new System.Drawing.Size(142, 22);
+            this.BtnProductos.Text = "Generador de Reporte";
             this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
             // cmbtipo

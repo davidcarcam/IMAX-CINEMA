@@ -8,7 +8,7 @@ namespace EXPO60.Controlador
 {
     class Constructor_funciones
     {
-        public int id_empresa { get; set; }
+        public int id_funcion { get; set; }
         public string duracion { get; set; }
         public string hora { get; set; }
         public string dia { get; set; }

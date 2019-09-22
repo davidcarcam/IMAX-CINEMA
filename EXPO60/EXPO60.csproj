@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,7 +61,6 @@
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
     <Compile Include="Controlador\Constructor_Actores.cs" />
     <Compile Include="Controlador\Constructor_Asientos.cs" />
-    <Compile Include="Controlador\Constructor_ConfigEmpresa.cs" />
     <Compile Include="Controlador\Constructor_funciones.cs" />
     <Compile Include="Controlador\Constructor_localAlimentos.cs" />
     <Compile Include="Controlador\Constructor_pelicula.cs" />
@@ -77,8 +77,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="graficos\graficoSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="graficos\graficoSalas.Designer.cs">
+      <DependentUpon>graficoSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="graficos\Grafico_pelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="graficos\Grafico_pelicula.Designer.cs">
+      <DependentUpon>Grafico_pelicula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Conexion_Correo.cs" />
-    <Compile Include="Modelo\ConfiguracionEmpresa.cs" />
     <Compile Include="Modelo\FuncionesAlimentos.cs" />
     <Compile Include="Modelo\FuncionesDetalleTicket.cs" />
     <Compile Include="Modelo\funcionesEmpresa.cs" />
@@ -99,6 +110,16 @@
     <Compile Include="Modelo\validarRecuperar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSetFacturaLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetLocalAlimento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLocalAlimento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DataSetProducto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,17 +130,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\ReporteProductos.cs">
+    <Compile Include="Reportes\DataSetUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Producto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\ReporteProductos.Designer.cs">
-      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    <Compile Include="Reportes\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaLocal.Designer.cs">
+      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteLocalAlimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteLocalAlimento.Designer.cs">
+      <DependentUpon>ReporteLocalAlimento.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ReporteProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\ReporteProveedores.Designer.cs">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuario.Designer.cs">
+      <DependentUpon>ReporteUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConfirmarContraseña.cs">
       <SubType>Form</SubType>
@@ -156,12 +200,6 @@
     </Compile>
     <Compile Include="Vista\FrmDetalleTicket.Designer.cs">
       <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FrmEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FrmEmpresa.Designer.cs">
-      <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmEmpresas.cs">
       <SubType>Form</SubType>
@@ -274,6 +312,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="graficos\graficoSalas.resx">
+      <DependentUpon>graficoSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="graficos\Grafico_pelicula.resx">
+      <DependentUpon>Grafico_pelicula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -284,13 +328,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
-    <EmbeddedResource Include="Reportes\Report8.rdlc" />
-    <EmbeddedResource Include="Reportes\ReporteProductos.resx">
-      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\Report4.rdlc" />
+    <EmbeddedResource Include="Reportes\Report5.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteFacturaLocal.resx">
+      <DependentUpon>ReporteFacturaLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteLocalAlimento.resx">
+      <DependentUpon>ReporteLocalAlimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteProveedores.resx">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteUsuario.resx">
+      <DependentUpon>ReporteUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConfirmarContraseña.resx">
       <DependentUpon>ConfirmarContraseña.cs</DependentUpon>
@@ -309,9 +365,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmDetalleTicket.resx">
       <DependentUpon>FrmDetalleTicket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FrmEmpresa.resx">
-      <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmEmpresas.resx">
       <DependentUpon>FrmEmpresas.cs</DependentUpon>
@@ -381,9 +434,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\todo_list_96px.png" />
-    <None Include="Resources\theatre_mask_96px.png" />
-    <None Include="Resources\test_passed_96px1.png" />
+    <None Include="Reportes\DataSetFacturaLocal.xsc">
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetFacturaLocal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFacturaLocal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetFacturaLocal.xss">
+      <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetLocalAlimento.xsc">
+      <DependentUpon>DataSetLocalAlimento.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetLocalAlimento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLocalAlimento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetLocalAlimento.xss">
+      <DependentUpon>DataSetLocalAlimento.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\DataSetProducto.xsc">
       <DependentUpon>DataSetProducto.xsd</DependentUpon>
     </None>
@@ -406,6 +478,17 @@
     <None Include="Reportes\DataSetProveedores.xss">
       <DependentUpon>DataSetProveedores.xsd</DependentUpon>
     </None>
+    <None Include="Reportes\DataSetUsuario.xsc">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetUsuario.xss">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </None>
     <None Include="Resources\talk_male_96px.png" />
     <None Include="Resources\test_passed_96px.png" />
     <None Include="Resources\cancel.png" />
@@ -413,27 +496,16 @@
     <None Include="Resources\cancel_96px.png" />
     <None Include="Resources\arrows_long_right_96px.png" />
     <None Include="Resources\camera_96px1.png" />
-    <None Include="Resources\clapperboard_96px.png" />
-    <None Include="Resources\barber_chair_96px.png" />
     <Content Include="Resources\clear-button.png" />
-    <None Include="Resources\connection-indicator.png" />
     <Content Include="Resources\crop-button.png" />
     <Content Include="Resources\crop-tool-button.png" />
     <None Include="Resources\food_as_resources_96px.png" />
     <None Include="Resources\document_96px.png" />
     <None Include="Resources\end_call_male_96px.png" />
-    <None Include="Resources\curtains_96px1.png" />
-    <None Include="Resources\document_96px1.png" />
-    <None Include="Resources\dining_room_96px.png" />
-    <None Include="Resources\film_reel_96px.png" />
-    <None Include="Resources\curtains_96px.png" />
-    <None Include="Resources\documentary_96px.png" />
     <Content Include="Resources\full-screen-exit.png" />
     <None Include="Resources\home_96px.png" />
     <None Include="Resources\gender_neutral_user_96px1.png" />
-    <None Include="Resources\gender_neutral_user_96px.png" />
     <Content Include="Resources\horizontal-line-remove-button.png" />
-    <None Include="Resources\ingredients_list_96px.png" />
     <Content Include="Resources\LogoDavid.jpg" />
     <Content Include="Resources\menu-button.png" />
     <None Include="Resources\organization_96px.png" />
@@ -442,12 +514,7 @@
     <None Include="Resources\question_mark_96px1.png" />
     <None Include="Resources\send_96px1.png" />
     <None Include="Resources\send_file_96px.png" />
-    <None Include="Resources\sell_property_96px.png" />
-    <None Include="Resources\shop_96px-1.png" />
-    <None Include="Resources\pen_96px.png" />
-    <None Include="Resources\starred_ticket_96px.png" />
-    <None Include="Resources\search_contacts_96px1.png" />
-    <None Include="Resources\organization_96px1.png" />
+    <None Include="Resources\regresar.png" />
     <Content Include="Resources\switch-to-full-screen-button.png" />
   </ItemGroup>
   <ItemGroup />

@@ -22,11 +22,24 @@ namespace EXPO60.Vista
         }
         void TipoEmpresa()
         {
-            cmbTipoEmpresa.DataSource = funcionesEmpresa.mostrarEmpresas();
-            cmbTipoEmpresa.DisplayMember = "tipoempresa";
+            cmbTipoEmpresa.DataSource = funcionesEmpresa.mostrarEmpresas ();
             cmbTipoEmpresa.ValueMember = "id_tipoemp";
+            cmbTipoEmpresa.DisplayMember = "tipoempresa";          
         }
-        private void btnGuardar_Click(object sender, EventArgs e)
+        public Image TextoaImagen(string base64String)
+        {
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0,
+            imageBytes.Length);
+
+            // Convert byte[] to Image
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            pbLogo.Image = Image.FromStream(ms);
+            return image;
+        }
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             if (txtDireccion.Text.Trim() == "" || txtEmpresa.Text.Trim() == "" || txtNit.Text.Trim() == "" || txtRepresentante.Text.Trim() == "" || pbLogo == null)
             {
@@ -52,7 +65,11 @@ namespace EXPO60.Vista
                 this.Hide();
             }
         }
-        private void btnExaminar_Click(object sender, EventArgs e)
+        private void FrmEmpresa_Load_1(object sender, EventArgs e)
+        {
+            TipoEmpresa();
+        }
+        private void btnExaminar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -73,23 +90,6 @@ namespace EXPO60.Vista
             {
                 MessageBox.Show("Error al ingresar la imagen", "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void FrmEmpresa_Load(object sender, EventArgs e)
-        {
-            TipoEmpresa();
-        }
-        public Image TextoaImagen(string base64String)
-        {
-            // Convert Base64 String to byte[]
-            byte[] imageBytes = Convert.FromBase64String(base64String);
-            MemoryStream ms = new MemoryStream(imageBytes, 0,
-            imageBytes.Length);
-
-            // Convert byte[] to Image
-            ms.Write(imageBytes, 0, imageBytes.Length);
-            Image image = Image.FromStream(ms, true);
-            pbLogo.Image = Image.FromStream(ms);
-            return image;
         }
     }
 }

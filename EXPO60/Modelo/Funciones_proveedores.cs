@@ -42,7 +42,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT id_proveedor AS ID, nombre, apellido,correo,direccion,dui,telefono, empresa,estado_prov FROM proveedores INNER JOIN empresas ON proveedores.id_empresa = empresas.id_empresa INNER JOIN estado_prov ON estado_prov.id_estado_prov = empresas.id_empresa ";
+                string query = "SELECT id_proveedor AS ID, nombre, apellido,correo,direccion,dui,telefono, empresa,estado_prov FROM proveedores INNER JOIN empresas ON proveedores.id_empresa = empresas.id_empresa INNER JOIN estado_prov ON estado_prov.id_estado_prov = empresas.id_empresa";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -101,10 +101,10 @@ namespace EXPO60.Modelo
                 }
                 return retorno;
             }
-            catch (Exception d)
+            catch (Exception)
             {
 
-                MessageBox.Show("oops error de coneccion consulte con el administrador"+d,  "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("oops erro de coneccion consulte con el administrador", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
         }

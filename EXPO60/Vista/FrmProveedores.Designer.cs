@@ -36,6 +36,7 @@
             this.cmbempresa = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtdui = new System.Windows.Forms.MaskedTextBox();
@@ -56,7 +57,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnProductos = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
@@ -143,7 +143,7 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnCerrar,
-            this.BtnProductos});
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -159,6 +159,16 @@
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.Image = global::EXPO60.Properties.Resources.document_96px;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(142, 22);
+            this.toolStripButton1.Text = "Generador de Reporte";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // txttelefono
             // 
@@ -470,16 +480,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // BtnProductos
-            // 
-            this.BtnProductos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnProductos.Image = global::EXPO60.Properties.Resources.connection_indicator;
-            this.BtnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(109, 22);
-            this.BtnProductos.Text = "Generar reporte";
-            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
-            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,6 +528,6 @@
         private System.Windows.Forms.ComboBox cmbempresa;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtbuscar;
-        private System.Windows.Forms.ToolStripButton BtnProductos;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

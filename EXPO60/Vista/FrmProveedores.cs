@@ -203,7 +203,7 @@ namespace EXPO60.Vista
             btnagregar.Enabled = false;
         }
 
-        private void BtnProductos_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ReporteProveedores repro = new ReporteProveedores();
             repro.Show();

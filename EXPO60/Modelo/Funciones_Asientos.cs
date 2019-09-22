@@ -49,7 +49,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception b)
             {
-                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano"+b, "Error Critico" + b, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ha detectado un fallo en la conexion, Consulte con un administrador cercano", "Error Critico" + b, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return Asientos = new DataTable();
             }
             finally
