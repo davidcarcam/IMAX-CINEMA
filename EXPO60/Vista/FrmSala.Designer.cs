@@ -48,6 +48,7 @@
             this.btnMostrar_Salas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar_Sala = new Bunifu.Framework.UI.BunifuFlatButton();
             this.epError2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnGrafico = new System.Windows.Forms.ToolStripButton();
             this.grpRegistro_Sala.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
@@ -104,7 +105,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.btnGrafico});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -361,6 +363,15 @@
             // 
             this.epError2.ContainerControl = this;
             // 
+            // btnGrafico
+            // 
+            this.btnGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnGrafico.Image")));
+            this.btnGrafico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGrafico.Name = "btnGrafico";
+            this.btnGrafico.Size = new System.Drawing.Size(108, 22);
+            this.btnGrafico.Text = "Generar Gráfica";
+            this.btnGrafico.Click += new System.EventHandler(this.btnGrafico_Click);
+            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,5 +412,6 @@
         private System.Windows.Forms.ComboBox cmbESTADO_SALA;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton btnGrafico;
     }
 }

@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +76,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="graficos\graficoSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="graficos\graficoSalas.Designer.cs">
+      <DependentUpon>graficoSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="graficos\Grafico_pelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="graficos\Grafico_pelicula.Designer.cs">
+      <DependentUpon>Grafico_pelicula.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Conexion_Correo.cs" />
     <Compile Include="Modelo\FuncionesAlimentos.cs" />
@@ -299,6 +312,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="graficos\graficoSalas.resx">
+      <DependentUpon>graficoSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="graficos\Grafico_pelicula.resx">
+      <DependentUpon>Grafico_pelicula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -495,6 +514,7 @@
     <None Include="Resources\question_mark_96px1.png" />
     <None Include="Resources\send_96px1.png" />
     <None Include="Resources\send_file_96px.png" />
+    <None Include="Resources\regresar.png" />
     <Content Include="Resources\switch-to-full-screen-button.png" />
   </ItemGroup>
   <ItemGroup />

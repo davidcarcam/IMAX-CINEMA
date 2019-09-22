@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
 using MySql.Data.MySqlClient;
+using EXPO60.graficos;
 
 namespace EXPO60.Vista
 {
@@ -344,6 +345,13 @@ namespace EXPO60.Vista
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             Limpiar_Datos();
+        }
+
+        private void btnGrafico_Click(object sender, EventArgs e)
+        {
+            graficoSalas kk = new graficoSalas();
+            kk.Show();
+           
         }
     }
 }

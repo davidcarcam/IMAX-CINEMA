@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPelicula));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.cmbIdioma = new System.Windows.Forms.ComboBox();
@@ -54,13 +56,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnFoto = new System.Windows.Forms.Button();
             this.fileNuevo = new System.Windows.Forms.OpenFileDialog();
+            this.btnGrafico = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -97,6 +98,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de peliculas";
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(786, 70);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(65, 82);
+            this.btnFoto.TabIndex = 69;
+            this.btnFoto.Text = "Foto";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(857, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 68;
+            this.pictureBox1.TabStop = false;
             // 
             // label8
             // 
@@ -156,7 +176,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar});
+            this.BtnCerrar,
+            this.btnGrafico});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -434,28 +455,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Idioma";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(857, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 68;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnFoto
-            // 
-            this.btnFoto.Location = new System.Drawing.Point(786, 70);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(65, 82);
-            this.btnFoto.TabIndex = 69;
-            this.btnFoto.Text = "Foto";
-            this.btnFoto.UseVisualStyleBackColor = true;
-            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
-            // 
             // fileNuevo
             // 
             this.fileNuevo.FileName = "openFileDialog1";
+            // 
+            // btnGrafico
+            // 
+            this.btnGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnGrafico.Image")));
+            this.btnGrafico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGrafico.Name = "btnGrafico";
+            this.btnGrafico.Size = new System.Drawing.Size(108, 22);
+            this.btnGrafico.Text = "Generar Gráfica";
+            this.btnGrafico.Click += new System.EventHandler(this.btnGrafico_Click);
             // 
             // FrmPelicula
             // 
@@ -470,10 +481,10 @@
             this.Load += new System.EventHandler(this.FrmPelicula_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -508,5 +519,6 @@
         private System.Windows.Forms.Button btnFoto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog fileNuevo;
+        private System.Windows.Forms.ToolStripButton btnGrafico;
     }
 }
