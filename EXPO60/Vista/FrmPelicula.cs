@@ -42,6 +42,7 @@ namespace EXPO60.Vista
         public void modificarRegistro()
         {
             actualizar.Titulo = txttitulo.Text;
+            actualizar.Año = txtaño.Text;
             actualizar.Director = txtdirector.Text;
             actualizar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
             actualizar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
@@ -58,12 +59,14 @@ namespace EXPO60.Vista
         }
         public void vaciarampos()
         {
-            txttitulo.Clear();           
+            txttitulo.Clear();
+            txtaño.Clear();
             txtdirector.Clear();
         }
         public void agregarPelicula()
         {
             agregar.Titulo = txttitulo.Text;
+            agregar.Año = txtaño.Text;
             agregar.Director = txtdirector.Text;
             agregar.Idioma = Convert.ToInt16(cmbIdioma.SelectedValue);
             agregar.tipo = Convert.ToInt16(cmbGenero.SelectedValue);
@@ -131,31 +134,18 @@ namespace EXPO60.Vista
             {
                 e.Handled = true;
             }
-        }
+        }    
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            DateTime fecha = DateTime.Today.AddDays(15);
-            if (dateTimePicker1.Value.Date > fecha)
+            if (txttitulo.Text == "" || txtaño.Text == "")
             {
-                MessageBox.Show("La fecha ingresada esta fuera del rango permitido", "Fecha superior", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                MessageBox.Show("Por favor rellena todos los campos que se te piden", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                if (dateTimePicker1.Value.Date < DateTime.Today)
-                {
-                    MessageBox.Show("La fecha ingresada es menor a la de hoy", "La fecha es erronea", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else if (txttitulo.Text == "")
-                {
-                    MessageBox.Show("Por favor rellena todos los campos que se te piden", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    agregarPelicula();
-                    mostrarPeliculas();
-                    vaciarampos();
-                }
+                agregarPelicula();
+                mostrarPeliculas();
+                vaciarampos();
             }
         }
         private void FrmPelicula_Load(object sender, EventArgs e)
@@ -163,6 +153,10 @@ namespace EXPO60.Vista
             mostrarPeliculas();
             mostrarET();
             this.dgvpeliculas.Columns[0].Visible = false;
+            this.dgvpeliculas.Columns[4].Visible = false;
+            this.dgvpeliculas.Columns[5].Visible = false;
+            this.dgvpeliculas.Columns[6].Visible = false;
+            this.dgvpeliculas.Columns[7].Visible = false;
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }
@@ -244,10 +238,21 @@ namespace EXPO60.Vista
             posicion = this.dgvpeliculas.CurrentRow.Index;
             idPelicula.Text = this.dgvpeliculas[0, posicion].Value.ToString();
             txttitulo.Text = this.dgvpeliculas[2, posicion].Value.ToString();
+            txtaño.Text = this.dgvpeliculas[1, posicion].Value.ToString();
             txtdirector.Text = this.dgvpeliculas[3, posicion].Value.ToString();
             btnactualizar.Enabled = true;
             btneliminar.Enabled = true;
             btnagregar.Enabled = false;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+           FileDialog nuevafoto = 
         }
     }
 }

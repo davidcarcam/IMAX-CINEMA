@@ -64,7 +64,7 @@ namespace EXPO60.Vista
                 ContructorLogin2 log = new ContructorLogin2();
                 ContructorLogin2.usuario = txtUsuario.Text;
                 ContructorLogin2.clave = txtCifrado.Text;
-
+                
                 //Recuperando el valor de retorno
                 bool datos = ValidarLogin.Acceso(log);
                 //
@@ -74,7 +74,7 @@ namespace EXPO60.Vista
                     {
                         ConfirmarContraseña kk = new ConfirmarContraseña();
                         this.Hide();
-                        kk.Show();
+                        kk.Show();   
                     }
                     else
                     {
@@ -99,35 +99,25 @@ namespace EXPO60.Vista
         {
             if (ValidarLogin.ValidarExistencia() == true)
             {
-                txtUsuario.Visible = true;
-                txtContra.Visible = true;
-                btbAcceder.Visible = true;
-                label1.Visible = true;
-                label2.Visible = true;
-                label3.Visible = true;
-                linkLabel1.Visible = true;
-                bunifuFlatButton1.Visible = false;
-                label4.Visible = false;
-                label5.Visible = false;
-                label6.Visible = false;
-                label7.Visible = false;
-                panel1.Visible = true;
-                pictureBox1.Visible = true;
+                linkPrimerUso.Visible = false;
+                txtUsuario.Enabled = true;
+                txtContra.Enabled = true;
+                btbAcceder.Enabled = true;
+                label1.Enabled = true;
+                label2.Enabled = true;
+                label3.Enabled = true;
+                linkLabel1.Enabled = true;
             }
-            else if (ValidarLogin.ValidarExistencia() == false)
+            else
             {
-                txtUsuario.Visible = false;
-                txtContra.Visible = false;
-                btbAcceder.Visible = false;
-                label1.Visible = false;
-                label2.Visible = false;
-                label3.Visible = false;
-                linkLabel1.Visible = false;
-                bunifuFlatButton1.Visible = true;
-                label4.Visible = true;
-                label5.Visible = true;
-                label6.Visible = true;
-                label7.Visible = true;
+                linkPrimerUso.Visible = true;            
+                txtUsuario.Enabled = false;
+                txtContra.Enabled = false;
+                btbAcceder.Enabled = false;
+                label1.Enabled = false;
+                label2.Enabled = false;
+                label3.Enabled = false;
+                linkLabel1.Enabled = false;
             }
         }
         private void toolbtnCerra_Aplicacion_Click_1(object sender, EventArgs e)
@@ -161,12 +151,6 @@ namespace EXPO60.Vista
             picocultar.Visible = false;
             txtContra.UseSystemPasswordChar = true;
             picvisible.Visible = true;
-        }
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            FrmPrimerUso kk = new FrmPrimerUso();
-            kk.Show();
-            this.Hide();
         }
     }
 }

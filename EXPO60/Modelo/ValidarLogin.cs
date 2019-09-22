@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
         {
             bool retorno = false;
             //Verificar la existencia de usuario en la base de datos
-            string query = "SELECT * FROM usuario WHERE binary usuario = ?user";
+            string query = "SELECT * FROM usuario WHERE usuario = ?user";
             try
             {
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());

@@ -52,6 +52,7 @@ namespace EXPO60.Vista
             }
 
         }
+
         public void modificarRegistro()
         {
             actualizar.duracion = mskDuracion.Text;
@@ -71,10 +72,12 @@ namespace EXPO60.Vista
         {
             dgvFuncion.DataSource = Funciones_funcion.mostrarFunciones();
         }
+
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
                 this.Close();
         }
+
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             eliminarRegistro();
@@ -103,10 +106,12 @@ namespace EXPO60.Vista
 
 
         }
+
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
+
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             DateTime fecha = DateTime.Today.AddDays(15);
@@ -189,7 +194,7 @@ namespace EXPO60.Vista
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            
+            vaciarampos();
         }
         private void dgvFuncion_CellClick(object sender, DataGridViewCellEventArgs e)
         {

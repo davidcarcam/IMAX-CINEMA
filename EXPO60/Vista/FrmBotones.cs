@@ -17,6 +17,7 @@ namespace EXPO60.Vista
         {
             InitializeComponent();
         }
+
         Form currentForm;
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
@@ -47,66 +48,82 @@ namespace EXPO60.Vista
                 formulario.BringToFront();
             }
         }
+
         private void bunifuFlatButton22_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmUsuario>();
         }
+
         private void bunifuFlatButton20_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmTicket>();
         }
+
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPersonajes>();
         }
+
         private void bunifuFlatButton19_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmFunciones>();
         }
+
         private void bunifuFlatButton18_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmSala>();
         }
+
         private void bunifuFlatButton17_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmAsientos>();
         }
+
         private void bunifuFlatButton16_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPelicula>();
         }
+
         private void bunifuFlatButton15_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmProveedores>();
         }
+
         private void bunifuFlatButton14_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmProducto>();
         }
+
         private void bunifuFlatButton12_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frmfacturalocal>();
         }
+
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
           
         }
+
         private void bunifuFlatButton13_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frmalimentos>();
         }
+
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
         {
           
         }
+
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmDetalleTicket>();
         }
+
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmTicket>();
         }
+
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmEmpresas>();
@@ -125,6 +142,7 @@ namespace EXPO60.Vista
             btnfaclocal.Visible = false;
             btnalimentos.Visible = false;
             btnproductos.Visible = false;
+            btnidioma.Visible = false;
             btnempresa.Visible = false;
         }
         public void UbicacionRoot()
@@ -141,7 +159,8 @@ namespace EXPO60.Vista
             btnfaclocal.Location = new Point(50, 361);
             btnalimentos.Location = new Point(376, 361);
             btnproductos.Location = new Point(711, 361);
-            btnempresa.Location = new Point(50, 441);
+            btnidioma.Location = new Point(50, 450);
+            btnempresa.Location = new Point(376, 450);
         }
         void UbicacionAdministrador()
         {
@@ -157,7 +176,8 @@ namespace EXPO60.Vista
             btnfaclocal.Location = new Point(50, 361);
             btnalimentos.Location = new Point(376, 361);
             btnproductos.Location = new Point(711, 361);
-            btnempresa.Location = new Point(50, 441);
+            btnidioma.Location = new Point(50, 450);
+            btnempresa.Location = new Point(376, 450);
             btnusuario.Visible = true;
             btntickets.Visible = true;
             btnpersonajes.Visible = true;
@@ -170,6 +190,7 @@ namespace EXPO60.Vista
             btnfaclocal.Visible = true;
             btnalimentos.Visible = true;
             btnproductos.Visible = true;
+            btnidioma.Visible = true;
             btnempresa.Visible = true;
         }
         void EncargadoSala()
@@ -200,6 +221,7 @@ namespace EXPO60.Vista
             btnfaclocal.Visible = false;
             btnalimentos.Visible = false;
             btnproductos.Visible = false;
+            btnidioma.Visible = false;
             btnempresa.Visible = false;
         }
         void Boletero()
@@ -230,6 +252,7 @@ namespace EXPO60.Vista
             btnfaclocal.Visible = false;
             btnalimentos.Visible = false;
             btnproductos.Visible = false;
+            btnidioma.Visible = false;
             btnempresa.Visible = false;
         }
         void EncargadoInventario()
@@ -260,6 +283,7 @@ namespace EXPO60.Vista
             btnfaclocal.Visible = false;
             btnalimentos.Visible = false;
             btnproductos.Visible = true;
+            btnidioma.Visible = false;
             btnempresa.Visible = false;
         }
         void Consesionario()
@@ -290,11 +314,12 @@ namespace EXPO60.Vista
             btnfaclocal.Visible = false;
             btnalimentos.Visible = true;
             btnproductos.Visible = true;
+            btnidioma.Visible = false;
             btnempresa.Visible = false;
         }
         private void FrmBotones_Load_1(object sender, EventArgs e)
         {
-            if (ContructorLogin2.nivel == 1)
+            /*if (ContructorLogin2.nivel == 1)
             {
                 UbicacionRoot();
                 MessageBox.Show("Root", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -323,7 +348,7 @@ namespace EXPO60.Vista
             {
                 Consesionario();
                 MessageBox.Show("Consesionario", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
         }
     }
 }

@@ -49,10 +49,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.cmbTipo_Pago = new System.Windows.Forms.ComboBox();
             this.cmbusuario = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.BtnFacturaLocal = new System.Windows.Forms.ToolStripButton();
+            this.mskfecha = new System.Windows.Forms.MaskedTextBox();
             this.txtMont = new System.Windows.Forms.MaskedTextBox();
             this.txtDate = new System.Windows.Forms.DataGridView();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -61,11 +63,11 @@
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtIdentificador = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfacturaloc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -348,11 +350,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtbuscar);
+            this.groupBox2.Controls.Add(this.cmbTipo_Pago);
             this.groupBox2.Controls.Add(this.cmbusuario);
             this.groupBox2.Controls.Add(this.toolStrip1);
+            this.groupBox2.Controls.Add(this.mskfecha);
             this.groupBox2.Controls.Add(this.txtMont);
             this.groupBox2.Controls.Add(this.txtDate);
             this.groupBox2.Controls.Add(this.bunifuFlatButton1);
@@ -361,6 +364,7 @@
             this.groupBox2.Controls.Add(this.bunifuFlatButton4);
             this.groupBox2.Controls.Add(this.txtIdentificador);
             this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtNom);
@@ -395,12 +399,22 @@
             this.txtbuscar.TabIndex = 6;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
+            // cmbTipo_Pago
+            // 
+            this.cmbTipo_Pago.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbTipo_Pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipo_Pago.FormattingEnabled = true;
+            this.cmbTipo_Pago.Location = new System.Drawing.Point(514, 52);
+            this.cmbTipo_Pago.Name = "cmbTipo_Pago";
+            this.cmbTipo_Pago.Size = new System.Drawing.Size(153, 21);
+            this.cmbTipo_Pago.TabIndex = 4;
+            // 
             // cmbusuario
             // 
             this.cmbusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbusuario.FormattingEnabled = true;
-            this.cmbusuario.Location = new System.Drawing.Point(504, 53);
+            this.cmbusuario.Location = new System.Drawing.Point(514, 94);
             this.cmbusuario.Name = "cmbusuario";
             this.cmbusuario.Size = new System.Drawing.Size(153, 21);
             this.cmbusuario.TabIndex = 5;
@@ -436,6 +450,17 @@
             this.BtnFacturaLocal.Size = new System.Drawing.Size(23, 22);
             this.BtnFacturaLocal.Text = "toolStripButton1";
             this.BtnFacturaLocal.Click += new System.EventHandler(this.BtnFacturaLocal_Click);
+            // 
+            // mskfecha
+            // 
+            this.mskfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mskfecha.Location = new System.Drawing.Point(122, 139);
+            this.mskfecha.Mask = "00/00/0000";
+            this.mskfecha.Name = "mskfecha";
+            this.mskfecha.Size = new System.Drawing.Size(153, 20);
+            this.mskfecha.TabIndex = 3;
+            this.mskfecha.ValidatingType = typeof(System.DateTime);
+            this.mskfecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaskedTextBox1_KeyPress);
             // 
             // txtMont
             // 
@@ -619,11 +644,22 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(393, 51);
+            this.label6.Location = new System.Drawing.Point(403, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Usuario";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(404, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Tipo de pago";
             // 
             // label8
             // 
@@ -669,14 +705,6 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Nombre";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 139);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 78;
-            // 
             // Frmfacturalocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -720,6 +748,7 @@
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.MaskedTextBox mskfecha;
         private System.Windows.Forms.MaskedTextBox txtMont;
         private System.Windows.Forms.DataGridView txtDate;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
@@ -728,6 +757,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.TextBox txtIdentificador;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNom;
@@ -735,9 +765,9 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbusuario;
+        private System.Windows.Forms.ComboBox cmbTipo_Pago;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.ToolStripButton BtnFacturaLocal;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

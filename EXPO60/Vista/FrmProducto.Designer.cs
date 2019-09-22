@@ -34,9 +34,6 @@
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.BtnProductos = new System.Windows.Forms.ToolStripButton();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
             this.cmbprov = new System.Windows.Forms.ComboBox();
             this.cmblocal = new System.Windows.Forms.ComboBox();
@@ -51,9 +48,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnProductos = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -127,37 +127,6 @@
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 60;
             this.label3.Text = "Nombre";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar,
-            this.BtnProductos});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
-            this.toolStrip1.TabIndex = 59;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
-            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
-            this.BtnCerrar.Text = "Cerrar Formulario";
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnProductos
-            // 
-            this.BtnProductos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnProductos.Image = global::EXPO60.Properties.Resources.connection_indicator;
-            this.BtnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(109, 22);
-            this.BtnProductos.Text = "Generar reporte";
-            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
             // cmbtipo
             // 
@@ -408,6 +377,38 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Precio:";
             // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnCerrar,
+            this.BtnProductos});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
+            this.toolStrip1.TabIndex = 59;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnProductos
+            // 
+            this.BtnProductos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnProductos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnProductos.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductos.Image")));
+            this.BtnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnProductos.Name = "BtnProductos";
+            this.BtnProductos.Size = new System.Drawing.Size(23, 22);
+            this.BtnProductos.Text = "BtnProducto";
+            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,9 +421,9 @@
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).EndInit();
             this.ResumeLayout(false);
 
         }
