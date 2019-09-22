@@ -53,7 +53,6 @@
             this.cmbusuario = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.BtnFacturaLocal = new System.Windows.Forms.ToolStripButton();
             this.mskfecha = new System.Windows.Forms.MaskedTextBox();
             this.txtMont = new System.Windows.Forms.MaskedTextBox();
             this.txtDate = new System.Windows.Forms.DataGridView();
@@ -422,8 +421,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnCerrar,
-            this.BtnFacturaLocal});
+            this.BtnCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -439,17 +437,6 @@
             this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
             this.BtnCerrar.Text = "Cerrar Formulario";
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnFacturaLocal
-            // 
-            this.BtnFacturaLocal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnFacturaLocal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnFacturaLocal.Image = ((System.Drawing.Image)(resources.GetObject("BtnFacturaLocal.Image")));
-            this.BtnFacturaLocal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnFacturaLocal.Name = "BtnFacturaLocal";
-            this.BtnFacturaLocal.Size = new System.Drawing.Size(23, 22);
-            this.BtnFacturaLocal.Text = "toolStripButton1";
-            this.BtnFacturaLocal.Click += new System.EventHandler(this.BtnFacturaLocal_Click);
             // 
             // mskfecha
             // 
@@ -768,6 +755,5 @@
         private System.Windows.Forms.ComboBox cmbTipo_Pago;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbuscar;
-        private System.Windows.Forms.ToolStripButton BtnFacturaLocal;
     }
 }

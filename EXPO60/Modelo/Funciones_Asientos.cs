@@ -40,7 +40,7 @@ namespace EXPO60.Modelo
             DataTable Asientos;
             try
             {
-                string query3 = "SELECT * FROM numeracion";
+                string query3 = "SELECT id_asiento AS ID,fila,num_asiento,estado_as,num_sala FROM asientos INNER JOIN fila ON asientos.id_fila = fila.id_fila INNER JOIN numeracion ON asientos.id_num = numeracion.id_num INNER JOIN estado_asiento ON asientos.id_estado_asiento = estado_asiento.id_estado_asiento INNER JOIN salas ON asientos.id_sala = salas.id_sala";
                 MySqlCommand cmdread3 = new MySqlCommand(string.Format(query3), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter3 = new MySqlDataAdapter(cmdread3);
                 Asientos = new DataTable();
