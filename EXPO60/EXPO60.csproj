@@ -434,6 +434,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\truck_96px1.png" />
+    <None Include="Resources\todo_list_96px.png" />
+    <None Include="Resources\theatre_mask_96px.png" />
     <None Include="Reportes\DataSetFacturaLocal.xsc">
       <DependentUpon>DataSetFacturaLocal.xsd</DependentUpon>
     </None>
@@ -496,16 +499,25 @@
     <None Include="Resources\cancel_96px.png" />
     <None Include="Resources\arrows_long_right_96px.png" />
     <None Include="Resources\camera_96px1.png" />
+    <None Include="Resources\barber_chair_96px.png" />
+    <None Include="Resources\clapperboard_96px1.png" />
+    <None Include="Resources\clapperboard_96px.png" />
     <Content Include="Resources\clear-button.png" />
     <Content Include="Resources\crop-button.png" />
     <Content Include="Resources\crop-tool-button.png" />
     <None Include="Resources\food_as_resources_96px.png" />
     <None Include="Resources\document_96px.png" />
     <None Include="Resources\end_call_male_96px.png" />
+    <None Include="Resources\film_reel_96px.png" />
+    <None Include="Resources\curtains_96px.png" />
+    <None Include="Resources\curtains_96px1.png" />
+    <None Include="Resources\documentary_96px.png" />
     <Content Include="Resources\full-screen-exit.png" />
     <None Include="Resources\home_96px.png" />
     <None Include="Resources\gender_neutral_user_96px1.png" />
+    <None Include="Resources\gender_neutral_user_96px.png" />
     <Content Include="Resources\horizontal-line-remove-button.png" />
+    <None Include="Resources\ingredients_list_96px.png" />
     <Content Include="Resources\LogoDavid.jpg" />
     <Content Include="Resources\menu-button.png" />
     <None Include="Resources\organization_96px.png" />
@@ -515,6 +527,13 @@
     <None Include="Resources\send_96px1.png" />
     <None Include="Resources\send_file_96px.png" />
     <None Include="Resources\regresar.png" />
+    <None Include="Resources\shop_96px-1.png" />
+    <None Include="Resources\pen_96px.png" />
+    <None Include="Resources\starred_ticket_96px.png" />
+    <None Include="Resources\search_contacts_96px1.png" />
+    <None Include="Resources\organization_96px1.png" />
+    <None Include="Resources\shopping_cart_96px.png" />
+    <None Include="Resources\sell_property_96px.png" />
     <Content Include="Resources\switch-to-full-screen-button.png" />
   </ItemGroup>
   <ItemGroup />
