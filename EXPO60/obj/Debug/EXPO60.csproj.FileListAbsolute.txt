@@ -308,11 +308,7 @@ C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60
 C:\Users\William Carcamo\Source\Repos\davidcarcam\IMAX-CINEMA\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmEmpresa.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Reportes.Factura.resources
-C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Reportes.ReporteAsientos.resources
-C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Reportes.ReporteDetalleTicket.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Reportes.ReporteProductos.resources
-C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Reportes.ReporteUsuario.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.ConfirmarContraseña.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmEmpresa.resources
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.preguntas.resources
