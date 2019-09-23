@@ -35,6 +35,7 @@ namespace EXPO60.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkPrimerUso = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,18 +49,23 @@ namespace EXPO60.Vista
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picvisible = new System.Windows.Forms.PictureBox();
             this.picocultar = new System.Windows.Forms.PictureBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picvisible)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picocultar)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.toolStrip2);
             this.panel1.Controls.Add(this.linkPrimerUso);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -80,6 +86,17 @@ namespace EXPO60.Vista
             this.linkPrimerUso.Text = "Primer uso";
             this.linkPrimerUso.Visible = false;
             this.linkPrimerUso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPrimerUso_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(196, 185);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtCifrado
             // 
@@ -250,17 +267,6 @@ namespace EXPO60.Vista
             this.label7.Visible = false;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 185);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // picvisible
             // 
             this.picvisible.Image = ((System.Drawing.Image)(resources.GetObject("picvisible.Image")));
@@ -283,11 +289,48 @@ namespace EXPO60.Vista
             this.picocultar.TabStop = false;
             this.picocultar.Click += new System.EventHandler(this.picocultar_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.btnCerrar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(679, 25);
+            this.toolStrip1.TabIndex = 30;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(84, 22);
+            this.toolStripLabel1.Text = "IMAX CINEMA";
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
+            this.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(103, 22);
+            this.btnCerrar.Text = "Cerrar Sistema";
+            this.btnCerrar.Click += new System.EventHandler(this.Cerrar);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(251, 25);
+            this.toolStrip2.TabIndex = 13;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 298);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btncontinuar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -314,6 +357,8 @@ namespace EXPO60.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picvisible)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picocultar)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +384,9 @@ namespace EXPO60.Vista
         private Label label5;
         private Label label6;
         private Label label7;
+        private ToolStrip toolStrip2;
+        private ToolStrip toolStrip1;
+        private ToolStripLabel toolStripLabel1;
+        private ToolStripButton btnCerrar;
     }
 }

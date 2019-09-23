@@ -130,7 +130,7 @@ namespace EXPO60.Vista
 
             btnC1.Hide(); btnC2.Hide();
 
-            btnD1.Hide(); btnD2.Hide(); btnD3.Hide();
+            btnD1.Hide(); btnD2.Hide(); btnD3.Hide(); btnD4.Hide();
 
             btnnormal.Visible = false;
             toolStripButton1.Visible = false;
@@ -414,11 +414,12 @@ namespace EXPO60.Vista
             btnB.Location = new Point(17, 130);
             btnC.Location = new Point(17, 188);
             btnD.Location = new Point(17, 246);
-            btnE.Location = new Point(17, 456);
+            btnE.Location = new Point(17, 505);
 
             btnD1.Location = new Point(17, 300);
             btnD2.Location = new Point(17, 349);
             btnD3.Location = new Point(17, 398);
+            btnD4.Location = new Point(17, 447);
 
             if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
             {
@@ -431,12 +432,14 @@ namespace EXPO60.Vista
                 btnD1.Visible = false;
                 btnD2.Visible = false;
                 btnD3.Visible = false;
+                btnD4.Visible = false;
             }
             else
             {
                 btnD1.Visible = true;
                 btnD2.Visible = true;
                 btnD3.Visible = true;
+                btnD4.Visible = true;
             }
             if (btnD1.Visible == false && btnD2.Visible == false && btnD3.Visible == false)
             {
@@ -550,6 +553,12 @@ namespace EXPO60.Vista
         {
 
         }
+
+        private void Venta(object sender, EventArgs e)
+        {
+            
+        }
+
         private void PanelContenedor_Resize(object sender, EventArgs e)
         {
 
