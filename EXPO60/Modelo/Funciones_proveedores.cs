@@ -32,7 +32,7 @@ namespace EXPO60.Modelo
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error critico de  conexion, consulte con el administrador " + ex.Message, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error critico de  conexion, consulte con el administrador " + ex, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
 
@@ -42,7 +42,7 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT id_proveedor AS ID, nombre, apellido,correo,direccion,dui,telefono, empresa,estado_prov FROM proveedores INNER JOIN empresas ON proveedores.id_empresa = empresas.id_empresa INNER JOIN estado_prov ON estado_prov.id_estado_prov = empresas.id_empresa";
+                string query = "SELECT id_proveedor AS ID, nombre, apellido,correo,direccion,dui,telefono, empresa,estado_prov FROM proveedores INNER JOIN empresa ON proveedores.id_empresa = empresa.id_empresa INNER JOIN estado_prov ON estado_prov.id_estado_prov = empresa.id_empresa";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -132,7 +132,7 @@ namespace EXPO60.Modelo
         }
         public static DataTable ObtenerEmpresa()
         {
-            string query = "SELECT * FROM empresas";
+            string query = "SELECT * FROM empresa";
             DataTable data = new DataTable();
             try
             {

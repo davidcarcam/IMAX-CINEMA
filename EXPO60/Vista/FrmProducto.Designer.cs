@@ -35,22 +35,22 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.BtnProductos = new System.Windows.Forms.ToolStripButton();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
             this.cmbprov = new System.Windows.Forms.ComboBox();
             this.cmblocal = new System.Windows.Forms.ComboBox();
             this.dgvproductos = new System.Windows.Forms.DataGridView();
-            this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtprecio = new System.Windows.Forms.MaskedTextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.BtnProductos = new System.Windows.Forms.ToolStripButton();
+            this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnactualizar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
@@ -139,26 +139,6 @@
             this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
-            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
-            this.BtnCerrar.Text = "Cerrar Formulario";
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnProductos
-            // 
-            this.BtnProductos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnProductos.Image = global::EXPO60.Properties.Resources.document_96px;
-            this.BtnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(142, 22);
-            this.BtnProductos.Text = "Generador de Reporte";
-            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
-            // 
             // cmbtipo
             // 
             this.cmbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -187,6 +167,7 @@
             this.cmblocal.Name = "cmblocal";
             this.cmblocal.Size = new System.Drawing.Size(153, 21);
             this.cmblocal.TabIndex = 2;
+            this.cmblocal.SelectedIndexChanged += new System.EventHandler(this.cmblocal_SelectedIndexChanged);
             // 
             // dgvproductos
             // 
@@ -201,6 +182,88 @@
             this.dgvproductos.TabIndex = 0;
             this.dgvproductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproductos_CellClick);
             this.dgvproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgvproductos_CellContentClick);
+            // 
+            // txtprecio
+            // 
+            this.txtprecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtprecio.Location = new System.Drawing.Point(82, 113);
+            this.txtprecio.Mask = "$000";
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(153, 20);
+            this.txtprecio.TabIndex = 4;
+            // 
+            // txtid
+            // 
+            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtid.Location = new System.Drawing.Point(460, 90);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(35, 20);
+            this.txtid.TabIndex = 0;
+            this.txtid.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(456, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tipo de producto:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(484, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Proveedor:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(209, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Local:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Precio:";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnCerrar.Image = global::EXPO60.Properties.Resources.cancel;
+            this.BtnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(120, 22);
+            this.BtnCerrar.Text = "Cerrar Formulario";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // BtnProductos
+            // 
+            this.BtnProductos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnProductos.Image = global::EXPO60.Properties.Resources.document_96px;
+            this.BtnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnProductos.Name = "BtnProductos";
+            this.BtnProductos.Size = new System.Drawing.Size(142, 22);
+            this.BtnProductos.Text = "Generador de Reporte";
+            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
             // btneliminar
             // 
@@ -345,68 +408,6 @@
             this.btnagregar.Textcolor = System.Drawing.Color.White;
             this.btnagregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
-            // 
-            // txtprecio
-            // 
-            this.txtprecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtprecio.Location = new System.Drawing.Point(82, 113);
-            this.txtprecio.Mask = "$000";
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(153, 20);
-            this.txtprecio.TabIndex = 4;
-            // 
-            // txtid
-            // 
-            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtid.Location = new System.Drawing.Point(460, 90);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(35, 20);
-            this.txtid.TabIndex = 0;
-            this.txtid.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(456, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tipo de producto:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(484, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Proveedor:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(209, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Local:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Precio:";
             // 
             // FrmProducto
             // 

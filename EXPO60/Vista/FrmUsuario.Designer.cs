@@ -305,6 +305,7 @@ namespace EXPO60.Vista
             this.dgvusuarios.Size = new System.Drawing.Size(1009, 230);
             this.dgvusuarios.TabIndex = 0;
             this.dgvusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellClick);
+            this.dgvusuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvusuarios_CellContentClick);
             // 
             // txtid
             // 

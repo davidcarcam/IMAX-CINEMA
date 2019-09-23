@@ -158,11 +158,8 @@ namespace EXPO60.Vista
             mostrarPeliculas();
             mostrarET();
             this.dgvpeliculas.Columns[0].Visible = false;
-            this.dgvpeliculas.Columns[4].Visible = false;
-            this.dgvpeliculas.Columns[5].Visible = false;
-            this.dgvpeliculas.Columns[6].Visible = false;
-            this.dgvpeliculas.Columns[7].Visible = false;
-            
+            this.dgvpeliculas.Columns[1].HeaderText = "Año";
+            this.dgvpeliculas.Columns[7].HeaderText = "Estado de la pelicula";
             btnactualizar.Enabled = false;
             btneliminar.Enabled = false;
         }

@@ -17,7 +17,7 @@ namespace EXPO60.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre, precio, id_proveedor,id_tipo_prod, id_local) VALUES ('{0}', '{1}', '{2}', '{3}','{4}' )", add.nombre, add.precio, add.proveedor, add.tipoproducto, add.local ), Conexion.ObtenerConexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO productos (nombre_prod, precio, id_proveedor,id_tipo_prod, id_local) VALUES ('{0}', '{1}', '{2}', '{3}','{4}' )", add.nombre, add.precio, add.proveedor, add.tipoproducto, add.local ), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -62,7 +62,7 @@ namespace EXPO60.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET nombre = '{0}', precio = '{1}', id_local = '{2}', id_proveedor = '{3}', id_tipo_prod = '{4}' WHERE id_producto = '{5}'",upd.nombre, upd.precio, upd.local, upd.proveedor, upd.tipoproducto, upd.idproducto), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE productos SET nombre_prod = '{0}', precio = '{1}', id_local = '{2}', id_proveedor = '{3}', id_tipo_prod = '{4}' WHERE id_producto = '{5}'",upd.nombre, upd.precio, upd.local, upd.proveedor, upd.tipoproducto, upd.idproducto), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {

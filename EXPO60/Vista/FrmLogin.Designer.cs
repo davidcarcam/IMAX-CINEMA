@@ -35,7 +35,6 @@ namespace EXPO60.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkPrimerUso = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,13 +43,14 @@ namespace EXPO60.Vista
             this.btbAcceder = new System.Windows.Forms.Button();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.picvisible = new System.Windows.Forms.PictureBox();
-            this.picocultar = new System.Windows.Forms.PictureBox();
             this.btncontinuar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picvisible = new System.Windows.Forms.PictureBox();
+            this.picocultar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picvisible)).BeginInit();
@@ -79,16 +79,6 @@ namespace EXPO60.Vista
             this.linkPrimerUso.TabStop = true;
             this.linkPrimerUso.Text = "Primer uso";
             this.linkPrimerUso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPrimerUso_LinkClicked);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 185);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // txtCifrado
             // 
@@ -175,28 +165,6 @@ namespace EXPO60.Vista
             this.txtUsuario.Size = new System.Drawing.Size(286, 20);
             this.txtUsuario.TabIndex = 9;
             // 
-            // picvisible
-            // 
-            this.picvisible.Image = ((System.Drawing.Image)(resources.GetObject("picvisible.Image")));
-            this.picvisible.Location = new System.Drawing.Point(621, 164);
-            this.picvisible.Name = "picvisible";
-            this.picvisible.Size = new System.Drawing.Size(38, 20);
-            this.picvisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picvisible.TabIndex = 12;
-            this.picvisible.TabStop = false;
-            this.picvisible.Click += new System.EventHandler(this.picvisible_Click);
-            // 
-            // picocultar
-            // 
-            this.picocultar.Image = ((System.Drawing.Image)(resources.GetObject("picocultar.Image")));
-            this.picocultar.Location = new System.Drawing.Point(621, 164);
-            this.picocultar.Name = "picocultar";
-            this.picocultar.Size = new System.Drawing.Size(38, 20);
-            this.picocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picocultar.TabIndex = 13;
-            this.picocultar.TabStop = false;
-            this.picocultar.Click += new System.EventHandler(this.picocultar_Click);
-            // 
             // btncontinuar
             // 
             this.btncontinuar.Activecolor = System.Drawing.Color.DarkRed;
@@ -249,11 +217,11 @@ namespace EXPO60.Vista
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(54, 124);
+            this.label5.Location = new System.Drawing.Point(12, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(618, 21);
+            this.label5.Size = new System.Drawing.Size(660, 21);
             this.label5.TabIndex = 27;
-            this.label5.Text = "A continuacion te mostraremos el formulario de primer uso para que crees uno";
+            this.label5.Text = "A continuacion te mostraremos la ventana de primer uso para que crees un usuario";
             this.label5.Visible = false;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -261,7 +229,7 @@ namespace EXPO60.Vista
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(49, 87);
+            this.label6.Location = new System.Drawing.Point(30, 85);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(629, 21);
             this.label6.TabIndex = 26;
@@ -273,13 +241,45 @@ namespace EXPO60.Vista
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(224, 45);
+            this.label7.Location = new System.Drawing.Point(207, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(262, 23);
             this.label7.TabIndex = 25;
             this.label7.Text = "Bienvenido a Imax Cinema";
             this.label7.Visible = false;
             this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(196, 185);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picvisible
+            // 
+            this.picvisible.Image = ((System.Drawing.Image)(resources.GetObject("picvisible.Image")));
+            this.picvisible.Location = new System.Drawing.Point(621, 164);
+            this.picvisible.Name = "picvisible";
+            this.picvisible.Size = new System.Drawing.Size(38, 20);
+            this.picvisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picvisible.TabIndex = 12;
+            this.picvisible.TabStop = false;
+            this.picvisible.Click += new System.EventHandler(this.picvisible_Click);
+            // 
+            // picocultar
+            // 
+            this.picocultar.Image = ((System.Drawing.Image)(resources.GetObject("picocultar.Image")));
+            this.picocultar.Location = new System.Drawing.Point(621, 164);
+            this.picocultar.Name = "picocultar";
+            this.picocultar.Size = new System.Drawing.Size(38, 20);
+            this.picocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picocultar.TabIndex = 13;
+            this.picocultar.TabStop = false;
+            this.picocultar.Click += new System.EventHandler(this.picocultar_Click);
             // 
             // FrmLogin
             // 

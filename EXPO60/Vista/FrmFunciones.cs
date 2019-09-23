@@ -245,8 +245,7 @@ namespace EXPO60.Vista
 
         private void cmbSala_SelectedIndexChanged(object sender, EventArgs e)
         {
-            vaciarampos();
-            mostrarFunciones();
+            
         }
     }
 }

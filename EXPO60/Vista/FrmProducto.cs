@@ -89,7 +89,7 @@ namespace EXPO60.Vista
 
 
             cmblocal.DataSource = Funciones_Productos.ObtenerLocal();
-            cmblocal.DisplayMember = "nombre";
+            cmblocal.DisplayMember = "nombre_local";
             cmblocal.ValueMember = "id_local";
 
             cmbtipo.DataSource = Funciones_Productos.ObtenerEstado();
@@ -226,6 +226,11 @@ namespace EXPO60.Vista
         {
             Producto repro = new Producto();
             repro.Show();
+        }
+
+        private void cmblocal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

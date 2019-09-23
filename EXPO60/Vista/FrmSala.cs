@@ -40,6 +40,7 @@ namespace EXPO60.Vista
         {
             Mostrar_Salas();
             this.dgvSalas.Columns[0].Visible = false;
+            this.dgvSalas.Columns[3].HeaderText = "Estado de la sala";
             btnActualizar_Sala.Enabled = false;
             btnEliminar_Sala.Enabled = false;
             cmbESTADO_SALA.DataSource = Funciones_Salas.Estado_Sala();
