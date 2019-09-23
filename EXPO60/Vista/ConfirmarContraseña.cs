@@ -66,6 +66,7 @@ namespace EXPO60.Vista
                 a.Close();
                 FrmLogin p = new FrmLogin();
                 p.Show();
+                this.Close();
             }
         }
         private void txt1_TextChanged_1(object sender, EventArgs e)

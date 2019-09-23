@@ -54,17 +54,15 @@ namespace EXPO60.Vista
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtclave = new System.Windows.Forms.TextBox();
             this.cmbTipoU = new System.Windows.Forms.ComboBox();
             this.cmbEstadoU = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCerrar = new System.Windows.Forms.ToolStripButton();
             this.BtnUsuario = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnagregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCifrado = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvusuarios)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -372,28 +370,6 @@ namespace EXPO60.Vista
             this.txtusuario.TabIndex = 9;
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(724, 155);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 20);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Contraseña";
-            // 
-            // txtclave
-            // 
-            this.txtclave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtclave.Location = new System.Drawing.Point(837, 155);
-            this.txtclave.MaxLength = 60;
-            this.txtclave.Name = "txtclave";
-            this.txtclave.Size = new System.Drawing.Size(153, 20);
-            this.txtclave.TabIndex = 10;
-            this.txtclave.TextChanged += new System.EventHandler(this.txtclave_TextChanged);
-            this.txtclave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtclave_KeyPress);
-            // 
             // cmbTipoU
             // 
             this.cmbTipoU.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -444,6 +420,15 @@ namespace EXPO60.Vista
             this.BtnUsuario.Size = new System.Drawing.Size(112, 22);
             this.BtnUsuario.Text = "Generar Reporte";
             this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(125, 22);
+            this.toolStripButton1.Text = "Recuperar contraseña";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // btnagregar
             // 
@@ -498,8 +483,6 @@ namespace EXPO60.Vista
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.cmbEstadoU);
             this.groupBox2.Controls.Add(this.cmbTipoU);
-            this.groupBox2.Controls.Add(this.txtclave);
-            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtusuario);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
@@ -528,15 +511,6 @@ namespace EXPO60.Vista
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de usuarios";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(125, 22);
-            this.toolStripButton1.Text = "Recuperar contraseña";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // FrmUsuario
             // 
@@ -569,8 +543,6 @@ namespace EXPO60.Vista
         private System.Windows.Forms.ToolStripButton BtnCerrar;
         private System.Windows.Forms.ComboBox cmbEstadoU;
         private System.Windows.Forms.ComboBox cmbTipoU;
-        private System.Windows.Forms.TextBox txtclave;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

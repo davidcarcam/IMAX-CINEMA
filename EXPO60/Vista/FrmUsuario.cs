@@ -39,7 +39,7 @@ namespace EXPO60.Vista
         {
             txtapellido.Clear();
             txtCifrado.Clear();
-            txtclave.Clear();
+           
             txtcorreo.Clear();
             txtdireccion.Clear();
             txtdocumento.Clear();
@@ -86,7 +86,7 @@ namespace EXPO60.Vista
         }
         public void AgregarUsu()
         {
-            if (txtapellido.Text.Trim() == "" || txtclave.Text.Trim() == "" || txtcorreo.Text.Trim() == ""
+            if (txtapellido.Text.Trim() == "" ||   txtcorreo.Text.Trim() == ""
                 || txtdireccion.Text.Trim() == "" || txtdocumento.Text.Trim() == ""
                 || txtnombre.Text.Trim() == "" || txttelefono.Text.Trim() == "" || txtusuario.Text.Trim() == "")
             {
@@ -97,14 +97,14 @@ namespace EXPO60.Vista
                 agr.nombre = txtnombre.Text;
                 agr.direccion = txtdireccion.Text;
                 agr.apellido = txtapellido.Text;
-               // agr.clave = txtCifrado.Text;
-                agr.correo = txtcorreo.Text;
+                Constructor_primerUso.clave = txtCifrado.Text;
                 agr.dui = txtdocumento.Text;
-
                 agr.telefono = txttelefono.Text;
                 agr.usuario = txtusuario.Text;
+                agr.correo = txtcorreo.Text;
                 agr.tipo = Convert.ToInt16(cmbTipoU.SelectedValue);
                 agr.estado = Convert.ToInt16(cmbEstadoU.SelectedValue);
+                ConstructorUsuarios.clave = "efAdsX436aQfSUcxfwNEbBolhN0=";
                 int datos = FuncionUsuario.ingresarusuario(agr);
             }
         }
@@ -190,9 +190,7 @@ namespace EXPO60.Vista
         }
         private void txtclave_TextChanged(object sender, EventArgs e)
         {
-            txtclave.UseSystemPasswordChar = true;
-            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtclave.Text.ToString());
-            txtCifrado.Text = Hash(pass);
+            
         }
         private void txtnombre_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -332,7 +330,7 @@ namespace EXPO60.Vista
             txtdocumento.Text = dgvusuarios[6, posicion].Value.ToString();
             txttelefono.Text = dgvusuarios[7, posicion].Value.ToString();
             txtusuario.Text = dgvusuarios[8, posicion].Value.ToString();
-            txtclave.Text = dgvusuarios[9, posicion].Value.ToString();
+           
             cmbEstadoU.Text = dgvusuarios[10, posicion].Value.ToString();
             cmbTipoU.Text = dgvusuarios[11, posicion].Value.ToString();
             btneliminar.Enabled = true;
