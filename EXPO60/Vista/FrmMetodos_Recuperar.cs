@@ -81,7 +81,7 @@ namespace EXPO60.Vista
 
         private void MenuItemContactar_Administrador_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<FrmRecuperar_administrador>();
         }
 
         private void MenuItemCorreo_Recuperacion_Click(object sender, EventArgs e)

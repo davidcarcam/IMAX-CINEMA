@@ -58,6 +58,7 @@
     <Compile Include="Controlador\ConstructorDetalleTicket.cs" />
     <Compile Include="Controlador\constructorEmpresa.cs" />
     <Compile Include="Controlador\constructorRecuperar.cs" />
+    <Compile Include="Controlador\ConstructorRecuperar_admin.cs" />
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
     <Compile Include="Controlador\Constructor_Actores.cs" />
     <Compile Include="Controlador\Constructor_agregarEmpresa.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Modelo\Validacion_Correo.cs" />
     <Compile Include="Modelo\ValidarLogin.cs" />
     <Compile Include="Modelo\validarRecuperar.cs" />
+    <Compile Include="Modelo\ValidarRecuperar_admin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\DataSetFacturaLocal.Designer.cs">
@@ -275,6 +277,12 @@
     <Compile Include="Vista\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmRecuperar_administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmRecuperar_administrador.Designer.cs">
+      <DependentUpon>FrmRecuperar_administrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmRecuperar_Preguntas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmRecuperar_administrador.resx">
+      <DependentUpon>FrmRecuperar_administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmRecuperar_Preguntas.resx">
       <DependentUpon>FrmRecuperar_Preguntas.cs</DependentUpon>
