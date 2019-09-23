@@ -78,6 +78,7 @@ namespace EXPO60.Vista
             this.linkPrimerUso.TabIndex = 0;
             this.linkPrimerUso.TabStop = true;
             this.linkPrimerUso.Text = "Primer uso";
+            this.linkPrimerUso.Visible = false;
             this.linkPrimerUso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPrimerUso_LinkClicked);
             // 
             // txtCifrado

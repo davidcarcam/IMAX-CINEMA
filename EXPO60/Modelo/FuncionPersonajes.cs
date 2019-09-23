@@ -41,16 +41,16 @@ namespace EXPO60.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT id_personaje AS ID, personaje,actor,titulo FROM personajes INNER JOIN actores ON personajes.id_actor = personajes.id_personaje INNER JOIN peliculas ON personajes.id_pelicula = peliculas.id_pelicula";
+                string query = "SELECT id_personaje AS ID, personaje,actor,titulo FROM personajes INNER JOIN actores ON personajes.id_actor = actores.id_actor INNER JOIN peliculas ON personajes.id_pelicula = peliculas.id_pelicula";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adapter.Fill(data);
                 return data;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. ", "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Oops!, ha ocurrido un error en la obtencion de datos, consulte con su administrador. "+ex, "Error critico de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return data = new DataTable();
             }
             finally
