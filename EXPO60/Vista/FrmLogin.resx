@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="picvisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAM
-        ogAADKIB7DrrOgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADImSURBVHhe7d17
+        oQAADKEBQYPKVwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADImSURBVHhe7d17
         rGZVff/xGeQyA4IooIDYCVQuAbkqNTExJIL+HEn/AMVo2xgFrBWk2GITqmIl5RJirYEmBhNvITqpYKtS
         rW2D2lStpaGthtYiEbEhitgYlCoVRPx9PrBPXbP5nNuc55xnr7Xe3+SVwHfmnPOstT977TPPsy+bfvGL
         XwAAgM7EJgAAaFtsAgCAtsUmAABoW2wCAIC2xSYAAGhbbAIAgLbFJgAAaFtsAgCAtsUmAABoW2wCAIC2
@@ -342,7 +345,7 @@
   <data name="picocultar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAM
-        sQAADLEBCJfanQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADOiSURBVHhe7d13
+        sAAADLAB2tA4eQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADOiSURBVHhe7d13
         nG1lefbx4Rw4IFVEEYVIkGhAkWBDEbuiKHYUTbBhi4giWFAColijMcbYEjRqLFhIFFEjUSwIikQFxYod
         BSuKgoI0X9/rhjXwnHWumdl7Zq/yPM/v+ny+f3AzZ2avte611z2zV5n785//DAAAKmOLAACgbLYIAADK
         ZosAAKBstggAAMpmiwAAoGy2CAAAymaLAACgbLYIAADKZosAAKBstggAAMpmiwAAoGy2CAAAymaLAACg
@@ -566,4 +569,10 @@
         AQBAyf489/8BTGx5+ID5r2gAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
 </root>

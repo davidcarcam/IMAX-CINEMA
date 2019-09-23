@@ -123,6 +123,16 @@ namespace EXPO60.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_96px {
+            get {
+                object obj = ResourceManager.GetObject("check_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clapperboard_96px {
             get {
                 object obj = ResourceManager.GetObject("clapperboard_96px", resourceCulture);

@@ -524,6 +524,7 @@
     <None Include="Resources\barber_chair_96px.png" />
     <None Include="Resources\clapperboard_96px1.png" />
     <None Include="Resources\clapperboard_96px.png" />
+    <None Include="Resources\check_96px.png" />
     <Content Include="Resources\clear-button.png" />
     <Content Include="Resources\crop-button.png" />
     <Content Include="Resources\crop-tool-button.png" />
