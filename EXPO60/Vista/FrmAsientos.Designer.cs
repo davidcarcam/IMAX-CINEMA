@@ -38,7 +38,6 @@
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolbtnCerrar_Asientos = new System.Windows.Forms.ToolStripButton();
-            this.BtnAsientos = new System.Windows.Forms.ToolStripButton();
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.cmbasiento = new System.Windows.Forms.ComboBox();
             this.lblEstado_Asiento = new System.Windows.Forms.Label();
@@ -89,7 +88,7 @@
             this.cmbsala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbsala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbsala.FormattingEnabled = true;
-            this.cmbsala.Location = new System.Drawing.Point(132, 100);
+            this.cmbsala.Location = new System.Drawing.Point(111, 105);
             this.cmbsala.Name = "cmbsala";
             this.cmbsala.Size = new System.Drawing.Size(200, 21);
             this.cmbsala.TabIndex = 3;
@@ -99,7 +98,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 100);
+            this.label1.Location = new System.Drawing.Point(64, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 20);
             this.label1.TabIndex = 73;
@@ -110,7 +109,7 @@
             this.cmbfila.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbfila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbfila.FormattingEnabled = true;
-            this.cmbfila.Location = new System.Drawing.Point(132, 44);
+            this.cmbfila.Location = new System.Drawing.Point(132, 52);
             this.cmbfila.Name = "cmbfila";
             this.cmbfila.Size = new System.Drawing.Size(200, 21);
             this.cmbfila.TabIndex = 1;
@@ -120,7 +119,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(738, 46);
+            this.label8.Location = new System.Drawing.Point(787, 55);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 20);
             this.label8.TabIndex = 71;
@@ -130,7 +129,7 @@
             // txtbuscar
             // 
             this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuscar.Location = new System.Drawing.Point(803, 48);
+            this.txtbuscar.Location = new System.Drawing.Point(869, 55);
             this.txtbuscar.MaxLength = 50;
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(144, 20);
@@ -140,8 +139,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolbtnCerrar_Asientos,
-            this.BtnAsientos});
+            this.toolbtnCerrar_Asientos});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1019, 25);
@@ -158,23 +156,12 @@
             this.toolbtnCerrar_Asientos.Text = "Cerrar Asientos";
             this.toolbtnCerrar_Asientos.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
-            // BtnAsientos
-            // 
-            this.BtnAsientos.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnAsientos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnAsientos.Image = ((System.Drawing.Image)(resources.GetObject("BtnAsientos.Image")));
-            this.BtnAsientos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnAsientos.Name = "BtnAsientos";
-            this.BtnAsientos.Size = new System.Drawing.Size(23, 22);
-            this.BtnAsientos.Text = "toolStripButton1";
-            this.BtnAsientos.Click += new System.EventHandler(this.BtnAsientos_Click);
-            // 
             // cmbestado
             // 
             this.cmbestado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(597, 99);
+            this.cmbestado.Location = new System.Drawing.Point(570, 105);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(200, 21);
             this.cmbestado.TabIndex = 4;
@@ -184,7 +171,7 @@
             this.cmbasiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbasiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbasiento.FormattingEnabled = true;
-            this.cmbasiento.Location = new System.Drawing.Point(506, 45);
+            this.cmbasiento.Location = new System.Drawing.Point(523, 52);
             this.cmbasiento.Name = "cmbasiento";
             this.cmbasiento.Size = new System.Drawing.Size(200, 21);
             this.cmbasiento.TabIndex = 2;
@@ -194,7 +181,7 @@
             this.lblEstado_Asiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEstado_Asiento.AutoSize = true;
             this.lblEstado_Asiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado_Asiento.Location = new System.Drawing.Point(397, 100);
+            this.lblEstado_Asiento.Location = new System.Drawing.Point(370, 106);
             this.lblEstado_Asiento.Name = "lblEstado_Asiento";
             this.lblEstado_Asiento.Size = new System.Drawing.Size(194, 20);
             this.lblEstado_Asiento.TabIndex = 0;
@@ -205,7 +192,7 @@
             this.lblSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSala.AutoSize = true;
             this.lblSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSala.Location = new System.Drawing.Point(357, 45);
+            this.lblSala.Location = new System.Drawing.Point(357, 50);
             this.lblSala.Name = "lblSala";
             this.lblSala.Size = new System.Drawing.Size(143, 20);
             this.lblSala.TabIndex = 0;
@@ -225,7 +212,7 @@
             this.lblAsiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAsiento.AutoSize = true;
             this.lblAsiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsiento.Location = new System.Drawing.Point(15, 46);
+            this.lblAsiento.Location = new System.Drawing.Point(12, 53);
             this.lblAsiento.Name = "lblAsiento";
             this.lblAsiento.Size = new System.Drawing.Size(111, 20);
             this.lblAsiento.TabIndex = 0;
@@ -434,6 +421,5 @@
         private System.Windows.Forms.ComboBox cmbfila;
         private System.Windows.Forms.ComboBox cmbsala;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton BtnAsientos;
     }
 }

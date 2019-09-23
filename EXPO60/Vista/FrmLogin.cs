@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 using EXPO60.Controlador;
 using EXPO60.Modelo;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace EXPO60.Vista
 {
@@ -192,6 +193,26 @@ namespace EXPO60.Vista
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+        ima
+        public void VerImagen(PictureBox imagen)
+        {
+            MySqlCommand comando = new MySqlCommand("SELECT logo From empresas where id_empresas = '" , Conexion.ObtenerConexion());
+            MySqlDataAdapter dp = new MySqlDataAdapter(comando);
+            DataSet ds = new DataSet("empresas");
+            dp.Fill(ds, "empresas");
+            byte[] Datos = new byte[0];
+            DataRow DR = ds.Tables["empresas"].Rows[0];
+
+            Datos = (byte[])DR["empresas"];
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(Datos);
+            imagen.Image = System.Drawing.Bitmap.FromStream(ms);
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
