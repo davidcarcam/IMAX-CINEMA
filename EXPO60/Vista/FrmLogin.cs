@@ -99,25 +99,41 @@ namespace EXPO60.Vista
         {
             if (ValidarLogin.ValidarExistencia() == true)
             {
-                linkPrimerUso.Visible = false;
-                txtUsuario.Enabled = true;
-                txtContra.Enabled = true;
-                btbAcceder.Enabled = true;
-                label1.Enabled = true;
-                label2.Enabled = true;
-                label3.Enabled = true;
-                linkLabel1.Enabled = true;
+                label7.Visible = false;
+                label6.Visible = false;
+                label5.Visible = false;
+                label4.Visible = false;
+                btncontinuar.Visible = false;
+                panel1.Visible = true;
+                pictureBox1.Visible = true;
+                btbAcceder.Visible = true;
+                txtContra.Visible = true;
+                txtUsuario.Visible = true;
+                label2.Visible = true;
+                label8.Visible = true;
+                picvisible.Visible = true;
+                picocultar.Visible = true;
+                label3.Visible = true;
+                linkLabel1.Visible = true;
             }
-            else
+            else if (ValidarLogin.ValidarExistencia() == false)
             {
-                linkPrimerUso.Visible = true;            
-                txtUsuario.Enabled = false;
-                txtContra.Enabled = false;
-                btbAcceder.Enabled = false;
-                label1.Enabled = false;
-                label2.Enabled = false;
-                label3.Enabled = false;
-                linkLabel1.Enabled = false;
+                label7.Visible = true;
+                label6.Visible = true;
+                label5.Visible = true;
+                label4.Visible = true;
+                btncontinuar.Visible = true;
+                panel1.Visible = false;
+                pictureBox1.Visible = false;
+                btbAcceder.Visible = false;
+                txtContra.Visible = false;
+                txtUsuario.Visible = false;
+                label2.Visible = false;
+                label8.Visible = false;
+                picvisible.Visible = false;
+                picocultar.Visible = false;
+                label3.Visible = false;
+                linkLabel1.Visible = false;
             }
         }
         private void toolbtnCerra_Aplicacion_Click_1(object sender, EventArgs e)
@@ -151,6 +167,33 @@ namespace EXPO60.Vista
             picocultar.Visible = false;
             txtContra.UseSystemPasswordChar = true;
             picvisible.Visible = true;
+        }
+
+        private void btncontinuar_Click(object sender, EventArgs e)
+        {
+            FrmPrimerUso kk = new FrmPrimerUso();
+            kk.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

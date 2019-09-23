@@ -60,6 +60,7 @@
     <Compile Include="Controlador\constructorRecuperar.cs" />
     <Compile Include="Controlador\ConstructorUsuarios.cs" />
     <Compile Include="Controlador\Constructor_Actores.cs" />
+    <Compile Include="Controlador\Constructor_agregarEmpresa.cs" />
     <Compile Include="Controlador\Constructor_Asientos.cs" />
     <Compile Include="Controlador\Constructor_funciones.cs" />
     <Compile Include="Controlador\Constructor_localAlimentos.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Modelo\funcionesEmpresa.cs" />
     <Compile Include="Modelo\Funciones_Actores.cs" />
     <Compile Include="Modelo\Funciones_Asientos.cs" />
+    <Compile Include="Modelo\Funciones_Empresa.cs" />
     <Compile Include="Modelo\Funciones_Factura_Local.cs" />
     <Compile Include="Modelo\Funciones_funcion.cs" />
     <Compile Include="Modelo\Funciones_peliculas.cs" />
@@ -176,6 +178,12 @@
     </Compile>
     <Compile Include="Vista\Frmactores.Designer.cs">
       <DependentUpon>Frmactores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmAgregar_empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmAgregar_empresa.Designer.cs">
+      <DependentUpon>FrmAgregar_empresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Frmalimentos.cs">
       <SubType>Form</SubType>
@@ -353,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Frmactores.resx">
       <DependentUpon>Frmactores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmAgregar_empresa.resx">
+      <DependentUpon>FrmAgregar_empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Frmalimentos.resx">
       <DependentUpon>Frmalimentos.cs</DependentUpon>

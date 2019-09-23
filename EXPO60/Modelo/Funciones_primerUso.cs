@@ -18,7 +18,7 @@ namespace EXPO60.Modelo
             try
             {
                 MySqlCommand cmadd = new MySqlCommand(string.Format("INSERT INTO usuario (nombre, apellido, direccion, correo, dui, telefono, usuario, clave, id_estado_usu, id_tipo_usu) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
-                                                                                            add.nombre,add.apellido,add.direccion,add.correo, add.dui,add.telefono,add.usuario,add.clave,add.estado,add.tipo), Conexion.ObtenerConexion());
+                                                                                            add.nombre, add.apellido, add.direccion, add.correo, add.dui, add.telefono, add.usuario, Constructor_primerUso.clave, add.estado, add.tipo), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt16(cmadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {

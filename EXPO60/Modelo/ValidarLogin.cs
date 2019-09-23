@@ -46,7 +46,7 @@ namespace EXPO60.Modelo
                         {
                             ContructorLogin2.id = _reader.GetInt16(0);
                             ContructorLogin2.nombre = _reader.GetString(1) + " " + _reader.GetString(2);
-                            ContructorLogin2.nivel = _reader.GetInt16(11);
+                            ContructorLogin2.nivel = _reader.GetInt16(10);
                             if (reset >= 1)
                             {
                                 if (ContructorLogin2.clave == "efAdsX436aQfSUcxfwNEbBolhN0=")
@@ -67,7 +67,7 @@ namespace EXPO60.Modelo
                         while (reader.Read())
                         {
                             int intentos = 0;
-                            intentos = reader.GetInt16(5) + 1;
+                            intentos = reader.GetInt16(18) + 1;
                             if (intentos > 5)
                             {
                                 //Bloquear usuario
@@ -100,7 +100,7 @@ namespace EXPO60.Modelo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error de acceso! Ha ocurrido un error en la conexion al servidor" + ex, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error de acceso! Ha ocurrido un error en la conexion al servidor " + ex, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
             finally
@@ -130,14 +130,14 @@ namespace EXPO60.Modelo
                 return retorno;
                 throw;
             }
-            
+
         }
         public static bool ActualizarContraseña()
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE usuario SET clave = '{0}' WHERE usuario = '{1}'" , ContructorLogin2.clave, ContructorLogin2.usuario), Conexion.ObtenerConexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE usuario SET clave = '{0}' WHERE usuario = '{1}'", ContructorLogin2.clave, ContructorLogin2.usuario), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -206,7 +206,6 @@ namespace EXPO60.Modelo
                 return "No tienes una cuenta con estas credenciales";
             }
         }
-
         public static bool validarcod(ContructorLogin2 cod)
         {
             bool retorno = false;

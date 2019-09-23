@@ -18,7 +18,7 @@ namespace EXPO60.Modelo
             try
             {
                 MySqlCommand cmadd = new MySqlCommand(string.Format("INSERT INTO usuario (nombre, apellido, direccion, correo, dui, telefono, usuario, clave, id_estado_usu, id_tipo_usu) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
-                                                                                            add.nombre, add.apellido, add.direccion, add.correo, add.dui, add.telefono, add.usuario, add.clave, add.estado, add.tipo), Conexion.ObtenerConexion());
+                                                                                            add.nombre, add.apellido, add.direccion, add.correo, add.dui, add.telefono, add.usuario, ConstructorUsuarios.clave, add.estado, add.tipo), Conexion.ObtenerConexion());
                 retorno = Convert.ToInt16(cmadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -111,7 +111,7 @@ namespace EXPO60.Modelo
             try
             {
                 MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE usuario SET nombre = '{0}', apellido = '{1}', direccion = '{2}', correo = '{3}', dui = '{4}', telefono = '{5}', usuario = '{6}', clave = '{7}', id_estado_usu = '{8}', id_tipo_usu = '{9}' WHERE id_usuario = '{10}'",
-                                                                                        upd.nombre, upd.apellido, upd.direccion, upd.correo, upd.dui, upd.telefono, upd.usuario, upd.clave, upd.estado, upd.tipo, upd.idusu), Conexion.ObtenerConexion());
+                                                                                        upd.nombre, upd.apellido, upd.direccion, upd.correo, upd.dui, upd.telefono, upd.usuario, ConstructorUsuarios.clave, upd.estado, upd.tipo, upd.idusu), Conexion.ObtenerConexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {

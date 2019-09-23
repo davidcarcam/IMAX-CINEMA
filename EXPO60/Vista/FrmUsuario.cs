@@ -97,7 +97,7 @@ namespace EXPO60.Vista
                 agr.nombre = txtnombre.Text;
                 agr.direccion = txtdireccion.Text;
                 agr.apellido = txtapellido.Text;
-                agr.clave = txtCifrado.Text;
+               // agr.clave = txtCifrado.Text;
                 agr.correo = txtcorreo.Text;
                 agr.dui = txtdocumento.Text;
 
@@ -357,7 +357,7 @@ namespace EXPO60.Vista
             act.nombre = txtnombre.Text;
             act.direccion = txtdireccion.Text;
             act.apellido = txtapellido.Text;
-            act.clave = txtCifrado.Text;
+           // act.clave = txtCifrado.Text;
             act.correo = txtcorreo.Text;
             act.dui = txtdocumento.Text;
 

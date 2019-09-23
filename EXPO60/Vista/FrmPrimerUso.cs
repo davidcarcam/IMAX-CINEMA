@@ -112,28 +112,21 @@ namespace EXPO60.Vista
             cmbEst.ValueMember = "id_estado_usu";
 
         }
+      
+        
         public void AgregarUsu()
         {
-            if (txtApe.Text.Trim() == "" || txtCla.Text.Trim() == "" || txtCor.Text.Trim() == ""
-                || txtDir.Text.Trim() == "" || txtDui.Text.Trim() == ""
-                || txtNom.Text.Trim() == "" || txtTel.Text.Trim() == "" || txtUsu.Text.Trim() == "")
-            {
-                MessageBox.Show("Complete todos los campos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                agr.nombre = txtNom.Text;
-                agr.direccion = txtDir.Text;
-                agr.apellido = txtApe.Text;
-                agr.clave = txtCifrado.Text;
-                agr.correo = txtCor.Text;
-                agr.dui = txtDui.Text;             
-                agr.telefono = txtTel.Text;
-                agr.usuario = txtUsu.Text;
-                agr.tipo = Convert.ToInt16(cmbTip.SelectedValue);
-                agr.estado = Convert.ToInt16(cmbEst.SelectedValue);
-                int datos = Funciones_primerUso.ingresarusuario(agr);
-            }
+            agr.nombre = txtNom.Text;
+            agr.direccion = txtDir.Text;
+            agr.apellido = txtApe.Text;
+            Constructor_primerUso.clave = txtCifrado.Text;
+            agr.correo = txtCor.Text;
+            agr.dui = txtDui.Text;
+            agr.telefono = txtTel.Text;
+            agr.usuario = txtUsu.Text;
+            agr.tipo = Convert.ToInt16(cmbTip.SelectedValue);
+            agr.estado = Convert.ToInt16(cmbEst.SelectedValue);
+            int datos = Funciones_primerUso.ingresarusuario(agr);
         }
         private void txtCla_TextChanged(object sender, EventArgs e)
         {
@@ -224,13 +217,22 @@ namespace EXPO60.Vista
             {
                 MessageBox.Show("Las contraseñas no coinciden, por favor verifique que sean iguales e intentelo de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (txtApe.Text.Trim() == "" || txtCla.Text.Trim() == "" || txtCor.Text.Trim() == ""
+                || txtDir.Text.Trim() == "" || txtDui.Text.Trim() == ""
+                || txtNom.Text.Trim() == "" || txtTel.Text.Trim() == "" || txtUsu.Text.Trim() == "")
+            {
+                MessageBox.Show("Existen campos vacios", "Campos vacios",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
             else
             {
                 AgregarUsu();
-                FrmLogin principal = new FrmLogin();
+                FrmAgregar_empresa principal = new FrmAgregar_empresa();
                 principal.Show();
                 this.Hide();
             }
+          
+
+           
         }
         public string Hash(byte[] val)
         {
