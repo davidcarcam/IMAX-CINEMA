@@ -31,7 +31,946 @@ namespace EXPO60.Vista
         int w = 0;
         int h = 0;
         #endregion
+        private void FrmNuevo_Load(object sender, EventArgs e)
+        {
+            if (ContructorLogin2.nivel == 1)
+            {
+                Botones_Root();
+                MessageBox.Show("Root", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (ContructorLogin2.nivel == 2)
+            {
+                Botones_Administrador();
+                MessageBox.Show("Administrador", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (ContructorLogin2.nivel == 3)
+            {
+                Botones_Encargado_Sala();
+                MessageBox.Show("Encargado de sala", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (ContructorLogin2.nivel == 4)
+            {
+                Botones_Encargado_de_inventario();
+                MessageBox.Show("Encargado de inventario", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (ContructorLogin2.nivel == 5)
+            {
+                Botones_Boletero();
+                MessageBox.Show("Boletero", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (ContructorLogin2.nivel == 6)
+            {
+                Botones_Conciecionario();
+                MessageBox.Show("Consesionario", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
+            btnnormal.Visible = false;
+            toolStripButton1.Visible = false;
+            toolStripLabel1.Visible = false;
+            lblconectado.Text = ContructorLogin2.nombre;
+        }
+        private void Ventas(object sender, EventArgs e)
+        {
+            if (ContructorLogin2.nivel == 1)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 326);
+                btnC.Location = new Point(17, 384);
+                btnD.Location = new Point(17, 442);
+                btnE.Location = new Point(17, 500);
+
+                btnA1.Location = new Point(17, 121);
+                btnA2.Location = new Point(17, 170);
+                btnA3.Location = new Point(17, 219);
+                btnA4.Location = new Point(17, 268);
+                if (btnA.Visible == true && btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                    btnA1.Visible = false;
+                }
+                else
+                {
+                    btnA2.Visible = true;
+                    btnA3.Visible = true;
+                    btnA4.Visible = true;
+                    btnA1.Visible = true;
+                }
+                if (btnA1.Visible == false && btnA2.Visible == false && btnA3.Visible == false && btnA4.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 2)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 326);
+                btnC.Location = new Point(17, 384);
+                btnD.Location = new Point(17, 442);
+                btnE.Location = new Point(17, 500);
+
+                btnA1.Location = new Point(17, 121);
+                btnA2.Location = new Point(17, 170);
+                btnA3.Location = new Point(17, 219);
+                btnA4.Location = new Point(17, 268);
+                if (btnA.Visible == true && btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                    btnA1.Visible = false;
+                }
+                else
+                {
+                    btnA2.Visible = true;
+                    btnA3.Visible = true;
+                    btnA4.Visible = true;
+                    btnA1.Visible = true;
+                }
+                if (btnA1.Visible == false && btnA2.Visible == false && btnA3.Visible == false && btnA4.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 4)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 326);
+                btnC.Location = new Point(17, 384);
+
+                btnA1.Location = new Point(17, 121);
+                btnA2.Location = new Point(17, 170);
+                btnA3.Location = new Point(17, 219);
+                btnA4.Location = new Point(17, 268);
+                if (btnA.Visible == true && btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                    btnA1.Visible = false;
+                }
+                else
+                {
+                    btnA2.Visible = true;
+                    btnA3.Visible = true;
+                    btnA4.Visible = true;
+                    btnA1.Visible = true;
+                }
+                if (btnA1.Visible == false && btnA2.Visible == false && btnA3.Visible == false && btnA4.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 6)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 326);
+
+                btnA1.Location = new Point(17, 121);
+                btnA2.Location = new Point(17, 170);
+                btnA3.Location = new Point(17, 219);
+                btnA4.Location = new Point(17, 268);
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                    btnA1.Visible = false;
+                }
+                else
+                {
+                    btnA2.Visible = true;
+                    btnA3.Visible = true;
+                    btnA4.Visible = true;
+                    btnA1.Visible = true;
+                }
+                if (btnA1.Visible == false && btnA2.Visible == false && btnA3.Visible == false && btnA4.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+
+                }
+            }
+        }
+        private void Peliculas(object sender, EventArgs e)
+        {
+            if (ContructorLogin2.nivel == 1)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 336);
+                btnD.Location = new Point(17, 394);
+                btnE.Location = new Point(17, 452);
+
+                btnB1.Location = new Point(17, 180);
+                btnB2.Location = new Point(17, 229);
+                btnB3.Location = new Point(17, 278);
+
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                else
+                {
+                    btnB1.Visible = true;
+                    btnB2.Visible = true;
+                    btnB3.Visible = true;
+                }
+                if (btnB1.Visible == false && btnB2.Visible == false && btnB3.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 2)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 336);
+                btnD.Location = new Point(17, 394);
+                btnE.Location = new Point(17, 452);
+
+                btnB1.Location = new Point(17, 180);
+                btnB2.Location = new Point(17, 229);
+                btnB3.Location = new Point(17, 278);
+
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                else
+                {
+                    btnB1.Visible = true;
+                    btnB2.Visible = true;
+                    btnB3.Visible = true;
+                }
+                if (btnB1.Visible == false && btnB2.Visible == false && btnB3.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 4)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 336);
+
+                btnB1.Location = new Point(17, 180);
+                btnB2.Location = new Point(17, 229);
+                btnB3.Location = new Point(17, 278);
+
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                else
+                {
+                    btnB1.Visible = true;
+                    btnB2.Visible = true;
+                    btnB3.Visible = true;
+                }
+                if (btnB1.Visible == false && btnB2.Visible == false && btnB3.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 6)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+
+                btnB1.Location = new Point(17, 180);
+                btnB2.Location = new Point(17, 229);
+                btnB3.Location = new Point(17, 278);
+
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                else
+                {
+                    btnB1.Visible = true;
+                    btnB2.Visible = true;
+                    btnB3.Visible = true;
+                }
+                if (btnB1.Visible == false && btnB2.Visible == false && btnB3.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+            }
+        }
+        private void Suministro(object sender, EventArgs e)
+        {
+            if (ContructorLogin2.nivel == 1)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 188);
+                btnD.Location = new Point(17, 345);
+                btnE.Location = new Point(17, 403);
+
+                btnC1.Location = new Point(17, 238);
+                btnC2.Location = new Point(17, 287);
+
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                else
+                {
+                    btnC1.Visible = true;
+                    btnC2.Visible = true;
+                }
+                if (btnC1.Visible == false && btnC2.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 2)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 188);
+                btnD.Location = new Point(17, 345);
+                btnE.Location = new Point(17, 403);
+
+                btnC1.Location = new Point(17, 238);
+                btnC2.Location = new Point(17, 287);
+
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                else
+                {
+                    btnC1.Visible = true;
+                    btnC2.Visible = true;
+                }
+                if (btnC1.Visible == false && btnC2.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 4)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 188);
+
+                btnC1.Location = new Point(17, 238);
+                btnC2.Location = new Point(17, 287);
+
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                else
+                {
+                    btnC1.Visible = true;
+                    btnC2.Visible = true;
+                }
+                if (btnC1.Visible == false && btnC2.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+            }
+        }
+        private void Funciones(object sender, EventArgs e)
+        {
+            if (ContructorLogin2.nivel == 1)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 188);
+                btnD.Location = new Point(17, 246);
+                btnE.Location = new Point(17, 505);
+
+                btnD1.Location = new Point(17, 300);
+                btnD2.Location = new Point(17, 349);
+                btnD3.Location = new Point(17, 398);
+                btnD4.Location = new Point(17, 447);
+
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                    btnD4.Visible = false;
+                }
+                else
+                {
+                    btnD1.Visible = true;
+                    btnD2.Visible = true;
+                    btnD3.Visible = true;
+                    btnD4.Visible = true;
+                }
+                if (btnD1.Visible == false && btnD2.Visible == false && btnD3.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 2)
+            {
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 188);
+                btnD.Location = new Point(17, 246);
+                btnE.Location = new Point(17, 505);
+
+                btnD1.Location = new Point(17, 300);
+                btnD2.Location = new Point(17, 349);
+                btnD3.Location = new Point(17, 398);
+                btnD4.Location = new Point(17, 447);
+
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnA.BringToFront();
+                    btnB.BringToFront();
+                    btnC.BringToFront();
+                    btnD.BringToFront();
+                    btnE.BringToFront();
+
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                    btnD4.Visible = false;
+                }
+                else
+                {
+                    btnD1.Visible = true;
+                    btnD2.Visible = true;
+                    btnD3.Visible = true;
+                    btnD4.Visible = true;
+                }
+                if (btnD1.Visible == false && btnD2.Visible == false && btnD3.Visible == false)
+                {
+                    btnA.Location = new Point(17, 72);
+                    btnB.Location = new Point(17, 130);
+                    btnC.Location = new Point(17, 188);
+                    btnD.Location = new Point(17, 246);
+                    btnE.Location = new Point(17, 304);
+                }
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 3)
+            {
+                btnD.Location = new Point(17, 72);
+
+                btnD1.Location = new Point(17, 121);
+                btnD2.Location = new Point(17, 170);
+                btnD3.Location = new Point(17, 219);
+                btnD4.Location = new Point(17, 268);
+
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD.BringToFront();
+
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                    btnD4.Visible = false;
+                }
+                else
+                {
+                    btnD1.Visible = true;
+                    btnD2.Visible = true;
+                    btnD3.Visible = true;
+                    btnD4.Visible = true;
+                }
+                if (btnD1.Visible == false && btnD2.Visible == false && btnD3.Visible == false)
+                {
+                    btnD.Location = new Point(17, 72);
+                }
+            }
+            else if (ContructorLogin2.nivel == 5)
+            {
+                btnB.Location = new Point(17, 72);
+                btnD.Location = new Point(17, 130);
+
+                btnD1.Location = new Point(17, 180);
+                btnD2.Location = new Point(17, 229);
+                btnD3.Location = new Point(17, 278);
+                btnD4.Location = new Point(17, 327);
+
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnB.BringToFront();
+                    btnD.BringToFront();
+
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                    btnD4.Visible = false;
+                }
+                else
+                {
+                    btnD1.Visible = true;
+                    btnD2.Visible = true;
+                    btnD3.Visible = true;
+                    btnD4.Visible = true;
+                }
+                if (btnD1.Visible == false && btnD2.Visible == false && btnD3.Visible == false)
+                {
+                    btnB.Location = new Point(17, 72);
+                    btnD.Location = new Point(17, 130);
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+            }
+        }
+        private void usuarios(object sender, EventArgs e)
+        {
+            if (ContructorLogin2.nivel == 1)
+            {
+                AbrirFormulario<FrmUsuario>();
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 188);
+                btnD.Location = new Point(17, 246);
+                btnE.Location = new Point(17, 304);
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 2)
+            {
+                AbrirFormulario<FrmUsuario>();
+                btnA.Location = new Point(17, 72);
+                btnB.Location = new Point(17, 130);
+                btnC.Location = new Point(17, 188);
+                btnD.Location = new Point(17, 246);
+                btnE.Location = new Point(17, 304);
+                if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
+                {
+                    btnA1.Visible = false;
+                    btnA2.Visible = false;
+                    btnA3.Visible = false;
+                    btnA4.Visible = false;
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                if (btnC1.Visible == true && btnC2.Visible == true)
+                {
+                    btnC1.Visible = false;
+                    btnC2.Visible = false;
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                }
+            }
+        }
+        void spectre()
+        {
+            btnA.Visible = false; btnA1.Visible = false; btnA2.Visible = false; btnA3.Visible = false; btnA4.Visible = false;
+
+            btnB.Visible = false; btnB1.Visible = false; btnB2.Visible = false; btnB3.Visible = false;
+
+            btnC.Visible = false; btnC1.Visible = false; btnC2.Visible = false;
+
+            btnD.Visible = false; btnD1.Visible = false; btnD2.Visible = false; btnD3.Visible = false; btnD4.Visible = false;
+
+            btnE.Visible = false;
+        }
+        void Botones_Root()
+        {
+            spectre();
+
+            btnA.Visible = true;
+
+            btnB.Visible = true;
+
+            btnC.Visible = true;
+
+            btnD.Visible = true;
+
+            btnE.Visible = true;
+
+            btnA.Location = new Point(17, 72);
+            btnB.Location = new Point(17, 130);
+            btnC.Location = new Point(17, 188);
+            btnD.Location = new Point(17, 246);
+            btnE.Location = new Point(17, 304);
+        }
+        void Botones_Administrador()
+        {
+            spectre();
+
+            btnA.Visible = true;
+
+            btnB.Visible = true;
+
+            btnC.Visible = true;
+
+            btnD.Visible = true;
+
+            btnA.Location = new Point(17, 72);
+            btnB.Location = new Point(17, 130);
+            btnC.Location = new Point(17, 188);
+            btnD.Location = new Point(17, 246);
+            btnE.Location = new Point(17, 304);
+        }
+        void Botones_Encargado_Sala()
+        {
+            spectre();
+
+            btnD.Visible = true;
+
+            btnD.Location = new Point(17,72);
+        }
+        void Botones_Encargado_de_inventario()
+        {
+            spectre();
+
+            btnA.Visible = true; 
+            btnB.Visible = true;
+            btnC.Visible = true;
+
+            btnA.Location = new Point (17, 72);
+            btnB.Location = new Point(17, 130);
+            btnC.Location = new Point(17, 188);
+        }
+        void Botones_Boletero()
+        {
+            spectre();
+
+            btnB.Location = new Point(17,72);
+            btnD.Location = new Point(17, 130);
+        }
+        void Botones_Conciecionario()
+        {
+            spectre();
+
+            btnA.Visible = true;
+            btnB.Visible = true;
+
+            btnA.Location = new Point(17,72);
+            btnB.Location = new Point(17, 130);
+        }
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
            
@@ -39,7 +978,6 @@ namespace EXPO60.Vista
             formulario = PanelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
             if (formulario == null)
             {
-
                 formulario = new MiForm();
                 formulario.TopLevel = false;
                 formulario.FormBorderStyle = FormBorderStyle.None;
@@ -116,27 +1054,7 @@ namespace EXPO60.Vista
             toolStripButton1.Visible = true;
             toolStripLabel1.Visible = true;
         }
-        private void FrmNuevo_Load(object sender, EventArgs e)
-        {
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 188);
-            btnD.Location = new Point(17, 246);
-            btnE.Location = new Point(17, 304);
 
-            btnA1.Hide(); btnA2.Hide(); btnA3.Hide(); btnA4.Hide();
-
-            btnB1.Hide(); btnB2.Hide(); btnB3.Hide();
-
-            btnC1.Hide(); btnC2.Hide();
-
-            btnD1.Hide(); btnD2.Hide(); btnD3.Hide(); btnD4.Hide();
-
-            btnnormal.Visible = false;
-            toolStripButton1.Visible = false;
-            toolStripLabel1.Visible = false;
-            lblconectado.Text = ContructorLogin2.nombre;
-        }
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPersonajes>();
@@ -238,269 +1156,6 @@ namespace EXPO60.Vista
             this.Height = 572;
             this.CenterToScreen();
         }
-        private void Ventas(object sender, EventArgs e)
-        {
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 326);
-            btnC.Location = new Point(17, 384);
-            btnD.Location = new Point(17, 442);
-            btnE.Location = new Point(17, 500);
-
-            btnA1.Location = new Point(17, 121);
-            btnA2.Location = new Point(17, 170);
-            btnA3.Location = new Point(17, 219);
-            btnA4.Location = new Point(17, 268);
-            if (btnA.Visible == true && btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
-            {
-                btnA.BringToFront();
-                btnB.BringToFront();
-                btnC.BringToFront();
-                btnD.BringToFront();
-                btnE.BringToFront();
-
-                btnA2.Visible = false;
-                btnA3.Visible = false;
-                btnA4.Visible = false;
-                btnA1.Visible = false;
-            }
-            else
-            {
-                btnA2.Visible = true;
-                btnA3.Visible = true;
-                btnA4.Visible = true;
-                btnA1.Visible = true;
-            }
-            if (btnA1.Visible == false && btnA2.Visible == false && btnA3.Visible == false && btnA4.Visible == false)
-            {
-                btnA.Location = new Point(17, 72);
-                btnB.Location = new Point(17, 130);
-                btnC.Location = new Point(17, 188);
-                btnD.Location = new Point(17, 246);
-                btnE.Location = new Point(17, 304);
-            }
-            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
-            {
-                btnB1.Visible = false;
-                btnB2.Visible = false;
-                btnB3.Visible = false;
-            }
-            if (btnC1.Visible == true && btnC2.Visible == true)
-            {
-                btnC1.Visible = false;
-                btnC2.Visible = false;
-            }
-            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
-            {
-                btnD1.Visible = false;
-                btnD2.Visible = false;
-                btnD3.Visible = false;
-            }
-        }
-        private void Peliculas(object sender, EventArgs e)
-        {
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 336);
-            btnD.Location = new Point(17, 394);
-            btnE.Location = new Point(17, 452);
-
-            btnB1.Location = new Point(17, 180);
-            btnB2.Location = new Point(17, 229);
-            btnB3.Location = new Point(17, 278);
-
-            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
-            {
-                btnA.BringToFront();
-                btnB.BringToFront();
-                btnC.BringToFront();
-                btnD.BringToFront();
-                btnE.BringToFront();
-
-                btnB1.Visible = false;
-                btnB2.Visible = false;
-                btnB3.Visible = false;
-            }
-            else
-            {
-                btnB1.Visible = true;
-                btnB2.Visible = true;
-                btnB3.Visible = true;
-            }
-            if (btnB1.Visible == false && btnB2.Visible == false && btnB3.Visible == false)
-            {
-                btnA.Location = new Point(17, 72);
-                btnB.Location = new Point(17, 130);
-                btnC.Location = new Point(17, 188);
-                btnD.Location = new Point(17, 246);
-                btnE.Location = new Point(17, 304);
-            }
-            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
-            {
-                btnA1.Visible = false;
-                btnA2.Visible = false;
-                btnA3.Visible = false;
-                btnA4.Visible = false;
-            }
-            if (btnC1.Visible == true && btnC2.Visible == true)
-            {
-                btnC1.Visible = false;
-                btnC2.Visible = false;
-            }
-            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
-            {
-                btnD1.Visible = false;
-                btnD2.Visible = false;
-                btnD3.Visible = false;
-            }
-        }
-        private void Suministro(object sender, EventArgs e)
-        {
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 188);
-            btnD.Location = new Point(17, 345);
-            btnE.Location = new Point(17, 403);
-
-            btnC1.Location = new Point(17, 238);
-            btnC2.Location = new Point(17, 287);
-
-            if (btnC1.Visible == true && btnC2.Visible == true)
-            {
-                btnA.BringToFront();
-                btnB.BringToFront();
-                btnC.BringToFront();
-                btnD.BringToFront();
-                btnE.BringToFront();
-
-                btnC1.Visible = false;
-                btnC2.Visible = false;
-            }
-            else
-            {
-                btnC1.Visible = true;
-                btnC2.Visible = true;
-            }
-            if (btnC1.Visible == false && btnC2.Visible == false)
-            {
-                btnA.Location = new Point(17, 72);
-                btnB.Location = new Point(17, 130);
-                btnC.Location = new Point(17, 188);
-                btnD.Location = new Point(17, 246);
-                btnE.Location = new Point(17, 304);
-            }
-            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
-            {
-                btnA1.Visible = false;
-                btnA2.Visible = false;
-                btnA3.Visible = false;
-                btnA4.Visible = false;
-            }
-            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
-            {
-                btnB1.Visible = false;
-                btnB2.Visible = false;
-                btnB3.Visible = false;
-            }
-            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
-            {
-                btnD1.Visible = false;
-                btnD2.Visible = false;
-                btnD3.Visible = false;
-            }
-        }
-        private void Funciones(object sender, EventArgs e)
-        {
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 188);
-            btnD.Location = new Point(17, 246);
-            btnE.Location = new Point(17, 505);
-
-            btnD1.Location = new Point(17, 300);
-            btnD2.Location = new Point(17, 349);
-            btnD3.Location = new Point(17, 398);
-            btnD4.Location = new Point(17, 447);
-
-            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
-            {
-                btnA.BringToFront();
-                btnB.BringToFront();
-                btnC.BringToFront();
-                btnD.BringToFront();
-                btnE.BringToFront();
-
-                btnD1.Visible = false;
-                btnD2.Visible = false;
-                btnD3.Visible = false;
-                btnD4.Visible = false;
-            }
-            else
-            {
-                btnD1.Visible = true;
-                btnD2.Visible = true;
-                btnD3.Visible = true;
-                btnD4.Visible = true;
-            }
-            if (btnD1.Visible == false && btnD2.Visible == false && btnD3.Visible == false)
-            {
-                btnA.Location = new Point(17, 72);
-                btnB.Location = new Point(17, 130);
-                btnC.Location = new Point(17, 188);
-                btnD.Location = new Point(17, 246);
-                btnE.Location = new Point(17, 304);
-            }
-            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
-            {
-                btnA1.Visible = false;
-                btnA2.Visible = false;
-                btnA3.Visible = false;
-                btnA4.Visible = false;
-            }
-            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
-            {
-                btnB1.Visible = false;
-                btnB2.Visible = false;
-                btnB3.Visible = false;
-            }
-            if (btnC1.Visible == true && btnC2.Visible == true)
-            {
-                btnC1.Visible = false;
-                btnC2.Visible = false;
-            }
-        }
-        private void usuarios(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmUsuario>();
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 188);
-            btnD.Location = new Point(17, 246);
-            btnE.Location = new Point(17, 304);
-            if (btnA1.Visible == true && btnA2.Visible == true && btnA3.Visible == true && btnA4.Visible == true)
-            {
-                btnA1.Visible = false;
-                btnA2.Visible = false;
-                btnA3.Visible = false;
-                btnA4.Visible = false;
-            }
-            if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
-            {
-                btnB1.Visible = false;
-                btnB2.Visible = false;
-                btnB3.Visible = false;
-            }
-            if (btnC1.Visible == true && btnC2.Visible == true)
-            {
-                btnC1.Visible = false;
-                btnC2.Visible = false;
-            }
-            if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
-            {
-                btnD1.Visible = false;
-                btnD2.Visible = false;
-                btnD3.Visible = false;
-            }
-        }
         private void Personajes(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPersonajes>();
@@ -563,53 +1218,5 @@ namespace EXPO60.Vista
         {
 
         }
-        void UbicacionRoot()
-        {
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 326);
-            btnC.Location = new Point(17, 384);
-            btnD.Location = new Point(17, 442);
-            btnE.Location = new Point(17, 500);
-
-            btnA1.Location = new Point(17, 121);
-            btnA2.Location = new Point(17, 170);
-            btnA3.Location = new Point(17, 219);
-            btnA4.Location = new Point(17, 268);
-
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 336);
-            btnD.Location = new Point(17, 394);
-            btnE.Location = new Point(17, 452);
-
-            btnB1.Location = new Point(17, 180);
-            btnB2.Location = new Point(17, 229);
-            btnB3.Location = new Point(17, 278);
-
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 188);
-            btnD.Location = new Point(17, 345);
-            btnE.Location = new Point(17, 403);
-
-            btnC1.Location = new Point(17, 238);
-            btnC2.Location = new Point(17, 287);
-
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 188);
-            btnD.Location = new Point(17, 246);
-            btnE.Location = new Point(17, 456);
-
-            btnD1.Location = new Point(17, 300);
-            btnD2.Location = new Point(17, 349);
-            btnD3.Location = new Point(17, 398);
-
-            btnA.Location = new Point(17, 72);
-            btnB.Location = new Point(17, 130);
-            btnC.Location = new Point(17, 188);
-            btnD.Location = new Point(17, 246);
-            btnE.Location = new Point(17, 304);
-        }       
     }
 }
