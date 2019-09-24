@@ -39,6 +39,10 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolbtnCerrar_Sesion = new System.Windows.Forms.ToolStripButton();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.lblusuario = new System.Windows.Forms.ToolStripButton();
+            this.lblconectado = new System.Windows.Forms.ToolStripButton();
             this.btnD3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnD2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnD4 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -52,10 +56,6 @@
             this.btnB1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnB3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnA2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.lblusuario = new System.Windows.Forms.ToolStripButton();
-            this.lblconectado = new System.Windows.Forms.ToolStripButton();
             this.MenuVertical = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.picimg = new System.Windows.Forms.PictureBox();
             this.picimgL = new System.Windows.Forms.PictureBox();
@@ -183,6 +183,48 @@
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1025, 522);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblusuario,
+            this.lblconectado});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 522);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1025, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // lblusuario
+            // 
+            this.lblusuario.Image = ((System.Drawing.Image)(resources.GetObject("lblusuario.Image")));
+            this.lblusuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(128, 22);
+            this.lblusuario.Text = "Usuario Conectado";
+            // 
+            // lblconectado
+            // 
+            this.lblconectado.BackColor = System.Drawing.Color.White;
+            this.lblconectado.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.lblconectado.ForeColor = System.Drawing.Color.Lime;
+            this.lblconectado.Image = ((System.Drawing.Image)(resources.GetObject("lblconectado.Image")));
+            this.lblconectado.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblconectado.Name = "lblconectado";
+            this.lblconectado.Size = new System.Drawing.Size(23, 22);
+            this.lblconectado.Text = ".";
+            // 
             // btnD3
             // 
             this.btnD3.Activecolor = System.Drawing.Color.Maroon;
@@ -206,7 +248,7 @@
             this.btnD3.IconVisible = true;
             this.btnD3.IconZoom = 75D;
             this.btnD3.IsTab = false;
-            this.btnD3.Location = new System.Drawing.Point(12, 399);
+            this.btnD3.Location = new System.Drawing.Point(17, 215);
             this.btnD3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD3.Name = "btnD3";
             this.btnD3.Normalcolor = System.Drawing.Color.Black;
@@ -244,7 +286,7 @@
             this.btnD2.IconVisible = true;
             this.btnD2.IconZoom = 75D;
             this.btnD2.IsTab = false;
-            this.btnD2.Location = new System.Drawing.Point(12, 350);
+            this.btnD2.Location = new System.Drawing.Point(17, 166);
             this.btnD2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD2.Name = "btnD2";
             this.btnD2.Normalcolor = System.Drawing.Color.Black;
@@ -358,7 +400,7 @@
             this.btnD1.IconVisible = true;
             this.btnD1.IconZoom = 75D;
             this.btnD1.IsTab = false;
-            this.btnD1.Location = new System.Drawing.Point(12, 301);
+            this.btnD1.Location = new System.Drawing.Point(17, 117);
             this.btnD1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD1.Name = "btnD1";
             this.btnD1.Normalcolor = System.Drawing.Color.Black;
@@ -678,52 +720,13 @@
             this.btnA2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA2.Click += new System.EventHandler(this.Local);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::EXPO60.Properties.Resources.LogoDavid;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1025, 522);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblusuario,
-            this.lblconectado});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 522);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1025, 25);
-            this.toolStrip2.TabIndex = 0;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // lblusuario
-            // 
-            this.lblusuario.Image = ((System.Drawing.Image)(resources.GetObject("lblusuario.Image")));
-            this.lblusuario.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(128, 22);
-            this.lblusuario.Text = "Usuario Conectado";
-            // 
-            // lblconectado
-            // 
-            this.lblconectado.BackColor = System.Drawing.Color.White;
-            this.lblconectado.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.lblconectado.ForeColor = System.Drawing.Color.Lime;
-            this.lblconectado.Image = ((System.Drawing.Image)(resources.GetObject("lblconectado.Image")));
-            this.lblconectado.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.lblconectado.Name = "lblconectado";
-            this.lblconectado.Size = new System.Drawing.Size(23, 22);
-            this.lblconectado.Text = ".";
-            // 
             // MenuVertical
             // 
             this.MenuVertical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuVertical.BackgroundImage")));
             this.MenuVertical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MenuVertical.Controls.Add(this.btnD3);
+            this.MenuVertical.Controls.Add(this.btnD2);
+            this.MenuVertical.Controls.Add(this.btnD1);
             this.MenuVertical.Controls.Add(this.btnC1);
             this.MenuVertical.Controls.Add(this.btnC2);
             this.MenuVertical.Controls.Add(this.btnD4);
@@ -733,8 +736,6 @@
             this.MenuVertical.Controls.Add(this.btnB3);
             this.MenuVertical.Controls.Add(this.picimgL);
             this.MenuVertical.Controls.Add(this.btnA);
-            this.MenuVertical.Controls.Add(this.btnD3);
-            this.MenuVertical.Controls.Add(this.btnD2);
             this.MenuVertical.Controls.Add(this.btnB);
             this.MenuVertical.Controls.Add(this.btnA1);
             this.MenuVertical.Controls.Add(this.btnC);
@@ -742,7 +743,6 @@
             this.MenuVertical.Controls.Add(this.btnA2);
             this.MenuVertical.Controls.Add(this.btnD);
             this.MenuVertical.Controls.Add(this.btnA4);
-            this.MenuVertical.Controls.Add(this.btnD1);
             this.MenuVertical.Controls.Add(this.btnE);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.GradientBottomLeft = System.Drawing.Color.Red;
@@ -840,7 +840,7 @@
             this.btnB.IconVisible = true;
             this.btnB.IconZoom = 80D;
             this.btnB.IsTab = false;
-            this.btnB.Location = new System.Drawing.Point(12, 127);
+            this.btnB.Location = new System.Drawing.Point(17, 72);
             this.btnB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnB.Name = "btnB";
             this.btnB.Normalcolor = System.Drawing.Color.White;
@@ -916,7 +916,7 @@
             this.btnD.IconVisible = true;
             this.btnD.IconZoom = 100D;
             this.btnD.IsTab = false;
-            this.btnD.Location = new System.Drawing.Point(12, 252);
+            this.btnD.Location = new System.Drawing.Point(12, 282);
             this.btnD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD.Name = "btnD";
             this.btnD.Normalcolor = System.Drawing.Color.White;

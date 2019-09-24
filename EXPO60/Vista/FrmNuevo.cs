@@ -58,12 +58,11 @@ namespace EXPO60.Vista
                 Botones_Boletero();
                 MessageBox.Show("Boletero", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (ContructorLogin2.nivel == 6)
+            else
             {
                 Botones_Conciecionario();
                 MessageBox.Show("Consesionario", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
             btnnormal.Visible = false;
             toolStripButton1.Visible = false;
             toolStripLabel1.Visible = false;
@@ -127,6 +126,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 2)
@@ -185,6 +185,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 4)
@@ -263,7 +264,12 @@ namespace EXPO60.Vista
                 {
                     btnA.Location = new Point(17, 72);
                     btnB.Location = new Point(17, 130);
-
+                }
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
                 }
             }
         }
@@ -324,6 +330,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 2)
@@ -381,6 +388,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 4)
@@ -426,6 +434,43 @@ namespace EXPO60.Vista
                 {
                     btnC1.Visible = false;
                     btnC2.Visible = false;
+                }
+            }
+            else if (ContructorLogin2.nivel == 5)
+            {
+                btnB.Location = new Point(17, 72);
+                btnD.Location = new Point(17, 282);
+
+                btnB1.Location = new Point(17, 117);
+                btnB2.Location = new Point(17, 166);
+                btnB3.Location = new Point(17, 215);
+
+                if (btnB1.Visible == true && btnB2.Visible == true && btnB3.Visible == true)
+                {
+                    btnB.BringToFront();
+                    btnD.BringToFront();
+
+                    btnB1.Visible = false;
+                    btnB2.Visible = false;
+                    btnB3.Visible = false;
+                }
+                else
+                {
+                    btnB1.Visible = true;
+                    btnB2.Visible = true;
+                    btnB3.Visible = true;
+                }
+                if (btnB1.Visible == false && btnB2.Visible == false && btnB3.Visible == false)
+                {
+                    btnB.Location = new Point(17, 72);
+                    btnD.Location = new Point(17, 130);
+                }
+                if (btnD1.Visible == true && btnD2.Visible == true && btnD3.Visible == true)
+                {
+                    btnD1.Visible = false;
+                    btnD2.Visible = false;
+                    btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 6)
@@ -522,6 +567,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 2)
@@ -577,6 +623,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 4)
@@ -848,6 +895,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
             else if (ContructorLogin2.nivel == 2)
@@ -881,6 +929,7 @@ namespace EXPO60.Vista
                     btnD1.Visible = false;
                     btnD2.Visible = false;
                     btnD3.Visible = false;
+                    btnD4.Visible = false;
                 }
             }
         }
@@ -957,6 +1006,9 @@ namespace EXPO60.Vista
         void Botones_Boletero()
         {
             spectre();
+
+            btnB.Visible = true;
+            btnD.Visible = true;
 
             btnB.Location = new Point(17,72);
             btnD.Location = new Point(17, 130);
