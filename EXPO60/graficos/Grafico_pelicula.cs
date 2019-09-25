@@ -34,8 +34,8 @@ namespace EXPO60.graficos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se ha podido establecer la conexion"+ex, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }          
+                MessageBox.Show("No se ha podido establecer la conexion" + ex, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public DataTable EnviarDatos(string consulta)
         {

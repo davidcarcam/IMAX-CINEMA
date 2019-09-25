@@ -55,6 +55,7 @@ namespace EXPO60.Vista
         }
         void Validar()
         {
+
             if (txtUsuario.Text.Trim() == "" || txtContra.Text.Trim() == "")
             {
                 MessageBox.Show("Complete todos los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -62,12 +63,12 @@ namespace EXPO60.Vista
             }
             else
             {
-                ContructorLogin2 log = new ContructorLogin2();
+                //ContructorLogin2 log = new ContructorLogin2();
                 ContructorLogin2.usuario = txtUsuario.Text;
                 ContructorLogin2.clave = txtCifrado.Text;
-                
+
                 //Recuperando el valor de retorno
-                bool datos = ValidarLogin.Acceso(log);
+                bool datos = ValidarLogin.Acceso(ContructorLogin2.usuario, ContructorLogin2.clave);
                 //
                 if (datos == true)
                 {
@@ -75,7 +76,7 @@ namespace EXPO60.Vista
                     {
                         ConfirmarContraseña kk = new ConfirmarContraseña();
                         this.Hide();
-                        kk.Show();   
+                        kk.Show();
                     }
                     else
                     {

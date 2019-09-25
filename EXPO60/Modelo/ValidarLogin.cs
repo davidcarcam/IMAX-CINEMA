@@ -13,7 +13,7 @@ namespace EXPO60.Modelo
 {
     class ValidarLogin
     {
-        public static bool Acceso(ContructorLogin2 log)
+        public static bool Acceso(string usuario, string clave)
         {
             bool retorno = false;
             //Verificar la existencia de usuario en la base de datos
@@ -22,7 +22,7 @@ namespace EXPO60.Modelo
             {
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.ObtenerConexion());
                 //envio de parametro a la consulta
-                cmdselect.Parameters.Add(new MySqlParameter("user", ContructorLogin2.usuario));
+                cmdselect.Parameters.Add(new MySqlParameter("user", usuario));
                 retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
                 //Si el usuario existe el valor de retorno es TRUE, de lo contrario es FALSE
                 if (retorno == true)
@@ -31,8 +31,8 @@ namespace EXPO60.Modelo
                     int estado = 1;
                     string query2 = "SELECT * FROM usuario WHERE usuario = ?user AND clave = ?pass AND id_estado_usu = ?state";
                     MySqlCommand cmdselect2 = new MySqlCommand(query2, Conexion.ObtenerConexion());
-                    cmdselect2.Parameters.Add(new MySqlParameter("user", ContructorLogin2.usuario));
-                    cmdselect2.Parameters.Add(new MySqlParameter("pass", ContructorLogin2.clave));
+                    cmdselect2.Parameters.Add(new MySqlParameter("user", usuario));
+                    cmdselect2.Parameters.Add(new MySqlParameter("pass", clave));
                     cmdselect2.Parameters.Add(new MySqlParameter("state", estado));
                     retorno = Convert.ToBoolean(cmdselect2.ExecuteScalar());
                     if (retorno == true)
