@@ -1265,7 +1265,7 @@ namespace EXPO60.Vista
 
         private void Venta(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<FrmBoleteria>();
         }
 
         private void PanelContenedor_Resize(object sender, EventArgs e)

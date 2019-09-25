@@ -16,7 +16,7 @@ namespace EXPO60.Controlador
             MySqlConnection connect;
             
             string server = "127.0.0.1";
-            string database = "expo60";
+            string database = "expo";
             string user = "root";
             string pass = "";
          

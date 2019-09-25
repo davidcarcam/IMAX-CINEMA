@@ -37,12 +37,13 @@ namespace EXPO60.Modelo
             }
 
         }
-        public static DataTable mostrarFunciones(string fecha, string sala)
+        public static DataTable mostrarFunciones()
         {
             DataTable data;
             try
             {
-                MySqlCommand cmdselect = new MySqlCommand(string.Format("SELECT funciones.id_funcion, peliculas.titulo, funciones.dia, funciones.hora, funciones.duracion, salas.num_sala, clasificacion.clasificacion, funciones.id_sala,funciones.id_pelicula,funciones.id_clasifiacion FROM funciones INNER JOIN salas ON funciones.id_sala=salas.id_sala INNER JOIN peliculas ON funciones.id_pelicula=peliculas.id_pelicula INNER JOIN clasificacion ON funciones.id_clasifiacion=clasificacion.id_clasificacion where funciones.dia='{0}' and funciones.id_sala={1}", fecha,sala), Conexion.ObtenerConexion());
+                string query = "SELECT id_funcion AS ID, duracion, hora,dia,precio, num_sala, titulo, clasificacion FROM funciones INNER JOIN salas ON funciones.id_sala = salas.id_sala INNER JOIN peliculas ON peliculas.id_pelicula = funciones.id_pelicula INNER JOIN clasificacion ON clasificacion.id_clasificacion = funciones.id_clasifiacion";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.ObtenerConexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adapter.Fill(data);

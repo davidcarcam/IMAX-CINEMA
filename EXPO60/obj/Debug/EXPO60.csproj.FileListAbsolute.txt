@@ -339,3 +339,4 @@ C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmAgre
 C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_administrador.resources
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmAgregar_empresa.resources
 C:\Users\Alejandro molina\Source\Repos\davidcarcam\IMAX-CINEMA\EXPO60\obj\Debug\EXPO60.Vista.FrmRecuperar_administrador.resources
+C:\Users\Edgardo\Source\Repos\IMAX-CINEMA4\EXPO60\obj\Debug\EXPO60.Vista.FrmBoleteria.resources

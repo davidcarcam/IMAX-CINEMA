@@ -88,14 +88,14 @@ namespace EXPO60.Vista
             try
             {
                 int id_sala = Convert.ToInt32(cmbSala.SelectedValue);
-                dgvFuncion.DataSource = Funciones_funcion.mostrarFunciones(dateTimePicker1.Text, cmbSala.SelectedValue.ToString());
-                if (dgvFuncion.Rows.Count > 0)
-                {
+                dgvFuncion.DataSource = Funciones_funcion.mostrarFunciones();
+                
+                
                     dgvFuncion.Columns["id_funcion"].Visible = false;
                     dgvFuncion.Columns["id_sala"].Visible = false;
                     dgvFuncion.Columns["id_pelicula"].Visible = false;
                     dgvFuncion.Columns["id_clasifiacion"].Visible = false;
-                }
+                
             }
             catch(Exception)
             {

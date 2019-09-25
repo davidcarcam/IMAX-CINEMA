@@ -63,6 +63,7 @@
     <Compile Include="Controlador\Constructor_Actores.cs" />
     <Compile Include="Controlador\Constructor_agregarEmpresa.cs" />
     <Compile Include="Controlador\Constructor_Asientos.cs" />
+    <Compile Include="Controlador\Constructor_DetalleTicket.cs" />
     <Compile Include="Controlador\Constructor_funciones.cs" />
     <Compile Include="Controlador\Constructor_localAlimentos.cs" />
     <Compile Include="Controlador\Constructor_pelicula.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Modelo\funcionesEmpresa.cs" />
     <Compile Include="Modelo\Funciones_Actores.cs" />
     <Compile Include="Modelo\Funciones_Asientos.cs" />
+    <Compile Include="Modelo\Funciones_DetalleTicket.cs" />
     <Compile Include="Modelo\Funciones_Empresa.cs" />
     <Compile Include="Modelo\Funciones_Factura_Local.cs" />
     <Compile Include="Modelo\Funciones_funcion.cs" />
@@ -198,6 +200,12 @@
     </Compile>
     <Compile Include="Vista\FrmAsientos.Designer.cs">
       <DependentUpon>FrmAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmBoleteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmBoleteria.Designer.cs">
+      <DependentUpon>FrmBoleteria.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmBotones.cs">
       <SubType>Form</SubType>
@@ -378,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmAsientos.resx">
       <DependentUpon>FrmAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmBoleteria.resx">
+      <DependentUpon>FrmBoleteria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmBotones.resx">
       <DependentUpon>FrmBotones.cs</DependentUpon>
