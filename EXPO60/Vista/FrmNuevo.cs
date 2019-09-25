@@ -977,6 +977,8 @@ namespace EXPO60.Vista
 
             btnD.Visible = true;
 
+            btnE.Visible = true;
+
             btnA.Location = new Point(17, 72);
             btnB.Location = new Point(17, 130);
             btnC.Location = new Point(17, 188);

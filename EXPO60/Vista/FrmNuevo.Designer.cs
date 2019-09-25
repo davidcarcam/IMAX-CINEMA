@@ -248,7 +248,7 @@
             this.btnD3.IconVisible = true;
             this.btnD3.IconZoom = 75D;
             this.btnD3.IsTab = false;
-            this.btnD3.Location = new System.Drawing.Point(17, 215);
+            this.btnD3.Location = new System.Drawing.Point(100, 135);
             this.btnD3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD3.Name = "btnD3";
             this.btnD3.Normalcolor = System.Drawing.Color.Black;
@@ -286,7 +286,7 @@
             this.btnD2.IconVisible = true;
             this.btnD2.IconZoom = 75D;
             this.btnD2.IsTab = false;
-            this.btnD2.Location = new System.Drawing.Point(17, 166);
+            this.btnD2.Location = new System.Drawing.Point(48, 384);
             this.btnD2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD2.Name = "btnD2";
             this.btnD2.Normalcolor = System.Drawing.Color.Black;
@@ -324,7 +324,7 @@
             this.btnD4.IconVisible = true;
             this.btnD4.IconZoom = 75D;
             this.btnD4.IsTab = false;
-            this.btnD4.Location = new System.Drawing.Point(12, 442);
+            this.btnD4.Location = new System.Drawing.Point(17, 254);
             this.btnD4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD4.Name = "btnD4";
             this.btnD4.Normalcolor = System.Drawing.Color.Black;
@@ -362,7 +362,7 @@
             this.btnC1.IconVisible = true;
             this.btnC1.IconZoom = 75D;
             this.btnC1.IsTab = false;
-            this.btnC1.Location = new System.Drawing.Point(66, 135);
+            this.btnC1.Location = new System.Drawing.Point(30, 166);
             this.btnC1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnC1.Name = "btnC1";
             this.btnC1.Normalcolor = System.Drawing.Color.Black;
@@ -552,7 +552,7 @@
             this.btnB2.IconVisible = true;
             this.btnB2.IconZoom = 75D;
             this.btnB2.IsTab = false;
-            this.btnB2.Location = new System.Drawing.Point(12, 522);
+            this.btnB2.Location = new System.Drawing.Point(17, 334);
             this.btnB2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnB2.Name = "btnB2";
             this.btnB2.Normalcolor = System.Drawing.Color.Black;
@@ -629,7 +629,7 @@
             this.btnB1.IconVisible = true;
             this.btnB1.IconZoom = 75D;
             this.btnB1.IsTab = false;
-            this.btnB1.Location = new System.Drawing.Point(12, 473);
+            this.btnB1.Location = new System.Drawing.Point(17, 285);
             this.btnB1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnB1.Name = "btnB1";
             this.btnB1.Normalcolor = System.Drawing.Color.Black;
@@ -954,7 +954,7 @@
             this.btnE.IconVisible = true;
             this.btnE.IconZoom = 100D;
             this.btnE.IsTab = false;
-            this.btnE.Location = new System.Drawing.Point(12, 544);
+            this.btnE.Location = new System.Drawing.Point(17, 484);
             this.btnE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnE.Name = "btnE";
             this.btnE.Normalcolor = System.Drawing.Color.White;
